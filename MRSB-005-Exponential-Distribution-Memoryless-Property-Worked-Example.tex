@@ -1,0 +1,77 @@
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{framed}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{Worked Examples} \chead{Exponential Distribution} %\input{tcilatex}
+
+\begin{document}
+
+\large 
+
+\subsection*{Exponential Distribution Problem}
+\noindent Suppose that the average waiting time for queuing in a bank is 10 minutes.
+
+
+
+\begin{framed}
+\large 
+\noindent \textbf{Important Formulae}
+
+\[ X \sim \mbox{Exp}(\lambda) \]
+
+\noindent where $\lambda$ is the rate parameter, and is equal to $1/\mu$, where $\mu$ is the mean duration, i.e. the exponential mean.
+\medskip 
+\noindent \textbf{Cumulative Distribution Function}
+\[
+P( X \leq k) = 1 -e^{-k\lambda }\]
+
+\medskip 
+
+\noindent \textbf{Survival Function}
+\[
+P( X \geq k) =e^{-k \lambda }\]
+
+
+\end{framed}
+
+\noindent What is the probability that a customer will spend more than 15 minutes queuing in the bank?
+
+\[
+P (X \geq 15) = e ^{-15\lambda}
+= e ^{-3 / 2}
+= 0.22
+\]
+\bigskip
+
+\noindent What is the probability that a customer will spend more than 15 minutes in the bank given that they are still in the bank after 10 minutes?
+
+\begin{eqnarray*}
+P (X \geq 15|X \geq 10) &=& \frac{P (X \geq 15)}{P (X \geq 10)}\\
+&=& \frac{e ^{-15\lambda}}{e ^{-10\lambda}}\\
+&=& \frac{e ^{-1.5}}{e ^{-1}}\\
+&=& e ^{-1 / 2} = P (X \geq 5) \\
+&=&  0.604\\
+\end{eqnarray*}
+
+\newpage
+BLANKS
+\end{document}
