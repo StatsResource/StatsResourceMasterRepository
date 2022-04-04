@@ -1,0 +1,65 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{framed}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{Inference Procedures} \chead{Confidence Intervals} %\input{tcilatex}
+
+\begin{document}
+\large 
+
+\section*{Confidence Intervals - Worked Example}
+A press release for a broadband provider stated that $90\%$ percent of customers are very satisfied
+with the standard of service. To test this claim, the local chamber of commerce surveyed 110 randomly selected customers. Among the sampled customers, 89 stated that they are very satisfied.
+
+
+%Test the hypothesis that $90\%$ of all customers are very satisfied with their service. You may assume a significance level of 5\%.
+
+
+
+\begin{itemize}
+\item[(i)]  Compute the appropriate value for the standard error for a confidence interval.
+\item[(ii)] Compute the 95\% confidence interval for $\pi$, the true proportion.
+%\item[iii] (2 marks) For the test statistic, determine the corresponding p-value.
+\item[(iii)] What is your conclusion for this claim made by the press release? Justify your answer.
+\end{itemize}
+%--------------------------------- %
+
+\subsection*{Confidence Intervals}
+General Structure of a confidence interval
+
+\[ \mbox{Point Estimate} \pm \left( \mbox{Quantile} \times \mbox{Standard Error} \right) \]
+
+\subsection*{Solution}
+
+\begin{itemize}
+\item Point estimate = 0.81 (89/110)
+\item Large Sample : 95\% Quantile = 1.96
+\item Standard Error 
+\[S.E.(\hat{p}) =  \sqrt{  \frac{\hat{p} \times (1-\hat{p})}{n} }\]
+\[S.E.(\hat{p}) = \sqrt{\frac{0.81 \times 0.19}{110}} = \sqrt{0.001411}\]
+\[S.E.(\hat{p}) = 0.0374\]
+\item Margin of Error = $1.96 \times 0.0374$ = 0.07345
+\item Answer : (0.81 - 0.07345, 0.81 + 0.07344) =  (0.7356,0.8825)
+\item 0.90 not in 95\% confidence interval - the claim not supported on this evidence. 
+\end{itemize}
+\newpage
+BLANK
+\end{document}
