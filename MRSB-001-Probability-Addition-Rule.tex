@@ -1,0 +1,62 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{enumerate}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+	\large 
+	\subsection*{Probability}
+	%============================================%
+	% PMS Spring 2008 Question 4 - Probability
+	
+	Consider two events A, B such that
+	
+	\begin{itemize}
+		\item P(A) = 0.3
+		\item P(A $\cap$ B) = 0.1
+	\end{itemize}
+	Find the lowest possible value of $P(A|B)$
+	\begin{framed}
+	
+	
+	\[ P(A|B) = \frac{P(A \cap B) }{P(B)}\]
+	
+	\end{framed}
+	\begin{itemize}
+		\item $P(A \cup B)$ : Maximum = $1$
+		\item $P(A \cup B)$ : Minimum = $0.3$
+	\end{itemize}
+	
+	\subsection*{Minimum}
+	
+	\[ P(A \cup B) = P(A) + P(B) - P(A \cap B)\]
+	\[ 0.3 = 0.3 + P(B) - 0.1 \]
+	\[ P(B) = 0.1\] 
+	
+	\subsection*{Maximum}
+	
+	\[ P(A \cup B) = P(A) + P(B) - P(A \cap B)\]
+	\[ 1 = 0.3 + P(B) - 0.1 \]
+	\[P(B) = 0.8\]
+	\bigskip 
+	\[ P(A|B)_{MIN} = \frac{P(A \cap B) }{P(B)} = \frac{0.1}{0.8} = 0.125 \]
+	\[ P(A|B)_{MAX} = \frac{P(A \cap B) }{P(B)} = \frac{0.1}{0.1} = 1 \]
+	%============================================%
+
+\newpage 
+BLANK	
+\end{document}
