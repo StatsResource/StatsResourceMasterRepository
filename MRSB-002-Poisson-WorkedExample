@@ -1,0 +1,69 @@
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{framed}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{Worked Examples} \chead{Poisson Distribution} %\input{tcilatex}
+
+\begin{document}
+	\large 
+	
+	
+	\section*{Example}
+	Suppose that electricity power failures occur according to a Poisson distribution
+	with an average of 2 outages every twenty weeks. 
+	\begin{enumerate}[(a)]
+		\item  Calculate the probability that there will
+		not be more than one power outage during a particular week.
+	\end{enumerate}
+	
+	\noindent \textbf{Solution:}
+	
+	\begin{itemize}
+		\item  The average number of failures per week is: $m = 2/20 = 0.10$
+		
+		\item  ``Not more than one  power outage" means we need to compute and add the probabilities for ``0 outages" plus ``1 outage".
+	\end{itemize}
+	
+	
+	
+	Recall: \[P(X = k) = e^{-m}\times \frac{m^k}{k!}\]
+	
+	
+	\begin{itemize}
+		
+		\item  $P(X = 0)$
+		
+		\[P(X = 0) = e^{-0.10} \times \frac{0.10^0}{0!} = e^{-0.10} = 0.9048\]
+		
+		
+		\item  $P(X = 1)$
+		
+		\[P(X = 1) = e^{-0.10}\times \frac{0.10^1}{1!} = e^{-0.10}\times 0.1 = 0.0905\]
+		
+		\item  $P(X \leq 1)$
+		
+		\[P(X \leq 1) = P(X = 0) + P(X = 1) = 0.9048 + 0.0905 = 0.995\]
+		
+	\end{itemize}
+	\newpage
+	BLANK
+\end{document}
