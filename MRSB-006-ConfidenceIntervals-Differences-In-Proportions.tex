@@ -1,0 +1,118 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \chead{Inference Procedures} \rhead{Hypothesis Testing} %\input{tcilatex}
+\begin{document}
+
+\subsection*{Difference in proportions}
+We can also construct a confidence interval for the difference between two population proportions, $\pi_1 - \pi_2$. The point estimate is the difference in sample proportions for both groups , $\hat{p}_1- \hat{p}_2$.
+\subsection*{Estimation Requirements}
+The approach described here is valid whenever the following conditions are met:
+
+\begin{itemize}
+\item Both samples are simple random samples.
+\item The samples are independent.
+\item Each sample includes at least 10 successes and 10 failures.
+\item The samples comprises less than 10\% of their respective populations.
+\end{itemize}
+
+\begin{framed}
+
+\[
+\scriptstyle \mbox{ Point Estimate } \pm  \left[ \mbox{ Quantile } \times \mbox{Standard Error } 
+\right] 
+\]
+
+\end{framed}
+
+%--------------------------------------------------------%
+
+
+\subsection*{Standard Error for Difference of Proportions}
+
+\[ S.E. (\hat{p}_1 - \hat{p}_2) =
+\sqrt{ \left[{\hat{p}_1 \times (1 - \hat{p}_1) \over n_1}\right] + \left[{\hat{p}_2 \times (1 - \hat{p}_2) \over n_2}\right] } \]
+\begin{itemize}
+\item $\hat{p}_1$ and $\hat{p}_2$ are the sample proportions of groups 1 and 2 respectively.
+\item $n_1$ and $n_2$ are the sample sizes of groups 1 and 2 respectively.
+\end{itemize}
+N.B. This formula will be provided in the exam paper. Also, there is no accounting for small samples.
+
+%--------------------------------------------------------%
+
+\newpage 
+\section*{ Difference of Proportions : Example}
+\begin{itemize} \item
+A study finds that a percentage of $40\%$ of IT users out of a random sample of 400 in a large
+community preferred one web browser to all others. \item In another large community, $30\%$ of IT users out of a random sample
+of 300 prefer the same web browser. \item Compute a 95 percent confidence interval for the difference in the proportion of IT users who prefer this particular web browser. \end{itemize}
+
+
+%--------------------------------------------------------%
+\subsection*{Confidence Intervals}
+General Structure of a confidence interval
+
+\[ \mbox{Point Estimate} \pm \left( \mbox{Quantile} \times \mbox{Standard Error} \right) \]
+
+
+\subsection*{Standard Error}
+\textbf{Compute the standard Error}
+
+\[ S.E. (\hat{p}_1 - \hat{p}_2) =
+\sqrt{ \left[{\hat{p}_1 \times (1 - \hat{p}_1) \over n_1}\right] + \left[{\hat{p}_2 \times (1 - \hat{p}_2) \over n_2}\right] } \]
+
+\noindent When working in terms of percentages we write
+
+\[ S.E. (\hat{p}_1 - \hat{p}_2) =
+\sqrt{ \left[{\hat{p}_1 \times (100 - \hat{p}_1) \over n_1}\right] + \left[{\hat{p}_2 \times (100 - \hat{p}_2) \over n_2}\right] } \]
+
+\medskip 
+
+\[ S.E. (\hat{p}_1 - \hat{p}_2) =
+\sqrt{ \left[{40 \times 60 \over 400}\right] + \left[{30 \times 70 \over 300}\right] }  = \sqrt{ \left[{2400 \over 400}\right] + \left[{2100\over 300}\right] } \]
+
+\[ S.E. (\hat{p}_1 - \hat{p}_2)
+= \sqrt{ 6 + 7 } = 3.6\% \]
+
+
+
+
+
+\subsection*{Confidence Interval}
+\begin{itemize}
+\item The point estimate is the difference in two proportions i.e. $\hat{p}_1 - \hat{p}_2$ = $40 \% - 30 \% = 10 \%$
+\item We have a large sample ($n>30)$, and the confidence level is $95\%$. Therefore the quantile is 1.96.
+\item We can now compute the confidence interval for the difference of proportions:
+\[ 10\% \pm (1.96 \times 3.6 \%)  =\; 10\% \pm 7.05 \% = \;(2.95\%, 17.05\%) \]
+
+\end{itemize}
+
+
+
+\end{document}
+
+
+
+
+
+
+
