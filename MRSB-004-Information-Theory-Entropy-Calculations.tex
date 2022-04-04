@@ -1,0 +1,66 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} 
+\chead{Information Theory}  \rhead{Entropy Calculations} %\input{tcilatex}
+\begin{document}
+\large
+\section*{Exercise}
+Calculate the marginal and joint entropies.\\
+
+
+\noindent Marginal probabilities
+\begin{center}
+	\begin{tabular}{|c|c|c|c||c|}
+		\hline	&	y=a	&	y=b	&	y=c	&		\\ \hline
+		x=a	&	0.25	&	0	&	0.125	&	\textbf{0.375}	\\ \hline
+		x=b	&	0	&	0.125	&	0	&	\textbf{0.125}	\\ \hline
+		x=c	&	0.125	&	0.25	&	0.125	&	\textbf{0.5	}\\ \hline \hline
+		&	\textbf{0.375}	&	\textbf{0.375}	&	\textbf{0.25}	&	1	\\ \hline
+	\end{tabular}
+\end{center}
+Marginal Entropies : $H(X)$ and $H(Y)$
+%--------------------------------------------- %
+\begin{center}
+	\begin{tabular}{|c|c|c||c||c|c|c|} \hline
+		$P(x_i)$	&	$I(x_i)$	&	$P(x_i) \times I(x_i)$	&&	$P(y_i)$	&	$I(y_i)$	&	$P(y_i) \times I(y_i)$	\\ \hline \hline
+		0.3750	&	1.4150	&	0.5306	&&	0.3750	&	1.4150	&	0.5306	\\ \hline
+		0.1250	&	3.0000	&	0.3750	&&	0.3750	&	1.4150	&	0.5306	\\ \hline
+		0.5000	&	1.0000	&	0.5000	&&	0.2500	&	2.0000	&	0.5000	\\ \hline \hline
+		&	$H(X)$	&	1.4056 b/sym	&&		&	$H(Y)$	&	1.5613 b/sym	\\ \hline
+	\end{tabular} 
+\end{center}
+Joint Entropy : $H(X,Y)$
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		$P(x_i)$	&	Freq($x_i$)	&	$I(x_i)$	&	$p(x_i)\times I(x_i) \times \mbox{Freq}(x_i)$	\\ \hline
+		0	&	3	&	\ldots &	0	\\ \hline
+		0.125	&	4	&	3	&	1.5	\\ \hline
+		0.25	&	2	&	2	&	1	\\ \hline \hline
+		& &H(X,Y) & 2.5 \\ \hline
+	\end{tabular} 
+\end{center}
+\newpage
+BLANK
+
+\end{document}
