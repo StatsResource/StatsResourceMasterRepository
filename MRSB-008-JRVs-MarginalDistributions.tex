@@ -1,0 +1,107 @@
+
+
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{framed}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{Discrete Random Variables} \chead{Probability } %\input{tcilatex}
+\begin{document}
+\large   \noindent
+
+\section*{Joint Probability Distribution}
+The random variables X and Y have the following joint distribution
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|} \hline
+		\phantom{spa} \phantom{spa} & \phantom{spa} Y=0  \phantom{spa} & \phantom{spa} Y=1\phantom{spa}   & \phantom{spa} Y=2\phantom{spa} \\ \hline 
+		X=0 & 2/10 & 1/10 & 2/10 \\ \hline 
+		X=1 & 0/10 & 2/10 & 1/10 \\ \hline 
+		X=2 & 1/10 & 0/10 & 1/10 \\ \hline 
+		
+	\end{tabular} 
+\end{center}
+
+
+\begin{itemize}
+	\item[(a)] Calculate the marginal distributions of X and Y.     
+	\item[(b)] What is the expected value of X?
+	\item[(c)] What is the expected value of Y? 
+\end{itemize} 
+
+\medskip
+
+\begin{center}
+	\begin{tabular}{|c||c|c|c|c|}\hline
+		\phantom{spa} \phantom{spa} & \phantom{spa} Y=0  \phantom{spa} & \phantom{spa} Y=1\phantom{spa}   & \phantom{spa} Y=2\phantom{spa}   & Total \\ \hline \hline 
+		X=0 & 2/10 & 1/10 & 2/10& 5/10 \\ \hline 
+		X=1 & 0/10 & 2/10 & 1/10 & 3/10 \\ \hline 
+		X=2 & 1/10 & 0/10 & 1/10 & 2/10 \\ \hline \hline 
+		Total & 3/10 & 3/10 & 4/10 & 10/10\\ \hline	
+	\end{tabular} 
+\end{center}
+
+\medskip
+
+\subsection*{Part (a)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Marginal Distribution of $X$}
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}\hline 
+		\phantom{spa} \phantom{spa} & \phantom{spa} X=0  \phantom{spa} & \phantom{spa} X=1\phantom{spa}   & \phantom{spa} X=2\phantom{spa}  \\ \hline  
+
+		P(X=x) & 5/10 & 3/10 & 2/10 \\ \hline	
+	\end{tabular} 
+\end{center}
+
+\subsection*{Marginal Distribution of $Y$}
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}\hline
+		\phantom{spa} \phantom{spa} & \phantom{spa} Y=0  \phantom{spa} & \phantom{spa} Y=1\phantom{spa}   & \phantom{spa} Y=2\phantom{spa}  \\ \hline 
+		P(Y=y) & 3/10 & 3/10 & 4/10 \\ \hline	
+	\end{tabular} 
+\end{center}
+
+\newpage
+
+
+\subsection*{Part (b)}
+
+\begin{eqnarray*}
+E(X) &=& \sum x_i \cdot P(x_i)\\
+& & \\
+E(X) &=& \left( 0 \times \frac{5}{10} \right) + \left( 1 \times \frac{3}{10} \right) + \left( 2 \times \frac{2}{10} \right)\\
+& & \\
+&=&  \frac{7}{10}
+\end{eqnarray*}
+
+\subsection*{Part (c)}
+
+\begin{eqnarray*}
+E(Y) &=& \sum y_i \cdot P(y_i)\\
+& & \\
+E(Y) &=& \left( 0 \times \frac{3}{10} \right) + \left( 1 \times \frac{3}{10} \right) + \left( 2 \times \frac{4}{10} \right)\\
+& & \\
+&=&  \frac{11}{10}
+\end{eqnarray*}
+
+\end{document}
