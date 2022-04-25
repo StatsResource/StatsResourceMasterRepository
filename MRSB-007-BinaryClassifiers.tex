@@ -1,0 +1,72 @@
+
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{framed}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{Binary Classifiers} \chead{Mathematics for Data Science } %\input{tcilatex}
+
+\begin{document}
+
+
+\subsection*{Accuracy, Precision and Recall}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline  & \phantom{spa}Predict Negative\phantom{spa} & \phantom{spa}Predict Positive\phantom{spa} \\ 
+\hline\phantom{spa} Observed Negative \phantom{spa}& $tn$	&	$fp$	\\ 
+\hline \phantom{spa}Observed Positive\phantom{spa} &  $fn$	&	$tp$	\\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+
+\noindent Accuracy, Precision and recall are defined as
+\[\mbox{Accuracy}=\frac{tp+tn}{tp+tn+fp+fn} \]
+\[\mbox{Precision}=\frac{tp}{tp+fp} \] 
+\[\mbox{Recall}=\frac{tp}{tp+fn} \]
+
+\noindent The $F$ measure is computed as
+\[F = 2 \cdot \frac{\mathrm{precision} \cdot \mathrm{recall}}{ \mathrm{precision} + \mathrm{recall}}\]
+\medskip
+\subsection*{Exercise}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline  & \phantom{spa}Predict Negative\phantom{spa} & \phantom{spa}Predict Positive\phantom{spa} \\ 
+\hline\phantom{spa} Observed Negative \phantom{spa}&	9530	&	10	\\ 
+\hline \phantom{spa}Observed Positive\phantom{spa} & 	300	&	160	\\ 
+\hline 
+\end{tabular} 
+\end{center}
+Accuracy, Precision and recall are calculated as follows:
+\[\mbox{Accuracy}=\frac{tp+tn}{tp+tn+fp+fn} = 0.9790 \]
+\[\mbox{Precision}=\frac{tp}{tp+fp} = \frac{160}{170} = 0.9411\] 
+\[\mbox{Recall}=\frac{tp}{tp+fn} =\frac{160}{460} = 0.3479 \]
+
+\noindent The F measure is computed as
+\[F = 2 \cdot \frac{\mathrm{precision} \cdot \mathrm{recall}}{ \mathrm{precision} + \mathrm{recall}}\]
+
+\[ = \frac{2 \times 0.3479 \times 0.9411}{0.3479 + 0.9411} = \frac{0.6548}{1.2890} = \boldsymbol{0.5079} \]
+%%%%%%%%%%%%%%%%%%5
+\newpage
+BLANK
+\end{document}
