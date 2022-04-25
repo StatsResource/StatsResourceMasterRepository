@@ -1,0 +1,116 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%- Question 3
+\large
+\noindent The random variable $X$ has a distribution with probability density function given by
+{
+
+\[  f(x) \;=\; \begin{cases} 
+{\displaystyle \frac{2x}{\theta^2} }  & 0 \leq x \leq \theta \\
+0  & \mbox{otherwise} \\
+\end{cases}\]
+}
+
+where $\theta$ is the parameter of the distribution.
+\begin{enumerate}[(a)]
+\item 
+Derive expressions in terms of $\theta$ for the expected value and the variance of $X$.\\
+\medskip
+\item 
+Suppose that $X_1 , X_2 , \ldots , X_n$ is a random sample, with mean $\bar{X}$ , from the distribution
+of $X$. Show that the estimator $ {  \displaystyle \hat{\theta}  \;=\; \frac{3\bar{X}}{2} }$ is an unbiased estimator of $\theta$.
+
+\end{enumerate}
+
+%%-- [Total 5]
+%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{framed} \large
+\noindent Derive expressions in terms of $\theta$ for the expected value and the variance of $X$.
+\end{framed}
+
+
+\begin{eqnarray*}
+E ( X ) &=& \int^{\theta}_{0} x f(x) dx \\
+&=& \int^{\theta}_{0} x \left[ \frac{2x}{\theta^2} \right] dx\\
+&=& \int^{\theta}_{0}  \left[ \frac{2x^2}{\theta^2} \right] dx\\
+&=& \left[ \frac{2x^3}{3\theta^2} \right]^{\theta}_{0} \\
+&=& \frac{2\theta^3}{3\theta^2} \;-\;0 \\
+&=& \frac{2 \theta}{3} \\
+\end{eqnarray*}
+
+
+\begin{eqnarray*}
+E ( X^2 ) &=& \int^{\theta}_{0} x^2 f(x) dx \\
+&=& \int^{\theta}_{0} x^2 \left[ \frac{2x}{\theta^2} \right] dx\\
+&=& \int^{\theta}_{0} \left[ \frac{2x^3}{\theta^2} \right] dx \\
+&=& \left[ \frac{2x^4}{4\theta^2} \right]^{\theta}_{0} \\
+&=& \frac{ \theta^2}{2} \\
+\end{eqnarray*}
+\newpage 
+
+
+
+Using this results
+
+\begin{eqnarray*} \operatorname{Var}( X ) &=& E ( X^2 ) \;-\; [ E ( X )]^2 \\
+&=&  \frac{ \theta^2}{2} \;-\; \left[ \frac{2 \theta}{3}\right] ^2 \\
+&=&  \frac{ \theta^2}{2} \;-\;  \frac{4 \theta ^2 }{9}\\
+&=&  \frac{ \theta^2}{18} \\
+\end{eqnarray*}
+
+%%%%%%%%%%%%%
+\newpage
+
+\begin{framed}
+\noindent Suppose that $X_1 , X_2 , \ldots , X_n$ is a random sample, with mean $\bar{X}$  from the distribution
+of $X$.
+\\ 
+Show that the estimator $ {  \displaystyle \hat{\theta}  \;=\; \frac{3\bar{X}}{2} }$ is an unbiased estimator of $\theta$.
+\end{framed}
+
+\begin{eqnarray*}
+E(\hat{\theta}) &=&  E \left( \frac{3\bar{X}}{2} \right)\\
+&=& \frac{3}{2} E(\bar{X}) \\ 
+&=& \frac{3}{2} E(X) \\ 
+&=& \frac{3}{2} \times \frac{2 \theta }{3} \\ 
+&=& \theta \\
+\end{eqnarray*}
+
+$E(\hat{\theta}) = \theta$ so estimator is unbiased.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
