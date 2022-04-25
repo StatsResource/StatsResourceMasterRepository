@@ -1,0 +1,138 @@
+
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{framed}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{Introduction} \chead{Probability } %\input{tcilatex}
+
+\begin{document}
+
+	%-----------------------------------------------------------------------------------%
+	\large 
+\noindent Consider the random variables $X$ and $Y$. Both $X$ and $Y$ take the values 0,$\;$1 and 2. The joint probabilities for each pair are given by the following table.
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline  & $X=0$ & $X=1$ & $X=2$ \\ 
+			\hline $Y=0$ & 0.1 & 0.15 & 0.1 \\ 
+			\hline $Y=1$ & 0.1 & 0.1 & 0.1 \\ 
+			\hline $Y=2$ & 0.2 & 0.05 & 0.1 \\ 
+			\hline 
+		\end{tabular} 
+	\end{center}
+\noindent Compute the $E(U)$ expected value of $U$, where $U=X-Y$.
+	
+	
+	%-----------------------------------------------------------------------------------%
+\subsection*{Solution}	
+	
+	
+\noindent Compute $X-Y$
+	\begin{center}
+		\begin{tabular}{|c|cc|cc|cc|}
+			\hline  & \phantom{space}&$X=0$ &\phantom{space} & $X=1$ & \phantom{space}& $X=2$ \\ 
+			\hline $Y=0$& & 0.1 & & 0.15 & & 0.1 \\ 
+			\hline $Y=1$& & 0.1 & & 0.1 & & 0.1 \\ 
+			\hline $Y=2$& & 0.2 & & 0.05 & & 0.1 \\ 
+			\hline 
+		\end{tabular} 
+	\end{center}
+	
+	
+\noindent Compute $X-Y$
+	\begin{center}
+		\begin{tabular}{|c|cc|cc|cc|}
+			\hline  & \phantom{sp}U \phantom{s}&$X=0$ &\phantom{sp}U \phantom{s} & $X=1$ & \phantom{sp}U\phantom{s}& $X=2$ \\ 
+			\hline $Y=0$& 0 & 0.1 & 1 & 0.15 & 2& 0.1 \\ 
+			\hline $Y=1$& -1& 0.1 & 0& 0.1 & 1& 0.1 \\ 
+			\hline $Y=2$& -2 & 0.2 & -1 & 0.05 & 0 & 0.1 \\ 
+			\hline 
+		\end{tabular} 
+	\end{center}
+	\bigskip
+	
+	
+\noindent Determine the probability of each outcome of $U$.
+	\\
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline $u_i$ & -2 & -1  & 0 & 1 & 2 \\ 
+			\hline p $(u_i)$ & \phantom{spaces} & \phantom{spaces} & \phantom{spaces} & \phantom{spaces} & \phantom{spaces} \\ 
+			\hline 
+		\end{tabular} 
+	\end{center}
+	
+	%-----------------------------------------------------------------------------------%
+	
+	
+	
+	
+	\[ E(U) =  \sum  u_i \cdot p(u_i)   \]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline $u_i$ & -2 & -1  & 0 & 1 & 2 \\ 
+			\hline p $(u_i)$ & \phantom{s}0.20\phantom{s} & \phantom{s}0.15\phantom{s}  & \phantom{s}0.30\phantom{s}  & \phantom{s}0.25\phantom{s} & \phantom{s}0.10\phantom{s} \\ 
+			\hline 
+			$u_i \cdot p (u_i)$ & & & & & \\\hline
+		\end{tabular} 
+	\end{center}
+	
+	%-----------------------------------------------%
+	
+
+	
+	\[ E(U) =  \sum  u_i \cdot p(u_i)   \]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline $u_i$ & -2 & -1  & 0 & 1 & 2 \\ 
+			\hline p $(u_i)$ & \phantom{s}0.20\phantom{s} & \phantom{s}0.15\phantom{s}  & \phantom{s}0.30\phantom{s}  & \phantom{s}0.25\phantom{s} & \phantom{s}0.10\phantom{s} \\ 
+			\hline 
+			$u_i \cdot p (u_i)$ & -0.40 & -0.15 & 0.00 & 0.25 & 0.20 \\\hline
+		\end{tabular} 
+		
+		
+	\end{center}
+	
+	\[ E(U) =  \sum  u_i \cdot p(u_i)   \]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline $u_i$ & -2 & -1  & 0 & 1 & 2 \\ 
+			\hline p $(u_i)$ & \phantom{s}0.20\phantom{s} & \phantom{s}0.15\phantom{s}  & \phantom{s}0.30\phantom{s}  & \phantom{s}0.25\phantom{s} & \phantom{s}0.10\phantom{s} \\ 
+			\hline 
+			$u_i \cdot p (u_i)$ & -0.40 & -0.15 & 0.00 & 0.25 & 0.20 \\\hline
+		\end{tabular} 
+		
+		
+	\end{center}
+	
+	\[E(U) = -0.10\]
+	
+
+	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage 
+(BLANK)
+	
+	
+\end{document}
