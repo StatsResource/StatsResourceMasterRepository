@@ -1,0 +1,109 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{framed}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{Probability} \chead{Uniform Distribution} %\input{tcilatex}
+
+\begin{document}
+
+
+\large 
+\noindent Suppose a continuous uniform random variable $X$ has the following parameters
+\begin{itemize}
+\item minimum $a=1$
+\item maximum $b=9$
+\end{itemize}
+\[ X \sim U(a=1,b=9)\]
+
+\medskip
+\subsection*{Exercises}
+\begin{enumerate}[(a)]
+    \item What is the probability of $X$ being between $5$ and $8$?
+    \item What is the probability of $X$ being greater than 7.2?
+    \item What is the expected value and variance of $X$?
+\end{enumerate}
+\medskip
+\subsection*{Part (a)}
+
+What is the probability of $X$ being between $5$ and $8$? \\i.e. What is $P( 5 \leq X \leq 8 )$?
+
+
+\begin{itemize}\item The lower bound $L$ is 5
+\item The upper bound $U$ is 8
+\end{itemize}
+
+
+\[
+P( L \leq X \leq U ) = { U - L \over b - a}
+\]
+
+\[
+P( 5 \leq X \leq 8 ) = \boldsymbol{{ 8 - 5 \over 9 - 1} = { 3 \over 8} = 0.375}
+\]
+\subsection*{Part (b)}
+
+What is the probability of $X$ being greater than $7.2$. This is equivalent to the probbability that $X$ is between $7.2$ and $9$?
+\begin{itemize}\item The lower bound $L$ is 7.2
+\item The upper bound $U$ is 9
+
+\item Remark: $P( X \geq 7.2) = P(7.2 \leq X \leq 9 )$
+\end{itemize}
+
+
+\[
+P( 7.2 \leq X \leq 9 ) = \boldsymbol{{ 9 - 7.2 \over 9 - 1} = { 1.8 \over 8} = 0.225}
+\]
+
+\subsection*{Part (c)}
+The expected value of the continuous uniform distribution, denoted $\textrm{E}(X)$,  is  computed using the following formula
+
+\vspace{0.1cm}
+
+\[
+\textrm{E}(X) = {(b + a) \over 2}
+\]
+
+\vspace{0.1cm}
+
+For this worked example the expected value is
+
+\[
+\textrm{E}(X) = {(9 + 1) \over 2} =  {10 \over 2} = 5
+\]
+The variance of the continuous uniform distribution, denoted $\textrm{Var}(X)$,  is  computed using the following formula
+
+\vspace{0.1cm}
+
+\[
+\textrm{Var}(X) = {(b - a)^2 \over 12}
+\]
+
+\vspace{0.1cm}
+
+For this worked example the variance is
+
+\[
+\textrm{Var}(X) = {(9 - 1)^2 \over 12} =  {8^2 \over 12} = {64 \over 12} = 5.33
+\]
+
+
+
+\end{document}
