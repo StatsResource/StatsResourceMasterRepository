@@ -1,0 +1,53 @@
+---
+title: "The Pareto Distribution"
+subtitle: "Survival Analysis"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      countIncrementalSlides: false
+---
+  
+The Pareto distribution with parameters $\alpha$ and $\lambda$ has probability density function:
+
+$$f(x)=\frac{\alpha\lambda^{\alpha}}{x^{\alpha+1}}, \quad x\geq\lambda$$
+
+and cumulative distribution function:
+
+$$F(x)=1-\left(\frac{\lambda}{x}\right)^{\alpha}, \quad x\geq\lambda$$
+
+Let $D$ be the deductible. We want to find $D$ such that:
+
+$$P(X\leq D)=0.2$$
+
+where $X$ is the claim amount.
+
+Substituting into the cumulative distribution function, we get:
+
+$$1-\left(\frac{300}{D}\right)^{3}=0.2$$
+
+Solving for $D$, we get:
+
+$$D=300\left(1-0.2\right)^{-\frac{1}{3}}\approx 342.03$$
+
+Therefore, the size of the deductible is approximately **342.03** (in thousands).
+
+To calculate the average claim amount net of deductible, we need to calculate the expected value of $X-D$ given that $X>D$. The conditional probability density function of $X$ given that $X>D$ is:
+
+$$f_{X|X>D}(x)=\frac{f(x)}{P(X>D)}, \quad x>D$$
+
+Substituting into the formula for expected value, we get:
+
+$$E\left[X-D|X>D\right]=\int_{D}^{\infty}(x-D)\frac{f(x)}{P(X>D)}dx$$
+
+After some algebraic manipulation and integration, we get:
+
+$$E\left[X-D|X>D\right]=\frac{\lambda}{\alpha-1}\left[1-\left(\frac{\lambda}{D}\right)^{\alpha-1}\right]$$
+
+Substituting $\alpha=3$, $\lambda=300$, and $D=342.03$, we get:
+
+$$E\left[X-D|X>D\right]\approx 106.07$$
+
+Therefore, the average claim amount net of deductible is approximately **106.07** (in thousands).

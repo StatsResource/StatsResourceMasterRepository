@@ -1,0 +1,120 @@
+---
+title: "Shop Queuing Analysis"
+subtitle: "Little's Law"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      countIncrementalSlides: false
+---
+
+```{r eval=FALSE,include=FALSE}
+
+# CT6 
+# - ASI 2005 April Question B - 1
+# - ASI 2006 April Question B - 1
+
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(magrittr)
+library(knitr)
+library(dplyr)
+library(janitor)
+
+
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent_inverse(
+  base_color = "#3C989E", #)(
+#  base_color = "#1c5253",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+
+
+Customers arrive to a shop at a rate of 40 per hour and typically stay 30 minutes.
+
+#### Exercises
+
+(a) How many customers are in the shop on average?
+
+(b) Through advertising, the shop can increase the arrival rate to 60 per hour.
+
+How many customers are in the shop now (assuming they still spend 30 minutes)?
+
+---
+
+#### Exercises
+
+(c) The shop is small and is now too full. However, by streamlining the layout we can reduce the average time spent in the shop (without compromising profits).
+
+How much would the average time need to drop to in order that with 60 customers arriving per hour, there are still the same number of customers in the shop as in part (a).
+
+---
+
+#### **Little's Law**
+
+To solve this problem, we'll use the **Little's Law** formula:
+
+**L = λ x W**
+
+Where:
+* L = average number of customers in the system
+* λ = average arrival rate
+* W = average time a customer spends in the system
+
+---
+
+**Part (a):**
+
+How many customers are in the shop on average?
+
+* λ = 40 customers/hour
+
+* W = 30 minutes = 0.5 hours
+
+* L = 40 x 0.5 = **20 customers**
+
+---
+
+**Part (b):**
+
+After the advertising campaign, how many customers are in the shop on average?
+
+* λ = 60 customers/hour
+
+* W = 30 minutes = 0.5 hours
+
+* L = 60 x 0.5 = **30 customers**
+
+---
+
+**Part (c):**
+
+* We want to find W such that L = 20 (the same as in part (a)) when λ = 60 customers/hour.
+
+* Using Little's Law: $$20 = 60 \times W$$
+
+* Solving for W: $$W = 20/60 = 1/3 \mbox{ (hours)}$$ 
+
+* W = **20 minutes**
+
+Therefore, the average time spent in the shop needs to drop to **20 minutes** to maintain the same number of customers in the shop with an arrival rate of 60 customers per hour.
+
+---
+
+BLANK 
+
+---
+
+BLANK 
+
+---

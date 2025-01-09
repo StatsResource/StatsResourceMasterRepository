@@ -1,0 +1,200 @@
+A continuous random variable X has the following pdf
+\[f(x) = k x e^{-x/2}\]
+; k is a constant. x >0
+
+a) Find the value of k for f(x) to be a valid probability density function.
+b) Find the cumulant generating function of X.
+c) Using the cumulant generating function or otherwise, find the mean and
+variance of X.
+
+
+
+The given probability density function (PDF) is:
+
+```
+f(x) = kx e^(-x/2)
+```
+
+**Part a: Finding the value of k**
+
+For a valid PDF, we must have:
+
+```
+∫f(x) dx = 1
+```
+
+Integrating the given PDF from 0 to infinity:
+
+```
+∫₀∞ kx e^(-x/2) dx = 1
+```
+
+Using integration by parts, we can find the integral:
+
+```
+k * [-2x e^(-x/2) - 4e^(-x/2)]₀∞ = 1
+```
+
+Evaluating the limits:
+
+```
+k * [0 + 4] = 1
+```
+
+Therefore, k = 1/4.
+
+**Part b: Finding the cumulant generating function**
+
+The cumulant generating function (CGF) is defined as:
+
+```
+K(t) = ln(M(t))
+```
+
+where M(t) is the moment generating function.
+
+The moment generating function is defined as:
+
+```
+M(t) = E(e^(tx))
+```
+
+For the given PDF, we have:
+
+```
+M(t) = ∫₀∞ e^(tx) * (1/4) * x * e^(-x/2) dx
+```
+
+Simplifying:
+
+```
+M(t) = (1/4) * ∫₀∞ x * e^(-(1/2 - t)x) dx
+```
+
+Using integration by parts again, we can find the integral:
+
+```
+M(t) = (1/4) * [(2/(1 - 2t))^2]
+```
+
+Therefore, the CGF is:
+
+```
+K(t) = ln[(1/4) * (2/(1 - 2t))^2]
+```
+
+**Part c: Finding the mean and variance**
+
+The mean and variance can be found using the CGF.
+
+The mean is given by:
+
+```
+μ = K'(0)
+```
+
+where K'(t) is the first derivative of the CGF.
+
+Differentiating the CGF:
+
+```
+K'(t) = 4/(1 - 2t)
+```
+
+Evaluating at t = 0:
+
+```
+μ = K'(0) = 4
+```
+
+The variance is given by:
+
+```
+σ² = K''(0)
+```
+
+where K''(t) is the second derivative of the CGF.
+
+Differentiating K'(t):
+
+```
+K''(t) = 8/(1 - 2t)^2
+```
+
+Evaluating at t = 0:
+
+```
+σ² = K''(0) = 8
+```
+
+Therefore, the mean of X is 4 and the variance of X is 8.
+
+
+
+A continuous random variable X has the following pdf
+\[f(x) = k x e^{-x/2}\]
+; k is a constant. x >0
+\begin{enumerate}
+\item a) Find the value of k for f(x) to be a valid probability density function.
+\item b) Find the cumulant generating function of X.
+\item c) Using the cumulant generating function or otherwise, find the mean and
+variance of X.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Solution
+\noindent \textbf{Solution}\\
+
+\noindent \textbf{Part (a)}\\
+a) f (x) = kxe^{-x/2} ; x > 0
+( ) 1 1
+0 0
+\int^{\infty} = ⇒ \int^{\infty} / 2 =
+ 
+f x dx kxe−x dx
+\int^{\infty}
+
+⇒ − =
+0
+k 2ue u 2du 1 if x/2 = u
+⇒ 4k = 1 since \int^{\infty}
+
+− =
+0
+e uudu 1
+⇒ k = 1/ 4
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \textbf{Part (b)}\\
+b) M t xetxe x dx
+x \int^{\infty}
+
+= −
+0
+( ) 1/ 4 / 2
+= xe x t dx \int^{\infty}
+
+− −
+0
+(1/ 2 )
+4
+1
+e du
+t
+u −u
+
+\int^{\infty} −
+=
+0
+4 (1/ 2 )2
+1 if x(1/2-t)=u
+(1 2 )2
+1
+− t
+=
+C (t) logM (t) 2log(1 2t) x x = = − −
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \textbf{Part (c)}\\
+c) ( ) | 4 0
+= ' = x t= EX C t
+V(X) = ( ) | 8 0
+'' = x t= C

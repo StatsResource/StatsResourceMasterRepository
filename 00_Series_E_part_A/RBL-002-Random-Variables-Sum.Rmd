@@ -1,0 +1,127 @@
+---
+title: "Sum of Random Numbers from 1 to 5"
+subtitle: "Random Variables"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    font_size: 20pts
+    nature:
+      highlightStyle: github
+      countIncrementalSlides: false
+---
+
+<style type="text/css">
+  body{
+  font-size: 20pt;
+}
+</style>
+
+```{r eval=FALSE,include=FALSE}
+
+# CT6 
+# - ASI 2005 April Question B - 1
+# - ASI 2006 April Question B - 1
+
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(magrittr)
+library(knitr)
+library(dplyr)
+library(janitor)
+
+
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent_inverse(
+  base_color = "#3C989E", #)(
+#  base_color = "#1c5253",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "400", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+
+A computer chooses a number at random $n$ times from the set $\{1, 2, 3, 4, 5\}$ (with replacement).
+
+Let $S$ denote the sum of the numbers chosen. 
+
+#### Exercises
+
+Show that $E(S) = 3n$ and $\textrm{Var}(S) = 2n$.
+
+
+---
+
+#### Solution
+
+To calculate the expected value $E(S)$ and variance $\textrm{Var}(S)$ of the sum $S$, we'll use the ***linearity of expectation*** and the ***properties of the variance***.
+
+**Expected Value E(S):**
+
+* Let $X_i$ be the random variable representing the i-th number chosen. 
+'
+* Since the numbers are chosen with replacement, each $X_i$ is independently and identically distributed (IID) with the same probability mass function as the set ${1, 2, 3, 4, 5}$.
+
+The expected value of each $X_i$ is given by:
+
+$$E(X_i) = \frac{(1 + 2 + 3 + 4 + 5)}{5} = 3$$
+
+---
+
+Using the linearity of expectation, we can find the expected value of the sum $S$:
+
+$$\begin{eqnarray} E(S) &=& E(X_1 + X_2 + ... + X_n) \\ & &\\ &=& E(X_1) + E(X_2) + ... + E(X_n) \\& &\\ &=& 3n\end{eqnarray}$$
+
+Remark $E(X_1) = 3$, $E(X_2) = 3$ etc 
+
+---
+
+**Variance $\textrm{Var}(S)$:**
+
+Since the $X_{i}$'s are IID, the variance of the sum $S$ is the sum of the individual variances:
+
+$$\begin{eqnarray} \textrm{Var}(S) &=& \textrm{Var}(X_1 + X_2 \;+ \;...\; + X_n)\\& &\\&=& \textrm{Var}(X_1) + \textrm{Var}(X_2) \;+ \;...\; + \textrm{Var}(X_n)\end{eqnarray}$$
+
+---
+
+**Variance $\textrm{Var}(S)$:**
+
+
+* To find the variance of each $X_i$, we can use the formula:
+
+$$\textrm{Var}(X_{i}) = E(X_{i}^2) - (E(X_{i}))^2$$
+
+* First, let's calculate $E(X_{i}^2)$:
+
+$$E(X_{i}^2) = \frac{(1^2 + 2^2 + 3^2 + 4^2 + 5^2)}{ 5} = 11$$
+
+* Now we can find $\textrm{Var}(X_{i})$:
+
+$$\textrm{Var}(X_{i}) = 11 - 3^2 = 2$$
+
+
+Finally, the variance of the sum $S$ is:
+
+$$\textrm{Var}(S) = 2 + 2 + ... + 2\mbox{ (n times)} = 2n$$
+
+---
+
+#### Conclusion 
+
+Therefore, we have shown that $\textrm{E}(S) = 3n$ and $\textrm{Var}(S) = 2n$.
+
+---
+
+BLANK
+
+---
+
+
+BLANK
+
+---
