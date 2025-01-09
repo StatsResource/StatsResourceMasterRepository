@@ -1,0 +1,47 @@
+
+\noindent If the probability distribution of X admits a probability density function f(x), then the expected value can be computed as
+\[\operatorname{E}[X] = \int_{-\infty}^\infty x f(x)\, \mathrm{d}x .  \]
+
+\[ \operatorname{E}[X^2] = \int_{-\infty}^\infty x^2 f(x)\, \mathrm{d}x .  \]
+
+
+\subsection*{Variance of a Random Variable}
+The expression for the variance can be expanded:
+ \begin{align}
+\operatorname{Var}(X) &= \operatorname{E}\left[(X - \operatorname{E}[X])^2\right] \\
+	&= \operatorname{E}\left[X^2 - 2X\operatorname{E}[X] + (\operatorname{E}[X])^2\right] \\
+	&= \operatorname{E}\left[X^2\right] - 2\operatorname{E}[X]\operatorname{E}[X] + (\operatorname{E}[X])^2 \\
+	&= \operatorname{E}\left[X^2 \right] - (\operatorname{E}[X])^2 
+	\end{align}
+A mnemonic for the above expression is "mean of square minus square of mean".
+%--------------------------------------------------------------------%
+
+\subsection*{Improper Integrals}
+{
+
+\[ e^{\infty} = \infty  \]
+
+\[ e^{ - \infty} = 0  \]
+
+\[ e^{0} = 1 \]
+}
+
+{
+\noindent Expected Value
+\[\operatorname{E}[X] = \int_{-\infty}^\infty x f(x)\, \mathrm{d}x .  \]
+\noindent Probability Density Function
+
+\[
+f(x;\lambda) = \begin{cases}
+\lambda e^{-\lambda x} & x \ge 0, \\
+0 & x < 0.
+\end{cases}
+\]
+
+\[\operatorname{E}[X] = \int_{-\infty}^0 x f(x)\, \mathrm{d}x  + \int_{0}^\infty x f(x)\, \mathrm{d}x .  \]
+
+
+\[\operatorname{E}[X] = \int_{-\infty}^0 (x\; \times 0) \, \mathrm{d}x  + \int_{0}^\infty (x \times \lambda e^{-\lambda x})\, \mathrm{d}x .  \]
+
+}
+%======================================================================================= %

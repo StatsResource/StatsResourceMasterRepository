@@ -1,0 +1,211 @@
+
+\section{Bernouilli Trial}
+\begin{itemize}
+	\item Now consider an experiment with only two outcomes. Independent repeated trials of such an experiment are
+	called \textbf{\textit{Bernoulli trials}}, named after the Swiss mathematician Jacob Bernoulli (16541705). \item The term \textbf{\emph{independent
+			trials}} means that the outcome of any trial does not depend on the previous outcomes (such as tossing a coin).
+	\item We will call one of the outcomes the ``success" and the other outcome the ``failure".
+	
+	\item
+	Let $p$ denote the probability of success in a Bernoulli trial, and so $q = 1 - p$ is the probability of failure.
+	A binomial experiment consists of a fixed number of Bernoulli trials. \item A binomial experiment with $n$ trials and
+	probability $p$ of success will be denoted by
+	\[B(n, p)\]
+	\item a probability mass function (pmf) is a function that gives the probability that a 
+	discrete random variable is exactly equal to some value. 
+	\item The probability mass function is often the primary means of defining a discrete probability distribution 
+\end{itemize}
+
+
+\section*{Bernouilli Trial}
+\begin{itemize}
+
+
+\item We would denote a binomial random variable $X$ with $n$ trials and
+probability $p$ of success as follows
+\[X \sim Bin(n, p)\]
+
+\end{itemize}
+
+
+
+%===============================================================%
+\subsection*{Examples}
+Consider the following statistical experiment. You flip a coin five times and count the number of times the coin lands on heads. This is a binomial experiment because:
+\begin{itemize}
+\item The experiment consists of repeated trials. We flip a coin five times.
+\item Each trial can result in just two possible outcomes: heads or tails. We call one of these outcomes a success and the other, a failure, depending on the question asked.
+
+\item The probability of success, denoted by $p$ is constant : 0.5 on every trial for a fair coin.
+\item The probability of success, denoted by P, is the same on every trial.
+\item The trials are independent; that is, getting heads on one trial does not affect whether we get heads on other trials.
+\end{itemize}
+
+
+
+
+\section*{What is a Success}
+\begin{itemize}
+\item
+The word ``success" implies that the outcome is the outcome of interest.
+\item If the outcome of interest is something like a flat tire, using the word ``Success" is counter intuituive.
+\item Typically the success event is the less likely of the two events.
+\end{itemize}
+
+%============================================================================================%
+\section*{Binomial Experiments}
+\begin{itemize}
+\item A binomial experiment with n trials and
+probability $p$ of success will be denoted by
+\[B(n, p)\]
+\item Frequently, we are interested in the \textbf{\emph{number of successes}} in a binomial experiment, not in the order in which they occur.
+\item Furthermore, we are interested in the probability of that number of successes.
+
+\item The number of successes X in n trials of a binomial experiment is called a binomial random variable.
+\item The number of independent trials is denoted $n$.
+\item The probability of a `success' is $p$
+\item The expected number of `successes' from $n$ trials is $E(X) = np$
+\end{itemize}
+
+%---------------------------------------------------------------------------%
+
+\section*{Bernoulli Distribution: The coin toss}
+
+There is no more basic random event than the flipping of a coin. Heads or tails. It's as simple as you can get! The "Bernoulli Trial" refers to a single event which can have one of two possible outcomes with a fixed probability of each occurring. You can describe these events as "yes or no" questions. For example:
+
+%============================================================ %
+\begin{itemize}
+	\item Will the coin land heads?
+	\item Will the newborn child be a girl?
+	\item Are a random person's eyes green?
+	\item Will a mosquito die after the area was sprayed with insecticide?
+	\item Will a potential customer decide to buy my product?
+	\item Will a citizen vote for a specific candidate?
+	\item Is an employee going to vote pro-union?
+\end{itemize}
+
+Will this person be abducted by aliens in their lifetime?
+The Bernoulli Distribution has one controlling parameter: the probability of success. A "fair coin" or an experiment where success and failure are equally likely will have a probability of 0.5 (50%). Typically the variable p is used to represent this parameter.
+
+If a random variable X is distributed with a Bernoulli Distribution with a parameter p we write its probability mass function as:
+
+%================================================================================================ %
+\[f(x) = \begin{cases}p, & \mbox{if } x = 1\\1-p, & \mbox{if } x = 0\end{cases}\quad 0\leq p \leq 1\]
+Where the event X=1 represents the "yes."
+
+This distribution may seem trivial, but it is still a very important building block in probability. The Binomial distribution extends the Bernoulli distribution to encompass multiple "yes" or "no" cases with a fixed probability. Take a close look at the examples cited above. Some similar questions will be presented in the next section which might give an understanding of how these distributions are related.
+
+
+
+
+\subsection*{Mean}
+The mean (E[X]) can be derived:
+\[ \operatorname{E}[X] = \sum_i f(x_i) \cdot x_i\]
+\[ \operatorname{E}[X]  = p \cdot 1 + (1-p) \cdot 0\]
+\[ \operatorname{E}[X]= p \,\]
+Variance
+\[\operatorname{Var}(X) = \operatorname{E}[(X-\operatorname{E}[X])^2] = \sum_i f(x_i)  \cdot (x_i - \operatorname{E}[X])^2
+\operatorname{Var}(X)= p \cdot (1-p)^2 + (1-p) \cdot (0-p)^2 
+\]
+\[\operatorname{Var}(X)= [p(1-p) + p^2](1-p) \,
+\operatorname{Var}(X)= p(1-p) \,
+\]
+
+
+
+\begin{verbatim}
+Bernoulli
+Parameters	0<p<1, p\in\R
+Support	k=\{0,1\}\,
+PMF	
+\begin{cases}
+	q=(1-p) & \text{for }k=0 \\ p & \text{for }k=1
+\end{cases}
+
+CDF	
+\begin{cases}
+	0 & \text{for }k<0 \\ q & \text{for }0\leq k<1 \\ 1 & \text{for }k\geq 1
+\end{cases}
+
+Mean	p\,
+Median	\begin{cases}
+	0 & \text{if } q > p\\
+	0.5 & \text{if } q=p\\
+	1 & \text{if } q<p
+\end{cases}
+Mode	\begin{cases}
+	0 & \text{if } q > p\\
+	0, 1 & \text{if } q=p\\
+	1 & \text{if } q < p
+\end{cases}
+Variance	p(1-p)\,
+Skewness	\frac{q-p}{\sqrt{pq}}
+Ex. kurtosis	\frac{1-6pq}{pq}
+Entropy	-q\ln(q)-p\ln(p)\,
+MGF	q+pe^t\,
+CF	q+pe^{it}\,
+PGF	q+pz\,
+Fisher information	 \frac{1}{p(1-p)} 
+\end{verbatim}
+
+\begin{verbatim}
+Bernoulli
+Parameters	0<p<1, p\in\R
+Support	k=\{0,1\}\,
+PMF	
+\begin{cases}
+q=(1-p) & \text{for }k=0 \\ p & \text{for }k=1
+\end{cases}
+\end{verbatim}
+
+CDF	
+\[\begin{cases}
+0 & \text{for }k<0 \\ q & \text{for }0\leq k<1 \\ 1 & \text{for }k\geq 1
+\end{cases}\]
+
+
+\begin{itemize}
+	\item Mean	\[E(X) = p \]
+	\item Median \[	\begin{cases}
+	0 & \text{if } q > p\\
+	0.5 & \text{if } q=p\\
+	1 & \text{if } q<p \end{cases}	\]
+	
+	\item Mode	\[\begin{cases}
+	0 & \text{if } q > p\\
+	0, 1 & \text{if } q=p\\
+	1 & \text{if } q < p
+	\end{cases}\]
+\end{itemize}
+Variance	$p(1-p)\,$
+Skewness	$\frac{q-p}{\sqrt{pq}}$
+Ex. kurtosis	$\frac{1-6pq}{pq}$
+%\begin{verbatim}
+%Entropy	-q\ln(q)-p\ln(p)\,
+%MGF	q+pe^t\,
+%CF	q+pe^{it}\,
+%PGF	q+pz\,
+%Fisher information	 \frac{1}{p(1-p)} 
+%\end{verbatim}
+
+			\noindent \textbf{Binomial Experiment}
+			A binomial experiment (also known as a Bernoulli trial) is a statistical experiment that has the following properties:
+			\begin{itemize}
+				\item The experiment consists of n repeated trials.
+				\item Each trial can result in just two possible outcomes. We call one of these outcomes a success and the other, a failure.
+				\item The probability of success, denoted by P, is the same on every trial.
+				\item The trials are independent; that is, the outcome on one trial does not affect the outcome on other trials.
+			\end{itemize}
+			
+Consider the following statistical experiment. You flip a coin 2 times and count the number of times the coin lands on heads. This is a binomial experiment because:
+						\begin{itemize}
+							\item The experiment consists of repeated trials. We flip a coin 2 times.
+							\item Each trial can result in just two possible outcomes - heads or tails.
+							\item The probability of success is constant - 0.5 on every trial.
+							\item The trials are independent; that is, getting heads on one trial does not affect whether we get heads on other trials.
+						\end{itemize}
+
+
+
+
+\end{document}
