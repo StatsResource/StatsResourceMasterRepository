@@ -1,0 +1,10 @@
+- LZW is a data compression method that takes advantage of this repetition.
+- The original version of the method was created by Lempel and Ziv in 1978 (LZ78) and was further refined by Welch in 1984, hence the LZW acronym. 
+- Like any adaptive/dynamic compression method, the idea is to 
+ - (1) start with an initial model, 
+ - (2) read data piece by piece, 
+ - (3) and update the model and encode the data as you go along.
+- LZW is a "dictionary"-based compression algorithm. This means that instead of tabulating character counts and building trees (as for Huffman encoding), LZW encodes data by referencing a dictionary. 
+- Thus, to encode a substring, only a single code number, corresponding to that substring's index in the dictionary, needs to be written to the output file. 
+- Although LZW is often explained in the context of compressing text files, it can be used on any type of file. 
+- However, it generally performs best on files with repeated substrings, such as text files.
