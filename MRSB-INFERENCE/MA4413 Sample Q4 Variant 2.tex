@@ -1,0 +1,92 @@
+
+\documentclass[]{article}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+%opening
+
+\begin{document}
+\subsection*{Q4. Inference Procedures (Variant 2)}
+
+\begin{itemize}
+\item[(a)] \textbf{\textit{Binary Classification (4 Marks)}}\\
+For following binary classification outcome table, calculate the following appraisal metrics.
+\begin{itemize}	
+\item[(i)] (1 Mark)	accuracy;
+\item[(ii)] (1 Mark)	recall;
+\item[(iii)] (1 Mark)	precision;
+\item[(iv)] (1 Mark)	F-measure.
+\end{itemize}	
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline  & \phantom{spa}Predict Negative\phantom{spa} & \phantom{spa}Predict Positive\phantom{spa} \\ 
+\hline\phantom{spa} Observed Negative \phantom{spa}&	9560	&	100	\\ 
+\hline \phantom{spa}Observed Positive\phantom{spa} & 	270	&	70	\\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+\item[(b)] \textbf{\textit{Theory of Statistical Inference (4 Marks)}}\\
+\begin{itemize}
+\item[i.](2 Marks) In the context of hypothesis testing, explain what a p-value is, and how it is used. Support your answer with a simple example.
+\item[ii.](2 Marks) What is meant by Type I error and Type II error?
+\end{itemize}
+
+\item[(c)] \textbf{\textit{Single Sample Proportions (5 Marks)}}\\
+\subsubsection*{Part B} %3 Marks
+A well-known polling company estimates that $57\%$ of Irish voters support a new constitutional amendment. 800 people were randomly surveyed and asked about their voting preferences. 482 of the 800 people responded positively to the amendment. You are required to:
+
+\begin{itemize}
+\item [i.](1 Mark) Obtain a point estimate of the proportion of people supporting the constitutional amendment.
+\item [ii.](4 Marks) Construct a 95\% confidence interval for the proportion of people in favour of the constitutional amendment.
+\end{itemize}
+
+\item[(d)] \textbf{\textit{Inference Procedures with \texttt{R} (6 Marks)}}\\
+The standard deviations of data sets \texttt{X} and \texttt{Y} are 10 and 9 respectively. An inference procedure was carried out to assess whether or not \texttt{X} and \texttt{Y} can be assumed to have equal variance.
+\begin{itemize}
+\item[i.](2 Mark) Formally state the null and alternative hypothesis.
+\item[ii.](1 Mark) The Test Statistic has been omitted from the computer code output. Compute the value of the Test Statistic.
+\item[iii.](2 Marks) What is your conclusion for this procedure? Justify your answer.
+\item[iv.] (1 Marks) Explain how a conclusion for this procedure can be based on the $95\%$ confidence interval.
+\end{itemize}
+
+%---- R code for Variance Test ----%
+%---- Dummy Code Included                   ----%
+\begin{framed}
+\begin{verbatim}
+        F test to compare two variances
+
+data:  X and Y
+F = ......, num df = 13, denom df = 11, p-value = 0.7349
+alternative hypothesis: true ratio of variances is not equal to 1
+95 percent confidence interval:
+ 0.3639938 3.9475262
+sample estimates:
+ratio of variances
+          .......
+\end{verbatim}
+\end{framed}
+
+\item[(c)] \textbf{\textit{Single Sample Means (6 Marks)}}\\
+Two samples of students are randomly selected from two IT training companies; Echelon and Deltatech. The mean and the standard deviation of the number of marks obtained in a well known IT competency exam by both sets of students are described below:\\
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+	&Number&	Mean&	Std. Dev.\\ \hline
+DeltaTech	&14	&24	&10\\
+Echelon	&12	&22.5	&9\\
+  \hline
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item [i.](1 Mark) Obtain a point estimate of the difference in mean scores
+\item [ii.](5 Marks) Construct a 95\% confidence interval for the proportion of people in favour of the constitutional amendment.
+\end{itemize}
+\end{itemize}
+\end{document}

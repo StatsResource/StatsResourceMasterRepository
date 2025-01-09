@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+%\usepackage[paperwidth=21cm, paperheight=29.8cm]{geometry}
+\usepackage[angle=0,scale=1,color=black,hshift=-0.4cm,vshift=15cm]{background}
+\usepackage{multirow}
+\usepackage{enumerate}
+\usepackage[gen]{eurosym}
+
+%\SetBgScale{1}
+%\SetBgAngle{0}
+%\SetBgColor{black}
+%\SetBgContents{\rule{1pt}{30cm}}
+%\SetBgHshift{-8.4cm}
+%
+%\backgroundsetup{contents={
+%\begin{tabular}{c|c}
+%\hspace{2cm} & \\[0.7cm]
+%& {\bf Statistics for Computing ------ Lecture 1 ------ Solutions} \\[0.3cm]
+%%\hline
+%\hspace{2cm} & \hspace{18.5cm} \\ [28cm]
+%\end{tabular}}}
+%
+%\backgroundsetup{contents={
+%{\bf \centering Statistics for Computing ------------------ Tutorial 8 --------------------------- Questions} }}
+
+
+\setlength{\voffset}{-3cm}
+\setlength{\hoffset}{-2cm}
+\setlength{\parindent}{0cm}
+\setlength{\textheight}{27cm}
+\setlength{\textwidth}{17cm}
+
+\pagestyle{empty}
+
+
+
+\begin{document}
+
+\section{Single Sample Inference Procedures}
+%=====================================================================%
+%=====================================================================%
+
+\subsection*{Question 1}
+A machine is set to produce laptop sleeves with the following dimensions:\\ length $\times$ width $\times$ depth = $40 \text{ cm} \times  30 \text{ cm} \times 2 \text{ cm}$. A sample of 40 sleeves was selected and each was measured. The results were as follows:\\[-0.2cm]
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		&&&\\[-0.4cm]
+		& length & width & depth \\
+		\hline
+		&&&\\[-0.4cm]
+		$\bar x$ & 40.11 & 30.09  & 1.91 \\
+		\hline
+		&&&\\[-0.4cm]
+		$s$ & 0.51 & 0.17 & 0.15 \\
+		\hline
+	\end{tabular}
+\end{center}
+
+Test the following hypotheses (use the 5\% level of significance in each case):\\[0.2cm]
+{\bf(a)} The mean length is equal to 40cm. \quad {\bf(b)} The mean width is equal to 30cm. \quad \\{\bf(c)} The mean depth is equal to 2cm. \quad {\bf(d)} Both the width and the depth of the sleeve need to be addressed here - which do you think is more urgent?  \quad {\bf(d)} Calculate the p-values for the tests carried out in parts (a), (b) and (c).
+
+
+
+	
+
+\subsection*{Question 1}
+A market researcher wishes to know the market share for Android devices. From a sample of 500 individuals, it was found that 359 use an Android device.\\[-0.2cm]
+
+{\bf(a)} What type of data has been collected here? \quad {\bf(b)} What is the parameter and its value? \quad {\bf(c)} What is the statistic and its value? \quad {\bf(d)} Calculate a 95\% confidence interval and interpret this interval. \quad {\bf(e)} How large a sample is required to reduce the \emph{margin of error} in the previous confidence interval to $\pm 0.02$?
+	
+	
+	\subsection*{Question 2}
+	Google want to estimate the average amount (in dollars) that an individual spends after clicking on a particular Google Ad. In order to achieve this, 1000 people are randomly selected and the amount they spend is recorded. It is found that the average spend is \$42.38 and the standard deviation is \$16.80.\\[-0.2cm]
+	
+	
+	{\bf(a)} What is the data type? \quad {\bf(b)} Write down the values of: $p$, $\hat p$, $\mu$, $\bar x$, $\sigma$ and $s$. \quad {\bf(c)} Calculate a 99\% confidence interval for the average spend. \quad {\bf(d)} What value of $n$ is needed to estimate the true average spend within $\pm \,\, \$\,0.50$ with 99\% confidence? (i.e., $z_{\,0.005}\,\frac{s}{\sqrt{n}} = 0.5$)
+
+\subsection*{Question 2}
+A matchbox is supposed to contain 100 matches. We wish to test this hypothesis.  \\[-0.2cm]
+
+{\bf(a)} State the null and alternative hypotheses. \quad {\bf(b)} From a sample of 32 matchboxes, it is found that the average is 99.4 and the standard deviation is 2.1. Calculate the test statistic. \quad {\bf(c)} Provide your conclusion based on the p-value.
+
+\subsection*{Question 3}
+An aircraft part is designed to last more than 500 hours. However, in the interest of safety, it will first be assumed that the part lasts \emph{less than or equal to} 500 hours (i.e., this is the null hypothesis) unless there is firm evidence suggesting otherwise.\\[-0.2cm]
+
+{\bf(a)} State the null and alternative hypotheses. \quad {\bf(b)} What is the critical value if $\alpha=0.001$ and only 4 units will be run until wearout (due to the expense of wasting aircraft parts). \quad \\ {\bf(c)} In this sample of size 4, it is found that the average is 566 hours and the variance is 83 hours$^2$. Calculate the test statistic. \quad {\bf(d)} What is the conclusion?
+
+
+
+	\subsection*{Question 3}
+	A manufacturer of aircraft parts wishes to estimate the operating life of a particular component. Thus, a sample of 45 components are used until failure. It is found that the average life is 671.23 hours and the variance is 400 hours-squared.
+	\begin{itemize}
+		\item[{\bf(a)}] What type of data was collected? \quad \item[{\bf(b)}] What is the parameter and its value? \quad \item[{\bf(c)}] What is the statistic and its value? \quad \item[{\bf(d)}] Calculate / interpret the 99.9\% confidence interval.
+	\end{itemize}
+	
+
+

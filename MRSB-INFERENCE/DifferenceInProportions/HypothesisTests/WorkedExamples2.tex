@@ -1,0 +1,180 @@
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{framed}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{Worked Examples} \chead{Inference Procedures} %\input{tcilatex}
+
+\begin{document}
+\large 
+\noindent   
+63 of 100 first time convicts serving at least 3 years re-offended, whereas 70 of 140 first time convicts serving less than 3 years re-offended. 
+\begin{enumerate}[(a)]
+\item	Test the null hypothesis that the re-offending rate does not depend on the length of the first sentence at a significance level of 5\%.
+% \item 	Calculate a 95\% confidence interval for the difference in the re-offending rates of these two groups.
+% \item 	Based on this confidence interval, is there any evidence that the re-offending rates differ? 
+\end{enumerate}
+
+\bigskip 
+\begin{framed}
+		\noindent \textbf{Hypothesis Testing : Steps when using Critical Value approach}
+		
+		\begin{itemize}
+			\item[1] Formally State the Null and Alternative Hypothesis \smallskip
+			{
+				\begin{itemize}
+					\item[$\ast$] \textbf{ALWAYS} include a short written description of both hypotheses.
+					\item[$\ast$] State hypotheses in mathematical notation where possible.
+					
+				\end{itemize}
+			}
+			\item[2] Calculate Test Statistic (TS) using relevant formulas.\smallskip
+			\item[3] Determine the Critical Value (CV) from tables. \smallskip
+			\item[4] By comparing the values of the Test Statistic and Critical Value, decide whether to reject the Null Hypothesis.
+		\end{itemize}
+	\end{framed}
+\newpage 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Statement of Hypotheses}
+
+\begin{itemize}
+    \item The Null Hypothesis ($H_0$) proposes that there is no difference in reoffending rates between the two groups of convicts.
+    \item The Alternative Hypothesis ($H_1$) proposes that there is a differencein reoffending rates between the two groups of convicts.
+\end{itemize}
+\medskip 
+\begin{description}
+\item[$H_0$:] $\pi_1 = \pi_2$  - i.e. Population proportions are equal to each other.
+\item[$H_1$:] $\pi_1 \neq \pi_2$ - i.e. Population proportions are different to each other.
+\end{description}
+\medskip
+\noindent Equivalently, the hypotheses can be expressed in terms of difference in proportions.
+\begin{description}
+\item[$H_0$:] $\pi_1 - \pi_2= 0 $ - i.e. Difference in population proportions is zero.
+\item[$H_1$:] $\pi_1 - \pi_2 \neq 0$ - i.e. Difference in population proportions is not zero.
+\end{description}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\subsection*{Computing the Test Statistic}
+\noindent \textbf{Point Estimate}
+
+\begin{itemize}
+     \item The sample proportions for both groups are
+    \[ \hat{p}_1 = \frac{63}{100} = 0.63 \;\;(\mbox{i.e.}\; 63\%) \] 
+    \[ \hat{p}_2 = \frac{70}{140} = 0.50 \;\;(\mbox{i.e.}\; 50\%) \]  
+    \item The point estimate is the difference between these proportions:
+    \[ \hat{p}_1  - \hat{p}_2  = 0.13 \;\;(\mbox{i.e.}\; 13\%) \]
+\end{itemize}
+
+\noindent \textbf{Standard Errors}
+\begin{itemize}
+    \item The Standard Error Formula are typically provided in the exam paper, or an accompanying document.
+    \item Each type of hypothesis test has a different Standard Error Formula.
+\end{itemize}
+\bigskip
+\begin{framed}
+\noindent \textbf{Standard Error for Difference in Proportions}\\
+\noindent {Two large independent samples}
+\begin{eqnarray*}
+	S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{ \bar{p}\times(1-\bar{p}) \times \left(\frac{1}{n_1}+\frac{1}{n_2}\right)}.\\
+\end{eqnarray*}
+\begin{itemize}
+    \item $\bar{p}$ is the overall proportion
+\[    \bar{p} = \frac{x_1 + x_2}{n_1+n_2}\]
+\end{itemize}
+\end{framed}
+\[    \bar{p} = \frac{63 + 70}{100+140} = \frac{133}{240} = 0.5541 \]
+
+
+\noindent Using percentages, the aggregate proportion is 55.41\%.
+
+\begin{eqnarray*}
+	S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{ 55.41 \times 44.59 \times \left(\frac{1}{100}+\frac{1}{140}\right)}.\\
+	&=&\sqrt{ 2470.732 \times 0.01714}.\\
+	&=&\sqrt{42.3483}\\
+	&=& 6.5075 \\
+\end{eqnarray*}
+\newpage 
+\noindent \textbf{General Structure of the Test Statistic}
+\begin{framed}
+\[ TS = {\mbox{Point Estimate} - \mbox{Expected Parameter Value under $H_{0}$} \over \mbox{Std. Error}}\]
+\end{framed}
+
+\begin{eqnarray*}
+TS &=& \frac{ 13\;-\; 0}{6.5075} \\
+& & \\
+&=& 1.9976\\
+\end{eqnarray*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+\subsection*{Determine the Critical Value}
+
+\begin{itemize}
+\item The critical value is determined from Statistical Tables.
+\item Determination depends on the significance level $\alpha$, the sample size $n$ and the number of tails in the test (i.e. is it a one-tailed or two tailed test?)
+\end{itemize}
+
+\noindent \textbf{Significance Level}
+
+\begin{itemize}
+\item In hypothesis testing, the significance level $\alpha$ is the criterion used for rejecting the null hypothesis. 
+%\item The significance level of a statistical hypothesis test is a fixed probability of wrongly rejecting the null hypothesis $H_0$, if it is in fact true.
+%\item Equivalently, the significance level (denoted by $\alpha$) is the probability that the test statistics will fall into the \textbf{\emph{critical region}}, when the null hypothesis is actually true. 
+
+\item In University courses, common choices for $\alpha$ are $0.05$ and $0.01$. We will use $\alpha =0.05$ (i.e. 5\%).
+\item We have a large aggregate sample size ($n_1 + n_2 > 30)$.
+\item The hypothesis test is 2-tailed procedure.
+\item The Critical Value is 1.96.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+\subsection*{Decision}
+
+
+
+\begin{framed}
+\noindent \textbf{What are the conclusions}
+	\begin{itemize} 
+		
+		\item[Yes:] We \textbf{reject the Null} Hypothesis. \\ \textit{We have sufficient evidence against Null Hypothesis.}
+		
+		\item[No:] We \textbf{fail to reject} Null hypothesis. \\ \textit{We do not have sufficient evident against Null Hypothesis.}
+	\end{itemize}	
+	{	\normalsize
+		N.B. Note the terminology that we are using. Also note exactly what our conclusion is: We are talking about strength of evidence, rather than what is true or false.}
+	
+\end{framed}
+	\smallskip
+\begin{framed}
+\begin{itemize}
+	\item 	If $TS > CV$ , where $CV$ is a critical value corresponding to the sample size and confidence level, then reject the null hypothesis. 
+	\item  If $TS \leq CV$ , we fail to reject. null hypothesis. i.e. Not enough evidence. 
+	\end{itemize}	
+\end{framed}	
+
+\noindent Here $TS > CV$, i.e. ($2.00 > 1.96$), so we reject the null hypothesis. i.e. evidence of a significant difference. 
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+BLANK
+	
+\end{document}	

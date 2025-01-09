@@ -1,0 +1,111 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MA4704} \rhead{Kevin O'Brien} \chead{Week 8 Tutorial Solutions} %\input{tcilatex}
+
+\begin{document}
+
+\section*{Revision}
+\subsection{Confidence Intervals}
+General Structure of a confidence interval
+
+\[ \mbox{Point Estimate} \pm \left( \mbox{Quantile} \times \mbox{Standard Error} \right) \]
+
+\subsection{Hypothesis testing}
+\begin{description}
+\item[step 1] Formally write out the null hypothesis $H_0$ and the alternative hypothesis $H_1$.
+\item[step 2] Compute the Test Statistic ($TS$)
+\item[step 3] Determine, from the statistical tables, the Critical Value $CV$.
+\item[step 4] Use the Decision Rule to form a conclusion about the test.
+\end{description}
+
+\section{Question 1}
+\begin{itemize}
+\item  Sample mean $\bar{x}$ = 121 (Point Estimate)
+\item  Sample standard deviation $s$ = 14  (use this as an estimate for $\sigma$)
+\item  Sample Size n = 49 (n.b. Large Sample)
+\end{itemize}
+
+\subsection{Confidence Interval}
+Confidence Intervals are always 2 tailed procedures. Also the level of significance is $\alpha= 0.05$.
+As it is a large sample the quantile is 1.96.
+
+\[ \mbox{Point Estimate} \pm \left( \mbox{Quantile} \times \mbox{Standard Error} \right) \]
+
+\[ \bar{x} \pm \left( \mbox{Q} \times \frac{s}{\sqrt{n}} \right) \]
+
+\[ 121 \pm \left( 1.96 \times \frac{14}{\sqrt{49}} \right) = (117.08,124.92) \]
+
+\newpage
+\subsection{Hypothesis Test}
+
+\textbf{Step 1:}Formally write out the null hypothesis $H_0$ and the alternative hypothesis $H_1$.\\
+
+Let $\mu_{IT}$ be the mean score for the \textbf{\textit{population}} of experience IT users. Under the null hypothesis, this mean score is the same for the general population (i.e. 100). Under the alternative hypothesis, this mean score is difference than that of the general population.
+
+\begin{itemize}
+\item[$H_0$] $\mu_{IT} = 100$
+\item[$H_1$] $\mu_{IT} \neq 100$
+\end{itemize} 
+
+(Remark: this is a two-tailed test $\neq$ in the alternative hypothesis)\\
+
+
+
+\noindent\textbf{Step 2:}Compute the Test Statistic\\
+
+\[ TS = \frac{\mbox{Observed Value} - \mbox{Null Value}}{\mbox{Standard Error}} \]
+
+\begin{itemize}
+\item Observed vale i.e. sample mean = 121
+\item Null value i.e. expected value under the null hypothesis  = 100
+\item Standard Error - computed for confidence interval = 2.
+\end{itemize} 
+
+\[ TS = \frac{121 - 100}{2} = 10.5 \]
+
+
+\noindent\textbf{Step 3:}Determine the Critical value\\\\
+
+Critical values are determined the same way as quantiles are, when computing confidence intervals.
+
+\begin{itemize}
+\item  This test is a 2 tailed procedures.
+\item The level of significance is $\alpha= 0.05$.
+\item There is a large sample ($n >30$).
+\end{itemize}
+
+The critical value is 1.96.
+
+\noindent \textbf{Step 3:}Decision Rule\\\\
+
+Is the absolute value of the Test statistic greater than the Critical value
+\[ |TS| >CV? \]
+
+\begin{itemize}
+\item If Yes, We \textbf{Reject} the null hypothesis
+\item If No, We \textbf{Fail to Reject} the null hypothesis
+\end{itemize}
+
+\[ |10.5| >1.96? \]
+
+Yes! We reject the null hypothesis. The mean value for experienced IT users is different (i.e. larger) than the mean for the general population.
+
+\end{document}

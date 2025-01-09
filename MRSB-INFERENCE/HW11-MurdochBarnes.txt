@@ -1,0 +1,109 @@
+ \documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10} %TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570} %TCIDATA{<META NAME="SaveForMode"
+CONTENT="1">} %TCIDATA{LastRevised=Wednesday, February 23, 2011
+13:24:34} %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MA4704} \rhead{Mr. Kevin O'Brien} \chead{Midterm
+Assessment Paper 2013} %\input{tcilatex}
+
+\begin{document}
+
+\section*{Attempt ALL questions}
+
+\bigskip
+\subsection*{Q1. Discrete Random Variables (2 Marks)} % 2 Marks% MA4704 Mid Term 2
+%
+% -- Part 1 - Theory
+%
+% 1 Mark What is a $p-$value
+% 1 Mark Briefly describe how $p-$value is used in hypothesis testing
+% 1 Mark Type I error
+% 1 Mark Type II error
+% 2 Marks A data set is determined to be not normally distributed. Briefly describe two operations that can typically be performed in this instance.
+% -- Log Transformation
+% -- Test for Outliers
+% 1 Mark Non Parametric Inference
+% -- Marks Tally so far 7 Marks
+
+% -- Part 2 - Hypothesis Testing Computation
+%
+% 1 Mark Formally state the null hypothesis
+% 1 Mark Formally state the alternative hypothesis
+% 1 Mark Standard Error
+% 1 Mark Test Statistic
+% 1 Mark Appropriate level of significance
+% 1 Mark Appropriate degrees of freedom
+% 1 Mark Appropriate Critical value
+% 1 MArk Discuss your conclusion to this test, supporting your statement with reference to appropriate values.
+
+% -- Part 3 - Confidence Interval
+
+% 2 Marks Using previously calculated values, compute the confidence interval
+
+
+Using the Murdoch Barnes Tables
+
+\section{The Standard Normal (``Z”) Distribution}
+ 
+A random variable that has a normal distribution with a mean of zero and a standard deviation of one is said to have a standard normal probability distribution.  It is often nick-named the "z" distribution.
+ 
+Importantly, probabilities relating to the z distribution are comprehensively tabulated in Murdoch Barnes table 3.
+
+Given a value of k (with k between 0 and 4), the probability of a  standard normal "z" random variable being greater than (or equal to) k is given in Murdoch Barnes table 3 (page 71). 
+
+ 
+
+\subsubsection{Example 1 }
+
+Find  $P(Z \geq 1.80)$
+
+note  1.80 = 1.8 + 0.00
+
+    The row is 1.8
+    The column is 0.00
+
+
+	& 0.00	& 0.01	& 0.02	& 0.03	& ....  \\ \hline
+....	&	&	& 	&	& 	\\ \hline
+1.7	& 0.0446& 	& 	& ....	&	\\ \hline
+1.8	& 0.0359& 0.0351& 	& ....	&	\\ \hline
+1.9	& 0.0287&	&	& ....	&	\\ \hline
+....	&	&	&	&	&	\\ \hline
+
+Answer  $P(Z geq 1.80 = 0.0359)$
+
+
+
+
+
+\subsubsection{Example 2}  
+
+Find  $P(Z geq 1.96)$
+
+note  1.96 = 1.9 + 0.06
+
+    The row is 1.9
+    The column is 0.06
+
+	&....	&0.05	&0.06	&0.07	&.... \\ \hline
+....	&	&	&	&	&     \\ \hline
+1.8	&	&	&0.0314	&	&     \\ \hline
+1.9	&	&0.0256	&0.0250	&0.0244	&     \\ \hline
+2.0	&	&	&....	&	&    \\ \hline	
+....	&	&	&	&	&	\\ \hline
+
+Answer $P(Z geq 1.96)  = 0.0250$
+%===========================================================%

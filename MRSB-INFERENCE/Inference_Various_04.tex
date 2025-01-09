@@ -1,0 +1,237 @@
+\item
+A group of 8 computer science students were randomly selected and asked how many hours they spent gaming last week. The average time was found to be 6.4 hours and the standard deviation was 2.2 hours.
+\begin{itemize}
+\item Calculate a 95\% confidence interval for $\mu$. 
+\item Calculate a 99\% confidence interval for $\mu$.
+\end{itemize}
+
+\item 
+Guinness set their bottle-filling machine to put 33cl into each bottle. A sample of 5 bottles were selected at random and measured. The volumes in cl were as follows:\\
+\begin{center}
+\begin{tabular}{|ccccc|}
+\hline
+&&&&\\[-0.3cm]
+34.1  & 33.5 & 32.8 & 33.1 & 32.5\\[0.1cm]
+\hline
+\end{tabular}
+\end{center}
+
+
+\item  Calculate the sample mean and standard deviation. 
+\item  Calculate a 95\% confidence interval.  
+\item  Based on the confidence interval, does it appear that the machine is working correctly?
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{itemize}
+\item A researcher takes a random sample of 500 urban residents and finds that
+122 have fibre-optic broadband access. 
+\item Calculate a 90\% Confidence Interval for
+the true percentage of residents who have fibre-optic broadband access.
+\end{itemize}
+
+
+\item \textbf{Confidence Interval for a Mean (Small Sample)} \\
+\begin{itemize}
+\item The mean operating life for a random sample of $n = 10$ light bulbs is $\bar{x} = 4,000$ hours, with the sample
+standard deviation $s = 200$ hours. 
+
+\item The operating life of bulbs in general is assumed to be approximately normally distributed.
+\item We estimate the mean operating life for the population of bulbs from which this sample was taken, using a 95 percent confidence interval as follows:
+
+\[4,000\pm(2.262)(63.3)  = (3857,4143)\]
+
+\item The point estimate is 4,000 hours. The sample standard deviation is 200 hours, and the sample size is 10. Hence
+\[S.E(\bar{x} ) = { 200 \over \sqrt{10}} = 63.3\]
+
+\item From last slide, the t quantile with $df=9$ is 2.262.
+\end{itemize}
+
+\item \textbf{Confidence Intervals : Worked Example}\\
+
+\begin{itemize} 
+\item In a statistical report on the daily sales of a certain pharmaceutical product the following confidence interval was reported [6.3, 8.1] in hundreds of units per day.
+
+\item In the report it was stated that the used confidence level was 99\% and the sample size was n = 25. 
+\item The industry standard for that type of analysis recommends the 95\% confidence level.
+\end{itemize}
+Question: Calculate a 95\% confidence interval
+%========================================================%
+\textbf{Solution:}
+
+The sample mean is 7.2
+
+\[X=\frac{8.1 + 6.3}{2}=7.2\]
+
+The sample size is n= 25. This is a small sample (i.e. less than 30)
+%========================================================%
+We are able to deduce the quantile of the $t-$distribution used to construct the 99\% confidence interval
+
+Confidence intervals are always 2 tailed , therefore k=2
+\begin{itemize}
+\item The significance level used is 1\%
+\item The degrees of freedom  is 24 (n-1)
+\item The significance level for the new interval is 5\%
+\end{itemize}
+%========================================================%
+Using Murdoch Barnes Table 7
+\begin{itemize}
+\item The quantile used to make the 99\% interval was 2.797.
+\item The quantile used to make the 95\% interval is 2.064.
+\end{itemize}
+We are now able to work out the standard error.
+%========================================================%
+
+
+\item \textbf{Single Sample Confidence interval for the Mean: Worked Example}\\
+
+The intelligence quotient (IQ) of 36 randomly chosen students was measured.
+Their average IQ was 109.9 with a variance of 324.
+The average IQ of the population as a whole is 100.
+
+\begin{enumerate}
+\item Calculate the p-value for the test of the hypothesis that on average
+students are as intelligent as the population as a whole against the alternative that on average students are more intelligent.
+
+
+\item Can we conclude at a significance level of 1\% that students are on average more intelligent than the population as a whole?
+
+\item Calculate a 95\% confidence interval for the mean IQ of all students.
+
+\end{enumerate}
+
+\begin{equation}
+Z_{Test} = \frac{X- \mu}{\frac{\sigma}{\sqrt{n}}} = \frac{109.9 - 100}{\frac{18}{\sqrt{36}}} = \frac{9.9}{3} = 3.3
+\end{equation}
+
+
+\begin{equation}
+p.value = P(Z \geq Z_{Test}) = P(Z \geq 3.3) = 0.00048
+\end{equation}
+
+
+
+\begin{equation}
+\bar{X} \pm t_{1-\alpha/2,\nu}S.E.(\bar{X})
+\end{equation}
+$\nu = 1.96$
+\begin{equation}
+t_{1-\alpha/2,\nu} = 1.96
+\end{equation}
+\begin{equation}
+109.9 \pm (1.96 \times 3) = [104.02, 115.79]
+\end{equation}
+
+
+
+\end{enumerate}
+
+\subsection{Confidence Intervals for Proportions}
+
+\begin{itemize}
+\item In a survey conducted by a mail order company a random sample of 200 customers yielded 172 who indicated that they 
+were highly satisfied with the delivery time of their orders. 
+
+\item Calculate an approximate 95\% confidence interval for the proportion of the company's customers who are 
+highly satisfied with delivery times.
+\end{itemize}
+
+
+\[p= \frac{172}{200}= 86\%\]
+
+
+\[ \frac{p(100-p)}{n} =\frac{86 \times 14}{200}\]
+
+
+
+\subsection{Confidence Interval Problem}
+
+Suppose we want to estimate the average weight of an adult american male. We draw a random sample of 100 men from the population  and weigh them.\\ \vspace{0.3cm} We find that the average man in our sample weighs 180 pounds, and the standard deviation of the sample is 30 pounds.\\ What is the 95\% confidence interval?
+
+
+
+\noindent  \textbf{Problem}
+
+\begin{itemize}
+\item
+\textbf{Identify a sample statistic} - Since we are trying to estimate the mean weight in the population, we choose the mean weight in our sample (180) as the sample statistic.
+
+
+\item \textbf{Select a confidence level}  -In this case, the confidence level is defined for us in the problem. We are working with a 95\% confidence level.
+
+
+\item \textbf{Find the margin of error} - Previously, we described how to compute the margin of error.
+\end{itemize}
+
+
+
+
+
+Using these values, we can calculate the standard error with this expression.
+
+\vspace{0.1cm}
+\[
+\mbox{Std. Error}(\bar{X})  = \sqrt{{30^2\over 100}} = \sqrt{9}
+= 3\]
+
+\vspace{0.1cm}
+
+The Standard Error is 3lbs.
+
+
+
+\noindent  \textbf{Outline of the Survey}
+The objective of the survey is to obtain an assessment of the views or opinions of students studying in the Faculty of Business and Accounting studies at a specific university.
+
+\vspace{0.4cm}
+
+The Survey is broken into three parts - A,B and C. \\ \vspace{0.2cm}
+
+A - Questions in this section are of ``Likert'' type. The data obtained here is ordinal (Categorical) although we treat it as if it were interval (Numerical) for the analysis.\\
+\vspace{0.2cm}
+B - One question asking people to indicate what School they are from - nominal (Categorical) data.\\
+\vspace{0.2cm}
+C - Another Likert question.
+
+
+
+
+\newpage
+\section*{Question Set 1: Stating Hypotheses}
+
+
+\begin{enumerate}
+\item \textbf{Worked Example}
+%%Question 3.1 (g)\\    
+A firm that produces lightbulbs claim that their products last on average 1000 hours. An independent study took a random sample of 150 lightbulbs, and found the average burning time to be 990 (with a standard deviation of 60)
+
+\textit{(Hint: This is a test of whether the nominal mean is too high)}
+
+\begin{itemize}
+\item[(i)] Clearly state your null and alternative hypotheses.
+\item[(ii)] Is this a One Tail or Two Tail test?
+\end{itemize}
+\item \textbf{Worked Example}
+%Question 3.1 (c) \\
+Based on birth records for millions of babies, the percentage of newborn babies in Sweden that are female is 51\%. A group of researchers in Sweden are interested in finding out if women who suffer from severe morning
+sickness are more likely to have a girl. 
+
+The researchers looked at records for 1000 women admitted to hospital for
+severe morning sickness and determined that 560 of these women gave birth
+to a female baby.  \textit{[Source: Lancet 354: 2053, 1999]}.
+(Hint: This is a test of whether the nominal proportion is too low)
+\begin{itemize}
+\item[(i)] Clearly state your null and alternative hypotheses.
+\item[(ii)] Is this a One Tail or Two Tail test?
+\end{itemize}
+\item \textbf{Worked Example}
+%Question 3.1 (e)\\
+An environmental group states that “fewer than 60\% of industrial plants comply with air pollution standards”. An independent researcher takes a sample of 60 plants and finds that 33 are complying with air pollution standards. 
+(Hint: This is a test of whether the nominal proportion is accurate)
+\begin{itemize}
+\item[(i)] Clearly state your null and alternative hypotheses.
+\item[(ii)] Is this a One Tail or Two Tail test?
+\end{itemize}

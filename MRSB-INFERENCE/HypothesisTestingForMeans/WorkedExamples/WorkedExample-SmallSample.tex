@@ -1,0 +1,88 @@
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{framed}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{Worked Examples} \chead{Inference Procedures} %\input{tcilatex}
+
+\begin{document}
+
+\large 
+
+%---------------------------------------------------------------------------------
+\begin{itemize}
+\item The standard deviation of the life for a particular brand of ultraviolet tube is known to be $s = 500$ hr,
+\item Also it is assumed, but not known, that the operating life of the tubes is normally distributed. \item The manufacturer claims that average tube life
+is 9,000hr. \item Test this claim at the 5 percent level of significance against the alternative hypothesis
+that the mean life is not 9,000 hr, and given that for a sample of $n = 10$ tubes the mean operating
+life was $\bar{x} = 8,800$ hr.
+\item (\textit{Intuitively this would suggest a one-tailed test that the mean is less than 9000 hours})
+\end{itemize}
+
+
+
+\bigskip
+\noindent \textbf{Step 1: Hypotheses }
+\smallskip
+\begin{itemize}
+\item $H_0 \mbox{ : } $ $\mu = 9000$ (Average life span is 9000 hours.)
+\item $H_1 \mbox{ : } $ $\mu \neq 9000$ (Average life span is not 9000 hours.)
+\end{itemize}
+\bigskip
+\begin{itemize}
+\item The observed difference is -200 hours. (i.e. 8,800 - 9,000 hours)
+\item The standard error is determined from formulae.
+\[ S.E. (\bar{x}) = {s \over \sqrt{n}} = {500 \over \sqrt{10}}  = 158.1139 \]
+\end{itemize}
+
+%--------------------------------------------------------------------------------------%
+
+%--------------------------------------------------------------------------------------%
+\newpage
+\noindent \textbf{Steps 2 and 3: Test Statistic and Critical Value }
+\smallskip
+\begin{itemize}
+\item The test statistic is $(-200 /  158.11) = -1.265$
+\item The CV is determined with $\alpha = 0.05$ and $k = 2$ ( column = $\alpha/k=0.025$).
+\item The sample is small n = 10 $df = n-1 = 9$ (i.e. row =9).
+\item Therefore $CV = 2.262$
+
+\item (Remark: If the sample was large, we could use $CV = 1.96$).
+
+\end{itemize}
+
+
+%--------------------------------------------------------------------------------------%
+\newpage
+\noindent \textbf{Step 4: Decision Rule}
+\smallskip
+\begin{itemize}
+\item \textbf{Decision:}\\ Is $|TS| >CV$? \\Is $1.265 > 2.262$?
+\item No. We fail to reject the null hypothesis. \item There is not enough evidence to say that the mean lifespan is not 9000 hours.
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\newpage
+BLANKS
+\end{document}
+

@@ -1,0 +1,236 @@
+\section{Efficiency}
+
+A source alphabet with non-uniform distribution will have less entropy than if those symbols had uniform distribution (i.e. the "optimized alphabet"). 
+
+Efficiency has utility in quantifying the effective use of a communications channel.
+
+
+\begin{itemize}
+
+\item Conditional probability:
+\begin{equation*}
+P(B|A)=\frac{P\left( A\text{ and }B\right) }{P\left( A\right) }.
+\end{equation*}
+
+\end{itemize}
+
+
+\section*{Formulae}
+\begin{itemize}
+
+\item Conditional probability:
+\begin{equation*}
+P(B|A)=\frac{P\left( A\text{ and }B\right) }{P\left( A\right) }.
+\end{equation*}
+
+
+\item Bayes' Theorem:
+\begin{equation*}
+P(B|A)=\frac{P\left(A|B\right) \times P(B) }{P\left( A\right) }.
+\end{equation*}
+
+
+
+\item Binomial probability distribution:
+\begin{equation*}
+P(X = k) = ^{n}C_{k} \times p^{k} \times \left( 1-p\right) ^{n-k}\qquad \left( \text{where}\qquad
+^{n}C_{k} =\frac{n!}{k!\left(n-k\right) !}. \right)
+\end{equation*}
+
+\item Poisson probability distribution:
+\begin{equation*}
+P(X = k) =\frac{m^{k}\mathrm{e}^{-m}}{k!}.
+\end{equation*}
+
+
+\item{Information Theory}
+
+\begin{itemize}
+\item $I(p) = - log_{2}(p) = log_{2}(1/p)$
+
+\item $I(pq) = I(p) + I(q)$
+
+\item $H = - \sum_{j=1}^{m} log_{2}(p_{i})$\\
+
+\item $E(L) = \sum_{j=1}^{m} l_{i} p_{i}$\\
+
+\item $\mbox{Efficiency} = H / E(L)$\\
+
+\item $I(X,Y) = H(X) - H(X|Y)$\\
+
+\item $P(C[r]) = \sum_{j=1}^{m}P(C[r]|Y=d_{j} )P(Y=d_{j} )$
+\end{itemize}
+\end{itemize}
+
+
+
+%=======================================================%
+\subsection*{Confidence Intervals}
+{\bf One sample}
+\begin{eqnarray*} S.E.(\bar{X})&=&\frac{\sigma}{\sqrt{n}}.\\\\
+S.E.(\hat{P})&=&\sqrt{\frac{\hat{p}\times(100-\hat{p})}{n}}.\\
+\end{eqnarray*}
+{\bf Two samples}
+\begin{eqnarray*}
+S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}.\\\\
+S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{\frac{\hat{p}_1\times(100-\hat{p}_1)}{n_1}+\frac{\hat{p}_2\times(100-\hat{p}_2)}{n_2}}.\\\\
+\end{eqnarray*}
+
+%=======================================================%
+
+\subsection*{Hypothesis tests}
+{\bf One sample}
+\begin{eqnarray*}
+S.E.(\bar{X})&=&\frac{\sigma}{\sqrt{n}}.\\\\
+S.E.(\pi)&=&\sqrt{\frac{\pi\times(100-\pi)}{n}}
+\end{eqnarray*}
+{\bf Two large independent samples}
+\begin{eqnarray*}
+S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}.\\\\
+S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{\left(\bar{p}\times(100-\bar{p})\right)\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}.\\
+\end{eqnarray*}
+{\bf Two small independent samples}
+\begin{eqnarray*}
+S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{s_p^2\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}.\\\\
+s_p^2&=&\frac{s_1^2(n_1-1)+s_2^2(n_2-1)}{n_1+n_2-2}.\\
+\end{eqnarray*}
+{\bf Paired sample}
+\begin{eqnarray*}
+S.E.(\bar{d})&=&\frac{s_d}{\sqrt{n}}.\\\\
+\end{eqnarray*}
+{\bf Standard deviation of case-wise differences}
+\begin{eqnarray*}
+s_d = \sqrt{ {\sum d_i^2 - n\bar{d}^2 \over n-1}}.\\\\
+\end{eqnarray*}
+
+
+\subsection{Formulae}
+
+$I(p) = - log_{2}(p) = log_{2}(1/p)$\\
+
+$I(pq) = I(p) + I(q)$\\
+
+$H = - \sum_{j=1}^{m} log_{2}(p_{i})$\\
+
+$E(L) = \sum_{j=1}^{m} l_{i} p_{i}$\\
+
+$\mbox{Efficiency} = H / E(L)$\\
+
+$I(X,Y) = H(X) - H(X|Y)$\\
+
+$P(C[r]) = \sum_{j=1}^{m}P(C[r]|Y=d_{j} )P(Y=d_{j} )$
+
+
+\section{Formula}
+
+%------------------------------------------------------------%
+\subsection{Confidence Intervals}
+
+$\nu$ is the degrees of freedom. For large samples ( samples of a
+size greater than thirty) $\nu = \infty$. For small sample (
+samples of a size thirty or less)  $\nu = n-1$
+
+\begin{equation}
+\bar{X} \pm t_{\nu,\alpha/2}\mbox{S.E.}(\bar{X})
+\end{equation}
+
+\begin{equation}
+\hat{P} \pm t_{\nu,\alpha/2}\mbox{S.E.}(\hat{P})
+\end{equation}
+
+\subsection{Hypothesis Testing}
+% Inference: Two samples
+\begin{equation}
+\frac{(\hat{P}_{1}-\hat{P}_{2})-(P_{1}-P_{2})}{S.E.(\hat{P}_{1}-\hat{P}_{2})}
+\end{equation}
+
+\begin{equation}
+\frac{(\bar{X}-\bar{Y})-(\mu_{x}-\mu_{y})}{S.E.(\bar{X}-\bar{Y})}
+\end{equation}
+
+
+
+\newpage
+\section*{Formulae}
+\subsection*{Descriptive Statistics}
+\begin{itemize}
+\item Sample Variance
+\begin{equation*}
+s^2 = \frac{\sum^{n}_{i=i} (x_i-\bar{x})^2}{n-1}
+\end{equation*}
+\end{itemize}
+%-------------------------------------------------%
+\subsection*{Probability}
+\begin{itemize}
+
+\item Conditional probability:
+\begin{equation*}
+P(B|A)=\frac{P\left( A\text{ and }B\right) }{P\left( A\right) }
+\end{equation*}
+
+
+\item Bayes' Theorem:
+\begin{equation*}
+P(B|A)=\frac{P\left(A|B\right) \times P(B) }{P\left( A\right) }
+\end{equation*}
+
+
+
+
+
+\item Binomial probability distribution:
+\begin{equation*}
+P(X = k) = \text{  }^{n}C_{k} \times p^{k} \times \left( 1-p\right) ^{n-k}\qquad \left( \text{where  }
+^{n}C_{k} =\frac{n!}{k!\left(n-k\right) !} \right)
+\end{equation*}
+
+\item Poisson probability distribution:
+\begin{equation*}
+P(X = k) =\frac{m^{k}\mathrm{e}^{-m}}{k!}
+\end{equation*}
+
+\item Exponential probability distribution:
+\begin{equation*}
+P(X \leq k) = \begin{cases}
+1-e^{- k/\mu}, & k \ge 0, \\
+0, & k < 0.
+\end{cases}\qquad \left( \text{where  }
+\mu = {1\over \lambda}\right)
+\end{equation*}
+\end{itemize}
+
+\section*{Formulas for Standard Errors}
+\subsection*{Confidence Intervals}
+
+{\bf One sample}
+\begin{eqnarray*} S.E.(\bar{X})&=&\frac{\sigma}{\sqrt{n}}.\\\\
+S.E.(\hat{P})&=&\sqrt{\frac{\hat{p}\times(100-\hat{p})}{n}}.\\
+\end{eqnarray*}
+\subsection*{Hypothesis tests}
+{\bf One sample}
+\begin{eqnarray*}
+S.E.(\bar{X})&=&\frac{\sigma}{\sqrt{n}}.\\\\
+S.E.(\pi)&=&\sqrt{\frac{\pi\times(100-\pi)}{n}}
+\end{eqnarray*}
+\end{document}
+\[{\bf Two samples}
+\begin{eqnarray*}
+S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}.\\\\
+S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{\frac{\hat{p}_1\times(100-\hat{p}_1)}{n_1}+\frac{\hat{p}_2\times(100-\hat{p}_2)}{n_2}}.\\\\
+\end{eqnarray*}
+\]
+\subsection*{Hypothesis tests}
+\[{\bf One sample}
+\begin{eqnarray*}
+S.E.(\bar{X})&=&\frac{\sigma}{\sqrt{n}}.\\\\
+S.E.(\pi)&=&\sqrt{\frac{\pi\times(100-\pi)}{n}}
+\end{eqnarray*}
+\]
+\[{\bf Two large independent samples}
+\begin{eqnarray*}
+S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}.\\\\
+S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{\left(\bar{p}\times(100-\bar{p})\right)\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}.\\
+\end{eqnarray*}
+\]
+
+\end{document}

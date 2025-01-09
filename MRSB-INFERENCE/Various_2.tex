@@ -1,0 +1,218 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+
+%========================================================%
+\subsection{Joint Probability Tables}
+% PMS Autumn 2009 Question 8
+
+Find $E[X|Y=2]$
+
+\begin{tabular}{ccccc}
+	& X=0  & X=1  & X=2  &              \\ \hline
+	Y=1 & 0.15 & 0.2  & 0.25 & P(Y=1) = 0.6 \\ \hline
+	Y=2 & 0.05 & 0.15 & 0.20 & P(Y=2) = 0.4 \\ \hline
+	& P(X=0) = 0.2  & P(X=1) = 0.35  & P(X=2)=0.45  &              \\ \hline
+\end{tabular}
+% TABLE HERE
+
+
+
+\textbf{Solution}
+\[   \frac{(0 \times 0.05) + (1 \times 0.15)+(2 \times 0.2) }{0.4}  = \frac{0.55}{0.4}  \] 
+
+$E[X|Y=2] = 1.375$
+
+
+\subsection{Combined Probability : Worked Example}	
+
+\begin{itemize}
+	\item 		
+	Suppose an electronics assembly subcontractor recieves resistors from two suppliers A and B
+	
+	\item 		Supplier A supplies 80\% of the resistors
+	
+	\item 		P(A) = 0.80 probability that a randomly chosen resistor comes from A
+	
+	\item 		Supplier B supplies 20\% of the resistors
+	
+	\item 		P(B) = 0.20 probability that a randomly chosen resistor comes from B
+	
+\end{itemize}		
+%-----------------------------------------------------%
+
+\begin{itemize}
+	\item 1\% of the resistors supplied by A are faulty (i.e. resistor fails the final test)
+	\item 3\% of the resistors supplied by B are faulty 
+\end{itemize}
+
+%-----------------------------------------------------%
+
+
+\textbf{Question:} \\ What is the probability that a randomly selected resistor fails the final test?
+
+Compute P(F) 
+
+\[	P(F) = P(F \mbox{ and } A) + P(F\mbox{ and }B)\]
+
+
+
+
+
+\subsection{Question 1 : Probability Distribution}
+
+\noindent \textbf{Introduction}\\
+
+Consider playing a game in which you are winning when a \textbf{\emph{fair die}} is showing `six'
+and losing otherwise.
+
+\subsection{Part 1}If you play three such games in a row, find the probability mass function (pmf) of the number
+X of times you have won.
+
+{
+	\begin{itemize}
+		\item Firstly: what type of probability distribution is this?
+		
+		\item Is this the distribution \textbf{\emph{discrete}} or  \textbf{\emph{continuous}}?
+		
+		\item The outcomes are whole numbers - so the answer is discrete.
+		
+		\item So which type of discrete distribution? (We have two to choose from. See first page of formulae)
+		
+		
+		\item \textbf{Binomial:} characterizing the number of \textbf{\emph{successes}} in a series of \textbf{\emph{$n$ independent trials}}, with the \textbf{\emph{probability of a success}} in each trial being $p$.
+		
+		\item \textbf{Poisson:}  characterizing the \textbf{\emph{number of occurrences}} in a \textbf{\emph{unit space}} (i.e. a unit length, unit area or unit volume, or a unit period in time), where $\lambda$ is the the number of occurrences per unit space.
+		
+	\end{itemize}
+}
+
+
+\subsection{Standardisation Formula}
+
+\begin{equation}
+Z = \frac{ X - \mu } {  \sigma }
+\end{equation}
+
+
+
+
+
+
+
+The Addition Rule for Probability
+
+$P(A \cup B ) = P(A) + P(B) - P(A \cap B)$
+
+\[{8 \choose 2} =\frac{8!}{2!(8-2)!} \quad = \frac{8\times7\times6!}{2!\times 6!} = \frac{8\times7}{2\times 1} \quad = \frac{56}{2} \quad = 28\]
+
+
+
+
+\subsection{Independent Events}
+
+
+\[P(A and B) = P(A)P(B)\]
+\[P(A)P(B) = 0.98\times0.95 = 0.931\]
+
+
+\[	P(D) = P(C \mbox{ and } D) + P(M \mbox{ and } D) + P(L \mbox{ and } D)\]
+\[	P(D) = P(D|C)P(C) + P(D|M)P(M) + P(D|L)P(L)\]
+
+
+
+
+
+
+
+%----------------------------------------%
+
+
+
+
+\noindent \textbf{Probability}
+
+
+\begin{center}
+	\begin{tabular}{|c||c|c|c|c|c|c|}
+		\hline
+		\phantom{space}	& \phantom{sp} \textbf{1}\phantom{sp}	&\phantom{sp} \textbf{2}\phantom{sp}&\phantom{sp} \textbf{3}\phantom{sp}	&\phantom{sp} \textbf{4}	\phantom{sp}&\phantom{sp} \textbf{5} \phantom{sp}&\phantom{sp}\textbf{6}	\phantom{sp}\\ \hline	\hline
+		\textbf{1}	&	2	&	3	&	4	&	5	&	6	&	7	 \\ \hline	
+		\textbf{2}	&	3	&	4	&	5	&	6	&	7	&	8	 \\ \hline	
+		\textbf{3}	&	4	&	5	&	6	&	7	&	8	&	9	 \\ \hline	
+		\textbf{4}	&	5	&	6	&	7	&	8	&	9	&	10	 \\ \hline	
+		\textbf{5}	&	6	&	7	&	8	&	9	&	10	&	11	 \\ \hline	
+		\textbf{6}	&	7	&	8	&	9	&	10	&	11	&	12	 \\ \hline	
+	\end{tabular}
+\end{center}
+
+
+%----------------------------------------%
+
+\noindent \textbf{Probability}
+
+Part 1) A total of 2 or 6
+
+\[ E_1 = \{ (1,1) ,(1,5), (5,1), (4,2), (2,4), (3,3) \}  \]
+
+\[ P(E_1)  = \frac{6}{36} \]
+
+
+%----------------------------------------%
+
+\noindent \textbf{Probability}
+
+Part 2) A total greater than 9 
+
+\[ E_2 = \{ (4,6) , (5,5), (6,4), (6,5), (6,6), (3,3)\}  \]
+
+\[ P(E_2)  = \frac{6}{36} \]
+
+
+%----------------------------------------%
+
+\noindent \textbf{Probability}
+
+Part 3) A total which is three times as great as other possible totals. \\
+
+These totals are 6, 9 and 12.
+
+\[ E_3 = \{ (1,5) , (2,4), (4,2), (1,5), (3,3), (6,3), (4,5) (5,4) , (6,6) \}  \]
+
+\[ P(E_3)  = \frac{10}{36} \]
+
+
+%==================================================================%
+\textbf{Example}\\
+
+In the above example where the die is thrown repeatedly, lets work out $P(X \leq t)$ for some values of t.
+
+P(X $\leq$ 1) is the probability that the number of throws until we get a 6 is less than or equal to 1. So it is either 0 or 1. 
+
+\begin{itemize}
+	\item P(X = 0) = 0 
+	\item $P(X = 1) = 1/6$.
+	\item  Hence $P(X \leq 1) = 1/6$
+\end{itemize}
+
+Similarly, $P(X \leq 2) = P(X = 0) + P(X = 1) + P(X = 2)$\\ = 0 + 1/6 + 5/36 = 11/36
+
+
+\end{document}

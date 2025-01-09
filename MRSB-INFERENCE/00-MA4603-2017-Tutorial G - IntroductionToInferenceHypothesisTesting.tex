@@ -1,0 +1,615 @@
+
+
+\subsection*{Question 2}
+Guinness brewery wish to compare the quality of stout made using two different varieties of barley. Samples of the drink were prepared and subsequently tested. Taking various factors into consideration, each one was then given an overall quality score (where a higher score indicates better quality). The results are as follows:\\[-0.3cm]
+\begin{center}
+\begin{tabular}{|c|cccccc|}
+\cline{1-7}
+&&&&&&\\[-0.2cm]
+Variety1 & 10 & 8 & 7 & 8 & 6 & \\[0.2cm]
+\cline{1-7}
+&&&&&&\\[-0.2cm]
+Variety2 & 5  & 6 & 8 & 6 & 7 & 7 \\[0.2cm]
+\cline{1-7}
+\end{tabular}
+\end{center}
+
+The aim is to compare the mean scores in the two groups.\\[0.3cm]
+\item If we wish to make the equal variance assumption in our calculation - what test must we carry out? 
+ \item By carrying out this test, show that the equal variance assumption is reasonable here. 
+ \item Calculate a 95\% confidence interval for the difference between the two means (using the equal variance approach). State your conclusion. 
+ \item What is the advantage of the \emph{unequal} variance approach? Calculate a 95\% confidence interval using this approach.
+
+
+
+
+
+
+
+
+\newpage
+\begin{enumerate}
+\item
+
+
+%--descriptive statistics
+The mean height of the women in a large population is 1.671m while the mean height
+of the men in the population is 1.758m. The mean height of all the members of the
+population is 1.712m. Calculate the percentage of the population who are women.
+
+
+
+
+%--- Chi Squared
+
+\item An analyst of the retail trade uses as analytical tools the concepts of ‘Footfall’ (the daily
+number of customers per unit sales area of a shop) and ‘Ticket Price’ (the average sale
+price of an item in the shop’s offer).
+\\
+Shops are classified as offering Low, Medium or High price items and, during any sales
+period, as having Low, Medium or High footfall.
+\\
+During the January Sales the analyst studies a sample of shops and obtains the
+following frequency data for the nine possible combined classifications:
+
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+   & Low Price  & Medium Price & High Price \\\hline
+  Low Footfall & 45 & 75 & 23 \\ \hline
+  Medium Footfall & 37 & 126 & 25 \\ \hline
+  High Footfall & 22 & 43 & 16 \\
+  \hline
+\end{tabular}
+\\
+\\
+Conduct a suitable test for association between Ticket classification and Footfall level,
+and report on your findings.
+
+\end{enumerate}
+
+
+
+%-----------------------------------------------------------------------------------------------------------%
+\newpage
+
+\section*{Inference}
+\begin{enumerate}
+%-- hypothesis testing
+
+\item In the past, 18\% of shoppers have bought a particular brand of breakfast cereal.
+After an advertising campaign, a random sample of 220 shoppers is taken and 55 of the sample have bought this brand of cereal.
+\begin{itemize}
+\item Write down the null and the alternative hypothesis for this problem
+\item State whether it is a one tailed or two tailed test
+\end{itemize}
+
+
+%---
+
+\item The starting annual salaries for students graduating from two departments, $X$ and
+$Y$, of a university are being investigated. Two random samples of last year’s intake
+have been selected and the results are as follows:
+
+
+
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Dept & Sample size & Mean starting
+ salary & Std. Deviation \\\hline
+  X & 50 & €21,000 &  €4,900\\\hline
+  Y & 40 & €20,000 & €3,000 \\
+  \hline
+\end{tabular}
+
+
+\begin{itemize}
+\item What proportion of new graduates from Department X earn more than €22,000
+per month?
+\item Test the hypothesis that graduates from Department X earn more than those from
+Department Y at two appropriate levels and comment on your results. Give any
+necessary conditions for your test to be valid.
+\end{itemize}
+
+%---
+\item  A market research company has conducted a survey of adults in two large towns, either
+side of an international border, in order to judge attitudes towards a controversial
+internationally broadcast celebrity television programme.
+The following table shows some of the information obtained by the survey:
+
+ \begin{tabular}{|c|c|c|}
+   \hline
+   % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+    & Town A & Town Z \\ \hline
+   Sample size & 50 & 50 \\ \hline
+   Sample number approving & 26 & 22 \\
+   \hline
+ \end{tabular}
+
+\begin{itemize}
+\item Conduct a formal hypothesis test, at the 5\% significance level, of the claim that the
+population proportions approving the programme in the two towns are equal.
+
+\item Would your conclusion be the same if, in both towns the sample sizes had been 100
+(with the same sample proportions of approvals)?
+\end{itemize}
+
+%---
+
+\item The intelligence quotient (IQ) of 36 randomly chosen students was measured.
+Their average IQ was 109.9 with a variance of 324.
+The average IQ of the population as a whole is 100.
+
+\begin{itemize}
+\item Calculate the p-value for the test of the hypothesis that on average
+students are as intelligent as the population as a whole against the alternative that on average students are more intelligent.
+
+
+\item Can we conclude at a significance level of 1\% that students are on average more intelligent than the population as a whole?
+
+\item Calculate a 95\% confidence interval for the mean IQ of all students.
+
+\end{itemize}
+
+%---
+
+\item The manufacturer of the new spray also claims that it can be used to
+prevent the loss due to insect damage of tender seedlings. To test this
+claim, the grower sprays 50 tomato seedlings with the new spray and his
+remaining 100 tomato seedlings with his standard spray. After six weeks,
+the fruit grower counts the number of healthy plants with the following
+results.
+
+
+\begin{tabular}{|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+   & New spray & Standard spray \\\hline
+  No. of seedlings
+sprayed & 50 & 100 \\\hline
+  No. of healthy plants
+at 6 weeks & 40 & 70 \\
+  \hline
+\end{tabular}
+\\
+\\
+Construct an approximate 95\% confidence interval for the difference in
+the proportion of healthy plants six weeks after spraying between the two
+groups.
+
+\end{enumerate}
+
+
+\section*{Question 2 (Two Sample Means - One Tailed)}
+%good
+A pharmaceutical company wants to test, a new medication for blood pressure. Tests
+for such products often include a `\textit{treatment group}' of people who use the drug and a `\textit{control group}'of people who did not use the drug. 50 people with high blood pressure are given the new drug and 100 others, also with high blood pressure, are not given the drug. 
+
+The systolic blood pressure is measured for each subject, and the sample statistics
+are given below. Using a 0.05 level of significance, test the claim that the new drug \textbf{reduces}
+blood pressure. 
+%Would you recommend advertising that the new drug does not aect blood pressure?
+\begin{center}
+\begin{tabular}{|c||c|}
+\hline 
+Treatment & Control \\ \hline \hline
+$n_1$ = 50 & $n_2$ = 100 \\ \hline
+$x_1$ = 189.4  & $x_1$ = 203.4  \\ \hline
+$s_1$ = 39.0 & $s_1$ = 39.4 \\ \hline
+\end{tabular} 
+\end{center}
+\textbf{\textit{Standard Error Formula}}
+\[ S.E.(\bar{x}_1 - \bar{x}_2)  = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}} \]
+%----------------------------------------------------------------------- %
+
+\section*{Question 3 (Two Sample Means - One Tailed)}
+The average mass of a sample of 64 Irish teenagers (Let say - 18 year old males) was 73.5kg with a variance of 100kg$^2$. 
+The average mass of an equivalent sample of 81 Japanese teenagers was 68.5kg with a variance of 81 kg$^2$. 
+\begin{itemize}
+\item[(i)] Test the hypothesis that Irish students are larger (in terms of mass) than Japanese teenagers.
+%\item[(i)] By calculating the appropriate $p-$value, test the null hypothesis that the mean mass of 
+%all Irish students is 70kg at significance levels of 5\%. 
+%\item[(ii)] Using the appropriate confidence interval, test the hypotheses that the average mass of all Irish students is a) 70kg, b) 72kg, c) 75kg at a significance level of 5\%.
+\end{itemize}
+
+\noindent \textbf{\textit{Standard Error Formula}}
+{
+\large
+\[ S.E.(\bar{x}_1 - \bar{x}_2)  = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}} \]
+\[ S.E.(\bar{x}_1 - \bar{x}_2)  = \sqrt{\frac{10^2}{64} + \frac{9^2}{81}}  = \sqrt{2.56} = 1.6\]
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-------------------------------------%
+\section*{Question 7 - Two Sample Means (Small Samples)}
+A new process has been developed to reduce the level of corrosion of car bodies.
+\begin{itemize}
+\item Experiments were carried out on 11 cars using the new process and 11 cars using the old process. \item The average level of corrosion using the new process was 3.4 with a standard deviation of 0.5. \item The average level of corrosion using the old process was 4.2 with a standard deviation of 0.8. 
+\end{itemize} 
+
+\begin{itemize}
+\item[(i)] Test the hypothesis that the variance of the level of corrosion does not depend on the process used.
+\item[(ii)] Is there any evidence that the new process is better at a significance level of 5\%?
+\item[(iii)] Calculate a 95\% confidence interval for the difference between the mean levels of corrosion under the two processes. Can it be stated that the mean level of corrosion is reduced by 1.5 at a significance level of 5\%? 
+%\item[(iv)] What assumptions were used in ii) and iii)? 
+\end{itemize}
+
+%-------------------------------------%
+\section*{Question 8 - Two Sample Means}
+Deltatech software has 350 programmers divided into two groups with 200 in Group A
+and 150 in Group B. In order to compare the efficiencies of the two groups, the
+programmers are observed for 1 day.
+%------------------%
+\begin{itemize}
+\item The 200 programmers in Group A averaged 45.2 lines of code with a standard
+deviation of 8.4.
+\item The 150 programmers in Group B averaged 42.7 lines of code with a standard
+deviation of 5.2.
+\end{itemize}
+%------------------%
+Let $\bar{x}_A$ denote the average number of lines of code per day produced by programmers in
+Group A and
+let $\bar{x}_A$ be the corresponding statistic for Group B.
+Provide an estimate of $\mu_A ?\mu_B$ and calculate an approximate 95\% confidence interval for
+%------------------%
+
+Test the claim that Group A are more efficient than Group B by
+\begin{itemize}
+\item[(i)] Interpreting the 95\% confidence interval.
+\item[(ii)] Computing the appropriate test statistic.
+%\item[(iii)] Computing the appropriate p-value.
+\end{itemize}
+\normalsize
+%----------------------- %
+\section*{Question 9 - Two Sample Proportions}
+In a recent British election 40.12\% of the voters voted for the Labour party. A survey of 98 people indicated that 49 of them wish to vote for the Labour party. 
+\begin{itemize}
+\item[(i)] Does this figure indicate that support for the Labour party has changed at a significance level of 5\% (calculate the realisation of the appropriate test statistic)? 
+\item[(ii)] Calculate a 95\% confidence interval for the present support of the Labour party. Comment on your result taking your conclusion from part i) into account. 
+\end{itemize}
+
+\normalsize
+\section*{Question 10 - Testing Equality of Variances}
+Interpret the output from the following tests of equality of variances. State your conclusion both by referencing the $p-$value and the confidence interval. You may assume the significance level is 5\%.
+
+(Remark : This procedure is a one-tailed procedure. However, we will base our conclusion on whether or not we arbitrarily decide the p-value is large or small )
+\begin{framed}
+\begin{verbatim}
+> var.test(X,Y)
+
+F test to compare two variances
+
+data:  X and Y
+F = ???, num df = 13, denom df = 13, p-value = 0.02725
+alternative hypothesis: 
+true ratio of variances is not equal to 1 
+95 percent confidence interval:
+1.164437 11.299050 
+sample estimates:
+ratio of variances 
+???? 
+\end{verbatim}
+\end{framed}
+\begin{framed}
+\begin{verbatim}
+> var.test(X,Z)
+
+F test to compare two variances
+
+data:  X and Z 
+F = ???, num df = 13, denom df = 11, p-value = 0.7813
+alternative hypothesis: 
+true ratio of variances is not equal to 1 
+95 percent confidence interval:
+0.2526643 2.7401535 
+sample estimates:
+ratio of variances 
+??????
+\end{verbatim}
+\end{framed}
+%\begin{framed}
+%\begin{verbatim}
+%> var.test(Y,Z)
+%
+%        F test to compare two variances
+%
+%data:  Y and Z
+%F = ???, num df = 13, denom df = 11, p-value = 0.01616
+%alternative hypothesis: true ratio of variances is not equal to 1 
+%95 percent confidence interval:
+% 0.06965702 0.75543304 
+%sample estimates:
+%ratio of variances 
+%         ???????
+%\end{verbatim}
+%\end{framed}
+%\end{document}
+
+
+
+\section*{Question 6}
+
+In a study of company salaries, salaries paid by 2 different IT companies were randomly selected.
+\begin{itemize}
+\item For 40 Deltatech employees the mean is 23,870 and the standard deviation is 2,960. 
+\item For 35 Echelon employees , the mean is 22,025 and the standard deviation is 3,065.
+\end{itemize} 
+
+At the 0.05 level of significance, test the claim that Deltatech employees earn the same as their Echelon counterparts.
+%-------------------------------------- %
+\section*{Question 7}
+Does it pay to take preparatory courses for standardised tests such as the Comptia Exams? 
+
+Using the sample data in the following table, compute the case-wise differences, the mean of the case-wise differences and the standard deviation of the case wise differences for the following data set.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline  
+Student&A&B&C&D&E&F&G&H&I&J\\ \hline
+Score Before&700&840&830&860&840&690&830&1180&930&1070\\ \hline
+Score After&720&840&820&900&870&700&800&1200&950&1080\\ \hline
+\end{tabular} 
+\end{center}
+
+\subsection*{Question 1}
+A machine is set to produce laptop sleeves with the following dimensions:\\ length $\times$ width $\times$ depth = $40 \text{ cm} \times  30 \text{ cm} \times 2 \text{ cm}$. A sample of 40 sleeves was selected and each was measured. The results were as follows:\\[-0.2cm]
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+&&&\\[-0.4cm]
+& length & width & depth \\
+\hline
+&&&\\[-0.4cm]
+$\bar x$ & 40.11 & 30.09  & 1.91 \\
+\hline
+&&&\\[-0.4cm]
+$s$ & 0.51 & 0.17 & 0.15 \\
+\hline
+\end{tabular}
+\end{center}
+
+Test the following hypotheses (use the 5\% level of significance in each case):\\[0.2cm]
+\item The mean length is equal to 40cm. 
+ \item The mean width is equal to 30cm. 
+ \\\item The mean depth is equal to 2cm. 
+ \item Both the width and the depth of the sleeve need to be addressed here - which do you think is more urgent?  
+ \item Calculate the p-values for the tests carried out in parts (a), (b) and (c).
+
+
+
+\subsection*{Question 2}
+A matchbox is supposed to contain 100 matches. We wish to test this hypothesis.  \\[-0.2cm]
+
+\item State the null and alternative hypotheses. 
+ \item From a sample of 32 matchboxes, it is found that the average is 99.4 and the standard deviation is 2.1. Calculate the test statistic. 
+ \item Provide your conclusion based on the p-value.
+
+
+
+\subsection*{Question 3}
+An aircraft part is designed to last more than 500 hours. However, in the interest of safety, it will first be assumed that the part lasts \emph{less than or equal to} 500 hours (i.e., this is the null hypothesis) unless there is firm evidence suggesting otherwise.\\[-0.2cm]
+
+\item State the null and alternative hypotheses. 
+ \item What is the critical value if $\alpha=0.001$ and only 4 units will be run until wearout (due to the expense of wasting aircraft parts). 
+ \\ \item In this sample of size 4, it is found that the average is 566 hours and the variance is 83 hours$^2$. Calculate the test statistic. 
+ \item What is the conclusion?
+
+
+
+\subsection*{Question 4}
+A friend claims that he can pass a particular game in 4 hours or less (on average). We wish to test this hypothesis at the 10\% level of significance. Your friend plays the game on 6 different occasions: his average completion time is 4.6 hours and the standard deviation is 0.5 hours. \\[-0.2cm]
+
+\item State the null and alternative hypotheses. 
+ \item What is the critical value? 
+ \item Calculate the test statistic and provide your conclusion. 
+ \item Between what two values does the p-value lie? (note: the p-value cannot be calculated exactly using the t-tables)
+
+
+
+\subsection*{Question 5}
+A die is rolled 80 times and we count 18 sixes. We wish to test the hypothesis that the die is fair (note: if this is the case, the proportion of sixes is $p = \frac{1}{6}$). \\[-0.2cm]
+
+\item State the null and alternative hypotheses. 
+ \item If we wish to test at the 5\% level of significance, what is the critical value? 
+ \item Calculate the test statistic and provide your conclusion.
+
+
+
+\subsection*{Question 6}
+Assume that a particular brand dominates the market. More specifically, it is well-known that at least 60\% of people use this brand (i.e., $p \ge 0.6$). However, in response to recent media claims that this brand is weakening, the company wish to test the hypothesis that $p \ge 0.6$. \\[-0.2cm]
+
+\item State the null and alternative hypotheses. 
+ \item From a sample of 1000 people, it is found that 629 use this brand; calculate the test statistic and, hence, the p-value. 
+ \item Based on the evidence, state your conclusion.
+
+
+
+\subsection*{Question 7}
+Last year 30\% of applicants to a graduate programme failed the aptitude test. This year 100 graduates applied - 25\% of these failed the test.\\[-0.2cm]
+
+\item We wish to test the hypothesis that the quality of applicants has not changed since last year - what are the null and alternative hypotheses? 
+ \item If we are testing at the 1\% level, what is the rejection region? 
+ \item Based on the data, calculate the test statistic and provide your conclusion.
+
+
+
+
+
+
+
+\subsection*{Question 7}
+Guinness set their bottle-filling machine to put 33cl into each bottle. A sample of 5 bottles were selected at random and measured. The volumes in cl were as follows:\\[-0.2cm]
+\begin{center}
+\begin{tabular}{|ccccc|}
+\hline
+&&&&\\[-0.3cm]
+34.1  & 33.5 & 32.8 & 33.1 & 32.5\\[0.1cm]
+\hline
+\end{tabular}
+\end{center}
+
+
+\item Calculate the sample mean and standard deviation. 
+ \item Calculate a 95\% confidence interval.  
+ \item Based on the confidence interval, does it appear that the machine is working correctly?
+
+
+
+
+\subsection*{Question 8}
+A soft drinks company is working on a new recipe for its best-selling drink. The company intends to carry out a study where participants will taste both flavours (current and new) and then answer the question:
+\begin{quotation}
+``Do you prefer the new flavour?''
+\end{quotation}
+It is assumed that the \emph{current} recipe is superior, i.e., that \emph{less than or equal to} 50\% of people prefer the new drink ($p \le 0.5$).\\[0.4cm]
+We wish to test the hypothesis that $p \le 0.5$.\\[-0.2cm]
+
+\item State the null and alternative hypotheses. 
+ \item From a sample of 65 people, we find that 43 people prefer the new recipe. Calculate the test statistic and, hence, the p-value. 
+ \\ \item Based on the evidence, state your conclusion.
+
+
+%------------------%
+\item 
+It is generally assumed that older people are more likely to vote for the Conservatives than younger people. In a survey, 160 of 400 people over 40 and 120 of 400 people under 40 stated they would vote Conservative. 
+\begin{enumerate}[(a)]
+\item Do the data support this hypothesis at a significance level of 5\%?
+\item Calculate a 95\% confidence interval for the difference between the proportion of people over 40 voting Conservative and the proportion of people below 40 voting Conservative. 
+\end{enumerate}
+
+
+\subsection*{Question 1}
+A sample of individuals were randomly assigned one of two diet plans. Over a 6-week period these individuals followed their assigned plan. Their weight loss was recorded at the end of the 6-week period and the results were as follows: \\[-0.2cm]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+&&\\[-0.4cm]
+& Plan 1 & Plan 2 \\
+\hline
+&&\\[-0.4cm]
+sample size & 42 & 50 \\
+mean weight loss & 7.1\,\,\,lbs & 5.2\,\,\,lbs \\
+variance & 10.1\,\,\,lbs$^2$ & 16.1\,\,\,lbs$^2$ \\
+\hline
+\multicolumn{3}{c}{}\\[-0.3cm]
+\end{tabular}
+\end{center}
+
+We wish to test the hypothesis that there is no difference between diet plans.\\[0.2cm]
+\item State the null and alternative hypotheses. 
+ \item Calculate the test statistic. 
+ \\\item Calculate the p-value. 
+ \item What is your conclusion?
+
+
+\subsection*{Question 2}
+A company claims that it pays men and women equally. The salaries for some randomly selected employees (in thousands) were recorded and the results were as follows:\\[-0.2cm]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+&&\\[-0.4cm]
+& Male & Female \\
+\hline
+&&\\[-0.4cm]
+sample size & 5 & 3 \\
+mean salary & 30.2 & 28.4 \\
+standard deviation & 1.7 & 1.9 \\
+\hline
+\multicolumn{3}{c}{}\\[-0.3cm]
+\end{tabular}
+\end{center}
+
+\item The F-test was carried out and a p-value of 0.7297 was obtained. What does this mean? 
+ \item We wish to test the hypothesis that there is no difference between salaries - what are the null and alternative hypotheses? 
+ \item If testing at the 10\% level, what is the rejection region? (note your answer to part (a)). 
+ \item Is there evidence to suggest gender inequality?
+
+
+
+\subsection*{Question 3}
+A sample of students from two universities was randomly selected. Each student had to complete the same programming task and the time to completion was recorded in each case. 
+The results were as follows: \\[-0.2cm]
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+&&\\[-0.4cm]
+& University A & University B \\
+\hline
+&&\\[-0.4cm]
+sample size & 15 & 15 \\
+mean & 12.5\,\,\,hrs & 11.1\,\,\,hrs \\
+variance & 3\,\,\,hrs$^2$ & 1.5\,\,\,hrs$^2$ \\
+\hline
+\multicolumn{3}{c}{}\\[-0.3cm]
+\end{tabular}
+\end{center}
+
+We wish to test the hypothesis that there is no difference between universities at the 5\% level.\\[0.2cm]
+\item State the null and alternative hypotheses. 
+ \item If we do \emph{not} assume equal variances, what are the critical values? 
+ \item Calculate the test statistic and, hence, provide your conclusion. 
+ \item Between what two values does the p-value lie? (note: the p-value cannot be calculated exactly using the t-tables)
+
+
+
+\subsection*{Question 4}
+The government wish to know if there is a difference in the proportions of people living in rural and urban areas in support of a new policy. 
+From a sample of 38 people in rural areas, it was found that 20 support the policy and from a sample of 116 individuals in urban areas, it was found that 70 support the policy. \\[-0.2cm]
+
+\item Test the hypothesis that there is no difference in proportions at the 5\% level.
+
+
+
+\subsection*{Question 5}
+A sample of 100 individuals were asked which product they prefer and the results were as follows:  \\[-0.2cm]
+\begin{center}
+\begin{tabular}{|c|ccccc|c|}
+\hline
+&&&&&&\\[-0.3cm]
+& Product 1 & Product 2 & Product 3 & Product 4 & Product 5 & $\sum$ \\[0.1cm]
+\hline
+&&&&&&\\[-0.3cm]
+Frequency & 19 & 24 & 24 & 14 & 19 & 100\\[0.1cm]
+\hline
+\multicolumn{7}{c}{}\\[-0.3cm]
+\end{tabular}
+\end{center}
+
+\item If there was no difference between products, what would the expected frequencies be? 
+ \\\item Test the hypothesis that the observed matches the expected \mbox{(use $\alpha=0.05$)}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+\subsection*{Question 7}
+One hundred computer science graduates from each of three different universities were asked how many programming languages they are competent in. The results were as follows:
+%\begin{center}
+%\begin{tabular}{|cc|cccc|c|}
+%\hline
+%&&&&&&\\[-0.3cm]
+%&& \multicolumn{4}{c|}{Languages} & $\sum$ \\
+%&& 1 & 2 & 3 & 4+ & \\[0.1cm]
+%\hline
+%&&&&&&\\[-0.3cm]
+%\multirow{3}{*}{University}
+%& A     &   16 & 38 & 39 &  7 & 100 \\[0.2cm]
+%& B     &   18 & 29 & 41 & 12 & 100 \\[0.2cm]
+%& C     &   28 & 31 & 38 &  3 & 100 \\[0.1cm]
+%\hline
+%&&&&&&\\[-0.3cm]
+%& $\sum$&   62 & 98 & 118& 22 & 300  \\[0.1cm]
+%\hline
+%\end{tabular}
+%\end{center}
+\item Calculate the expected frequencies assuming independence of the two variables. 
+ \\\item Calculate the $\chi^2$ statistic and, hence, a range within which the p-value lies. 
+ \\ \item What is your conclusion? 
+ \item Calculate the raw difference scores ($o_i - e_i$) and comment.
+
+
+
+
+
+\end{document}
