@@ -1,0 +1,99 @@
+
+\textbf{Example}
+
+\begin{itemize}
+\item The standard deviation of the life for a particular brand of ultraviolet tube is known to be $s = 500$ hr,
+\item Also it is assumed, but not known, that the operating life of the tubes is normally distributed. \item The manufacturer claims that average tube life
+is at least 9,000hr. \item Test this claim at the 5 percent level of significance against the alternative hypothesis
+that the mean life is less than 9,000 hr, and given that for a sample of $n = 10$ tubes the mean operating
+life was $\bar{x}  =  8,800$ hr.
+\end{itemize}
+
+\textbf{Example}
+
+\begin{itemize}
+\item $H_0 \mbox{ : } $ $\mu \geq 9000$Average life span is not less than 9000 hours.
+\item $H_1 \mbox{ : } $ $\mu < 9000$    Average life span is  less than 9000 hours.
+\end{itemize}
+\bigskip
+\begin{itemize}
+\item The observed difference is -200 hours. (i.e. 8,800 - 9,000 hours)
+\item The standard error is determined from formulae.
+\[ S.E. \bar{x}  = {s \over \sqrt{n}} = {500 \over \sqrt{10}} \]
+\end{itemize}
+
+\textbf{Example}
+
+\begin{itemize}
+\item The CV is determined from Murdoch Barnes Table 7, with $\alpha = 0.05$ and $k = 1$.
+\item The sample is small n= 10  $df = n-1 = 9$.Therefore CV = 
+\item (Remark: If the distribution was known to be normal, we could use $df = \infty$, i.e $CV = 1.645$).
+\item Decision rule : Is $|TS| >CV$? Yes. 
+\end{itemize}
+
+
+
+
+\section{Example}
+
+
+\subsection{Example 1}
+A survey of study habits wishes to determine whether the mean
+study hours completed by women at a particular college is higher
+than for men at the same college. A sample of $n_1$ = 10 women and
+$n_2$ = 12 men were taken, with mean hours of study $\bar{x}_1$ =
+120 and $\bar{x}_2$ = 105 respectively. The standard deviations
+were known to be $\sigma_1$ = 28 and $\sigma_2$ = 35.
+
+The hypothesis being tested is:
+
+\begin{eqnarray}
+H_{0}: \mu_1 = \mu_2\qquad \qquad (\mu_1 - \mu_2= 0)\\
+H_{a}: \mu_1 \neq \mu_2 \qquad \qquad (\mu_1 - \mu_2 \neq 0)
+\end{eqnarray}
+
+In $R$, the test statistic is calculated using:
+
+\begin{verbatim}
+xbar1 <- 120
+xbar2 <- 105
+sd1 <- 28
+sd2 <- 35
+n1 <- 10
+n2 <-12
+TS <- ( (xbar1 - xbar2) - (0) )/sqrt( (sd1^2/n1) + (sd2^2/n2) )
+TS
+[1] 1.116536
+\end{verbatim}
+Now need to calculate the critical value or the p-value.
+
+
+The critical value can be looked up using qnorm. Since this is a
+one-tailed test and there is a > sign in $H_1$:
+
+\begin{verbatim}
+qnorm(0.95)
+[1] 1.644854
+\end{verbatim}
+
+Since the test statistic is less than the critical value ( 1.116536 < 1:645 )there is not enough evidence to reject $H_0$
+and conclude that the population mean hours study for women is
+not higher than the population mean hours study for men.
+
+
+
+The p-value is determined using pnorm.
+
+Careful! Remember pnorm
+gives the probability of getting a value LESS than the value specified. We want the probability of getting a value greater than
+the test statistic.
+\begin{verbatim}
+1-pnorm(1.116536) # OR pnorm(1.116536, lower.tail=FALSE)
+[1] 0.1320964
+\end{verbatim}
+
+
+
+
+
+

@@ -1,0 +1,89 @@
+
+The \emph{average time} between customers arriving to a shop is 5 minutes. 
+We will assume that the time, $T$, has an exponential distribution. 
+
+### Exercises Calculate the following:
+<p>
+
+A.  The average arrival \emph{rate}, i.e., $\lambda$ customers per minute.  
+
+B.  The probability that we wait more than 15 minutes for the next customer.  
+
+C.  The probability that the next customer arrives within 1 minute.  
+
+D.  The average \emph{number of customers} in a 1 hour period. What is the standard deviation that goes with this average?  
+
+E.  The probability that \emph{15 or more} customers arrive in a 1 hour period.
+<p>
+
+Let's tackle each part of the exercise step by step.
+
+### Given:
+- The average time between customers arriving is 5 minutes.
+
+For an exponential distribution, the rate parameter $\lambda$ is the reciprocal of the mean time between arrivals.
+
+---
+
+### A. The Average Arrival Rate ($\lambda$)
+
+Given:
+$$\text{Average Time} = 5 \text{ minutes}$$
+
+The average arrival rate $\lambda$ is:
+$$\lambda = \frac{1}{\text{Average Time}} = \frac{1}{5} = 0.2 \text{ customers per minute}$$
+
+
+---
+
+### Exercise B. 
+The Probability That We Wait More Than 15 Minutes for the Next Customer
+
+For an exponential distribution, the probability that we wait more than $ t $ minutes is given by:
+$$P(T > t) = e^{-\lambda t}$$
+
+Given $\lambda = 0.2$ and $ t = 15 $ minutes:
+$$P(T > 15) = e^{-0.2 \times 15} = e^{-3} \approx 0.0498$$
+
+So, the probability that we wait more than 15 minutes for the next customer is approximately **0.0498** (or 4.98%).
+
+### C. The Probability That the Next Customer Arrives Within 1 Minute
+
+The probability that the next customer arrives within $ t $ minutes is given by the cumulative distribution function (CDF):
+$$P(T \leq t) = 1 - e^{-\lambda t}$$
+
+Given $\lambda = 0.2$ and $ t = 1 $ minute:
+$$P(T \leq 1) = 1 - e^{-0.2 \times 1} = 1 - e^{-0.2} \approx 1 - 0.8187 = 0.1813$$
+
+So, the probability that the next customer arrives within 1 minute is approximately **0.1813** (or 18.13%).
+
+### Exercise D. 
+The Average Number of Customers in a 1-Hour Period and the Standard Deviation
+
+The average number of customers in a 1-hour period is given by:
+$$\lambda \times \text{Time Period} = 0.2 \times 60 = 12 \text{ customers}$$
+
+For a Poisson distribution, the standard deviation is the square root of the mean:
+$$\sigma = \sqrt{\lambda \times \text{Time Period}} = \sqrt{12} \approx 3.46$$
+
+So, the average number of customers in a 1-hour period is **12**, and the standard deviation is approximately **3.46**.
+
+### Exercise E. 
+The Probability That 15 or More Customers Arrive in a 1-Hour Period
+
+The number of customers arriving in a given period follows a Poisson distribution with parameter $\lambda \times \text{Time Period}$:
+$$\lambda \times 60 = 12$$
+
+We need to find $ P(X \geq 15) $. This can be calculated using the Poisson cumulative distribution function (CDF), but we subtract it from 1 for the complement rule:
+
+$$P(X \geq 15) = 1 - P(X < 15)$$
+
+Where:
+$$P(X < 15) = \sum_{k=0}^{14} \frac{12^k e^{-12}}{k!}$$
+
+Using a Poisson calculator or table, we get:
+$$P(X \geq 15) \approx 1 - 0.8341 = 0.1659$$
+
+So, the probability that 15 or more customers arrive in a 1-hour period is approximately **0.1659** (or 16.59%).
+
+Feel free to ask if you have any more questions or need further assistance!

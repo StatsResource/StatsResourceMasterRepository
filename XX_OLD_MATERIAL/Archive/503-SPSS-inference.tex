@@ -1,0 +1,103 @@
+
+\subsection{Types of Error}
+Type I error: If the null hypothesis is true but we reject it this is an error of first kind or type I error (also called a error). This results in a false positive finding.
+
+Type II error: If the null hypothesis is accepted when it is in fact wrong, this is an error of the second kind or type II error (also called b error). This results in a false negative result.
+
+\subsection{Hypotheses}
+
+Null model: A model in which all parameters except the intercept are 0. It is also called the intercept-only model. The null model in linear regression is that the slope is 0, so that the predicted value of Y is the mean of Y for all values of X. The F test for the linear regression tests whether the slope is significantly different from 0, which is equivalent to testing whether the fit using non-zero slope is significantly better than the null model with 0 slope.
+
+Alternative hypothesis: In practice, this is the hypothesis that is being tested in an experiment. It is the conclusion that is reached when a null hypothesis is rejected. It is the opposite of null hypothesis, which states that there is a difference between the groups or something to that effect.
+
+
+\begin{itemize}
+\item a single proportion,
+\item a single mean,
+\item the difference between two proportions	
+\item the difference between two means;
+\end{itemize}
+
+Some commonly used tests
+   Hypothesis test for the mean of a single sample
+   Hypothesis test for the mean of two independent samples
+   Hypothesis test for the proportion of a single group
+   Hypothesis test for the proportions of two independent samples
+
+
+\subsection{Hypothesis test for the mean of a single sample}
+This procedure is used to assess whether the population mean  has a specified value, based on the sample mean. The hypotheses are conventionally written in a form similar to below (here the hypothesized population mean is zero).
+
+
+There are two hypothesis test for the mean of a single sample.
+
+1) The sample is of a normally-distributed variable for which the population standard deviation (s) is known.
+2) The sample is of a normally-distributed variable where s is estimated by the sample standard deviation (s).
+
+In practice, the population standard deviation is rarely known. For this reason, we will consider the second case only in this course.In most statistical packages, this analysis is performed in the summary statistics functions.
+
+\subsection{Hypothesis test for the means of two independent samples.}
+The procedure associated with testing a hypothesis concerning the difference between two population means is similar to that for testing a hypothesis concerning the value of one population mean. The procedure differs only in that the standard error of the difference between the means is used to determine the test statistic associated with the sample result. For two tailed tests, the null hypothesis states that the population means are the same, with the alternative stating that the population means are not equal.
+
+
+The Independent Samples T Test compares the mean scores of two groups on a given variable.
+
+Where to find it: Under the Analyze menu, choose Compare Means, the Independent Samples T Test. Move your dependent variable into the box marked "Test Variable." Move your independent variable into the box marked "Grouping Variable." Click on the box marked "Define Groups" and specify the value labels of the two groups you wish to compare.
+
+\subsubsection{Assumptions}
+\begin{itemize}
+\item The dependent variable is normally distributed. You can check for normal distribution with a Q-Q plot.
+\item The two groups have approximately equal variance on the dependent variable. You can check this by looking at the Levene's Test.
+\item The two groups are independent of one another.
+\end{itemize}
+
+\subsubsection{Hypotheses}
+Null: The means of the two groups are not significantly different.
+Alternate: The means of the two groups are significantly different.
+
+\subsubsection{Levene's Test for Equality of Variances}
+The Levene's Test for Equality of Variances  tells us if the second assumption has been met ( i.e. the two groups have approximately equal variance on the dependent variable).
+
+If the Levene's Test is significant (the value under "Sig." is less than .05), the two variances are significantly different. If it is not significant (Sig. is greater than .05), the two variances are not significantly different; that is, the two variances are approximately equal. If the Levene's test is not significant, we have met our second assumption. Here, we see that the significance is .448, which is greater than .05. We can assume that the variances are approximately equal.
+
+
+\begin{figure}[h!]
+\begin{center}
+  \includegraphics[width=150mm]{EqualVar.jpg}
+  \caption{SPSS output for two independent samples.}\label{EqualVar}
+\end{center}
+\end{figure}
+
+
+\subsection{Hypothesis test of proportion}
+This procedure is used to assess whether an assumed proportion is supported by evidence. For two tailed tests, the null hypothesis states that the population proportion  p has a specified value, with the alternative stating that p has a different value.
+
+The hypotheses are typically as follows:
+
+\subsubsection{Example}
+A manufacturer is interested in whether people can tell the difference between a new formulation of a soft drink and the original formulation. The new formulation is cheaper to produce so if people cannot tell the difference, the new formulation will be manufactured. A sample of 100 people is taken. Each person is given a taste of both formulations and asked to identify the original. Sixty-two percent of the subjects correctly identified the new formulation. Is this proportion significantly different from 50%?
+
+The first step in hypothesis testing is to specify the null hypothesis and an alternative hypothesis. In testing proportions, the null hypothesis is that p, the proportion in the population, is equal to 0.5. The alternate hypothesis is p not equal to 0.5.
+
+The computed p-values is compared to the pre-specified significance level of 5\%. Since the p-value (0.0214) is less than the significance level of 0.05, the effect is statistically significant.
+
+Since the effect is significant, the null hypothesis is rejected. It is concluded that the proportion of people choosing the original formulation is greater than 0.50.
+
+This result might be described in a report as follows:
+
+    The proportion of subjects choosing the original formulation (0.62) was significantly greater than 0.50, with p-value = 0.021.
+    Apparently at least some people are able to distinguish between the original formulation and the new formulation.
+Tests of Differences between Proportions
+This procedure is used to compare two proportions from two different populations. For two tailed tests, the null hypothesis states that the population proportion  has a specified value, with the alternative stating that .
+
+\subsection{Example}
+An experiment is conducted investigating the long-term effects of early childhood intervention programs (such as head start). In one (hypothetical) experiment, the high-school drop out rate of the experimental group (which attended the early childhood program) and the control group (which did not) were compared. In the experimental group, 73 of 85 students graduated from high school. In the control group, only 43 of 82 students graduated. Is this difference statistically significant?
+
+The computed p-values is compared to the pre-specified significance level of 5\%. Since the p-value (<0.0001) is less than the significance level of 0.05, the effect is statistically significant.
+
+Since the effect is significant, the null hypothesis is rejected. The conclusion is that the probability of graduating from high school is greater for students who have participated in the early childhood intervention program than for students who have not.
+
+The results could be described in a report as:
+\begin{quote}
+The proportion of students from the early-intervention group who graduated from high school was 0.86 whereas the proportion from the control group who graduated was only 0.52. The difference in proportions is significant, with p < 0.0001.
+\end{quote}

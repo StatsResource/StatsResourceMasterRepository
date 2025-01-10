@@ -1,0 +1,89 @@
+A character in a game deals a standard attack 75\% of the time and a critical attack the rest of the time (call these events $S$ and $S^c$). 
+Given that it is a standard attack, the attack power is $X\,|\,S \sim \text{Normal}(\mu=40,\sigma=3)$. 
+When the character deals a critical attack, a random fluctuation is added to this according to a $\text{Normal}(\mu=5,\sigma=1)$ distribution.
+
+A.  What is the distribution of $X\,|\,S^c$? 
+
+B.  Calculate $\Pr(X<43\,|\,S)$ and $\Pr(X<43\,|\,S^c)$. 
+
+C.  Calculate $\Pr(X<43)$. \,\, (hint: law of total probability) 
+
+D.  If the character deals less than 43 damage points, what is the probability that the attack was a critical attack?
+
+
+Let's work through each part of your query step-by-step.
+
+---
+### A. Distribution of $X\,|\,S^c$
+
+Given that the character deals a critical attack, $X\,|\,S^c$ is the sum of two normal distributions:
+$$X\,|\,S^c \sim \text{Normal}(40, 3^2) + \text{Normal}(5, 1^2)$$
+
+The sum of two independent normal distributions is also a normal distribution with the mean being the sum of the means and the variance being the sum of the variances.
+
+So:
+$$X\,|\,S^c \sim \text{Normal}(40 + 5, 3^2 + 1^2)$$
+$$X\,|\,S^c \sim \text{Normal}(45, 10)$$
+
+
+---
+
+### B. Calculate $\Pr(X < 43\,|\,S)$ and $\Pr(X < 43\,|\,S^c)$
+
+#### For $X\,|\,S$:
+$$X\,|\,S \sim \text{Normal}(40, 9)$$
+$$\mu = 40, \sigma = 3$$
+
+We standardize the variable $X$ to find the probability using the Z-score:
+$$Z = \frac{X - \mu}{\sigma}$$
+$$Z = \frac{43 - 40}{3} = 1$$
+
+Using standard normal distribution tables or a calculator:
+$$\Pr(Z < 1) \approx 0.8413$$
+
+So:
+$$\Pr(X < 43\,|\,S) \approx 0.8413$$
+
+#### For $X\,|\,S^c$:
+$$X\,|\,S^c \sim \text{Normal}(45, 10)$$
+$$\mu = 45, \sigma = \sqrt{10} \approx 3.16$$
+
+Standardizing the variable $X$ for the critical attack:
+$$Z = \frac{43 - 45}{\sqrt{10}} = \frac{43 - 45}{3.16} \approx -0.63$$
+
+Using standard normal distribution tables or a calculator:
+$$\Pr(Z < -0.63) \approx 0.2643$$
+
+So:
+$$\Pr(X < 43\,|\,S^c) \approx 0.2643$$
+
+### C. Calculate $\Pr(X < 43)$
+
+Using the law of total probability:
+$$\Pr(X < 43) = \Pr(X < 43\,|\,S) \Pr(S) + \Pr(X < 43\,|\,S^c) \Pr(S^c)$$
+
+Given:
+$$\Pr(S) = 0.75$$
+$$\Pr(S^c) = 0.25$$
+
+We have:
+$$\Pr(X < 43) = (0.8413 \cdot 0.75) + (0.2643 \cdot 0.25)$$
+
+Calculating the values:
+$$\Pr(X < 43) = 0.630975 + 0.066075 = 0.69705$$
+
+So:
+$$\Pr(X < 43) \approx 0.697$$
+
+### D. Probability that the attack was a critical attack given $X < 43$
+
+Using Bayes' theorem:
+$$\Pr(S^c\,|\,X < 43) = \frac{\Pr(X < 43\,|\,S^c) \Pr(S^c)}{\Pr(X < 43)}$$
+
+Substituting the values:
+$$\Pr(S^c\,|\,X < 43) = \frac{0.2643 \cdot 0.25}{0.697} = \frac{0.066075}{0.697} \approx 0.0948$$
+
+So:
+$$\Pr(S^c\,|\,X < 43) \approx 0.095$$
+
+Would you like any further explanation or have additional questions?

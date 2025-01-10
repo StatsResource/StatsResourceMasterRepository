@@ -1,0 +1,87 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{enumerate}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+
+
+\section*{Small Sample Hypothesis Test: Worked Example}
+
+\begin{itemize}
+
+\item The manufacturer claims that average tube life for a particular brand of ultraviolet tube
+is 9,000 hr. \item Test this claim at the 5 percent level of significance against the alternative hypothesis
+that the mean life is not 9,000 hr \item We are given the following information:  a sample of $n = 10$ tubes the mean operating
+life was $\bar{x} = 8,800$ hr. The sample standard deviation is be $s = 500$ hr.
+%\item The standard deviation of the life for a particular brand of ultraviolet tube is known to
+%\item Also it is assumed, but not known, that the operating life of the tubes is normally distributed.
+
+%\item (Intuitively this would suggest a one-tailed test that the mean is less than 9000 hours)
+\end{itemize}
+
+\begin{framed}
+
+\begin{itemize}
+\item $H_0 \mbox{ : } $ $\mu = 9000$ (Average life span is 9000 hours.)
+\item $H_1 \mbox{ : } $ $\mu \neq 9000$ (Average life span is not 9000 hours.)
+\end{itemize}
+\end{framed}
+\bigskip
+\begin{itemize}
+\item The observed difference is -200 hours. (i.e. 8,800 - 9,000 hours)
+\item The standard error is determined from formulae.
+\[ S.E. (\bar{x}) = {s \over \sqrt{n}} = {500 \over \sqrt{10}}  = 158.1139 \]
+\end{itemize}
+
+
+%--------------------------------------------------------------------------------------%
+
+\subsection*{Part (d): Test Statistic and Critical Value }
+
+\[ TS = \frac{8800 - 9000}{158.11} \]
+\begin{itemize}
+\item The test statistic $TS = -1.265$
+\item The CV is determined with $\alpha = 0.05$ and $k = 2$ (column = $\alpha/k=0.025$).
+\item The sample is small n = 10 $df = n-1 = 9$ (i.e. row =9).
+\item Therefore $CV = 2.262$
+
+\item (Remark: If the sample was large, we could use $CV = 1.96$).
+
+\end{itemize}
+
+
+%--------------------------------------------------------------------------------------%
+
+\subsection*{Part (d): Decision Rule }
+
+\begin{itemize}
+\item \textbf{Decision:}Is $|TS| >CV$? Is $1.265 > 2.262$?
+\item No. We fail to reject the null hypothesis. \item There is not enough evidence to say that the mean lifespan is not 9000 hours.
+\end{itemize}
+
+
+
+
+
+
+
+
+%------------------------------------------------------------------------------%
+
+\end{document}

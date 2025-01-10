@@ -1,0 +1,117 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+\subsubsection{Worked Example Question 4}
+
+The mean and standard deviation of the salaries of 16 Irish full-time workers are €5000  and €3000, respectively.
+
+i)  Test the hypothesis that the mean salary of all Irish full-time workers is €4000 at a significance level of 5\%.   (6 marks)
+
+
+\begin{description}
+\item[Step 1 :] Formally state the null and alternative hypotheses
+\item[Step 2 :] Determine the test statistic
+\item[Step 3 :] Determine the critical value
+\item[Step 4 :] Decision Rule
+\end{description}
+
+
+
+Given
+\begin{itemize}
+\item Observed value : Sample mean     x= 5000 
+\item Null Value (Expected mean under null hypothesis)     o= 4000   
+\item Population standard deviation is unknown.
+\item Use sample standard deviation s = 3000 as an estimate.
+\item Significance  = 0.05
+\item Sample size n = 16  ( small sample)
+\end{itemize}
+
+
+\noindent \textbf{Hypotheses}
+\begin{itemize}
+\item[H0] $\mu=4000$    True mean salary is €4000
+\item[Ha] $\mu \neq 4000$    True mean salary is  not €4000
+
+\end{itemize}
+
+\noindent \textbf{Test statistic}
+
+Remember the general structure of a test statistic
+
+\[TS =\frac{Observed Value-Null Value}{Std. Error} \]
+
+
+\begin{itemize}
+\item Standard ErrorS.E.(x) =sn=300016= 750
+
+\item Test Statistic\[\frac{x-0}{S.E.(X)}=\frac{5000 -4 000}{750}= 1.33\]
+
+\end{itemize}
+
+
+
+\noindent \textbf{Critical values}
+\begin{itemize}
+\item The sample size (n=16) is small (n30). Use t distribution with n-1 degrees of Freedom.
+\item The test is two tailed.  k= 2  ( "" symbol in the alternative hypothesis).
+\item Column = k =0.052= 0.025
+\end{itemize}
+
+\textbf{Murdoch Barnes table 7}
+
+\begin{itemize}
+\item Row: df = 15         (n-1)
+\item Column = 0.025
+\item Critical value =  2.131 
+\end{itemize}
+
+
+\noindent \textbf{Decision rule}
+
+\begin{framed}
+\noindent Is the absolute value of the test statistic value greater than the critical value?
+\begin{itemize}
+\item If Yes: we reject the null hypothesis
+
+\item If No: We fail to reject the null hypothesis. (not enough evidence)
+\end{itemize}
+\end{framed}
+
+If No: We fail to reject the null hypothesis. (not enough evidence)
+
+
+Here TS = 1.33  is not greater than CV = 2.131.
+
+
+We fail to reject the null hypothesis. We can not rightly say that the mean salary is not €4000 per month.
+
+
+ii)      What assumption is made in this testing procedure? Is this assumption reasonable?  (2 marks)
+
+\begin{framed}
+\begin{itemize}
+\item The assumption made in this testing procedure is that salaries are normally distributed.
+\item This is not a valid assumption as the distribution of salaries is known to be skewed (lots of low values, few high values).
+\end{itemize}
+\end{framed}
+
+
+\end{document}

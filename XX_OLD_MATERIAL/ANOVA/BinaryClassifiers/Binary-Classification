@@ -1,0 +1,123 @@
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{multicol}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MathsResource} \chead{Binary Classification} \rhead{ Tutorial Sheet} %\input{tcilatex}
+\begin{document}%--------------------%
+\begin{enumerate}
+
+\item % \textbf{Binary Classification Question (Decision Theory)}\\
+Consider the following confusion matrix.(The total number of experiments is 10,000)
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+		\hline 
+		& 	Predict Negative & Predict Positive \\ 
+		\hline 
+		Observed Negative	& 9700 & 80 \\ 
+		\hline 
+		Observed Positive	& 100  &  120 \\ 
+		\hline 
+	\end{tabular} 
+\end{center}
+Compute the following measurements
+\begin{multicols}{2}
+	\begin{enumerate}
+		\item Accuracy \item Recall \item Precision \item The F-measure
+	\end{enumerate}
+\end{multicols}
+\item Explain the class imbalance problem in binary 
+classification procedures. Explain how this would advserely affect some
+performance measures for binary classification procedures.
+\item %  Binary Classification (4 Marks)
+For following binary classification outcome table (i.e. confusion matrices), calculate the following appraisal metrics.
+
+\begin{multicols}{2}
+	\begin{enumerate}[(a)]
+		\item Accuracy;
+		\item Recall
+		\item Precision;
+		\item F-measure.
+	\end{enumerate}
+\end{multicols}
+\noindent \textbf{Confusion Matrix 1} \smallskip
+\begin{center}
+	
+	\begin{tabular}{|c||c|c|}
+		\hline 
+		& Predict Negative & Predict Positive \\ \hline  \hline 
+		Observed Negative & 9560 &  100 \\ \hline 
+		Observed Positive & 270 & 70 \\ \hline 
+	\end{tabular} 
+\end{center}
+\noindent \textbf{Confusion Matrix 2}
+\begin{center}
+	\begin{tabular}{|c||c|c|}
+		\hline 
+		& Predict Negative & Predict Positive \\ \hline  \hline 
+		Observed Negative & 9500 &  320 \\ \hline 
+		Observed Positive & 20 & 160 \\ \hline 
+	\end{tabular} 
+\end{center}
+
+
+\item A confusion matrix is a table that is often used to describe the performance of a binary classification procedure on a set of test data for which the true values are known.
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline  & Predicted Negative & Predicted Positive \\ 
+\hline Observed Negative & True Negative & False Positive \\ 
+\hline Observed Positive & False Negative & True Positive \\ 
+\hline 
+\end{tabular} 
+\end{center}
+\begin{enumerate}[(a)]
+\item  What is the F-measure? Explain its function and how it is computed.\\ 
+\noindent \textit{ Hint: F-score = $(2 \times P \times R) / (P + R)$.}
+
+\item Explain the Class Imbalance problem for binary classification procedures. Explain how this would adversely affect some performance measures. You may refer to the confusion matrix below in your answer.
+
+
+
+ \item %  Binary Classification (4 Marks)
+ For the confusion matrix below, calculate the following appraisal metrics.
+
+	\begin{enumerate}[(i)]
+		\item (1 Mark) Accuracy,
+		\item (1 Mark) Recall,
+		\item (1 Mark) Precision,
+		\item (1 Mark) F-measure.
+	\end{enumerate}
+
+
+ \begin{center}
+	
+	\begin{tabular}{|c||c|c|}
+		\hline 
+		& Predict Negative & Predict Positive \\ \hline  \hline 
+		Observed Negative & 9260 &  220 \\ \hline 
+		Observed Positive & 180 & 340 \\ \hline 
+ 	\end{tabular} 
+ \end{center}
+
+\item (2 Marks) Define Specificity and Sensitivity. You make reference to previous answers.
+\item  What is a ROC curve? Explain its function, how it is determined, and the means of interpreting the curve. Support your answer with a sketch.
+\end{enumerate}

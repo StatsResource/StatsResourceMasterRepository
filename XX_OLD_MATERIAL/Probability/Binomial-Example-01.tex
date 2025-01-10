@@ -1,0 +1,43 @@
+
+\subsection*{Question 4}
+
+You flip a coin 10 times - let $X =$ ``the number of heads''. Using the binomial probability function, calculate the following:
+
+*  $\Pr(X = 2)$. 
+ *  $\Pr(X = 0)$. 
+ *   $\Pr(X > 2)$. 
+ *  $\Pr(X \le 3)$. 
+ {\bf(e)} $\Pr(5 \le X \le 7)$.  
+ {\bf(f)} $E(X)$ and $Sd(X)$. 
+ {\bf(g)} Using the binomial tables, calculate $\Pr(X \le10)$ in the case where the coin is flipped 20 times. 
+ {\bf(h)} If the coin is flipped 50 times, what is $E(X)$?
+
+\subsection*{Question 5}
+
+Repeat Question 4 (a) - (e) but now using the binomial tables.
+
+
+
+
+\subsection*{Question 7}
+We follow on from Question 6 but now consider the case where, to reduce the probability of error, each bit is sent \emph{three} times and then a ``majority vote'' approach is used to determine the value of each received bit. The following example explains the situation:\\[-0.5cm]
+\begin{center}
+\begin{tabular}{ccccc}
+\hline
+&&&&\\[-0.3cm]
+\multirow{2}{*}{Sent} & $0$ & $1$ & $1$ & $0$ \\
+& $\overbrace{000}$ & $\overbrace{111}$ & $\overbrace{111}$ & $\overbrace{000}$ \\[0.2cm]
+\hline
+&&&&\\[-0.3cm]
+\multirow{2}{*}{Received} & $\underbrace{001}$ & $\underbrace{111}$ & $\underbrace{010}$ & $\underbrace{000}$ \\
+& $0$ & $1$ & $0$ & $0$ \\[0.2cm]
+\hline
+%\multicolumn{5}{c}{}
+\end{tabular}
+\end{center}
+$\Rightarrow$ there is one error in decoding the first $000$, but since the majority result is taken, this bit is correctly identified as a $0$. There are two errors in decoding the second $111$, so this bit is misread as a $0$. It is clear that a character is misread if the decoder makes \emph{two or three errors} in these blocks of three replicates.
+
+*  Show that sending each bit 3 times reduces the error probability from 10\% to 2.8\%. 
+\\ *  Using this reduced value, $p=0.028$, calculate the probability that there are no errors in a 20-bit string. Compare this result to Q6(a). 
+ *  Now assume that each bit is sent 5 times and, again, the majority vote approach is used. Calculate the probability that there are no errors in a 20-bit string in this case. %
+ *  Recalculate the two probabilities from part (c) using the Poisson approximation.

@@ -1,0 +1,115 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{multicol}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MathsResource} \chead{Statistical Computing Procedures} \rhead{Tutorial Sheet} %\input{tcilatex}
+\begin{document}
+%=====================================================%
+
+\begin{enumerate}
+
+\item Suppose that the results of an experimental procedure resulted in the collection of datasets $X$ and $Y$. Consider the following inference procedure performed on data set $X$.
+\begin{center}
+\begin{framed}
+\begin{verbatim}
+> shapiro.test(X)
+
+        Shapiro-Wilk normality test
+
+data:  X
+W = 0.77516, p-value = 0.0003767
+\end{verbatim}
+\end{framed}
+\end{center}
+
+
+\begin{itemize}
+	\item[(i)] Describe the purpose of this procedure.
+	\item[(ii)] What is the null and alternative hypothesis?
+	\item[(iii)] What is your conclusion about this procedure?
+\end{itemize}
+\smallskip
+
+\item A graphical procedure was carried out to assess whether or not this assumption of normality is valid for data set \texttt{Y}. Consider the Q-Q plot in the figure below.
+
+\begin{center}
+	\includegraphics[scale=0.40]{images/qqplot2}
+\end{center}
+
+\begin{enumerate}[(a)]
+	\item Provide a brief description on how to interpret this plot.
+	\item What is your conclusion for this procedure? Justify your answer.
+\end{enumerate}
+
+\newpage
+\item Suppose that the results of an experimental procedure resulted in the collection of data sets $X$ and $Y$. Consider the following inference procedure performed on data set $X$.
+\begin{center}
+\begin{framed}
+	\begin{verbatim}
+	> shapiro.test(X)
+        Shapiro-Wilk normality test
+
+        data:  X
+        W = 0.91554, p-value = 0.001633
+	\end{verbatim}
+\end{framed}
+\end{center}
+\begin{enumerate}[(a)]
+	\item Describe the purpose of this procedure.
+	\item What is the null and alternative hypothesis?
+	\item What is your conclusion about this procedure?
+\end{enumerate}
+
+\item Suppose that the results of an experimental procedure resulted in the collection of datasets $X$ and $Y$. Consider the following inference procedure performed on data set $X$.
+\begin{center}
+\begin{framed}
+\begin{verbatim}
+> shapiro.test(X)
+
+        Shapiro-Wilk normality test
+
+data:  X
+W = 0.77516, p-value = 0.0003767
+\end{verbatim}
+\end{framed}
+\end{center}
+
+
+\begin{enumerate}[(a)]
+	\item Describe the purpose of this procedure.
+	\item What is the null and alternative hypothesis?
+	\item What is your conclusion about this procedure?
+\end{enumerate}
+\newpage
+\item A graphical procedure was carried out to assess whether or not this assumption of normality is valid for data set \texttt{Y}. Consider the Q-Q plot in the figure below.
+
+\begin{center}
+	\includegraphics[scale=0.40]{images/qqplot2}
+\end{center}
+
+\begin{enumerate}[(a)]
+	\item Provide a brief description on how to interpret this plot.
+	\item  What is your conclusion for this procedure? Justify your answer.
+\end{enumerate}
+
+
+\end{document}

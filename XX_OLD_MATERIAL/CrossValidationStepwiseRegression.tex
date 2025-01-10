@@ -1,0 +1,30 @@
+
+%-------------------------------------------------------%
+\subsection{Cross Validation of Stepwise Regression}
+When stepwise logistic regression is used, some form of validation analysis is a necessity. We will use 75/25\% cross-validation.
+
+To do cross validation, we randomly split the data set into a 75\% training sample and a 25\% validation sample. We will use the training sample to develop the model, and we test its effectiveness on the validation sample to test the applicability of the model to cases not used to develop it.
+
+In order to be successful, the follow two questions must be answers affirmatively:
+Did the stepwise logistic regression of the training sample produce the same subset of predictors produced by the regression model of the full data set?
+
+If yes, compare the classification accuracy rate for the 25\% validation sample to the classification accuracy rate for the 75\% training sample. If the \textbf{shrinkage} (accuracy for the 75\% training sample - accuracy for the 25\% validation sample) is 2\% (0.02) or less, we conclude that validation was successful.
+
+Note: shrinkage may be a negative value, indicating that the accuracy rate for the validation sample is larger than the accuracy rate for the training sample. Negative shrinkage (increase in accuracy) is evidence of a successful validation analysis.
+
+If the validation is successful, we base our interpretation on the model that included all cases.
+
+%\subsection{Model Selection}
+%Model selection is a fundamental task in data analysis,
+%widely recognized as central to good inference. In many types of statistical software we have 4 automatic model
+%selection techniques: forward selection, backward
+%elimination, stepwise selection which combines the
+%elements of the previous two, and the best subset
+%selection procedure. The first three methods are based
+%on the same ideas and we will talk only about stepwise
+%selection as more flexible and sophisticated selection
+%procedure. This choice is subjective, some researchers
+%prefer to work with backward selection.
+\newpage
+
+\end{document}

@@ -1,0 +1,129 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MathsResource} \chead{Calculus} \rhead{Integration by Parts} %\input{tcilatex}
+\begin{document}
+\subsection*{Integration by Parts : Tutorial Sheet}
+\begin{framed}
+\noindent	\textbf{Formula:} \\ If u and v are functions of x that have continuous derivatives,
+	then
+	\[\int udv = uv - \int vdu\]
+\end{framed}
+
+\begin{enumerate}
+\item Evaluate the following using integration by parts.
+
+\begin{multicols}{2}
+	\begin{enumerate}[(a)]
+		\item \[ \int -4\ln\left(x\right)dx\]
+		% -4x\ln\left(x\right)+4x+C
+		
+		\item \[ \int\left(-7x+38\right)\cos\left(x\right)dx\]
+		% \left(-7x+38\right)\sin\left(x\right)-7\cos\left(x\right)+C
+		
+		\item  \[\int_0^\frac{\pi}{2}\left(-6x+45\right)\cos\left(x\right)dx\]
+		
+		% -3\pi+51
+		
+		\item \[ \int\left(5x+1\right)\left(x-6\right)^4 dx\]
+		
+		% \frac{\left(5x+1\right)\left(x-6\right)^5}{5}-\frac{\left(x-6\right)^6}{6}+C
+		
+		\item \[ \int_{-1}^1 \left(2x+8\right)^3\left(-x+2\right)dx\]
+		
+		% \frac{9584}{5}
+		
+		\item \[ \int \sin\left(x\right) e^x\, dx \] 
+		% \frac 1 2 e^x\left(\sin\left(x\right) - \cos\left(x\right) \right) +C
+	\end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+%Revision Week Exercises
+% \begin{figure}[h!]
+%	\centering
+%	\includegraphics[width=0.7\linewidth]{Question26integrationbyparts}
+% \end{figure}
+
+\item Evaluate the following using integration by parts.
+
+\begin{multicols}{2}
+	\begin{enumerate}[(a)]
+		\item \[ \int  xe^{4x} dx. \]
+		% -4x\ln\left(x\right)+4x+C
+		
+		\item \[ \int x \cos(x) dx \]
+		% \left(-7x+38\right)\sin\left(x\right)-7\cos\left(x\right)+C
+		
+		\item \[ \int  3xe^{3x} \;dx. \]
+		
+		% -3\pi+51
+		
+		\item \[ \displaystyle{\int xe^xdx}\]
+		
+	\end{enumerate}
+\end{multicols}			
+\item Evaluate the following using integration by parts.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{multicols}{2}
+	\begin{enumerate}[(a)]		
+			\item \[ \displaystyle{\int x \ln(x) dx}\]
+	
+	\item \[\displaystyle{\int x \sinh(x) dx}\]
+	
+
+	
+	\item \[\displaystyle{\int x \cosh(x) dx}\]
+	
+	\item \[\displaystyle{\int e^{2x} \cosh(x)dx}\]
+	\end{enumerate}
+\end{multicols}	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+
+	
+
+\end{enumerate}
+\newpage
+\subsubsection*{The LIPET rule}
+It is considered a rule of thumb to remember the acronym \textbf{LIPET}
+when performing integration by parts. This acronym will help you to determine
+what to use as $u$. 
+
+
+\begin{description}
+	\item[L]-logarithms, 
+	\item[I]-inverse trigonometric functions,
+	\item[P]-polynomials (i.e. $x$, $x^2$) , 
+	\item[E]-exponentials (i.e. $e^x$, $e^{3x}$), 
+	\item[T]-trigonometric functions.
+\end{description}
+
+\end{document}

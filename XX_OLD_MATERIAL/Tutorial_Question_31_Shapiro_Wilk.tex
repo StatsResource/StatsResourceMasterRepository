@@ -1,0 +1,46 @@
+
+%------------------------------------- %
+\section{Computer Output}
+Statistical Procedures were performed using a statistical programming language called $R$.
+A brief description of each procedure is provided. For each procedures, identify the null and alternative hypotheses, the $p-$value, and your conclusion for this test.
+
+
+\begin{itemize}
+\item If the $p-$value is less than 0.05 : reject the null hypothesis.
+\item If the $p-$value is greater than 0.05 : fail to reject the null hypothesis.
+\end{itemize}
+
+\subsection*{Question 11 - Shapiro-Wilk Test}
+Interpret the output from the three Shapiro-Wilk tests. What is the null and alternative hypotheses? State your conclusion for each of the three tests.
+\begin{framed}
+\begin{verbatim}
+> shapiro.test(X)
+
+Shapiro-Wilk normality test
+
+data:  X
+W = 0.9001, p-value = 0.113
+>
+\end{verbatim}
+\end{framed}
+\begin{framed}
+\begin{verbatim}
+> shapiro.test(Y)
+
+Shapiro-Wilk normality test
+
+data:  Y 
+W = 0.8073, p-value = 0.006145
+>
+\end{verbatim}
+\end{framed}
+\begin{framed}
+\begin{verbatim}
+> shapiro.test(Z)
+
+Shapiro-Wilk normality test
+
+data:  Z
+W = 0.9292, p-value = 0.372
+\end{verbatim}
+\end{framed}

@@ -1,0 +1,778 @@
+\section{Probability Mass Function}
+\begin{itemize} \item a probability mass function (pmf) is a function that gives the probability that a discrete random variable is exactly equal to some value. \item The probability mass function is often the primary means of defining a discrete probability distribution \end{itemize}
+\subsection{Example}
+\begin{itemize}
+	\item Thirty-eight students took the test. The X-axis shows various intervals of scores (the interval labeled 35 includes any score from 32.5 to 37.5). The Y-axis shows the number of students scoring in the interval or below the interval.
+	
+	\item \textbf{\emph{cumulative frequency distribution}} \\A  can show either the actual frequencies at or below each interval (as shown here) or the percentage of the scores at or below each interval. The plot can be a histogram as shown here or a polygon.
+\end{itemize}
+
+
+\subsection{Bootstrap Methods}
+If we would repeat our experiment of collecting 50 samples of nitrate concentrations many times we would see the range of error. But it would be a waste of resources and not a viable method.\\
+Instead we re-sample `new' data from our data and use so obtained new samples for assessment of the error.
+The following \texttt{R} code does the job.
+\begin{center}
+	\line(1,0){250}
+\end{center}
+\begin{verbatim}
+#Getting data in a vector
+m=mean(x)
+bootstrap=vector('numeric',500)
+for(i in 1:500)
+{
+bootstrap[i]=mean(sample(x,replace=T))-mean(x)
+}
+#The distribution of estimation error
+hist(bootstrap)
+\end{verbatim}
+\begin{center}
+	\line(1,0){250}
+\end{center}
+The conclusion of this procedure is that the nitrate concentration is $4999 \pm 0.005$. We are specifically interested in how \texttt{R} was easily able to implement a solution for this.
+\newpage
+\section{Introduction - systematic vs. random errors}
+
+
+
+
+\section{Statistics of Repeated Measures}
+\subsection{Titration experiment}
+
+Recall the titration experiment from the last class. 4 Students performing the same experiment five times, hence each yield 5 results.(Table 1.1 random and systematic errors).
+
+
+\begin{tabular}{|c|ccccc|l|}
+	\hline
+	% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+	Student & Results  & (ml) &  &  &  &Comment \\ \hline
+	A & 10.08 & 10.11 &10.09 &10.10&10.12 & Precise, biased\\ \hline
+	B & 9.88 &10.14& 10.02 &9.80& 10.21& Imprecise unbiased\\ \hline
+	C & 10.19 &9.79& 9.69 &10.05& 9.78 & Imprecise, biased\\ \hline
+	D & 10.04 &9.98 &10.02 &9.97 &10.04 & Precise, unbiased \\
+	\hline
+\end{tabular}\\
+
+
+
+
+Two criteria were used to compare these results, the average value (technically know
+as a measure of location and the degree of spread (or dispersion). The average value
+used was the arithmetic mean (usually abbreviated to \emph{the mean}), which is the sum
+of all the measurements divided by the number of measurements.
+
+
+The mean,$\bar{X}$, of $n$ measurements is given by \[ \bar{X}  = {\sum{x} \over n} \]
+
+In Chapter 1 the spread was measured by the difference between the highest and
+lowest values (i.e. the range). A more useful measure, which utilizes all the values, is the sample
+standard deviation, $s$, which is defined as follows:
+
+The standard deviation, $s$, of $n$ measurements is given by
+\[s=  \sqrt{ {\sum(x-\bar{X})^2 \over n-1} }  (2.2) \]
+
+
+
+
+
+
+
+
+
+Example 1
+A fair die is thrown. The number shown on the die is the random variable X. Tabulate the possible outcomes.
+Solution
+X takes the six possible outcomes 1, 2, 3, 4, 5, 6 which each have probability 1/6 (i.e. one sixth).
+
+r 	1 	2 	3 	4 	5 	6
+P(X = r)	1/6 	1/6 	1/6 	1/6 	1/6 	1/6
+Example 2
+Two unbiased spinners, one numbered 1, 3, 5, 7 and the other numbered 1, 2, 3 are spun. The random variable X is the sum of the two results.
+Find the probability distribution for X.
+
+
+
+Solution
+Listing all the possible outcomes is best done in a table.
+
+%
+%http://www.me.mtu.edu/~jwsuther/doe2005/notes/orth_arrays.pdf
+%
+%http://www.weibull.com/DOEWeb/taguchis_orthogonal_arrays.htm
+%
+%http://controls.engin.umich.edu/wiki/index.php/Design_of_experiments_via_taguchi_methods:_orthogonal_arrays
+%
+%http://elsmar.com/Taguchi.html
+
+\newpage
+\chapter{Statistics for Chemists}
+
+\section{Quantitative nature of analytical chemistry}
+Modern analytical chemistry is overwhelmingly a quantitative science.
+A quantitative answer is much more valuable than a qualitative one.
+It may be useful for an analyst to claim to have detected some boron in a
+distilled water sample, but it is much more useful to be able to say how
+much boron is present.
+
+Often it is only a quantitative result that has any value at all.For
+example, almost all samples of (human) blood serum contain albumin;
+the only question is, how much ? Even where a qualitative answer is required, quantitative methods are
+used to obtain it.
+
+Quantitative approaches might be used to compare two soil samples. For example, they might be subjected to a particle
+size analysis, in which the proportions of the soil particles falling within a number say 10, of particle-size ranges are determined. Each sample would then be characterized by these 10 pieces of data, which could
+then be used to provide a quantitative assessment of their similarity.
+
+\subsection{Errors in quantitative analysis}
+Since quantitative studies play a dominant role in any analytical laboratory, it must be accepted that the errors that occur in such studies are of supreme importance. No quantitative results are of any value unless they are accompanied by some estimate of the errors inherent in them!
+\newpage
+\noindent \textbf{Example 1 - detecting a new analytical reagent}\\
+\begin{itemize} \item A chemist synthesizes an analytical reagent that is believed to be entirely new.
+	\item The compound is studied using a spectrometric method and gives a
+	value of 104.
+	\item The chemist finds that no compound previously discovered has yielded
+	a value of more than 100.
+	\item Has the chemist really discovered a new compound?
+	\item The answer lies in the degree of reliance to experimental value of 104.
+	\item If the result is correct to within 2 (arbitrary) units, i.e. the true value
+	probably lies in the range $102\pm 2$, then a new material has probably
+	been discovered.
+	\item If, however, investigations show that the error may amount to 10 units
+	i.e. $104 \pm 10$, then it is quite likely that the true value is actually less than
+	100, in which case a new discovery is tar from certain.
+	\item A knowledge of the experimental errors is crucial!!
+\end{itemize}
+
+\newpage
+\textbf{Example 2 - replicates in a titrimetric experiment}\\
+\begin{itemize}
+	\item Analysts commonly perform several replicate determinations in the
+	course of a single experiment.
+	\item An analyst performs a titrimetric experiment four times and obtains
+	values of 24.69,24.73,24.77 and 25.39 ml.
+	\item All four values are different, because of the variations inherent in the
+	measurements
+	\item The fourth value (25.39 ml) is substantially different from the other three.
+	\item Can it be safely rejected, so that (for example) the mean titre is reported
+	as 24.73 ml, the average of the other three readings?
+\end{itemize}
+
+\section{Comapring Methods of Measurement}
+
+\subsection{The Bland Altman plot}
+The Bland Altman plot (Bland \& Altman, 1986 and 1999) is a statistical method to compare two measurements techniques. In this graphical method the differences (or alternatively the ratios) between the two techniques are plotted against the averages of the two techniques. Horizontal lines are drawn at the mean difference, and at the limits of agreement, which are defined as the mean difference plus and minus 1.96 times the standard deviation of the differences.
+
+\chapter{Chemometrics}
+
+\section{Chemometrics}
+
+\begin{enumerate}
+	\item Calibration \item Paired T test \item Confidence intervals
+\end{enumerate}
+
+
+\section{Calibration}
+
+\section{Blank Signals}
+\newpage
+\section{Chemometrics}
+\begin{itemize}
+	\item  Chemometrics is the science of extracting information from chemical systems by statistical means.
+	\item An analyte is a substance or chemical constituent that is determined in an analytical procedure, such as a titration.
+	\item the detection limit, lower limit of detection, or LOD (limit of detection), is the lowest quantity of a substance that can be distinguished from the absence of that substance (a blank value) within a stated confidence limit (generally 1\%).
+	\item The detection limit is estimated from the mean of the blank, the standard deviation of the blank and some confidence factor. Another consideration that affects the detection limit is the accuracy of the model used to predict concentration from the raw analytical signal.
+	
+\end{itemize}
+
+
+
+\section{Birth processes}
+Generating function equations
+
+\[
+\frac{ds}{dz} = \lambda s(s-1)
+\]
+This is a first order separable equation.
+\[
+\int \frac{s(s-1)}{ds} = \int -\lambda dz = -\lambda z
+\]
+
+
+\section{Pure death processes}
+In a pure death process, the population numbers decline by dying
+off, with no replacement births.
+
+\[ \int \frac{ds}{s(1-s)} = \int \mu dz = \mu z \]
+
+
+\[ \int \frac{ds}{s(1-s)} = \int \frac{1}{s} ds 1 \int
+\frac{1}{s-1}ds= ln \left[\frac{s}{1-s} \right]
+\]
+
+\[  \mbox{ln} \left[\frac{s}{1-s} \right] = -\lambda z
+\]
+
+\[  \left[\frac{s}{1-s} \right] = exp(-\lambda z)
+\]
+
+\[  s = \left[\frac{1}{1+exp(-\lambda z)} \right]
+\]
+
+\subsubsection{Calculations}
+\begin{enumerate} \item  $ \frac{1}{s(1-s)} = \frac{1}{s} + \frac{1}{1-s} =
+	\frac{1}{s} - \frac{1}{s-1}$
+	\item $ \mbox{ln}(a-b) = \mbox{ln}(\frac{a}{b})$\\
+\end{enumerate}
+
+\section{Combined birth and death processes}
+birth rate $\lambda$ and death rate $\mu$.
+
+
+\newpage
+\chapter{Assorted Topics}
+
+\section{Testing Normality}
+
+\begin{itemize}
+	\item Normal probability plot \item Outliers \item dixon test
+	\item Grubbs test
+\end{itemize}
+
+
+\section{Mallow's Cp}
+Mallow's $Cp$ coefficient is a metric used in model selection to
+dissuade the use of over-fitted models.
+
+\begin{equation}
+Cp= \frac{RSS}{\hat{\sigma}^{2}}-(n-2p)
+\end{equation}
+This coefficient should be minimized over $p$.
+
+\begin{enumerate}
+	\item Multicollinearity
+	\item Biometrics
+	\item Variance Inflation Factor
+	\begin{enumerate}
+		\item 
+	%---------------------------------------%
+	
+	
+	
+\end{enumerate}
+\newpage
+
+
+\section{Autocorrelation}
+
+Autocorrelation can be detected using correlograms.
+
+
+
+
+
+
+
+%------------------------------%
+
+\section{Bonferroni Test}
+
+A type of multiple comparison test used in statistical analysis. When an experimenter performs enough tests, he or she will eventually end up with a result that shows statistical significance, even if there is none. If a particular test yields correct results $99\%$ of the time, running 100 tests could lead to a false result somewhere in the mix. The Bonferroni test attempts to prevent data from incorrectly appearing to be statistically significant by lowering the alpha value.
+
+The Bonferroni test, also known as the "Bonferroni correction" or "Bonferroni adjustment" suggests that the "p" value for each test must be equal to alpha divided by the number of tests.
+%------------------------------------------------%
+\section{Control Charts for Attributes}
+
+Control charts could also be prepared for \emph{\textbf{attributes}}, e.g. the proportion
+showing the proportion that is defective in some way.
+The Central line would be set at the average proportion defective expected, and
+the actual amount defective would be plotted on the chart.
+%------------------------------------------------%
+\section{Cronbach's Alpha}
+
+Cronbach's $\alpha$ is defined as
+
+\[
+\alpha = {K \over K-1 } \left(1 - {\sum_{i=1}^K \sigma^2_{Y_i}\over \sigma^2_X}\right)
+\]
+
+%------------------------------%
+\section{Durbin Watson Statistic}
+
+A number that tests for autocorrelation in the residuals from a statistical regression analysis. The Durbin-Watson statistic is always between 0 and 4. A value of 2 means that there is no autocorrelation in the sample. Values approaching 0 indicate positive autocorrelation and values toward 4 indicate negative autocorrelation.
+\begin{equation}
+d = \frac{n}{n}
+\end{equation}
+%------------------------------------------------%
+\section{Experimentally Weighted Moving Average}
+
+
+
+
+%------------------------------------------------%
+\section{Exponential Smoothing}
+
+New Forecast = Old Forecast + $\alpha$(Latest Observation - Old Forecast).
+
+\begin{itemize}
+	\item Greater weight is given to more recent data.
+	\item All past data is incorporated, and there is no cut-off point as with moving averages.
+\end{itemize}
+
+
+
+%------------------------------------------------%
+
+\section{Finite Population Correction Factor}
+Where the sample size exceeds $5\%$ of the population, the Finite Population Correction Factor should be applied.
+\[ \sqrt{\frac{N-n}{N-1}} \]
+
+
+%------------------------------------------------%
+\section{Huffman Codes: Characteristics}
+
+Huffman codes are prefix-free binary code trees, therefore all substantial considerations apply accordingly.
+
+Codes generated by the Huffman algorithm achieve the ideal code length up to the bit boundary.
+The maximum deviation is less than 1 bit.
+%------------------------------------------------%
+\section{Integration in Probability}
+
+\[ \mbox{E}(X) = \int^{u}_{l} x f(X) dx \]
+
+\[ P(X \leq A)  = \int^{A}_{l} f(X) dx \]
+
+\[ \mbox{Var}(X) = \int^{a}_{b} x f(X) dx \]
+
+
+\[ \mu = \bar{x} \pm t_{(\nu,\sigma/2)}\frac{s}{\sqrt{n}}  \]
+
+
+
+%------------------------------------------------%
+
+\section{Monte Carlo Simulation}
+
+A problem solving technique used to approximate the probability of certain outcomes by running multiple trial runs, called simulations, using random variables.
+%------------------------------%
+\section{ Moving Averages : Characteristics}
+\begin{itemize}
+	\item The different moving averages produce different results.
+	\item The greater the number of periods in the moving average, the greater the smoothing effect.
+\end{itemize}
+%------------------------------------------------%
+
+
+\section{Properties of Good Estimators}
+
+\begin{itemize}
+	\item[Unbiased] discuss
+	\item[Consistency] discuss
+	\item[Efficiency] discuss
+	\item[Sufficiency] discuss
+\end{itemize}
+
+
+
+%------------------------------%
+\section{Seasonality}
+A characteristic of a time series in which the data experiences regular and predictable changes which recur every calendar year. Any predictable change or pattern in a time series that recurs or repeats over a one-year period can be said to be seasonal.
+
+Note that seasonal effects are different from cyclical effects, as seasonal cycles are contained within one calendar year, while cyclical effects (such as boosted sales due to low unemployment rates) can span time periods shorter or longer than one calendar year
+
+
+\section{Shannon-Fano Coding}
+
+At about 1960 Claude E. Shannon (MIT) and Robert M. Fano (Bell Laboratories) had developed a coding procedure to generate a binary code tree. The procedure evaluates the symbol's probability and assigns code words with a corresponding code length.
+
+Compared to other methods the Shannon-Fano coding is easy to implement. In practical operation Shannon-Fano coding is not of larger importance. This is especially caused by the lower code efficiency in comparison to Huffman coding as demonstrated later.
+
+
+
+\section{Time Series}
+
+A sequence of numerical data points in successive order, usually occurring in uniform intervals. In plain English, a time series is simply a sequence of numbers collected at regular intervals over a period of time.
+
+
+
+
+
+%------------------------------------------------%
+\section{Tukey HSD}
+
+This post hoc test (or multiple comparison test) can be used to determine the significant differences between group means in an analysis of variance setting. The Tukey HSD is generally more conservative than the Fisher LSD test but less conservative than Scheffe's test
+
+
+
+
+%------------------------------------------------%
+
+\section{OC function}
+Type II error : probability of accepting a process as being in control, when in fact it is not.
+Based on the following OC
+
+
+
+\section{Skewness: Pearson Coefficient of Skewness}
+
+\[S_k = \frac{3(\mbox{Mean} - \mbox{Median} )}{\sigma} \]
+
+
+
+%------------------------------------------------%
+
+\section{Spearman Rank Correlation}
+
+\[ 1 - \frac{6\left( \sum d^2 + \frac{t^3-t}{12} \right)}{n(n^2-1)} \]
+
+The adjustment for tied values
+$ \frac{t^3-t}{12} $, where $t$ is the number of tied values
+
+
+%------------------------------------------------%
+\section{The Stepping Stone Method (Transportation)}
+
+\begin{itemize}
+	\item Start at a cell that has no allocation. (This cell will be a ``plus" cell)
+	\item Choose a cell that has received an allocation (This cell will be a ``minus" cell)
+	\item Right Angle Turn -
+	\item Keep going until you have returned to the origin cell.
+\end{itemize}
+
+%------------------------------------------------%
+\section{Variance Inflation Factor}
+
+Multicollineaity
+
+\chapter{Formulas for Statistics}
+
+
+	
+	\item Conditional probability:
+	\begin{equation*}
+	P(B|A)=\frac{P\left( A\text{ and }B\right) }{P\left( A\right) }.
+	\end{equation*}
+\end{enumerate}	
+
+\section{Useful formulae}
+
+\subsection{Mathematics}
+
+\begin{enumerate}
+	\item Logarithms: If $N=b^{n}$, then $\log _{b}N=n.$
+	
+	\item Compound interest:%
+	\begin{equation*}
+	P_{t}=P_{0}\left( 1+i\right) ^{t},\qquad P_{t}=P_{0}\left( 1+\frac{i}{m}%
+	\right) ^{mt},\qquad P_{t}=P_{0}\mathrm{e}^{it}.
+	\end{equation*}
+	
+	\item Matrices:
+	
+	\begin{enumerate}
+		\item Inverse of a 2*2 matrix:
+		\begin{equation*}
+		\left[
+		\begin{array}{cc}
+		a_{11} & a_{12} \\
+		a_{21} & a_{22}%
+		\end{array}%
+		\right] ^{-1}=\frac{1}{a_{11}a_{22}-a_{12}a_{21}}\left[
+		\begin{array}{cc}
+		a_{22} & -a_{12} \\
+		-a_{21} & a_{11}%
+		\end{array}%
+		\right] .
+		\end{equation*}
+		
+		\item Deteminant of a 2*2 matrix:
+		\begin{equation*}
+		\left\vert
+		\begin{array}{cc}
+		a_{11} & a_{12} \\
+		a_{21} & a_{22}%
+		\end{array}%
+		\right\vert =a_{11}a_{22}-a_{12}a_{21}.
+		\end{equation*}
+		
+		\item Cramer's Rule: If
+		\begin{eqnarray*}
+			a_{1}x+b_{1}y &=&d_{1}, \\
+			a_{2}x+b_{2}y &=&d_{2},
+		\end{eqnarray*}%
+		then%
+		\begin{equation*}
+		x=\frac{\left\vert
+			\begin{array}{cc}
+			d_{1} & b_{1} \\
+			d_{2} & b_{2}%
+			\end{array}%
+			\right\vert }{\left\vert
+			\begin{array}{cc}
+			a_{1} & b_{1} \\
+			a_{2} & b_{2}%
+			\end{array}%
+			\right\vert },\qquad y=\frac{\left\vert
+			\begin{array}{cc}
+			a_{1} & d_{1} \\
+			a_{2} & d_{2}%
+			\end{array}%
+			\right\vert }{\left\vert
+			\begin{array}{cc}
+			a_{1} & b_{1} \\
+			a_{2} & b_{2}%
+			\end{array}%
+			\right\vert }.
+		\end{equation*}
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\noindent\textbf{Part 1:}Examine data graphically and check if some linear relation can be involved.
+
+\bigskip [See Graph]\\
+\bigskip
+\noindent\textbf{Part 2: }Find the LSE of the linear regression line and present it graphically together with the data.
+
+We need to compute
+
+\begin{itemize}
+	
+	\item The Intercept Estimate $\hat{\alpha}$
+	
+	\item The Slope Estimate $\hat{\beta}$
+	
+	\item See Formulae: The predicted value $\hat{y} $ of $y$ given a value of the explanatory variable $X$
+	
+	\[\hat{y} = \hat{\alpha} + \hat{\beta}x \]
+	
+	
+	
+	\item  $\bar{x} = 8.266667$, $\bar{y} = 1.566667$, $n =6$
+	
+	\item Compute the slope estimate
+	\[\hat{\beta} =  \frac{\sum(xy) - n\bar{x} \bar{y} }{\sum(x^2) - n\bar{x}^2 }\]
+	
+	\[= \frac{62.06 - (6 \times 8.266 \times 1.566) }{538.58  - (6 \times 1.566^2) }\]
+	
+	\[= \frac{-15.64666}{128.55333} = -0.12171\]
+	
+	
+	\item Now compute the intercept estimate \[ \hat{\alpha} = \bar{y} - \hat{\beta}\bar{x} = 1.566-(-0.12171 \times 8.266) = 2.5728\]
+	\item The regression line is therefore \[\hat{y} = 2.5728 - 0.1217x \]
+\end{itemize}
+
+
+
+
+\noindent\textbf{Part 3:}What would be the prediction of the mercury content at 2[m] from the polarograph?
+\bigskip
+\[ \hat{y} = 2.573 - (0.127 \times 2) = 2.33 \mbox{ng/g}  \]
+
+
+
+
+
+
+
+%------------------------------------------------%
+
+\section{Useful formulae}
+
+\subsection{Mathematics}
+
+\begin{enumerate}
+	\item Logarithms: If $N=b^{n}$, then $\log _{b}N=n.$
+	
+	\item Compound interest:%
+	\begin{equation*}
+	P_{t}=P_{0}\left( 1+i\right) ^{t},\qquad P_{t}=P_{0}\left( 1+\frac{i}{m}%
+	\right) ^{mt},\qquad P_{t}=P_{0}\mathrm{e}^{it}.
+	\end{equation*}
+	
+	\item Matrices:
+	
+	\begin{enumerate}
+		\item Inverse of a 2*2 matrix:
+		\begin{equation*}
+		\left[
+		\begin{array}{cc}
+		a_{11} & a_{12} \\
+		a_{21} & a_{22}%
+		\end{array}%
+		\right] ^{-1}=\frac{1}{a_{11}a_{22}-a_{12}a_{21}}\left[
+		\begin{array}{cc}
+		a_{22} & -a_{12} \\
+		-a_{21} & a_{11}%
+		\end{array}%
+		\right] .
+		\end{equation*}
+		
+		
+		
+		\item Cramer's Rule: If
+		\begin{eqnarray*}
+			a_{1}x+b_{1}y &=&d_{1}, \\
+			a_{2}x+b_{2}y &=&d_{2},
+		\end{eqnarray*}%
+		then%
+		\begin{equation*}
+		x=\frac{\left\vert
+			\begin{array}{cc}
+			d_{1} & b_{1} \\
+			d_{2} & b_{2}%
+			\end{array}%
+			\right\vert }{\left\vert
+			\begin{array}{cc}
+			a_{1} & b_{1} \\
+			a_{2} & b_{2}%
+			\end{array}%
+			\right\vert },\qquad y=\frac{\left\vert
+			\begin{array}{cc}
+			a_{1} & d_{1} \\
+			a_{2} & d_{2}%
+			\end{array}%
+			\right\vert }{\left\vert
+			\begin{array}{cc}
+			a_{1} & b_{1} \\
+			a_{2} & b_{2}%
+			\end{array}%
+			\right\vert }.
+		\end{equation*}
+	\end{enumerate}
+\end{enumerate}
+
+\subsection{Statistics}
+
+\begin{enumerate}
+	\item Sample mean
+	\begin{equation*}
+	\bar{x}=\frac{\sum x_{i}}{n}.
+	\end{equation*}
+	
+	\item Sample standard deviation
+	\begin{equation*}
+	s=\sqrt{\frac{\sum \left( x_{i}-\bar{x}\right) ^{2}}{%
+			n-1}}.
+	\end{equation*}
+	
+	\item Conditional probability:
+	\begin{equation*}
+	P(B|A)=\frac{P\left( A\text{ and }B\right) }{P\left( A\right) }.
+	\end{equation*}
+	
+	\item Binomial probability function
+	\begin{equation*}
+	f\left( x\right) =\left(
+	\begin{array}{c}
+	n \\
+	x%
+	\end{array}%
+	\right) p^{x}\left( 1-p\right) ^{n-x}\qquad \text{where}\qquad \left(
+	\begin{array}{c}
+	n \\
+	x%
+	\end{array}%
+	\right) =\frac{n!}{x!\left( n-x\right) !}.
+	\end{equation*}
+	
+	\item Poisson probability function
+	\begin{equation*}
+	f\left( x\right) =\frac{m^{x}\mathrm{e}^{-m}}{x!}.
+	\end{equation*}
+	
+	\item Exponential probability distribution
+	\begin{equation*}
+	P\left( X \leq k \right) = 1 - e^{-k/\mu}
+	\end{equation*}
+	
+	
+\end{enumerate}
+
+
+
+\noindent\textbf{Part 1:}Examine data graphically and check if some linear relation can be involved.
+
+\bigskip [See Graph]\\
+\bigskip
+\noindent\textbf{Part 2: }Find the LSE of the linear regression line and present it graphically together with the data.
+
+We need to compute
+
+\begin{itemize}
+	
+	\item The Intercept Estimate $\hat{\alpha}$
+	
+	\item The Slope Estimate $\hat{\beta}$
+	
+	\item See Formulae: The predicted value $\hat{y} $ of $y$ given a value of the explanatory variable $X$
+	
+	\[\hat{y} = \hat{\alpha} + \hat{\beta}x \]
+	
+	
+	
+	\item  $\bar{x} = 8.266667$, $\bar{y} = 1.566667$, $n =6$
+	
+	\item Compute the slope estimate
+	\[\hat{\beta} =  \frac{\sum(xy) - n\bar{x} \bar{y} }{\sum(x^2) - n\bar{x}^2 }\]
+	
+	\[= \frac{62.06 - (6 \times 8.266 \times 1.566) }{538.58  - (6 \times 1.566^2) }\]
+	
+	\[= \frac{-15.64666}{128.55333} = -0.12171\]
+	
+	
+	\item Now compute the intercept estimate \[ \hat{\alpha} = \bar{y} - \hat{\beta}\bar{x} = 1.566-(-0.12171 \times 8.266) = 2.5728\]
+	\item The regression line is therefore \[\hat{y} = 2.5728 - 0.1217x \]
+\end{itemize}
+
+
+
+
+\noindent\textbf{Part 3:}What would be the prediction of the mercury content at 2[m] from the polarograph?
+\bigskip
+\[ \hat{y} = 2.573 - (0.127 \times 2) = 2.33 \mbox{ng/g}  \]
+
+	\begin{enumerate}
+		
+		\item An electronics assembly subcontractor receives resistors from two suppliers: Deltatech provides
+		70\% of the subcontractors's resistors while another company, Echelon, supplies the remainder.
+		1\% of the resistors provided by Deltatech fail the quality control test, while 2\% of the
+		chips from Echelon also fail the quality control test.
+		
+		\begin{enumerate}
+			\item (5 marks)What is the probability that a resistor will fail the quality control test?
+			
+			
+			\item (4 marks)What is the probability that a resistor that fails the quality control test was supplied by Echelon?
+		\end{enumerate}
+		
+		
+		\vspace{0.25cm}
+		
+		
+
+\chapter{Advanced Distribution Theory}
+
+\section{Mixed Joint Probability Distribution}
+So far we've looked pairs of random variables where both variables are either discrete or continuous. A joint pair of random variables can also be composed of one discrete and one continuous random variable. This gives rise to what is known as a mixed joint probability distribution.
+The density function for a mixed probability distribution is given by
+
+
+
+
+\section{Conditional Probability Distribution}
+
+Conditional Probability Distributions arise from joint probability distributions where by we need to know that probability of one event given that the other event has happened, and the random variables behind these events are joint.
+Conditional probability distributions can be discrete or continuous, but the follow the same notation i.e.
+
+\section{Joint Distribution Functions }
+
+Thus far, we have concerned ourselves with the probability distribution of a single random variable. However, we are often
+interested in probability statements concerning two or more random variables. To deal with such probabilities, we define, for any two
+random variables X and Y , the joint cumulative probability distribution function of X and Y by
+\\
+\begin{equation}
+F(a,b) = P{X < a,Y < b},\qquad (-\infty < a,b < \infty)
+\end{equation}
+
+

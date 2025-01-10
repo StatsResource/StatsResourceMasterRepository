@@ -1,0 +1,118 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MathsResource} \chead{Probability} \rhead{Tutorial Sheets} %\input{tcilatex}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{enumerate}
+%=================================================================================%
+%% RSS HC2 2014 Question 2. 
+ 
+\item The continuous random variable X has probability density function (pdf) $f(x)$ given by
+
+\[ f(x) = \frac{k}{x^4},  \mbox{ where} x= \geq \theta\]
+where $\theta$ is a positive constant.
+\begin{enumerate}[(a)]
+\item  Find k in terms of $\theta$. For the case $\theta$ = 1, sketch the graph of $f(x)$, marking the value of $f(1)$ on your graph. (6)
+\item  Show that $E(X) = \frac{3}{2}\theta$ and $Var(X) = \frac{3}{4} \theta^2$.
+ 
+\item Let X denote the mean of n independent random variables, $X_1, X_2,\ldots X_n$, each of which has the pdf $f(x)$.
+\begin{enumerate}[(i)]
+\item Write down an approximation to the distribution of X based on the central limit theorem. How would you expect the success of the approximation to vary with $n$? 
+\item Use this distribution to show that $$P\left( |X - E(X)| \; \leq \; 1.96 \theta \sqrt{\frac{3}{4n}} \right)$$ approximately. Hence find an approximation to the least value of n such that $$P\left( |X - E(X)| \; \leq \; 0.1 \theta  \right) \geq 0.95 . $$
+\end{enumerate}
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% RSS HC2 2014 Question 2.
+    \item 
+
+ The random variable Y has probability density function
+\[f ( y) = k( y - y^3 ) \qquad  \mbox{ where } \;\;0 \leq y \leq 2, \]
+and zero otherwise, where k is a positive constant.
+\begin{enumerate}[(a)]
+\item Show that $k = 1/6$.
+\item Show that the cumulative distribution function is
+  \[
+    f(y) = \begin{cases}
+        0, & \text{for } y \leq 0\\
+        \frac{y^2}{12}\left( \frac{y^2+2}{2} \right)  & \text{for } 0 < y < 2\\
+        1, & \text{for }  y\geq 2
+        \end{cases} 
+  \]
+\item 
+Hence find $P( 1/2 < Y < 3/2)$?
+\item  Find the variance of $Y$.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%- RSS - HC2 - 2008 Question 2 
+\item  The continuous random variable $X$ has probability density function given by
+
+$$f_X(x) = c(1-x^2), \mbox{ where } –1\leq x \leq 1,$$
+
+where $$c$$ is a suitable constant.
+
+\begin{enumerate}[(a)]
+
+\item Show that $c = 3/4$ and plot the graph of $f_X(x)$ against $x$.
+
+\item Show that the cumulative distribution function of X is given by
+
+ \[
+    f(x) = \begin{cases}
+        0, & \text{for } x \leq -1\\
+        \frac{2 + 3x - x^2}{4}  & \text{for } -1 < x < 1\\
+        1, & \text{for }  x\geq 1
+        \end{cases} 
+  \]
+
+
+Also find $P(-1/2 \leq X \leq 1/2 )$.
+
+\item  Obtain the standard deviation of $X$, giving your answer correct to 3 significant figures.
+
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% RSS HC 2016 Q4 A
+\item The continuous random variable X has probability density function
+\[f ( x) = \alpha (1-x)^{\alpha-1} , \;\;\; 0 < x <1, \alpha > 0 .\]
+\begin{enumerate}[(a)]
+\item  Find the cumulative distribution function, $F(x)$, of X.
+\item  Find $P(0.25 < X < 0.75)$.
+\item  Use $F(x)$ to obtain the median of $X$.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% RSS HC 2016 Q4 B
+\item The continuous random variable Y has probability density function given by
+\[f ( y)  = 9 ye^{-3y} , \;\; y \geq 0 .\]
+\begin{enumerate}[(a)]
+\item Obtain $E(Y)$ .
+\item What is $P(Y < 3)$?
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{enumerate}
+\end{document}

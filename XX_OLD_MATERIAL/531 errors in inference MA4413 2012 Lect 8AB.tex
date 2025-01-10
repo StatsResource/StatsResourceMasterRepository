@@ -1,0 +1,648 @@
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx} % Font Family
+\usepackage{helvet} % Font Family
+\usepackage{color}
+\mode<presentation> {
+\usetheme{Default} % was Frankfurt
+\useinnertheme{rounded}
+\useoutertheme{infolines}
+\usefonttheme{serif}
+%\usecolortheme{wolverine}
+% \usecolortheme{rose}
+\usefonttheme{structurebold}
+}
+\setbeamercovered{dynamic}
+\title[MA4413]{Statistics for Computing \\ {\normalsize Lecture 8A and 8B}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize kevin.obrien@ul.ie}}
+\date{Autumn 2012}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+\renewcommand{\arraystretch}{1.5}
+%----------------------------------------------------------------------------------------------------------%
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%----------------------------------------------------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{This Class}
+\begin{itemize}
+\item Lecture Slot 8A was not used as there was a Bank Holiday.
+\item Lecture Slot 8B was used for the Mid-Term Exam.
+\item The Lectures Series recommenced in Lecture Slot 9A.
+\end{itemize}
+\end{frame}
+\end{document}
+%------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Formulae}
+\begin{itemize}
+\item The schedule of formulae that will be at the back of your examination paper will be posted on the SULIS site shortly.
+\item It is advisable to familiarise yourself with the contents before the examination.
+\item Please let me know as soon as possible if there are any issues with it.
+\end{itemize}
+\end{frame}
+%------------------------------------------------------------------------------------------------------------%
+
+%%%% Type I and Type II errors here
+
+%--------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Hypothesis Testing}
+\large
+The inferential step to conclude that the null hypothesis is false goes as follows: The data (or data more extreme) are very unlikely given that the null hypothesis is true.
+\bigskip
+This means that:
+\begin{itemize}\item [(1)] a very unlikely event occurred or
+\item[(2)] the null hypothesis is false. \end{itemize}
+The inference usually made is that the null hypothesis is false. Importantly it doesn’t prove the null hypothesis to be false.
+\end{frame}
+%-------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Type I and II errors}
+\large
+There are two kinds of errors that can be made in hypothesis testing:
+\begin{itemize}
+\item[(1)] a true null hypothesis can be incorrectly rejected
+\item[(2)] a false null hypothesis can fail to be rejected.
+\end{itemize}
+The former error is called a \textbf{\emph{Type I error}} and the latter error is called a \textbf{\emph{Type II error}}. \\ \bigskip
+The probability of Type I error is always equal to the level of significance $\alpha$ (alpha) that is used as the standard for rejecting the null hypothesis .
+\end{frame}
+%---------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Type II Error}
+\begin{itemize}
+
+\item The probability of a Type II error is designated by the Greek letter beta ( $\beta$).
+\item A Type II error is only an error in the sense that an opportunity to reject the null hypothesis correctly was lost.
+\item It is not an error in the sense that an incorrect conclusion was drawn since no conclusion is drawn when the null hypothesis is not rejected.
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Types of Error}
+\large
+\begin{itemize}
+\item
+A Type I error, on the other hand, is an error in every sense of the word. A conclusion is drawn that the null hypothesis is false when, in fact, it is true. \item Therefore, Type I errors are generally considered more serious than Type II errors.
+\item
+The probability of a Type I error ($\alpha$ ) is set by the experimenter. \item There is a trade-off between Type I and Type II errors. The more an experimenter protects himself or herself against Type I errors by choosing a low level, the greater the chance of a Type II error.
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Types of Error}
+\large
+\begin{itemize}
+\item
+Requiring very strong evidence to reject the null hypothesis makes it very unlikely that a true null hypothesis will be rejected. \item However, it increases the chance that a false null hypothesis will not be rejected, thus lowering the likelihood of Type II error.
+\item
+The Type I error rate is almost always set at .05 or at .01, the latter being more conservative since it requires stronger evidence to reject the null hypothesis at the .01 level then at the .05 level.
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Type I and II errors}
+\large
+These two types of errors are defined in the table below.
+\small
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+&True State: H0 True & True State: H0 False\\\hline
+Decision: Reject H0 & Type I error& Correct\\\hline
+Decision: Do not Reject H0 & Correct &Type II error\\ \hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+
+
+%----------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Type I and Type II errors - Die Example}
+\begin{itemize}
+\item Recall our die throw experiment example.
+\item Suppose we perform the experiment twice with two different dice.
+\item We don't not know for sure whether or not either of the dice is fair or crooked (favouring high values).
+\item Suppose we get a sum of 401 from one die, and 360 from the other.
+\end{itemize}
+\end{frame}
+
+%----------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Type I and Type II errors - Die Example}
+\begin{itemize}
+\item For our first dice (sum 401), we feel that it is likely that the die is crooked.
+\item A Type I error describes the case when in fact that dice was fair, and what happened was just an unusual result.
+\item For our second dice (sum 360), we feel that it is likely that the die is fair.
+\item A Type II error describes the case when in fact that dice was crooked , favouring high values, and what happened was ,again, just an unusual result.
+\end{itemize}
+\end{frame}
+
+
+
+
+
+%------------------------------------------------------------------------------------------------------------%
+
+%%%% Type I and Type II errors here
+\frame{
+\frametitle{The Paired t-test}
+A paired t-test is used to compare two population means where you have two samples in
+which observations in one sample can be paired with observations in the other sample.\\
+\bigskip
+Examples of where this might occur are:
+\begin{itemize}
+\item Before-and-after observations on the same subjects (e.g. students’ diagnostic test
+results before and after a particular module or course).
+\item A comparison of two different methods of measurement or two different treatments
+where the measurements/treatments are applied to the \textbf{\emph{same}} subjects.
+\end{itemize}
+}
+
+
+
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{The Paired t-test}
+\begin{itemize}
+\item We will often be required to compute the case-wise differences, the average of those differences and the standard deviation of those difference.
+
+\item The mean difference for a set of differences between paired observations is
+\[ \bar{d} = {\sum d_i \over n }\]
+
+\item The computational formula for the standard deviation of the differences
+between paired observations is
+\[s_d = \sqrt{ {\sum d_i^2 - n\bar{d}^2 \over n-1}}\]
+\item It is nearly always a small sample test.
+\end{itemize}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------------------%
+\frame{
+\frametitle{The Paired t-test}
+\begin{itemize}
+\item $\mu_d$ mean value for the population of differences.
+\item The null hypothesis is that that $\mu_d = 0$
+\item Given $\bar{d}$ mean value for the sample of differences, and $s_d$ standard deviation of the differences for the paired sample data, we can compute this test in the same manner as a one-sample test for the mean
+\end{itemize}
+}
+
+
+
+
+
+
+
+
+
+
+%--------------------------------------------------------------------------------------------------------------------------%
+
+%--------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Computing the Test Statistic}
+
+The general structure of a test statistic is as follows:
+\[ TS = {\mbox{observed value} - \mbox{null value} \over \mbox{Std. Error}}   \]
+where ``null value" is shorthand for the expected value under the null hypothesis.
+
+Refer to the formulae for the appropriate standard error.
+\end{frame}
+
+%--------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{The p-value}
+\begin{itemize}
+\item When using the p-value approach for determining the outcome of a test, you may be required to determine the appropriate p-value from R code. \item  When a Test Statistic is specified the p-value can be computed as \texttt{1-pnorm(TS)}.
+\item Suppose you compute a test statistic of 2.13. 
+
+\item From the R code on the next slide, the p-value is 0.01658581
+\end{itemize}
+\end{frame}
+
+%--------------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+\frametitle{The p-value}
+\begin{verbatim}
+> TSs = 200:220/100
+> TSs
+ [1] 2.00 2.01 2.02 2.03 2.04 2.05 2.06 2.07 2.08
+[10] 2.09 2.10 2.11 2.12 2.13 2.14 2.15 2.16 2.17
+[19] 2.18 2.19 2.20
+> 1-pnorm(TSs)
+ [1] 0.02275013 0.02221559 0.02169169 0.02117827
+ [5] 0.02067516 0.02018222 0.01969927 0.01922617
+ [9] 0.01876277 0.01830890 0.01786442 0.01742918
+[13] 0.01700302 0.01658581 0.01617738 0.01577761
+[17] 0.01538633 0.01500342 0.01462873 0.01426212
+[21] 0.01390345
+\end{verbatim}
+\end{frame}
+\frame{
+\frametitle{Hypothesis Testing: Some Worked Examples}
+\large
+\begin{itemize}
+\item[1] Small sample - test of mean
+\item[2] Difference of two mean (large samples, using p-value approach)
+\item[3] Difference of two mean (large samples, using CV approach)
+\item[4] Difference of two mean (small samples)
+\item[5] Difference of two proportions
+\item[6] Paired t-test
+\end{itemize}
+}
+
+%--------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 1 (a)}
+\large
+\begin{itemize}
+\item The standard deviation of the life for a particular brand of ultraviolet tube is known to be $s = 500$ hr,
+\item Also it is assumed, but not known, that the operating life of the tubes is normally distributed. \item The manufacturer claims that average tube life
+is at least 9,000hr. \item Test this claim at the 5 percent level of significance against the alternative hypothesis
+that the mean life is 9,000 hr, and given that for a sample of $n = 10$ tubes the mean operating
+life was $\bar{x} = 8,800$ hr.
+\item (Intuitively this would suggest a one-tailed test that the mean is less than 9000 hours)
+\end{itemize}
+\end{frame}
+
+
+%--------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 1 (b) }
+\large
+\begin{itemize}
+\item $H_0 \mbox{ : } $ $\mu = 9000$ Average life span is 9000 hours.
+\item $H_1 \mbox{ : } $ $\mu \neq 9000$ Average life span is not 9000 hours.
+\end{itemize}
+\bigskip
+\begin{itemize}
+\item The observed difference is -200 hours. (i.e. 8,800 - 9,000 hours)
+\item The standard error is determined from formulae.
+\[ S.E. (\bar{x}) = {s \over \sqrt{n}} = {500 \over \sqrt{10}}  = 158.1139 \]
+\end{itemize}
+\end{frame}
+%--------------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+\frametitle{Example 1 (c) : Test Statistic and Critical Value }
+\large
+\begin{itemize}
+\item The test statistic is $(-200 -0 /  158.11) = -1.265$
+\item The CV is determined from \texttt{R} code, with $\alpha = 0.05$ and $k = 2$, hence using 0.975.
+\item The sample is small n = 10 $df = n-1 = 9$.Therefore $CV = 2.262$
+\begin{verbatim}
+> qt(0.975,df=9)
+[1] 2.262157
+>
+\end{verbatim}
+
+\item (Remark: If the sample was large, we could use $CV = 1.96$).
+\begin{verbatim}
+> qnorm(0.975)
+[1] 1.959964
+\end{verbatim}
+\end{itemize}
+\end{frame}
+
+%--------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 1 (d): Decision Rule }
+\large
+\begin{itemize}
+\item \textbf{Decision:}Is $|TS| >CV$? Is $1.265 > 2.262$?
+\item No. We fail to reject the null hypothesis. \item There is not enough evidence to say that the mean lifespan is not 9000 hours.
+\end{itemize}
+\end{frame}
+%--------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 2: Difference in Means (a) }
+Two sets of patients are given courses of treatment under two different drugs. The benefits
+derived from each drug can be stated numerically in terms of the recovery times; the readings are given below.
+
+\begin{itemize}
+\item Drug 1:  $n_1$ = 40 , $\bar{x}_1$ = 3.3 days and $s_1 = 1.524$
+\item Drug 2:  $n_2$ = 45 , $\bar{x}_2$ = 4.3 days and $s_2 = 1.951 $
+\end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 2: Difference in Means (b) }
+\begin{itemize}
+\item
+The first step in hypothesis testing is to specify the null hypothesis and an alternative hypothesis.
+\item When testing differences between mean recovery times, the null hypothesis is that the two population means are equal.
+\item That is, the null hypothesis is:\\
+$H_0: \mu_1 = \mu_2$ ( The population means are equal)\\ 
+$H_1: \mu_1 \neq \mu_2$ (The population means are different)\\
+\end{itemize}
+(Remark: Two Tailed Test, therefore $k = 2$, and $\alpha = 0.05$)
+\end{frame}
+
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 2: Difference in Means (c) }
+\begin{itemize}
+\item The observed difference in means is 1 day.
+\item The relevant formula for the standard error is 
+\[ S.E(\bar{x}_1 - \bar{x}_2) = \sqrt{{s^2_1\over n_1}+{s^2_2 \over n_2}} \]
+\item  \[ S.E(\bar{x}_1 - \bar{x}_2) = \sqrt{{(1.524)^2 \over 40}+{(1.951)^2 \over 45}}   \]
+\item  \[ S.E(\bar{x}_1 - \bar{x}_2) = 0.377\mbox{ days}\]
+\end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+\frametitle{Example 2: Difference in Means (d) }
+\begin{itemize}
+\item The Test statistic is therefore
+\[ TS = {\mbox{observed} - \mbox{null} \over \mbox{Std. Error}}  = {1 - 0 \over 0.377 } = 2.65 \]
+\item Lets compute the p-value of this : \\
+p-value = $P(z \geq 2.65) = 0.0040$
+\begin{verbatim}
+> 1-pnorm(2.65)
+[1] 0.004024589
+\end{verbatim}
+
+\item What is this value smaller than threshold $\alpha / k$? \\
+\item $\alpha / k$ = $0.05/2$ = 0.0250? Yes the p-value is smaller than this.
+\item \textbf{Conclusion:} we reject the null hypothesis. There is a significant different between both drugs, in terms of recovery times.
+
+\end{itemize}
+\end{frame}
+
+
+%-------------------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+\frametitle{Example 3: Difference in Means (a) }
+\begin{itemize}
+\item We will approach the same problem in example 2 , but this time using the CV approach.
+\item The first two steps i.e. formally stating the null and alternative hypothesis, and computing the test statistic are the same, are the same as example 1. 
+\item As the sample was large, we could use $CV = 1.96$ (as always, two tailed procedure, with $\alpha=0.05$).
+\begin{verbatim}
+> qnorm(0.975)
+[1] 1.959964
+\end{verbatim}
+\item Is the $TS > CV$ ?   Is $2.65 > 1.96$ ? - Yes , we reject the null hypothesis.
+\end{itemize}
+\end{frame}
+
+
+
+
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 4: Difference in Means (a) }
+\begin{itemize}
+\item For a random sample of 10 light bulbs, the mean bulb life is 4,000 hr with a standard deviation of 200 hours.
+\item For another brand of bulbs whose useful life is also assumed to be normally distributed, a random sample of 8 has a sample mean of 4,300 hours
+and a sample standard deviation of 250 hours. \item Test the hypothesis that there is no difference between the
+mean operating life of the two brands of bulbs, using the 5 percent level of significance
+\end{itemize}
+\end{frame}
+%-------------------------------------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Example 4: Difference in Means (b) }
+\begin{itemize}\item $n_1 = 10$ and $n_2 = 8$.
+\item $\bar{x}_1 = 4000$, $\bar{x}_2 = 4,300 $ , therefore  $\bar{x}_2 - \bar{x}_1 = 300$ hours
+\item $s_1  = 200$, $s_2 = 250$ hours.
+\item Small sample - Degrees of freedom $n_1 + n_2 - 2 = 10 + 8 - 2 = 16$
+\end{itemize}\end{frame}
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 4: Difference in Means (c) }
+\textbf{Pooled variance estimate}
+\[ s^2_p = {(n_1 - 1)s^2_1  + (n_2 - 1)s^2_ 2\over n_1 + n_2 - 2 } = {(9 \times 200^2 ) +( 7 \times 250^2) \over 16 }  \]
+\[ s^2_p  = 49843.75 \]
+\end{frame}
+
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 4: Difference in Means (d) }
+\textbf{Computing the Standard Error}
+\[ S.E(x_1 - x_2) = \sqrt{s^2_p \left({1\over n_1}+{1\over n_2} \right)}\]
+
+\[ S.E(x_1 - x_2) = \sqrt{49843.75 \left({1\over 10}+{1\over 9} \right)}\]
+
+\[ S.E(x_1 - x_2) = \sqrt{11214.84} = 105.9\]
+
+\end{frame}
+
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 4: Difference in Means (e) }
+\textbf{Test Statistic and Critical Value}\\
+\begin{itemize}
+\item The Test Statistic is \[ TS  = {(-300) - 0 \over 105.9}  = -2.83 \]
+\item The Critical Value is determined from R code with $\alpha = 0.05$, $k=2$, $df = 16 $ \texttt{qt(0.975,df=16)=  2.119905}
+\item $CV = 2.120$
+\item We can now apply the decision rule : Is the absolute value of the Test Statistic greater than the Critical Value?
+\item Is $2.83 > 2.12$? Yes We reject $H_0$. There is evidence of a difference in means.
+\end{itemize}
+\end{frame}
+
+
+
+%-------------------------------------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Example 5: Difference in Proportions (a)}
+\begin{itemize}
+\item An experiment is conducted investigating the long-term effects of early childhood intervention programs (such as head start).
+\item In one experiment, the high-school drop out rate of the experimental group (which attended the early childhood program)
+ and the control group (which did not) were compared.
+\item In the experimental group, 73 of 85 students graduated from high school. \item In the control group, only 43 of 82 students graduated.
+Is this difference statistically significant? (Assume that the 0.05 level is chosen.) \end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 5: Difference in Proportions (b)}
+\begin{itemize}
+\item
+The first step in hypothesis testing is to specify the null hypothesis and an alternative hypothesis.
+\item When testing differences between proportions, the null hypothesis is that the two population proportions are equal.
+\item That is, the null hypothesis is:\\
+$H_0: \pi_1 = \pi_2$\\
+$H_1: \pi_1 \neq \pi_2$\\
+\end{itemize}
+(Remark: Two Tailed Test k = 2, and $\alpha = 0.05$)
+\end{frame}
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 5: Difference in Proportions (c)}
+\begin{itemize}
+\item The next step is to compute the difference between the sample proportions.
+\item In this example, $\hat{p}_1 - \hat{p}_2$ = $73/85 - 43/82$ = $0.8588 - 0.5244$.
+\item $\hat{p}_1 - \hat{p}_2$ = $0.8588 - 0.5244$ = 0.3344.
+\item Difference is $33.44\%$
+\end{itemize}
+\end{frame}
+
+
+
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 5: Difference in Proportions (d)}
+The formula for the estimated standard error is:
+
+\[ S.E (\hat{p}_1 - \hat{p}_2)  = \sqrt{\bar{p}(100- \bar{p} \left( {1 \over n_1} + {1 \over n_2}  \right)} \]
+
+
+where $\bar{p}$ is a aggregate proportion ( proportion of successes from overall sample, regardless of which group they are in).
+\end{frame}
+
+%-------------------------------------------------------------------------------------------%
+
+
+
+
+\begin{frame}
+\frametitle{Example 5: Difference in Proportions (d)}
+\textbf{Aggregate Proportion}:\\
+\[ \bar{p}  = {x_1  + x_2 \over n_1 + n_2} \times 100\% = {73+43 \over 85 + 82} \times 100\% = { 116 \over 167}\times 100\% = 69.5\% \]
+\textbf{Standard Error}:\\
+\[ S.E (\hat{p}_1 - \hat{p}_2)  =  \sqrt{69.5 \times 30.5 \left( {1 \over 85} + {1 \over 82}  \right)}  = 7.13\% \]
+\end{frame}
+
+
+
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 5: Difference in Proportions (e)}
+\textbf{Test Statistic}:
+\begin{itemize} \item Observed difference :
+85.88\% - 52.44\%  = 33.44\% \item [ i.e (73/85) - (43 /82) ]
+\item Under the null hypothesis, the expected difference is zero.
+\item Test Statistic is therefore \[T.S. = {33.44\% \over 7.13\%} = 4.69\]
+\end{itemize}
+
+\end{frame}
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 5: Difference in Proportions (e)}
+\begin{itemize}
+\item The Critical value is 1.96 ( Large sample , $\alpha = 0.05$, k=2).
+
+\item The test statistic TS = 4.69, is greater than the critical value CV = 1.96, so we reject the null hypothesis.
+\item The conclusion is that the probability of graduating from high school is greater for students who have participated in the early childhood intervention program than for students who have not.
+\end{itemize}
+
+\end{frame}
+
+
+
+
+%----------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 6: Paired Difference (a)}
+\begin{itemize}
+\item An automobile manufacturer collects mileage data for a sample of $n = 10$ cars in various weight categories
+using a standard grade of gasoline with and without a particular additive. \item Of course, the engines were tuned to the same
+specifications before each run, and the same drivers were used for the two gasoline conditions (with the driver in fact being
+unaware of which gasoline was being used on a particular run). \item Given the mileage data on the next slide,  test the hypothesis
+that there is no difference between the mean mileage obtained with and without the additive, using the 5 percent level of
+significance \end{itemize}
+\end{frame}
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 6: Paired Difference (b)}
+\small
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}\hline
+car & with additive & without additive & $d_i$ & $d^2_i$\\\hline
+1&36.7&36.2&0.5&0.25\\\hline
+2&35.8&35.7&0.1&0.01\\\hline
+3&31.9&32.3&-0.4&0.16\\\hline
+4&29.3&29.6&-0.3&0.09\\\hline
+5&28.4&28.1&0.3&0.09\\\hline
+6&25.7&25.8&-0.1&0.01\\\hline
+7&24.2&23.9&0.3&0.09\\\hline
+8&22.6&22.0&0.6&0.36\\\hline
+9&21.9&21.5&0.4&0.16\\\hline
+10&20.3&20.0&0.3&0.09\\\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+%--------------------------------------------------------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 6: Paired Difference (c)}
+\begin{itemize}
+\item The average of the case wise differences is computed as \[\bar{d} = {\sum d_i \over n}\]
+\[ \bar{d} = { 0.05 + 0.1  - 0.4 + \ldots + 0.30 \over 10 }= 0.17 \]
+\item Also, using last column, $\sum d^2_i = (0.25 + 0.01 + 0.16 + \ldots + 0.09) = 1.31$
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Example 6: Paired Difference (d)}
+\textbf{Sample standard deviation of the case-wise differences}:
+\large
+\[s_d = \sqrt{ {\sum d_i^2 - n\bar{d}^2 \over n-1}}\]
+We know the following:
+\begin{itemize}
+\item The sample size $n$ which is 10.
+\item The average of the case-wise differences. $\bar{d} = 0.17$
+\item  $\sum d^2_i = 1.31$
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Example 6: Paired Difference (e)}
+\textbf{Sample standard deviation  of the case-wise differences}://
+\[s_d = \sqrt{ {\sum d_i^2 - n\bar{d}^2 \over n-1}}\]
+
+\[s_d = \sqrt{ { 1.31 - 10(0.17)^2 \over 9}} = 0.337\]
+
+\textbf{The standard error:} \[ S.E.(\bar{d}) = s_d / \sqrt{n} = {0.0337 \over 3.16} = 0.107\]
+\end{frame}
+
+\begin{frame}
+\frametitle{Example 6: Paired Difference (f)}
+\textbf{Null and Alternative Hypotheses}:
+\begin{itemize}
+\item That is, the null hypothesis is:\\
+$H_0: \mu_d = 0$ Additive makes no difference to performance\\
+$H_1: \mu_d \neq 0$ Additive makes a significant difference to performance \\
+\end{itemize}
+\textbf{Test Statistic}:
+\begin{itemize}
+\item TS = 0.17 / 0.107 = 1.59
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example 6: Paired Difference (g)}
+\textbf{Critical value}:
+\begin{itemize}
+\item $\alpha = 0.05, k = 2$ \item small sample , so $df = n-1 = 9$
+\item As with an earlier example, CV is computed as follows \texttt{ qt(0.975,df=9) =2.262}
+\end{itemize}
+\bigskip
+\textbf{Decision Rule}:\\
+Is $|TS| > CV$? No, we fail to reject the null hypothesis.
+\end{frame}
+
+\end{document}
+
+
+\end{document}

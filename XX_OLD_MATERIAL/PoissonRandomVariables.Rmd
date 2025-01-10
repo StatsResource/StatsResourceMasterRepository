@@ -1,0 +1,32 @@
+m <- 4
+
+
+
+#    Generate uniform random number u in [0,1].
+
+PoisRVs <- numeric()
+
+for(i in 1:1000){
+  
+  x <-0
+  p <-exp(-m) 
+  s <-p
+  
+set.seed(i);u <- runif(1)     
+
+u < s
+
+while (u > s){
+  
+  x <- x + 1
+  cat("\nx =", x)
+  p <- p * (m / x)
+  cat("\np =", p)
+  s <- s + p
+  cat("\ns =", s)
+  cat("\n")
+}
+
+PoisRVs <- c(PoisRVs,x)
+# return x.
+}

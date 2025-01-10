@@ -1,0 +1,116 @@
+
+There are two possible routes to a particular location. You take $R_1$ 80\% of the time and $R_2$ 20\% of the time. 
+
+We assume that travel time has an exponential distribution and, furthermore, the average travel time is 0.25 hours if you take $R_1$ and 0.5 hours if you take $R_2$.
+
+A. Calculate the probability that the journey takes more than 0.5 hours for each of the routes, i.e., $\Pr(T > 0.5\,|\,R_1)$ and $\Pr(T > 0.5\,|\,R_2)$ respectively. 
+
+B.  Calculate $\Pr(T > 0.5)$. (hint: law of total probability) 
+
+C.  Given that $T>0.5$ hours, what is the probability that you used $R_1$? (i.e., calculate $\Pr(R_1\,|\,T>0.5)$)
+
+D.  Derive a general expression for $\Pr(R_1\,|\,T>t)$ and evaluate it at $t=0.25$, $t = 1$ and $t = 2$ respectively. Interpret the results.
+
+
+---
+
+### Exercise A. 
+
+Calculate the probability that the journey takes more than 0.5 hours for each route.
+
+Given that travel time has an exponential distribution, the probability density function is:
+
+$$f(t) = \lambda e^{-\lambda t}$$
+
+where $\lambda$ is the rate parameter.
+
+For $R_1$, the average travel time is 0.25 hours, so $\lambda_1 = \frac{1}{0.25} = 4$.
+
+For $R_2$, the average travel time is 0.5 hours, so $\lambda_2 = \frac{1}{0.5} = 2$.
+
+The probability that the journey takes more than 0.5 hours is given by:
+
+$$\Pr(T > t) = 1 - F(t) = e^{-\lambda t}$$
+
+For $R_1$:
+
+$$\Pr(T > 0.5\,|\,R_1) = e^{-4 \cdot 0.5} = e^{-2}$$
+
+For $R_2$:
+
+$$\Pr(T > 0.5\,|\,R_2) = e^{-2 \cdot 0.5} = e^{-1}$$
+
+### Exercise B. 
+Calculate $\Pr(T > 0.5)$.
+
+Using the law of total probability:
+
+$$\Pr(T > 0.5) = \Pr(T > 0.5\,|\,R_1) \Pr(R_1) + \Pr(T > 0.5\,|\,R_2) \Pr(R_2)$$
+
+Given that:
+
+$$\Pr(R_1) = 0.8$$
+$$\Pr(R_2) = 0.2$$
+
+We have:
+
+$$\Pr(T > 0.5) = (e^{-2} \cdot 0.8) + (e^{-1} \cdot 0.2)$$
+
+### C. 
+
+**Given that $T>0.5$ hours, what is the probability that you used $R_1$?**
+
+Using Bayes' theorem:
+
+$$\Pr(R_1\,|\,T>0.5) = \frac{\Pr(T>0.5\,|\,R_1) \Pr(R_1)}{\Pr(T>0.5)}$$
+
+Substituting the values:
+
+$$\Pr(R_1\,|\,T>0.5) = \frac{e^{-2} \cdot 0.8}{(e^{-2} \cdot 0.8) + (e^{-1} \cdot 0.2)}$$
+
+---
+### Exercise D. 
+Derive a general expression for $\Pr(R_1\,|\,T>t)$ and evaluate it at $t=0.25$, $t=1$, and $t=2$.
+
+The general expression for $\Pr(R_1\,|\,T>t)$ is:
+
+$$\Pr(R_1\,|\,T>t) = \frac{\Pr(T>t\,|\,R_1) \Pr(R_1)}{\Pr(T>t)}$$
+
+Given that:
+
+$$\Pr(T>t\,|\,R_1) = e^{-4t}$$
+$$\Pr(T>t\,|\,R_2) = e^{-2t}$$
+
+We have:
+
+$$\Pr(T>t) = (e^{-4t} \cdot 0.8) + (e^{-2t} \cdot 0.2)$$
+
+So:
+
+$$\Pr(R_1\,|\,T>t) = \frac{e^{-4t} \cdot 0.8}{(e^{-4t} \cdot 0.8) + (e^{-2t} \cdot 0.2)}$$
+
+---
+
+Now evaluating at $t=0.25$, $t=1$, and $t=2$:
+
+For $t=0.25$:
+
+$$\Pr(R_1\,|\,T>0.25) = \frac{e^{-1} \cdot 0.8}{(e^{-1} \cdot 0.8) + (e^{-0.5} \cdot 0.2)}$$
+
+For $t=1$:
+
+$$\Pr(R_1\,|\,T>1) = \frac{e^{-4} \cdot 0.8}{(e^{-4} \cdot 0.8) + (e^{-2} \cdot 0.2)}$$
+
+For $t=2$:
+
+$$\Pr(R_1\,|\,T>2) = \frac{e^{-8} \cdot 0.8}{(e^{-8} \cdot 0.8) + (e^{-4} \cdot 0.2)}$$
+
+### Interpretation of the results
+
+- As $t$ increases, the probability that you took $R_1$ given that the journey took longer than $t$ decreases.
+- This makes sense because $R_1$ generally has a shorter travel time, so the longer the travel time, the more likely it is that you took $R_2$, which has a longer average travel time.
+
+---
+
+
+---

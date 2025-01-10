@@ -1,0 +1,117 @@
+\documentclass[IntroMain.tex]{subfiles} 
+\begin{document}
+
+\begin{frame}	
+\frametitle{Discrete Probability Distributions}
+
+\begin{itemize}
+\item Poisson
+\item Binomial
+\item Geometric
+\end{itemize}
+\end{frame}
+%======================================================================================= %
+\begin{frame}
+\frametitle{What Is a Probability Distribution?}
+If you spend much time at all dealing with statistics, pretty soon you run into the phrase “probability distribution.” It is here that we really get to see how much the areas of probability and statistics overlap. Although this may sound like something technical, the phrase probability distribution is really just a way to talk about organizing a list of probabilities. A probability distribution is a function or rule that assigns probabilities to each value of a random variable. The distribution may in some cases be listed. In other cases it is presented as a graph.
+\end{frame}
+%======================================================================================= %
+\begin{frame}
+	\frametitle{Graph of a Probability Distribution}
+
+A probability distribution can be graphed, and sometimes this helps to show us features of the distribution that were not apparent from just reading the list of probabilities. The random variable is plotted along the x-axis, and the corresponding probability is plotted along the y - axis.
+
+\begin{itemize}
+\item For a discrete random variable, we will have a histogram
+\item For a continuous random variable, we will have the inside of a smooth curve
+\end{itemize}
+
+The rules of probability are still in effect, and they manifest themselves in a few ways. Since probabilities are greater than or equal to zero, the graph of a probability distribution must have y-coordinates that are nonnegative. Another feature of probabilities, namely that one is the maximum that the probability of an event can be, shows up in another way.
+
+\[ \mbox{Area} = \mbox{Probability} \]
+
+\end{frame}
+
+%======================================================================================= %
+\begin{frame}
+	\frametitle{Binomial Probability Distribution}
+The binomial distribution is a particular example of a probability distribution involving a discrete random variable. 
+It is important that you can identify situations which can be modelled using the binomial distribution. 
+\begin{itemize}
+\item There are n independent trials 
+\item There are just two possible outcomes to each trial, success and failure, with fixed probabilities of p and q respectively, where q = 1 – p. 
+\end{itemize}
+
+The discrete random variable X is the number of successes in the n trials. 
+$X$ is modelled by the binomial distribution $B(n,p)$. You can write $X \sim B(n, p)$.
+\end{frame}
+%======================================================================================= %
+\begin{frame}
+	\frametitle{Poisson probability distribution}
+
+A discrete random variable that is often used is one which estimates the number of occurrences  over a specified time period or space.
+
+(remark : a specified space can be a specified length , a specified area, or a specified volume.)
+
+If the following two properties are satisfied, the number of occurrences is a random variable described by the Poisson probability distribution
+
+\end{frame}
+%======================================================================================= %
+\begin{frame}
+	\frametitle{Properties}
+1)      The probability of an occurrence is the same for any two intervals of equal length.\\
+2)      The occurrence or non-occurrence in any interval is independent of the occurrence or non-occurrence in any other interval.\\
+
+\end{frame}
+%======================================================================================= %
+\begin{frame}
+
+The Poisson probability function is given by
+
+ 
+ 
+\begin{itemize} 
+\item	f(x) the probability of x occurrences in an interval. 
+\item	$\lambda$ is the expected value of the mean number of occurrences in any interval. (We often call this the Poisson mean)
+\item	e=2.71828284
+\end{itemize} 
+
+\end{frame}
+
+%======================================================================================= %
+\begin{frame}
+	\frametitle{Poisson Approximation of the Binomial Probability Distribution}
+
+The Poisson distribution can be used  as an approximation of the binomial probability distribution when p, the probability of success is small and n, the number of trials is large.
+We set   (other notation  )  and use the Poisson tables. 
+ 
+As a rule of thumb, the approximation will be good wherever both  and  
+ 
+
+\end{frame}
+%======================================================================================= %
+\begin{frame}
+	\frametitle{Normal Probability Distribution}
+
+\textbf{Bell Curve}
+Bell curves show up throughout statistics. Diverse measurements such as diameters of seeds, lengths of fish fins, scores on the SAT and weights of individual sheets of a ream of paper all form bell curves when they are graphed. The general shape of all of these curves is the same. But all of these curves are different, because it is highly unlikely that any of them share the same mean or standard deviation. Bell curves with large standard deviations are wide, and bell curves with small standard deviations are skinny. Bell curves with larger means are shifted more to the right than those with smaller means.
+
+\end{frame}
+%======================================================================================= %
+\begin{frame}
+	\frametitle{Normal Probability Distribution}
+\textbf{Characteristics of the Normal probability distribution}
+
+\begin{enumerate}
+\item The highest point on the normal curve is at the mean, which is also the median and mode of the distribution.
+
+\item The normal probability curve is bell-shaped and symmetric, with the shape of the curve to the left of the mean a mirror image of the shape of the curve to the right of the mean.
+
+\item The standard deviation determines the width of the curve. Larger values of the the standard deviation result in wider flatter curves, showing more dispersion in data.
+
+\item The total area under the curve for the normal probability distribution is 1.
+\end{enumerate}
+
+\end{frame}
+
+\end{document}

@@ -1,0 +1,323 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{enumerate}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+	
+\begin{enumerate}
+	\item 
+	
+	Ozone readings (ppm) were taken at noon at Shannon Airport on 16 consecutive days and the results were recorded as follows:
+	
+	\begin{verbatim} 
+	1014131812221419
+	22131416  3  6  7  9
+	\end{verbatim}
+	
+	\begin{itemize}
+		\item[(i)]                   Compute the lower quartile, the upper quartile and the interquartile range
+		\item[(ii)]                Construct a box plot for the ozone readings
+		\item[(iii)]               Comment on the box plot – are there mild or extreme outlines, is the data symmetrical etc.
+	\end{itemize}
+	
+	%------------------------------------------% 
+\item            
+	A frequency distribution for bus travel times on a non quality bus corridor in Dublin during early morning peak traffic is as follows:
+	\begin{tabular}{|c|c|c|}
+	Class Interval&Frequency&Relative Frequency \\ \hline
+	15-<16& 4&0.02 \\ \hline
+	16-<17&15&0.075 \\ \hline
+	17-<18&26&0.13 \\ \hline
+	18-<19&99&0.495 \\ \hline
+	19-<20&36&0.18 \\ \hline
+	20-<21& 8&0.04 \\ \hline
+	21-<22&12&0.06 \\ \hline
+
+	\end{tabular} 
+
+	\begin{itemize}
+		\item[(i)]                  Use an Ogive * to compute the following precentiles (approx):
+		10th, 90th, 95th
+		\item[(ii)]                Calculate the mean and the median times for journey on this route at peak times.
+	\end{itemize}
+	Ogive = cumulative relative frequency
+	
+	%----------------------------------------------------------------------%
+	
+\item 
+	
+The following 64 ordered observations are a sample of daily weekday afternoon      
+	(3 to 7pm) lead concentrations  .  The data were recorded at an air 
+	monitoring station near a motorway in the autumn of 1994.
+	
+	\begin{verbatim}
+	2.13.23.94.95.05.05.25.35.45.9
+	5.96.06.06.06.06.06.16.16.26.2
+	6.36.46.46.46.46.56.56.76.86.8
+	6.86.97.07.17.27.27.37.67.67.8
+	7.98.08.08.18.18.38.38.48.58.5
+	8.68.68.79.09.29.39.59.79.910.1
+	10.610.911.215.1
+	\end{verbatim}
+	
+	During the autumn of 1995, the weekday afternoon lead concentrations 
+	(in  ) near the same motorway were, upon ordering, as follows:
+	
+	\begin{verbatim}
+	2.9 5.05.7 6.3 6.56.66.87.38.08.1
+	8.1 8.28.2 8.2 8.68.78.78.78.88.8
+	8.8 8.98.9 9.1 9.19.29.39.39.39.3
+	9.3 9.49.49.4 9.49.59.59.69.79.8
+	9.8 9.89.99.99.99.910.210.210.310.4
+	10.5 10.510.710.911.011.411.611.912.012.3
+	12.412.614.816.7
+	\end{verbatim}
+	
+	The mean and standard deviation of the 1995 data are 9.44  and 
+	2.08  respectively.  Compute the mean and standard deviation of the 
+	1994 data.  Compute the quartiles for both years.   
+	
+	Construct boxplots to compare the two sets of data.  Analyse the increase in
+	lead concentrations by interpreting the above displays and statistics.
+	
+	Note:A new lane was completed and opened on this stretch of motorway
+	in spring 1995.
+	
+\item 
+The masses of 30 human males and 30 arabian stallions were observed. 
+Their masses (in lbs) are given below
+
+\textbf{Humans}
+\begin{verbatim}
+106, 120, 130, 138, 145, 151, 156, 161, 166, 171
+176, 180, 185, 189, 194, 198, 203, 208, 212, 217
+223, 228, 234, 240, 247, 255, 264, 276, 290, 313
+\end{verbatim}
+
+\textbf{Stallions}
+\begin{verbatim}
+808, 824, 835, 843, 851, 857, 862, 868, 872, 877
+881, 886, 890, 894, 898, 902, 906, 910, 914, 919
+923, 928, 932, 938, 943, 949, 957, 965, 976, 992
+\end{verbatim}
+
+\begin{itemize}
+	\item[a)] Draw histograms for these samples and compare them with respect to shape, centrality and relative dispersion. 
+	\item[b)] Calculate the medians of these samples (from the raw data).
+\end{itemize}
+%--------------------------------------------------------------------- %
+
+
+
+
+\item 
+The masses of 30 human males and 30 arabian stallions were observed. Their masses (in lbs) are given below
+{
+	\large
+	\begin{framed}
+		\begin{verbatim}
+		Humans
+		
+		106, 120, 130, 138, 145, 151, 156, 161, 166, 171
+		176, 180, 185, 189, 194, 198, 203, 208, 212, 217
+		223, 228, 234, 240, 247, 255, 264, 276, 290, 313
+		\end{verbatim}
+	\end{framed}
+
+	\large
+	\begin{framed}
+		\begin{verbatim}
+		Stallions
+		
+		808, 824, 835, 843, 851, 857, 862, 868, 872, 877
+		881, 886, 890, 894, 898, 902, 906, 910, 914, 919
+		923, 928, 932, 938, 943, 949, 957, 965, 976, 992
+		\end{verbatim}
+	\end{framed}
+}
+\begin{description}
+	\item[a)]	Draw histograms for these samples and compare them with respect to shape, centrality and relative dispersion. 
+	\item[b)]	Calculate the medians of these samples (from the raw data).
+	
+\end{description}
+	
+\item 
+		A laptop manufacturer wishes to test a particular brand of CPU. A sample of 30 CPUs were selected and used to perform an intensive task for 1 hour. The temperature of each one was then recorded.
+		\begin{center}
+			\begin{tabular}{|cccccccccc|}
+				\hline
+				&&&&&&&&&\\[-0.4cm]
+				29.7 & 34.6 & 34.8 & 35.1 & 35.9 & 36.0 & 36.7 & 36.8 & 37.6 & 37.9\\
+				38.1 & 38.2 & 38.5 & 38.7 & 39.3 & 39.6 & 40.1 & 40.1 & 40.3 & 40.3\\
+				41.0 & 41.1 & 41.4 & 41.6 & 42.2 & 42.2 & 43.0 & 44.5 & 44.5 & 47.9 \\
+				\hline
+			\end{tabular}
+		\end{center}
+		\begin{enumerate}[(a)]
+			\item (Ignore) Construct a frequency table with 5 classes (use 29 as the first breakpoint). \item (Ignore) Draw the histogram (use relative frequency). \item Calculate the median. \item Calculate the quartiles. \item Using the lower/upper fences, identify any outliers. \item Draw the boxplot. \quad \item Is the data symmetric, left-skewed or right-skewed?
+		\end{enumerate}	
+		
+\item 	
+		A blood factor was measured from 60 volunteers for a clinical research survey.. The results are given below. Illustrate the distribution of students’ IQs using a boxplot. Show your workings.
+		\begin{verbatim}
+		72.31  73.21  74.76  78.61  80.36  82.37  82.85  84.01  84.59  84.64
+		84.66  85.31  85.71  85.82  85.96  86.70  87.49  88.61  88.75  89.18
+		89.19  89.92  90.82  90.84  91.28  91.63  91.80  92.58  92.67  92.96
+		94.44  96.35  96.77 100.69 101.96 102.19 102.74 104.18 104.54 104.60
+		105.13 105.93 106.51 107.30 107.55 108.50 108.82 110.13 110.62 110.85
+		111.10 113.39 113.67 114.52 115.36 116.10 116.67 119.47 123.20 125.80
+		\end{verbatim}
+	\item Boxplots Question \\
+\textit{(MA4102 Exam Question from 2011)}
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+			4 & 6 & 8 & 9 & 17 & 17 & 18 & 19 & 20 & 22 \\
+			22 & 27 & 28 & 29 & 31 & 35 & 38 & 39 & 40 & 46 \\
+			48 & 56 & 56 & 57 & 57 & 58 & 58 & 60 & 61 & 62 \\
+			64 & 66 & 68 & 69 & 74 & 75 & 78 & 79 & 80 & 82 \\
+		\end{tabular} 
+		
+	\end{center}
+	
+	\begin{enumerate}
+		\item lower fence?
+		\item Upper fence?
+		\item Any values above or below fences?
+		
+	\end{enumerate}
+\item The masses of 30 human males and 30 arabian stallions were observed. Their masses (in lbs) are given below
+
+\begin{verbatim}
+Humans
+106, 120, 130, 138, 145, 151, 156, 161, 166, 171
+176, 180, 185, 189, 194, 198, 203, 208, 212, 217
+223, 228, 234, 240, 247, 255, 264, 276, 290, 313
+
+
+
+Stallions
+808, 824, 835, 843, 851, 857, 862, 868, 872, 877
+881, 886, 890, 894, 898, 902, 906, 910, 914, 919
+923, 928, 932, 938, 943, 949, 957, 965, 976, 992
+\end{verbatim}
+
+\begin{enumerate}[(i)]
+	\item Draw histograms for these samples and compare them with respect to shape, centrality and relative dispersion. 
+	\item Calculate the medians of these samples (from the raw data).
+\end{enumerate}
+\item
+The masses of 30 human males and 30 arabian stallions were observed. Their masses (in lbs) are given below
+
+\begin{verbatim}
+Humans
+106, 120, 130, 138, 145, 151, 156, 161, 166, 171
+176, 180, 185, 189, 194, 198, 203, 208, 212, 217
+223, 228, 234, 240, 247, 255, 264, 276, 290, 313
+\end{verbatim}
+
+
+
+\begin{verbatim}
+Stallions
+808, 824, 835, 843, 851, 857, 862, 868, 872, 877
+881, 886, 890, 894, 898, 902, 906, 910, 914, 919
+923, 928, 932, 938, 943, 949, 957, 965, 976, 992
+\end{verbatim}
+
+
+\begin{enumerate}[(i)]
+	\item Draw histograms for these samples and compare them with respect to shape, centrality and relative dispersion. 
+	\item Calculate the medians of these samples (from the raw data).
+\end{enumerate}
+
+\item 	In an examination the scores of students who attend schools of type A are
+normally distributed about a mean of 55 with a standard deviation of 6. The
+scores of students who attend type B schools are normally distributed about a
+mean of 60 with a standard deviation of 5.
+Which type of school would have a higher proportion of students with marks above 70?
+
+The heights for a group of forty rowing club members are tabulated as follows;
+
+\begin{table}[ht]
+	\begin{center}
+		\begin{tabular}{|rrrrrrrrrr|}
+			
+			\hline
+			141 & 148 & 149 & 149 & 155 & 156 & 167 & 169 & 169 & 170 \\
+			171 & 173 & 175 & 176 & 177 & 179 & 182 & 182 & 183 & 183 \\
+			183 & 184 & 184 & 184 & 185 & 185 & 185 & 186 & 186 & 189 \\
+			191 & 191 & 191 & 191 & 192 & 192 & 192 & 193 & 194 & 199 \\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+\vspace{-0.5cm}
+\begin{enumerate}
+	\item (6 marks) Summarize the data in the above table using a frequency table. Use 6 class intervals, with 140 as the lower limit of the first interval.
+	\item (6 marks) Draw a histogram for the above data.
+	\item (4 marks) Comment on the shape of the histogram. Based on the shape of the histogram, what is the best measure of centrality and variability?
+	\item (12 marks) Construct a box plot for the above data. Clearly demonstrate how all of the necessary values were computed.
+\end{enumerate}
+\item
+A laptop manufacturer wishes to test a particular brand of CPU. A sample of 60 CPUs were selected and used to perform an intensive task for 1 hour. The temperature of each one was then recorded.
+\begin{center}
+	{
+		\begin{framed}
+			\large
+			\begin{verbatim}
+			17.1 17.6 18.3 20.8 20.8 25.1 26.3 27.3 28.8 31.2
+			34.2 36.7 36.8 37.9 37.9 38.1 38.3 39.2 40.7 41.6
+			42.7 43.7 44.0 45.2 45.3 47.8 48.9 50.3 50.9 51.5
+			52.5 53.6 53.8 55.0 56.3 57.2 58.2 59.4 59.7 60.9
+			62.6 62.8 63.9 64.7 66.8 67.2 67.4 68.1 68.4 69.7
+			69.7 70.2 70.5 71.0 81.6 82.1 82.5 82.8 85.1 89.8
+			\end{verbatim}
+		\end{framed}
+	}
+\end{center}
+
+\begin{itemize}
+	\item[(i)] Construct a simple frequency table with 8 bins (or class intervals) (use 10 as the first breakpoint, and use ``decades"). 
+	\item[(ii)] Draw the histogram (use relative frequency). 
+	\item[(iii)] Calculate the median. 
+	\item[(iv)] Calculate the quartiles. 
+	\item[(v)] Using the lower/upper fences, identify any outliers. 
+	\item[(vi)] Draw the boxplot. 
+	\item[(vii)] Is the data symmetric, left-skewed or right-skewed?
+\end{itemize}
+
+\item 
+A laptop manufacturer wishes to test a particular brand of CPU. A sample of 30 CPUs were selected and used to perform an intensive task for 1 hour. The temperature of each one was then recorded.
+\begin{center}
+	\begin{tabular}{|cccccccccc|}
+		\hline
+		&&&&&&&&&\\[-0.4cm]
+		29.7 & 34.6 & 34.8 & 35.1 & 35.9 & 36.0 & 36.7 & 36.8 & 37.6 & 37.9\\
+		38.1 & 38.2 & 38.5 & 38.7 & 39.3 & 39.6 & 40.1 & 40.1 & 40.3 & 40.3\\
+		41.0 & 41.1 & 41.4 & 41.6 & 42.2 & 42.2 & 43.0 & 44.5 & 44.5 & 47.9 \\
+		\hline
+	\end{tabular}
+\end{center}
+
+{\bf(a)} Construct a frequency table with 5 classes (use 29 as the first breakpoint). \quad {\bf(b)} Draw the histogram (use relative frequency). \quad {\bf(c)} Calculate the median. \quad {\bf(d)} Calculate the quartiles. \quad {\bf(e)} Using the lower/upper fences, identify any outliers. \quad {\bf(f)} Draw the boxplot. \quad {\bf(g)} Is the data symmetric, left-skewed or right-skewed?	
+
+\end{enumerate}
+	
+
+
+\end{document}

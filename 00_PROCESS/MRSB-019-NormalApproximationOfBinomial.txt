@@ -1,0 +1,265 @@
+%---------------------------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Normal approximation of the binomial distribution}
+The sample size $n$ should be greater than 30. $p$ must not be too large or too small.
+\begin{itemize}
+\item Normal mean $\mu = np$
+\item standard deviation $\sigma = \sqrt{np(1-p)}$
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Normal approximation of the binomial distribution}
+Bolts are manufactured by a machine and it is known than approximately $ 20\%$ are outside certian tolerance limits.\\
+If a random sample of 200 is taken, find the probability that that more than 50 items will be outside the limits.\\
+The normal mean is $200 \times 0.2 = 40$.\\
+
+The normal standard deviation \[\sigma = \sqrt{np(1-p)} = \sqrt{200\times 0.2 \times 0.8} = \sqrt{32} \]
+ 
+
+\end{frame}
+
+
+%---------------------------------------------------------------------------------%
+
+\begin{frame}
+\frame{Continuous Uniform Distribution}
+
+The probability density function of the continuous uniform distribution, with parameters $a$ and $b$ is given as
+\[  f(x)=\begin{cases}
+  \frac{1}{b - a} & \mathrm{for}\ a \le x \le b, \\[8pt]
+  0 & \mathrm{for}\ x<a\ \mathrm{or}\ x>b
+  \end{cases} \]
+
+\end{frame}
+
+
+%---------------------------------------------------------------------------------%
+
+\begin{frame}
+\frame{Continuous Uniform Distribution}
+
+The cumulative distribution function of the continuous uniform distribution, with parameters $a$ and $b$ is given as
+\[  F_X(x)= P(X \leq x) = 
+\begin{cases}
+                  0               & \text{for } x \le a \\
+                  \frac{x-a}{b-a} & \text{for } x \in [a,b] \\
+                  1               & \text{for } x \ge b
+                \end{cases} \]
+
+\end{frame}
+%---------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Continuous Uniform Distribution}
+
+\[   P(L \leq X \leq U) =    \frac{U-a}{b-a} - \frac{L-a}{b-a}  = \frac{U-L}{b-a}\]
+
+\end{frame}
+%---------------------------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Inference on the Variances of Two Normal Populations}
+The test statistic used here is based on the  distribution. 
+
+If $ s_1^2$ and $s_2^2 $ are the sample variances drawn randomly from the two populations and $n_1$ and $n_2$  are the two sample sizes, respectively, then the 
+test statistic that can be used to test the equality of the population variances is:
+
+\[ F =  \frac{s_1^2}{S^2_2}\]
+
+The test statistic follows the F distribution with ($n_1- 1$) degrees of freedom in the numerator and ( $n_2 - 1$) degrees of freedom in the denominator.
+\end{frame} 
+
+
+
+
+
+\begin{frame}
+\frametitle{Quantiles}
+Recall
+
+
+The quantile function is the inverse of the cumulative
+distribution function. The p-quantile is the value with the
+property that there is probability p of getting a value less than
+or equal to it. The median is by definition the 50\% quantile.
+
+
+Theoretical quantiles are commonly used for the calculation of
+confidence intervals and for power calculations in connection with
+designing and dimensioning experiments.
+
+
+\end{frame}
+
+
+%-------------------------------------------------------------%
+
+
+\begin{frame}
+\frametitle{Example}
+
+
+Ten soldiers visit the rifle range on two different weeks. The first
+week their scores are:
+
+
+$\{67, 24, 57, 55, 63, 54, 56, 68, 33, 43\}$
+
+
+The second week they score
+$\{70, 38, 58, 58, 56, 67, 68, 77, 42, 38\}$
+
+
+Give a 95\% confidence interval for the improvement in scores from week one to
+week two.
+\end{frame}
+
+
+%-------------------------------------------------------------%
+\begin{frame}
+
+
+This is a case of paired samples, for the scores are repeated observations for each
+soldier, and there is good reason to think that the soldiers will differ from each other
+in their shooting skill. So we work with the individual differences between the scores.
+We shall have to assume that the pairwise differences are a random sample from a
+normal distribution.
+
+
+The differences are:
+
+
+$\{3, 14, 1, 3, -7, 13, 12, 9, 9, -5\}$
+\end{frame}
+
+
+%-------------------------------------------------------------%
+\begin{frame}
+
+
+Effectively we now have a single sample of size 10, and want a 95\% confidence
+interval for the mean of the population from which these differences are drawn. For
+this we use a Student's $t$ interval. The sample mean of the differences is 5.2, and
+$s^2$ = 54.84. So $s = 7.41$, and the 95\% $t$ interval for the difference in the means is
+$5.2 - 2.26(7.41)/\sqrt{10},  5.2 + 2.26(7.41)/\sqrt{10} = (.0.1, 10.5)$.
+
+
+\end{frame}
+
+%--------------------------------------------------------------------------------%
+\begin{frame}
+\begin{itemize}
+\item The specifications for the length of a component is a minimum of 9.90 mm  and a maximum of 10.44mm.
+
+\item A batch of parts is produced that is normally distributed with a a mean of 10.20mm and a standard deviation of 0.20mm.
+
+\item Each part costs $\$10$ to produce. Those that are too short or too long have to be scrapped, or shortened, at a further cost of $\$8$.
+
+\item Compute the percentage of the parts which are (i) Undersize (ii) Oversize.
+
+\item Compute the expecte cost of producing 10000 parts.
+
+\item Suppose we are able to adjust the processing method such that the mean is halfway between the upper and lower specification.
+\end{itemize}
+\end{frame}
+
+
+%--------------------------------------------------------------------------------%
+\begin{frame}
+\begin{itemize}
+\item The number of undersize parts is therefore 670.
+\item The number of oversize parts is therefore 1150.
+\item The number of parts that don't meet specification is therefore 1820.
+\item The additional cost is $1820 \times 8 = 14,560$
+\end{itemize}
+\end{frame}
+
+
+%--------------------------------------------------------------------------------%
+\begin{frame}
+If the mean is changed to 10.17mm, then the symmetry of the normal distribution will mean that the same number of items are too short as too long.
+
+To compute this proportion
+
+\[ z = {10.44 - 10.17 \over 0.2} = 1.35 \]
+
+\begin{itemize}
+\item From the tables $P(Z \geq 1.35) = 0.0885$
+
+\item 885 items will be too short, 885 items will be too long.
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Normal approximation of the binomial distribution}
+The sample size $n$ should be greater than 30. $p$ must not be too large or too small.
+\begin{itemize}
+\item Normal mean $\mu = np$
+\item standard deviation $\sigma = \sqrt{np(1-p)}$
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Normal approximation of the binomial distribution}
+Bolts are manufactured by a machine and it is known than approximately $ 20\%$ are outside certian tolerance limits.\\
+If a random sample of 200 is taken, find the probability that that more than 50 items will be outside the limits.\\
+The normal mean is $200 \times 0.2 = 40$.\\
+
+The normal standard deviation \[\sigma = \sqrt{np(1-p)} = \sqrt{200\times 0.2 \times 0.8} = \sqrt{32} \]
+ 
+
+\end{frame}
+
+
+%---------------------------------------------------------------------------------%
+
+\begin{frame}
+\frame{Continuous Uniform Distribution}
+
+The probability density function of the continuous uniform distribution, with parameters $a$ and $b$ is given as
+\[  f(x)=\begin{cases}
+  \frac{1}{b - a} & \mathrm{for}\ a \le x \le b, \\[8pt]
+  0 & \mathrm{for}\ x<a\ \mathrm{or}\ x>b
+  \end{cases} \]
+
+\end{frame}
+
+
+%---------------------------------------------------------------------------------%
+
+\begin{frame}
+\frame{Continuous Uniform Distribution}
+
+The cumulative distribution function of the continuous uniform distribution, with parameters $a$ and $b$ is given as
+\[  F_X(x)= P(X \leq x) = 
+\begin{cases}
+                  0               & \text{for } x \le a \\
+                  \frac{x-a}{b-a} & \text{for } x \in [a,b] \\
+                  1               & \text{for } x \ge b
+                \end{cases} \]
+
+\end{frame}
+%---------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Continuous Uniform Distribution}
+
+\[   P(L \leq X \leq U) =    \frac{U-a}{b-a} - \frac{L-a}{b-a}  = \frac{U-L}{b-a}\]
+
+\end{frame}
+%---------------------------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Inference on the Variances of Two Normal Populations}
+The test statistic used here is based on the  distribution. 
+
+If $ s_1^2$ and $s_2^2 $ are the sample variances drawn randomly from the two populations and $n_1$ and $n_2$  are the two sample sizes, respectively, then the 
+test statistic that can be used to test the equality of the population variances is:
+
+\[ F =  \frac{s_1^2}{S^2_2}\]
+
+The test statistic follows the F distribution with ($n_1- 1$) degrees of freedom in the numerator and ( $n_2 - 1$) degrees of freedom in the denominator.
+\end{frame} 

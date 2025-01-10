@@ -1,0 +1,346 @@
+
+	\noindent \textbf{Contingency Tables}
+	Suppose there are 100 students in a first year college intake.  \begin{itemize} \item 44 are male and are studying computer science, \item 18 are male and studying engineering \item 16 are female and studying computer science, \item 22 are female and studying engineering. \end{itemize}
+	
+	We assign the names $M$, $F$, $C$ and $E$ to the events that a student, randomly selected from this group, is male, female, studying computer science, and studying engineering respectively.
+}
+%-------------------------------------------------------%
+{
+	\noindent \textbf{Contingency Tables}
+	The most effective way to handle this data is to draw up a table. We call this a \textbf{\emph{contingency table}}.
+	A contingency table is a table in which all possible events (or outcomes) for one variable are listed as
+	row headings, all possible events for a second variable are listed as column headings, and the value entered in
+	each cell of the table is the frequency of each joint occurrence.
+	
+	
+	\begin{center}
+		\begin{tabular}{|c||c|c||c|}
+			\hline
+			% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+			& C & E & Total \\ \hline \hline
+			M & 44 & 18 & 62 \\ \hline
+			F & 16 & 22 & 38 \\ \hline \hline
+			Total & 60 & 40 & 100 \\ \hline
+		\end{tabular}
+	\end{center}
+	
+
+	\noindent \textbf{Contingency Tables}
+	It is now easy to deduce the probabilities of the respective events, by looking at the totals for each row and column.
+{
+	\large	
+		\begin{multicols}{2}
+
+	\begin{itemize}
+		\item P(C) = 60/100 = 0.60
+		\item P(E) = 40/100 = 0.40
+		\item P(M) = 62/100 = 0.62
+		\item P(F) = 38/100 = 0.38
+	\end{itemize}
+	\end{multicols}
+}
+\noindent 	\textbf{Remark:}\\
+	The information we were originally given can also be expressed as:
+\begin{multicols}{2}
+\begin{itemize}
+		\item $P(C \cap M) = 44/100 = 0.44$
+		\item $P(C \cap F) = 16/100 = 0.16$
+		\item $P(E \cap M) = 18/100 = 0.18$
+		\item $P(E \cap F) = 22/100 = 0.22$
+\end{itemize}
+\end{multicols}
+	\noindent \textbf{Joint Probability Tables}
+	
+	A \textbf{\emph{joint probability table}} is similar to a contingency table, but for that the value entered in
+	each cell of the table is the probability of each joint occurrence. Often, the probabilities in such a table are based
+	on observed frequencies of occurrence for the various joint events.
+	\begin{center}
+		\begin{tabular}{|c||c|c||c|}
+			\hline
+			% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+			& C & E & Total \\ \hline \hline
+			M & 0.44 & 0.18 & 0.62 \\ \hline
+			F & 0.16 & 0.22 & 0.38 \\ \hline \hline
+			Total & 0.60 & 0.40 & 1.00 \\ \hline
+		\end{tabular}
+	\end{center}
+}
+%-------------------------------------------------------%
+{
+	\noindent \textbf{Marginal Probabilities}
+	\begin{itemize}
+		\item In the context of joint probability tables, a  \textbf{\emph{marginal probability}} is so named because it is a marginal total of
+		a row or a column. \item Whereas the probability values in the cells of the table are probabilities of joint occurrence, the marginal
+		probabilities are the simple (i.e. unconditional) probabilities of particular events.
+		\item From the first year intake example, the marginal probabilities are $P(C)$, $P(E)$, $P(M)$ and $P(F)$ respectively.
+	\end{itemize}
+	
+}
+%-------------------------------------------------------%
+{
+	\noindent \textbf{Conditional Probabilities : Example 1}
+	
+	Recall the definition of conditional probability:
+	\[ P(A|B) = \frac{P(A \cap B)}{P(B)} \]
+	
+	Using this formula, compute the following:
+	\begin{enumerate}
+		\item $P(C|M)$ : Probability that a student is a computer science student, given that he is male.
+		\item $P(E|M)$ : Probability that a student studies engineering, given that he is male.
+		\item $P(F|E)$ : Probability that a student is female, given that she studies engineering.
+		\item $P(E|F)$ : Probability that a student studies engineering, given that she is female.
+	\end{enumerate}
+	Refer back to the contingency table to appraise your results.
+}
+%-------------------------------------------------------%
+{
+	\noindent \textbf{Conditional Probabilities : Example 1}
+	
+	\textbf{Part 1)} Probability that a student is a computer science student, given that he is male.
+	\[ P(C|M) = \frac{P(C \cap M)}{P(M)}  = \frac{0.44}{0.62} = 0.71 \]
+	\textbf{Part 2)} Probability that a student studies engineering, given that he is male.
+	\[ P(E|M) = \frac{P(E \cap M)}{P(M)}  = \frac{0.18}{0.62} = 0.29 \]
+	
+}
+
+%-------------------------------------------------------%
+{
+	\noindent \textbf{Conditional Probabilities : Example 1}
+	
+	\textbf{Part 3)} Probability that a student is female, given that she studies engineering.
+	\[ P(F|E) = \frac{P(F \cap E)}{P(E)}  = \frac{0.22}{0.40} = 0.55 \]
+	
+	\textbf{Part 4)} Probability that a student studies engineering, given that she is female.
+	\[ P(E|F) = \frac{P(E \cap F)}{P(F)}  = \frac{0.22}{0.38} = 0.58 \]
+	
+	
+	Remark: $P(E \cap F)$ is the same as $P(F \cap E)$.
+	
+	
+}
+
+\section{Contingency Tables}
+
+\begin{itemize}
+				\item The following table gives the results of operations in a hospital according to the complexity of the
+				operation.
+			\end{itemize}
+			
+	\begin{center}
+	
+	\begin{tabular}{ccc}
+			 & Simple & Complex \\ \hline
+			 Successful & 1990 & 950 \\ \hline
+			 Unsuccessful & 10 & 50\\ \hline
+	\end{tabular} 	
+	\end{center}	
+
+			
+			\begin{itemize}
+				\item Let A be the event that an operation is simple and B be the event that an
+				operation is successful. 
+				\item Calculate P r(B), P r(A|B), P r(A|BC ), P r(B|A) and
+				P r(B ∩ A). 
+			\end{itemize}
+
+
+
+There are 100 students in a first year college intake. 
+\begin{itemize}
+\item 36 are males and are studying accounting
+\item 9 are male and ard studying economics
+\item 45 are female and studying accounting
+\item 13 are female and studying economics.
+
+\end{itemize}
+
+First, lets label this events.
+
+\begin{itemize}
+\item $M$ Student is Male
+\item $F$ Student is Female
+\item $A$ Student Studies Accounting
+\item $E$ Student Studies Economics
+\end{itemize}
+
+Lets construct a table to handle this data.
+
+
+%----------------------------------------------------------------------------------------------------%
+
+
+A college teaches a range of courses including maths, physics and IT.
+Students choose a range of courses from these three subject areas. Currently 600
+students are enrolled of whom 300 study maths courses, 120 study IT
+and 380 study physics courses. 
+
+\begin{itemize}
+	\item 40 students study courses from all three subject
+	areas. 
+	\item 200 maths students study physics as well. 60 physics students
+	also study IT and 70 IT students also study maths. 20 students study physics and IT, but not maths.
+\end{itemize}
+
+
+
+\begin{itemize}
+	\item How many students study none of these courses at all? (90)
+	
+	\item How many students study maths but not physics or IT? (70)
+	
+	\item How many students study both maths and physics but not IT? (160)
+	
+	\item How many students study courses from precisely two of these subject
+	areas? (210)
+\end{itemize}
+
+
+
+
+
+% http://www.mathsisfun.com/combinatorics/combinations-permutations.html
+
+%--------------------------------------------------------%
+{
+	\section{Sampling with and without Replacement}
+	
+	\subsection{Sampling without replacement}
+	\begin{itemize}
+		\item Sampling is said to be ``without replacement" when a unit is selected at random from the population and it is not returned to the main lot. \item The first unit is selected out of a population of size $N$ and the second unit is selected out of the remaining population of  $N-1$ units and so on.
+		\item For example, if you draw one card out of a deck of 52, there are only 51 cards left to draw from if you are selecting a second card.
+	\end{itemize}
+
+
+
+	\subsection{Sampling With Replacement }
+	
+	Sampling is called ``with replacement" when a unit selected at random from the population is returned to the population and then a second element is selected at random. Whenever a unit is selected, the population contains all the same units.
+	\begin{itemize}
+		\item What is the probability of guessing a PIN number for an ATM card at the first attempt.
+		
+		\item Importantly a digit can be used twice, or more, in PIN codes.
+		
+		\item For example $1337$ is a valid pin number, where $3$ appears twice.
+		
+		\item
+		We have a one-in-ten chance of picking the first digit correctly, a one-in-ten chance of the guessing the second, and so on.
+		
+		\item All of these events are independent, so the probability of guess the correct PIN is $0.1 \times 0.1 \times 0.1 \times 0.1 = 0.0001$
+	\end{itemize}
+
+
+%==================================================================%
+
+\section{Techniques for Counting}
+
+%==================================================================%
+
+\begin{itemize}
+	\item Combinations
+	\item Permutations
+	\item Permutations with constraints
+\end{itemize}
+
+
+
+%==================================================================%
+
+\noindent \textbf{Permuations of subsets}
+
+The number of permutations of subsets of $k$ elements selected from a set of $n$ different elements is
+
+\[P(n,r) = \frac{n!}{(n-k)!}  \]
+
+
+%==================================================================%
+
+\noindent \textbf{Combinations of subsets}
+
+The number of combinations that can be selected from $n$ items is
+
+\[ {n \choose k} = \frac{n!}{k! \times (n-k)!}  \]
+
+
+
+
+%==================================================================%
+
+
+	\section{Permutations and Combinations}
+	
+	
+	Often we are concerned with computing the number of ways of selecting and arranging groups of items. \begin{itemize} \item  A \textbf{\emph{combination}} describes the selection of items from a larger group of items.  \item A \textbf{\emph{permutation}} is a combination that is arranged in a particular way.
+	\end{itemize}
+
+	\begin{itemize}
+		\item Suppose we have items A,B,C and D to choose two items from.
+		\item AB is one possible selection, BD is another. AB and BD are both combinations.
+		\item More importantly, AB is one combination, for which there are two distinct permutations: AB and BA.
+	\end{itemize}
+
+	
+	\textbf{Combinations: }
+	The number of ways of selecting $k$ objects from $n$ unique objects is:
+	
+	\[ ^n C_k = {n!  \over k! \times (n-k)!} \]
+	
+	In some texts, the notation for finding the number of possible combination is written
+	
+	\[ ^n C_k =  {n \choose k} \]
+	
+
+	%%- \frametitle{Example of Combinations}
+	How many ways are there of selecting two items from possible 5?
+	
+	\[ ^5 C_2   \left( \mbox{ also }  {5 \choose 2}  \right) =  {5!  \over 2! \times 3!} =  {5 \times 4 \times 3!  \over 2 \times 1 \times 3!} = 10  \]
+	
+	Discuss how combinations can be used to compute the number of rugby matches for each group in the Rugby World Cup.
+	
+
+\subsection*{Summary}
+\begin{itemize}
+	\item If the order doesn't matter, it is a Combination.
+	\item If the order does matter it is a Permutation.
+\end{itemize}
+
+
+	\section*{Session 09: Probability}
+
+
+\begin{framed}
+	
+	\[ {n \choose r} = \frac{n!}{(n-r)! r!} \]
+	\smallskip
+	\[ {6 \choose 3} = \frac{6!}{(6-3)! 3!} = \frac{6!}{3! \times 3!}\]
+	
+	\smallskip
+	\[ \frac{6!}{3! \times 3!} = \frac{6 \times 5 \times 4 \times 3!}{3! \times 3!} = \frac{120}{6} = 120\]
+	\smallskip
+\end{framed}
+
+%============================================================== %		
+
+
+
+Probability of $x$ \emph{given} that $y$ has occured.
+
+%\subsection{Computing binomial Coefficients with R}
+%When implementing combination calculations in \texttt{R}, we use the \texttt{choose()} function.
+%\begin{framed}	
+%	\begin{verbatim}
+%	> choose(5,0)
+%	[1] 1
+%	> choose(5,1)
+%	[1] 5
+%	> choose(5,2)
+%	[1] 10
+%	> choose(5,3)
+%	[1] 10
+%	> choose(5,4)
+%	[1] 5
+%	> choose(5,5)
+%	[1] 1
+%	\end{verbatim}
+%\end{framed}	
+
+\end{document}

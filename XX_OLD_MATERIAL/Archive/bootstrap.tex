@@ -1,0 +1,25 @@
+
+
+\subsection{Bootstrap Methods}
+If we would repeat our experiment of collecting 50 samples of nitrate concentrations many times we would see the range of error. But it would be a waste of resources and not a viable method.\\
+Instead we re-sample `new' data from our data and use so obtained new samples for assessment of the error.
+The following \texttt{R} code does the job.
+\begin{center}
+	\line(1,0){250}
+\end{center}
+\begin{verbatim}
+#Getting data in a vector
+m=mean(x)
+bootstrap=vector('numeric',500)
+for(i in 1:500)
+{
+bootstrap[i]=mean(sample(x,replace=T))-mean(x)
+}
+#The distribution of estimation error
+hist(bootstrap)
+\end{verbatim}
+\begin{center}
+	\line(1,0){250}
+\end{center}
+The conclusion of this procedure is that the nitrate concentration is $4999 \pm 0.005$. We are specifically interested in how \texttt{R} was easily able to implement a solution for this.
+\newpage

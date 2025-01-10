@@ -1,0 +1,491 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{framed}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MA4603} \rhead{Kevin O'Brien} \chead{Midterm
+Assessment Paper - Version A } %\input{tcilatex}
+
+\begin{document}
+\begin{center}
+	\includegraphics[scale=0.60]{images/shieldtransparent2}
+\end{center}
+
+\begin{center}
+	\vspace{1cm}
+	\large \bf {FACULTY OF SCIENCE AND ENGINEERING} \\[0.5cm]
+	\normalsize DEPARTMENT OF MATHEMATICS AND STATISTICS \\[1.25cm]
+	\large \bf {MID-TERM ASSESSMENT EXAMINATION 1} \\[0.5cm]
+\end{center}
+
+%\begin{tabular}{ll}
+%	MODULE CODE: MA4603 & SEMESTER: Autumn 2016\\[1cm]
+%	MODULE TITLE: Science Mathematics 3  & DURATION OF EXAM: 45 minutes \\[1cm]
+%	LECTURER: Mr. Kevin O'Brien & GRADING SCHEME: 20 marks \\
+%	& \phantom{GRadiC} \footnotesize {20\% of total module marks} \\[0.2cm]
+%	\\[1cm]
+%\end{tabular}
+
+\begin{center}
+	{\bf INSTRUCTIONS TO CANDIDATES}
+\end{center}
+	\item This exam will start at 12:05, and will last 45 minutes.
+	
+	\item Each question will be worth either 5 Marks. There are 20 Marks worth of questions.
+	\item All questions must be attempted (LENS students please see below)
+	
+	\item Write all of your answers in the exam script. Write the script number on any other documents you submit.
+	
+	\item It is your responsibility to return the script to collection box. An audit of scripts will take place immediately after the exam. If your script is account for in that audit,  you are deemed to be absent, and will receive no marks.
+	
+	\item \textbf{IMPORTANT for LENS Student:}
+	Specifically approved LENS students have to answer any 3 of the 4 questions .
+	\begin{itemize}
+		\item Question 1 Part A and Question 1 Part B count as a single question. If you choose to attempt Question 1, you must answer both parts.
+	\end{itemize}
+	
+	
+\end{itemize}
+	
+	
+\end{itemize}
+\newpage
+\section*{Attempt ALL questions}
+
+\subsection*{Q1 A. Descriptive Statistics (3 Marks)} % 5 Marks
+Consider the following data set of seven numbers:
+
+\begin{center}
+	\textbf{\texttt{27 30 25 28 31 27 28}}
+\end{center}
+% 4 Marks
+
+\noindent For this sample, compute the following descriptive statistics:
+\begin{itemize}
+	%\item[a.] (1 Mark) The median,
+	\item[a.] (1 Mark) The mean,
+	\item[b.] (1 Mark) The variance,
+	\item[c.] (1 Mark) The standard deviation.
+\end{itemize}
+
+\subsection*{Q1 B. Descriptive Statistics (2 Marks)} % 7 Marks
+The heights for a group of forty rowing club members are tabulated as follows:
+
+\begin{table}[ht]
+	\begin{center}
+		\begin{tabular}{|rrrrrrrrrr|}
+			
+			\hline
+			117& 136& 136& 143& 146& 146& 146& 147& 150& 153\\
+			155& 160& 161& 161& 163& 164& 166& 166& 167& 168\\
+			168& 171& 171& 172& 172& 172& 172& 174& 175& 176\\
+			178& 179& 180& 180& 182& 183& 184& 186& 186& 192\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+\vspace{-0.5cm}
+\begin{itemize}
+	%\item[a.] (1 Mark) The median,
+	\item[a.] (1 Mark) The median,
+	\item[b.] (1 Mark) The inter-quartile range.
+\end{itemize}
+
+
+
+
+\subsection*{Q2. Confidence Interval for a Proportion (5 Marks)}
+The strength of dosage of a plant growth enhancement chemical is often measured by the proportion of plants that grow faster. A particular dosage of the chemical is fed to 124 plants of these plants, 104 actually show faster growth.
+
+\begin{itemize}
+	\item[i.] (1 Mark) Calculate a point estimate $\hat{p}$ for the proportion of plants that grow faster due to the dosage. 									 
+	\item[ii.] (2 Marks)  What is the standard error of the estimate? 			
+	\item[iii.] (2 Marks) Find a 95\% confidence interval for the proportion. 					
+\end{itemize}
+
+
+\subsection*{Q3. Dixon Q Test For Outliers (4 Marks)}
+
+The typing speeds for one group of 14 Engineering students were recorded both at the beginning of year 1 of their studies. The results (in words per minute) are given below:
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		% Subject& A& B& C& D& E &F &G &H \\ \hline
+		123 & 146 & 150 &149 &142 &170& 163\\ \hline
+		139 & 164 & 156& 165& 137& 161& 159
+		\\ \hline
+	\end{tabular}
+\end{center}
+Use the Dixon Q-test to determine if the lowest value (123) is an outlier. You may assume a significance level of 5\%.
+%Calculate a 95\% confidence interval for the difference between the mean number of marks obtained by males and females in the population of school leavers as a whole.
+%(7 marks)
+
+\begin{itemize}
+	\item[i.] (1 Mark) Formally state the null hypothesis and the alternative hypothesis.
+	\item[ii.] (1 Mark) Compute the Test Statistic.
+	\item[iii.] (2 Mark) By comparing the Test Statistic to the appropriate Critical Value, state your conclusion for this test.
+\end{itemize}
+\newpage
+%\newpage
+\subsection*{Q4. Normal Distribution (5 Marks)} % Normal %6 MARKS
+Assume that the diameter of a critical component is normally distributed with a Mean of 200mm and a Standard Deviation of 4mm. You are required  to estimate the approximate probability of the following measurements occurring on an individual component.
+\begin{itemize}
+	\item [i.](1 Mark) Greater than 203.64mm
+	\item [ii.](2 Marks) Less than 194.24 mm
+	\item [iii.](2 Marks) Between 194.24 and 205.28 mm
+\end{itemize}
+\bigskip
+
+\newpage
+
+\subsection*{Q1 A. Descriptive Statistics A (3 Marks)} % 5 Marks
+Consider the following data set of seven numbers:
+
+\begin{center}
+	\textbf{\texttt{19 33 33 25 24 28 27}}
+\end{center}
+% 4 Marks
+
+\noindent For this sample, compute the following descriptive statistics:
+\begin{itemize}
+	%\item[a.] (1 Mark) The median,
+	\item[a.] (1 Mark) The mean,
+	\item[b.] (1 Mark) The variance,
+	\item[c.] (1 Mark) The standard deviation.
+\end{itemize}
+
+\subsection*{Q1 B. Descriptive Statistics B (2 Marks)} % 7 Marks
+The heights for a group of forty rowing club members are tabulated as follows:
+
+\begin{table}[ht]
+	\begin{center}
+		\begin{tabular}{|rrrrrrrrrr|}
+			
+			\hline
+			117& 136& 136& 143& 146& 146& 146& 147& 150& 153\\
+			155& 160& 161& 161& 163& 164& 166& 166& 167& 168\\
+			168& 171& 171& 172& 172& 172& 172& 174& 175& 176\\
+			178& 179& 180& 180& 182& 183& 184& 186& 186& 192\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+\vspace{-0.5cm}
+\begin{itemize}
+	%\item[a.] (1 Mark) The median,
+	\item[a.] (1 Mark) The median,
+	\item[b.] (1 Mark) The inter-quartile range.
+\end{itemize}
+\newpage
+\subsection*{Q2. Normal Distribution (5 Marks)} % Normal %6 MARKS
+Assume that the diameter of a critical component is normally distributed with a Mean of 300mm and a Standard Deviation of 5mm. You are required  to estimate the approximate probability of the following measurements occurring on an individual component.
+\begin{itemize}
+	\item [i.](1 Mark)	Greater than 313.5mm
+	\item [ii.](2 Marks) Less than 294.2 mm
+	\item [iii.](2 Marks) Between 294.2 and 307.6 mm
+\end{itemize}
+\bigskip
+
+
+\newpage
+\subsection*{Q3. Dixon Q Test For Outliers (5 Marks)}
+
+The typing speeds for one group of 14 Engineering students were recorded both at the beginning of year 1 of their studies. The results (in words per minute) are given below:
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		% Subject& A& B& C& D& E &F &G &H \\ \hline
+		121 & 146 & 150 &149 &142 &175& 153\\ \hline
+		136 & 161 & 156& 165& 137& 178& 159
+		\\ \hline
+	\end{tabular}
+\end{center}
+Use the Dixon Q-test to determine if the lowest value (121) is an outlier. You may assume a significance level of 5\%.
+%Calculate a 95\% confidence interval for the difference between the mean number of marks obtained by males and females in the population of school leavers as a whole.
+%(7 marks)
+
+\begin{itemize}
+	\item[i.] (1 Mark) Formally state the null hypothesis and the alternative hypothesis.
+	\item[ii.] (1 Mark) Compute the Test Statistic.
+	\item[iii] (1 Mark) State the correct critical value. (See Back of Exam Paper)
+	\item[iv.] (2 Mark) By comparing the Test Statistic to the appropriate Critical Value, state your conclusion for this test.
+\end{itemize}
+\newpage
+%\newpage
+
+\subsection*{Q4. Confidence Interval for a Proportion (5 Marks)}
+The strength of dosage of a plant growth enhancement chemical is often measured by the proportion of plants that grow faster. A particular dosage of the chemical is fed to 118 plants of these plants, 96 actually show faster growth.
+
+\begin{itemize}
+	\item[i.] (1 Mark) Calculate a point estimate $\hat{p}$ for the proportion of plants that grow faster due to the dosage. 									 
+	\item[ii.] (2 Marks)  What is the standard error of the estimate? 			
+	\item[iii.] (2 Marks) Find a 95\% confidence interval for the proportion. 					
+\end{itemize}
+\newpage
+(Write your Answers Here)
+\newpage
+\subsection*{Critical Values for Dixon Q Test}
+{
+	\Large
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline  N  & $\alpha=0.10$  & $\alpha=0.05$  & $\alpha=0.01$  \\ \hline
+			3  & 0.941 & 0.970 & 0.994 \\ \hline
+			4  & 0.765 & 0.829 & 0.926 \\ \hline
+			5  & 0.642 & 0.710  & 0.821 \\ \hline
+			6  & 0.560 & 0.625 & 0.740 \\ \hline
+			7  & 0.507 & 0.568 & 0.680  \\ \hline
+			8  & 0.468 & 0.526 & 0.634 \\ \hline
+			9  & 0.437 & 0.493 & 0.598 \\ \hline
+			10 & 0.412 & 0.466 & 0.568 \\ \hline
+			11 & 0.392 & 0.444 & 0.542 \\ \hline
+			12 & 0.376 & 0.426 & 0.522 \\ \hline
+			13 & 0.361 & 0.410 & 0.503 \\ \hline
+			14 & 0.349 & 0.396 & 0.488 \\ \hline
+			15 & 0.338 & 0.384 & 0.475 \\ \hline
+			16 & 0.329 & 0.374 & 0.463 \\ \hline
+		\end{tabular} 
+	\end{center}
+}
+
+\subsection*{Q1 A. Descriptive Statistics  (3 Marks)} % 5 Marks
+Consider the following data set of seven numbers:
+
+\begin{center}
+	\textbf{\texttt{29 14 17 30 19 25 13}}
+\end{center}
+% 4 Marks
+
+\noindent For this sample, compute the following descriptive statistics:
+\begin{itemize}
+	%\item[a.] (1 Mark) The median,
+	\item[a.] (1 Mark) The mean,
+	\item[b.] (1 Mark) The variance,
+	\item[c.] (1 Mark) The standard deviation.
+\end{itemize}
+\newpage
+\subsection*{Q1 B. Descriptive Statistics B (2 Marks)} % 7 Marks
+The heights for a group of forty rowing club members are tabulated as follows:
+
+\begin{table}[ht]
+	\begin{center}
+		\begin{tabular}{|rrrrrrrrrr|}
+			
+			\hline
+			127& 136& 136& 143& 146& 146& 146& 147& 150& 156\\
+			156& 160& 161& 161& 163& 164& 166& 166& 167& 168\\
+			169& 171& 171& 172& 172& 172& 172& 174& 175& 176\\
+			176& 176& 180& 180& 182& 183& 184& 186& 186& 188\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+\vspace{-0.5cm}
+\begin{itemize}
+	%\item[a.] (1 Mark) The median,
+	\item[a.] (1 Mark) The median,
+	\item[b.] (1 Mark) The inter-quartile range.
+\end{itemize}
+
+\newpage
+\subsection*{Q2. Dixon Q Test For Outliers (5 Marks)}
+
+
+The typing speeds for one group of 14 Engineering students were recorded both at the beginning of year 1 of their studies. The results (in words per minute) are given below:
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		% Subject& A& B& C& D& E &F &G &H \\ \hline
+		121 & 146 & 150 &149 &142 &174& 153\\ \hline
+		137 & 164 & 156& 165& 137& 171& 159
+		\\ \hline
+	\end{tabular}
+\end{center}
+Use the Dixon Q-test to determine if the lowest value (121) is an outlier. You may assume a significance level of 5\%.
+%Calculate a 95\% confidence interval for the difference between the mean number of marks obtained by males and females in the population of school leavers as a whole.
+%(7 marks)
+
+\begin{itemize}
+	\item[i.] (1 Mark) Formally state the null hypothesis and the alternative hypothesis.
+	\item[ii.] (1 Mark) Compute the Test Statistic.
+	\item[iii] (1 Mark) State the correct critical value. (See Back of Exam Paper)
+	\item[iv.] (2 Mark) By comparing the Test Statistic to the appropriate Critical Value, state your conclusion for this test.
+\end{itemize}
+\newpage
+%\newpage
+\subsection*{Q3. Normal Distribution (5 Marks)} % Normal %6 MARKS
+Assume that the diameter of a critical component is normally distributed with a Mean of 100mm and a Standard Deviation of 5mm. You are required  to estimate the approximate probability of the following measurements occurring on an individual component.
+\begin{itemize}
+	\item [i.](1 Mark)	Greater than 103mm
+	\item [ii.](2 Marks) Less than 94.2 mm
+	\item [iii.](2 Marks)[$\ast$] Between 94.2 and 103 mm
+\end{itemize}
+\bigskip
+\newpage
+
+\subsection*{Q4. Confidence Interval for a Proportion (5 Marks)}
+The strength of dosage of a plant growth enhancement chemical is often measured by the proportion of plants that grow faster. A particular dosage of the chemical is fed to 115 plants of these plants, 94 actually show faster growth.
+
+\begin{itemize}
+	\item[i.] (1 Mark) Calculate a point estimate $\hat{p}$ for the proportion of plants that grow faster due to the dosage. 									 
+	\item[ii.] (2 Marks)  What is the standard error of the estimate? 			
+	\item[iii.] (2 Marks) Find a 95\% confidence interval for the proportion. 					
+\end{itemize}
+\newpage
+(Blank Page)
+\newpage
+\subsection*{Critical Values for Dixon Q Test}
+{
+	\Large
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline  N  & $\alpha=0.10$  & $\alpha=0.05$  & $\alpha=0.01$  \\ \hline
+			3  & 0.941 & 0.970 & 0.994 \\ \hline
+			4  & 0.765 & 0.829 & 0.926 \\ \hline
+			5  & 0.642 & 0.710  & 0.821 \\ \hline
+			6  & 0.560 & 0.625 & 0.740 \\ \hline
+			7  & 0.507 & 0.568 & 0.680  \\ \hline
+			8  & 0.468 & 0.526 & 0.634 \\ \hline
+			9  & 0.437 & 0.493 & 0.598 \\ \hline
+			10 & 0.412 & 0.466 & 0.568 \\ \hline
+			11 & 0.392 & 0.444 & 0.542 \\ \hline
+			12 & 0.376 & 0.426 & 0.522 \\ \hline
+			13 & 0.361 & 0.410 & 0.503 \\ \hline
+			14 & 0.349 & 0.396 & 0.488 \\ \hline
+			15 & 0.338 & 0.384 & 0.475 \\ \hline
+			16 & 0.329 & 0.374 & 0.463 \\ \hline
+		\end{tabular} 
+	\end{center}
+}
+
+
+\subsection*{Q1. Descriptive Statistics A (3 Marks)} % 5 Marks
+Consider the following data set of seven numbers:
+
+\begin{center}
+	\textbf{\texttt{23 24 20 21 15 28 23}}
+\end{center}
+% sd = 4
+% xbar = 22
+
+\noindent For this sample, compute the following descriptive statistics:
+\begin{itemize}
+	%\item[a.] (1 Mark) The median,
+	\item[a.] (1 Mark) The mean,
+	\item[b.] (1 Mark) The variance,
+	\item[c.] (1 Mark) The standard deviation.
+\end{itemize}
+
+\subsection*{Q2. Descriptive Statistics B (2 Marks)} % 7 Marks
+The heights for a group of forty rowing club members are tabulated as follows:
+
+\begin{table}[ht]
+	\begin{center}
+		\begin{tabular}{|rrrrrrrrrr|}
+			
+			\hline
+			127& 136& 136& 143& 146& 146& 146& 147& 150& 156\\
+			156& 160& 161& 161& 163& 164& 166& 166& 167& 168\\
+			169& 171& 171& 172& 172& 172& 172& 174& 175& 176\\
+			176& 176& 180& 180& 182& 183& 184& 186& 186& 188\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+\vspace{-0.5cm}
+\begin{itemize}
+	%\item[a.] (1 Mark) The median,
+	\item[a.] (1 Mark) The median,
+	\item[b.] (1 Mark) The inter-quartile range.
+\end{itemize}
+
+
+
+\subsection*{Q2. Normal Distribution (5 Marks)} % Normal %6 MARKS
+Assume that the diameter of a critical component is normally distributed with a Mean of 150mm and a Standard Deviation of 5mm. You are required  to estimate the approximate probability of the following measurements occurring on an individual component.
+\begin{itemize}
+	\item [i.](1 Mark)	Greater than 157.5mm
+	\item [ii.](2 Marks) Less than 144.2 mm
+	\item [iii.](2 Marks)[$\ast$] Between 144.2 and 15.56 mm
+\end{itemize}
+\bigskip
+
+
+\subsection*{Q3. Dixon Q Test For Outliers (5 Marks)}
+
+The typing speeds for one group of 14 Engineering students were recorded both at the beginning of year 1 of their studies. The results (in words per minute) are given below:
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		% Subject& A& B& C& D& E &F &G &H \\ \hline
+		123 & 146 & 150 &149 &142 &170& 153\\ \hline
+		137 & 164 & 156& 165& 137& 171& 159
+		\\ \hline
+	\end{tabular}
+\end{center}
+Use the Dixon Q-test to determine if the lowest value (123) is an outlier. You may assume a significance level of 5\%.
+%Calculate a 95\% confidence interval for the difference between the mean number of marks obtained by males and females in the population of school leavers as a whole.
+%(7 marks)
+
+\begin{itemize}
+	\item[i.] (1 Mark) Formally state the null hypothesis and the alternative hypothesis.
+	\item[ii.] (1 Mark) Compute the Test Statistic.
+	\item[iii] (1 Mark) State the correct critical value. (See Back of Exam Paper)
+	\item[iv.] (2 Mark) By comparing the Test Statistic to the appropriate Critical Value, state your conclusion for this test.
+\end{itemize}
+\newpage
+%\newpage
+\subsection*{Q4. Confidence Interval for a Proportion (5 Marks)}
+The strength of dosage of a plant growth enhancement chemical is often measured by the proportion of plants that grow faster. A particular dosage of the chemical is fed to 118 plants of these plants, 95 actually show faster growth.
+
+\begin{itemize}
+	\item[i.] (1 Mark) Calculate a point estimate $\hat{p}$ for the proportion of plants that grow faster due to the dosage. 									 
+	\item[ii.] (2 Marks)  What is the standard error of the estimate? 			
+	\item[iii.] (2 Marks) Find a 95\% confidence interval for the proportion. 					
+\end{itemize}
+
+\newpage
+\subsection*{Critical Values for Dixon Q Test}
+{
+	\Large
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline  N  & $\alpha=0.10$  & $\alpha=0.05$  & $\alpha=0.01$  \\ \hline
+			3  & 0.941 & 0.970 & 0.994 \\ \hline
+			4  & 0.765 & 0.829 & 0.926 \\ \hline
+			5  & 0.642 & 0.710  & 0.821 \\ \hline
+			6  & 0.560 & 0.625 & 0.740 \\ \hline
+			7  & 0.507 & 0.568 & 0.680  \\ \hline
+			8  & 0.468 & 0.526 & 0.634 \\ \hline
+			9  & 0.437 & 0.493 & 0.598 \\ \hline
+			10 & 0.412 & 0.466 & 0.568 \\ \hline
+			11 & 0.392 & 0.444 & 0.542 \\ \hline
+			12 & 0.376 & 0.426 & 0.522 \\ \hline
+			13 & 0.361 & 0.410 & 0.503 \\ \hline
+			14 & 0.349 & 0.396 & 0.488 \\ \hline
+			15 & 0.338 & 0.384 & 0.475 \\ \hline
+			16 & 0.329 & 0.374 & 0.463 \\ \hline
+		\end{tabular} 
+	\end{center}
+}
+\end{document}

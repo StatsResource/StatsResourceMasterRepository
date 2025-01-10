@@ -1,0 +1,250 @@
+\documentclass[]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+%opening
+\title{}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+
+\section*{Question 1}
+
+\subsection*{Part A}
+Important Information
+\begin{itemize}
+\item Asked to compute $P(D) $: Defective
+\item Suppliers: Company A : $P(A) = 0.70$ / Company B : $P(B) = 0.30$
+\item Conditional Probability formule
+\[ P(A|B) = \frac{P(A \mbox{ and } B  )}{P(B)}\]
+Re-arranged
+\[P(A \mbox{ and } B  ) = P(A|B)\times P(B)\]
+\item $P(D|A) = 0.02$
+\item $P(D|B) = 0.03$
+\end{itemize}
+\textbf{Using Total Probability Law}
+\[P(D) = P(D \mbox{ and } A) + P(D \mbox{ and } B  )\]
+
+\[P(D) = P(D|A)\times P(A) + P(D|B)\times P(B)\]
+
+\[P(D) = 0.02 \times 0.70 +  0.03 \times 0.30  = 0.014 + 0.0009 = 0.023\]
+
+\textbf{Part 2}
+\[P(A|D)  = \frac{P(D|A)\times P(A)}{P(D)}  = \frac{0.02 \times 0.70}{0.023} =  0.6086\]
+
+%------------------------- %
+\subsection*{Part B}
+\begin{itemize}
+\item Mean
+\[\bar{x} =  \frac{4 + 18 + 2 + 7 +18 + 3  +4
+}{7} =56/7 = 8 \]
+\item Median\\
+Firstly: put the data set in order.\\
+Median is middle value (4)\\
+\item Variance
+\[s^2 = \frac{\sum (x-\bar{x})^2}{n-1}\]
+Ans = $\frac{294}{6} = 49$
+\item Standard deviation is the square root of the variance. $s=7$
+\end{itemize}
+\subsection*{Part C : Discrete RVs}
+\begin{itemize}
+\item Find $k$\\
+$P(X=2) = 0.25$. The sum of the probabilities must sum up to 1.
+
+\item $E(X) = \sum x_i p(x_i)$ = 9.5
+
+\[\sum x_i p(x_i) = (2\times 0.25) + (5 \times 0.25) + (10 \times 0.15) + (15 \times 0.25) + (25 \times 0.10) \]
+
+
+
+\item $E(X^2) = \sum x^2_i p(x_i)$
+
+\[\sum x_i p(x_i) = (4\times 0.25) + (25 \times 0.25) + (100 \times 0.15) + (225 \times 0.25) + (625 \times 0.10) \]
+
+
+$E(X^2) = 141$
+
+\item $V(X) = E(X^2) - E(X)^2 = 141-9.5^2 = 50.75$
+\end{itemize}
+
+\subsection*{Part D : Sampling without replacement}
+
+\begin{itemize}
+\item P(At least one is white) = 1-P(neither is white)
+\item $1- \left[(4/10)\times (3/9)\right]  = 78/90 = 0.8666$
+\item P(Exactly one) - disjoint events
+\item probability is sum of components
+\item First is white $4/10 \times 6/9 =20/90$
+\item Second is white $6/10 \times 4/9 =20/90 $also
+\item P(Exactly One white )=40/90
+\end{itemize}
+
+\subsection*{Part E : Probability Laws}
+\begin{itemize}
+\item $P(A \cap B)  = P(A) \times P(B) = 0.5\times 0.4 = 0.2 $
+\item $P(A \cup B)  = P(A) + P(B) - P(A \cap B) = 0.7$
+\end{itemize}
+
+%----------------------------------------------- %
+\newpage
+\section*{Question 2}
+\subsection*{Part A : Poisson Dsitribution}
+Parameter: Poisson Mean m=3\\
+Use statistical tables : Murdoch Barnes 2\\
+\begin{itemize}
+\item From tables $P(X \geq 2)$ = 0.8009
+\item From tables $P(X = 0) = 1-P(X \geq 1)$ = 1-0.9502 = 0.0498
+\item From tables $P(X = 1) = P(X \geq 1) - P(X \geq 2) $ = 0.9502 - 0.8009 = 0.1493
+\item Poisson Mean $m=3$  and Poisson Standard Deviation $m=3$
+\end{itemize}
+\subsection*{Part B : Binomial Distribution}
+n=100, p=0.05
+\begin{itemize}
+\item from tables: $P(X=5) = P(X \geq 5) - P(X \geq 6) = 0.5640 - 0.3840 = 0.18$
+\item from tables: $P(X \geq 10) = 0.0282$
+\item from tables: $P(X \leq 12) = 1-P(X\geq 13) = 1- 0.0015 = 0.9985$
+\end{itemize}
+\subsection*{Part C : Exponential Distribution}
+Exponential Mean =10\\
+Rate Parameter Lambda ($\lambda$) =1/10\\
+Therefore $P(X \geq k ) = exp(-k/10)$
+\begin{itemize}
+\item $P(X \geq 10 ) = exp(-10/10) = exp(-1) = 0.3678$
+\item $P(X \geq 10 ) = exp(-20/10) = exp(-2) = 0.1353$
+\end{itemize}
+
+\subsection*{Part D : Poisson Approximation}
+\begin{itemize}
+\item Bin(n,p)
+\item Poisson(m)
+\item Appropropriate when n is greater than 50 and p is less than 0.05.
+\item Let $m = np$ and compute as poisson distribution.
+\item For large values of n and really small vaues of p, Poisson Approximation is much simpler computationally, with negligible error.
+\end{itemize}
+%----------------------------------------------- %
+\newpage
+\section*{Question 3}
+\subsection*{Part A : Normal Distribution}
+Parameter Mean $\mu =1000$ Standard Deviation $\sigma=50$
+Normal Distribution
+
+\[ X \sim N(\mu=1000,\sigma^2=50^2)\]
+
+\begin{itemize}
+\item Compute $P(X \geq 975)$
+\item Zscore
+\[ z = frac{975 - 1000}{50} = -25/50 = -0.5\]
+\item using Z identity and Symmetry rule
+$P(X \geq 975)$ = $P(Z \geq -0.5)$ = $P(Z \leq -0.5)$ =  0.6914
+\item Values derived from statistical tables
+\end{itemize}
+
+\begin{itemize}
+\item Compute $P(X \leq 950)$
+\item Zscore
+\[ z = frac{950 - 1000}{50} = -50/50 = -1\]
+\item using Z identity and Symmetry rule
+$P(X \leq 950)$ = $P(Z \leq -0.1)$ = $P(Z \geq 1)$ = 0.8413
+\item Values derived from statistical tables
+\end{itemize}
+
+\subsection*{Part B : Short Theory Definitions}
+From Notes.
+\subsection*{Part C : Confidence interval}
+
+\begin{itemize}
+\item Point estimate = 0.81 (89/110)
+\item Large Sample : 95\% Quantile = 1.96
+\item Standard Error 
+\[S.E.(\hat{p}) =  \sqrt{  \frac{\hat{p} \times (1-\hat{p})}{n} }\]
+\[S.E.(\hat{p}) = \sqrt{\frac{0.81 \times 0.19}{110}} = \sqrt{0.001411}\]
+\[S.E.(\hat{p}) = 0.0374\]
+\item Margin of Error = $1.96 \times 0.0374$ = 0.07345
+\item Answer : (0.81 - 0.07345, 0.81 + 0.07344) =  (0.7356,0.8825)
+\item 0.90 in interval - can contradict claim.
+\end{itemize}
+\subsection*{Part D : Shapiro Wilk Test}
+Null: Data Set is normally distributed\\
+Alt : Data set is not normally distributed\\
+conclusion : Large p-value. Fail to reject null.
+\subsection*{Part E : Normal Probability Plot}
+\begin{itemize}
+\item If the points on the plot follow the trendline, then the data set can be assumed to be normally distributed. (Marks for sketch, counter example etc)
+\item Data is normally distributed.
+\end{itemize}
+%----------------------------------------------- %
+\newpage
+\section*{Question 4}
+
+\subsection*{Accuracy, predicion recall}
+Accuracy, Precision and recall are defined as
+\[\mbox{Accuracy}=\frac{tp+tn}{tp+tn+fp+fn} \]
+\[\mbox{Precision}=\frac{tp}{tp+fp} \] 
+\[\mbox{Recall}=\frac{tp}{tp+fn} \]
+
+The F measure is computed as
+\[F = 2 \cdot \frac{\mathrm{precision} \cdot \mathrm{recall}}{ \mathrm{precision} + \mathrm{recall}}\]
+%\subsection*{Questions}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline  & \phantom{spa}Predict Negative\phantom{spa} & \phantom{spa}Predict Positive\phantom{spa} \\ 
+\hline\phantom{spa} Observed Negative \phantom{spa}&	9530	&	10	\\ 
+\hline \phantom{spa}Observed Positive\phantom{spa} & 	300	&	160	\\ 
+\hline 
+\end{tabular} 
+\end{center}
+Accuracy, Precision and recall are defined as
+\[\mbox{Accuracy}=\frac{tp+tn}{tp+tn+fp+fn} = 0.9790 \]
+\[\mbox{Precision}=\frac{tp}{tp+fp} = \frac{160}{170} = 0.9411\] 
+\[\mbox{Recall}=\frac{tp}{tp+fn} =\frac{300}{460} = 0.6521 \]
+
+The F measure is computed as
+\[F = 2 \cdot \frac{\mathrm{precision} \cdot \mathrm{recall}}{ \mathrm{precision} + \mathrm{recall}}\]
+
+\[ = \frac{2 \times 0.6521 \times 0.9411}{0.6521 + 0.9411}\]
+
+\subsection*{Two sample mean}
+\begin{itemize}
+\item Hypotheses (brief written description required)
+\[ H_0 :  \mu_1 = \mu_2\]
+\[ H_1 :  \mu_1 \neq \mu_2\]
+\item 
+\item point estimate:  diffference in means (950-910=) 40 marks
+\item Standard Error (from formulae)
+\[\sqrt{\frac{s^2_1}{n_1} + \frac{s^2_2}{n_2} }\]
+\item Critical Value = 1.96 (Large Sample.)
+\end{itemize}
+
+\subsection*{Two Sample proportion}
+\begin{itemize}
+\item Hypotheses (brief written description required)
+\[ H_0 :  \pi_1 = \pi_2\]
+\[ H_1 :  \pi_1 \neq \pi_2\]
+\item point estimate:  diffference in proportions
+\item Critical Value = 1.96 (Large Sample.)
+\end{itemize}
+%----------------------------------------------- %
+\newpage
+\section*{Question 5}
+\subsection*{Part A : Huffman Coding}
+
+\subsection*{Part B : Binary Channels}
+
+\subsection*{Part C : Rate of Information}
+\[R = rH(X)\]
+\begin{itemize}
+\item $H(X) = - \sum \limits^{16}_{i=1} {1\over 16} \mbox{log}_2{1\over 16}$ \bigskip
+
+\item i.e. $H(X) = [ -{1\over 16} \mbox{log}_2{1\over 16} ] + [- {1\over 16} \mbox{log}_2{1\over 16} ] \ldots [ -{1\over 16} \mbox{log}_2{1\over 16}) ] $ \bigskip
+\item Sixteen identical terms. Compute one and multiply by 16.
+
+\[ H(X) = 16 \times [ -{1\over 16} \mbox{log}_2{1\over 16} ]  = -\mbox{log}_2{1\over 16} = -(-4) = 4\] \bigskip
+\item $H(X)= 4$ b
+\item $r =  2(10^6)(32) = 64(10^6)$ elements/sec \bigskip
+
+\item $R = rH(X) = 64(10^6)(4) = 256(l0^6) \mbox{ b/sec } = 256 \mbox{ Mb/sec }$ \bigskip
+\end{itemize}
+\end{document}

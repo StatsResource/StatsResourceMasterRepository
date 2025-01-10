@@ -1,0 +1,77 @@
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{multicol}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MathsResource} \chead{Game Theory} \rhead{ Tutorial Sheet 2} %\input{tcilatex}
+\begin{document}%--------------------%
+\begin{enumerate}
+
+\item In a game show, contestants M\'{a}ire and S\'{e}amus start the last round with \euro{500} and \euro{400} respectively. Each must decide to pass or play. If a player passes, they keep their money but if they opt to play they win or lose \euro{200} each with probability 1/2. These outcomes are independent of each other. The player with the most money at the end of the round gets a bonus of \euro{300}.
+
+\begin{enumerate}
+	\item[(a)] If M\'{a}ire goes first and S\'{e}amus sees her move, draw the game tree. 
+	\item[(b)] Show that the strategic form of the game is
+	
+	\begin{center}
+		
+		\begin{tabular}{|c|c|c|}
+			\hline
+			& Pass         &Play       \\
+			\hline
+			Pass & (8,4) &$\left(\frac{13}{2}, \frac{11}{2}\right)$  \\
+			\hline
+			Play & $\left(\frac{13}{2}, \frac{11}{2}\right)$& $\left(\frac{29}{4}, \frac{19}{4}\right)$ \\
+			\hline
+		\end{tabular}
+	\end{center}
+	where payoffs are expected values in 00's. 
+	
+	\item[(c)] Solve the game using Backward Induction.
+\end{enumerate}
+%================%
+%- Question 52
+
+\item  In a game show, contestants S\'{i}le and S\'{e}an start the last round with \euro{500} and \euro{400} respectively. Each must decide to pass or play. If a player passes, they keep their money but if they opt to play they win or lose \euro{200} each with probability 1/2. These outcomes are independent of each other. The player with the most money at the end of the round gets a bonus of \euro{200}.
+
+\begin{enumerate}
+	\item[(a)] Suppose S\'{i}le goes first, with S\'{e}an then taking his turn, after seeing her move. Draw the game tree. 
+	\item[(b)] Show that the strategic form of the game is
+	
+	\begin{center}
+		
+		\begin{tabular}{|c|c|c|}
+			\hline
+			& Pass         &Play       \\
+			\hline
+			Pass & (7,4) &$\left(6, 5 \right)$  \\
+			\hline
+			Play & $\left(6, 5 \right)$ & $\left(\frac{9}{2}, 5\right)$ \\
+			\hline
+		\end{tabular}
+	\end{center}
+	where payoffs are expected values in 00's. 
+	\item[(c)] Solve the game using Backward Induction.
+\end{enumerate}
+\end{document}	
+	\item[(c)] Solve the game using Backward Induction.
+\end{enumerate}

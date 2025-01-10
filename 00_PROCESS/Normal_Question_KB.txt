@@ -1,0 +1,106 @@
+
+
+\section{Tutorial G - Normal Distribution}
+
+Assume that a character in a game is programmed to have an attack power according to $X \sim \text{Normal}(\mu=40,\sigma=3)$.\$$-0.2cm]
+
+A. What is the probability that the attack is greater than 45? 
+
+B. What is the probability that the attack is between 32 and 42? 
+
+C. Let $X_1$ and $X_2$ be the first and second attacks. What is the probability that the \emph{sum} of these two attacks is greater than 85 units? 
+
+D. Calculate 99\% limits for the sum of two attacks.  
+
+E. What is the probability that the \emph{difference} in attacks is more than 5 units? Note that attack 2 can be 5 units more than attack 1 or attack 1 can be 5 units more than attack 2, i.e., $\Pr(|D|>5)=\Pr(D<-5) + \Pr(D>5)$.
+
+---
+
+Let's break down each part of your problem step by step.
+
+### A. Probability that the attack is greater than 45
+
+Given $X \sim \text{Normal}(\mu=40, \sigma=3)$:
+
+We want $\Pr(X > 45)$.
+
+First, standardize the variable $X$ using the Z-score formula:
+$$Z = \frac{X - \mu}{\sigma}$$
+$$Z = \frac{45 - 40}{3} = \frac{5}{3} \approx 1.67$$
+
+Using the standard normal distribution table, we find the probability that $Z$ is greater than 1.67:
+$$\Pr(Z > 1.67) \approx 0.0475$$
+
+So:
+$$\Pr(X > 45) \approx 0.0475$$
+
+---
+
+### B. Probability that the attack is between 32 and 42
+
+We want $\Pr(32 < X < 42)$.
+
+Standardize the variable $X$ for both limits:
+$$Z_1 = \frac{32 - 40}{3} = \frac{-8}{3} \approx -2.67$$
+$$Z_2 = \frac{42 - 40}{3} = \frac{2}{3} \approx 0.67$$
+
+Using the standard normal distribution table, we find:
+$$\Pr(Z < -2.67) \approx 0.0038$$
+$$\Pr(Z < 0.67) \approx 0.7486$$
+
+Thus:
+$$\Pr(32 < X < 42) = \Pr(Z < 0.67) - \Pr(Z < -2.67) \approx 0.7486 - 0.0038 = 0.7448$$
+
+---
+
+### C. Probability that the sum of two attacks is greater than 85 units
+
+Let $X_1$ and $X_2$ be the first and second attacks. We want $\Pr(X_1 + X_2 > 85)$.
+
+Since $X_1$ and $X_2$ are independent and normally distributed:
+$$X_1 + X_2 \sim \text{Normal}(2\mu, 2\sigma^2)$$
+$$X_1 + X_2 \sim \text{Normal}(80, 18)$$
+
+We want $\Pr(X_1 + X_2 > 85)$.
+
+Standardize the variable:
+$$Z = \frac{85 - 80}{\sqrt{18}} = \frac{5}{\sqrt{18}} \approx 1.18$$
+
+Using the standard normal distribution table:
+$$\Pr(Z > 1.18) \approx 0.1190$$
+
+So:
+$$\Pr(X_1 + X_2 > 85) \approx 0.1190$$
+
+### D. 99% Limits for the Sum of Two Attacks
+
+For $X_1 + X_2 \sim \text{Normal}(80, 18)$, we want the 99% confidence interval.
+
+The critical value $Z_{\alpha/2}$ for 99% confidence is approximately 2.576.
+
+The margin of error (ME) is:
+$$ME = 2.576 \times \sqrt{18} \approx 2.576 \times 4.24 \approx 10.93$$
+
+Thus, the 99% confidence interval is:
+$$80 \pm 10.93 = (69.07, 90.93)$$
+
+### E. Probability that the difference in attacks is more than 5 units
+
+Let $D = X_1 - X_2$. We want $\Pr(|D| > 5)$.
+
+Since $X_1$ and $X_2$ are independent and normally distributed:
+$$D \sim \text{Normal}(0, 18)$$
+
+We want $\Pr(|D| > 5)$, which is $\Pr(D < -5) + \Pr(D > 5)$.
+
+Standardize the variable:
+$$Z = \frac{5}{\sqrt{18}} \approx 1.18$$
+
+Using the standard normal distribution table:
+$$\Pr(Z > 1.18) \approx 0.1190$$
+$$\Pr(Z < -1.18) \approx 0.1190$$
+
+Thus:
+$$\Pr(|D| > 5) = 0.1190 + 0.1190 = 0.2380$$
+
+Would you like any further explanation or have additional questions?

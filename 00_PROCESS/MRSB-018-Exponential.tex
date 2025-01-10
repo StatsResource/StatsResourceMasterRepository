@@ -1,0 +1,75 @@
+
+\subsection*{The Exponential distribution}
+The average lifespan of a laptop is 5 year. You may assume that the lifespan of laptop computers follows an exponential distribution. Useful calculations are provided with each question.
+
+### Exercises 
+*  What is the probability that the lifespan of the laptop will be at least 6 years.
+	$$e^{-6/5} = 0.3011942$$
+<p>
+*  What is the probability that the lifespan of the laptop will not exceed 4 years.
+	$$e^{-4/5} = 0.449329$$
+	---
+*  What is the probability that the lifespan of the laptop will be between 5 years and 6 years.
+	$$e^{-5/5} = 0.3678794$$
+<p>
+
+---
+
+
+ \textbf{Important Formulae}
+
+$$
+P( X \geq k) = e^{-k \lambda }$$
+---
+$$
+P( X \leq k) = 1 -e^{-k\lambda }$$
+
+---
+
+To solve these exercises, we use the exponential distribution. The probability density function (PDF) of an exponential distribution with parameter $\lambda$ is given by:
+$$f(t; \lambda) = \lambda e^{-\lambda t}$$
+where $ t $ is the time and $ \lambda $ is the rate parameter.
+
+Given that the average lifespan of the laptop is 5 years, the rate parameter $\lambda$ is:
+$$\lambda = \frac{1}{5} = 0.2$$
+
+### Exercise Solutions
+
+**1. What is the probability that the lifespan of the laptop will be at least 6 years?**
+
+The probability that the lifespan $ T $ is at least 6 years is given by:
+$$P(T \geq 6) = 1 - P(T < 6) = 1 - F(6)$$
+where $ F(t) $ is the cumulative distribution function (CDF) of the exponential distribution:
+$$F(t) = 1 - e^{-\lambda t}$$
+
+So,
+$$P(T \geq 6) = 1 - (1 - e^{-\lambda \cdot 6}) = e^{-6/5} \approx 0.3011942$$
+
+Thus, the probability is **0.3012** (or 30.12%).
+
+**2. What is the probability that the lifespan of the laptop will not exceed 4 years?**
+
+The probability that the lifespan $ T $ does not exceed 4 years is given by the CDF $ F(4) $:
+$$P(T \leq 4) = F(4) = 1 - e^{-4/5} \approx 1 - 0.449329 = 0.550671$$
+
+Thus, the probability is **0.5507** (or 55.07%).
+
+**3. What is the probability that the lifespan of the laptop will be between 5 years and 6 years?**
+
+The probability that the lifespan $ T $ is between 5 years and 6 years is:
+$$P(5 \leq T \leq 6) = F(6) - F(5)$$
+
+So,
+$$F(5) = 1 - e^{-5/5} = 1 - e^{-1} \approx 1 - 0.3678794 = 0.6321206$$
+$$F(6) = 1 - e^{-6/5} \approx 0.6988058$$
+
+Then,
+$$P(5 \leq T \leq 6) = F(6) - F(5) = 0.6988058 - 0.6321206 = 0.0666852$$
+
+Thus, the probability is **0.0667** (or 6.67%).
+
+Feel free to ask if you have any more questions or need further assistance!
+
+---
+
+---	

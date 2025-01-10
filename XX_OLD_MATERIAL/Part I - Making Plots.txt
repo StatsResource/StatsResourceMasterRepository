@@ -1,0 +1,19 @@
+ X <- rnorm(2000,mean=100,sd=10)
+ Y <- rnorm(30,mean=100,sd=10)
+ W <- rchisq(2000,df=8)
+
+ Z <- rexp(30,rate=0.4)
+ 
+hist(X,breaks=50,col="lightblue",main="Bell-Shaped Histogram",font.lab=2, xlab="Normally Distributed Data")
+hist(W,breaks=50,col="lightblue",main="Skewed Histogram",font.lab=2, xlab="Data Not Normally Distributed ")
+
+qqnorm(Y,pch=18,col="red",cex=1.5,main="Normally Distributed Data",ylim=c(70,130))
+qqline(Y,col="blue",lwd=2.5)
+ 
+
+qqnorm(Z,pch=18,col="red",cex=1.5,main="Data Not Normally Distributed ")
+qqline(Z,col="blue")
+ 
+
+J <- rchisq(2000,df=40)
+hist(J,breaks=50,col="lightblue",main="Skewed Histogram",font.lab=2, xlab="Data Not Normally Distributed ")

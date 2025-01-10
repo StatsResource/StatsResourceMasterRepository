@@ -1,0 +1,244 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+	
+\section{Medical Diagnosis}
+
+\textbf{Combining Probabilities - Worked Example}
+A new test has been developed to diagnose a particular disease. If a person has the disease, the test has a 95\% chance of identifying them as having the disease. 
+
+If a person does not have the disease, the test has a 1\% chance of identifying them as having the disease. 5\% of the population have this disease. Suppose we select a person at random from the population.
+
+%--------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------%
+
+\textbf{Combining Probabilities - Worked Example}
+Q1 - What is the probability that the test will identify them as having the disease?
+
+Q2 - What is the probability that the person has the disease given that the test identifies them as having the disease?
+
+
+%--------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------%
+
+\textbf{Combining Probabilities - Worked Example}
+
+Solutions 
+\begin{itemize}
+	\item	Let P signify that a test will give a “positive” result 
+	\item	Let N signify that a test will give a “negative” result	
+	\item	Let D signify that the person in question has the disease
+	\item	Let H signify that the person doesn’t have the disease ( or in other words , is healthy) 
+\end{itemize}
+
+%--------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------%
+
+\textbf{Combining Probabilities - Worked Example}
+We are asked to determine the following 
+1) The probability of a positive test - p(P)
+2) The probability that they have the disease given that they have tested positive – p(D|P)
+
+
+
+
+\textbf{Combining Probabilities - Worked Example} 
+We are given the following three pieces of information
+
+
+We know that D and H are complements, so we can work out the probabilities of these too. (P and N are complements also)
+
+
+
+People who test positive are made up of two groups
+\begin{enumerate}
+	\item	People who test positive and who do have the disease  (P and D)
+	\item	People who test positive and who don’t have the disease  ( P and H)
+\end{enumerate}
+
+
+
+\textbf{Combining Probabilities - Worked Example}
+
+Bayes Rule is given in the Formulae 		 
+
+We can rearrange it as follows 		 
+
+
+%--------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------%
+
+\textbf{Combining Probabilities - Worked Example}
+We can now write our equation in terms of all the information we have :
+
+ANS
+
+For the second part, we simply use Bayes Rule again, using information we have determined previously
+
+
+
+%--------------------------------------------------------------------------------------%
+
+
+
+\section{Probability Worked Example - Medical Diagnosis}
+
+	\begin{itemize}
+		\item Let \textbf{P} signify that a test will give a “positive” result.
+		\item Let \textbf{N} signify that a test will give a “negative” result.	
+		\item Let \textbf{D} signify that the person in question has the disease.
+		\item Let \textbf{H} signify that the person doesn’t have the disease ( or in other words , is healthy) .
+	\end{itemize}
+	
+
+	
+	We are asked to determine the following 
+	
+	1) The probability of a positive test - p(P)
+	
+	2) The probability that they have the disease given that they have tested positive – p(D|P)
+	
+
+	We are given the following three pieces of information. 
+	We know that D and H are complementary events, so we can work out the probabilities of these too. 
+	p(D) = 1-p(H)
+	(P and N are complements also)
+	
+	\begin{itemize}
+		\item 	People who test positive are made up of two groups
+		\item 	People who test positive and who do have the disease  ($P \cap D$)
+		\item 	People who test positive and who don’t have the disease  ($P \cap H$)
+		\[p(P)  =  p(P \cap D)  +  p(P \cap H)\]
+		
+		\item 	The conditional probability is useful here		 
+		
+		\[ p(A | B) = \frac{P(A \cap B)}{p(B)} \]
+		
+	\end{itemize}
+	
+	We can rearrange it as follows 		 
+	
+	\[ p(A \cap B) =  p(A|B) \times p(B) \]
+	
+	
+	We can now write our equation in terms of all the information we have :
+	
+	\begin{itemize}
+		\item $p(P \cap D) = p(P|D) \times p(D)$
+		\item $p(P \cap H) = p(P|D) \times p(D)$
+	\end{itemize}
+	
+	\[p(P)  =  p(P \cap D)  +  p(P \cap H)\]
+	For the second part, we simply use Bayes Rule , 
+	using information we have determined previously
+	
+	Recall:
+	
+	\[ P(A | B) = \frac{ p(B|A)\times p(A)}{p(B)} \] 
+	ANS
+
+
+
+
+%======================================================== %
+Question 1 Part B
+
+Let P signify that a test will give a “positive” result 
+Let N signify that a test will give a “negative” result	
+Let D signify that the person in question has the disease
+Let H signify that the person doesn’t have the disease ( or in other words , is healthy) 
+
+We are asked to determine the following 
+1) The probability of a positive test - p(P)
+2) The probability that they have the disease given that they have tested positive – p(D|P)
+
+
+We are given the following three pieces of information
+
+
+We know that D and H are complements, so we can work out the probabilities of these too. (P and N are complements also)
+
+
+
+People who test positive are made up of two groups
+People who test positive and who do have the disease  (P and D)
+People who test positive and who don’t have the disease  ( P and H)
+
+
+
+Bayes Rule is given in the Formulae 		 
+
+We can rearrange it as follows 		 
+
+We can now write our equation in terms of all the information we have :
+
+ANS
+
+
+For the second part, we simply use Bayes Rule again, using information we have determined previously
+
+ANS
+
+
+%======================================================== %
+\subsubsection{Question 5}
+Question 1 Part B
+
+\begin{itemize}
+	\item Let P signify that a test will give a “positive” result 
+	\item	Let N signify that a test will give a “negative” result	
+	\item	Let D signify that the person in question has the disease
+	\item	Let H signify that the person doesn’t have the disease ( or in other words , is healthy) 
+\end{itemize}
+
+
+We are asked to determine the following 
+1) The probability of a positive test - p(P)
+2) The probability that they have the disease given that they have tested positive – p(D|P)
+
+
+We are given the following three pieces of information
+
+
+We know that D and H are complements, so we can work out the probabilities of these too. (P and N are complements also)
+
+
+
+People who test positive are made up of two groups
+\begin{enumerate}
+	\item People who test positive and who do have the disease  (P and D)
+	\item People who test positive and who don’t have the disease  ( P and H)
+\end{enumerate}
+
+
+
+
+Bayes Rule is given in the Formulae 		 
+
+We can rearrange it as follows 		 
+
+We can now write our equation in terms of all the information we have :
+
+ANS
+
+
+For the second part, we simply use Bayes Rule again, using information we have determined previously
+
+ANS
+\end{document}

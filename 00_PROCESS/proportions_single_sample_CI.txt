@@ -1,0 +1,94 @@
+
+\begin{frame}
+\frametitle{Confidence Intervals for Sample Proportion}
+Confidence Intervals may also be computed for \textbf{Sample Proportions}. \\The sample proportion is used to estimate the value of a population proportion. The sample proportion is denoted $\hat{p}$. The population proportion is denoted $\pi$.
+\begin{itemize}
+\item The structure of a confidence interval for sample proportion is
+\[ \hat{p} \pm z_{(\alpha/2)} \times \mbox{S.E.}(\hat{p})\]
+
+\item The standard error, in the case of sample proportions, is
+\[ \mbox{S.E.}(\hat{p}) = \sqrt{\frac{\hat{p}\times (1-\hat{p})}{n}}\]
+
+\end{itemize}
+\end{frame}
+%------------------------------------------------------------------------------%
+\frame{
+\frametitle{Point Estimates for proportions }
+
+Sample percentage
+
+\[
+\hat{p} = \frac{x}{n} \times 100\%
+\]
+
+\begin{itemize}
+\item $\hat{p}$ - sample proportion.
+\item $x$  - number of ``successes".
+\item $n$  - the sample size.
+\end{itemize}
+
+}
+%------------------------------------------------------------------------------%
+\frame{
+\frametitle{Point Estimates for proportions }
+
+Of a sample of 160 computer programmers, 56 reported than Python was their primary programming language.
+
+Let $\pi$ be the proportion of all programmers who regard Python as their programming language. What is the point estimate for $\pi$?
+
+\[
+\hat{p} = \frac{x}{n} \times 100\%  = {56 \over 160} = 35\%
+\]
+}
+%------------------------------------------------------------------------------%
+\frame{
+
+\frametitle{ Standard Error for Proportions}
+
+The standard error for proportions is computed using this formula.
+\[
+S.E. (\hat{p}) \;=\; \sqrt{ {\hat{p} \times (1-\hat{p} )\over n}}
+\]
+
+
+When expressing the proportion as a percentage, we adjust the standard error accordingly.
+\[
+S.E. (\hat{p}) \;=\; \sqrt{ {\hat{p} \times (100 -\hat{p} )\over n}}
+\]
+}
+\begin{frame}
+\frametitle{ Sample Proportion : Example}
+
+
+\begin{description}
+\item[Point Estimate] The sample proportion is computed as follows
+\[ \hat{p} = \frac{x}{n} = \frac{56}{160} = 0.35\]
+\item[Quantile] We are asked for a 95\% confidence interval. The quantile is therefore
+\[ z_{\alpha/2} =1.96\]
+\item[Standard Error] The standard error, with sample size n=120 is computed as follows
+\[ \mbox{S.E.}(\hat{p}) = \sqrt{\frac{\hat{p} \times (1-\hat{p})}{n}} =  \sqrt{\frac{0.35 \times 0.65}{160}}\]
+\item (Full solution to follow)
+\end{description}
+\end{frame}
+%--------------------------------------------------%
+\begin{frame}
+\frametitle{Confidence Intervals for Sample Proportion}
+Unlike confidence intervals for sample means, there is only one type of confidence interval when dealing with sample proportions.
+
+\textbf{Optional}
+\begin{itemize}
+
+\item It is often easier to work in terms of percentages, rather than proportions.
+If you are working in terms of percentages, remember to use the appropriate \textbf{\textit{complement value}} in the standard error formula (i.e. $100 - \hat{p}$)
+
+\item The standard error, in the case of sample proportions, is
+\[ \mbox{S.E.}(\hat{p}) = \sqrt{\frac{\hat{p}\times (100-\hat{p}}{n}}\]
+
+\item Complement Values:
+\begin{itemize} \item When working in terms of proportions, for the the value $\hat{p} =0.35$, the complement value is $1-\hat{p} =0.65$.
+\item When working in terms of percentages, for the value $\hat{p} = 35\%$, the complement value is $100-\hat{p} = 65\%$.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\end{document}

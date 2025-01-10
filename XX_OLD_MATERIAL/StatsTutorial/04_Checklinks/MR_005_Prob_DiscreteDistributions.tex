@@ -1,0 +1,181 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MathsResource} \chead{Probability} \rhead{Tutorial Sheets} %\input{tcilatex}
+\begin{document}
+\begin{enumerate}
+%====================================================================%
+%%- RSS - HC2 - 2013 Question 4
+\item The random variable X has the Poisson distribution with mean 1.5, so that
+
+
+\[ {\displaystyle \Pr(X=x)={\frac {1.5 ^{x}e^{-1.5 }}{x!}},} \]
+
+
+Draw a graph of $P(X = x) versus x$, showing all probabilities greater than 0.02, and write down the mean, mode and variance of this distribution.
+
+\item Assume that, for any t > 0, the number N of incoming telephone calls to a 24-hour international call centre in a time t minutes follows a Poisson distribution with mean $3t$.
+\begin{enumerate}[(i)]
+\item Find the probability that exactly 2 calls arrive in the next minute.
+
+\item Find the probability that no calls arrive in the next 1.5 minutes.
+
+\item State the exact distribution of N in the case t = 60. Staffing levels at the call centre are based on the assumption that not more than 200 calls will be made in an hour. Use a suitable approximation to the distribution of N to calculate the approximate probability that this assumption is violated in a given hour.
+\item Comment critically on the assumption made at the beginning of this part of the question.
+\end{enumerate}
+%=================================================================================================%
+%% RSS HC2 - 2011 or 2012
+\item The independent random variables X and Y each follow a discrete uniform distribution
+on the integers 1, 2, 3, 4, 5.
+\begin{enumerate}
+\item Write down the probability mass function (pmf) p(x) of X. Find E(X) and show
+that $Var(X) = 2$.
+\item The random variable Z is defined by Z = XY.
+\begin{enumerate}[(i]
+\item Write down a list of all the values that Z can take.
+\item Find the pmf of Z and deduce the mode of Z.
+\item Find E(Z) and Var(Z).
+\end{enumerate}
+\end{enumerate}
+%==================================================================================================%
+
+
+
+\item
+
+%%- RSS - HC2 - 2011 - Question 1
+\begin{enumerate}[(a)]
+\item A sequence of three plus (+) signs and two minus (–) signs is written in a straight line. Write down all 10 possible sequences (different orders) of these signs.  
+\item  A "run" of one sign is a series of one or more consecutive instances of this sign, terminated at each end either by the opposite sign or by the beginning or end of the sequence. Assume that sequences of these signs are generated randomly, so that each possible sequence has probability 0.1 of occurring, and let the random variable X denote the number of runs in a randomly chosen sequence. For example, if the sequence − + − + + is observed then X = 4: one run of one −, one run of one +, one run of one −, one run of ++. 
+\begin{enumerate}[(i)]
+\item Write down the values taken by X for each of the 10 sequences you have listed in part (a), and hence obtain the probability distribution of X. 
+\item Find E(X) and Var(X). 
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+%===========%
+% - 2015/2016 Below
+\item The Poisson random variable X with parameter $\lambda > 0$ has probability mass function
+\[ {\displaystyle P_X(x) =\Pr(X=x)={\frac {\lambda ^{x}e^{-\lambda }}{x!}}} \]
+where $x = \{0,1,2,3 \ldots\}$.
+\begin{enumerate}
+\item  Show that, for any integer $x = 0$,
+\[ {\displaystyle P_X(x+1) = \frac{\lambda}{x+1} P_X(x) }\]
+
+\item  Obtain $E( X )$ and $E(X ( X - 1))$ . Hence show that $E(X ) = Var( X ) = \lambda  $.
+\item  Suppose that $Y$ is a Poisson random variable with mean $\mu$, that X and Y are
+independent and that $W = X + Y$. Use the relation
+\[  P_{W}(w) =  \sum^{w}_{x=0} \Pr( X  = x ) \Pr (Y =  w - x)
+ \]
+to show that $W$ is a Poisson random variable with mean $\lambda + \mu$.
+\end{enumerate}
+\item  A manufacturer has two conveyor belts, one of type C and the other of type D.
+
+The numbers of breakdowns per day on these belts, X and Y, are independent
+Poisson random variables with means 1.5 and 0.5 for belts C and D
+respectively.
+\begin{enumerate}[(i)]
+\item Find the conditional probability that if there is exactly one breakdown
+on a given day on either belt C or belt D, but not both, then it is
+conveyor belt C that fails.
+\item  What is the probability that the factory will experience at most one
+breakdown in a 5-day period?
+\end{enumerate}
+
+
+%==================================================================================================%
+%%- RSS - HC2 - 2011 - Question 4
+\item The random variable X has the geometric distribution with probability mass function (pmf)   
+$$ {\displaystyle \Pr(X=k)=(1-p)^{k}p}$$ or, with $q = 1 - p$,.
+$$ {\displaystyle \Pr(X=k)=(q)^{k}p}$$
+
+for $k = \{0, 1, 2, 3, \ldots \}$ 
+\begin{enumerate}
+\item Find $P(X \geq x)$ and show that $P(X \leq 3)$ = $1 – q^4$. 
+\item Explain why $P(X \mbox{ is odd }(= 1, 3, 5, 7, ...))$ = $q × P(X\mbox{ is even }(= 0, 2, 4, 6, ...))$ and hence or otherwise show that 
+$$ P(X \mbox{ is odd } =  \frac{q}{1+q}.$$
+
+\item Find $P(X \mbox{ is odd}|X\leq 3)$ as a function of $q$, and, given that $P(X \mbox{ is odd }|X\leq 3)=1/3$ deduce the value of $q$.  
+\item The random variable Y is independent of X and has pmf $$ p_Y(y) =q\times p^y $$. 
+\noindent Write down $P(X = k and Y = k)$ for an arbitrary non-negative integer $k$ and hence show that $$ P(X = Y) =  \frac{p(1-p)}{(1-p)(1-p)}.$$ 
+
+\item Using calculus, find the value of p that maximises this expression and hence deduce that the maximum possible value of $P(X = Y)$ is 1/3. 
+
+[Note. You are not required to show that any turning point that you locate is a maximum.] 
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% RSS HC2 2016 Question 2
+
+\item A sequence of independent Bernoulli trials with probability of success p is performed.
+Let the random variable X be the number of failures before the first success.
+
+\begin{enumerate}[(a)]
+\item Find the probability mass function of X, confirming that the sum over all
+possible values of X is one.
+
+\item Obtain $E(X)$.
+
+\item The probability of an enemy aircraft penetrating friendly airspace is 0.01.
+\begin{enumerate}[(i)]
+\item  What is the probability that the first penetration of friendly airspace is
+accomplished by the 80th aircraft to attempt the penetration, assuming
+penetration attempts are independent?
+\item  What is the probability that it will take more than 80 attempts to
+penetrate friendly airspace?
+\end{enumerate}
+\item Consider Y, the total number of failures before the second success. Find the
+probability mass function of Y. By considering the mean of X, show that
+
+\[ E(Y) = 2\left(  \frac{1-p}{p} \right) .\]
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555
+
+% RSS HC2 2016 Question 2
+
+\item The following questions related to the approximations of probability distributions.
+\begin{enumerate}[(a)]
+\item Explain carefully why a continuity correction is needed when a discrete
+random variable is approximated by a continuous random variable in order to
+calculate a probability for the discrete random variable.
+\item Explain when a Poisson approximation or a Normal approximation to a
+binomial probability may be used, carefully distinguishing between the two.
+
+\item A fair die is thrown 300 times. Find an approximation to the probability that
+there are fewer than 45 sixes.
+
+\item The number of accidents in a factory in one working week has a Poisson
+distribution with mean 0.2.
+What is the distribution of the number of accidents in this factory in three
+years, comprising 150 working weeks (regarded as independent)? Find an
+approximation to the probability that in three years there are 35 or more
+accidents.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{enumerate}
+\end{document}
+\end{document}

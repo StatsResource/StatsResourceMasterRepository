@@ -1,0 +1,114 @@
+
+
+
+
+
+\subsection*{Question 7}
+Customers arrive to a shop at a rate of 40 per hour and typically stay 30 minutes. 
+--- 
+[(a)] How many customers are in the shop on average?  
+[(b)] Through advertising, the shop can increase the arrival rate to 60 per hour. 
+How many customers are in the shop now (assuming they still spend 30 minutes)?  
+[(c)] The shop is small and is now too full. However, by streamlining the layout we can reduce the average time spent in the shop (without compromising profits). 
+How much would the average time need to drop to in order that with 60 customers arriving per hour, there are still the same number of customers in the shop as in part (a).
+
+
+
+* A computer chooses a number at random n times from the set {1, 2, 3, 4, 5} (with replacement). 
+Let S denote the sum of the numbers chosen. Show that
+E(S) = 3n and Var(S) = 2n.
+
+ Let Y=aX+b. Prove that i) E(Y)=aE(X)+b, ii) Var(Y)=a2Var(X).
+
+a) Suppose X has a geometric distribution with parameter p. 
+From the standard interpretation of the geometric distribution, conditioning on whether X=1 or not and using the memoryless property of the geometric distribution
+i)calculate E(X)
+ii)calculate Var(X). [Hint: first calculate $E(X^2)$].
+
+
+
+
+
+
+---
+
+BLANK---
+---
+
+--- 
+
+
+A production line produces 1000-ohm resistors that have 10\% tolerance.
+Let $X$ denote the resistance of a resistor.
+Assuming that X is a normally distributed random variable with mean 1000 and variance 2500, find the probability that a randomly selected resistor will be rejected.
+Solution:
+Let A be the event that a resistor is rejected.
+P(A)  = P(X \leq 900) + P( X \geq 1100)
+P(X \leq 900)
+Z value
+Z_{900} = { 900 - 1000\over 50} = -2
+X_{1100} = { 1100 - 1000\over 50} = 2
+Probability of being rejected is 0.045 (i.e. 4.5 \%)
+
+#####################################################
+
+* 
+ An urn contains 10 disks, 6 white and 4 red.  Two disks are selected, without replacement, from the urn.  Calculate the following probabilities: 
+### Exercises 
+ * Exactly one disk chosen is white. 
+ * At least one disk is white. 
+ * Neither disk chosen is red 
+ * At most one disk chosen is red 
+ <p> 
+ %--------------------------------------------------%
+
+* Suppose X has the following cumulative distribution function. F(x)=0, for x≤0, 
+F(x)=1, for x≥5 and F(x) = x3/125 for 0≤ x ≤ 5. Derive E(X) and Var(X).
+%=========================%
+
+
+\subsection*{Question 5}
+In your favourite RPG game, let's assume that in selecting your character there are 5 character classes and 2 genders. Let's also assume there are 3 levels of difficulty for this game.
+
+{\bf(a)} How many possible ways can you play this game? 
+{\bf(b)} What if you always choose the ``warrior'' class? 
+{\bf(c)} What if you always choose a female character? 
+{\bf(d)} What if you always play on the highest difficulty setting? 
+{\bf(e)} Let's assume the game has a two-player mode. How many possible ways can you play this game? (hint: you cannot play the game on different difficulty levels). 
+{\bf(f)} What if your friend chooses a different character class to you?
+
+
+
+\section{KB Tutorial 2}
+
+\subsection*{Question 4}
+Consider a RAID (redundant array of inexpensive disks) system where multiple hard disks are used simultaneously.\\[0.2cm]
+Let's assume that we have two hard disks that work \emph{independently} of each other. Define the events $H_1 =$ ``hard disk one works'' and $H_2 =$ ``hard disk two works'' and also assume that $\Pr(H_1) = \Pr(H_2) = 0.9$.\\ \smallskip
+--- 
+* RAID-0 is a system which increases performance but only works if \emph{both} hard disks work.
+* RAID-1 is a system which does not increase performance but still works with only one working hard disk.
+
+
+{\bf(a)} Calculate $\Pr(\text{RAID-0 works})$ and $\Pr(\text{RAID-0 fails})$. \\[0.3cm] 
+{\bf(b)} Calculate $\Pr(\text{RAID-1 works})$ and $\Pr(\text{RAID-1 fails})$. 
+{\bf(c)} Calculate $\Pr(H_1^c)$ and $\Pr(H_2^c)$. \\[0.3cm]
+
+{\bf(d)} Cheap hard disks exist with $\Pr(H) = 0.6$. Consider a RAID-1 system with 3 of these hard disks - calculate $\Pr(\text{RAID-1 fails})$ in this case. \\[0.3cm] 
+{\bf(e)} In part (a) we found that $\Pr(\text{RAID-1 fails}) = 0.01$. How many cheap disks would be required to match this level of reliability?
+
+
+
+
+\subsection*{Question 4}
+{\footnotesize({\bf Note}: this is not a queueing theory question. It is a generalisation of a question which appears on Tutorial2)}\\[0.1cm]
+
+There are two possible routes to a particular location. You take $R_1$ 80\% of the time and $R_2$ 20\% of the time. 
+We assume that travel time has an exponential distribution and, furthermore, the average travel time is 0.25 hours if you take $R_1$ and 0.5 hours if you take $R_2$.
+
+--- 
+[(a)] Calculate the probability that the journey takes more than 0.5 hours for each of the routes, i.e., $\Pr(T > 0.5\,|\,R_1)$ and $\Pr(T > 0.5\,|\,R_2)$ respectively.  
+[(b)] Calculate $\Pr(T > 0.5)$. (hint: law of total probability)  
+[(c)] Given that $T>0.5$ hours, what is the probability that you used $R_1$? (i.e., calculate $\Pr(R_1\,|\,T>0.5)$)  
+[(d)] Derive a general expression for $\Pr(R_1\,|\,T>t)$ and evaluate it at $t=0.25$, $t = 1$ and $t = 2$ respectively. Interpret the results.
+
+

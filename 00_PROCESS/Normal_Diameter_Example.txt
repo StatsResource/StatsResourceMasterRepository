@@ -1,0 +1,76 @@
+
+
+
+
+\item[(c)] \textbf{\textit{Normal Distribution (8 Marks)}}\\
+%\subsubsection*{Part C} % Normal %6 MARKS
+Assume that the diameter of a critical component is normally distributed with a Mean of 50mm and a Standard Deviation of 2mm.
+
+NB 	You must draw a rough sketch of the normal curve and estimate the approximate probability of the following measurements occurring on an individual component.
+\begin{itemize}
+\item [i.](3 Marks)	Between 50 and 51.2mm
+\item [ii.](3 Marks) Less than 48.5 mm
+\item [iii.](2 Marks) Between 48.2 and 51.2 mm
+\end{itemize}Sure, let's calculate each of these probabilities using the properties of the normal distribution:
+
+### Given Information:
+- Mean ($\mu$) = 200 mm
+- Standard Deviation ($\sigma$) = 4 mm
+
+### i. Greater than 203.9 mm
+We need to find $P(X > 203.9)$.
+
+1. Convert to the standard normal variable $Z$:
+   $$
+   Z = \frac{X - \mu}{\sigma} = \frac{203.9 - 200}{4} = 0.975
+  $$
+
+2. Use the standard normal distribution table to find $P(Z > 0.975)$:
+   $$
+   P(Z > 0.975) = 1 - P(Z \leq 0.975)
+  $$
+
+Using the standard normal table, $P(Z \leq 0.975) \approx 0.835$:
+
+$$
+P(Z > 0.975) = 1 - 0.835 = 0.165
+$$
+
+### ii. Less than 195.2 mm
+We need to find $P(X < 195.2)$.
+
+1. Convert to the standard normal variable $Z$:
+   $$
+   Z = \frac{X - \mu}{\sigma} = \frac{195.2 - 200}{4} = -1.2
+  $$
+
+2. Use the standard normal distribution table to find $P(Z < -1.2)$:
+
+Using the standard normal table, $P(Z \leq -1.2) \approx 0.1151$:
+
+$$
+P(Z < -1.2) = 0.1151
+$$
+
+### iii. Between 94.2 and 103 mm
+We need to find $P(94.2 < X < 103)$.
+
+1. Convert to the standard normal variable $Z$ for both values:
+   $$
+   Z_1 = \frac{94.2 - 200}{4} = -26.45
+  $$
+   $$
+   Z_2 = \frac{103 - 200}{4} = -24.25
+  $$
+
+Since these $Z$-values are far from the mean (several standard deviations away), their probabilities are practically 0 for a normal distribution. 
+
+Hence, the probability of the diameter falling between 94.2 mm and 103 mm is effectively 0.
+
+### Summary:
+
+1. The probability that the diameter is greater than 203.9 mm is approximately $0.165$.
+2. The probability that the diameter is less than 195.2 mm is approximately $0.1151$.
+3. The probability that the diameter is between 94.2 mm and 103 mm is practically 0.
+
+If you have any further questions or need more details, feel free to ask!

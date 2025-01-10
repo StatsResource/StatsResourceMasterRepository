@@ -1,0 +1,80 @@
+5.1 Introduction: instrumental analysis
+
+%================================================================================================%
+Classical or 'wet chemistry' analysis techniques such as titrimetry and gravimetry remain in use in many laboratories and are still widely taught in Analytical Chemistry courses. They provide excellent introductions to the manipulative and other skills required in analytical work, they are ideal for high-precision analyses, especially when small numbers of samples are involved, and they are sometimes necessary for the analysis of standard materials.
+However, there is no doubt that most analyses are now performed by instrumental methods. Techniques using absorption and emission spectrometry at various wavelengths, many different electrochemical methods, mass spectrometry, gas and liquid chromatography, and thermal and radiochemical methods, probably account for at least 90\% of all current analytical work. There are several reasons for this.
+
+%================================================================================================%
+Firstly, instrumental methods can perform analyses that are difficult or impossible by classical methods. Whereas the latter can only rarely detect materials at sub-microgram levels, many instrumental methods are astonishingly sensitive. For example, in recent years fluorescence methods have routinely been used to detect single organic molecules in very small volumes of solution.
+
+It is normally only possible to determine one analyte at a time by 'wet chemical’ methods, but plasma spectrometry can determine 10 or more elements simultaneously (and at very low concentrations).
+Similarly, methods combining high performance liquid chromatography with a spectroscopic detection procedure can identify and determine many components of complex organic mixtures within a few minutes.
+Furthermore, the concentration range of a particular classical analysis method is usually limited by practical and theoretical considerations. Thus EDTA titrations can be successfully performed with reactant concentrations as low as about l0-4 M, but an upper limit (ca. 0.3 M) is set by the solubility of EDTA in water.
+
+%================================================================================================%
+
+The useful concentration range is generally only 2-3 orders of magnitude (i.e. powers of 10) for classical methods. In contrast, some instrumental methods are able to determine analyte concentrations over a range of six or more orders of magnitude: this characteristic has important implications for the statistical treatment of the results, as we shall see in the next section.
+Secondly, for a large throughput of samples instrumental analysis is generally quicker and often cheaper than the labour-intensive manual methods.
+
+%================================================================================================%
+In clinical analysis, for example, there is frequently a requirement for the same analyses to be done on scores or even hundreds of whole blood or blood serum/plasma samples every day. Despite the high initial cost of the equipment, such work is generally performed using completely automatic systems.
+Automation has become such an important feature of analytical chemistry that the ease with which a particular technique can be automated often determines whether or not it is used at all. A typical automatic method may be able to process samples at the rate of 100 per hour or more. The equipment will take a measured volume of sample, dilute it appropriately, conduct one or more reactions with it, and determine and record the concentration of the analyte or of a derivative produced in the reactions.
+Other areas where the use of automated equipment is now crucial include environmental monitoring and the rapidly growing field of industrial process analysis. Special problems of error estimation will evidently arise in all these applications of automatic analysis: systematic errors, for example, must be identified and corrected as rapidly as possible.
+
+Lastly, modern analytical instruments are almost always interfaced with personal computers to provide sophisticated system control and the storage, treatment (for example the performance of Fourier transforms or calculations of derivative spectra) and reporting of data, such systems can also evaluate the results statistically, and compare the analytical results with data libraries in order to match spectral and other information.
+All these facilities are now available from low-cost computers operating at high speeds.
+Also important is the use of 'intelligent' instruments, which incorporate automatic set-up and fault diagnosis and can perform optimization processes (see Chapter 7).
+The statistical procedures used with instrumental analysis methods must provide as always information on the precision and accuracy of the measurements. They must also reflect the technical advantages of such methods, especially their ability to cover a great range of concentrations (including very low concentrations), and to handle many samples rapidly.
+In practice the results are calculated and the errors evaluated in a particular way that differs from that used when a single measurement is repeated several times.
+
+%================================================================================================%
+
+The usual procedure is as follows, the analyst takes a series of materials (normally at least three or four, and possibly several more) in which the concentration of the analyte is known. These calibration standards are measured in the analytical instrument under the same conditions as those subsequently used for the test (i.e. the 'unknown’) materials.
+Once the calibration graph has been established the analyte concentration in any test material can be obtained, as shown in Figure 5.1, by interpolation.
+This general procedure raises several important statistical questions:
+
+\begin{enumerate}
+\item Is the calibration graph linear? lf it is a curve, what is the form of the curve?
+\item Bearing in mind that each of the points on the calibration graph is subject to errors, what is the best straight line (or curve) through these points?
+\item Assuming that the calibration plot is actually linear, what are the errors and confidence limits for the slope and the intercept of the line?
+\item When the calibration plot is used for the analysis of a test material, what are the errors and confidence limits for the determined concentration?
+\item What is the limit of detection of the method? That is, what is the least concentration of the analyte that can be detected with a predetermined level of ‘confidence’
+\end{enumerate}
+
+
+
+Before tackling these questions in detail, we must consider a number of aspects of plotting calibration graphs.
+Firstly, it is usually essential that the calibration standards cover the whole range of concentrations required in the subsequent analyses. With the important exception of the ‘method of standard additions’ (next class ) concentrations of test materials are normally determined by interpolation and not by extrapolation.
+Secondly, it is crucially important to include the value for a ‘blank’ in the calibration curve. The blank contains no deliberately added analyte, but does contain the same solvent, reagents,etc., as the other test materials, and is subjected to exactly the same sequence of analytical procedures.
+The instrument signal given by the blank will sometimes not be zero. This signal is subject to errors like all the other points on the calibration plot, so it is wrong in principle to subtract the blank value from the other standard values before plotting the calibration graph.
+This is because when two quantities are subtracted, the error in the final result cannot also be obtained by simple subtraction. Subtracting the blank value from each of the other instrument signals before plotting the graph thus gives incorrect information on the errors in the calibration process.
+Finally, it should be noted that the calibration curve is always plotted with the instrument signals on the vertical (y) axis and the standard concentrations on the horizontal (x) axis.
+This is because many procedures assume that all the errors are in the y* values and that the standard concentrations (x-values) are error-free.
+In many routine instrumental analyses this assumption may well be justified. The standards can be made up with an error of ca. 0.1\% or better , whereas the instrumental measurements themselves might have a coefficient of variation of 2-3\% or worse.
+
+
+%================================================================================================%
+So the x-axis error is indeed negligible compared with that of the y-axis. In recent years, however, the advent of high-precision automatic methods with coefficients of variation of 0.5\% or better has put the assumption under question, and has led some users to make up their standard solutions by weight rather than by the less accurate combination of weight and volume. This approach is intended to ensure that the x-axis errors remain small compared with those of the y-axis.
+Other assumptions usually made are that
+\begin{itemize}
+\item[(a)] if several measurements are made on a standard material, the resulting y-values have a normal or Gaussian error distribution; and
+\item[(b)] the magnitude of the errors in the y-values is independent of the analyte concentration. The first of these two assumptions is usually sound, but the second requires further discussion.
+\end{itemize}
+If true, it implies that all the points on the graph should have equal weight in our calculations, i.e. that it is equally important for the line to pass close to points with high y-values and to those with low y-values. Such calibration graphs are said to be reweighted, however, in practice the y-value
+errors often increase as the analyte concentration increases. This means that the calibration points should have unequal weight in our calculation, as it is more important for the line to pass close to the points where the errors are least. These weighted calculations are now becoming rather more common despite their additional complexity.
+
+%================================================================================================%
+\section{Limits of Detection}
+As we have seen, one of the principal benefits of using instrumental methods of analysis is that they are capable of detecting and determining trace and ultra-trace quantities of analytes.
+These benefits have led to the appreciation of the importance of very low concentrations of many materials, for example in biological and environmental samples, and thus to the development of many further techniques in which lower limits of detection are a major criterion of successful application. It is therefore evident that statistical methods for assessing and comparing limits of detection are of importance.
+In general terms, the limit of detection of an analyte may be described as that concentration which gives an instrument signal (y) significantly different from the 'blank' or 'background’ signal. This description gives the analyst a good deal of freedom to decide the exact definition of the limit of detection, based on a suitable interpretation of the phrase 'significantly different'.
+The Blank Signal is the expected analyte concentration expected to be found when
+replicates of a blank sample containing no analyte are tested, ( i.e. the intercept).
+
+
+There is still no full agreement between researchers, publishers, and professional and statutory bodies on this point. But there is an increasing trend to define the limit of detection as the analyte concentration giving a signal equal to the blank signal, yB , plus three standard deviations of the blank, sB:
+(Remark: There are other definitions on Limits of Detection)
+LoD is the lowest analyte concentration likely to be reliably distinguished from the blank and at which detection is feasible.
+The significance of this last definition is illustrated in more detail in Figure 5.7.
+
+%================================================================================================%

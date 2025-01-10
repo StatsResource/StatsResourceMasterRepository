@@ -1,0 +1,67 @@
+
+
+\subsection*{Question 11}
+%%	 \textbf{MA4413 Autumn 2008 paper}
+
+A model of an on-line computer system gives a mean times to retrieve a record from a direct access storage system device of 200 milliseconds, with a standard deviation of 58 milliseconds. 
+
+If it can assumed that the retrieval times are normally distributed:
+
+### Exercises 
+
+A. What proportion of retrieval times will be greater than 75 milliseconds?
+
+B. What proportion of retrieval times will be between 150 and 250 milliseconds?
+
+C. What is the retrieval time below which 10% of retrieval times will be?
+<p>
+
+
+	
+Let's tackle each exercise step by step, using the properties of the normal distribution.
+
+### Given:
+- Mean ($\mu$) = 200 milliseconds
+- Standard deviation ($\sigma$) = 58 milliseconds
+
+### A. Proportion of Retrieval Times Greater Than 75 Milliseconds
+To find the proportion of retrieval times greater than 75 milliseconds, we need to calculate the z-score and then use the standard normal distribution table.
+
+$$z = \frac{X - \mu}{\sigma} = \frac{75 - 200}{58} = \frac{-125}{58} \approx -2.16$$
+
+Using the z-table, we find that the cumulative probability for $ z = -2.16 $ is approximately 0.0154. This is the probability that a retrieval time is less than 75 milliseconds.
+
+Therefore, the proportion of retrieval times greater than 75 milliseconds is:
+$$1 - P(X < 75) = 1 - 0.0154 = 0.9846$$
+
+So, approximately **98.46%** of retrieval times will be greater than 75 milliseconds.
+
+### B. Proportion of Retrieval Times Between 150 and 250 Milliseconds
+We need to calculate the z-scores for both 150 and 250 milliseconds and then find the area between these z-scores.
+
+For 150 milliseconds:
+$$z_1 = \frac{150 - 200}{58} = \frac{-50}{58} \approx -0.86$$
+
+For 250 milliseconds:
+$$z_2 = \frac{250 - 200}{58} = \frac{50}{58} \approx 0.86$$
+
+Using the z-table:
+- The cumulative probability for $ z = -0.86 $ is approximately 0.1949.
+- The cumulative probability for $ z = 0.86 $ is approximately 0.8051.
+
+The proportion of retrieval times between 150 and 250 milliseconds is:
+$$P(150 < X < 250) = P(X < 250) - P(X < 150) = 0.8051 - 0.1949 = 0.6102$$
+
+So, approximately **61.02%** of retrieval times will be between 150 and 250 milliseconds.
+
+### C. Retrieval Time Below Which 10% of Retrieval Times Will Be
+We need to find the z-score corresponding to the 10th percentile, and then convert it back to the original scale using the mean and standard deviation.
+
+Using the z-table, the z-score for the 10th percentile is approximately -1.28.
+
+Now, convert the z-score to the original scale:
+$$X = \mu + z \sigma = 200 + (-1.28) \times 58 \approx 200 - 74.24 = 125.76$$
+
+So, the retrieval time below which 10% of retrieval times will be is approximately **125.76 milliseconds**.
+
+Feel free to ask if you have any more questions or need further assistance!

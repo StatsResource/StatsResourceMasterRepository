@@ -1,0 +1,28 @@
+
+
+```{r}
+library(ggplot2)
+
+# Define parameters
+mean <- 0  # Mean of the normal distribution
+sd <- 1    # Standard deviation of the normal distribution
+lower_bound <- -1.5  # Lower bound for shading
+upper_bound <- 1.5   # Upper bound for shading
+
+# Create a sequence of x-values
+x <- seq(-4, 4, by = 0.01)
+
+# Calculate the probability density function (PDF)
+y <- dnorm(x, mean = mean, sd = sd)
+
+# Create a data frame for plotting
+df <- data.frame(x = x, y = y)
+
+# Create the plot
+ggplot(df, aes(x = x, y = y)) +
+  geom_line() +  # Plot the normal distribution curve
+  geom_area(data = subset(df, x >= lower_bound & x <= upper_bound), 
+           aes(x = x, y = y), fill = "lightblue", alpha = 0.5) +  # Shade the area
+  labs(title = "Normal Distribution", x = "x", y = "Density") +
+  theme_classic()
+```

@@ -1,0 +1,27 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Reliability Theory}
+
+\section{Notation}\begin{enumerate}
+* 
+F(t) : Failure function. Probability that a component fails
+before time `t'.
+*  R(t) : Reliability function ( Survivor function) Probability that a component
+has survived to time `t'.
+*  r(t) : Failure rate function (hazard function)
+\end{enumerate}
+
+\section{Reliability Theory}
+
+\begin{enumerate}
+*  Exponential distribution and reliability*  Mean time to
+failure *  Reliability of series and parrallel systems * 
+Renewal processes\end{enumerate}
+\newpage
+
+
+
+%------------------------------------------------%
+\section{Survivorship Function}
+The survivorship function (commonly denoted as R(t)) is the complement to the cumulative distribution function
+(i.e., R(t)=1-F(t)); the survivorship function is also referred to as the reliability or survival function (since it describes the probability of not failing or of surviving until a certain time t
+%------------------------------%

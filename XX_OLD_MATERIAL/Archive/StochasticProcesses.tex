@@ -1,0 +1,107 @@
+
+
+\chapter{Stochastic Processes}
+
+\section{Probability}
+
+Probability generating function
+
+\begin{equation}
+G_N(s) = \sum_{n=0}^{\infty} p_{n}s^{n}
+\end{equation}
+
+\begin{equation}
+\frac{dG(s)}{ds} = G^{\prime}(s) = \sum_{n=1}^{\infty}
+np_{n}s^{n-1}
+\end{equation}
+
+
+\begin{equation}
+\frac{d^2G(s)}{ds^2} = G^{\prime \prime}(s) =
+\sum_{n=2}^{\infty}n(n-1)p_{n}s^{n-2}
+\end{equation}
+
+\begin{equation}
+G_N(1) = \sum_{n=0}^{\infty} p_{n}
+\end{equation}
+
+\begin{equation}
+G^{\prime}_N(1) = \sum_{n=1}^{\infty} np_{n}=E(N) = \mu
+\end{equation}
+
+
+The random variable N has a binomial distribution with paramtrics
+terms m and p. Its probability function is given by
+\begin{equation}
+p(n) = p_n  = P(N=n) = {m \choose n}p^nq^{m-n}
+\end{equation}
+
+Find its probability generating function.
+
+\begin{equation}
+G(s) =  \sum_{n=0}^{m} s^n {m \choose n} p^nq^{m-n}
+\end{equation}
+
+\begin{equation}
+G(s) =  \sum_{n=0}^{m} {m \choose n} (ps)^n q^{m-n}
+\end{equation}
+
+
+\begin{equation}
+G(s) =  (q + ps)^m
+\end{equation}
+
+
+\[
+(x + y)^k = [{k \choose 0}x^{k}y^{0}] + [{k \choose
+	1}x^{k-1}y^{1}] +  \dots + [{k \choose n}x^{k-n}y^{n}] + \dots [{k
+	\choose k-1}x^{1}y^{k-1}] + [ {k \choose k}x^{0}y^{k}]
+\]
+
+\[
+(x + y)^k = \sum_{n=0}^{k} {k \choose n}x^{k-n}y^{n}
+\]
+
+\[
+(x + y)^3 = \left[{3 \choose 0}x^{3-0}y^{0}\right] + \left[{3
+	\choose 1}x^{3-1}y^{1}\right] +  \left[ {3 \choose
+	2}x^{3-2}y^{2}\right] + \left[ {3 \choose 3}x^{3-3}y^{3}\right]
+\]
+
+\[
+(x + y)^3 = x^{3} + 3x^2y + 3xy^2 + y^{3}
+\]
+
+
+\[
+\sum_{n=0}^{k} {k \choose n}p^{k-n}q^{n} = (p + q)^k
+\]
+This result is not interesting because $p+q=1$
+
+\[
+(p + q)^k = 1^{k} = 1
+\]
+However when using terms $ps$ and $q$ we can say:
+\[
+\sum_{n=0}^{k} {k \choose n}ps^{k-n}q^{n} = (ps + q)^k
+\]
+
+
+\[
+{m \choose n}  = \frac{m!}{n! \times (m-n)!} \]
+
+\section{Poisson}
+
+\[ p(x) = \frac{e^{\alpha}\alpha^{x}}{x!} \qquad x = 0, 1,2 \dots
+\]
+
+variance and mean are both equal to $\alpha$.
+
+\section{PGF}
+
+\[
+G(s) = \frac{1-\alpha(1-s)}{1+\alpha(1+s)}
+\]
+
+
+

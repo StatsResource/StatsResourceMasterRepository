@@ -1,0 +1,39 @@
+1. 
+  a) If the sample size n is extremely large, and the number of predictors p is small, we would expect a flexible model to be better than an inflexible model. With few predictors, can model surface fairly well. Lots of observations.
+  b) If the reverse -- p large, n is small, we would expect a flexible model to be worse -- with small n, better to use an inflexible model. For example, a linear model would be a good guess over the observations. Otherwise, you could overfit the sparse observations. 
+  c) If predictors and response are highly nonlinear, a flexible model would better capture the nonlinearity
+  d) If the variance of the error term is high, it is better to use an inflexible model. The flexible model further inflates the variance of the error term, since the flexible model captures the variance in the error term. 
+  
+2.
+  a)500 firms = n; p = profit, employees, industry, CEO salary. which factors predict CEO salary? REGRESSION
+  b) p = success/failure, price, budget, price, + 10 others. CLASSIFICATION. n = 20
+  c) n = 52; change in us dollar in relation to weekly changes; 4 p; REGRESSION PROBLEM --- finding change in us dollars. 
+  
+  
+  3. Graphic [hand drawn on notes] 
+  
+  4. a) examples...
+  
+  5 Advantages of a flexible approach to regression or classification ---- it generally provides for lower bias. We take a complex real life problem and model it with a more flexible method, it should better approximate that problem. But there's a tradeoff with variance --- a disadvantage is that with a more flexible method we get more variance , the f-hat would change by a larger amount if we used a different set of data for training; changing any of points would cause f-hat to change considerably....With a noisy dataset, better to use an inflexible method, since we would otherwise end up modelling a lot of error  with the flexible approach.  Interpretaibility and ease of estimation is better with flexible method -- and theory; how well does a linear model approximate reality?; 
+
+
+6. differences between a parametric and nonparametric approach --- Parametric approach assumes and underlying form to use for estimating f-hat, such as a linear model. Parameters can be estimated for the model, while a nonparametric approach does not propose underlying model. We select an underlying model then use training data to fit the model to the data, estimate the parameters.  This is a model based approach, but model may be way off of the real f. 
+
+Nonparametric do not assume an f-hat, but attempt to estimate one.  But because there are no apriori assumptions about parameters, a large number of observations is required in order to estimate the f-hat.  disadvantage is that it tends to risk over-fitting --- too closely modelling errors or noise in the data. 
+
+7. R code for euclidean distances
+mat1<-matrix(c(0,3,0,2,0,0,0,1,3,0,1,2,-1,0,1,1,1,1), 6, 3, byrow=TRUE)
+
+# my stuff
+mat1<-matrix(c(0,3,0,2,0,0,0,1,3,0,1,2,-1,0,1,1,1,1, 0,0,0), 7, 3, byrow=TRUE)
+mat1
+dist(mat1)
+
+# distances is 3 [for  obs 1], 2 [for  obs 2], 3.16 [for  obs 3], 2.23 [for  obs 4], 1.41 [for  obs 5], 1.73 [for  obs 6]
+
+# just checking obs 6 to 7 distance
+sqrt((1-0)^2 + (1-0^2 + (1-0)^2))
+
+b) K=1, nearest neighbor is observation 5, which is Green, so classification would be Green
+c) K=3, nerest neighbors are 6 (Red), 5 (green), and 2 (Red), so would classify RED?
+d) If decision boundary is highly nonlinear, would expect best value for K to be large or small? Better to be small, because nonlinear means that you can be led into wrong classification with highly different values across larger K?

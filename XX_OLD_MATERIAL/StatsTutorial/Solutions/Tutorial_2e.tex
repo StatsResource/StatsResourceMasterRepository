@@ -1,0 +1,83 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+\section*{Worked Example  - Defective Electronics}		
+Suppose an electronics assembly subcontractor receives resistors from only two suppliers: A and B
+
+\begin{itemize}
+	\item Suppose we are told that Supplier A supplies 80\% of the resistors
+	
+	
+	
+\end{itemize}
+
+\begin{framed}			
+	\begin{itemize}
+		\item Supplier A supplies 80\% of the resistors
+		{
+			
+			
+			\item \textit{Probability that a randomly chosen resistor comes from A is 80 \%} : \textit{P(A) = 0.80 }
+			
+		}
+		\item Supplier B supplies 20\% of the resistors
+		\item \textit{Probability that a randomly chosen resistor comes from B is therefore 20\%} : \textit{P(B) = 0.20}
+	\end{itemize}
+\end{framed}	
+
+
+
+\begin{itemize}
+	\item We are giving information about the rate of faulty components from each supplier. \\(Faulty : resistor fails some 
+	\item 1\% of the resistors supplied by A are faulty
+	
+	\item 3\% of the resistors supplied by B are faulty 
+	\vspace{1cm}
+\end{itemize}
+
+\begin{itemize}
+	\item We are giving information about the rate of faulty components from each supplier. \\(Faulty : resistor fails some quality test)
+	\item  \textit{P(F) probability that randomly selecting compoent is faulty}
+	\item 1\% of the resistors supplied by A are faulty.
+	\item\textit{ We write this as $P(F|A) =0.01$}
+	\item 3\% of the resistors supplied by B are faulty 
+	\item \textit{We write this as $P(F|B) =0.03$}
+\end{itemize}
+
+\textbf{Question 1:}
+\begin{itemize}
+	\item What is the probability that a randomly selected resistor fails the final test?
+	
+	\item In mathematical terms, compute P(F) 
+\end{itemize}
+
+
+\textbf{Law of Total Probability:}
+\begin{itemize}
+	\item Faulty Resistors are either from Supplier A or Supplier B.
+	\vspace{0.3cm} 
+	\item \textit{Resistors MUST come from one of the two suppliers.}
+	\item \textit{A and B are mutually exclusive.}
+\end{itemize}
+\vspace{0.3cm} 
+\[ P(F) = P(F \mbox{ and } A) + P(F \mbox{ and } B) \]
+
+
+
+\end{document}

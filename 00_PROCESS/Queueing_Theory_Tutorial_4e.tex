@@ -1,0 +1,112 @@
+
+
+
+Jobs are sent to a supercomputer at a rate of 10 per hour and take the supercomputer on average 4 minutes to process. 
+We will assume that the number of arrivals is $X_a \sim \text{Poisson}(\lambda_a)$ and the processing (i.e., service) time is $T_s \sim \text{Exponential}(\lambda_s)$. 
+
+This leads to an $M/M/1$ system.
+
+#### Exercises
+
+A. Let $T$ be the total time in the system - what distribution has $T$? 
+B. What is the average time spent in the system? Calculate $Sd(T)$ also.
+C. How many jobs are in the system on average? (hint: Little's law)  
+D. From the time the job is sent, what is the probability that it takes more than 15 minutes to complete? 
+E. From the time the job enters the processor (i.e., service component), what is the probability that it takes more than 15 minutes to complete? 
+F. What is the average number of jobs completed in a 3 hour period of operation? (hint: Burke's theorem)
+G. What is the probability that more than 40 jobs are completed in a 3 hour period? (hint: Burke's theorem again)
+
+
+Let's tackle these exercises step by step.
+
+### A. Distribution of Total Time in the System
+In an $M/M/1$ queue, the total time $T$ a job spends in the system (waiting time plus service time) follows an exponential distribution with parameter $\lambda_s - \lambda_a$, where $\lambda_s$ is the service rate and $\lambda_a$ is the arrival rate.
+
+### Exercise B. 
+Average Time Spent in the System and Standard Deviation
+The average time spent in the system $E(T)$ is given by:
+$$E(T) = \frac{1}{\lambda_s - \lambda_a}$$
+
+Given:
+- Arrival rate $\lambda_a = 10$ jobs per hour.
+- Service rate $\lambda_s = \frac{1}{4/60} = 15$ jobs per hour.
+
+So,
+$$E(T) = \frac{1}{15 - 10} = \frac{1}{5} \text{ hours} = 12 \text{ minutes}$$
+
+The standard deviation $Sd(T)$ is the same as the mean for an exponential distribution:
+$$Sd(T) = E(T) = 12 \text{ minutes}$$
+
+---
+### C. 
+
+**Average Number of Jobs in the System (Little's Law)**
+Little's Law states:
+$$L = \lambda_a \times E(T)$$
+
+So,
+$$L = 10 \times \frac{1}{5} = 2$$
+
+Thus, on average, there are 2 jobs in the system.
+
+---
+
+### Exercise D. 
+
+
+**Probability that it Takes More Than 15 Minutes to Complete**
+The total time $T$ in the system follows an exponential distribution with mean $E(T) = 12$ minutes. The probability that $T$ exceeds 15 minutes is:
+$$P(T > 15) = e^{-\frac{15}{12}} \approx e^{-1.25} \approx 0.2865$$
+
+---
+
+### Exercise E. 
+Probability that Service Time Exceeds 15 Minutes
+The service time $T_s$ follows an exponential distribution with mean $\frac{1}{\lambda_s} = \frac{1}{15} \text{ hours} = 4 \text{ minutes}$. The probability that $T_s$ exceeds 15 minutes is:
+$$P(T_s > 15) = e^{-\frac{15}{4}} \approx e^{-3.75} \approx 0.0235$$
+
+---
+
+### Exercise F.
+ Average Number of Jobs Completed in a 3-Hour Period
+Using Burke's theorem, the output process of an $M/M/1$ queue is a Poisson process with the same rate as the arrival rate. So, the average number of jobs completed in 3 hours is:
+$$\lambda_a \times 3 = 10 \times 3 = 30$$
+
+---
+
+### G. Probability that More Than 40 Jobs are Completed in a 3-Hour Period
+The number of jobs completed in a 3-hour period follows a Poisson distribution with parameter $\lambda_a \times 3 = 30$. The probability of more than 40 jobs is:
+$$P(X > 40) = 1 - P(X \leq 40)$$
+
+Using the Poisson cumulative distribution function (CDF), we can find $P(X \leq 40)$ and subtract from 1. This requires numerical methods or a Poisson table.
+
+If you have any further questions or need more details, feel free to ask!
+
+Burke's Theorem is a principle in queueing theory named after Paul J. Burke. It relates to the behavior of queues, specifically the $ M/M/1 $ queue, which stands for:
+
+- **M**: Poisson arrival process (Markovian)
+- **M**: Exponential service time (Markovian)
+- **1**: Single server
+
+### Key Points of Burke's Theorem
+- **Departure Process**: In an $ M/M/1 $ queue, the departure process of completed jobs (or customers) is also a Poisson process with the same rate as the arrival process. This means if jobs arrive at the queue at a rate $ \lambda $, they will also depart the queue at the same rate $ \lambda $.
+- **Queue Length Distribution**: The number of jobs (or customers) in an $ M/M/1 $ queue in steady state is distributed according to a geometric distribution, which means that the probability of having $ n $ jobs in the system is given by:
+  $$P(N = n) = (1 - \rho) \rho^n$$
+  where $ \rho = \frac{\lambda}{\mu} $ is the traffic intensity (arrival rate divided by service rate).
+
+
+---
+
+BLANK
+---
+---
+
+---
+
+
+---
+
+BLANK---
+---
+
+---

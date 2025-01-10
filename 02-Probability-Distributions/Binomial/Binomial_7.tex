@@ -1,0 +1,143 @@
+
+
+In the last class, we came across binomial coefficients. Informally, binomial coefficients are the number of ways $k$ items can be selected from a group of $n$ items. 
+The binomial coefficient indexed by n and k is usually written as $^nC_k$ or
+\[ {n \choose k}\].
+$C$ is colloqially known as the ``choose operator".
+
+\[ {n \choose k} = \frac{n!}{k! \times (n-k)!} \]
+
+(We call the operator the choose operator. We will use both notations interchangeably.)
+ 
+
+}
+\frame{
+\frametitle{Binomial Coefficients}
+
+\begin{itemize}
+\item $n!$ and $k!$ are the coefficients of $n$ and $k$ respectively.
+\item $n! = n \times (n-1) \times (n-2) \times \ldots \times 2 \times 1$
+\item For example $5! = 5\times4\times3\times2\times1 = 120$
+\item $n! = n \times (n-1)!$
+\item Importantly $0! = 1$ not 0.
+\end{itemize}
+\[ {6 \choose 2} = \frac{6!}{2! \times (6-2)!} = \frac{6!}{2! \times 4!}  \]\[\mbox{   } = \frac{6 \times 5 \times 4!}{2! \times 4!} 
+ = 30/2 =15 \]
+More examples of Binomial coefficients on blackboard.
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Probability Mass Function}
+(Formally defining something mentioned previously)
+\begin{itemize} \item a probability mass function (pmf) is a \textbf{\emph{function}}
+that gives the probability that a discrete random variable is exactly equal to some
+value.
+\[P(X=k)\]
+\item The probability mass function is often the primary means of defining a discrete
+probability distribution
+\item It is conventional to present the probability mass function in the form of a table.
+\item The p.m.f of a value $k$ is often denoted $f(k)$.
+\end{itemize}
+}
+%--------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Probability Tables}
+In the \textbf{Sulis} workspace there are two important tables used for this part of the course.
+
+
+This class will feature a demonstration on how to read those tables.
+\begin{itemize}
+\item The Cumulative Binomial Tables (Murdoch Barnes Tables 1)
+\item The Cumulative Poisson Tables (Murdoch Barnes Tables 2)
+\end{itemize}
+
+Please get a copy of each as soon as possible.
+
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Probability Tables}
+\begin{itemize}
+\item For some value $r$ the tables record the probability of $P(X \geq r)$.
+\item The Student is required to locate the appropriate column based on the parameter values for the distribution in question.
+\item A copy of the Murdoch Barnes Tables will be furnished to the student in the End of Year Exam. The Tables are not required for the first mid-term exam.
+\item Knowledge of the sample space, partitioning of the sample points, and the complement rule are advised.
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+
+
+%------------------------------------------------------------------%
+\frame{
+\frametitle{Binomial Distribution: Expected Value and Variance}
+
+
+If the random variable X has a binomial distribution with parameters n
+and p, we write
+\[ X \sim B(n,p) \]
+
+Expectation and Variance
+If $X \sim B(n,p)$, then:
+
+\begin{itemize}
+\item Expected Value of X : $E(X) = np$
+\item Variance of X : $Var(X) = np(1-p)$
+\end{itemize}
+
+Suppose n=3 and p=0.5 
+Then $E(X) = 1.5$ and $V(X) = 0.75$.
+
+Remark: Referring to the expected value and variance may be used to validate
+the assumption of a binomial distribution.
+
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{The Geometric Distribution}
+\begin{itemize}
+\item The Geometric distribution is related to the Binomial distribution in that
+both are based on independent trials in which the probability of success
+is constant and equal to p.
+\item However, a Geometric random variable is the number of trials until the
+first failure, whereas a Binomial random variable is the number of
+successes in n trials.
+\item The Geometric distributions is often used in IT security applications.
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{The Geometric Distribution}
+
+Suppose that a random experiment has two possible outcomes, success
+with probability p and failure with probability 1-p .
+
+
+The experiment is repeated until a success happens. The number of
+trials before the success is a random variable X computed as follows
+
+\[P(X = k) = (1-p)^{(k-1)}\times p \]
+
+
+(i.e. The probability that first success is on the k-th trial)
+}
+
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{The Geometric Distribution: Notation}
+
+If X has a geometric distribution with parameter p, we write
+\[X \sim Geo(p) \]
+Expectation and Variance
+If $X \sim Geo(p)$, then:
+
+\begin{itemize}
+\item Expected Value of X : E(X) = 1/p
+\item Variance of X : Var(X) = $(1-p)/p^2$.
+\end{itemize}
+}
+
+
+
+\end{document}

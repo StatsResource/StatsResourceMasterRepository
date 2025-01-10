@@ -1,0 +1,136 @@
+ \documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 2011 13:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MA4413 2013} \rhead{Mr. Kevin O'Brien}
+\chead{Midterm Assessment 2 }
+%\input{tcilatex}
+
+\begin{document}
+\subsection*{Part 1. Theory for Inference Procedures (4 Marks)}
+Answer the four short questions. Each correct answer will be awarded 1 mark. Reasonably short answers will suffice, i.e. your answers should not exceed a paragraph.
+\begin{itemize}
+\item[(i)] (1 Mark) What is a $p-$value?
+\item[(ii)] (1 Mark) Briefly describe how $p-$value is used in hypothesis testing
+\item[(iii)] (1 Mark) What is meant by a Type I error?
+\item[(iv)] (1 Mark) What is meant by a Type II error?
+\end{itemize}
+(Once you have completed this section, \textbf{please turn over.})
+\newpage
+\subsection*{Part 2. Normal Distribution (5 Marks)}
+The strength of an analogue signal received at a detector (measured in microvolts : $\mu V$ ), is normally distributed with a mean of 100 $\mu V$  
+and a variance of 100 $\mu V^2$ . 
+
+
+\noindent With the signal strength denoted as $X$, we can say:
+
+\[ X \sim N(100,100) \]
+
+\begin{itemize}
+\item[(i)] (1 Mark) What is the Z-score for 115 $\mu V$ ? 
+\item[(ii)] (1 Mark) What is the Z-score for 80 $\mu V$ ?
+\item[(iii)] (1 Mark) What is the probability that the signal will exceed 115 $\mu V$ ? 
+\item[(iv)] (1 Mark) Estimate the value of $z_o$, which is an observation from the Standard Normal (Z) distribution, given that:
+\[  P(Z \geq z_o) = 0.04.\] 
+(Hint: you may use a reasonable close value)
+\item[(v)] (1 Mark) What is the micro-voltage threshold $x_0$ below which 96\% of the signals will be? 
+\[  P(X \leq x_o) = 0.96,\] 
+\[  P(X \geq x_o) = 0.04.\]
+%\item[(iii)] What is the micro-voltage below which 25\% of the signals will be?
+%\item[(iv)](1 Mark) What is the probability that the signal will be less than 80 microvolts?
+%\item[(v)] (1 Mark) What is the probability that the signal will be between 80 and 125 microvolts?
+\end{itemize}
+(Once you have completed this section, \textbf{please turn over.})
+%\item[(iii)] What is the micro-voltage below which 25% of the signals will be? \item[(4 marks)]
+\newpage
+(\textbf{Room for Answers})
+\newpage
+\subsection*{Part 3. Confidence Interval (3 Marks)}
+
+Suppose that the mean weight of a sample of 16 items is 160g, and the sample standard deviation is 32g.
+
+
+
+\begin{itemize}
+\item[(ii)] (1 Mark) Compute the standard error that would correspond to the sample mean.
+\item[(ii)] (1 Mark) State the appropropriate quantile from the $t-$distribution that would be used to compute the 95\% confidence interval for the mean.
+\item[(iii)] (1 Mark) Determine the 95\% confidence interval for the mean.
+\end{itemize}
+(Once you have completed this section, \textbf{please turn over.})
+\newpage
+\subsection*{Part 4. Hypothesis Testing (3 Marks)}
+
+\noindent A sample of 500 voters was taken by a political pollster to estimate the proportion of first preference votes a particular candidate will obtain in a forthcoming election. \\
+\bigskip
+
+\noindent It was found that 280 out of these 500 voters would give the candidate their first preference.
+\[\hat{p} = 56\%  \mbox{    (i.e.  } 0.56)\]
+
+\vspace{0.4cm}
+\noindent
+Using a significance level of 5\%, test the hypothesis that the percentage of voters who will give this particular candidate their first preference in the election is 60\%.\\
+
+
+\begin{itemize}
+\item[(i)] (1 Mark) Formally state the null and alternative hypotheses. (You may work on the basis that this is a two-tailed hypothesis test.)
+
+\item[(ii)] (1 Mark) Compute the Test Statistic for this hypothesis test.
+\item[(iii)] (1 Mark) Given that the critical value is 1.96, state your conclusion for this test.
+\end{itemize}
+\newpage
+(\textbf{Room for Answers})
+\newpage
+
+
+\section*{Formulas for Standard Errors}
+\subsection*{Confidence Intervals}
+
+{\bf One sample}
+\begin{eqnarray*} S.E.(\bar{X})&=&\frac{\sigma}{\sqrt{n}}.\\\\
+S.E.(\hat{P})&=&\sqrt{\frac{\hat{p}\times(100-\hat{p})}{n}}.\\
+\end{eqnarray*}
+\subsection*{Hypothesis tests}
+{\bf One sample}
+\begin{eqnarray*}
+S.E.(\bar{X})&=&\frac{\sigma}{\sqrt{n}}.\\\\
+S.E.(\pi)&=&\sqrt{\frac{\pi\times(100-\pi)}{n}}
+\end{eqnarray*}
+\end{document}
+\[{\bf Two samples}
+\begin{eqnarray*}
+S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}.\\\\
+S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{\frac{\hat{p}_1\times(100-\hat{p}_1)}{n_1}+\frac{\hat{p}_2\times(100-\hat{p}_2)}{n_2}}.\\\\
+\end{eqnarray*}
+\]
+\subsection*{Hypothesis tests}
+\[{\bf One sample}
+\begin{eqnarray*}
+S.E.(\bar{X})&=&\frac{\sigma}{\sqrt{n}}.\\\\
+S.E.(\pi)&=&\sqrt{\frac{\pi\times(100-\pi)}{n}}
+\end{eqnarray*}
+\]
+\[{\bf Two large independent samples}
+\begin{eqnarray*}
+S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}.\\\\
+S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{\left(\bar{p}\times(100-\bar{p})\right)\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}.\\
+\end{eqnarray*}
+\]
+
+\end{document}

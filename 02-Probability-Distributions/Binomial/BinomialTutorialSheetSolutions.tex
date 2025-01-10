@@ -1,0 +1,113 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{framed}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Week 4 Tutorials - Binomial Distribution} %\input{tcilatex}
+
+\begin{document}
+
+\section*{Question 13}
+
+\begin{itemize}
+	\item Components are placed into containers containing 100 items.
+	\item After an inspection of a large number of containers the average number of defective items was found to be 10 units with a standard deviation of 3 units.
+	\item Is the binomial distribution a good useful distribution, given the observed data?
+\end{itemize}
+
+
+
+
+\subsection*{Solution}
+
+\begin{itemize}
+	\item Let the number of containers be the number of independent trials is $n=100$.
+	\item A success may be defined as a defective component.
+	\item The probability of a success is approximate $p=0.10$. (The probability of ``failure" is $1-p=0.9$).
+	\item The expected number of defective components is $np=10$, which concurs with our observed data.
+	\item The variance is computed as \[np(1-p) = 100 \times 0.1 \times 0.9 = 9\]
+	\item The observed standard deviation is 3 units, i.e. a variance of 9 square units.
+	\item Yes the binomial distribution is useful in this case.
+\end{itemize}
+
+\section*{Question 14}
+
+Suppose there are twelve multiple choice questions in an English class quiz. Each question has five possible answers, and only one of them is correct. Find the probability of having four or less correct answers if a student attempts to answer every question at random.
+
+\subsection*{Solution}
+\begin{itemize}
+\item Since only one out of five possible answers is correct, the probability of answering a question correctly by random is $1/5=0.2$. 
+\item We can find the probability of having exactly 4 correct answers by random attempts as follows.
+%(Blackboard. Correct Answer is 13.29\%)
+\end{itemize}
+
+
+
+\[P(X=4) = ^{12}C_4 \times (1/5)^4 \times (4/5)^8 = 0.1329\]
+
+\begin{framed}
+\noindent \texttt{R} Code
+\begin{verbatim}
+> dbinom(4, size=12, prob=0.2)
+[1] 0.1329
+\end{verbatim}
+\end{framed}
+
+\section*{Question 15}
+\begin{itemize}
+	
+	\item Suppose we have a biased coin which yields a head only $48\%$ of the time.
+	\item Is this a binomial experiment?  why?
+	\item What is the probability of 4 heads in 7 throws?
+\end{itemize}
+
+\subsection*{Solution}
+	\begin{itemize}
+		\item X: Number of heads thrown
+		\item $n$ : number of independent trials (i.e. 7)
+		\item $k$ : Number of successes (numeric value)
+		\begin{itemize}
+			\item Here $k$ is 4
+			\item Number of failures is $n-k  =3$
+		\end{itemize}
+		\item $p$ : probability of a success. (i.e. 0.48)
+		\item $1-p$ : probability of a failure (i.e. 0.52)
+	\end{itemize}
+	
+	
+	
+	
+	\[ P(X=4) = P(4 \mbox{ successes }) = \;^7C_4  \times (0.48)^{4} \times (0.52)^{3}\]
+	
+	\[ P(X=4) = 35 \times 0.05308 \times  0.14061 =  {0.2612} \]
+\section*{Question 16}
+	Suppose there is a container that contains 6 items.  The probability that any one of these items is defective is 0.3. Suppose all six items are inspected. 
+	\begin{enumerate}[(a)]
+		\item What is the probability of 3 defective components?
+		\item What is the probability of 4 defective components?
+	\end{enumerate}
+\subsection*{Solution}	
+	\[ P(3\text{ defects}) = P(X = 3) = {6\choose 3} \times 0.3^3 \times  (1-0.3)^{6-3} = 0.1852 \]
+	\[ P(4\text{ defects})  = P(X = 4) = {6\choose 4}\times 0.3^4\times  (1-0.3)^{6-4} = 0.0595 \]
+
+
+(Remark: Here we are using alternative notation for the Choose Operator.)
+
+\end{document}

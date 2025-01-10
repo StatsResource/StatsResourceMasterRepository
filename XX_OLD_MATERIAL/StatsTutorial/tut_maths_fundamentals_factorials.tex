@@ -1,0 +1,75 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+\section*{Example: Factorials }
+
+
+\begin{framed}
+\noindent Equation of Factorials 
+		\[ n! = (n)\times (n-1)\times(n-2) \times \ldots \times 1 \]
+\end{framed}
+\begin{itemize}
+	\item $1! = 1$
+	\item $0! = 1 $
+\end{itemize}
+
+\section*{Example}
+	
+\[\]
+
+%%- \frametitle{Factorials Numbers}
+
+
+\begin{itemize}
+	\item $3!  = 3 \times 2  \times 1 = 6 $
+		\item $4! = 4 \times 3 \times 2 \times 1 = 24$
+		\item $5! = 5 \times 4 \times 3 \times 2 \times 1 = 120 $
+
+		\item $7! = 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1 = 5,040$
+		\item Zero factorial : Remark $0! = 1$ not $0$.
+
+	\[ 0! =  1 \]
+
+
+	
+	
+\end{itemize}	
+
+\begin{framed}
+Importantly 
+\begin{eqnarray}
+n! &=& n \times (n-1)! \\  &=& n \times (n-1) \times (n-2)!
+\\  &=& \ldots
+\end{eqnarray}
+\end{framed}
+\begin{itemize}
+	\item $6! = 6 \times 5!  = 6 \times 5 \times 4!$ 
+\end{itemize}
+\subsection*{Binomial Coefficients}
+
+\[ \binom 5 2  = \frac{5!}{2!\;(5-2)!} = \frac{5.4.3!}{2! .3!} = \frac{5.4}{2.1} = 10\]
+
+
+\[ \binom 5 0   = \frac{5!}{0!\;(5-0)!} = \frac{5!}{0! .5!} = \frac{5!}{2!} = 1\]
+Recall $0! =1$
+
+
+
+\end{document}
