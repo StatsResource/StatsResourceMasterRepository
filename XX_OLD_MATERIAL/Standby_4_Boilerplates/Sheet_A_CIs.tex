@@ -1,0 +1,41 @@
+\begin{framed}
+
+\noindent \textbf{Computing Confidence Intervals}\\
+Confidence limits are the lower and upper boundaries / values of a confidence interval, that is, the values which define the range of a confidence interval. The general structure of a confidence interval is as follows:
+
+\[ \mbox{Point Estimate} \; \pm \; \left[ \mbox{Quantile} \times \mbox{Standard Error} \right] \]
+
+
+\begin{itemize}
+\item \textbf{Point Estimate:} estimate for population parameter of interest, i.e. sample mean, sample proportion.
+\item \textbf{Quantile:} a value from a probability distribution that scales the intervals according to the specified confidence level.
+\item \textbf{Standard Error:} measures the dispersion of the sampling distribution for a given sample size $n$.
+\end{itemize}
+
+
+\end{framed}
+%-----------------
+\noindent 
+
+\noindent Quantiles for Confidence Intervals, based on large sample sizes.
+\begin{tabular}{|c|c|c|} \hline
+Confidence Level & Significance ($\alpha$) & Quantile ($P(Z > \alpha/2)$\\ \hline
+90\%  & 10\% & 1.645 \\ \hline 
+95\% & 5\%& 1.96\\ \hline 
+99\% & 1\% & 2.576\\ \hline 
+\end{tabular}
+
+\noindent Standard Errors for Confidence Intervals of Single Sample Parameter Estimates
+
+
+\begin{eqnarray*} S.E.(\bar{X})&=&\frac{\sigma}{\sqrt{n}}.\\\\
+	S.E.(\hat{P})&=&\sqrt{\frac{\hat{p}\times(1-\hat{p})}{n}}.\\
+\end{eqnarray*}
+
+If $\sigma$ is unknown, use the sample standard deviation $s$ as the estimate.
+
+
+\begin{itemize}
+    \item Point Estimate: Sample proportion $\hat{p} = 68/200 = 0.34$
+    \item Quantile: For a large sample, the quantile for 95\% confidence interval is 1.96.
+\end{itemize}

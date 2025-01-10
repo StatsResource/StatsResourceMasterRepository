@@ -1,0 +1,58 @@
+\begin{framed}
+\large 
+\noindent The Yates's corrected version of Pearson's chi-squared statistics:
+
+\[{\displaystyle \chi _{\text{Yates}}^{2}=\sum _{i=1}^{N}{(|O_{i}-E_{i}|-0.5)^{2} \over E_{i}}} \]
+where:
+\begin{description}
+\item[$O_i$] = an observed frequency
+\item[$E_i$] = an expected (theoretical) frequency, asserted by the null hypothesis
+\item[$N$] = number of distinct events
+\end{description}
+\end{framed}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Critical Values for Chi Square Test}
+{
+	\large
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+	\hline 
+df	&	$\alpha=0.10$	&	$\alpha=0.05$	&	$\alpha=0.01$	&	$\alpha=0.001$	\\ \hline
+1	& 	2.705	&	3.841	&	6.634	&	10.827	\\ \hline
+2	&	4.605	&	5.991	&	7.378	&	9.21	\\ \hline
+3	&	6.251	&	7.815	&	9.348	&	11.345	\\ \hline
+4	&	7.779	&	9.488	&	11.143	&	13.277	\\ \hline
+5	&	9.236	&	11.07	&	12.833	&	15.086	\\ \hline
+6	&	10.645	&	12.592	&	14.449	&	16.812	\\ \hline
+7	&	12.017	&	14.067	&	16.013	&	18.475	\\ \hline
+8	&	13.362	&	15.507	&	17.535	&	20.09	\\ \hline
+9	&	14.684	&	16.919	&	19.023	&	21.666	\\ \hline
+10	&	15.987	&	18.307	&	20.483	&	23.209	\\ \hline
+\end{tabular} 
+\end{center}
+}
+
+%----------------------------------------------------------%
+\begin{framed}
+\noindent \textbf{Chi Square Test}
+Determine the contribution of each cell to the overall test statistics
+
+
+\[  \frac{\mbox{Row Total}\times \mbox{Column Total}}{\mbox{Overall Total}} \]
+
+\end{framed}
+%----------------------------------------------------------%
+\begin{framed}
+\noindent \textbf{Chi Square Test = Computing the critical value}
+The degrees of freedom ( df or $\eta$ ) is computed as
+
+\[ \eta = (r-1)\times(c-1) \]
+
+\begin{itemize}
+\item $r$ number of rows
+\item $c$ number of columns
+\end{itemize}
+\end{framed}
+
+%----------------------------------------------------------%

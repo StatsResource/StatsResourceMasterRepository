@@ -1,0 +1,99 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+%--------------------------------------------------------------------------------------%
+
+\section*{Hypothesis Test of Sample Mean: Small Sample Example}
+
+\begin{itemize}
+\item A quality control laboratory are testing the life spans of a brand of ultraviolet tubes.
+\item The life spans of a sample of ten ultraviolet tubes were measured. The average life span of this sample was found to be 8,800 hours.
+\[\bar{x} = 8,800 \mbox{hrs} \]
+\item The standard deviation of the life for this sample was found to $s = 500$ hrs.
+\item Also it is assumed that the operating life of the tubes is normally distributed. 
+
+
+\item The manufacturer claims that average tube life for this brand
+is 9,000hr. \item Test this claim at the 5 percent level of significance against the alternative hypothesis
+that the mean life is 9,000 hr.
+%\item (Intuitively this would suggest a one-tailed test that the mean is less than 9000 hours)
+\end{itemize}
+\section*{Solution}
+\noindent \textbf{Step 1:} \\ Formally write our the Null and Alternative Hypotheses.\\
+We are testing a hypothesis about the population mean $\mu$.
+
+\begin{itemize}
+\item $H_0 \mbox{ : } $ $\mu = 9000$ \\ (Average life span is 9000 hours.)\bigskip
+\item $H_1 \mbox{ : } $ $\mu \neq 9000$\\ (Average life span is not 9000 hours.)
+\end{itemize}
+\bigskip
+(Remark : this is a two-tailed procedure.
+)
+
+
+
+%--------------------------------------------------------------------------------------%
+
+
+\noindent  \textbf{Step 2:} \\ Compute the Test Statistic (TS)
+{
+
+\[TS = \frac{\bar{x} - \mu}{{\sigma \over \sqrt{n}}}\]
+}
+\begin{itemize}
+\item The difference between point estimate ($\bar{x}$) and expected value supposed by the null hypothesis ($\mu$) is -200 hours. \\(i.e. 8,800 - 9,000 hours)
+\end{itemize}
+
+%--------------------------------------------------------------------------------------%
+
+\begin{itemize}
+\item The standard error is determined from formulas.
+\item \textbf{Important:} We use the sample standard deviation $s$ as an estimate for the population standard deviation $\sigma$, which is unknown.
+\[ S.E. (\bar{x}) = {s \over \sqrt{n}} = {500 \over \sqrt{10}}  = 158.11 \]
+
+\[ TS\; =\; \frac{-200-0}{158.11} =\; -1.265\]
+\item The test statistic is $-1.265$
+\end{itemize}
+
+
+
+\noindent \textbf{Step 3:} \\ Determine the Critical Value (CV)
+\begin{itemize}
+
+\item The Critical Value is determined with $\alpha = 0.05$ and $k = 2$ .
+\item The sample is small (i.e.n = 10) \\ Therefore degrees of freedom $df = n-1 = 9$.
+\item From Murdoch Barnes statistical tables, we would find the critical value to be: 
+\[CV = 2.262\].
+
+\item (\textit{Remark: If the sample was large, we could use $CV = 1.96$}).
+
+\end{itemize}
+
+
+\noindent  \textbf{Step 4:} \\ Decision Rule
+\begin{itemize}
+
+\item \textbf{Decision:}Is the absolute value of the test statistic greater than the critical value?
+IS $|TS| > CV$? \\ Is $1.265 > 2.262$?
+\item No. We fail to reject the null hypothesis. \item There is not enough evidence to say that the mean lifespan is not 9000 hours.
+\end{itemize}
+
+\end{document}
+

@@ -1,0 +1,135 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MathsResource} \chead{Probability} \rhead{Tutorial Sheets} %\input{tcilatex}
+\begin{document}
+%================================================================================%
+
+
+\begin{enumerate}
+%================================================================%
+%%- RSS- HC2- 2010 - Question 3
+\item The random variable T has the exponential distribution with rate parameter $\lambda$, so that the probability density function (pdf) of T is
+$$ {\displaystyle f_{T}(t)={\begin{cases}\lambda e^{-\lambda t}&t\geq 0,\\0&t<0.\end{cases}}} $$
+\begin{enumerate}[(a)]
+\item Obtain the cumulative distribution function (cdf) $F_T(t)$ of T, and draw the graph of $F_T(t)$. 
+\item Show that $P(a < T \leq b) = e^{-\lambda a} - e^{-\lambda b}$. 
+\item Given that $P(0 < T \leq 1) = 2P(1 < T \leq 2)$, find the value of $\lambda$ to three significant figures. 
+\item For any choice of $c$ and $t$ such that $t > c > 0$, find $P(T > t | T > c)$. 
+Deduce the conditional pdf of T given that $T > c$. In a similar way, find the conditional pdf of $T – c$ given that $T > c$, and comment briefly on your results. 
+\end{enumerate}
+
+%====================================================================%
+\item 
+The random variable X has the exponential distribution with probability density function
+
+$$ f_{X}(x) = \lambda e^{-\lambda x}, \qquad \mbox{where x } >0 \;\; \& \;\; \lambda >0 $$
+\begin{enumerate}
+\item Show that $E(X) = 1/\lambda$.
+
+\item Show that $P(X>a) = e^{-\lambda x}$ for any $a > 0$. Deduce the median of $X$.
+
+\item For any $b > 0$, find $P(X>a+b|X>a)$ and comment on this result.
+
+\end{enumerate}
+
+Now consider the case where $\lambda = 1$.
+\begin{enumerate}
+\item Sketch the graph of $f(x)$.
+
+\item State with a reason whether the distribution of $X$ is positively or negatively skew.
+
+\item Write down the mode of the distribution of X, and find the value of k such that Mean – Mode = k(Mean – Median).
+
+\item A student has read that, for many distributions,
+\begin{itemize}
+\item the skewness is positive if the mean is greater than the median
+\item the value of k is about 3.
+\end{itemize}
+
+Comment on the truth of each of these statements for the distribution of X.
+\end{enumerate}
+
+
+
+
+%===========================================================================%
+%%- RSS - HC2 - 2007 - Question 2
+\item The random variable X has the exponential probability density function (pdf) given by
+
+
+
+$$ f_{X}(x) = \lambda e^{-\lambda x}, \qquad \mbox{where x } >0 \;\; \& \;\; \lambda >0 $$
+
+
+
+\begin{enumerate}[(a)]
+
+\item  Show that $ E(X) = 1/\lambda$ and find the standard deviation of $X$.
+
+\item  Show that, for any $c > 0$, $P(X > c) = exp(−\lambda c)$.
+
+Hence show that, for any $x > c$, $P(X > x | X > c) = exp(−\lambda(x−c))$. Deduce the conditional pdf of $X$ given that $X > c$, and comment briefly.
+
+\item A random sample has been selected from a distribution that is thought to be exponential. The values obtained, arranged in ascending order, are $$\{0.1, 0.1, 0.2, 0.4, 1.1, 2.3, 2.5, 3.4, 4.3, 5.6\}.$$ [You are given that the sum and sum of squares of these values are 20.0 and 74.38 respectively.] 
+
+Calculate the sample mean and the sample standard deviation and say with a reason whether you think the exponential model is suitable for the distribution underlying this sample.
+
+\end{enumerate}
+
+%==================================================================================================%
+\item
+%% RSS HC2 2012 Question 4
+\begin{enumerate}[(a)] 
+\item The continuous random variable X has the exponential distribution with
+probability density function (pdf) $f(x)$ given by
+$$ f_{X}(x) = \lambda e^{-\lambda x}, \qquad \mbox{where x } >0 \;\; \& \;\; \lambda >0. $$
+\begin{enumerate}[(i)]
+\item Find the cumulative distribution function (cdf) F(x) of X, and sketch the
+graph of $F(x)$ for the case $\lambda = 1/2$. Mark on your graph the median of X.
+
+\item  The continuous random variable Y is independent of $X$ and has a
+distribution with pdf $g(y)$ given by
+
+$$ g_{y}(y) = \mu e^{-\mu y}, \qquad \mbox{where y } >0 \;\; \& \;\; \mu >0 $$
+
+Write down the cdf of Y.
+\end{enumerate}
+%-------------------------------%
+\item Striplights A and B, from two different suppliers, have lifetimes respectively
+distributed as X and Y in part (a), where $\lambda = 1/2$ and $\mu = 1/3$, for lifetimes
+measured in units of 1000 hours. Two new striplights, one from each supplier,
+are installed at the same time. Their lifetimes may be assumed to be
+independent.
+\begin{enumerate}[(i)]
+\item Find the values of $P(X \leq 2)$ and $P(Y \leq 2)$.
+\item Find the probability that both striplights last at least 2000 hours, i.e. that
+$X \geq 2$ and Y $\geq 2$.
+\item Find the probability that exactly one striplight lasts at least 2000 hours.
+\item Given that exactly one striplight lasts at least 2000 hours, find the
+probability that it is A.
+\end{enumerate}
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{enumerate}
+\end{document}

@@ -1,0 +1,203 @@
+ \documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 2011 13:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MA4704} \rhead{Mr. Kevin O'Brien}
+\chead{Midterm Assessment Paper 2013}
+%\input{tcilatex}
+
+\begin{document}
+
+\section*{Attempt ALL questions}
+
+\bigskip
+\subsection*{Q1. Discrete Random Variables (2 Marks)} % 2 Marks
+The probability distribute of discrete random variable $X$ is tabulated below. There are 5 possible outcome of $X$, i.e. 1, 2, 4, 6 and 8.
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|c|}
+\hline
+$x_i$  & 1 & 2 & 4 & 6 & 8  \\\hline
+$p(x_i)$ & 0.50 & 0.15 & 0.20 & 0.05 & 0.10 \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+%\item[a.] (1 Mark) Compute the value of $k$.
+\item[a.] (1 Mark) What is the expected value of X?
+%\item[c.] (1 Mark) Compute the value of $E(X^2)$
+\item[b.] (1 Mark) Given that $E(X^2) = 12.5$, compute the variance of $X$.
+\end{itemize}
+
+\subsection*{Q2. Descriptive Statistics A (3 Marks)} % 5 Marks
+Consider the following data set of seven numbers:
+
+\begin{center}
+\textbf{\texttt{29 14 17 30 19 25 13}}
+\end{center}
+% 4 Marks
+
+\noindent For this sample, compute the following descriptive statistics:
+\begin{itemize}
+%\item[a.] (1 Mark) The median,
+\item[a.] (1 Mark) The mean,
+\item[b.] (1 Mark) The variance,
+\item[c.] (1 Mark) The standard deviation.
+\end{itemize}
+
+\subsection*{Q3. Descriptive Statistics B (2 Marks)} % 7 Marks
+The heights for a group of forty rowing club members are tabulated as follows:
+
+    \begin{table}[ht]
+\begin{center}
+\begin{tabular}{|rrrrrrrrrr|}
+
+  \hline
+127& 136& 136& 143& 146& 146& 146& 147& 150& 156\\
+156& 160& 161& 161& 163& 164& 166& 166& 167& 168\\
+169& 171& 171& 172& 172& 172& 172& 174& 175& 176\\
+176& 176& 180& 180& 182& 183& 184& 186& 186& 188\\
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\vspace{-0.5cm}
+\begin{itemize}
+%\item[a.] (1 Mark) The median,
+\item[a.] (1 Mark) The median,
+\item[b.] (1 Mark) The inter-quartile range.
+\end{itemize}
+%
+%\subsection*{Q3. Sample Spaces (1 Mark)}  % 1 Mark
+%Suppose one urn contains three balls; one red, one blue and one green, and a second urn contain three balls; numbered 1, 2, and 3. An experiment consists of two balls being drawn at random (i.e. one from each urn).
+%
+%\begin{itemize}
+%\item[a.] (1 mark) Write out the sample space for this experiment.
+%\end{itemize}
+
+\bigskip
+\subsection*{Q4. Contingency Tables (2 Marks)} % 9 Marks
+
+The following contingency table classifies students in different
+departments according to whether they are from urban or rural backgrounds.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+   & Mathematics & Biology & Chemistry & Total \\\hline
+  Urban& 30 & 90 & 60 & 180 \\  \hline
+  Rural & 40 & 50 & 30 & 120 \\ \hline
+  Total & 70 & 140 & 90 & 300 \\
+  \hline
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item[a.] (1 Mark) What is the probability that a randomly chosen person from the sample is
+from a rural area?
+%\item[b.] (1 mark) What is the probability that a randomly chosen person from the sample is both female and studying Biology?
+\item[b.] (1 Mark) Given that the student is from an urban area, what is the probability that he or she is an Biology student?
+%\item[c.] (1 Mark) Given that a student studies Biology, what is the probability that the student is from a rural area?
+\end{itemize}
+%-----------------------------------------------------------------%
+
+\subsection*{Q5. Independent Events (3 Marks) } % 12 Marks
+
+Consider two competitors, A and B, involved in a pistol shooting competition, with A and B firing at their own target exactly once in each round. The probability that A hits her target is 1/3 and the probability that B hits his target is 1/4. For some round in the competition, find the probability that:
+\begin{itemize}
+\item[a.](1 Mark) A does not hit the target,
+\item[b.](1 Mark) Neither A nor B hit their targets,
+\item[c.](1 Mark) Only one of them hits a target.
+\end{itemize}
+
+\subsection*{Q6. Binomial Distribution (3 Marks) } % 12 Marks
+A biased coin yields `Tails' on $47\%$ of throws. Consider an experiment that consists of throwing this coin 9 times.
+\begin{itemize}
+\item[a.] (1 Mark) Evaluate the following term $^{9}C_3$.
+\item[b.] (1 Mark) Compute the probability of getting three `Tails' in this experiment.
+\item[c.] (1 Mark) Compute the probability of getting six `Tails' in this experiment.
+\end{itemize}
+\bigskip
+%\subsection*{Q6. Poisson Distribution (2 Marks) }  % 14 Marks
+%Suppose that a telephone help-line receives 4 calls per hour during offices hours.
+%\begin{itemize}
+%\item[a.] (1 Mark) Compute the value of $m$ for a 30 minute period during office hours.
+%\item[b.] (1 Mark) Compute the probability of the help-line getting exactly one call in a 30 minute period during office hours.
+%\end{itemize}
+%\bigskip
+%\subsection*{Q7. Exponential Distribution (1 Mark)} % 15 Marks
+
+
+%\begin{itemize}
+
+%\item[a.] (1 Mark) Compute the value of $P(X \leq 482)$
+
+%\end{itemize}
+\newpage
+\section*{Formulae}
+\subsection*{Descriptive Statistics}
+\begin{itemize}
+\item Sample Variance
+\begin{equation*}
+s^2 = \frac{\sum^{n}_{i=i} (x_i-\bar{x})^2}{n-1}
+\end{equation*}
+\end{itemize}
+%-------------------------------------------------%
+\subsection*{Probability}
+\begin{itemize}
+
+\item Conditional probability:
+\begin{equation*}
+P(B|A)=\frac{P\left( A\text{ and }B\right) }{P\left( A\right) }
+\end{equation*}
+
+
+\item Bayes' Theorem:
+\begin{equation*}
+P(B|A)=\frac{P\left(A|B\right) \times P(B) }{P\left( A\right) }
+\end{equation*}
+
+
+
+
+
+\item Binomial probability distribution:
+\begin{equation*}
+P(X = k) = \text{  }^{n}C_{k} \times p^{k} \times \left( 1-p\right) ^{n-k}\qquad \left( \text{where  }
+^{n}C_{k} =\frac{n!}{k!\left(n-k\right) !} \right)
+\end{equation*}
+
+\item Poisson probability distribution:
+\begin{equation*}
+P(X = k) =\frac{m^{k}\mathrm{e}^{-m}}{k!}
+\end{equation*}
+
+\item Exponential probability distribution:
+\begin{equation*}
+P(X \leq k) = \begin{cases}
+1-e^{- k/\mu}, & k \ge 0, \\
+0, & k < 0.
+\end{cases}\qquad \left( \text{where  }
+\mu = {1\over \lambda}\right)
+\end{equation*}
+\end{itemize}
+
+
+\end{document} 

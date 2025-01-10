@@ -1,0 +1,146 @@
+
+%- http://www.math.iitb.ac.in/~preeti/ma108-2017/Tut-6.pdf
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+
+\usepackage{subfigure}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MathsResource} \chead{Statistics} \rhead{Statistical Formulas} %\input{tcilatex}
+\begin{document}
+
+\section*{Probability and Statistics Formulas}
+%-------------------------------------------------%
+\subsection*{Descriptive Statistics}
+\begin{itemize}
+	\item Sample Variance
+	\begin{equation*}
+	s^2 = \frac{\sum (x-\bar{x})^2}{n-1}
+	\end{equation*}
+\end{itemize}
+%-------------------------------------------------%
+\subsection*{Probability}
+\begin{itemize}
+	
+	\item Conditional probability:
+	\begin{equation*}
+	P(B|A)=\frac{P\left( A\text{ and }B\right) }{P\left( A\right) }.
+	\end{equation*}
+	
+	
+	\item Bayes' Theorem:
+	\begin{equation*}
+	P(B|A)=\frac{P\left(A|B\right) \times P(B) }{P\left( A\right) }.
+	\end{equation*}
+	
+	
+	
+	
+	
+	\item Binomial probability distribution:
+	\begin{equation*}
+		P(X = k) = ^{n}C_{k} \times p^{k} \times \left( 1-p\right) ^{n-k}\qquad \left( \text{where  }
+		^{n}C_{k} =\frac{n!}{k!\left(n-k\right) !}. \right)
+	\end{equation*}
+	
+	\item Poisson probability distribution:
+	\begin{equation*}
+		P(X = k) =\frac{m^{k}\mathrm{e}^{-m}}{k!}.
+	\end{equation*}
+	
+	\item Exponential probability distribution:
+	\begin{equation*}
+		P(X \leq k) = \begin{cases}
+			1-e^{- k/\mu}, & k \ge 0, \\
+			0, & k < 0.
+		\end{cases}\qquad \left( \text{where  }
+		\mu = {1\over \lambda}\right)
+	\end{equation*}
+\end{itemize}
+
+\subsection*{Confidence Intervals}
+{\bf One sample}
+\begin{eqnarray*} S.E.(\bar{X})&=&\frac{\sigma}{\sqrt{n}}.\\\\
+	S.E.(\hat{P})&=&\sqrt{\frac{\hat{p}\times(1-\hat{p})}{n}}.\\
+\end{eqnarray*}
+{\bf Two samples}
+\begin{eqnarray*}
+	S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}.\\\\
+	S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{\frac{\hat{p}_1\times(1-\hat{p}_1)}{n_1}+\frac{\hat{p}_2\times(100-\hat{p}_2)}{n_2}}.\\\\
+\end{eqnarray*}
+\subsection*{Hypothesis tests}
+{\bf One sample}
+\begin{eqnarray*}
+	S.E.(\bar{X})&=&\frac{\sigma}{\sqrt{n}}.\\\\
+	S.E.(p)&=&\sqrt{\frac{p \times(1-p)}{n}}
+\end{eqnarray*}
+{\bf Two large independent samples}
+\begin{eqnarray*}
+	S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}.\\\\
+	S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{\left(\bar{p}\times(1-\bar{p})\right)\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}.\\
+\end{eqnarray*}
+{\bf Two small independent samples}
+\begin{eqnarray*}
+	S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{s_p^2\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}.\\\\
+	s_p^2&=&\frac{s_1^2(n_1-1)+s_2^2(n_2-1)}{n_1+n_2-2}.\\
+\end{eqnarray*}
+{\bf Paired sample}
+\begin{eqnarray*}
+	S.E.(\bar{d})&=&\frac{s_d}{\sqrt{n}}.\\\\
+\end{eqnarray*}
+{\bf Standard Deviation of case-wise differences (computational formula)}
+\begin{eqnarray*}
+	s_d = \sqrt{ {\sum d_i^2 - n\bar{d}^2 \over n-1}}.\\\\
+\end{eqnarray*}
+\subsection*{Chi Square Tests of Independence}
+\[\chi^2_{TS} =  \sum \frac{(n_{ij} - e_{ij})^2}{e_{ij}}\]
+\subsection*{Regression Estimates}
+
+\begin{eqnarray*}
+	S_{XY} &=&
+	\sum x_iy_i - \frac{\sum x_i\sum y_i}{n}\\
+	S_{XX} &=&
+	\sum x_i^2 - \frac{(\sum x_i)^2}{n}\\
+	S_{YY} &=&
+	\sum y_i^2 - \frac{(\sum y_i)^2}{n}\\
+\end{eqnarray*}
+{\bf Slope Estimate}
+\begin{eqnarray*}
+	b_1 = \frac{S_{XY}}{S_{XX}}
+\end{eqnarray*}
+{\bf Intercept Estimate}
+\begin{eqnarray*}
+	b_0 = \bar{y} -b_1\bar{x}
+\end{eqnarray*}
+{\bf Pearson's correlation coefficient}
+
+\begin{eqnarray*}
+	r = \frac{S_{XY}}{\sqrt{S_{XX} \times S_{YY}}}
+\end{eqnarray*}
+{\bf Standard error of the Slope}
+\begin{eqnarray*}
+	S.E.(b1) = \sqrt{\frac{s^2}{S_{XX}}}
+\end{eqnarray*}
+
+where $s^2 = \frac{SSE}{n-2}$
+and SSE $= S_{YY} - b_1S_{XY}$
+\end{document}

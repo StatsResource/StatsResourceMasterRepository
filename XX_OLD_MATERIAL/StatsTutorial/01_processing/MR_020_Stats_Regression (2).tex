@@ -1,0 +1,897 @@
+
+\subsection*{Q1. Theory for Inference Procedures }
+Answer the three short questions. Each correct answer will be awarded 1 mark.
+\begin{itemize}
+% \item[i.] What is a $p-$value?
+\item[i.] Briefly describe how $p-$value is used in hypothesis testing
+\item[ii.] What is meant by a Type I error?
+\item[iii.] What is meant by a Type II error?
+\end{itemize}
+
+
+\subsection*{Q2. Normal Distribution } % Normal %6 MARKS
+Assume that the diameter of a critical component is normally distributed with a Mean of 50mm and a Standard Deviation of 2mm. 
+You are required  to estimate the approximate probability of the following measurements occurring on an individual component.
+\begin{itemize}
+ [i.]	Between 50 and 51.2mm
+ [ii.] Less than 48.5 mm
+ [iii.] Between 48.2 and 51.6 mm
+\end{itemize}
+
+\noindent Use the normal tables to determine the probabilities for the above exercises. You are required to show all of your workings.
+
+\subsection*{Q3. Dixon Q Test For Outliers (4 Marks)}
+
+The typing speeds for one group of 12 Engineering students were recorded both at the beginning of year 1 of their studies. The results (in words per minute) are given below:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+% Subject& A& B& C& D& E &F &G &H \\ \hline
+121 & 146 & 150 &149 &142 &170& 153\\ \hline
+ 137 & 161 & 156& 165& 137& 178& 159
+\\ \hline
+\end{tabular}
+\end{center}
+Use the Dixon Q-test to determine if the lowest value (121) is an outlier. You may assume a significance level of 5\%.
+%Calculate a 95\% confidence interval for the difference between the mean number of marks obtained by males and females in the population of school leavers as a whole.
+
+
+\begin{itemize}
+\item[i.]  Formally state the null hypothesis and the alternative hypothesis.
+\item[ii.]  Compute the Test Statistic.
+\item[iii.]  By comparing the Test Statistic to the appropriate Critical Value, state your conclusion for this test.
+\end{itemize}
+
+\subsection*{Q4. Testing Normality } %4 Marks
+A graphical procedure was carried out to assess whether or not this assumption of normality is valid for data set \texttt{Y}. Consider the Q-Q plot in the figure below.
+
+%\begin{center}
+%	\includegraphics[scale=0.45]{images/Q5examQQplot}
+%\end{center}
+
+\begin{itemize}
+[i.]  Provide a brief description on how to interpret this plot.
+[ii.]  What is your conclusion for this procedure? Justify your answer.
+\end{itemize}
+
+\subsection*{Q5. Testing Normality } %4 Marks
+Consider the following inference procedure performed on data set $X$.
+\begin{center}
+	\begin{verbatim}
+	> shapiro.test(X)
+	
+	Shapiro-Wilk normality test
+	
+	data:  X
+	W = 0.9619, p-value = 0.6671
+	
+	\end{verbatim}
+\end{center}
+
+
+\begin{itemize}
+[i.]  Describe what is the purpose of this procedure.
+[ii.]  What is the null and alternative hypothesis?
+[iii.]  Write the conclusion that follows from it.
+\end{itemize}
+
+\subsection*{Q6. Testing For Outliers }
+\begin{itemize}
+[(i)]  Provide a brief description for three tests from the family of Grubb's  Outliers Tests. Include in your description a statement of the null and alternative hypothesis for each test, any required assumptions and the limitations of these tests.
+[(ii)]  Showing your working, use the Dixon Q Test to test the hypothesis that the maximum value of the following data set is an outlier.
+	\[ 19,22,23,24,25,26,29,38\]
+\end{itemize}
+\newpage
+%\newpage
+\subsection*{Q2. Normal Distribution (5 Marks)} % Normal %6 MARKS
+Assume that the diameter of a critical component is normally distributed with a Mean of 100mm and a Standard Deviation of 5mm. You are required  to estimate the approximate probability of the following measurements occurring on an individual component.
+\begin{itemize}
+ [i.]	Greater than 103mm
+ [ii.] Less than 94.2 mm
+ [iii.][$\ast$] Between 94.2 and 103 mm
+\end{itemize}
+\bigskip
+\noindent Use the normal tables to determine the probabilities for the above exercises. You are required to show all of your workings.
+\newpage
+(Write Your Answers Here)
+\newpage
+
+\subsection*{Q3. Chi-Square Test (8 Marks)} %4 
+
+A market research survey was carried out to assess preferences for three brands of chocolate bar, A, B, and C. 
+The study group was categorised by gender to determine any difference in preferences.
+
+
+{
+	\large
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			& A & B & C &  Total\\ \hline
+			Females & 50 & 70 & 80 & 200 \\ \hline
+			Males   & 90 & 50 & 20 &  160\\ \hline
+			Total & 140 & 120 & 100 & 360\\ \hline
+		\end{tabular} 
+	\end{center}
+}
+\begin{itemize}
+[i.][$\ast$] Formally state the null and alternative hypotheses.
+[ii.]  Compute the cell values expected under the null hypothesis. Show your workings for two cells.
+[iii.] Compute the Test Statistic.
+[iv.][$\ast$] State the appropriate Critical Value for this hypothesis test.
+[v.][$\ast$] Discuss your conclusion to this test, supporting your statement with reference to appropriate values.
+\end{itemize}
+
+
+
+\newpage
+
+\subsection*{Q8. Chi-Square Test (9 Marks)} %4 
+Suppose you conducted a drug trial on a group of animals and you hypothesized that the animals receiving the drug would show increased heart rates compared to those that did not receive the drug. You conduct the study and collect the following data:
+{
+	\large
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+	\hline  & Heart Rate & No Heart Rate  &  \\  
+	  & Increased & Increase & Increase \\ 
+	\hline Treated  & 36 & 14 & 50 \\ 
+	\hline Not Treated & 30 & 25 & 55 \\ 
+	\hline  & 66 & 39 & 105 \\ 
+	\hline 
+\end{tabular} 
+\end{center}
+}
+\begin{itemize}
+[i.] Formally state the null and alternative hypotheses.
+[ii.]  Compute the cell values expected under the null hypothesis. Show your workings for two cells.
+[iii.] Compute the Test Statistic.
+[iv.] State the appropriate Critical Value for this hypothesis test.
+[v.] Discuss your conclusion to this test, supporting your statement with reference to appropriate values.
+\end{itemize}
+
+%\end{itemize}
+% -- Part 2 - Hypothesis Testing Computation
+%
+% 1 Mark
+% 1 Mark
+%Compute the pooled variance for the aggregate sample
+% 1 Mark Standard Error
+% 1 Mark Test Statistic
+% 1 Mark Appropriate level of significance
+% 1 Mark Appropriate degrees of freedom
+% 1 Mark Appropriate Critical value
+% 1 MArk Discuss your conclusion to this test, supporting your statement with reference to appropriate values.
+
+\newpage
+
+
+\section*{Formulae and Tables}
+\subsection*{Critical Values for Dixon Q Test}
+{
+	\Large
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline  N  & $\alpha=0.10$  & $\alpha=0.05$  & $\alpha=0.01$  \\ \hline
+			3  & 0.941 & 0.97  & 0.994 \\ \hline
+			4  & 0.765 & 0.829 & 0.926 \\ \hline
+			5  & 0.642 & 0.71  & 0.821 \\ \hline
+			6  & 0.56  & 0.625 & 0.74  \\ \hline
+			7  & 0.507 & 0.568 & 0.68  \\ \hline
+			8  & 0.468 & 0.526 & 0.634 \\ \hline
+			9  & 0.437 & 0.493 & 0.598 \\ \hline
+			10 & 0.412 & 0.466 & 0.568 \\ \hline
+			11 & 0.392 & 0.444 & 0.542 \\ \hline
+			12 & 0.376 & 0.426 & 0.522 \\ \hline
+			13 & 0.361 & 0.41  & 0.503 \\ \hline
+			14 & 0.349 & 0.396 & 0.488 \\ \hline
+			15 & 0.338 & 0.384 & 0.475 \\ \hline
+			16 & 0.329 & 0.374 & 0.463 \\ \hline
+		\end{tabular} 
+	\end{center}
+}
+
+##########################################################################################################
+\subsection*{Test Statistic for Chi-Square Test}
+{
+\Large
+\[ \chi^2_{TS} = \sum \frac{(\mbox{Observed} -\mbox{Expected} )^2}{\mbox{Expected} }\]
+}
+
+
+\subsection*{Confidence Intervals}
+{\bf One sample}
+\begin{eqnarray*} S.E.(\bar{X})&=&\frac{\sigma}{\sqrt{n}}.\\\\
+S.E.(\hat{P})&=&\sqrt{\frac{\hat{p}\times(100-\hat{p})}{n}}.\\
+\end{eqnarray*}
+{\bf Two samples}
+\begin{eqnarray*}
+S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}.\\\\
+S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{\frac{\hat{p}_1\times(100-\hat{p}_1)}{n_1}+\frac{\hat{p}_2\times(100-\hat{p}_2)}{n_2}}.\\\\
+\end{eqnarray*}
+\subsection*{Hypothesis tests}
+{\bf One sample}
+\begin{eqnarray*}
+S.E.(\bar{X})&=&\frac{\sigma}{\sqrt{n}}.\\\\
+S.E.(\pi)&=&\sqrt{\frac{\pi\times(100-\pi)}{n}}
+\end{eqnarray*}
+{\bf Two large independent samples}
+\begin{eqnarray*}
+S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}.\\\\
+S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{\left(\bar{p}\times(100-\bar{p})\right)\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}.\\
+\end{eqnarray*}
+{\bf Two small independent samples}
+\begin{eqnarray*}
+S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{s_p^2\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}.\\\\
+s_p^2&=&\frac{s_1^2(n_1-1)+s_2^2(n_2-1)}{n_1+n_2-2}.\\
+\end{eqnarray*}
+{\bf Paired sample}
+\begin{eqnarray*}
+S.E.(\bar{d})&=&\frac{s_d}{\sqrt{n}}.\\\\
+\end{eqnarray*}
+{\bf Standard Deviation of case-wise differences (computational formula)}
+\begin{eqnarray*}
+s_d = \sqrt{ {\sum d_i^2 - n\bar{d}^2 \over n-1}}.\\\\
+\end{eqnarray*}
+\subsection*{Q1. Theory for Inference Procedures }
+Answer the following short questions. Each correct answer will be awarded 1 mark.
+\begin{itemize}
+	% \item[i.] What is a $p-$value?
+	%\item[i.] Briefly describe how $p-$value is used in hypothesis testing
+[i.](1 Marks)[$\ast$] What is meant by a Type I error?
+[ii.](1 Marks)[$\ast$] What is meant by a Type II error?
+\end{itemize}
+######################################################################################################
+
+
+\subsection*{Part B - Dixon Q Test (5 Marks)}
+
+	
+	Use the Dixon Q-test to determine if the highest value is an outlier. You may assume a significance level of 5\%.
+		\[ 17,20,23,24,25,26,28,45\]
+	\begin{itemize}
+	[(i)] State the null and alternative hypotheses for this test.
+	[(ii)] Compute the test statistic.
+	[(iii)] State the appropriate critical value.
+	[(iv)] What is your conclusion to this procedure.
+	\end{itemize}
+
+
+
+\section*{Question 2. (25 marks) Probability Distributions }
+
+
+
+
+\subsection*{Part A - Normal Distribution (10 Marks)}
+
+\smallskip	
+\noindent Assume that the diameter of a critical component is normally distributed with a mean of 1002mm and a standard deviation of 1.25mm. You are required  to estimate the approximate probability of the following measurements occurring on an individual component.
+\begin{itemize}
+[(i)] Greater than 1004.3mm.
+[(ii)] Less than 1000mm.
+ [(iii)] Between 1000mm and 1004mm.
+[(iv)]  The production manager reports that more than 99\% of the output is between 998mm and 1004mm. Do you agree with this statement? Justify your answer with the appropriate calculations.
+\end{itemize}
+\medskip
+\noindent Use statistical tables to determine the probabilities for the above exercises. You are required to show all of your workings.
+
+\bigskip
+\subsection*{Part B - Probability (10 Marks)} % Normal %6 MARKS
+A new test has been developed to diagnose a particular disease. If a person has the disease, the test has a 95\% chance of identifying them as having the disease.
+If a person does not have the disease, the test has a 1\% chance of identifying them as having the disease.  Suppose that 5\% of the population have this disease. Suppose we select a person at random from the population.
+
+
+\begin{enumerate}[(i)]
+ (4 Marks) What is the probability that the test will identify them as having the disease?
+	
+  What is the probability that the person has the disease given that the test identifies them as having the disease?
+  What is the probability that the person has the disease given that the test identifies them as \textbf{not} having the disease?
+\end{enumerate}
+
+
+
+%=================================================================%
+
+
+\section*{Question 3. (25 marks) Single Sample Inference Procedures }
+
+\subsection*{Part A - Inference Procedures for Proportion (10 Marks)}
+%% Change the Numbers
+
+The conventional treatment for a disease has been shown to be effective in 65\% of all 
+cases. A new drug has been developed by a pharmaceutical company. The Health Service Executive of Ireland
+wishes to determine whether the new treatment is more effective than conventional treatment. 
+A simple random sample of 400 patients are given the new drug. The treatment is effective for 200 of them.
+% You are required to make a recommendation about purchasing the new drug.
+
+
+\begin{itemize}
+[(i)] Compute the 95\% confidence interval.
+%[(ii)] Compute the Test Statistic.
+[(ii)](4 Marks) By interpreting this confidence interval, make a recommendatiion about purchasing the new drug? Explain how you made this decision.
+\end{itemize}
+%======================================================================%
+
+\subsection*{Part B - Inference Procedures for the Mean (15 Marks)}
+Mean blood iron concentration for children with adequate nutrition is taken to be 110mg/dl. \\ \smallskip
+
+
+\noindent 50 randomly selected children from a disadvantaged urban area were given blood tests. The mean concentration of iron from this sample was 98 mg/dl with a standard deviation of 25.5 mg/dl.
+\begin{itemize}
+[(i)] (4 Marks) Calculate a 95\% confidence interval for the mean concentration of iron for children in this area. 
+[(ii)] Interpret this confidence interval.  Do these results provide evidence that children in this area suffer from iron deficiency? 
+\end{itemize}
+\medskip
+Test this hypothesis using a 5\% level of significance. 
+
+\begin{itemize}
+[(iii)] Clearly state your null and alternative hypotheses.
+[(iv)](4 Marks) Compute the test statistic.
+[(v)] Discuss your conclusion to this test, supporting your statement with reference to appropriate values.
+\end{itemize}
+
+
+\newpage
+
+
+
+\section*{Question 4. (25 marks) Two Sample Inference Procedures}
+
+\subsection*{Part A - Two Sample $t-$ Test (10 Marks)}
+
+An exercise physiologist wants to determine if several short bouts of exercise provide the same benefit for cardiovascular fitness as one long bout of exercise. \\ \smallskip
+
+\noindent 60 volunteers are randomly assigned to group 1 and do standardised aerobic exercise on a stationary bicycle for 30 minutes once a day, 5 days a week. 40 volunteers are randomly assigned to group 2 and do the same exercise for 10 minutes, 3 times a day, 5 days a week. Cardiovascular fitness was measured by VO2 max (maximum oxygen consumption while exercising). 
+
+\begin{description}
+[Group 1] The mean change in VO2 after 12 weeks of exercise was 2.1 for group 1 with a standard deviation of 1.7.
+[Group 2] The mean change in VO2 after 12 weeks of exercise was 0.7 for group 2 with a standard deviation of 1. 
+\end{description}
+
+\noindent Test the hypothesis that there is no significant difference between two groups are the same.
+
+\begin{itemize}
+[(i)] Formally state your null and alternative hypotheses.
+[(ii)](4 Marks) Compute the test statistic.
+[(iii)] Discuss your conclusion to this test, supporting your statement with reference to appropriate values.
+\end{itemize}
+
+
+\subsection*{Part B - Inferences for Differences in Proportions (15 Marks)}
+A survey of 1000 Irish indicates that 700 have access to the Internet. A survey of 1200 Czechss
+indicates that 700 have access to the Internet.
+\begin{itemize}
+[(i)]  Provide an estimate of the difference between the population
+	proportions (i.e. $\pi_l -\pi_2$).
+	
+[(ii)] (7 marks) Test the hypothesis that the proportion of all Irish
+	having access to the Internet is equal to the proportion of all Czechs having access to the
+	internet at a significance level of 5%.
+	
+[(iii)] (5 marks) Calculate a 95\% confidence interval for the difference between the proportion of all Irish
+	having access to the Internet and the proportion of all Czechs having access to the
+	internet.
+	
+	
+\end{itemize}
+
+%===============================================================================%
+\newpage
+
+\section*{Question 5. (25 marks) Linear Regression Models and Chi Square Tests }
+\subsection*{Part A - Chi Square Tests (10 Marks)}
+A market research survey was carried out to assess preferences for three brands of chocolate bar, A, B, and C. 
+The study group was categorised by maturity level to determine any difference in preferences. The purpose of this study is to assess differing preferences for brands across age groups.
+
+
+{
+	\begin{center}
+		\begin{tabular}{|c||c|c|c||c|} \hline
+			&	Brand A	&	Brand B	&	Brand C	&	Total	\\ \hline		\hline
+			Children	&	65	&	55	&	30	&	150	\\ \hline	
+			Teenages	&	35	&	75	&	40	&	150	\\ \hline	
+			Adults	&	50	&	20	&	30	&	100	\\ \hline	\hline
+			&	150	&	150	&	100	&	400	\\ \hline	 
+		\end{tabular} 
+	\end{center}
+}
+\begin{enumerate}[(i)]
+  Formally state the null and alternative hypotheses.
+  Compute each of the cell values expected under the null hypothesis. 
+ (4 Marks) Compute the test statistic.
+  State the appropriate critical value for this hypothesis test.
+  Discuss your conclusion to this test, supporting your statement with reference to appropriate values.
+\end{enumerate}
+
+
+
+
+\subsection*{Part B - Linear Regression (15 Marks)}
+
+An experiment was conducted to study the relationship between baking temperature x (in units of 10 degrees Farenheit) and yield y (as percentage) of popular cake mix. Fourteen observations were made giving the following results.
+
+%Temp 10 10.5 11 11.5 12 15 17 19 20 21 23 25 27 30
+
+%Yield 21.2 19.9 22.5 23.7 25 30.3 36.1 38.6 41.5 42.7 45 50 53.9 62.1
+
+
+
+\begin{center}
+	\begin{tabular}{|c||c|c|c|c|c|c|c|}
+		\hline
+		Specimen & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\ \hline
+		\hline
+		Temp &  10.00 & 10.50 & 11.00 & 11.50 & 12.00 & 15.00 & 17.00 \\ \hline 
+		Yield &  29.830&  26.370 & 30.325 &36.100 &33.410 &36.335 & 40.655 \\ \hline 
+		\hline\hline
+		Specimen & 8 & 9 & 10 & 11 & 12 & 13 & 14 \\  \hline
+		Temp &  19.00 & 20.00 & 21.00 & 23.00 & 25.00 & 27.00 & 30.00 \\ \hline
+		Yield &  39.475& 44.555&  42.015 & 47.795 & 45.560&  51.045 & 47.900 \\ \hline 
+		\hline
+	\end{tabular}
+\end{center}
+
+\begin{multicols}{3}
+	\begin{itemize}
+	 $S_{XX} = 570.5$
+	 $S_{YY} =  751.1525$
+	 $S_{XY} = 613.27$
+	 $\bar{X} = 18$
+	 $\bar{Y} = 39.383$
+	\end{itemize}
+\end{multicols}
+\medskip
+\textit{(This question is continued on the next page.)}
+\newpage
+
+\begin{figure}
+\centering
+\includegraphics[width=0.99\linewidth]{images/MA4603-Regression-Repeat}
+\caption{}
+\label{fig:ma4603-regression-repeat}
+\end{figure}
+\medskip
+\begin{enumerate}[(i)]
+	
+  Using the scatter plot, describe the relationship between the yield (Y) and the baking temperature (X).
+	
+	
+	
+	
+	
+ (4 Marks) Calculate the correlation coefficient. Interpret your answer.
+  Calculate the equation of the least squares regression line and interpret the value of the slope.
+  Using this regression model, estimate the yield when the baking temperature is 16 degrees.
+	%	  How much of the variation in yield is explained by fitting the regression line?
+\end{enumerate}
+
+\newpage
+
+
+\section*{Formulae}
+%-------------------------------------------------%
+\subsection*{Descriptive Statistics}
+\begin{itemize}
+ Sample Variance
+	\begin{equation*}
+	s^2 = \frac{\sum (x-\bar{x})^2}{n-1}
+	\end{equation*}
+\end{itemize}
+#################################################################################################
+\subsection*{Confidence Intervals}
+{\bf One sample}
+\begin{eqnarray*} S.E.(\bar{X})&=&\frac{\sigma}{\sqrt{n}}.\\\\
+	S.E.(\hat{P})&=&\sqrt{\frac{\hat{p}\times(1-\hat{p})}{n}}.\\
+\end{eqnarray*}
+{\bf Two samples}
+\begin{eqnarray*}
+	S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}.\\\\
+	S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{\frac{\hat{p}_1\times(1-\hat{p}_1)}{n_1}+\frac{\hat{p}_2\times(100-\hat{p}_2)}{n_2}}.\\\\
+\end{eqnarray*}
+\subsection*{Hypothesis tests}
+{\bf One sample}
+\begin{eqnarray*}
+	S.E.(\bar{X})&=&\frac{\sigma}{\sqrt{n}}.\\\\
+	S.E.(p)&=&\sqrt{\frac{p \times(1-p)}{n}}
+\end{eqnarray*}
+{\bf Two large independent samples}
+\begin{eqnarray*}
+	S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}.\\\\
+	S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{\left(\bar{p}\times(1-\bar{p})\right)\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}.\\
+\end{eqnarray*}
+{\bf Two small independent samples}
+\begin{eqnarray*}
+	S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{s_p^2\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}.\\\\
+	s_p^2&=&\frac{s_1^2(n_1-1)+s_2^2(n_2-1)}{n_1+n_2-2}.\\
+\end{eqnarray*}
+{\bf Paired sample}
+\begin{eqnarray*}
+	S.E.(\bar{d})&=&\frac{s_d}{\sqrt{n}}.\\\\
+\end{eqnarray*}
+{\bf Standard Deviation of case-wise differences (computational formula)}
+\begin{eqnarray*}
+	s_d = \sqrt{ {\sum d_i^2 - n\bar{d}^2 \over n-1}}.\\\\
+\end{eqnarray*}
+\subsection*{Chi Square Tests of Independence}
+\[\chi^2_{TS} =  \sum \frac{(n_{ij} - e_{ij})^2}{e_{ij}}\]
+
+
+
+
+
+\subsection*{Part C - Dixon Q Test (5 Marks)}
+
+	
+	Use the Dixon Q-test to determine if the lowest value is an outlier. You may assume a significance level of 5\%.
+		\[ 11,22,23,24,25,26,29,34\]
+	\begin{itemize}
+	[(i)]	State the null and alternative hypotheses for this test.
+	[(ii)] Compute the test statistic.
+	[(iii)] State the appropriate critical value.
+	[(iv)] What is your conclusion to this procedure.
+	\end{itemize}
+##############################################################################################################
+
+\subsection*{Part A - Normal Distribution (10 Marks)}
+
+\smallskip	
+\noindent Assume that the diameter of a critical component is normally distributed with a mean of 1000mm and a standard deviation of 1.25mm. You are required  to estimate the approximate probability of the following measurements occurring on an individual component.
+\begin{itemize}
+[(i)] Greater than 1001.7mm.
+[(ii)] Less than 998.1mm.
+ [(iii)] Between 998.1mm and 1002.3mm.
+[(iv)]  The production manager reports that more than 99\% of the output is between 997mm and 1003mm. Do you agree with this statement? Justify your answer with the appropriate calculations.
+\end{itemize}
+\medskip
+\noindent Use statistical tables to determine the probabilities for the above exercises. You are required to show all of your workings.
+
+\bigskip
+\subsection*{Part B - Probability (10 Marks)} % Normal %6 MARKS
+A new test has been developed to diagnose a particular disease. If a person has the disease, the test has a 95\% chance of identifying them as having the disease.
+If a person does not have the disease, the test has a 1\% chance of identifying them as having the disease.  Suppose that 5\% of the population have this disease. Suppose we select a person at random from the population.
+
+
+\begin{enumerate}[(i)]
+ (4 Marks) What is the probability that the test will identify them as having the disease?
+	
+  What is the probability that the person has the disease given that the test identifies them as having the disease?
+  What is the probability that the person has the disease given that the test identifies them as \textbf{not} having the disease?
+\end{enumerate}
+
+\subsection*{Part C - Testing Distributional Assumptions (5 Marks)}
+Consider the results of a statistical analysis carried out on sample data for the random variable $X$. These results are presented as output from a statistical computing program.
+
+\begin{itemize}
+[(i)]  What sort of statistical analysis are we carrying out? 
+[(ii)]  What is the relevance of this analysis as part of an overall statistical study.
+[(ii)]  Interpret the output of the Anderson-Darling Test. (\textit{Remark: Use a 5\% significance level. This test is a one-tailed procedure.})
+[(iv)]  What is the conclusion of this analysis for the variable $X$? Justify your answer with reference to 3 separate indications. 
+	
+\end{itemize}
+\noindent (\textit{Computer results continue on the next page.})
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.99\linewidth]{images/NormalityTesting1}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.99\linewidth]{images/NormalityTesting2}
+\end{figure}
+
+\newpage
+
+
+
+
+%=================================================================%
+
+
+\section*{Question 3. (25 marks) Single Sample Inference Procedures }
+\subsubsection*{Part A - Single Sample Inference Procedures (15 Marks)}
+Mean blood iron concentration for children with adequate nutrition is taken to be 110mg/dl. \\ \smallskip
+
+
+\noindent 25 randomly selected children from a disadvantaged urban area were given blood tests. The mean concentration of iron from this sample was 98 mg/dl with a standard deviation of 25.5 mg/dl.
+\begin{itemize}
+[(i)] (4 Marks) Calculate a 95\% confidence interval for the mean concentration of iron for children in this area. 
+[(ii)] Interpret this confidence interval.  Do these results provide evidence that children in this area suffer from iron deficiency? 
+\end{itemize}
+\medskip
+Test this hypothesis using a 5\% level of significance. 
+
+\begin{itemize}
+[(iii)] Clearly state your null and alternative hypotheses.
+[(iv)](4 Marks) Compute the test statistic.
+[(v)] Discuss your conclusion to this test, supporting your statement with reference to appropriate values.
+\end{itemize}
+
+
+\newpage
+
+\subsection*{Part B - Single Sample Proportion (10 Marks)}
+%% Change the Numbers
+
+The conventional treatment for a disease has been shown to be effective in 60\% of all 
+cases. A new drug has been developed by a pharmaceutical company. The Health Service Executive of Ireland
+wishes to determine whether the new treatment is more effective than conventional treatment. 
+A simple random sample of 400 patients are given the new drug. The treatment is effective for 300 of them.
+% You are required to make a recommendation about purchasing the new drug.
+
+
+\begin{itemize}
+[(i)] Compute the 95\% confidence interval.
+%[(ii)] Compute the Test Statistic.
+[(ii)](4 Marks) By interpreting this confidence interval, make a recommendatiion about purchasing the new drug? Explain how you made this decision.
+\end{itemize}
+%======================================================================%
+
+
+
+
+\section*{Question 4. (25 marks) Two Sample Inference Procedures}
+
+\subsection*{Part A - Two Sample $t-$ Test (10 Marks)}
+A test of a specific blood factor has been devised such that, for adults in Western Europe, the test score is normally distributed with mean 100 and standard deviation 10. A clinical research organization is carrying out research on the blood factor levels for sufferers of a particular disease.  
+
+\begin{itemize}
+ A study has obtained the following test scores for 14 randomly selected patients suffering from the disease in Ireland 
+	\[ \{115, 113, 111, 109, 115, 108, 121, 114, 104, 113, 122, 90, 
+	103, 116\}\]
+	
+ A similar study has obtained the following test scores for 15 randomly selected patients suffering from the disease in Germany .
+	\[\{120, 137, 114, 120, 116, 118, 101, 110, 125, 113, 111, 128, 
+	119, 117, 121\}\]
+	
+	\end{itemize}
+	
+		\begin{center}	
+	\begin{tabular}{|c|c|c|c|} \hline 
+		Sample & Mean & Std. Deviation & Sample Size \\  \hline 
+		Ireland & 111 & 8.143 & 14 \\ \hline 
+		Gemany & 118 & 8.350 & 15 \\ \hline
+		\end{tabular} 
+				\end{center}
+You believe that there may be a difference in blood factor levels between the two countries. Test this hypothesis using a 5\% level of significance. 
+\begin{itemize}
+[(i)] Clearly state your null and alternative hypotheses.
+
+[(ii)]  Comput the pooled standard deviation.
+[(iii)] Compute the test statistic.
+[(iv)] Discuss your conclusion to this test, supporting your statement with reference to appropriate values.
+\end{itemize}				
+
+\subsection*{Part B - Paired T Test (15 Marks)}
+In preparation for space exploration, 10 crew members underwent intensive
+ medical examinations pre-flight and post-flight. As part of the examination
+ of the cardiovascular system, the lower body was subjected to a pressure lower
+ than that of the atmosphere by being placed in a chamber, with an airtight
+ seal, connected to a vacuum source. \\ \smallskip
+ 
+\noindent Heart rates, in beats per minute, were
+ recorded when a pressure of 6700 Nm$^{−2}$ below atmospheric had been reached.
+ A simplified version of the results is shown below:
+		\begin{center}
+			
+		
+			\begin{tabular}{|c|c|c|} \hline 
+	Crew   & Heart Rate & Heart Rate \\
+\phantom{spa}	member \phantom{spa}& \phantom{spa}Pre-flight\phantom{spa} & \phantom{spa}Post-Flight \phantom{spa}\\	\hline \hline
+		1 & 79 & 94 \\ \hline
+		2 & 83 & 90 \\ \hline
+		3 & 47 & 56 \\ \hline 
+		4 & 46 & 61 \\ \hline
+		5 & 68 & 67 \\ \hline 
+		6 & 74 & 88 \\ \hline
+		7 & 68 & 64 \\ \hline 
+		8 & 50 & 52 \\ \hline 
+		9 & 59 & 54 \\ \hline 
+		10 & 67 & 65 \\ \hline
+			\end{tabular} 
+		\end{center}
+
+
+Using 5\% significance, test the hypothesis that the overall average heart rate
+in beats per minutes has changed after the flight. 
+\begin{itemize}
+[(i)] Formally state the null and alternative hypotheses.
+[(ii)]  Compute the mean and standard deviation of the case-wise differences.
+[(iii)] Compute the test statistic.
+[(iv)] State the appropriate critical value for this hypothesis test.
+[(v)] Discuss your conclusion to this test, supporting your statement with reference to appropriate values.
+\end{itemize}
+%\subsection*{Part C Testing Equality of Variances (5 Marks)} %4 Marks
+%The standard deviations of data sets \texttt{X} and \texttt{Y} are 10 and 9 respectively. An inference procedure was carried out to assess whether or not \texttt{X} and \texttt{Y} can be assumed to have equal variance.
+%\begin{itemize}
+%[i.] Formally state the null and alternative hypothesis.
+%[ii.] The Test Statistic has been omitted from the computer code output. Compute the value of the Test Statistic.
+%[iii.] What is your conclusion for this procedure? Justify your answer.
+%	%\item[iv.] (1 Marks) Explain how a conclusion for this procedure can be based on the $95\%$ confidence interval.
+%\end{itemize}
+%
+%%---- R code for Variance Test ----%
+%%---- Dummy Code Included                   ----%
+%\begin{framed}
+%	\begin{verbatim}
+%	F test to compare two variances
+%	
+%	data:  X and Y
+%	F = ......, num df = 13, denom df = 11, p-value = 0.7349
+%	alternative hypothesis: true ratio of variances is not equal to 1
+%	95 percent confidence interval:
+%	0.3639938 3.9475262
+%	sample estimates:
+%	ratio of variances
+%	.......
+%	\end{verbatim}
+%\end{framed}
+
+%===============================================================================%
+\newpage
+
+\section*{Question 5. (25 marks) Linear Regression Models and Chi Square Tests }
+
+\subsubsection*{Part A - Chi Square Test of Association (15 Marks)}
+The following contingency table illustrates the levels at which males and females smoke cigarettes. The figures in brackets give the expected number of observations in a cell under the hypothesis that smoking habits are independent of sex.
+
+{
+
+	\begin{center}
+		\begin{tabular}{|c||l|l|l||c|}
+			\hline
+			& Non-smoker&  $<$ 10 per day &  $\geq $ 10  & \phantom{sp}Sum\phantom{sp} \\ \hline
+			
+			Males & 180\phantom{spa} (200)&  60\phantom{spa} (?) & 60 \phantom{spa} (?) & 300\\ \hline
+			
+			Females & 220\phantom{spa} (?) & 60 \phantom{spa}(?)& 20 \phantom{spa} (40) & 300\\ \hline \hline
+			
+			Sum & 400 & 120 & 80& 600\\ \hline
+		\end{tabular} 
+	\end{center}
+	\phantom{spa}
+}
+\medskip
+Test this hypothesis using a 5\% level of significance. 
+
+\begin{enumerate}[(i)]
+\item  What is the probability that a randomly chosen person from the sample smokes more than 10 cigarettes a day? % 
+
+\item  Given that the person chosen is a non-smoker, calculate the probability that this person is a female. %
+
+\item  Replace the question marks with the expected number of observations in a cell under the null hypothesis. %
+\item  Clearly state the null and alternative hypothesis.
+\item (4 Marks) Compute the test statistic for this procedure.
+\item  By interpreting the results of the the chi-squared test for independence, state your conclusions? % 
+\end{enumerate}
+\subsection*{Part B - Simple Linear Regression (10 Marks)}
+
+
+Data on body dimensions such as abdomen, hip and bicep circumference (measured in cm) were obtained from 252 men aged over 25. Their percentage of body fat was also recorded and an investigation carried out to see which body dimension variables have a strong relationship with the percentage of body fat. In this case, we look at abdomen circumference. 
+
+\medskip
+\noindent For this question, you may use the following values.
+\begin{multicols}{3}
+	\begin{itemize}
+	 $S_{XX} = 3514$ \item $S_{YY} = 4769$ \item  $S_{XY} = 3012$ \item $\bar{X} = 50$  \item $\bar{Y} = 100$  
+	\end{itemize}
+\end{multicols}
+\medskip
+\textit{(The question is continued on the next page.)}
+
+
+%\begin{enumerate}
+% Describe the relationship between abdomen circumference and the percentage of body fat (pctfat) using the scatter plot below. 
+%	
+%	
+% The value of the correlation coefficient is 0.813. Interpret this value.
+%	
+%	
+%	
+% The least squares regression line is pctfat = -39.3 +
+%	
+%	0.631 abdomen. Interpret the values of the slope and intercept.
+%	
+%  Use the output from Minitab below to investigate if there is a statistically significant relationship between pctfat and abdomen.
+%	
+%  How much of the variation in the percentage of body fat is explained by
+%	
+%	abdomen circumference? Interpret this value.
+%	
+%	
+%
+%\end{enumerate}
+\newpage
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.99\linewidth]{images/MA4603-Regression}
+
+
+
+\begin{enumerate}[(i)]
+	
+  Using the scatter plot, state the relationship between abdomen circumference (X) and the percentage of body fat (Y) using the scatter plot.
+	
+	
+	
+	
+	
+  Calculate the correlation coefficient. Interpret your answer.
+ (5 Marks) Calculate the equation of the least squares regression line and interpret the value of the slope.
+%  Using this regression model, estimate the body fat when the abdomen circumference is 42cm.
+%  How much of the variation in yield is explained by fitting the regression line?
+\end{enumerate}
+%
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=0.99\linewidth]{images/MA4603-regression-residuals}
+%	\caption{}
+%	\label{fig:ma4603-regression-residuals}
+%\end{figure}
+
+
+
+
+
+
+
+
+%=============================================================%
+
+
+\newpage
+
+\section*{Formulae}
+%-------------------------------------------------%
+\subsection*{Descriptive Statistics}
+\begin{itemize}
+ Sample Variance
+	\begin{equation*}
+	s^2 = \frac{\sum (x-\bar{x})^2}{n-1}
+	\end{equation*}
+\end{itemize}
+
+
+\subsection*{Confidence Intervals}
+{\bf One sample}
+\begin{eqnarray*} S.E.(\bar{X})&=&\frac{\sigma}{\sqrt{n}}.\\\\
+	S.E.(\hat{P})&=&\sqrt{\frac{\hat{p}\times(1-\hat{p})}{n}}.\\
+\end{eqnarray*}
+{\bf Two samples}
+\begin{eqnarray*}
+	S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}.\\\\
+	S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{\frac{\hat{p}_1\times(1-\hat{p}_1)}{n_1}+\frac{\hat{p}_2\times(100-\hat{p}_2)}{n_2}}.\\\\
+\end{eqnarray*}
+\subsection*{Hypothesis tests}
+{\bf One sample}
+\begin{eqnarray*}
+	S.E.(\bar{X})&=&\frac{\sigma}{\sqrt{n}}.\\\\
+	S.E.(p)&=&\sqrt{\frac{p \times(1-p)}{n}}
+\end{eqnarray*}
+{\bf Two large independent samples}
+\begin{eqnarray*}
+	S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}.\\\\
+	S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{\left(\bar{p}\times(1-\bar{p})\right)\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}.\\
+\end{eqnarray*}
+
+{\bf Two small independent samples}
+\begin{eqnarray*}
+	S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{s_p^2\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}.\\\\
+	s_p^2&=&\frac{s_1^2(n_1-1)+s_2^2(n_2-1)}{n_1+n_2-2}.\\
+\end{eqnarray*}
+{\bf Paired sample}
+\begin{eqnarray*}
+	S.E.(\bar{d})&=&\frac{s_d}{\sqrt{n}}.\\\\
+\end{eqnarray*}
+{\bf Standard Deviation of case-wise differences (computational formula)}
+\begin{eqnarray*}
+	s_d = \sqrt{ {\sum d_i^2 - n\bar{d}^2 \over n-1}}.\\\\
+\end{eqnarray*}
+\subsection*{Chi Square Tests of Independence}
+\[\chi^2_{TS} =  \sum \frac{(n_{ij} - e_{ij})^2}{e_{ij}}\]
+
+
+
+
+

@@ -1,0 +1,391 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{graphicx}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{subfiles}
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{amsthm, amsmath}
+\usepackage{amsbsy}
+\usepackage{framed}
+\usepackage[usenames]{color}
+\usepackage{listings}
+\lstset{% general command to set parameter(s)
+	basicstyle=\small, % print whole listing small
+	keywordstyle=\color{red}\itshape,
+	% underlined bold black keywords
+	commentstyle=\color{blue}, % white comments
+	stringstyle=\ttfamily, % typewriter type for strings
+	showstringspaces=false,
+	numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, %
+	frame=shadowbox,
+	rulesepcolor=\color{black},
+	,columns=fullflexible
+} %
+%\usepackage[dvips]{graphicx}
+\usepackage{natbib}
+\usepackage{epstopdf}
+\bibliographystyle{chicago}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.5}
+\pagenumbering{arabic}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{ill}[theorem]{Example}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{notation}{Notation}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+\renewcommand{\thenotation}{}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+%\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\title{Research notes: linear mixed effects models}
+\author{ } \date{ }
+
+
+\begin{document}
+\begin{enumerate}
+\item Express each of the following in the form $a + $: 
+\begin{multicols}{2}
+\begin{enumerate}[(i)]
+\item  (3 + 2i) -4 (5 i) 
+\item  (6 - i) + (4 - 31) 
+\item  (-2 t 3i) + (6 - 41) 
+\item  (-2 - 1) -r (-1 + 7i) 
+\item  61+ (3 + 
+\item  (a 4- ib)+ (c + id) 
+\end{enumerate}
+\end{multicols}
+\item Simplify each of the following: 
+\begin{multicols}{2}
+\begin{enumerate}[(i)]
+\item (2 - 61) - (1 + 
+\item (3 6i) - (2 + 4i) 
+\item (2 - i) - ( I + 4i) 
+\item 3 - (2 4i) 
+\item (6 - 21) - 4
+\end{enumerate}
+\end{multicols}
+%(a+ ib) - (2 - 31) 
+
+\item  Express in the form $a + ib$: 
+\begin{multicols}{2}
+\begin{enumerate}[(i)]
+\item (3 + i)(2 + 41) 
+\item (1 - i)(2 + 3i) 
+\item  (2 - i)(3 + 21) 
+\item (2 + 3i)(2 - 3i) 
+\item (1 - 402 (2 + 6. 
+\end{enumerate}
+\end{multicols}
+
+\item  If z1 = 3 - i, z2 1 + 2i and z3 - -2i, express in the form a+ ib: \begin{multicols}{2}
+\begin{enumerate}[(i)]
+\item 3z1 
+\item z1 - z3 
+\item 2z1 + z2 
+\item 2z2 + z3 \item -2z2 
+\item iz2 
+\item 2z1 + iz3 
+\item i(z2.z3) 
+\end{enumerate}
+\end{multicols}
+
+\item  If z = -3 + 5i, find (1) z (ii) 8. Express the following in the form x + iy: 1 2 +. i 3 + 2/  (i) 2 - 3i (ii) 1 2i (iii) 2 - 3i 
+2i  3 - 2i (iv) 27--F (ir) - 9. If z = 1 + V3 , find z 2. 3 Hence verify that (-12- + i V3) 2 10. If z, = 2 - 5i and z2 = 1 - 4i, express in the form a - ib: 1 (i) z1 + z2 (ii) z,z2(iii) (iv) ii,z2 ,  
+2 - 3i (vi) 2 + 
+\item  If $z = 3 - i$, express z + 1-z in the form $a + ib$. 
+\item  If z = x + iy, prove that Re(z) = 1 1 (z + I) and Im(z) = (z - i) \item  (i) Evaluate 1 + 3/2 + /7 (ii) Given that (2 + 3i)z = 4 - i, find the complex number z in the form a + ib. 
+
+\item  Show that (cos 0 + i sin 0)2 = cos 20 + i sin 20. .. 1 - 15. Express (i) 1 + i TT-, and (ii) in the form a + ib. Hence, or otherwise, find k if 1+ i = , 1-i 1 + 1 
+\item i Ar3- Express - -1 +  in the form a+ ib, where a and b are real numbers. -1 - /-0 
+\end{enumerate}
+%====================%
+write down 
+
+331 
+\begin{enumerate}
+\item 
+
+2. Solve these equations, giving the roots in the form a + ib. (i) z2 —2z +17 = 0 (ii) z2 + 4z + 7 = 0. 3. If z = x + iy, verify that (i) z + z = 2 Re(z) 4. If z = x + iy, verify that (i) z, — z2 = — (ii) z112 = 2i Im(z,i2) - (iii) Re(z,12)= 2(z,z2 + z,z2) 
+(ii) 142 = z. 
+\item Show that 1 + i is a root of the equation z3 — 4z2 + 6z 4 =0 and find the other two roots. 
+\item Form the quadratic equation whose roots are $—2 \pm i$. Now show that —2 + i is a root of the equation z3 + z2 — 7z — 15 = 0 and find the other roots. 
+\item Form the quadratic equation whose roots are —3 ± 2i. Hence form the cubic equation whose roots are —3 ± 2i and 1. S. 
+\begin{enumerate}[(a)]
+\item Form the quadratic equation, one of whose roots is 3 —1.
+\item Form the cubic equation, two of whose roots are 2 and —1 + i.  
+\item Find the real root of the equation z3 + z + 10 = 0, given that one root is 
+\end{enumerate}
+1 2i 
+1 i 2 . is 
+\item . s a root of the quadratic equation axe bx + 5 = 0, where $a,b \in R$. 1 Find the values of a and b. 
+\item Verify that 2i is a root of the equation x4 + 2x3 + 7x2 + 8x + 12 = 0 and find the other roots.
+\item Factorise z3 • 1 and hence solve the equation z3 — 1 = 0, giving the complex roots in the form a ib. 
+If the complex roots are a and /3, verify that a2 = 13. If 2 + i is a root of the equation z3 + az2 + bz + 10 = 0, find the values of a and b given that the product of the three roots is —10. 
+\item 14.,. Explain why the roots of the equation z1 — (3+21)z +1+3i = 0 do not occur in conjugate pairs. 
+Now use the formula z —  b — 4ac 2a equation in the form a I ib. 
+to express the roots of the given 
+
+\end{enumerate}
+%====================%
+
+%%- http://qmplus.qmul.ac.uk/pluginfile.php/990096/mod_resource/content/1/tutorial9.pdf
+\begin{enumerate}
+\item Simplify the following:
+\begin{multicols}{2}
+\begin{itemize}
+	\item[(i)]  $i^2$
+	\item[(ii)]  $i^5$
+	\item[(iii)]  $3i$
+	\item[(iv)]  $i^13$
+\end{itemize}
+\end{multicols}
+\item Evaluate the following:
+\begin{multicols}{2}
+\begin{enumerate}[(i)]
+	\item $(2 + 3i) + (5 + 7i)$,
+	\item $(2 + 3i) − (5 + 7i)$,
+	\item $(2 + 3i)(2 − 3i)$,
+	\item $(3 − 5i)^3$
+	,
+	\item ${\displaystyle \frac{3 − 5i}{	−1 − 2i} }$
+
+
+\end{enumerate}
+\end{multicols}
+
+
+\item For each part of question 2, draw the complex numbers on an Argand diagram, and express in
+the form $re^{i\theta}$
+
+\item Evaluate $(-2 - 5i)(3- 2i)$.
+\item Evaluate $(6 - 2i)(1 - i)(2 - 2i)$.
+\item Evaluate 
+${\displaystyle \frac{1}{i} \times \frac{6-2i}{1-i} }$
+
+
+.
+\item Express $z = e^{2+i(\pi/4)}$ in the form a + bi.
+\item Express $3 - 2i$ in polar form.
+\item Find the square roots of \[z = 4(cos π
+3 + isin π
+3
+)\], and draw these on an Argand diagram. Identify
+the principal root.
+\item For $z = 3(cos \pi/6 + isin \pi/6)$, calculate z
+4
+in polar form.
+\item For $z = 3 - 2i$, find the five roots $z^{1/5}$
+, and plot these on an Argand diagram indicating the
+principal root.
+
+
+\item Find the values of $x$, $y$ (both real) which satisfy the equation \[ x(x + y) + x − yi = −1 − 3i\].
+\item Two competing “\textit{probability amplitudes}” A1 and A2 for a quantum mechanical transition from
+some initial state |ii to some final state |fi are given by
+$A1 = aei\psi1$,$ A2 = bei\psi2$
+.
+and the total probability amplitude (A) for the process is given by A1 + A2. Given that the probability
+for a process is given by AA∗
+, calculate the probability for the transition from |ii to |fi.
+Using this, calculate the probability if $\psi1 = \psi2$.
+
+
+\end{enumerate}
+
+%%- http://tutorial.math.lamar.edu/Classes/Alg/ComplexNumbers.aspx
+
+\begin{enumerate}
+
+\item  Perform the indicated operation and write the answers in standard form.
+\begin{itemize}
+\item[(i)] 
+\item[(ii)] 
+\item[(iii)] 
+\end{itemize}
+
+
+\item   Multiply each of the following and write the answers in standard form.
+\begin{itemize}
+\item[(i)]    
+\item[(ii)]    
+\item[(iii)]    
+\item[(iv)] 
+\end{itemize}
+   
+\item  Write each of the following in standard form.
+\begin{itemize}
+\item[(i)]    
+\item[(ii)]    
+\item[(iii)]    
+\item[(iv)]    
+\end{itemize}
+
+\end{enumerate}
+
+%============================================================%
+
+Exercises[edit]
+$(7 + 2i) + (11 - 6i) =$
+$(8 - 3i) - (6i) =$
+$(9 + 4i)(3 - 16i) =$
+$3i {\displaystyle \times } \times  9i =$
+
+${\displaystyle {\frac {i}{2+i}}=} {\displaystyle {\frac {i}{2+i}}=}$
+
+${\displaystyle {\frac {11+3i}{{\sqrt {3}}-4i}}=} {\displaystyle {\frac {11+3i}{{\sqrt {3}}-4i}}=}$
+
+${\displaystyle {(x+yi)}^{-1}=} {\displaystyle {(x+yi)}^{-1}=}$
+Answers[edit]
+18 - 4i
+8 - 3i - 6i = 8 - 9i
+27 - 144i + 12i - 64i2 = 91 - 132i
+-27. $( {\displaystyle i\times i=i^{2}=-1} {\displaystyle i\times i=i^{2}=-1})$
+
+${\displaystyle {\frac {i}{2+i}}\times {\frac {2-i}{2-i}}={\frac {1+2i}{5}}={\frac {1}{5}}+{\frac {2}{5}}i} {\displaystyle {\frac {i}{2+i}}\times {\frac {2-i}{2-i}}={\frac {1+2i}{5}}={\frac {1}{5}}+{\frac {2}{5}}i}$
+
+${\displaystyle {\frac {11+3i}{{\sqrt {3}}-4i}}\times {\frac {{\sqrt {3}}+4i}{{\sqrt {3}}+4i}}=} {\displaystyle {\frac {11+3i}{{\sqrt {3}}-4i}}\times {\frac {{\sqrt {3}}+4i}{{\sqrt {3}}+4i}}=}$
+
+${\displaystyle {\frac {11{\sqrt {3}}+44i+3i{\sqrt {3}}+12i^{2}}{3+16}}=}$ ${\displaystyle {\frac {11{\sqrt {3}}+44i+3i{\sqrt {3}}+12i^{2}}{3+16}}=}$
+
+${\displaystyle {\frac {(11{\sqrt {3}}-12)+(44i+3i{\sqrt {3}})}{19}}=}$ ${\displaystyle {\frac {(11{\sqrt {3}}-12)+(44i+3i{\sqrt {3}})}{19}}=}$
+
+${\displaystyle {\frac {11{\sqrt {3}}-12}{19}}+{\frac {44+3{\sqrt {3}}}{19}}i}$ 
+${\displaystyle {\frac {11{\sqrt {3}}-12}{19}}+{\frac {44+3{\sqrt {3}}}{19}}i}$
+
+
+Recall that ${\displaystyle x^{-1}={\frac {1}{x}}} {\displaystyle x^{-1}={\frac {1}{x}}}$ can be seen as the division of two complex numbers:
+
+${\displaystyle {(x+yi)}^{-1}={\frac {1}{x+yi}}\times {\frac {x-yi}{x-yi}}=} {\displaystyle {(x+yi)}^{-1}={\frac {1}{x+yi}}\times {\frac {x-yi}{x-yi}}=}$
+
+${\displaystyle {\frac {x-yi}{x^{2}-y^{2}i^{2}}}={\frac {x}{x^{2}+y^{2}}}-{\frac {y}{x^{2}+y^{2}}}i} {\displaystyle {\frac {x-yi}{x^{2}-y^{2}i^{2}}}={\frac {x}{x^{2}+y^{2}}}-{\frac {y}{x^{2}+y^{2}}}i}$
+%====================================================================%
+\newpage
+MA4604: Science Maths 4, Homework Week 1
+\begin{enumerate}
+\item Write each of the complex numbers below in the form a + ib, that is simplify each
+expression to find the real numbers a and b.
+\begin{multicols}{2}
+\begin{itemize}
+\item[(a)] (3 + 8i) + (2i - 6) - (-5 + i) \item[(b)] (3 - i)(5 + 6i) \item[(c)] (1 + i)(2 − 5i)(7 + 3i)
+\item[(d)] $ {\displaystyle \frac{3 − 4i}{2 − i} } $
+
+\item[(e)] $ {\displaystyle \frac{5 − i}{2 − 3i} } $ 
+
+\item[(f)] $ {\displaystyle \frac{2 + 4i}{i(1 − i)} } $ 
+
+\end{itemize}
+\end{multicols}
+\item Find the real number(s) t that makes each expression below real:
+\item[(a)] (4 + 6i)(3i)(t + 6i) \item[(b)] i(t + 4i)
+2
+\item[(c)] 5 − 10i
+4i + t
+.
+\item Solve the complex equation 2z + i$\bar{z}$ = 5 + 4i (hint: write z = x + iy).
+\item Find all the roots of, and hence factorise fully, each given polynomial:
+
+\begin{multicols}{2}
+\begin{itemize}
+\item[(a)] x
+2 − 8x + 25 \item[(b)] z
+2 + (4 + 3i)z + 14 + 6i \item[(c)] x
+4 − 16 \item[(d)] x
+3 + 8.
+\end{itemize}
+\end{multicols}
+\item Given that x = 1 + 4i is a root of the quartic polynomial x
+4 + 13x
+2 + 34x, find the other
+three roots and write it as a product of linear factors.
+\item Plot each of the given complex numbers in an Argand diagram:
+
+\begin{multicols}{3}
+\item[(a)] 2 + i \item[(b)] −1 + 3i \item[(c)] −2i \item[(d)] −2 − 2i
+\item[(e)] 26
+%\pi 4
+\item[(f)] 46
+% \pi
+% 2
+\item[(g)] 36
+% \pi
+% 3
+% \item[(h)] 56 \pi
+% \item[(i)] 4 e− i\pi4 
+% \item[(j)] 2e− i\pi
+% 2 
+% \item[(k)] 3 e4i\pi3 
+% \item[(l)] √3 e5i\pi3 .
+\end{multicols}
+\item Write each of the complex numbers in Q.6 
+\item[(e)] through (l) in the form x + iy, that is
+convert them from polar or exponential form to standard form.
+\end{enumerate}
+
+
+
+\newpage
+%============================================================================%
+MA4604: Science Maths 4, Homework Week 2
+\begin{enumerate}
+\item Write each of the complex numbers below in polar form $r(\cos \theta +  i \sin \theta)$ and in exponential form $re^{i\theta}$
+(hint: first find r = |z| and $\theta = arg(z)$):
+\begin{multicols}{2}
+\begin{enumerate}[(i)]
+	\item z = -2 \item z = -5i \item z = 3 - 3i \item z = -3 - 3i.
+\end{enumerate}
+\end{multicols}
+
+\item For each complex number given below in exponential form reiθ, find its absolute value |z|
+and its argument Arg(z); express z in the form $x + iy$:
+%\item[(a)] 3 e
+%i\pi
+%2 \item[(b)] 2 e
+%i\pi
+%3 \item[(c)] 4 e
+%− i\pi
+%4 \item[(d)] 6 e
+%2i\pi \item[(e)] 5 e
+%−i\pi
+.
+\item Use de Moivre’s theorem to simplify the given powers: \item[(a)] (1 + i)
+20 \item[(b)] (1 + i
+√
+3)12
+.
+\item Use de Moivre’s theorem with n = 3 to write cos(3θ) in terms of cos θ and to write sin(3θ)
+in terms of sin θ (hint: you’ll also need to use the fact that cos2
+θ + sin2
+θ = 1).
+\item Find the twelve twelfth roots of unity in exponential and in Cartesian form.
+\item By first writing the given number in complex exponential form, evaluate each of the
+following in Cartesian form:
+
+\begin{multicols}{2}
+\begin{enumerate}[(i)]
+\item[(a)] all cube roots of 27; \item[(b)] all cube roots of -64;
+\item[(c)] all cube roots of -64i; \item[(d)] all fourth roots of 81; \item[(e)] all fourth roots of -4;
+\item[(f)] all square roots of -9i.
+\end{enumerate}
+\end{multicols}
+
+\end{enumerate}
+\end{document}

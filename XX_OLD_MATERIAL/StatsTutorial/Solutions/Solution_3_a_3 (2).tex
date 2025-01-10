@@ -1,0 +1,29 @@
+Question 4
+
+
+\begin{verbatim}
+Events 
+A components from supplier A  	P (A) = 0.8 
+B components from supplier B  	P (B) = 0.2 
+F = resistor fails test
+
+1\% Probability of a Failure given that component is from Supplier A.      P(F|A) = 0.01
+3\% Probability of a Failure given that component is from Supplier B.      P(F|B) = 0.03
+
+\end{verbatim}
+Probability of flaw : P(F)
+Failed resistors either come from A or B
+\[	P( F) =  P ( F \mbox{ and } A)  +  P( F \mbox{ and } B)\]
+Use conditional Probability  rule		
+\[P(F) = P(F|A)\times P(A)  + P(F|B)\times P(B)\]
+
+\[P(F)  =  ( 0.01 x 0.8 ) + ( 0.03 x 0.2) = (0.008) + (0.06) = 0.014	\]
+	Answer 1.4%
+
+Part ii
+Given that a component failed, what was the probability of coming from A
+P(A|F) 
+
+P(A|F) = P(A and F)  / P(F)		We found P(A and F) earlier ; 0.008
+
+P(A|F) = 0.008/0.014 =  0.57			[answer : 57%]

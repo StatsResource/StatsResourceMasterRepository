@@ -1,0 +1,170 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MathsResource} \chead{Probability} \rhead{Tutorial Sheets} %\input{tcilatex}
+\begin{document}
+%================================================================================%
+
+\begin{enumerate}
+%=================================================================================%
+%%- RSS HC2 - 2014 Question 3
+\item The probability that a given character is miscopied when I send an email is 0.001, independently of all other characters.
+\begin{enumerate}[(a)]
+\item If I send an email of 2000 characters, state
+\begin{enumerate}[(i)]
+\item  the exact distribution,
+\item a suitable approximate distribution,
+\end{enumerate}
+for the number, X, of miscopied characters. Use the approximate distribution to find $P(X = 0)$ and $P(X > 2)$.
+
+\item If I send a second email, consisting of 3000 characters and independent of the first, state corresponding approximate distributions
+\begin{enumerate}[(i)]
+\item for the number, Y, of miscopied characters in the second email,
+\item for the total number, Z, of miscopied characters in the two emails combined.
+\end{enumerate}
+Use this distribution of Z to find $P(Z = 4)$ and then use the approximate distributions of X, Y and Z to find the conditional probability $P(X = 2 | Z = 4)$.
+
+\item In the course of a week I send 50 emails, all independent and consisting of 100000 characters in total. State
+\begin{enumerate}[(i)]
+\item the exact distribution,
+\item a suitable approximation,
+\end{enumerate}
+for the total number, W, of miscopied characters. Use the approximate distribution to find $P(W > 115)$.
+
+\end{enumerate}
+%====================================================================%
+%%-- RSS HC2 -- 2013 - Question 3
+\item The random variable X has the binomial distribution with probability mass function
+
+\[ p(x) = \frac{6!}{x!(6-x)!}  \left( \frac{2}{5}\right) ^{x}  \left( \frac{3}{5}\right) ^{6-x}, \]
+
+where $x =\{0,1,2,3\ldots,6\}$.
+
+\begin{enumerate}
+\item Derive E(X) and Var(X).
+\item Find $P(X \leq 1)$
+\begin{itemize}
+\item[(a)] exactly,
+\item[(b)] by using a Normal approximation with a suitable continuity correction.
+\end{itemize}
+
+\item State circumstances under which a Normal approximation to the binomial distribution might be useful, and comment on your results.
+\item Let $\bar{X}$ be the mean of a random sample of size 400 taken from the distribution of X. Calculate $Var(X)$, and use a Normal approximation to the distribution of $\bar{X}$ to find $P(2.35< \bar{X} \leq 2.45)$. State with a reason whether or not you would expect your answer to be a good approximation to the exact probability.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%- RSS -  HC2 - Question 1
+\item  The random variable X has the binomial distribution with probability mass function
+$$ {\displaystyle \Pr(X=x)={2 \choose x}p^{x}(1-p)^{2-x}} $$ where $x = \{0, 1, 2\}$ and $0 < p < 1$.
+
+
+\begin{enumerate}[(a)]
+\item Write down $E(X)$, $Var(X)$ and $P(X = 2)$ in terms of the parameter $p$. Also find $P(X = 0 | X < 2)$ and $P(X = 1 | X < 2)$, simplifying your answers as far as possible.
+
+\item Let $Y = X_1 + X_2 + \ldots + X_{100}$ be the sum of 100 independent random variables, each distributed as X.
+\begin{enumerate}[(i)]
+\item Explain why Y has the $B(200, p)$ distribution.
+
+\item Use a suitable approximation to find $P(Y > 140)$ when $p = 2/3$.
+\item Use a suitable approximation to find $P(Y > 2)$ when $p = 0.02$.
+
+\item Use a suitable approximation to find $P(Y \leq 197)$ when $p = 0.98$.
+\end{enumerate}
+\end{enumerate}
+
+%===================================================================%
+%%- RSS - HC2 - 2010 - Queston 2
+\item XYZ airline operates a baggage weight allowance of 25 kg per passenger. Check-in records show that the actual weight, W kg, of a randomly chosen passenger's baggage can reasonably be assumed to be Normally distributed with mean 24 and variance 1.
+\begin{enumerate}[(a)]
+\item Find $P(W > 25)$.
+
+\item  A passenger with baggage weighing more than 25 kg is charged £5 for each kg by which the weight of his or her baggage exceeds 25 kg, all fractions of a kg being rounded up to the next whole number.
+
+\begin{enumerate}[(i)]
+\item If $C$ denotes the excess baggage charge in £ for a randomly chosen passenger, find the probabilities $P(C = 0)$, $P(C = 5)$ and $P(C = 10)$.
+\item Given that $P(C = 15) = 0.0013$ approximately and that $P(C > 15)$ is negligible, find $E(C)$ and $Var(C)$.
+\item Assuming that 100 000 passengers independently fly with XYZ in a year, write down the mean and variance of CT, the total excess baggage costs paid to XYZ in a year. Use a Normal approximation to find the value of CT which is exceeded with probability 0.05.
+\item Comment briefly on the assumptions made in your calculations in part (iii).
+\end{enumerate}
+\end{enumerate}
+%================================================================%
+%% RSS - HC2 - 2009 or 2010 
+\item A blended wine is intended to comprise two parts of Sauvignon to one part of Merlot.
+The amounts dispensed to make up a nominal 75cl bottle of this wine are X cl of
+Sauvignon and Y cl of Merlot, where X and Y are assumed to be independent Normally
+distributed random variables with respective means 52 and 26 cl and respective
+variances 1 and 0.5625.
+\begin{enumerate}[(a)]
+\item Find the probability that the actual volume of wine dispensed into a bottle is
+less than the nominal volume.
+\item  Find the distribution of X – 2.2Y, and use this distribution to find the
+probability that the ratio of Sauvignon to Merlot is greater than 2.2. By a
+similar method, find the probability that this ratio is less than 1.8. Hence state
+to three decimal places the probability that the ratio of Sauvignon to Merlot in
+a randomly chosen bottle differs from 2 to 1 by more than 10%.
+
+\item Based on your final answer to part (b), and assuming that bottles are filled
+independently, write down
+\begin{enumerate}[(i)]
+\item the exact distribution, 
+\item a suitable
+approximation,
+\end{enumerate} for the number of bottles in a thousand in which the ratio of
+Sauvignon to Merlot differs from 2 to 1 by more than 10\%. Hence find the
+approximate probability that there are 10 or more bottles in a consignment of
+1000 in which the ratio of Sauvignon to Merlot differs from 2 to 1 by more
+than 10\%, giving your answer to three decimal places.
+\end{enumerate}
+
+
+%============================================================================%
+
+\item A coin has probability $p$ of showing heads and probability $1 − p$ of showing tails when it is tossed, independently each time.
+Let X be the random variable denoting the number of times the coin shows heads when it is tossed n times.
+\begin{enumerate}[(a)]
+\item Show that
+
+\[{\displaystyle \Pr(X=x)={n \choose x}p^{x}(1-p)^{n-x}}\]
+
+making clear all the steps of your reasoning. Under what conditions can the distribution of X be approximated by a Normal distribution?
+
+
+
+\item A student uses the Normal approximation to approximate $P(X \leq 3)$ when $n = 20$ and $p = 0.2$. Calculate the answer he should obtain, use tables of the exact distribution of X to compute the percentage error in the answer, and comment briefly.
+
+
+
+\item For integer $x \geq 1$, let N be the random variable denoting the number of tosses of the coin needed to obtain $x$ heads. Show from first principles that
+
+
+\[{\displaystyle \Pr(N=n)={n-1 \choose x-1}p^{x}(1-p)^{n-x}}\]
+
+where $n = x,x+1,x+2, \ldots$.
+\item Evaluate this probability for the case p = 0.2, x = 3 and n = 20, and compare your result with the exact $P(X = 3)$ for the binomial distribution with the same values of $p$, $x$ and $n$.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

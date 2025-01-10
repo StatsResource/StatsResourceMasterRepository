@@ -1,0 +1,121 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{multicol}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MathsResource} \chead{Operations Research} \rhead{Integer Programming} %\input{tcilatex}
+\begin{document}
+\subsection*{Integer Programming:  Branch and Bound}
+An integer programme (IP) is to be solved using the tabular Branch and Bound method:
+  
+  \begin{framed}
+
+
+Maximize p = 7x + 9y
+
+\medskip
+
+subject to
+\medskip
+
+
+\begin{tabular}{cl}
+	
+
+	
+	
+	\phantom{space}
+
+
+	& 2x-y $\leq$\; 40\\
+	
+	& 2x + 3y $\leq$\; 90\\
+
+	
+	& x,y $\geq$\; 0\\
+	
+	& x,y are integers\\
+	
+	
+	
+\end{tabular}
+\end{framed}
+
+
+\noindent Use the solution grids on the next page to solve the problem. 
+\bigskip  
+\noindent Each node is referenced by its tree level, and ordered alphabetically from left to right so that the annotation {\bf Node XY} is the node at level {\bf X} at position {\bf Y} where ${\bf Y}=A$ is the left-most position in level {\bf X}, ${\bf Y}=B$ is the second left-most position in level {\bf X}, and so on.%\marks{25\%}
+\newpage
+
+  \begin{tabular}{||c|l||c|l||c|l||}
+  	\hline  & Node 0 &   & Node 1A &  & Node 1B     \\  \hline
+  	\hline (i) & $X= 17.45$, $Y= 4.50$ & (i) & $X= 15.00$, $Y= 11.50$ &  (i)  & $X= 16.00$, $Y  = 5.50$\\  \hline
+  	\hline (ii)  & $X= 18.00$, $Y= 5.58$  &  (ii) & $X= 18.00$, $Y= 4.00$ & (ii) & $X= 15.50$, $Y  = 6.00 $ \\  \hline
+  	\hline (iii) & $X= 16.41$, $Y  = 5.50$  & (iii) & $X= 17.00$, $Y  = 5.58$ & (iii) & $X= 17.00$, $Y  = 6.00$ \\  \hline
+  	\hline (iv)  & $X= 15.58$, $Y =4.82 $  &  (iv) & $X= 16.00$, $Y  = 5.00 $ & (iv)  & $X= 17.50$, $Y= 5.00$\\  \hline
+  \hline (v) & $X= 18.45$, $Y= 6.50$ & (v)  & $X= 17.50$, $Y= 7.00$ & (v) & $X= 16.00$, $Y= 6.80$\\  \hline & & & & & \\
+  	\hline 
+  	%	\end{tabular} 
+  	%	
+  	%	\begin{tabular}{||c|c||c|c||c|c||}
+  	\hline  & Node 2A &   & Node 2B &  & Node 2C  \\  \hline
+  	\hline (i) & $X= 15.50$, $Y= 11.50$ & (i)  & $X= 15.00 $, $Y  = 5.50 $  & (i)  & $X= 14.00$, $Y = 14.00$\\  \hline
+  	\hline (ii)  & $X= 15.50$, $Y= 5.82$  &  (ii) &$X= 15.82$, $Y= 5.58$ & (ii) & $X= 16.00$, $Y  = 6.82 $ \\  \hline
+  	\hline (iii) & $X= 15.20  $, $Y = 11.50 $  &  (iii) &$X= 15.82 $, $Y  = 5.82 $ &  (iii) & $X= 15.50$, $Y  = 5.50$ \\  \hline
+  	\hline (iv)  & $X= 15.58$, $Y  = 5.82 $  & (iv) & $X= 15.82 $, $Y  = 5.50 $ & (iv)  & $X= 15.00$, $Y  = 6.82$\\  \hline
+  	\hline (v) & $X= 15.41 $, $Y  = 5.00 $ & (v) & $X= 15.50$, $Y= 5.82$  &(v) & $X= 15.00$, $Y= 4.00$\\  \hline & & & & & \\
+  	\hline 
+  	%		
+  	%	\end{tabular} 
+  	%	
+  	%	\begin{tabular}{||c|l||c|l||c|l||}
+  	\hline  & Node 2D &   & Node 3A &  & Node 3B   \\  \hline
+  	\hline (i) & $X= 15.00$, $Y= 5.00$ &  (i) & $X= 15.82$, $Y= 5.50$  & (i)  & $X= 15.50$, $Y= 10.50$\\  \hline
+  	\hline (ii)  & $X= 18.00$, $Y  = 6.00$  &  (ii) & $X= 15.50$, $Y= 5.50$ & (ii) & $X= 15.41$, $Y= 5.82$ \\  \hline
+  	\hline (iii) & $X= 17.00$, $Y= 5.00$  & (iii) & $X= 15.50$, $Y =12.82 $ &(iii) & $X= 15.41$, $Y= 5.66$ \\  \hline
+  	\hline (iv)  & $X= 16.00$, $Y= 6.20$  & (iv) & $X= 15.41$, $Y = 11.66 $ & (iv)  & $X= 15.00$, $Y= 5.50$\\  \hline
+  \hline (v) & $X= 15.00$, $Y= 5.00$ & (v) & $X= 15.00$, $Y= 5.82$  &(v) & $X= 15.00$, $Y= 5.82$\\  \hline% 
+  & & & & & \\
+  	%\hline 
+  	%	\end{tabular} 
+
+  	\hline  & Node 3C &   & Node 3D &  & Node 3E  \\  \hline
+  	\hline (i) & $X= 15.50$, $Y= 5.50$ &  (i) & $X= 15.00$, $Y  = 5.00$  & (i)  & $X= 15.00$, $Y= 5.50$\\  \hline
+  	\hline (ii) & $X= 15.82$, $Y= 5.82$  & (ii) & $X= 15.00$, $Y =11.00 $ &(ii) & $X= 15.00$, $Y= 4.00$ \\  \hline
+  	\hline (iii)  & $X= 15.50$, $Y= 5.41$  & (iii) & $X= 13.00$, $Y = 10.00$ & (iii)  & $X= 17.00$, $Y= 4.82$\\  \hline
+  	\hline (iv)  & $X= 15.41$, $Y  = 6.00$  &  (iv) & $X= 15.41$, $Y  = 5.82$ & (iv) & $X= 15.00$, $Y= 5.00$ \\  \hline
+  	\hline (v) & $X= 15.00$, $Y= 5.00$ & (v) & $X= 15.00 $, $Y= 6.50$  &(v) & $X= 14.00$, $Y= 4.00$\\  \hline & & & & & \\
+  	\hline 
+  	%		
+  	%	\end{tabular} 
+  	%	
+  	%	\begin{tabular}{||c|c||c|c||c|c||}
+  	\hline  &  Node 3F &  & Node 3G &   & Node 3H \\  \hline
+  	\hline (i) & $X= 13.0$, $Y= 6.00$ & (i) & $X= 15.00$, $Y  = 6.50$  & (i)  & $X= 15.50$, $Y= 5.50$\\  \hline
+  	\hline (ii)  & $X= 14.00$, $Y = 14.00$  & (ii) & $X= 15.50 $, $Y= 4.50$ & (ii) & $X= 15.50$, $Y = 15.20$ \\  \hline
+  	\hline (iii) & $X= 12.00$, $Y = 16.00 $   & (iii) & $X= 15.50$, $Y= 6.20$ &(iii) & $X= 15.50$, $Y= 4.50$ \\  \hline
+  	\hline (iv)  & $X= 15.82$, $Y= 4.00$  & (iv) & $X= 14.82$, $Y= 6.20$ & (iv)  & $X= 15.00 $, $Y = 14.00$\\  \hline
+  	\hline (v) & $X= 15.00$, $Y = 15.00$ & (v)  & $X= 13.66$, $Y  = 6.50 $ & (v) & $X= 15.00$, $Y= 5.50$\\  \hline
+  	\hline 
+  	
+  \end{tabular} 
+  
+  \end{document}

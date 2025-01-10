@@ -1,0 +1,60 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{enumerate}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+%%- May 2013 Question 3 
+\section*{Normal Distribution Question}
+
+\noindent \textbf{Important Information from the Question}
+\begin{itemize}
+	\item Normal Mean $\mu$ = 1000 units
+	\item Normal Standard Deviation $\sigma$ = 200 units 
+\end{itemize}
+\smallskip
+\noindent \textbf{Objectives}
+Compute the following : 
+\begin{itemize}
+	\item $P(X \geq 1400 )$ More than 1400
+	\item $P(X \leq 500)$ Less than 500
+\end{itemize}
+\smallskip
+
+\noindent \textbf{Part 1 -  More than 1400}
+
+Firstly compute the Z-score for 1400.
+
+\[ Z_{1400} =  \frac{X - \mu}{\sigma} = \frac{1400 - 1000}{200} = \frac{400}{200} = 2  \]
+
+So the \textbf{Z-score} in this case is 2.
+
+This much we can say
+\[P(X \geq 1400) = P(Z \geq 2)\]
+
+$P(Z \geq 2)$ can be determined using statistical tables.
+Depending on which statistical tables you are using, you will get one of the following answers. (Note the 
+second and third statements are examples of complementary probabilities.)
+\begin{itemize}
+	\item $P (0 \leq Z \leq 2)$ = 0.4775
+	\item $P ( Z \leq 2)$ = 0.9775
+	\item $P ( Z \geq 2)$ = 0.0225
+\end{itemize}
+The last expression is useful here. Recall that $P(X \geq 1400) = P(Z \geq 2)$. Therefore
+
+\[P(X \geq 1400) = 0.0225\]
+\end{document}

@@ -1,0 +1,121 @@
+sum.x =126.5 
+sum.x.sq =1381.85 
+sum.y =113 
+sum.y.sq =1251
+sum.xy = 1272.2
+n =12
+
+
+
+sum.x = 2843.7
+sum.x.sq = 397499.8
+sum.y = 115.34
+sum.y.sq = 689.37
+sum.xy =  15417.75
+n=33
+
+xbar = sum.x /n
+ybar = sum.y/n 
+
+Sxx = sum.x.sq  - (sum.x^2/n)
+Syy = sum.y.sq  - (sum.y^2/n)
+Sxy = sum.xy  - ((sum.x*sum.y)/n)
+beta0 = Sxy/Sxx
+
+Sxx = round(Sxx,3)
+Syy = round(Syy,3)
+Sxx = round(Sxx,3)
+Sxy = round(Sxy,3)
+
+
+FormulasText1 <- c("
+\\begin{framed}
+\\begin{eqnarray*}
+	S_{XY} &=&
+	\\sum x_iy_i - \\frac{\\sum x_i\\sum y_i}{n}\\\\
+	S_{XX} &=&
+	\\sum x_i^2 - \\frac{(\\sum x_i)^2}{n}\\\\
+	S_{YY} &=&
+	\\sum y_i^2 - \\frac{(\\sum y_i)^2}{n}\\\\
+\\end{eqnarray*}
+\\textbf{ Slope Estimate}
+\\begin{eqnarray*}
+	b_1 = \\frac{S_{XY}}{S_{XX}}
+\\end{eqnarray*}
+\\textbf{ Intercept Estimate}
+\\begin{eqnarray*}
+	b_0 = \\bar{y} -b_1\\bar{x}
+\\end{eqnarray*}
+\end{framed}
+\medskip")
+
+
+
+
+Text1A <- ("\\item We are giving all of the relevant summations, and the sample size $n$, in the question.")
+Text1B <- ("\\item We will compute the values for $S_{XY}$, $S_{XX}$ and $S_{YY}$, using the formulas given previously.")
+Text1C <- paste0(" \\begin{eqnarray*} S_{XY} &=&
+	\\sum x_iy_i - \\frac{\\sum x_i\\sum y_i}{n} \\\\ & & \\\\ 
+	&=&", comma(sum.xy),"- \\frac{ ", comma(sum.x)," \\times ",comma(sum.y)," }{ ", n , "} \\\\ & & \\\\ 
+	&=&",comma(sum.xy),"- \\frac{ ", comma(round( sum.x *sum.y,2))," }{ ", n , "} \\\\ & & \\\\ 
+	&=&",comma(sum.xy)," \\;-\\;  ", comma(round( (sum.x *sum.y),2)/n),"  \\\\ & & \\\\ 
+    &=&",comma(round(Sxy,2)),"\\\\
+    \\end{eqnarray*}")
+
+Text1D <- paste0(" \\begin{eqnarray*} S_{XX} &=&
+	\\sum x_i^2 - \\frac{(\\sum x_i)^2}{n} \\\\ & & \\\\ 
+	&=&",comma(sum.x.sq),"- \\frac{ (", comma(sum.x),")^{2} }{ ", n , "} \\\\ & & \\\\ 
+	&=&",comma(sum.x.sq),"- \\frac{ ", comma((sum.x)^2)," }{ ", n , "} \\\\ & & \\\\ 
+	&=&",comma(sum.x.sq)," \\;-\\;  ", comma(round( (sum.x *sum.x),2)/n),"  \\\\ & & \\\\ 
+    &=&",comma(round(Sxx,2)),"\\\\
+    \\end{eqnarray*}")    
+    
+Text1E <- paste0(" \\begin{eqnarray*} S_{YY} &=&
+	\\sum y_i^2 - \\frac{(\\sum y_i)^2}{n} \\\\ & & \\\\ 
+	&=&",comma(sum.y.sq),"- \\frac{ (", comma(sum.y),")^{2} }{ ", n , "} \\\\ & & \\\\ 
+	&=&",comma(sum.y.sq),"- \\frac{ ", comma((sum.y)^2)," }{ ", n , "} \\\\ & & \\\\ 
+	&=&",comma(sum.y.sq)," \\;-\\;  ", comma(round( (sum.y *sum.y),2)/n),"  \\\\ & & \\\\ 
+    &=&",comma(round(Syy,2)),"\\\\
+    \\end{eqnarray*}")    
+
+Text1F <- ("\\item We also need to compute the mean values for $X$ and $Y$.")
+Text1G <- paste0(" \\begin{eqnarray*}bar{x} &=&
+	\\frac{\\sum x_i}{n} \\\\ & & \\\\ 
+	&=&",comma(sum.y.sq),"- \\frac{ ", comma(sum.x)," }{ ", n , "} \\\\ & & \\\\ 
+    &=&",comma(round(xbar,2)),"\\\\
+    \\end{eqnarray*}")    
+
+Text1H <- paste0(" \\begin{eqnarray*}bar{y} &=&
+	\\frac{\\sum y_i}{n} \\\\ & & \\\\ 
+	&=&",comma(sum.y.sq),"- \\frac{ ", comma(sum.y)," }{ ", n , "} \\\\ & & \\\\ 
+    &=&",comma(round(ybar,2)),"\\\\
+    \\end{eqnarray*}")   
+    
+
+
+EqnText1 <- ("\\item To calculate the least squares regression line, we need to compute the slope and intercept estimatess, i.e. ${\\hat{\\beta}_{0}$ and ${\\hat{\\beta}_{1}$.")
+EqnText2 <- ("\\item The slope estimate is computed first.")
+EqnText3 <- paste0(" \\begin{eqnarray*}  \\frac{S_{XY}}{S_{XX}}  \\\\ & & \\\\ 
+            &=&  \\frac{ ", comma(Sxy)," }{ ", comma(Sxx) , "} \\\\ & & \\\\ 
+            &=&   ",  round(beta0,4) , " \\\\     \\end{eqnarray*}")    
+
+BeginItemize <- ("\\begin{itemize}")
+SummationsText <- paste( Text1A,Text1B,Text1C,Text1D,Text1E,Text1F,Text1G,Text1H,sep=" ")
+EquationsText <- paste(EqnText1, EqnText2,EqnText3,sep=" ")
+EndItemize <- ("\\End{itemize}")
+
+OutputText <- paste(FormulasText1,BeginItemize ,SummationsText ,EquationsText,EndItemize ,sep=" ")
+writeLines(OutputText,"test2.txt")
+
+Corr <- Sxy/sqrt(Sxx * Syy)
+
+Corr1 <- ("\\item The Pearson Correlation Coefficient, $r$, is calculated as: ")
+Corr2 <- paste("\\begin{eqnarray*}  r &=&     \\frac{ Sxy }{\\sqrt{ Sxx \\times Syy }}  \\\\ 
+ &=& \\frac{",comma(Sxy),"}{\\sqrt{",comma(Sxx),"\\times",comma(Syy),"}}\\\\ 
+ &=& \\frac{",comma(Sxy),"}{\\sqrt{",comma(Sxx * Syy),"}}\\\\  
+ &=& \\frac{",comma(Sxy),"}{",comma(round(sqrt(Sxx * Syy),3)),"}  \\\\ 
+ &=&" , round(Corr,3),"\\\\ 
+   \\end{eqnarray*}  ")
+
+ 
+ 

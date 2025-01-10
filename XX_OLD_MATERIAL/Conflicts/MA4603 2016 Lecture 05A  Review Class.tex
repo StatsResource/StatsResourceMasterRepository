@@ -1,0 +1,729 @@
+
+
+\title[MA4704]{MA4704 Technology Mathematics 4 \\ {\normalsize MA4704 Lecture 5A : Review}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize kevin.obrien@ul.ie}}
+\date{Spring 2013}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+
+
+\renewcommand{\arraystretch}{1.5}
+%------------------------------------------------------------------------%
+
+
+% - Sample Space (ready)
+% - Conditional Probability
+% - Independent Events (ready)
+% - Expected Value (ready)
+% - Variance V(X) (ready)
+% - Combinations (ready)
+% - Binomial distribution (ready)
+% - Poisson distribution (ready)
+% - MB 3 Ready
+% - Standardization Formula (Normal Distribution) (ready)
+% - Complement and Symmetry (ready)
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+%-------------------------------------------------------%
+\frame{
+\frametitle{Sample Space}
+
+\begin{itemize}
+\item The sample space is the set of all possible outcomes of an experiment.
+\item The sample space is commonly denoted $S$.
+\item The members of $S$ are called sample points.
+\item A subset of $S$ is called an event.
+\end{itemize}
+}
+%-------------------------------------------------------%
+\frame{
+\frametitle{Question 1: Sample Spaces }
+Consider a random experiment in which a coin is tossed once, and a number between 1 and 4 is selected at random.
+Write out the sample space $S$ for this experiment.
+
+\bigskip
+
+\[ S = \{(H,1),(H,2),(H,3),(H,4),(T,1),(T,2),(T,3),(T,4)\} \]
+
+( $H$ and $T$ denoted `Heads' and `Tails' respectively. )
+
+}
+%-------------------------------------------------------%
+\frame{
+\frametitle{Contingency Tables}
+Suppose there are 100 students in a first year college intake.  \begin{itemize} \item 44 are male and are studying computer science, \item 18 are male and studying statistics \item 16 are female and studying computer science, \item 22 are female and studying statistics. \end{itemize}
+\bigskip
+We assign the names $M$, $F$, $C$ and $S$ to the events that a student, randomly selected from this group, is male, female, studying computer science, and studying statistics respectively.
+}
+%-------------------------------------------------------%
+\frame{
+\frametitle{Contingency Tables}
+The most effective way to handle this data is to draw up a table. We call this a \textbf{\emph{contingency table}}.
+\\A contingency table is a table in which all possible events (or outcomes) for one variable are listed as
+row headings, all possible events for a second variable are listed as column headings, and the value entered in
+each cell of the table is the frequency of each joint occurrence.
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+    & C & S & Total \\ \hline
+  M & 44 & 18 & 62 \\ \hline
+  F & 16 & 22 & 38 \\ \hline
+  Total & 60 & 40 & 100 \\ \hline
+\end{tabular}
+\end{center}
+
+}
+%-------------------------------------------------------%
+\frame{
+\frametitle{Contingency Tables}
+It is now easy to deduce the probabilities of the respective events, by looking at the totals for each row and column.
+\begin{itemize}
+\item P(C) = 60/100 = 0.60
+\item P(S) = 40/100 = 0.40
+\item P(M) = 62/100 = 0.62
+\item P(F) = 38/100 = 0.38
+\end{itemize}
+\textbf{Remark:}\\
+The information we were originally given can also be expressed as:
+\begin{itemize}
+\item $P(C \cap M) = 44/100 = 0.44$
+\item $P(C \cap F) = 16/100 = 0.16$
+\item $P(S \cap M) = 18/100 = 0.18$
+\item $P(S \cap F) = 22/100 = 0.22$
+\end{itemize}
+}
+
+%-------------------------------------------------------%
+\frame{
+\frametitle{Conditional Probability }
+
+The definition of conditional probability:
+\[ P(A|B) = \frac{P(A \cap B)}{P(B)} \]
+
+\begin{itemize}
+\item $P(B)$ Probability of event B.
+\item $P(A)$ Probability of event A.
+\item $P(A|B)$ Probability of event A given that B has occurred.
+\item $P(A \cap B)$ Joint Probability of event A and event B.
+\item Formula will be given in exam paper.
+\item Remember to include the relevant notation when answering such questions in your exam, not just the numerical value of the answer.
+\end{itemize}
+
+}
+
+
+%-------------------------------------------------------%
+\frame{
+\frametitle{Question 2: Conditional Probabilities}
+
+Compute the following:
+\begin{enumerate}
+\item $P(C|M)$ : Probability that a student is a computer science student, given that he is male.
+\item $P(S|M)$ : Probability that a student studies statistics, given that he is male.
+\item $P(F|S)$ : Probability that a student is female, given that she studies statistics.
+\end{enumerate}
+
+}
+%-------------------------------------------------------%
+\frame{
+\frametitle{Question 2: Conditional Probabilities}
+
+\textbf{Part 1)} Probability that a student is a computer science student, given that he is male.
+\[ P(C|M) = \frac{P(C \cap M)}{P(M)}  = \frac{0.44}{0.62} = 0.71 \]
+\textbf{Part 2)} Probability that a student studies statistics, given that he is male.
+\[ P(S|M) = \frac{P(S \cap M)}{P(M)}  = \frac{0.18}{0.62} = 0.29 \]
+
+}
+
+%-------------------------------------------------------%
+\frame{
+\frametitle{Question 2: Conditional Probabilities}
+
+\textbf{Part 3)} Probability that a student is female, given that she studies statistics.
+\[ P(F|S) = \frac{P(F \cap S)}{P(S)}  = \frac{0.22}{0.40} = 0.55 \]
+
+
+
+
+}
+%------------------------------------------------------------%
+\frame{
+\frametitle{Bayes' Theorem}
+Bayes' Theorem is a result that allows new information to be used to update the conditional probability of an event.
+\bigskip
+
+\[ P(A|B) = \frac{P(B|A)\times P(A)}{P(B)} \]
+
+Use this theorem to compue $P(S|F)$, the probability that a student studies statistics, given that she is female.
+
+\[ P(S|F) = \frac{P(F|S)\times P(S)}{P(F)} = {0.55 \times 0.40 \over 0.38} = 0.578\]
+}
+
+%-------------------------------------------------------%
+\frame{
+\frametitle{Independent Events}
+\begin{itemize}
+\item Suppose that a man and a woman each have a pack of 52 playing cards.
+\item Each draws a card from his/her pack. Find the probability that they each draw a Diamond card.
+\item We define the events:
+\begin{itemize} \normalsize \item A = probability that man draws a Diamond = 1/4
+\item B = probability that woman draws a Diamond = 1/4
+\end{itemize} \item Clearly events A and B are independent so:
+\[ P(A \cap B) = 1/4 \times 1/4 = 1/16 \]
+\end{itemize}
+
+}
+%------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Question 3 :  Probability}
+A student can enter a course either as a beginner (73\% of which do) or as a transferring
+student (27\% of which do).It is found that 62\% of beginners eventually graduate, and that
+78\% of transfers eventually graduate.
+
+
+Find:
+\begin{itemize}
+\item the probability that a randomly chosen student is a beginner who will
+eventually graduate
+\item the probability that a randomly chosen student will eventually graduate
+\end{itemize}
+\end{frame}
+%------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Review Question 3 :  Probability}
+\textbf{Events}
+
+\begin{itemize}
+\item Enters as a \textbf{\emph{beginner}} (B) : P(B)=0.73
+\item Enters as a \textbf{\emph{transfer}} (T) : P(B)=0.27
+\item A Student \textbf{\emph{graduates}} (G)
+\end{itemize}
+\textbf{Conditional Probabilities}
+\begin{itemize}
+\item Given that student was a beginner, the probability of graduating is $P(G|B) = 0.62$
+\item Given that student was a transfer, the probability of graduating is $P(G|T) = 0.78$
+\end{itemize}
+\end{frame}
+%------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Review Question 3 :  Probability}
+\textbf{Solution to Part A}
+\begin{itemize}
+\item Compute the probability that a randomly chosen student is a beginner who will
+eventually graduate P(B and G)
+\item Recall \textbf{Conditional Probability} formula
+\[P(A|B) = \frac{P(A \mbox{ and } B)}{P(B)}\]
+\item Re-arranging
+\[P(A \mbox{ and } B) = P(A|B)\times P(B)  \]
+\item Solving
+\[P(B \mbox{ and } G) = P(G|B)\times P(B) = 0.62 \times 0.73  = 0.4526 \]
+\item Similarly, for Transfer students
+\[P(T \mbox{ and } G) = P(G|T)\times P(T) = 0.78 \times 0.27  = 0.2106 \]
+\end{itemize}
+\end{frame}
+%------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Review Question 3 :  Probability}
+\textbf{Solution to Part B}
+\begin{itemize}
+\item Compute the probability that a randomly chosen student will eventually graduate
+\item Graduating class can be subdivided into two groups : graduates who were beginners and grduates who were transfers
+\item Writing this mathematically:
+\[P(G) = P(G \mbox{ and } B) + P(G \mbox{ and } T) \]
+\item Using our previous results
+\[P(G) = 0.4526 + 0.2106 = 0.6632 \]
+\item The probability that a randomly chosen student will eventually graduate is 66.32\%.
+\end{itemize}
+\end{frame}
+%------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Review Question 4 :  Probability}
+Compute the probability that a randomly chosen student is either a beginner or will
+eventually graduate, or both.
+\begin{itemize}
+\item From Question 1: P(B) = 0.73, P(G) = 0.6632, P(G and B) = 0.4526
+\item Using the addition rule
+\[P(G \mbox{ or } B) = P(G) + P(B) - P(G \mbox{ and } B)\]
+\item Using our values
+\[P(G \mbox{ or } B) = 0.73 + 0.6632 - 0.4526 = 0.9406\]
+\end{itemize}
+\end{frame}
+%------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Review Question 4 :  Probability}
+If a student eventually graduates, what is the probability that the student entered
+as a transferring student?
+\begin{itemize}
+\item Writing this mathematically: $P(T|G)$
+\item Using Bayes' formula (in formula sheet)
+\[P(A|B)=  {P(B|A)\times P(A)\over P(B)} \]
+\item Using Bayes' formula (in formula sheet)
+\[P(T|G)=  {P(G|T)\times P(T)\over P(G)} = \frac{0.78 \times 0.27}{0.6632} = 0.3175 \]
+\end{itemize}
+\end{frame}
+%------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Review Question 5 :  Probability}
+Are the events \textbf{Eventually graduates} and \textbf{Enters as a transferring student}
+statistically independent?
+
+\begin{itemize}
+\item If two events A and B are independent, then we can say
+\[P(A \mbox{ and } B) = P(A) \times P(B)\]
+\item We have the following values:
+\[P(T \mbox{ and } G) = 0.2106\]
+\item Also
+\[P(T) \times P(G) = 0.27 \times 0.6632 = 0.1790\]
+\item Comparing the two values:
+\[P(T \mbox{ and } G) \neq P(T) \times P(G)\]
+\item We conclude that the events are not independent.
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------READY---------%
+\frame{
+\frametitle{Expected Value and Variance of a Random Variable}
+
+The probability distribution of a discrete random variable is be tabulated as follows
+
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|c|c|}
+\hline
+$x_i$  & 1 & 2 & 3 & 4 & 5 & 6 \\\hline
+$p(x_i)$ & 2/8 & 1/8& 1/8 & 1/8& c & 1/8\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item What is the value of $c$?
+\item What is expected value and variance of the outcomes?
+\end{itemize}
+}
+%---------------------------------------------------------READY---------%
+\frame{
+\frametitle{Question 6a: Expected value}
+\begin{itemize}
+\item Necessarily $C =0.25 = 2/8$. \\
+\item We must compute $E(X)$ as follows \[E(X) = \sum x_i p(x_i) \]
+\item That formula is \textbf{not} given in the formulae.
+\end{itemize}
+\bigskip
+$E(X) = (1 \times {2\over8}) + (2 \times {1 \over 8}) +  \ldots + (5 \times {2 \over 8}) + (6 \times {1 \over 8})$\\\bigskip
+$E(X) = 27/8 = 3.375$\bigskip
+}
+%------------------------------------------------------READY------------%
+\frame{
+\frametitle{Question 6b: Variance}
+\begin{itemize}
+\item The formula for computing the variance of a discrete random variable
+
+\[ V(X) = E(X^2) - E(X)^2 \]
+
+\item This is not given in the formulae for this exam.
+
+\item We must compute $E(X^2)$
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|c|c|}
+\hline
+$x_i$  & 1 & 2 & 3 & 4 & 5 & 6 \\\hline
+$x^2_i$  & 1 & 4 & 9 & 16 & 25 & 36 \\\hline
+$p(x_i)$ & 2/8 & 1/8& 1/8 & 1/8& 2/8 & 1/8\\
+\hline
+\end{tabular}
+\end{center}
+}
+%-----------------------------------------------------READY-------------%
+\frame{
+\frametitle{Question 6b: Variance}
+
+\begin{itemize}
+\item $E(X^2) = (1 \times {2\over8}) + (4 \times {1 \over 8}) +  \ldots + (25 \times {2 \over 8}) + (36 \times {1 \over 8})$\bigskip
+\item $E(X^2) = {117 \over 8} = 14.625$ \bigskip
+\item $V(X) = E(X^2) - E(X)^2 = 14.625 - (3.375)^2 = 3.2344$
+\end{itemize}
+\bigskip
+
+}
+
+%---------------------------------------------------%
+\begin{frame}
+\frametitle{Combinations}
+Combinations formula
+\[ ^{n}C_k  = {n! \over k!  \times (n-k)!} \]
+
+\begin{itemize}
+\item Remark $n! = n \times (n-1)! $
+\item 0! = 1
+\end{itemize}
+\end{frame}
+%---------------------------------------------------%
+\begin{frame}
+\frametitle{Combinations}
+Show that
+\[ ^{n}C_0  = 1 \]
+
+\textbf{Solution: }
+\[ ^{n}C_0  = {n! \over 0!  \times (n-0)!} =  {n! \over n!} = 1 \]
+
+\end{frame}
+
+
+%---------------------------------------------------%
+\begin{frame}
+\frametitle{Question 7a: Combinations )}
+Compute $ ^{7}C_2  $\\
+
+\textbf{Solution: }
+\[ ^{7}C_2  = {7! \over 2!  \times (7-2)!} =  {7 \times 6 \times 5! \over 2! \times 5!} = {42 \over 2} =21  \]
+
+\end{frame}
+%---------------------------------------------------%
+\begin{frame}
+\frametitle{Question 7b: Combinations )}
+Compute $ ^{11}C_3  $\\
+
+\textbf{Solution: }
+\[ ^{11}C_3  = {11! \over 3!  \times 8!} =  {11 \times 10 \times 9 \times 8! \over 3\times 2 \times 1 \times 8!} = {990 \over 6} = 165 \]
+
+\end{frame}
+%------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Review Question 8 : Choose Operator}
+Evaluat the following
+\begin{itemize}
+\item $^{10}C_0$
+\item $^{10}C_1$
+\item $^6C_3$
+\end{itemize}
+Solutions
+\begin{itemize}
+\item $^{10}C_0  = 10! / (10! \times 0!) = 1$
+\item $^{10}C_1 =  10! / (9! \times 1!) =  = 1$
+\item $^6C_3$
+\end{itemize}
+\end{frame}
+%--------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Binomial Distribution}
+\begin{itemize}
+\item Only two possible outcomes: Success and Failure.
+\item Identify the event that can considered the \textbf{\textit{success}}.
+\item (Remark : The success is usually the less likely of two complementary events.)
+\item Determine the probability of a success in a single trial $p$.
+\item Determine the number of independent trials $n$.
+\end{itemize}
+
+}
+%--------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Binomial Distribution}
+The probability of exactly k successes in a binomial experiment B(n, p) is given by
+\[ P(X=k) = P(k \mbox{ successes }) = \;^nC_k  \times p^{k} \times (1-p)^{n-k}\]
+Remark: This formula will be given in the exam paper.
+}
+
+%--------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Binomial Distribution}
+
+\begin{itemize}
+
+\item Suppose we have a biased coin which yields a head only $48\%$ of the time.
+%\item Is this a binomial experiment?  why?
+\item What is the probability of 4 heads in 7 throws?
+\end{itemize}
+
+
+}
+%--------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Binomial Distribution}
+
+\begin{itemize}
+\item X: Number of heads thrown
+\item $n$ : number of independent trials (i.e. 7)
+\item $k$ : Number of successes (numeric value)
+\begin{itemize}
+\item Here $k$ is 4
+\item Number of failures is $n-k  =3$
+\end{itemize}
+\item $p$ : probability of a success. (i.e. 0.48)
+\item $1-p$ : probability of a failure (i.e. 0.52)
+\end{itemize}
+
+}
+%--------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Binomial Distribution}
+
+\[ P(X=4) = P(4 \mbox{ successes }) = \;^7C_4  \times (0.48)^{4} \times (0.52)^{3}\]
+
+\bigskip
+
+\[ P(X=4) = 35 \times 0.05308 \times  0.14061 =  \alert{0.2612} \]
+
+Remark : You must show workings in your answers.
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Poisson Distribution}
+The probability that there will be $k$ occurrences in a \textbf{unit time period} is denoted $P(X=k)$, and is computed as follows.
+\Large
+\[ P(X = k)=\frac{m^k e^{-m}}{k!} \]
+\normalsize
+This formula will be given in the exam paper
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Poisson Distribution}
+Given that there is on average 4 occurrences per day, what is the probability of one occurrences in a given day? \\ i.e. Compute $P(X=1)$ given that $m=4$
+\Large
+\[ P(X = 1)=\frac{4^1 e^{-4}}{1!} \]
+\normalsize
+
+The equation reduces to
+\[ P(X = 1)=4 \times e^{-4} = \alert{0.07326} \]
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Poisson Distribution}
+What is the probability of one occurrences in a six hour period ? \\ i.e. Compute $P(X=1)$ given that $m=1$
+\Large
+\[ P(X = 1)=\frac{1^1 e^{-1}}{1!} \]
+\normalsize
+\begin{itemize}
+
+\item $1!$ = 1
+\end{itemize}
+The equation reduces to
+\[ P(X = 1) = e^{-1} = \alert{0.3678}\]
+}
+%%------------------------------------------------------------------------%
+%\frame{
+%\begin{table}[ht]
+%\frametitle{Find $ P(Z \geq 1.27)$}
+%\vspace{-1.5cm}
+%%\caption{Standard Normal Distribution } % title of Table
+%\centering % used for centering table
+%\begin{tabular}{|c|| c c c c c c|} % centered columns (4 columns)
+%\hline %inserts double horizontal lines
+%& \ldots & \ldots & 0.06 &0.07&0.08&0.09 \\
+%%heading
+%\hline \hline% inserts single horizontal line
+%\ldots & \ldots & \ldots &\ldots& \ldots &\ldots&\dots \\ % inserting body of the table
+%1.0 & \ldots & \ldots &0.1446& 0.1423 &0.1401&0.1379 \\ % inserting body of the table
+%1.1 & \ldots & \ldots&0.1230& 0.1210 &0.1190&0.1170 \\ % inserting body of the table
+%1.2 & \ldots & \ldots&0.1038 & \alert{0.1020} & 0.1003&0.0985\\
+%1.3 & \ldots & \ldots &0.0869& 0.0853 &0.0838&0.0823 \\ % inserting body of the table
+%\ldots & \ldots &\ldots&\ldots & \ldots &\ldots&\ldots\\
+%\hline %inserts single line
+%\end{tabular}
+%\end{table}
+%
+%Remark : Murdoch Barnes Table 3 will be given in tomorrow's exam.
+%}
+%%------------------------------------------------------------------------%
+%\frame{
+%\frametitle{The Standardization Formula}
+%\begin{itemize}
+%\item Suppose that mean $\mu = 105 $ and that standard deviation $\sigma = 8$.
+%\item What is the Z-score for $x_o = 117$?
+%\[
+%z_{117} = {x_o - \mu \over \sigma} = {117 - 105 \over 8} = {12 \over 8} = 1.5
+%\]
+%\item Therefore $z_{117} = 1.5$
+%\item Remark: $P(X \geq 117) = P(Z \geq 1.5)$.
+%\end{itemize}
+%}
+%%-----------------------------------------------------%
+%\begin{frame}
+%\frametitle{Complement and Symmetry Rules}
+%\begin{itemize}
+%\item \textbf{Complement Rule}: \[ P(Z \leq k) = 1-P(Z \geq k) \] for some value $k$
+%\item Alternatively $ P(Z \geq k) = 1-P(Z \leq k) $
+%\item \textbf{Symmetry Rule}: \[ P(Z \leq -k) = P(Z \geq k) \] for some value $k$
+%\item Alternatively $ P(Z \geq -k) = P(Z \leq k) $
+%\end{itemize}
+%\end{frame}
+
+%%-----------------------------------------------------%
+%\begin{frame}
+%\frametitle{Complement and Symmetry Rules}
+%\textbf{Complement Rule}
+%
+%\begin{itemize}
+%\item $P(Z \leq 1.27) = 1-P(Z \geq 1.27) $
+%\item $ P(Z \geq 1.27) = 1-P(Z \leq 1.27) $
+%\end{itemize}
+%
+%\bigskip
+%\textbf{Symmetry Rule}:
+%\begin{itemize}
+%\item $ P(Z \leq -1.27) = P(Z \geq 1.27) $
+%\item $ P(Z \geq -1.27) = P(Z \leq 1.27) $
+%\end{itemize}
+%
+%Complement rule and Symmetry rule can be used in conjunction.
+%\end{frame}
+%
+
+%
+%
+%%-----------------------------------------------------%
+%\begin{frame}
+%\frametitle{Complement and Symmetry Rules}
+%
+%For a normally distributed random variable with mean $\mu = 1000$ and standard deviation $\sigma = 100$, compute $P(X \geq 873)$.
+%
+%\begin{itemize} \item First, find the Z-value using the standardization formula.
+%\[
+%z_{873} = {x_o - \mu \over \sigma} = {873 - 1000 \over 100} = {-127 \over 100} = -1.27
+%\]
+%\item We can say $P(X \geq 873) = P(Z \geq -1.27)$.
+%\item Use complement rule and symmetry rule to evaluate  $P(Z \geq -1.27)$.
+%\item $ P(Z \geq -1.27) = P(Z \leq 1.27) = 1 - P(Z \geq 1.27) $  = 1 - 0.1020 = \alert{0.8980}.
+%\end{itemize}
+%\end{frame}
+%------------------------------------------------------------------------%
+
+
+%-----------------------------------------------------%
+\begin{frame}
+\frametitle{Interval Probability}
+\begin{itemize}
+\item We are often interested in the probability of being inside an interval, with lower bound $L$ and upper bound $U$.
+\item It is often easier to compute the probability of the complement event, being outside the interval.
+\[ P( \mbox{Inside} ) = 1 - P( \mbox{Outside} )  \]
+
+\item Being outside the interval is the conjunction of being too low and too high.
+\[ P( \mbox{Outside} ) = P( \mbox{Too Low} ) +  P( \mbox{Too High} ) \]
+
+\item Therefore we can say
+\[ P( \mbox{Inside} ) = 1- [P( \mbox{Too Low} ) +  P( \mbox{Too High} )] \]
+\item $P( \mbox{Too Low} )$ = $P( X \leq L)$
+\item $P( \mbox{Too High} )$ = $P( X \geq U)$
+\end{itemize}
+\end{frame}
+
+
+%------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Review Question 8 :  Binomial Distribution}
+Commuter trains have a probability 0.1 of delay
+between Dublin and Maynooth. Supposing that the delays are all independent,
+what is the probability that out of 10 journeys between Dublin and
+Mullinar more than 8 do not have a delay.
+\begin{itemize}
+\item Reconsider the question : What is the probability that there is less than 2 delays.
+\item $X$ is the variable for `delays', with Binomial parameters $n=10$, $p=0.1$
+\item $P(X < 2) = P(X \leq 1) = P(X=0)+P(X=1)$
+\item $P(X=0)$
+\[P(X=0)= {10 \choose 0} \times 0.1^0  \times 0.9^10 = 0.34868\]
+\item $P(X=1)$
+\[P(X=1)= {10 \choose 1} \times 0.1^1  \times 0.9^9 = 0.38742\]
+\item $P(X < 2) = 0.38742 + 0.34868 = 0.73610.$
+\end{itemize}
+\end{frame}
+%------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Review Question 9 :  Poisson Distribution}
+The number of visitors to a webserver per minute follows a Poisson
+distribution. If the average number of visitors per minute is 4,
+what is the probability that:
+\begin{itemize}
+\item[(i)] There are two or fewer visitors in one minute?;
+\item[(ii)] There are exactly two visitors in 30 seconds?.
+\end{itemize}
+
+
+\end{frame}
+%------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Review Question 9 :  Poisson Distribution}
+Solution to Part 1
+\begin{itemize}
+\item $P(X\leq 2) = P(X = 0) + P(X = 1) + P(X = 2)$
+\item $P(X = 0)$
+ \[P(X = 0) = { e^{-4} \times 4^0\over 0!} = e^{-4}\]
+\item $P(X = 1)$
+\[P(X = 1) = { e^{-4} \times 4^1\over 1!} = 4e^{-4}\]
+\item $P(X = 2)$
+\[P(X = 2) = { e^{-4} \times 4^2\over 2!} = 8e^{-4}\]
+\item Putting these values together
+\[P(X\leq 2) = 13 \times e^{-4} = 0.238\]
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Review Question 9 :  Poisson Distribution}
+Solution to Part 2
+\begin{itemize}
+\item The Poisson mean for 30 seconds is 2 occurrences.
+\item Given m=2 : $P(X = 2)$
+\[P(X = 2) = { e^{-2} \times 2^2\over 2!} = 0.2706 \]
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Review Question 10 :  Exponential Distribution}
+Suppose that the average lifespan of a PC monitor is 5 years. You may assume that the lifespan of monitors follows an exponential probability distribution.
+    \begin{enumerate}
+    \item What is the probability that the lifespan of the monitor will be at least 5 years?
+    \item What is the probability that the lifespan of the monitor will not exceed 4 years?
+    \item What is the probability of the lifespan being between 5 years and 7 years?
+    \end{enumerate}
+(Note: In a previous version of this slide, the average lifespan was incorrectly given as 6 years).
+\end{frame}
+%------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Review Question 10 :  Exponential Distribution}
+What is the probability that the lifespan of the monitor will be at least 5 years?
+    \begin{enumerate}
+    \item Using the following formulae
+    \[P(X \leq k) = 1-e^{-k/\mu}\]
+    \[P(X \geq k) = e^{-k/\mu}\]
+    \item $P(X\geq 5)$
+    \[P(X \geq 5) = e^{-5/5} = e^{-1} = 0.3678 \]
+    \end{enumerate}
+\end{frame}
+
+%------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Review Question 10 :  Exponential Distribution}
+What is the probability that the lifespan of the monitor will not exceed 4 years?
+$P(X\leq 4)$
+    \[P(X \leq 4) = 1- e^{-4/5} = 1 - e^{-0.8} = 0.5506 \]
+
+\end{frame}
+
+%------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Review Question 10 :  Exponential Distribution}
+What is the probability of the lifespan being between 5 years and 7 years?
+    \begin{enumerate}
+    \item $P(5 \leq X \leq 7)$
+    \item Too Low: $P(X \leq 5)$
+    \[P(X \leq 5) = 1- e^{-5/5} = 1-e^{-1} = 0.6322 \]
+    \item Too High: $P(X \geq 7)$
+    \[P(X \geq 7) = e^{-7/5} = e^{-1.4} = 0.2465 \]
+    \item P(Outside Interval) = P(Too High)+P(Too Low)
+    \item P(Inside Interval) = 1 - P(Outside)
+    \item $P(5 \leq X \leq 7)$ = 1- (0.6322+0.2465) = 0.12128
+    \end{enumerate}
+\end{frame}
+\end{document}
+
+
+
+

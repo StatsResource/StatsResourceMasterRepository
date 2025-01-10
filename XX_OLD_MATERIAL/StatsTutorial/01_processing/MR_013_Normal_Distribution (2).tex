@@ -1,0 +1,135 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+
+\usepackage{vmargin}
+
+\usepackage{amsmath}
+
+\usepackage{framed}
+
+\usepackage{graphics}
+
+\usepackage{epsfig}
+
+\usepackage{subfigure}
+
+\usepackage{enumerate}
+
+\usepackage{fancyhdr}
+
+
+
+\setcounter{MaxMatrixCols}{10}
+
+%TCIDATA{OutputFilter=LATEX.DLL}
+
+%TCIDATA{Version=5.00.0.2570}
+
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+%TCIDATA{Language=American English}
+
+
+
+\pagestyle{fancy}
+
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+
+\lhead{MathsResource} \chead{Probability Distributions} \rhead{Normal Distribution} %\input{tcilatex}
+
+\begin{document}
+
+\section*{Normal Distribution : Tutorial Sheet 2}
+
+\begin{enumerate}
+
+
+
+\item 
+
+Assume that a character in a game is programmed to have an attack power according to $X \sim \text{Normal}(\mu=40,\sigma=3)$.\\[-0.2cm]
+
+
+
+\begin{enumerate}[(a)]
+
+\item What is the probability that the attack is greater than 45? \item What is the probability that the attack is between 32 and 42? \item Let $X_1$ and $X_2$ be the first and second attacks. What is the probability that the \emph{sum} of these two attacks is greater than 85 units? \quad \item Calculate 99\% limits for the sum of two attacks.  \item What is the probability that the \emph{difference} in attacks is more than 5 units? Note that attack 2 can be 5 units more than attack 1 or attack 1 can be 5 units more than attack 2, i.e., $\Pr(|D|>5)=\Pr(D<-5) + \Pr(D>5)$.
+
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\item A character in a game deals a standard attack 75\% of the time and a critical attack the rest of the time (call these events $S$ and $S^c$). Given that it is a standard attack, the attack power is $X\,|\,S \sim \text{Normal}(\mu=40,\sigma=3)$. When the character deals a critical attack, a random fluctuation is added to this according to a $\text{Normal}(\mu=5,\sigma=1)$ distribution.\\[-0.2cm]
+
+
+
+\begin{enumerate}[(a)]
+
+\item What is the distribution of $X\,|\,S^c$? \item Calculate $\Pr(X<43\,|\,S)$ and $\Pr(X<43\,|\,S^c)$. \item Calculate $\Pr(X<43)$. \,\, (hint: law of total probability) \item If the character deals less than 43 damage points, what is the probability that the attack was a critical attack?
+
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\item 
+
+The income of a technician (in thousands) is $X_1 \sim \text{Normal}(\mu=30,\sigma=2)$. The income of an engineer is $X_2 \sim \text{Normal}(\mu=40,\sigma=3.5)$. 
+
+\begin{enumerate}[(a)]
+
+\item Calculate the probability that an engineer earns more than a technician. \item Calculate 90\% limits for the difference in their income. \item For a group of 25 technicians, calculate the probability that the average wage is less than 30500, i.e., $\Pr(\,\overline{\!X}_1 < 30.5)$. \item In a group of 10 engineers, what is the probability that \emph{at least two} of them earn more than 45000? (hint: binomial with $p = \Pr(X_2 > 45)$) \item For a sample of 30 technicians and 35 engineers, calculate the 80\% limits for the difference in their average wages.
+
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\item 
+
+Let $X \sim \text{Normal}(\mu=10,\sigma=2)$. Calculate the following:
+
+\begin{enumerate}[(a)]
+
+\item $\Pr(X>10)$. \item $\Pr(X<3)$. \item $\Pr(X>8.4)$. \item $\Pr(6<X<14)$. \item The value of $x$ such that $\Pr(X>x)$ = 0.3. \item The value of $x$ such that $\Pr(X>x)$ = 0.8.
+
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\item 
+
+Assume that speeds of cars on a motorway have a normal distribution with mean 115km/hr and standard deviation 4km/hr.\\[-0.2cm]
+
+\begin{enumerate}[(a)]
+
+\item Draw a rough sketch of the distribution. \item $\Pr(X>120)=$ ? \item $\Pr(X<100)=$ ? \item $\Pr(100<X<110)=$ ? \item 1\% of drivers travel above what speed?
+
+\end{enumerate}
+
+
+
+
+
+\end{document}

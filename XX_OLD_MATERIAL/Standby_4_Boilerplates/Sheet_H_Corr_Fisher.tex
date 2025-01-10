@@ -1,0 +1,25 @@
+\begin{framed}
+If $(X, Y)$ has a bivariate normal distribution with correlation $\rho$ and the pairs ($X_i, Y_i$) are independent and identically distributed, then $z$ is approximately normally distributed with mean
+\[ {\displaystyle \frac{1}{ 2}\ln \left(   \frac{1+\rho }{1-\rho } \right),} \]
+
+and standard error
+\[ {\displaystyle \frac{1}{  \sqrt {N-3} } ,} \]
+
+where $n$ is the sample size, and $\rho$ is the true correlation coefficient.
+Using the Fisher's $z$-transform , the test statistic is 
+\[Z_{TS} = \frac{ \sqrt{n-3} }{2} \times \ln \left( \frac{1 \;+\; r}{ 1 \;-\;r} \right) \]
+and the corresponding $p$-value is by
+
+\begin{itemize}
+\item[$\bullet$] for two-tailed tests $p=2P(Z\;>\;Z_{TS})$
+\item[$\bullet$] for one-tailed tests $p=P(Z\;<\;Z_{TS})$ or $p=P(Z\;>\;Z_{TS})$
+\end{itemize}
+using the standard normal distribution.
+
+%This transformation, and its inverse
+%
+%\[  {\displaystyle r={\frac {\exp(2z)-1}{\exp(2z)+1}}=\operatorname {tanh} (z),} \]
+%
+%can be used to construct a large-sample confidence interval for $r$ using standard normal theory and derivations.
+\end{framed}
+

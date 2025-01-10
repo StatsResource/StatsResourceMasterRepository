@@ -1,0 +1,27 @@
+\subsection{Computing a Confidence Interval - Worked Example}
+\begin{itemize}
+\item Suppose that 9 bags of salt granules are selected from the supermarket
+shelf at random and weighed. The weights in grams are \[812.0, 786.7, 794.1,
+791.6, 811.1, 797.4, 797.8, 800.8, 793.2.\] 
+\item Give a 95\% confidence interval for the
+mean of all the bags on the shelf. Assume the population is normal.
+
+
+Here we have a random sample of size n = 9. The mean is 798.30. The sample
+variance is $s^2 = 72.76$, which gives a sample standard deviation $s = 8.53$.
+
+\item The upper 2.5\% point of the Student's $t$ distribution with n-1 (= 9-1 = 8) degrees of freedom is 2.306.
+
+\item The 95\% confidence interval is therefore from 
+\[(798.30 - 2.306 \times (8.53/\sqrt{9}),\;\; 798.30 + 2.306 \times (8.53/\sqrt{9})\]
+which is\\
+\[(798.30 - 6.56, 798.30 + 6.56) = (791.74, 804.86)\]
+\item \textit{It is sometimes more useful to write this as $798.30 \pm 6.56$.}
+
+\item Note that even if we do not assume the population is normal (that assumption is
+never really true) the Central Limit Theorem might suggest that the confidence interval
+is nearly right. 
+\item A larger confidence would increase the length of the interval, so we
+trade off increased certainty of coverage against a longer interval
+\end{itemize}
+

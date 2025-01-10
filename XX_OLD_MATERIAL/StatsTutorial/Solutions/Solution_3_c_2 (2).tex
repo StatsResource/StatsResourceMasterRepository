@@ -1,0 +1,47 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+
+\subsection*{Question 5 - Independent Events}
+The probability that A hits a target is 1/3 and the probability that B hits a target is 1/5.  They both fire at the target. Find the probability that:
+
+Remark: Use a Probability Tree for this exercise/
+\begin{itemize}
+\item[(a)] A does not hit the target, 
+\[\Pr(A^c) = 1 - 1/3 = 2/3 \]
+\item[(b)] both hit the target, 
+\[\Pr(A \cap B)  = P(A) \times P(B) = 1/3 \times 1/5 = 1/15\] 
+\item[(c)] only one of them hits the target,\\
+
+Combination of [``A hits + B misses"] + [``A misses + B hits"]
+
+\[P(\mbox{only one hits}) =  [P(A)\times P(B^c) ]+ [P(A^c)\times P(B) ]  \]
+\[= [1/3 \times 4/5] + [2/3 \times 1/5 ]\]
+\[= 4/15 + 2/15 = \boldsymbol{6/15}\]
+
+\item[(e)] Neither hits the target.
+\\ Remark: skip the ordering deliberately, Explain that this is the complement of what is asked in Part d
+\[\Pr(A^c \cap B^c)  = P(A^c) \times P(B^c) = 2/3 \times 4/5 = 12/15\] 
+\item[(d)] at least one hits the target
+\[1- \Pr(A^c \cap B^c) = 3/15 =1/5\]
+\end{itemize}
+%==================================================================%
+\end{document}

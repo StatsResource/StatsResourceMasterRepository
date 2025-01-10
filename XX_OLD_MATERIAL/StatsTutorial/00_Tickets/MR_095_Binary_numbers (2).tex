@@ -1,0 +1,141 @@
+%- http://www.math.iitb.ac.in/~preeti/ma108-2017/Tut-6.pdf
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+
+\usepackage{subfigure}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MathsResource} \chead{Discrete Mathematics} \rhead{Binary Numbers} %\input{tcilatex}
+\begin{document}
+
+\subsection{1.1.4 The hexadecimal number system}
+\begin{itemize}
+    \item Another number system commonly used in computer science is the hexadecimal system based
+on 16. 
+\item This system has the following advantages: it enables most numbers to be recorded using
+substantially fewer digits than are necessary in base 2; there is a very easy method of converting
+between hexadecimal and binary, which as we have seen is a “natural” language for computers to
+use.
+\item In order to express a number in the hexadecimal system we need 16 digits. it is customary to
+use the digits 0,1,...,9 followed by the letters A,B,C,D,E, and F as symbols to represent the
+numbers 10, 11, 12,13,141 and 15 respectively. 
+\item The hexadecimal digits are known as hexits and
+the hexadecimal system is often called hex, for short.
+\item We convert from hex to decimal in the usual way, using expanded notation in hexits.
+\end{itemize}
+
+\subsection{Example 1.14} We first illustrate the number $(5AE7)_{10}$ using hexadecimal boxes.
+163 162 161 1
+Writing it in expanded notation, we have
+(5AE7)16 =.- 5(163) +10(1s2) + 14(1s1) + 7(1)
+= 23271. U
+\section{Arithmetic in hex}
+Hexadecimal arithmetic is very similar to decimal arithmetic, except that we have 16 hexits and
+carry, or borrow, l6’s instead of 1O’s. l/Ve work two illustrative examples here.
+Example 1.15 We add (9D7)15 + (4BA)15. Hexits carried into the next column are entered in
+the row above the horizontal line.
+%========================%
+Thus $(9D7]15 + (4BA)16 : (E91)15$. The decimal equivalent is 2519 +1210 = 3729. D
+Example 1.16 We subtract (F04)15 — (CD9)1@. The revised tow when we have borrowed a 16 is
+shown in the row above the horizontal line. Note that all the numbers in the table are in hex, so
+that the “I4” in the revised row is (l4)15, representing the decimal number 20.
+:oO"1‘lCl3
+i\:Uo*'1'.1
+mum;
+
+
+%% CHAPTER. 1. NUMBERS SYSTEMS 5
+
+\begin{itemize}
+    \item Adding the 22 column, we obtain (1)2 and so this time there is nothing to carry. Adding the
+23 column, we obtain (11)-3 and so we record 1 and carry 1 into the 24 column.
+\item Adding the
+2" column, we obtain (1)9 and the process terminates,
+\item Thus we obtain (1011)-3-:-(1111);-1-(11); = (11101); In decimal numbers, this addition is 11+15+3,
+and the sum we obtained is 29. El
+\item Binary subtraction
+Let us first revise how We deal with “borrowing” in base 10.
+\end{itemize}
+
+\subsection{Example 1.6} We perform the subtraction 4003 —~ 597.
+
+%====================%
+\begin{itemize}
+    \item Since 7 is greater than 3, we must borrow a 10. In this case, we do this from the 103 column. We
+rewrite the borrowed 1000 as 990 + 10. 
+\item So we reduce the entry in the 103 column from 4 to 3,
+replace the zeros by 9’s in the next two columns and replace 3 by 10‘+3 in the units column. 
+\item The
+resulting row is recorded above the horizontal line. We can now obtain the answer by subtracting
+597 from the row above the horizontal line. U
+\item We shall now carry out the same process in binary, where we have to borrow a. 2 when we have to
+perform the subtraction (0)2 ~ (1)2 in any column. 
+\item The (0)3 then becomes (10);, and we have
+(10)2 ~ (1)2 = (1)2-
+This process is illustrated in the example below.
+\end{itemize}
+
+\subsection{Exaniple 1.7} ll/e subtract (110l000)9 — (l01011)2.
+\begin{itemize}
+    \item \textbf{Step 1}
+1 1 0 0 1 l 10
+1 1 0 1 0 O O
+1 0 1 0 1 1
+As in the previous example, we have to borrow to perform the subtraction in the units
+column. The ﬁrst column with a non-zero entry is the 23 column. We borrow (1000); from
+this column and rewrite it as (110); + (10); (effectively, we are borrowing an S and rewriting
+it as 6 + 2). The revised row is recorded above the horizontal line.
+\item Step 2 We replace the row representing the number we are subtracting from by the row above
+the horizontal line at the end of Step 1. 
+
+\begin{itemize}
+    \item We can now perform the subtraction in the ﬁrst
+three columns as shown below.
+\item When we reach the 23 column; we have to borrow again. We
+repeat the procedure described in Step 1.
+\item The revised top row is shown above the horizontal
+\end{itemize}
+
+line.
+1 0 1 10
+1 1 0 0 1 1 10
+101011
+101
+\item  Step 3 We replace the row representing the number we are subtracting from by the row above
+the horizontal line and perform the subtraction in the 23 and 24 columns. When we reach
+the 25 column, we have to borrow from the next column. The revised top row is shown above
+the horizontal line‘
+0 10
+1 0 1 10 1 1 ,10
+1 0 1 0 1 1
+11101
+
+
+
+
+\end{itemize}
+
+
+
+
+
+\end{document}

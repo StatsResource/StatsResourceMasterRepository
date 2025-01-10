@@ -1,0 +1,77 @@
+
+\noindent \textbf{Probability: Worked Example }
+An electronics assembly subcontractor receives resistors from two suppliers: Deltatech provides
+70\% of the subcontractors's resistors while another company, Echelon, supplies the remainder.
+\\
+1\% of the resistors provided by Deltatech fail the quality control test, while 2\% of the
+resistors from Echelon also fail the quality control test.
+
+\begin{enumerate}
+	\item What is the probability that a resistor will fail the quality control test?
+	\item What is the probability that a resistor that fails the quality control test was supplied by Echelon?
+\end{enumerate}
+
+
+\noindent \textbf{Probability: Worked Example}
+Firstly, let's assign names to each event.
+\begin{itemize}
+	\item $D$ : a randomly chosen resistor comes from Deltatech.
+	\item $E$ : a randomly chosen resistor comes from Echelon.
+	\item $F$ : a randomly chosen resistor fails the quality control test.
+	\item $P$ : a randomly chosen resistor passes the quality control test.
+\end{itemize}
+\bigskip
+We are given (or can deduce) the following probabilities:
+\begin{itemize}
+	\item $P(D) = 0.70$,
+	\item $P(E) = 0.30$.
+\end{itemize}
+
+
+
+{
+	\noindent \textbf{Probability: Worked Example}
+	
+	We are given two more important pieces of information:
+	\begin{itemize}
+		\item The probability that a randomly chosen resistor fails the quality control test, given that it comes from Deltatech: $P(F|D) = 0.01 $.
+		\item The probability that a randomly chosen resistor fails the quality control test, given that it comes from Echelon: $P(F|E) = 0.02$.
+	\end{itemize}
+	
+	
+	\noindent \textbf{Probability: Worked Example}
+	
+	The first question asks us to compute the probability that a randomly chosen resistor fails the quality control test. i.e. $P(F)$.\\
+	\bigskip
+	All resistors come from either Deltatech or Echelon. So, using the \textbf{\emph{law of total probability}}, we can express $P(F)$ as follows:
+	
+	\[ P(F)  = P(F \cap D) + P(F \cap E) \]
+	
+	
+	
+	Using the \textbf{\emph{multiplication rule}}  i.e. $P(A \cap B) = P(A|B) \times P(B)$, we can re-express the formula as follows
+	
+	\[ P(F)  = P(F|D) \times P(D) + P(F|E) \times P(E) \]
+	
+	We have all the necessary probabilities to solve this.
+	
+	\[ P(F)  = 0.01 \times 0.70 + 0.02 \times 0.30   = 0.007 + 0.006  = 0.013\]
+	
+	
+	
+	\begin{itemize}
+		\item
+		The second question asks us to compute probability that a resistor that fails the quality control test was supplied by Echelon.
+		\item In other words; of the resistors that did fail the quality test only, what is the probability that a randomly selected resistor was supplied by Echelon?
+		\item We can express this mathematically as $P(E|F)$.
+		\item We can use \textbf{\emph{Bayes' theorem}} to compute the answer.
+	\end{itemize}
+	
+	
+	Recall Bayes' theorem
+	\[ P(A|B) = \frac{P(B|A)\times P(A)}{P(B)} \]
+	\bigskip
+	
+	\[ P(E|F) = \frac{P(F|E)\times P(E)}{P(F)}  =  \frac{0.02 \times 0.30}{0.013} = 0.46\]
+	
+}

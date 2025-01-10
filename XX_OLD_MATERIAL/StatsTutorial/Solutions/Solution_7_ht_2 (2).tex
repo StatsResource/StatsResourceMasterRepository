@@ -1,0 +1,27 @@
+
+%-----------------------------------------------------------%
+
+\subsection{Hypothesis Test for a proportion }
+
+\begin{itemize}
+\item Suppose we want to test whether or not the true proportion of programmers using python as their primary programming language is $40\%$
+\item We would write the null and alternative hypothesis as follows
+\begin{description}
+\item[$H_0$] $\pi = 40\%$ True proportion is $40\%$
+\item[$H_1$] $\pi \neq 40\%$ True proportion is not $40\%$
+\end{description}
+\end{itemize}
+
+\begin{itemize}
+\item The Standard Error is computed as
+\[S.E.(p) \;=\; \sqrt{ {40 \times 60 \over 160 }} =  3.87\%\]
+\item The test statistic is computed as
+\[TS = \frac{\mbox{Observed} - \mbox{Null}}{S.E.(p)} = \frac{35-40}{3.87} = -1.29\]
+\item The Critical Value is 1.96 (same as quantile from computation of confidence interval previously).
+\item Decision Rule : $|TS| > CV$? No - We fail to reject null hypothesis. Not enough evidence to contradict claim that true proportion is 40\%.
+\end{itemize}
+
+
+
+
+\end{document}
