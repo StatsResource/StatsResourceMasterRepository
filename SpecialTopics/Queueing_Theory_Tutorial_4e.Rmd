@@ -1,0 +1,10 @@
+
+
+\item 
+Jobs are sent to a supercomputer at a rate of 10 per hour and take the supercomputer on average 4 minutes to process. 
+We will assume that the number of arrivals is $X_a \sim \text{Poisson}(\lambda_a)$ and the processing (i.e., service) time is $T_s \sim \text{Exponential}(\lambda_s)$. This leads to an $M/M/1$ system.\\[-0.2cm]
+
+{\bf(a)} Let $T$ be the total time in the system - what distribution has $T$? \quad {\bf(b)} What is the average time spent in the system? Calculate $Sd(T)$ also. \quad {\bf(c)} How many jobs are in the system on average? (hint: Little's law)  \quad {\bf(d)} From the time the job is sent, what is the probability that it takes more than 15 minutes to complete?  \quad {\bf(e)} From the time the job enters the processor (i.e., service component), what is the probability that it takes more than 15 minutes to complete? \quad {\bf(f)} What is the average number of jobs completed in a 3 hour period of operation? (hint: Burke's theorem) \quad {\bf(g)} What is the probability that more than 40 jobs are completed in a 3 hour period? (hint: Burke's theorem again)
+
+
+\end{document}

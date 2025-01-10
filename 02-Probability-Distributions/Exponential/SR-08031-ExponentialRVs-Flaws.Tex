@@ -1,0 +1,70 @@
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{framed}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{Worked Examples} \chead{Exponential Distribution} %\input{tcilatex}
+
+\begin{document}
+\large 
+
+\section*{Question 3}
+Each 500-ft roll of sheet steel includes two flaws on average. 
+What is the probability that as the sheet steel is unrolled the first flaw occurs within the first 50-ft segment?
+
+\vspace{0.25cm}
+
+
+\begin{framed}
+\large 
+\noindent \textbf{Important Formulae}\\
+
+\[ X \sim \mbox{Exponential}(\lambda)\]
+
+\noindent Cumulative Distribution Function
+\[
+P( X \leq k) = 1 -e^{-k\lambda }\]
+\medskip 
+\noindent Survival Function
+\[
+P( X \geq k) =e^{-k \lambda }\]
+\medskip
+
+\noindent $\lambda$ is the exponential rate parameter.
+
+\end{framed}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{itemize}
+\item Average per 500-ft roll = 2.0
+\item average per 50-ft segment = 2.0/10 = 0.20
+\item $P(X \leq 50)$
+\begin{eqnarray*} 
+P(X \leq 50) &=& 1 - e^{-\lambda} \\
+&=& 1 - e^{-0.20}\\ 
+&=& 1-0.81873 \\
+&=& 0.18127\\
+\end{eqnarray*}
+\end{itemize}
+\end{document}

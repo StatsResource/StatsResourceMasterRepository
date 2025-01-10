@@ -1,0 +1,184 @@
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{framed}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{Worked Examples} \chead{Inference Procedures} %\input{tcilatex}
+
+\begin{document}
+\large 
+\noindent It is generally assumed that older people are more likely to vote for the Conservatives than younger people. In a survey, 180 of 400 people over 40 and 120 of 400 people under 40 stated they would vote Conservative. 
+\begin{enumerate}[(a)]
+\item Do the data support this hypothesis at a significance level of 5\%?
+%\item Calculate a 95\% confidence interval for the difference between the proportion of people over 40 voting Conservative and the proportion of people below 40 voting Conservative. 
+\end{enumerate}
+
+\bigskip 
+
+\begin{framed}
+		\noindent \textbf{Hypothesis Testing : Steps when using Critical Value approach}
+		
+		\begin{itemize}
+			\item[1] Formally State the Null and Alternative Hypothesis \smallskip
+			{
+				\begin{itemize}
+					\item[$\ast$] \textbf{ALWAYS} include a short written description of both hypotheses.
+					\item[$\ast$] State hypotheses in mathematical notation where possible.
+					
+				\end{itemize}
+			}
+			\item[2] Calculate Test Statistic (TS) using relevant formulas.\smallskip
+			\item[3] Determine the Critical Value (CV) from tables. \smallskip
+			\item[4] By comparing the values of the Test Statistic and Critical Value, decide whether to reject the Null Hypothesis.
+		\end{itemize}
+	\end{framed}
+\newpage 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Statement of Hypotheses}
+
+\begin{itemize}
+    \item The Null Hypothesis ($H_0$) proposes that there is no increased likelihood in voting intentions (i.e. likelihood to vote for the conservatives) in the older age group.
+    \item The Alternative Hypothesis ($H_1$) proposes that there is a increased likelihood in voting intentions (i.e. likelihood to vote for the conservatives) in the older age group.
+\end{itemize}
+\begin{description}
+\item[$H_0$:] $\pi_1 \leq \pi_2$  - i.e. Population proportion for one group is NOT larger than Population proportion for other group.
+\item[$H_1$:] $\pi_1 > \pi_2$ - i.e. Population proportion for one group is  larger than Population proportion for other group
+\end{description}
+
+\noindent Equivalently, the hypotheses can be expressed in terms of difference in proportions.
+\begin{description}
+\item[$H_0$:] $\pi_1 - \pi_2 \leq 0$ - i.e. Difference in population proportions is not greater than zero (Older Voters not more likely to vote Conservative).
+\item[$H_1$:] $\pi_1 - \pi_2 > 0$ - i.e. Difference in population proportions is greater than zero. (Older Voters more likely to vote Conservative).
+\end{description}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\subsection*{Computing the Test Statistic}
+\noindent \textbf{Point Estimate}
+
+\begin{itemize}
+    \item The sample proportions for both groups are
+    \[ \hat{p}_1 = \frac{180}{400} = 0.45 \;\;(\mbox{i.e.}\; 45\%) \] 
+    \[ \hat{p}_2 = \frac{120}{400} = 0.30 \;\;(\mbox{i.e.}\; 30\%) \]  
+    \item The point estimate is the difference between these proportions:
+    \[ \hat{p}_1  - \hat{p}_2  = 0.15 \;\;(\mbox{i.e.}\; 15\%) \]
+\end{itemize}
+
+\noindent \textbf{Standard Errors}
+\begin{itemize}
+    \item The Standard Error Formula are typically provided in the exam paper, or an accompanying document.
+    \item Each type of hypothesis test has a different Standard Error Formula.
+\end{itemize}
+\bigskip
+\begin{framed}
+\noindent \textbf{Standard Error for Difference in Proportions}\\
+\noindent {Two large independent samples}
+\begin{eqnarray*}
+	S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{ \bar{p}\times(1-\bar{p}) \times \left(\frac{1}{n_1}+\frac{1}{n_2}\right)}.\\
+\end{eqnarray*}
+\begin{itemize}
+    \item $\bar{p}$ is the overall proportion
+\[    \bar{p} = \frac{x_1 + x_2}{n_1+n_2}\]
+\end{itemize}
+\end{framed}
+\[    \bar{p} = \frac{x_1 + x_2}{n_1+n_2} = \frac{180 + 120}{400 + 400} = \frac{300}{800} = 0.375 \]
+\medskip
+\noindent Using percentages, the point estimate is 37.5\%.
+
+\begin{eqnarray*}
+	S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{ 37.5 \times 62.5 \times \left(\frac{1}{400}+\frac{1}{400}\right)}.\\
+	&=&\sqrt{2343.75 \times 0.005}.\\
+	&=&\sqrt{11.71}\\
+	&=& 3.4234 \\
+\end{eqnarray*}
+\newpage 
+
+\noindent \textbf{General Structure of the Test Statistic}
+
+\noindent The Test Statistic $TS$ is a Normally  Distributed random variable with $TS \sim Z(0,1^2)$.
+\begin{framed}
+\[ TS = {\mbox{Point Estimate} - \mbox{Expected Parameter Value under $H_{0}$} \over \mbox{Std. Error}}\]
+\end{framed}
+
+
+\begin{eqnarray*}
+TS &=& \frac{ 15\;-\; 0}{3.4234} \\
+& & \\
+&=& 4.3816\\
+\end{eqnarray*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+\subsection*{Determine the Critical Value}
+
+\begin{itemize}
+\item The critical value is determined from Statistical Tables.
+\item Determination depends on the significance level $\alpha$, the sample size $n$ and the number of tails in the test (i.e. is it a one-tailed or two tailed test?)
+\end{itemize}
+
+\noindent \textbf{Significance Level}
+
+\begin{itemize}
+\item In hypothesis testing, the significance level $\alpha$ is the criterion used for rejecting the null hypothesis. 
+%\item The significance level of a statistical hypothesis test is a fixed probability of wrongly rejecting the null hypothesis $H_0$, if it is in fact true.
+%\item Equivalently, the significance level (denoted by $\alpha$) is the probability that the test statistics will fall into the \textbf{\emph{critical region}}, when the null hypothesis is actually true. 
+
+\item In University courses, common choices for $\alpha$ are $0.05$ and $0.01$. We will use $\alpha =0.05$ (i.e. 5\%).
+\item We have a large aggregate sample size ($n_1 + n_2 > 30)$.
+\item The hypothesis test is 1-tailed procedure.
+\item The Critical Value is 1.645.
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+\subsection*{Decision}
+
+
+
+\begin{framed}
+\noindent \textbf{What are the conclusions}
+	\begin{itemize} 
+		
+		\item[Yes:] We \textbf{reject the Null} Hypothesis. \\ \textit{We have sufficient evidence against Null Hypothesis.}
+		
+		\item[No:] We \textbf{fail to reject} Null hypothesis. \\ \textit{We do not have sufficient evident against Null Hypothesis.}
+	\end{itemize}	
+	{	\normalsize
+		N.B. Note the terminology that we are using. Also note exactly what our conclusion is: We are talking about strength of evidence, rather than what is true or false.}
+	
+\end{framed}
+	\smallskip
+\begin{framed}
+\begin{itemize}
+	\item 	If $TS > CV$ , where $CV$ is a critical value corresponding to the sample size and confidence level, then reject the null hypothesis. 
+	\item  If $TS \leq CV$ , we fail to reject. null hypothesis. i.e. Not enough evidence. 
+	\end{itemize}	
+\end{framed}	
+
+\noindent Here $TS > CV$ , i.e. ($4.38 > 1.645$), we can reject the null hypothesis. i.e. Not enough evidence of a difference in voting preferences between ages groups. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+BLANK
+	
+	
+\end{document}	

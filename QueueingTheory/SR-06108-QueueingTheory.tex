@@ -1,0 +1,67 @@
+
+\documentclass[a4paper12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\large 
+
+
+%%- http://webpages.iust.ac.ir/matashbar/teaching/schaum_probability.pdf
+
+%%-- PAge 287
+%%-- 9.9
+
+
+
+People arrive at a telephone booth according to a Poisson process at an average rate of 12 per 
+hour, and the average time for each call is an exponential r.v. with mean 2 minutes. 
+
+\begin{enumerate}[(a)]
+    \item  What is the probability that an arriving customer will find the telephone booth occupied? 
+\item It is the policy of the telephone company to install additional booths if customers wait an 
+average of 3 or more minutes for the phone. Find the average arrival rate needed to justify a 
+second booth. 
+\end{enumerate}
+
+\section*{Solution}
+\begin{itemize}
+    \item (a) The telephone service can be modeled as an M/M/1 queueing system with $\lambda = 1/5$, $\mu = 1/2$ and $\rho = \lambda / \mu = 2/5$.
+\item The probability that an arriving customer will find the telephone occupied is $P(L > 0)$, where 
+$L$ is the average number of customers in the system. 
+\item Thus, from Eq. (9.1 3), 
+\end{itemize}
+\[P(L>0) = 1-p_{0} = 1-(1-\rho) = \rho = \frac{2}{5} = 0.4 \]
+\begin{itemize}
+    \item (b) From Eq. (9.1 7), 
+    \[ W_{q} = \frac{\lambda}{\mu(\mu-\lambda)} = \frac{\lambda}{0.5(0.5-\lambda)} \geq 3\]
+from which we obtain $\lambda \geq 0.3$ per minute.
+\item Thus, the required average arrival rate to justify the second 
+booth is 18 per hour.
+\end{itemize}
+
+ 
+
+\end{document}

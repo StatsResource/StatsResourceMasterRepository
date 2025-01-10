@@ -1,0 +1,79 @@
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Discrete Probability Distributions}
+Three main distributions
+\begin{itemize}
+\item Binomial Distribution
+\item Poisson Distribution
+\item Geometric Distribution (mentioned, but not as important as the other two.)
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Binomial Probability Distribution}
+Important Points:
+\begin{itemize}
+\item The experiment is a series of $n$ independent trials.
+\item Two possible outcomes from each trial: a success and a failure.
+\item The probability of success (i.e. $p$) is constant. 
+\item A binomial random variable can be written as 
+\[ X \sim B(n,p) \]
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Poisson Probability Distribution}
+Important Points:
+\begin{itemize}
+\item This distribution is concerned with the number of occurrences per unit space.
+\item Unit space can mean a unit length, a unit area, a unit volume or a unit period of time.
+\item We will concern ourselves with unit time periods mostly.
+\item A Poisson random variable can be written as
+\[ X \sim Pois(m) \]
+\item The Poisson distribution can be used to approximate the binomial distribution under certain conditions.
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{PDFs and CDFs}
+Important Points:
+\begin{itemize}
+\item The probability density function (PDF) is the probability of a random variable taking a specific value i.e. $P(X = k)$
+\item The appropriate \texttt{R} functions are \texttt{dbinom} and \texttt{dpois}
+\item The cumulative distribution function (CDF) is the probability of a random variable not exceeding a specific value i.e. $P(X \leq k)$
+\item The appropriate \texttt{R} functions are \texttt{pbinom} and \texttt{ppois}     
+\end{itemize}
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Geometric Probability Distribution}
+Important Points:
+\begin{itemize}
+\item This distribution is closely related to the binomial distribution. 
+\item This distribution described the number of failures that occur before the first success, when the probability of success is $p$.
+\item The relevant \texttt{R} functions are \texttt{dgeom} and \texttt{pgeom}.
+\end{itemize}
+}
+
+%---------------------------------------------------------------------------%
+\begin{frame}[fragile]
+\frametitle{Geometric Probability Distribution : Example}
+
+If the probability of inserting a USB correctly is $0.40$, what is the probability of successfully doing so on the second attempt.
+\bigskip.
+In essence we have one failure, then one success, and these are independent events. So the probability the second attempt will be successful is $0.6 \times 0.4$. The probability that we are successful on the first attempt (i.e. no failures beforehand) is 0.4
+
+\begin{verbatim}
+> dgeom(0,prob=0.4)
+[1] 0.4
+> dgeom(1,prob=0.4)
+[1] 0.24
+> dgeom(2,prob=0.4)
+[1] 0.144
+\end{verbatim}
+
+\end{frame}
+
+

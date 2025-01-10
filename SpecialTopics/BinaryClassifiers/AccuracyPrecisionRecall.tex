@@ -1,0 +1,244 @@
+
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{framed}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{Examples} \chead{Probability} %\input{tcilatex}
+
+\begin{document}
+\large 
+
+%---------------------------------------%
+\section*{Accuracy, Precision and Recall}
+\begin{center}
+	\begin{tabular}{|c||c|c|} \hline
+		& Null hypothesis & Null hypothesis   \\
+		& ($H_0$) true	 & ($H_0$) false \\ \hline \hline
+		Reject 	       & \textbf{Type I error }   & \textbf{Correct outcome} \\
+		null hypothesis& False positive  & True positive \\ 
+		 & &  \\ \hline
+		Fail to reject & \textbf{Correct outcome} & \textbf{Type II error} \\
+		null hypothesis & True negative  & False negative \\ 
+		& & \\ \hline
+	\end{tabular} 
+\end{center}
+\bigskip
+In the context of a binary classification prediction procedure 
+\begin{center}
+	\begin{tabular}{|c||c|c|}
+		\hline  & \phantom{spa} Predicted Negative \phantom{spa} & \phantom{spa} Predicted Positive\phantom{spa} \\ 
+		 & &  \\ \hline \hline
+		Observed Negative\phantom{spa} & True Negative \;(\textbf{tn}) & False Positive \;(\textbf{fp})\\ 
+		 & &  \\ \hline
+		Observed Positive\phantom{spa} & False Negative \;(\textbf{fn}) & True Positive \;(\textbf{tp}) \\ 
+		 & &  \\ \hline
+	\end{tabular} 
+\end{center}
+\medskip 
+\noindent Accuracy, Precision and Recall are defined as
+\[\mbox{Accuracy}=\frac{tp+tn}{tp+tn+fp+fn} \]
+\[\mbox{Precision}=\frac{tp}{tp+fp} \] 
+\[\mbox{Recall}=\frac{tp}{tp+fn} \]
+\medskip 
+\noindent The F measure is computed as
+\[F = 2 \cdot \frac{\mathrm{precision} \cdot \mathrm{recall}}{ \mathrm{precision} + \mathrm{recall}}\]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+
+	\section*{Part (a)}	
+
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline  & \phantom{spa}Predict Negative\phantom{spa} & \phantom{spa}Predict Positive\phantom{spa} \\ 
+			\hline Observed Negative &	9500	&	85	\\ 
+			\hline Observed Positive & 	115	&	300	\\ 
+			\hline 
+		\end{tabular} 
+	\end{center}
+\medskip 
+\begin{framed}
+\noindent With reference to the table above, compute each of the following appraisal metrics.
+\begin{multicols}{2} 
+	\begin{itemize}
+		\item [i.] Accuracy
+		\item [ii.] Precision
+		\item [iii.] Recall
+		\item [iv.] $F$ measure
+	\end{itemize}
+\end{multicols}
+\end{framed}
+\medskip 
+
+
+\noindent Remark: Total Number of cases: $N=10,000$
+\begin{description}
+\item[Accuracy:]
+
+\[ \mbox{Accuracy} \;=\;\frac{9,500 + 300}{10,000}  \;=\;\frac{9,800}{10,000} \;=\;0.98 \] 
+\item[Precision:]
+
+\[ \mbox{Precision (P)} \;=\;\frac{300}{300+85}  \;=\;\frac{300}{385} \;=\;0.7792 \] 
+\item[Accuracy:]
+
+\[ \mbox{Recall (R)} \;=\;\frac{300}{300+115}  \;=\;\frac{300}{415} \;=\;0.7229 \] 
+\item[Precision:]
+
+\[ \mbox{F Measure} \;=\;\frac{2PR}{P\;+\;R}  \;=\;\frac{2(0.7792)(0.7229)}{ 0.7792 + 0.7229} \;=\;\frac{1.266}{1.502} \;=\;0.50 \] 
+
+\end{description}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+
+	\section*{Part (b)}	
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline  & \phantom{spa}Predict Negative\phantom{spa} & \phantom{spa}Predict Positive\phantom{spa} \\ 
+			\hline Observed Negative &	9700	&	140	\\ 
+			\hline Observed Positive & 	60	&	100	\\ 
+			\hline 
+		\end{tabular} 
+	\end{center}
+
+
+\medskip 
+\begin{framed}
+\noindent With reference to the table above, compute each of the following appraisal metrics.
+\begin{multicols}{2} 
+	\begin{itemize}
+		\item [i.] Accuracy
+		\item [ii.] Precision
+		\item [iii.] Recall
+		\item [iv.] $F$ measure
+	\end{itemize}
+\end{multicols}
+\end{framed}
+\medskip 
+
+
+\noindent Remark: Total Number of cases: $N=10,000$
+\begin{description}
+\item[Accuracy:]
+
+\[ \mbox{Accuracy} \;=\;\frac{9,700 + 100}{10,000}  \;=\;\frac{9,800}{10,000} \;=\;0.98 \] 
+\item[Precision:]
+
+\[ \mbox{Precision (P)} \;=\;\frac{100}{100+140}  \;=\;\frac{100}{240} \;=\;0.4167 \] 
+\item[Accuracy:]
+
+\[ \mbox{Recall (R)} \;=\;\frac{100}{100+60}  \;=\;\frac{100}{240} \;=\;0.6250 \] 
+\item[Precision:]
+
+\[ \mbox{F Measure} \;=\;\frac{2PR}{P\;+\;R}  \;=\;\frac{2(0.4167)(0.6250)}{ 0.4167 + 0.6250} \;=\;\frac{0.5208}{1.0417} \;=\;0.50 \] 
+
+\end{description}
+\newpage 
+
+	\section*{Part (c)}	
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline  & \phantom{spa}Predict Negative\phantom{spa} & \phantom{spa}Predict Positive\phantom{spa} \\ 
+			\hline \phantom{spa}Observed Negative\phantom{spa} &	9530	&	10	\\ 
+			\hline \phantom{spa}Observed Positive\phantom{spa} & 	300	&	160	\\ 
+			\hline 
+		\end{tabular} 
+	\end{center}
+
+\medskip 
+\begin{framed}
+\noindent With reference to the table above, compute each of the following appraisal metrics.
+\begin{multicols}{2} 
+	\begin{itemize}
+		\item [i.] Accuracy
+		\item [ii.] Precision
+		\item [iii.] Recall
+		\item [iv.] $F$ measure
+	\end{itemize}
+\end{multicols}
+\end{framed}
+\medskip 
+
+
+\noindent Remark: Total Number of cases: $N=10,000$
+\begin{description}
+\item[Accuracy:]
+
+\[ \mbox{Accuracy} \;=\;\frac{9,530 + 160}{10,000}  \;=\;\frac{9,690}{10,000} \;=\;0.969 \] 
+\item[Precision:]
+
+\[ \mbox{Precision (P)} \;=\;\frac{160}{160+10}  \;=\;\frac{160}{170} \;=\;0.9412 \] 
+\item[Accuracy:]
+
+\[ \mbox{Recall (R)} \;=\;\frac{160}{160+300}  \;=\;\frac{160}{460} \;=\;0.3418 \] 
+\item[Precision:]
+
+\[ \mbox{F Measure} \;=\;\frac{2PR}{P\;+\;R}  \;=\;\frac{2(0.9412)(0.3418)}{ 0.94127 + 0.3418} \;=\;\frac{0.6547}{1.2890} \;=\;0.5079 \] 
+\end{description}
+\newpage 
+
+	\section*{Part (d)}	
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+			\hline  & \phantom{spa}Predict Negative\phantom{spa} & \phantom{spa}Predict Positive\phantom{spa}  \\ \hline
+		Negative Cases & TN: 9,700  & FP: 165 \\ \hline
+		Positive Cases & FN: 35 & TP: 100 \\ \hline
+	\end{tabular} 
+\end{center}
+
+\medskip 
+\begin{framed}
+\noindent With reference to the table above, compute each of the following appraisal metrics.
+\begin{multicols}{2} 
+	\begin{itemize}
+		\item [i.] Accuracy
+		\item [ii.] Precision
+		\item [iii.] Recall
+		\item [iv.] $F$ measure
+	\end{itemize}
+\end{multicols}
+\end{framed}
+\medskip 
+
+
+\noindent Remark: Total Number of cases: $N=10,000$
+\begin{description}
+\item[Accuracy:]
+
+\[ \mbox{Accuracy} \;=\;\frac{9,700 + 100}{10,000}  \;=\;\frac{9,800}{10,000} \;=\;0.98 \] 
+\item[Precision:]
+
+\[ \mbox{Precision (P)} \;=\;\frac{100}{100+165}  \;=\;\frac{100}{265} \;=\;0.3774 \] 
+\item[Accuracy:]
+
+\[ \mbox{Recall (R)} \;=\;\frac{100}{10+35}  \;=\;\frac{100}{135} \;=\;0.7407\] 
+\item[Precision:]
+
+\[ \mbox{F Measure} \;=\;\frac{2PR}{P\;+\;R}  \;=\;\frac{2(0.3774)(0.7407)}{ 0.3774 + 0.7407} \;=\;\frac{0.5590}{1.1181} \;=\;0.50 \] 
+\end{description}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+BLANKS
+\end{document}	

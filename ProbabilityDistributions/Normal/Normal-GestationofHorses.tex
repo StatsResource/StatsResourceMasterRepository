@@ -1,0 +1,100 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{amssymb}
+\usepackage{framed}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Normal Distribution} %\input{tcilatex}
+
+\begin{document}
+\section*{Normal Distribution: Gestation for Horses}
+\noindent The gestation period of horses is approximately normally distributed with a mean of 337 days and a standard deviation of 5 days. 
+Estimate the probability that the gestation period is
+
+
+\begin{enumerate}[(A)]
+	\item       greater than 340 days
+	
+\item  less than 330 days
+	
+\item  between 330 and 340 days. 
+	
+\item  What gestation period is surpassed by 2.5\% of the population?
+\end{enumerate}
+
+
+\subsection*{Solution}
+\begin{itemize}
+\item $X$ is gestation period of horses, denominated in days.
+\item $X \sim N(337,5^2)$
+\end{itemize}
+
+\subsection*{Solution to Part A}
+Compute $\Pr(X\geq 340)$
+
+\[Z_{340} = \frac{340-337}{5} = 0.666 \;\approx\; 0.67\]
+
+\begin{itemize}
+    \item $\Pr(X\geq 340) = \Pr(Z \geq 0.67)$
+    \item Murdoch Barnes Tables: $\Pr(Z \geq 0.67) \;=\;  0.2514$
+    \item $\Pr(X\geq 340) \; \approx \;  0.2514$
+\end{itemize}
+
+\subsection*{Solution to Part B}
+Compute $\Pr(X\leq 330)$    
+
+\[Z_{330} = \frac{330-337}{5} = -1.40\]
+
+\begin{itemize}
+    \item $\Pr(X\leq 330) = \Pr(Z \leq -1.40)$
+    \item Symmetry Rule: $\Pr(Z \leq -1.40) = \Pr(Z \geq 1.40)$
+    \item Murdoch Barnes Tables: $\Pr(Z \geq 1.40) = 0.0807$
+    \item $\Pr(X\leq 330) \;=\; 0.0807$
+\end{itemize}
+
+\newpage
+
+\subsection*{Solution to Part C}
+\[\Pr(\mbox{Inside Interval})= 1 - \Pr(\mbox{Outside Interval}) \]
+\[\Pr(330\leq X \leq 340)= 1 - \left[\Pr(X\leq 330) + \Pr(X\geq 340)\right] \]
+
+\[\Pr(330\leq X \leq 340)= 1- [0.0807 +  0.2514] = 0.6679\]
+
+
+
+\subsection*{Solution to Part D}
+Find $X_0$ such that  $P(X \geq X_0)= 0.025$
+
+\begin{itemize}
+\item From tables, we see that $P(Z \geq 1.96) = 0.025$.
+\item The Z-score for the number that we are looking for is 1.96.
+\item Using Z-score formula
+\end{itemize}
+\[ 1.96 = \frac{X_0 - 337}{5} \]
+
+\[ \therefore X_0 = 337 + (5 \times 1.96) =  346.8\]
+
+
+
+
+
+
+
+\end{document}

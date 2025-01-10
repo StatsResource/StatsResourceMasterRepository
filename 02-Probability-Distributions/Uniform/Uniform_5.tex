@@ -1,0 +1,32 @@
+
+
+\textbf{Today's Class: Continuous Distributions}
+\begin{itemize}
+\item The Uniform Distribution
+\item The Exponential Distribution
+\item The Normal Distribution
+\end{itemize}
+\medskip
+
+\textbf{The Uniform Distribution}
+In the last class, we had a look at the continuous uniform distribution. It is very useful in constructing simulations. Briefly we will look at some relevant \texttt{R} function.
+The distribution has two parameters: i.e \texttt{min} and \texttt{max}. (Here chosen as 5 and 10 respectively)
+\begin{verbatim}
+># Generate Four Random Number
+> runif(4, min=5,max=10)
+[1] 9.709372 7.884805 5.571331 5.017549
+>
+># Compute Density
+> dunif(4:11,min=5,max=10)
+[1] 0.0 0.2 0.2 0.2 0.2 0.2 0.2 0.0
+>
+> #Compute distribution of
+> punif(4:11,min=5,max=10)
+[1] 0.0 0.0 0.2 0.4 0.6 0.8 1.0 1.0
+\end{verbatim}
+
+\medskip
+
+
+%---------------------------------------------%
+\end{document}                             

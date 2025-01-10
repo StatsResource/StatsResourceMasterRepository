@@ -1,0 +1,74 @@
+
+
+
+%%- https://vrcacademy.com/tutorials/gamma-distribution/
+
+
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\large
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Gamma Distribution}
+Gamma distribution is used to model a continuous random variable which takes positive values. Gamma distribution is widely used in science and engineering to model a skewed distribution.
+
+\subsection*{Gamma Distribution Definition}
+
+\noindent \textbf{Notation} \[X\sim G(\alpha, \beta).\]The parameter $\alpha$ is called the shape parameter and $\beta$ is called the scale parameter of gamma distribution.
+
+\noindent \textbf{Probability Density Function}\\
+A continuous random variable $X$ is said to have an gamma distribution with parameters $\alpha$ and $\beta$ if its p.d.f. is given by\[ \begin{align*} f(x)&= \begin{cases} \frac{1}{\beta^\alpha\Gamma(\alpha)}x^{\alpha -1}e^{-x/\beta}, & x > 0;\alpha, \beta > 0; \\ 0, & \mbox{Otherwise.} \end{cases} \end{align*} \]where for $\alpha>0$, $\Gamma(\alpha)=\int_0^\infty x^{\alpha-1}e^{-x}; dx$ is called a gamma function.
+
+
+
+%%%<h2 id=graph-of-gamma-distribution>Graph of Gamma Distribution</h2><p>Following is the graph of probability density function (pdf) of gamma distribution with parameter $\alpha=1$ and $\beta=1,2,4$.<p><img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22480%22 height=%22384%22%3E%3C/svg%3E" alt ezimgfmt="rs rscb8 src ng ngcb8" class=ezlazyload data-ezsrc=/images/gamma01.png><h2 id=another-form-of-gamma-distribution>
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Gamma distribution. Let us take two parameters $\alpha > 0$ and $\beta > 0$. 
+
+The Gamma function
+$\Gamma(\alpha)$ is defined by
+\[\Gamma(\alpha) = \int^{\infty}_{0}x^{\alpha−1}e^{−x}dx.\]
+
+
+If we divide both sides by $\Gamma(\alpha)$ we get
+\[ 1 = \int^{\infty}_{0} \frac{1}{\Gamma(\alpha) }x^{\alpha−1}e^{−x}dx.\]  we made a change of variables $x = \beta y$. 
+
+
+\begin{eqnarray*}
+\int^{\infty}_{0} \frac{1}{\Gamma(\alpha) }x^{\alpha−1}e^{−x}dx &=&  \int^{\infty}_{0} \frac{1}{\Gamma(\alpha) }(\beta y)^{\alpha−1}\;e^{−\beta y}dx \\
+\int^{\infty}_{0} \frac{1}{\Gamma(\alpha) }(\beta)^{\alpha−1} (y)^{\alpha−1}e\;^{−\beta y}dx\\
+\int^{\infty}_{0} \frac{(beta^{\alpha−1}}{\Gamma(\alpha) } \cdot y^{\alpha−1}\;e^{−\beta y}dx\\
+\end{eqnarray*}
+
+%%--https://web.williams.edu/Mathematics/sjmiller/public_html/372Fa15/handouts/GammaFnChapter_Miller.pdf
+%%-- https://onlinehw.math.ksu.edu/math340book/chap3/gamma.php###

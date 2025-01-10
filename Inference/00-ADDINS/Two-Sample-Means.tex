@@ -1,0 +1,40 @@
+\frametitle{Difference Of Two Means}
+%-http://onlinestatbook.com/chapter8/difference_means.html
+In order to construct a confidence interval, we are going to make three assumptions:
+
+\begin{itemize}
+\item The two populations have the same variance. This assumption is called the assumption of homogeneity of variance.
+\item For the time being, we will use this assumption. Later on in the course, we will discuss the validity of this assumption for two given samples.
+\item The populations are normally distributed.
+\item Each value is sampled independently from each other value.
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------%
+\begin{frame}
+\frametitle{Computing the Confidence Interval}
+
+\begin{itemize}
+\item As always the first step is to compute the point estimate. For the difference of means for groups $X$ and $Y$, the point estimate is simply the difference between the two means i.e. $\bar{x} - \bar{y}$.
+
+\item As we have seen previously, sample size has a bearing in computing both the quantile and the standard error.
+For two groups, we will use the aggregate sample size ($n_x+n_y)$ to compute the quantile. (For the time being we will assume, the aggregate sample size is large ($n_x+n_y)> 30$.)
+
+\item Lastly we must compute the standard error $S.E.(\bar{x}-\bar{y})$. The formula for computing standard error for the difference of two means, depends on whether or not the aggregate sample size is large or not. For the case that the sample size is large, we use the following formula (next slide).
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------%
+\begin{frame}
+\frametitle{Computing the Confidence Interval}
+Standard Error for difference of two means (large sample)
+
+\[ S.E.(\bar{x}-\bar{y}) = \sqrt{\frac{s^2_x}{n_x} + \frac{s^2_y}{n_y}} \]
+
+\begin{itemize}
+\item $s^2_x$ and $s^2_x$ is the variance of samples $X$ and $Y$ respectively.
+\item $n_x$ and $n_y$ is the sample size of both samples.\bigskip
+
+\item For small samples, the degrees of freedom is $df = n_x + n_y - 2$. If the sample size $n \leq 32$, we can find appropriate $t-$quantile, rather than assuming it is a $z-$quantile.
+\end{itemize}
+\end{frame}

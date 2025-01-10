@@ -1,0 +1,107 @@
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx}  % Font Family
+\usepackage{helvet}   % Font Family
+\usepackage{color}
+\mode<presentation> {
+ \usetheme{Default} % was
+ \useinnertheme{rounded}
+ \useoutertheme{infolines}
+ \usefonttheme{serif}
+ %\usecolortheme{wolverine}
+% \usecolortheme{rose}
+\usefonttheme{structurebold}
+}
+\setbeamercovered{dynamic}
+
+\title[MA4704]{Technological Mathematics 4 \\ {\normalsize MA4704 Lecture 3B}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize Kevin.obrien@ul.ie}}
+\date{Spring Semester 2013}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Probability Mass Function}
+(Formally defining something mentioned previously)
+\begin{itemize} \item a probability mass function (pmf) is a \textbf{\emph{function}}
+that gives the probability that a discrete random variable is exactly equal to some
+value.
+\[P(X=k)\]
+\item The probability mass function is often the primary means of defining a discrete
+probability distribution
+\item It is conventional to present the probability mass function in the form of a table.
+\end{itemize}
+}
+%--------------------------------------------------------------------------------------%
+\frame{
+\frametitle{ Binomial Example }
+(Revision from Last Class)\\
+Suppose a die is tossed 5 times. What is the probability of getting exactly 2 fours?
+
+Solution: This is a binomial experiment in which the number of trials is equal to 5, the number of successes is equal to 2, and the probability of success on a single trial is 1/6 or about 0.167. 
+
+Therefore, the binomial probability is:
+
+\[P(X=2) = ^5C_2 \times (1/6)^2 \times (5/6)^3 = 0.161\]
+}
+%--------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Probability Tables}
+In the \textbf{sulis} workspace there are two important tables used for this part of the course.
+This class will feature a demonstration on how to read those tables.
+\begin{itemize}
+\item The Cumulative Binomial Tables (Murdoch Barnes Tables 1)
+\item The Cumulative Poisson Tables (Murdoch Barnes Tables 2)
+\end{itemize}
+Please get a copy of each as soon as possible.
+
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Probability Tables}
+\begin{itemize}
+\item For some value $r$ the tables record the probability of $P(X \geq r)$.
+\item The Student is required to locate the appropriate column based on the parameter values for the distribution in question.
+\item A copy of the Murdoch Barnes Tables will be furnished to the student in the End of Year Exam. The Tables are not required for the first mid-term exam.
+\item Knowledge of the sample space, partitioning of the sample points, and the complement rule are advised.
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+
+
+\frame{
+\frametitle{Binomial Distribution : Using Tables}
+It is estimated by a particular bank that 25\% of credit card customers pay only the minimum amount due on their monthly credit card bill and do not pay the total amount due. 50 credit card customers are randomly selected.
+\begin{enumerate}
+\item (3 marks)	What is the probability that 9 or more of the selected customers pay only the minimum amount due?
+\item (3 marks) What is the probability that less than 6 of the selected customers pay only the minimum amount due?
+\item (3 marks)	What is the probability that more than 5 but less than 10 of the selected customers pay only the minimum amount due?
+\end{enumerate}
+
+}
+
+\frame{
+\frametitle{Binomial Distribution : Using Tables}
+Demonstration on Blackboard re: how to use tables in class.
+\begin{enumerate}
+\item $P(X \geq 9) = 0.9084$
+\item $P(X < 6) = 1- P(X \geq 6) =1 - 0.9930 = 0.0070$
+\item $P(6 \leq X \leq 9) = P(X \geq 6) - P(X \geq 10) = 0.9930 - 0.8363 = 0.1567$
+\end{enumerate}
+
+}

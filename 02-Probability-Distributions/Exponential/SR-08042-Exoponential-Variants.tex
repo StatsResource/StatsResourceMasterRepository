@@ -1,0 +1,86 @@
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{framed}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{Worked Examples} \chead{Exponential Distribution} %\input{tcilatex}
+
+\begin{document}
+\large 
+
+\section*{Exponential Distribution Example: Laptop Lifetimes}
+
+The average lifespan of a laptop is 5 years. You may assume that
+the lifespan of computers follows an exponential probability
+distribution. 
+\begin{enumerate}[(a)]
+\item  What is the
+probability that the lifespan of the laptop will be at least 6
+years? \item 
+
+What is the probability that the lifespan of the laptop will not
+exceed 4 years? \item  What is the probability of the
+lifespan being between 5 years and 6 years?
+\end{enumerate}
+\medskip 
+\subsection*{Remark}
+
+Here we are told the exponential mean $\mu$, which is related to the rate parameter as follows:
+\[ \mu = \frac{1}{\lambda}\]
+
+\subsection*{Solution}
+Suppose the lifetime of a PC is exponentially distributed with
+mean $\mu =5$. We should be told the average lifetime $\mu$.
+
+\begin{framed}
+\[
+P( X \geq k) = e^{{-k \over \mu}}
+\]
+\[
+P( X \leq k) = 1 - e^{{-k \over \mu}}
+\]
+\end{framed}
+\large 
+\begin{itemize}
+\item[(a)] $P(X \geq 6) = e^{-6/5} =  e^{-1.2} = 0.3012$
+\item[(b)] $P(X \leq 4) =  1 - e^{-0.8} = 0.5506$
+\item[(c)] $P(5 \leq X \leq 6) = 1- [ P( X \leq 5) +  P( X \geq 6)]$ \\ \smallskip
+\begin{eqnarray*} 
+P( X \leq 5)  &=& 1 - e^{-5/5} \\
+&=& 1 - e^{-1} \\
+&=& 0.6321 \\
+\end{eqnarray*}
+\\ \smallskip
+\begin{eqnarray*} 
+P(5 \leq X \leq 6) &=& 1 - (0.6321 + 0.3012) \\ 
+&=& 0.0667\\
+&=& 6.67 \%
+\end{eqnarray*}
+\end{itemize}	
+%%	\item[(c)] Alternative approach to (b)\\$P(5 \leq X \leq 10)$ \\ = $P( X \geq 5) - P( X \geq 10)$ \\
+%%	= $e^{-0.5} - e^{-1}$
+%%	=0.6065 - 0.3678\\
+%%	= 0.2386 = 23.86 $\%$
+%%\end{itemize}
+
+\newpage
+BLANK
+\end{document}

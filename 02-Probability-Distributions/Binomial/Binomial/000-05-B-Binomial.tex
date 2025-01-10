@@ -1,0 +1,202 @@
+	\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Binomial Distribution} %\input{tcilatex}
+\begin{document}
+
+% - http://www.wbs.eu.com/SharedFiles/Maths/statistics%201%20revision/introducing%20binomial.pdf
+
+The Binomial distribution is a discrete distribution used.
+
+
+The outcome of interest is known as a `success'. If we are
+interested in how many times we get a six when a dice is rolled.
+
+The probability of success is denoted $p$.
+
+%============================================================ %
+\subsection{Binomial Coefficients}
+\[
+\left( {\begin{array}{*{20}c} n \\ k \\ \end{array}} \right) =
+\frac{{n!}}{{k!\left( {n - k} \right)!}} \]
+
+%============================================================ %
+
+\subsection{Binomial Probability}
+\[y = \frac{{n!}}{{k!\left( {n - k} \right)!}}p^k q^{n - k} = \left( {\begin{array}{*{20}c} n \\ k \\ \end{array}} \right)p^k q^{n -
+	k}\]
+
+mean and variance of Binomial distribution
+
+$M_{bin} = np$  and $\sigma ^2 _{bin} = np(1-p)$
+
+For example, if the sample size is 12 and the probability of
+success is 0.25, the mean is $12 \times 0.25 = 3$ and the variance
+is $\sigma ^2 _{bin} = 12 \times 0.25 \times 0.75 = 2.25$.
+%=============================================================%
+\[E(X) = \mu = np\]
+
+
+The variance of the binomial distribution is
+
+\[ \operatorname{Var}(X) = \sigma^2 = npq\]
+
+Note: In a binomial distribution, only 2 parameters, namely n and p, are needed to determine the probability.
+
+
+P(X) gives the probability of successes in n binomial trials.
+
+%http://www.wbs.eu.com/SharedFiles/Maths/statistics%201%20revision/introducing%20binomial.pdf
+
+
+
+
+\begin{itemize}
+	\item The formula can be understood as follows: we want exactly k successes ($p^k$) and $n - k$ failures ($(1 - p)^{n - k}$).
+	\item However, the k successes can occur anywhere among the n trials, and there are ${n \choose k}$ different ways of distributing k successes in a sequence of n trials.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+%=============================================================%
+
+\section{Binomial Distribution : Worked Example}
+\begin{itemize}
+\item A manufacturer of hospital equipment knows from experience that 5\% of the production will have some type of minor default, and will require adjustment.
+
+\begin{itemize}
+\item Number of independent trials $n$
+
+\item Probability of a "success" $p$
+
+\end{itemize}
+\end{itemize}
+
+
+
+
+\textbf{The Binomial Distribution}
+
+
+\begin{itemize}
+	\item The formula can be understood as follows: we want exactly k successes ($p^k$) and n ? k failures $(1 ? p)^{n ? k}$.
+	\item However, the k successes can occur anywhere among the n trials, and there are ${n \choose k}$ different ways of distributing k successes in a sequence of n trials.
+\end{itemize}
+
+
+%=================================================%
+\newpage
+\section{The Binomial Distribution}
+
+
+The number of ways of choosing x items from n different items with no concern for order.
+
+It is how we calculate the all the numbers of ways we can get x successes from n trials
+
+Remark : 
+How many ways are there of getting two heads when a coin is tossed three times?
+\[\{HHT,			HTH,			THH\}\]
+3 different ways
+With a larger number of trials or successes, this is difficult to compute without using the above formula.
+
+
+
+
+%----------------------------------------------%
+
+
+
+
+\textbf{Binomial Distribution: Example 2}
+\textbf{Example}
+
+
+
+
+The Binomial distribution is a discrete distribution used.
+
+
+The outcome of interest is known as a `success'. If we are
+interested in how many times we get a six when a dice is rolled.
+
+The probability of success is denoted $p$.
+
+binomial coefficients
+\[
+\left( {\begin{array}{*{20}c} n \\ k \\ \end{array}} \right) =
+\frac{{n!}}{{k!\left( {n - k} \right)!}} \]
+
+%============================================================ %
+
+binomial probability
+\[y = \frac{{n!}}{{k!\left( {n - k} \right)!}}p^k q^{n - k} = \left( {\begin{array}{*{20}c} n \\ k \\ \end{array}} \right)p^k q^{n -
+	k}\]
+
+mean and variance of Binomial distribution
+
+$M_{bin} = np$  and $\sigma ^2 _{bin} = np(1-p)$
+
+
+
+%====================================================================%
+
+\subsection{The Binomial Probability Distribution}
+
+
+
+P(X) gives the probability of successes in n binomial trials.
+
+
+
+		
+
+
+
+
+The word "success" means that the outcome is the outcome of interest.
+
+If the outcome of interest is something like a flat tire, using the word "success" is coutner intuituive.
+
+
+
+
+
+
+
+
+%--------------------------------------------------------------------------------------%
+{
+
+
+
+
+\end{document}
+

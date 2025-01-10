@@ -1,0 +1,77 @@
+	\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Normal Distribution} %\input{tcilatex}
+
+\begin{document}
+
+	\section*{Exam Score Example}
+	The distribution of the exam scores in a statistics distribution is normally distributed with mean $\mu=45$  and standard deviation 
+	$\sigma=16$. Suppose you receive a mark of 49.
+	\begin{itemize}
+		\item[(A)]
+		What is the probability of someone scoring higher than you?
+		
+		\item[(B)] What percentage of people scored above the mean but lower than you?
+	\end{itemize}
+	%-------------------------------------------------------%
+		\section*{Solution to part A}
+	
+	Let $X$ be the score variable in the statistics exam. We are asked to compute $P(X \geq 49)$.
+\begin{itemize}	
+\item Find the  ``z-score" corresponding to a score of 49, given that mean $\mu=45$ and standard deviation  $\sigma=16$ .
+	
+	\[ z_0  = \frac{x_0-\mu}{\sigma}   = \frac{49-45}{16}  = \frac{4}{16} =0.25\]
+	
+\item From Murdoch Barnes Table 3 we can find out the value of $P(Z \geq 0.25)$  . 
+	
+	
+	
+	\begin{itemize}
+	\item[$\ast$] note: 0.25 = 0.2 + 0.05
+	\item[$\ast$] The row is 0.2
+	\item[$\ast$] The column is 0.05
+	\end{itemize}
+	\[
+	\begin{array}{|c|c|c|c|c|c|c|}\hline
+	& ....	& 0.04	& 0.05	 & 0.06	& .... \\ \hline
+	0.0	&	& ....	& 0.4801 & ....	& 	\\ \hline
+	0.1	&	& ....	& 0.4404 & ....& 	\\ \hline
+	0.2	&	& ....	& \textbf{0.4013} & ....	& 	\\ \hline
+	....	&	&	&	 & 	&	\\ \hline
+	
+	\end{array} \]
+	
+$P(X \geq 49)  = 0.4013$
+\end{itemize}
+	
+		\section*{Solution to part B}
+\begin{itemize}	
+\item If the probability of scoring higher than you is 0.4013, the probability of scoring lower than you is 0.5987  
+	(from the complement rule: 1 - 0.4013).
+\item The mean score is 45. $X$ is symmetric, so we can say $P(X \geq 45) = P(X \leq 45) = 0.50$.
+\item $P(45 \leq X \leq 49) = 0.0987$
+\end{itemize}	
+	
+
+\end{document}	
+	

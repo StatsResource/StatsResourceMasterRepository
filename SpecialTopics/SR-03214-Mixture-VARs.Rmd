@@ -1,0 +1,37 @@
+
+\begin{document}
+\large
+%%-- Example 1
+\noindent The mean excess loss function of an exponential distribution is constant. Let’s consider the mixture of two exponential distributions. Suppose that losses follow a mixture of two exponential distributions where one distribution has mean 5 (75\% weight) and the other has mean 10 (25\% weight). Determine the VaR and TVaR at the security level 99\%.
+
+\begin{framed}
+
+\noindent Suppose that the loss $X$ is a mixture of two distributions represented by the random variables $X_1$ and $X_2$, with weights $w$ and $1-w$, respectively. \\
+\medskip
+
+\noindent Let $\pi_p$ be the 100pth percentile of the loss $X$, i.e. $\pi_p=\text{VaR}_p(X)$. Then the tail-value-at-risk at the 100p percent security level is:
+ \begin{eqnarray} \text{TVaR}_p(X)&=\pi_p+\frac{1}{1-p} \biggl[w \times P(X_1>\pi_p) \times e_{X_1}(\pi_p)\\&  \ \  +(1-w) \times P(X_2>\pi_p)  \times e_{X_2}(\pi_p)\biggr]  \ \ \ \  \end{eqnarray}
+
+\end{framed}
+
+\section*{Solution}
+
+\begin{framed}
+The survival function of the exponential distribution, with mean $\lambda$
+\[ s(x) = P(X \geq x) = e^{-x/\lambda} \]
+\end{framed}
+Calculate the 99th percentile of the mixture, which is the solution to the equation below. 99\% of the combined observations will be below the value of $x$.
+\[\displaystyle 0.75 e^{-x/5}+0.25 e^{-x/10}=1-0.99=0.01\]
+By letting $y=e^{-x/10}$, we solve the following equation.
+
+\[\displaystyle 0.75 y^2+0.25 y-0.01=0\]
+Use the quadratic formula to solve for $y$. Then solve for $x$. The following is the 99th percentile of the loss $X$.
+
+\[\displaystyle \pi_p=-10 \times \text{ln} \biggl(\frac{-1+\sqrt{1.48}}{6} \biggr)=33.2168\]
+The following gives the TVaR.
+
+\begin{eqnarray*} \text{TVaR}_p(X)&=\pi_p+\frac{1}{1-0.99} \biggl[0.75 \times e^{-\pi_p/5} \times 5 +0.25 \times e^{-\pi_p/10} \times 10 \biggr] \\&=42.7283  \end{eqnarray*}
+
+
+
+\end{document}

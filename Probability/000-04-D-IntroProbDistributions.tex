@@ -1,0 +1,183 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Probability Distributions} %\input{tcilatex}
+\begin{document}
+\chapter{Introduction to Random Variables}
+\section{Terminology}
+As probability theory is used in quite diverse applications, terminology is not uniform and sometimes confusing. The following terms are used for non-cumulative probability distribution functions:
+\begin{itemize}
+\itemProbability mass, Probability mass function, p.m.f.: for discrete random variables.
+\item Categorical distribution: for discrete random variables with a finite set of values.
+\item Probability density, Probability density function, p.d.f.: most often reserved for continuous random variables.
+\end{itemize}
+The following terms are somewhat ambiguous as they can refer to non-cumulative or cumulative distributions, depending on authors' preferences:
+\begin{itemize}
+\itemProbability distribution function: continuous or discrete, non-cumulative or cumulative.
+\item Probability function: even more ambiguous, can mean any of the above or other things.
+\end{itemize}Finally,
+\begin{itemize}
+\item Probability distribution: sometimes the same as probability distribution function, but usually refers to the more complete assignment of probabilities to all measurable subsets of outcomes, not just to specific outcomes or ranges of outcomes.
+\end{itemize}
+
+%------------------------------------------------------------------------------------------ %
+
+
+\begin{itemize}
+\item The probability distribution of a random variable tells us the possible values of the variable and how
+probabilities are assigned to those values.
+\item The probability distribution of a discrete random variable is typically described by a list of the
+values and their probabilities. Each probability is a number between 0 and 1, and the sum of the
+probabilities must be equal to 1.
+
+\item The probability distribution of a continuous random variable is typically described by a density
+curve. \item The curve is defined so that the probability of any event is equal to the area under the
+curve for the values that make up the event, and the total area under the curve is equal to 1. \item One
+example of a continuous probability distribution is the normal distribution.
+
+\item We use the term parameter to refer to a number that describes some characteristic of a population. \item  We
+rarely know the true parameters of a population, and instead estimate them with statistics. \item Statistics
+are numbers that we can calculate purely from a sample. \item The value of a statistic is random, and will
+depend on the specific observations included in the sample.
+
+\item The law of large numbers states that if we draw a bunch of numbers from a population with mean ¹,
+we can expect the mean of the numbers $\bar{y}$ to be closer to $\mu$ as we increase the number we draw. This
+means that we can estimate the mean of a population by taking the average of a set of observations
+drawn from that population.
+\end{itemize}
+
+%======================================================= %
+
+\section{What Is a Probability Distribution?}
+\begin{itemize}
+\item If you spend much time at all dealing with statistics, pretty soon you run into the phrase “probability distribution.” 
+\item It is here that we really get to see how much the areas of probability and statistics overlap.
+\item  Although this may sound like something technical, the phrase probability distribution is really just a way to talk about organizing a list of probabilities. 
+
+\item A probability distribution is a function or rule that assigns probabilities to each value of a random variable. The distribution may in some cases be listed. In other cases it is presented as a graph.
+\end{itemize}
+
+%======================================================%
+\section{What is a Probability Distribution}
+
+A statistical function that describes all the possible values and likelihoods that a random variable can take within a given range. This range will be between the minimum and maximum statistically possible values, but where the possible value is likely to be plotted on the probability distribution depends on a number of factors, including the distributions mean, standard deviation, skewness and kurtosis.
+
+
+Thirty-eight students took the test. The X-axis shows various intervals of scores (the interval labeled 35 includes any score from 32.5 to 37.5). The Y-axis shows the number of students scoring in the interval or below the interval.
+
+\textbf{\emph{cumulative frequency distribution}}A  can show either the actual frequencies at or below each interval (as shown here) or the percentage of the scores at or below each interval. The plot can be a histogram as shown here or a polygon.
+
+%---------------------------------------%
+\section{Types of Probability Distribution}
+\begin{itemize}
+\item A probability distribution is a mathematical approach to quantifying uncertainty.
+
+\item There are two main classes of probability distributions: Discrete and continuous. 
+
+\begin{itemize}
+\item[$\ast$] Discrete distributions describe variables that take on discrete values only (typically the positive integers), 
+\item[$\ast$] continuous distributions describe variables that can take on arbitrary values in a continuum (typically the real numbers).
+\end{itemize}
+\end{itemize}
+
+\section{Probability Distributions}
+
+It is worth bearing in mind that all of the material that will be covered in the \texttt{R} section of the course can just as easily be implemented using MATLAB. In fact substantial use is made of these commands in real world applications, particularly in Finance and Engineering.
+As such we will briefly look at some.
+
+
+
+%======================================================= %
+
+
+\begin{itemize}
+
+\item Suppose we have a set of \textbf{n} items.
+\item From that set, we create a subset of \textbf{k} items.
+\item The \textbf{order} in which items are selected is recorded. (The ordering of selected items is very important.) 
+\item The total number of \textbf{ordered subsets} of \textbf{k} items chosen from a set of \textbf{n} items is
+
+\[\frac{n!}{n-k!}\]
+\end{itemize}
+
+%=================================================%
+
+
+\section{Quantiles for Probability Distributions}
+\begin{itemize}
+\item The quantile (this term was first used by Kendall, 1940) of a distribution of values is a number xp such that a proportion p of the population values are less than or equal to xp. 
+
+\item For example, the 0.25 quantile (also referred to as the 25th percentile or lower quartile) of a variable is a value (xp) such that $25\%$ (p) of the values of the variable fall below that value.
+
+\item Similarly, the $0.75$ quantile (also referred to as the 75th percentile or upper quartile) is a value such that $75\%$ of the values of the variable fall below that value and is calculated accordingly.
+\end{itemize}
+
+\section{Joint probability tables}
+A joint probability table is a table in which all possible events (or outcomes) for one variable are listed as
+row headings, all possible events for a second variable are listed as column headings, and the value entered in
+each cell of the table is the probability of each joint occurrence. 
+
+Often, the probabilities in such a table are based
+on observed frequencies of occurrence for the various joint events. The table
+of joint-occurrence frequencies which can serve as the basis for constructing a joint probability table is called a
+contingency table.
+
+\begin{enumerate}
+\item A pair of dice is thrown. Let X denote the minimum of the two numbers which occur.
+Find the distributions and expected value of X.
+
+\item A fair coin is tossed four times.
+Let X denote the longest string of heads.
+Find the distribution and expectation of X.
+
+\item A fair coin is tossed until a head or five tails occurs.
+Find the expected number E of tosses of the coin.
+
+
+\item A coin is weighted so that P(H) = 0.75 and P(T ) = 0.25
+\item The coin is tossed three times. Let X denote the number of
+heads that appear.
+\begin{itemize}
+\item (a) Find the distribution f of X.
+\item (b) Find the expectation E(X).
+\end{itemize}
+\end{enumerate}
+
+%======================================================================================= %
+
+\section{Graph of a Probability Distribution}
+
+A probability distribution can be graphed, and sometimes this helps to show us features of the distribution that were not apparent from just reading the list of probabilities. The random variable is plotted along the x-axis, and the corresponding probability is plotted along the y - axis.
+
+\begin{itemize}
+\item For a discrete random variable, we will have a histogram
+\item For a continuous random variable, we will have the inside of a smooth curve
+\end{itemize}
+
+The rules of probability are still in effect, and they manifest themselves in a few ways. Since probabilities are greater than or equal to zero, the graph of a probability distribution must have y-coordinates that are nonnegative. Another feature of probabilities, namely that one is the maximum that the probability of an event can be, shows up in another way.
+
+\[ \mbox{Area} = \mbox{Probability} \]
+
+
+
+
+\end{document}

@@ -1,0 +1,126 @@
+
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MathsResource} \chead{Probability Distributions} \rhead{Joint Distribution} %\input{tcilatex}
+\begin{document}
+
+
+
+\subsection*{Independent Samples}
+
+The approach for computing a confidence interval for the difference of the means of two independent samples,  described shortly, is valid whenever the following conditions are met:
+
+\begin{itemize}
+\item Both samples are simple random samples.
+\item The samples are independent.
+\item Each population is at least 10 times larger than its respective sample. (Otherwise a different approach is required).
+\item The sampling distribution of the difference between means is approximately normally distributed
+\end{itemize}
+
+
+
+%---------------------------------------------------------%
+
+\subsection*{Difference Of Two Means}
+%-http://onlinestatbook.com/chapter8/difference_means.html
+In order to construct a confidence interval, we are going to make three assumptions:
+
+\begin{itemize}
+\item The two populations have the same variance. This assumption is called the assumption of homogeneity of variance.
+\item For the time being, we will use this assumption. Later on in the course, we will discuss the validity of this assumption for two given samples.
+\item The populations are normally distributed.
+\item Each value is sampled independently from each other value.
+\end{itemize}
+
+
+%---------------------------------------------------------%
+
+\subsection*{Computing the Confidence Interval}
+
+\begin{itemize}
+\item As always the first step is to compute the point estimate. For the difference of means for groups $X$ and $Y$, the point estimate is simply the difference between the two means i.e. $\bar{x} - \bar{y}$.
+
+\item As we have seen previously, sample size has a bearing in computing both the quantile and the standard error.
+For two groups, we will use the aggregate sample size ($n_x+n_y)$ to compute the quantile. (For the time being we will assume, the aggregate sample size is large ($n_x+n_y)> 30$.)
+
+\item Lastly we must compute the standard error $S.E.(\bar{x}-\bar{y})$. The formula for computing standard error for the difference of two means, depends on whether or not the aggregate sample size is large or not. For the case that the sample size is large, we use the following formula (next slide).
+\end{itemize}
+
+
+%---------------------------------------------------------%
+
+\subsection*{Computing the Confidence Interval}
+Standard Error for difference of two means (large sample)
+
+\[ S.E.(\bar{x}-\bar{y}) = \sqrt{\frac{s^2_x}{n_x} + \frac{s^2_y}{n_y}} \]
+
+\begin{itemize}
+\item $s^2_x$ and $s^2_x$ is the variance of samples $X$ and $Y$ respectively.
+\item $n_x$ and $n_y$ is the sample size of both samples.\bigskip
+
+\item For small samples, the degrees of freedom is $df = n_x + n_y - 2$. If the sample size $n \leq 32$, we can find appropriate $t-$quantile, rather than assuming it is a $z-$quantile.
+\end{itemize}
+
+
+%---------------------------------------------------------%
+
+\subsection*{CI for Difference in Two Means}
+A research company is comparing computers from two different companies, X-Cel and Yellow, on the basis of energy consumption per hour. Given the following data, compute a $95\%$ confidence interval for the difference in energy consumption.
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Type & sample size & mean & variance \\ \hline
+X-cel & 17 & 5.353 & 2.743 \\ \hline
+Yellow & 17 & 3.882 & 2.985 \\ \hline
+\end{tabular}
+\end{center}
+Remark: It is reasonable to believe that the variances of both groups is the same. Be mindful of this.
+\begin{framed}
+
+\[
+\scriptstyle \mbox{ Point Estimate } \pm  \left[ \operatorname{ Quantile } \times \operatorname{Standard Error } 
+\right] 
+\]
+
+\end{framed}
+
+%---------------------------------------------------------%
+
+\begin{itemize}
+\item Point estimate : $\bar{x} - \bar{y}$ = 1.469
+\item Standard Error: 0.5805
+\[ S.E.(\bar{x}-\bar{y}) = \sqrt{\frac{2.743}{17} + \frac{2.985}{17}} = \sqrt{0.33698} \]
+\item Quantile : 1.96 (Large sample, with confidence level of $95\%$.)
+\end{itemize}
+
+\[ 1.469  \pm (1.96 \times 0.5805) = (0.3321,2.607) \]
+
+
+This analysis provides evidence that the mean consumption level per hour for X-cel is higher than the mean consumption level per hour for Yellow, and that the difference between means in the population is likely to be between 0.332 and 2.607 units.
+
+
+
+
+
+\end{document}

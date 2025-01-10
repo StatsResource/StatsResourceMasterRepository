@@ -1,0 +1,397 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+
+%---------------------------------------------------------------------%
+
+{Today's Class}
+\begin{itemize}
+\item Definition of Cumulative Distribution Function.
+\item Binomial Example
+\item Using cumulative tables.
+\item Poisson distribution - example
+%\item Poisson approximation of the binomial Distribution
+%\item Poisson approximation - example
+
+\end{itemize}
+
+
+
+
+
+%--------------------------------------------------------------------------------------%
+{
+\textbf{Probability Tables}
+In the \textbf{Sulis} workspace there are two important tables used for this part of the course.
+
+
+This class will feature a demonstration on how to read those tables.
+\begin{itemize}
+\item The Cumulative Binomial Tables (Murdoch Barnes Tables 1)
+\item The Cumulative Poisson Tables (Murdoch Barnes Tables 2)
+\end{itemize}
+
+Please get a copy of each as soon as possible.
+
+}
+
+%---------------------------------------------------------------------------%
+{
+\textbf{Probability Tables}
+\begin{itemize}
+\item For some value $r$ the tables record the probability of $P(X \geq r)$.
+\item The Student is required to locate the appropriate column based on the parameter values for the distribution in question.
+\item A copy of the Murdoch Barnes Tables will be furnished to the student in the End of Year Exam. The Tables are not required for the first mid-term exam.
+\item Knowledge of the sample space, partitioning of the sample points, and the complement rule are advised.
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+
+
+
+
+\section{Worked Example With Tables}
+
+
+
+\subsection{Binomial Example 4 }Using recent data provided by the low-cost
+arriving on time is estimated to be 0.9.
+
+On four different occasions I am taking a flight with Brianair.
+\begin{itemize}
+\item[(i)] What is the probability that I arrive on time on all four flights?
+\item[(ii)] What is the probability that I arrive on time on exactly two occasions?
+\end{itemize}
+% Page 44
+% Section 4.2.1 
+
+
+\textbf{The Binomial Distribution}
+
+
+Cumulative Binomial Probability Distribution Tables
+
+The Murdoch Barnes Table set 1 ("cumulative Binomial probabilities") give cumulative values for probabilities.
+
+Refer to tables at back of handbook.
+
+For some value  r These tables give the probability for r or more successes in n trials :  .
+
+[Page 46]
+
+
+%=================================================%
+
+\textbf{The Binomial Distribution}
+
+
+\begin{itemize}
+\item Consider a binomial experiment with n=20 and p = 0.50.
+\item Use the binomial tables to compute the following.
+\item First we have to find which section of those tables which tabulate the probabilities for n = 20 and p = 0.50
+\item Last column on at the bottom of page 62
+\end{itemize}
+
+
+%=================================================%
+
+\textbf{The Binomial Distribution}
+
+
+
+Part 1)
+
+What is the probability that the number of successes is at least 10  ( i.e. 10 or more? ) 
+
+
+
+Here our "r" value is 10
+
+By inspecting the tables we see that value is listed as ".5881" 
+( i.e "0.5881").
+
+Part 2) 
+
+What is the probability that the number of successes does not exceed 15  ( i.e. 15 or less? )
+
+
+
+Here we are asked for the probability of 15 success or less.
+
+%=================================================%
+
+However, the tables does not list such values for such probabilities.
+
+Instead we will find the probability of the complement event, and then use the complement rule.
+
+The complement event is the probability of 16 or more successes.
+
+
+From the tables we see that  
+
+Therefore  
+
+
+%=================================================%
+
+\textbf{The Binomial Distribution}
+
+
+
+
+What is the probability that the number of successes is exactly 16?
+
+
+Again, the tables does not list such values. Also it would be cumbersome to compute using the formula.
+In the last question, we found out the probability of 16 or more successes?
+
+What is the difference? The probability of more than 16 successes.
+In other words the probability of  17 or more successes?
+
+%=================================================%
+
+\begin{itemize}
+\item If we subtract the probability of 17 or more success, we are left with the probability of exactly 16 successes.
+\end{itemize}
+
+Answer 0.0046        (0.46%)
+
+
+
+
+%---------------------------------------------------------------------------%
+
+
+
+%---------------------------------------------------------------------%
+
+{The Cumulative Distribution Function}
+\begin{itemize}
+\item The Cumulative Distribution Function, denoted $F(x)$, is a common way that the probabilities
+of a random variable (both discrete and continuous) can be summarized.
+\item The Cumulative Distribution Function, which also can be
+described by a formula or summarized in a table, is defined as:
+\[F(x) = P(X \leq x) \]
+\item The notation for a cumulative distribution function, F(x), entails using a capital
+"F".  (The notation for a probability mass or density function, f(x), i.e. using a lowercase "f". The notation is not interchangeable.
+\end{itemize}
+
+
+For the binomial distribution, if the probability of success is greater than 0.5, instead of
+considering the number of successes, to use the table we consider
+the number of failures.
+
+%---------------------------------------------------------------------%
+
+
+%---------------------------------------------------------------------%
+
+{Binomial Example 1}
+Suppose a signal of 100 bits is transmitted and the probability of
+sending a bit correctly is 0.9. What is the probability of
+\begin{enumerate}
+\item at least 10 errors
+\item exactly 7 errors
+\item Between 5 and 15 errors (inclusively).
+\end{enumerate}
+
+%---------------------------------------------------------------------%
+
+{Binomial Example 1}
+\begin{itemize}
+\item Since the probability of success is 0.9. We consider the distribution
+of the number of failures (errors).
+\item We reverse the definition of `success' and `failure'. Success is now defined as an error.
+\item The probability that a bit is sent incorrectly is 0.1.
+\item Let X be the total number of errors. $X \sim B(100, 0.1)$.
+\item Answer : $P(X \geq 10) = 0.5487$.
+\item $P(X = 7)=P(X \geq 7) - P(X \geq 8) =0.8828 - 0.7939 = 0.0889$.
+\item $P(5 \leq X  \leq 15) = P(X \geq 5) - P(X \geq 16) =0.9763 - 0.0399 = 0.9364$
+\end{itemize}
+
+
+
+\bigskip
+As the Murdoch Barnes cumulative Poisson Tables (Table 2) use $m$, so shall we. Recall that Tables 2 gives values of the probability $P(X \geq r )$, when X has a Poisson distribution with
+parameter $m$.
+\subsection{Cumulative Poisson distribution Tables.}
+As with the binomial distribution, t table of probabilities also exists for the Poisson distribution. Thye give probabilities for r or more random events (in the case of the Poisson distribution, the random events are occurences).
+
+\noindent \textbf{Example}\\
+Phone calls arrive at the rate of 48 per hour at the reservation desk for Regional Airways.
+\begin{itemize}
+\item[(i)]  Find the probability of receiving  three calls or more in a five minute interval of time.
+\item[(i)] Find the probability of getting exactly 10 calls in 15 minutes.
+\end{itemize}
+Solution to Part a
+
+\begin{itemize}
+\item if the poisson mean  is 48 for a 60 minute period, the Poisson mean for a five minute period is going to be 4.
+
+N.B.   5/60=1/12          So we divide 48 by 12 to get 4
+
+\item Go to Page 67  - top right corner - to column "m=4"
+
+\item go to the column value for r = 3 . Which is 0.7619
+\end{itemize} 
+Therefore the probability of three or more arrivals in a five minute period is 0.7619
+
+P(x3) = 0.7619 
+
+Solution to Part b
+
+if the poisson mean  is 48 for a sixty period, the Poisson mean for a fifteen minute period is going to be 12.
+
+N.B.   15/60=1/4          So we divide 48 by 4 to get 12
+
+\begin{itemize}
+\item Go to Page 68  - bottom half - to column "m=12"
+\item go to the column value for r = 10 , which is 0.7576
+\item Therefore the probability of ten or more calls in a 15 minute period is 0.7576.
+\item But we are interested in the probability of exactly ten. So we subtract the probability of 11 or more calls.
+\end{itemize}
+\[P(x \geq 11) = 0.6528\]
+
+\[p(x =10) = p(x \geq 10) - p( x \geq 11) = 0.7576 -0.6528 = 0.1048\]
+
+The probability of exactly 10 calls is 0.1048 
+
+
+%---------------------------------------------------------------------%
+
+\subsection{Useful Results}
+(Demonstration on the blackboard re: partitioning of the sample space, using examples on next slide)
+\begin{itemize}
+\item $P(X \leq 1) = P(X=0) + P(X=1)$
+\item $P(X \leq r) = P(X=0)+ P(X=1) + \ldots P(X= r)$
+\item $P(X \leq 0) = P(X=0)$
+\item $P(X = r) = P(X \geq r ) - P(X \geq r + 1)$
+\item \textbf{Complement Rule}: $P(X \leq r-1) = P(X < r) = 1 - P(X \geq r)$
+\item \textbf{Interval Rule}:$ P(a \leq X \leq  b)= P(X \geq a) - P(X \geq b + 1).$
+\end{itemize}
+For the binomial distribution, if the probability of success is greater than 0.5, instead of considering the number of successes, to use the table we consider
+the number of failures.
+
+%---------------------------------------------------------------------%
+
+\subsection{Binomial Distribution : Using Tables}
+	It is estimated by a particular bank that 25\% of credit card customers pay only the minimum amount due on their monthly credit card bill and do not pay the total amount due. 50 credit card customers are randomly selected.
+	\begin{enumerate}
+		\item (3 marks)	What is the probability that 9 or more of the selected customers pay only the minimum amount due?
+		\item (3 marks) What is the probability that less than 6 of the selected customers pay only the minimum amount due?
+		\item (3 marks)	What is the probability that more than 5 but less than 10 of the selected customers pay only the minimum amount due?
+	\end{enumerate}
+}
+%===========================================% 	
+\section{Binomial Distribution : Using Tables}
+	Demonstration on Blackboard re: how to use tables in class.
+	\begin{enumerate}
+		\item $P(X \geq 9) = 0.9084$
+		\item $P(X < 6) = 1- P(X \geq 6) =1 - 0.9930 = 0.0070$
+		\item $P(6 \leq X \leq 9) = P(X \geq 6) - P(X \geq 10) = 0.9930 - 0.8363 = 0.1567$
+	\end{enumerate}
+
+%==========================================%
+% [Page 140] 
+The vice-president of a business firm has reviewed the records of the firm?s personnel and has found that 70\% of the employees read The Wall Street Journal.
+If the vice-president was to choose 10 employees at random, what is the probability that the number of these employees who do not read The Wall Street Journal is the following?
+\begin{itemize} 
+	\item[(i)]              At least five.
+	\item[(ii)]             Between four and eight, inclusive.
+	\item[(iii)]             No more than seven.
+	\item[(iv) ]            What are the mean and variance of this distribution?
+\end{itemize}
+
+\section{Question 3 : Binomial Distribution}
+
+\begin{itemize}
+	\item 10\% of intended passengers dont show up. Each flight holds 50 people.
+	
+	\item Binomial distribution with parameters n=50 and p = 0.1
+	
+	\item From Murdoch Barnes Table 1 (third page of tables at back of book )
+\end{itemize}
+\begin{itemize}
+	\item a) What is the probability that six people or more fail to show up.
+	
+	\[P(X=6) =0.3839\]
+	
+	\item 	b) Less than three people fail to show up (i.e. X=0,1 or 2)
+	
+	\[P(X < 3) = 1- P(X3) =    1 - 0.8883  = 0.1117\] [ANS]
+	
+	
+	\item c) More than 2 but less than 8   (i.e. X = 3,4,5,6,7)
+	
+	This is equal to \[P(X=3) - P(X=8) = 0.8883 -0.1221 =  0.7662\]
+	
+\end{itemize}
+
+
+
+%=================================================%
+
+\subsection{Cumulative Distribution Function}
+
+The cumulative distribution function (c.d.f.) of a discrete random variable $X$ is the function $F(t)$ which tells you the probability that X is less than or equal to t. \\ So if X has p.d.f. P(X = x), we have:
+
+\[ F(t) = P(X \leq t) = \sum_{(i=0)}^{(i=t)} P(X = x) \]
+
+In other words, for each value that X can be which is less than or equal to $t$, work out the probability that X is that value and add up all such results.
+
+%=====================================================================%
+
+\section{Using Tables}
+
+\begin{itemize}
+\item As the Murdoch Barnes cumulative Poisson Tables (Table 2) use $m$, so shall we. 
+\item Recall that Tables 2 gives values of the probability $P(X \geq r )$, when X has a Poisson distribution with
+parameter $m$.
+
+\item For specified period we have an expected number of occurrences (m).
+
+\item Murdoch Barnes Tables 2
+Chose the column with the right value of m
+
+
+\item For some value r the corresponding value in the table gives $P(X \leq r)$
+
+N.B. It does not give $P(X \leq = r)$.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Poisson distribution}
+For specified period we have an expected number of occurrences (m).
+
+Murdoch Barnes Tables 2
+Chose the column with the right value of m
+
+
+For some value r the corresponding value in the table gives $P(X \leq r)$
+
+N.B. It does not give $P(X \leq = r)$.
+
+
+\end{document}
+
+
+
+%---------------------------------------%
+

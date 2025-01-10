@@ -1,0 +1,144 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{framed}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 2011 13:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+%\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+%\lhead{MA4413 2013} \rhead{Mr. Kevin O'Brien}
+%\chead{Midterm Assessment 1 }
+%\input{tcilatex}
+
+\begin{document}
+
+
+%---------------------------------------------------------------- %
+\newpage
+\noindent {\Large \textbf{MA4413 Weeks 12 and 13 Tutorials}}
+
+%------------------------------------------------------------ %
+\subsection*{Question 1a}
+Consider a source $X$ that produces five symbols with probabilities 1/2, 1/4, 1/8, 1/16 and 1/16. Determine the source entropy $H(x)$. 
+
+\subsection*{Question 1b}
+
+A input source is a random variable X with a four letter alphabet $\{A,B,C,D\}$.
+There are four different probability distributions presented below. Compute the entropy for each case.
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline	&	$X_i$	&	A	&	B	&	C	&	D	\\ \hline
+Case 1	&	$p(X_i)$	&	0.25	&	0.25	&	0.25	&	0.25	\\ \hline
+Case 2	&	$p(X_i)$	&	0.25	&	0.5	&	0.125	&	0.125	\\ \hline
+Case 3	&	$p(X_i)$	&	0.7	&	0.1	&	0.1	&	0.1	\\ \hline
+Case 4	&	$p(X_i)$	&	0.97	&	0.01	&	0.01	&	0.01	\\ \hline
+\end{tabular} 
+\end{center}
+
+\noindent {\Large \textbf{MA4413 Weeks 12 and 13 Tutorials Solutions}}
+
+
+\section*{Question 1b Solutions}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline	&	Xi	&	A 	&	B	&	C	&	D	&	Entropy	\\ \hline \hline
+Case 1	&	$p(x_i)$	&	0.2500	&	0.2500	&	0.2500	&	0.2500	&		\\ \hline
+	&	$I(x_i)$	&	2.0000	&	2.0000	&	2.0000	&	2.0000	&		\\ \hline
+	&	$p(x_i)\times I(x_i)$	&	0.5000	&	0.5000	&	0.5000	&	0.5000	&	2.0000	\\ \hline \hline
+Case 2	&	$p(x_i)$	&	0.2500	&	0.1250	&	0.1250	&	0.1250	&		\\ \hline
+	&	$I(x_i)$	&	2.0000	&	3.0000	&	3.0000	&	3.0000	&		\\ \hline
+	&	$p(x_i)\times I(x_i)$	&	0.5000	&	0.3750	&	0.3750	&	0.3750	&	1.6250	\\ \hline \hline
+Case 3	&	$p(x_i)$	&	0.7000	&	0.1000	&	0.1000	&	0.1000	&		\\ \hline
+	&	$I(x_i)$	&	0.5146	&	3.3219	&	3.3219	&	3.3219	&		\\ \hline
+	&	$p(x_i)\times I(x_i)$	&	0.3602	&	0.3322	&	0.3322	&	0.3322	&	1.3568	\\ \hline \hline
+Case 4 	&	$p(x_i)$	&	0.9700	&	0.0100	&	0.0100	&	0.0100	&		\\ \hline
+	&	$I(x_i)$	&	0.0439	&	6.6439	&	6.6439	&	6.6439	&		\\ \hline
+	&	$p(x_i)\times I(x_i)$	&	0.0426	&	0.0664	&	0.0664	&	0.0664	&	0.2419	\\ \hline 
+
+\end{tabular} 
+\end{center}
+\section*{Question 1c Solutions}
+
+For source alphabet of size $m$ where each symbol has an equal probability of occurring
+\[H(X) = \mbox{log}_2(m)\]
+Here there are 8 equally probable symbols.
+\[H(X) = \mbox{log}_2(8) = 3\mbox{b/sym}\]
+
+
+\subsection*{Question 1c}
+Consider a source $X$ that produces 8 symbols with equal probabilities for each symbol. Determine the source entropy $H(x)$. 
+%------------------------------------------------------------ %
+
+
+\subsection*{Question 2}
+
+The input source to a noisy communication channel is a random variable X over three symbols $\{a,b,c\}$. The output from this channel is a random variable $Y$ over the same three symbols. The joint distribution of the these two random variables is as follows:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+	&	x=a	&	x=b	&	x=c	\\ \hline
+y=a	&	0.25	&	0	&	0.125	\\ \hline
+y=b	&	0	&	0.125	&	0	\\ \hline
+y=c	&	0.125	&	0.25	&	0.125	\\ \hline
+\end{tabular} 
+\end{center}
+
+\begin{itemize}
+\item Write down the marginal distributions for X and Y.
+
+\item Compute the marginal entropies $H(X)$ and $H(Y)$
+
+\item Compute the joint entropy $H(X,Y)$ of the two random variables.
+\end{itemize}
+\newpage
+\section*{Question 2 Solutions}
+Marginal probabilities
+\begin{center}
+\begin{tabular}{|c|c|c|c||c|}
+\hline	&	y=a	&	y=b	&	y=c	&		\\ \hline
+x=a	&	0.25	&		&	0.125	&	\textbf{0.375}	\\ \hline
+x=b	&		&	0.125	&	0	&	\textbf{0.125}	\\ \hline
+x=c	&	0.125	&	0.25	&	0.125	&	\textbf{0.5	}\\ \hline \hline
+	&	\textbf{0.375}	&	\textbf{0.375}	&	\textbf{0.25}	&	1	\\ \hline
+\end{tabular}
+\end{center}
+Marginal Entropies : $H(X)$ and $H(Y)$
+%--------------------------------------------- %
+\begin{center}
+\begin{tabular}{|c|c|c||c||c|c|c|} \hline
+$P(x_i)$	&	$I(x_i)$	&	$P(x_i) \times I(x_i)$	&&	$P(y_i)$	&	$I(y_i)$	&	$P(y_i) \times I(y_i)$	\\ \hline \hline
+0.3750	&	1.4150	&	0.5306	&&	0.3750	&	1.4150	&	0.5306	\\ \hline
+0.1250	&	3.0000	&	0.3750	&&	0.3750	&	1.4150	&	0.5306	\\ \hline
+0.5000	&	1.0000	&	0.5000	&&	0.2500	&	2.0000	&	0.5000	\\ \hline \hline
+	&	$H(X)$	&	1.4056 b/sym	&&		&	$H(Y)$	&	1.5613 b/sym	\\ \hline
+\end{tabular} 
+\end{center}
+Joint Entropy : $H(X,Y)$
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$P(x_i)$	&	Freq($x_i$)	&	$I(x_i)$	&	$p(x_i)\times I(x_i) \times \mbox{Freq}(x_i)$	\\ \hline
+0	&	3	&	\ldots &	0	\\ \hline
+0.125	&	4	&	3	&	1.5	\\ \hline
+0.25	&	2	&	2	&	1	\\ \hline \hline
+& &H(X,Y) & 2.5 \\ \hline
+\end{tabular} 
+\end{center}
+
+

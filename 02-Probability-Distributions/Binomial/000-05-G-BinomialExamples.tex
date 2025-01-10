@@ -1,0 +1,61 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+\section{Binomial Examples}		
+		\textbf{Binomial Example 1}
+		Suppose a signal of 100 bits is transmitted and the probability of
+		sending a bit correctly is 0.9. What is the probability of
+		\begin{enumerate}
+			\item  at least 10 errors
+			\item  exactly 7 errors
+			\item  Between 5 and 15 errors (inclusively).
+		\end{enumerate}
+		
+
+
+		\begin{itemize}
+			\item  Since the probability of success is 0.9. We consider the distribution
+			of the number of failures (errors).
+			\item  We reverse the definition of `success' and `failure'. Success is now defined as an error.
+			\item  The probability that a bit is sent incorrectly is 0.1.
+			\item  Let X be the total number of errors. $X \sim B(100, 0.1)$.
+			\item  Answer : $P(X \geq 10) = 0.5487$.
+			\item  $P(X = 7)=P(X \geq 7) - P(X \geq 8) =0.8828 - 0.7939 = 0.0889$.
+			\item  $P(5 \leq X  \leq 15) = P(X \geq 5) - P(X \geq 16) =0.9763 - 0.0399 = 0.9364$
+		\end{itemize}
+		
+
+
+
+\subsection{ Binomial Example 1}
+	
+	Suppose a die is tossed 5 times. What is the probability of getting exactly 2 fours?
+	
+	Solution: This is a binomial experiment in which the number of trials is equal to 5, the number of successes is equal to 2, and the probability of success on a single trial is 1/6 or about 0.167. Therefore, the binomial probability is:
+	
+	\[P(X=2) = ^5C_2 \times (1/6)^2 \times (5/6)^3 = 0.161\]
+
+
+
+
+
+
+
+\end{document}

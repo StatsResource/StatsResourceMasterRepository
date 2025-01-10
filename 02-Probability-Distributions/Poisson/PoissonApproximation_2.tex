@@ -1,0 +1,241 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{Kevin O'Brien} \chead{Poisson Distribution} %\input{tcilatex}
+
+\begin{document}
+	
+		\titlepage
+	\medskip
+
+%---------------------------------------------------------------%
+{
+	\textbf{Poisson Approximation of the Binomial}
+	\begin{itemize}
+		\item The Poisson distribution can sometimes be used to approximate the binomial distribution
+		\item When the number of observations n is large, and the success probability p is small, the $\mbox{Bin}(n,p)$ distribution approaches the Poisson distribution with the parameter given by $m = np$.
+		\item This is useful since the computations involved in calculating binomial probabilities are greatly reduced.
+		\item As a rule of thumb, n should be greater than 50 with p very small, such that $np$ should be less than 5.
+		\item If the value of $p$ is very high, the definition of what constitutes a ``success" or ``failure" can be switched.
+	\end{itemize}
+}
+%---------------------------------------------------------------%
+{
+	\textbf{Poisson Approximation: Example}
+	
+	Suppose we sample 1000 items from a production line that is producing, on average, 0.1\% defective components.\\
+	
+	
+	\bigskip
+	
+	Using the binomial distribution, the probability of exactly 3 defective items in our sample is
+	
+	\[P(X=3) = ^{1000}C_3 \times (0.001)^3 \times 0.999^{997} \]
+	
+}
+%---------------------------------------------------------------%
+{
+	\textbf{Poisson Approximation: Example}
+	Lets compute each of the component terms individually.
+	
+	
+	\begin{itemize}
+		\item $^{1000}C_3$
+		
+		\[ ^{1000}C_3 = \frac{1000 \times 999 \times 998}{3 \times 2 \times 1} =
+		166,167,000 \]
+		
+		\item $0.001^3$
+		
+		\[0.001^3 = 0.000000001 \]
+		
+		
+		\item $0.999^{997}$
+		
+		\[0.999^{997} = 0.36880 \]
+		
+	\end{itemize}
+	Multiply these three values to compute the binomial probability \[P(X=3) = 0.06128 \]
+	
+}
+%---------------------------------------------------------------%
+%---------------------------------------------------------------%
+{
+	\textbf{Poisson Approximation: Example}
+	\begin{itemize}
+		\item Lets use the Poisson distribution to approximate a solution.
+		
+		\item First check that $n \geq 50$ and $np <5$ (Yes to both).
+		
+		\item We choose as our parameter value $m = np = 0.001 \times 1000  = 1$
+		
+		\[P(X=3) = e^{-1}\frac{1^3}{3!} = \frac{e^{-1}}{6} = \frac{0.36787}{6} =  0.06131\]
+		\item Compare this answer with the Binomial probability \\ $P(X=3) = 0.06128$.
+		\item Very good approximation, with much less computation effort.
+	\end{itemize}
+}
+
+[fragile]
+	\textbf{Implementation using \texttt{R}}
+	
+	
+	\begin{verbatim}
+	> # Poisson Mean m = 1000 * 0.001 = 1
+	> dbinom(3,size=1000,prob=0.001)
+	[1] 0.06128251
+	>
+	> dpois(3,lambda=1)
+	[1] 0.06131324
+	\end{verbatim}
+	
+\medskip
+
+%---------------------------------------------------------------%
+{
+\textbf{Poisson Approximation of the Binomial}
+\begin{itemize}
+\item The Poisson distribution can sometimes be used to approximate the binomial distribution
+\item When the number of observations n is large, and the success probability p is small, the $\mbox{Bin}(n,p)$ distribution approaches the Poisson distribution with the parameter given by $m = np$.
+\item This is useful since the computations involved in calculating binomial probabilities are greatly reduced.
+\item As a rule of thumb, n should be greater than 50 with p very small, such that $np$ should be less than 5.
+\item If the value of $p$ is very high, the definition of what constitutes a ``success" or ``failure" can be switched.
+\end{itemize}
+}
+
+
+%---------------------------------------------------------------------%
+
+\textbf{Poisson Approximation: Example}
+
+\begin{itemize}
+\item Suppose we sample 1000 items from a production line that is producing, on
+average, $0.1\%$ defective components.
+\item Using the binomial distribution, the probability of exactly 3 defective items in
+our sample is
+\[P(X = 3) = ^{1000}C_{3} \times 0.001^{3} \times 0.999^{997}\]
+\end{itemize}
+\medskip
+%---------------------------------------------------------------%
+{
+\textbf{Poisson Approximation: Example}
+
+Suppose we sample 1000 items from a production line that is producing, on average, 0.1\% defective components.\\
+
+
+\bigskip
+
+Using the binomial distribution, the probability of exactly 3 defective items in our sample is
+
+\[P(X=3) = ^{1000}C_3 \times (0.001)^3 \times 0.999^{997} \]
+
+}
+%---------------------------------------------------------------%
+{
+\textbf{Poisson Approximation: Example}
+Lets compute each of the component terms individually.
+
+
+\begin{itemize}
+\item $^{1000}C_3$
+
+\[ ^{1000}C_3 = \frac{1000 \times 999 \times 998}{3 \times 2 \times 1} =
+166,167,000 \]
+
+\item $0.001^3$
+
+\[0.001^3 = 0.000000001 \]
+
+
+\item $0.999^{997}$
+
+\[0.999^{997} = 0.36880 \]
+
+\end{itemize}
+Multiply these three values to compute the binomial probability \[P(X=3) = 0.06128 \]
+
+}
+%---------------------------------------------------------------%
+%---------------------------------------------------------------%
+{
+\textbf{Poisson Approximation: Example}
+\begin{itemize}
+\item Lets use the Poisson distribution to approximate a solution.
+
+\item First check that $n \geq 50$ and $np <5$ (Yes to both).
+
+\item We choose as our parameter value $m = np = 0.001 \times 1000  = 1$
+
+\[P(X=3) = e^{-1}\frac{1^3}{3!} = \frac{e^{-1}}{6} = \frac{0.36787}{6} =  0.06131\]
+\item Compare this answer with the Binomial probability \\ $P(X=3) = 0.06128$.
+\item Very good approximation, with much less computation effort.
+\end{itemize}
+}
+
+
+%---------------------------------------------------------------------%
+
+\textbf{Poisson Approximation: Example}
+Lets compute each of the component terms individually.
+
+\begin{itemize}
+\item $^{1000}C_{3}$
+\[^{1000}C_{3} = \frac{1000 \times 999 \times 998}{3 \times 2 \times 1} = 166,167,000\]
+\item $0.001^3$
+\[0.001^3 = 0.000000001\]
+\item $0.999^{997}$
+\[0.999^{997} = 0.36880\]
+\end{itemize}
+
+
+Multiply these three values to compute the binomial probability
+$P(X = 3) = 0.06128$
+\medskip
+
+
+\textbf{Poisson Approximation: Example}
+\begin{itemize}
+\item Lets use the Poisson distribution to approximate a solution.
+\item First check that $n \geq 50$ and $np < 5$ (Yes to both).
+\item We choose as our parameter value $m = np = 1000 \times 0.001 = 1$
+\end{itemize}
+\[P(X = 3) = \frac{e^{-1} \times 1^3}{3!} = \frac{e^{-1}}{6} = \frac{0.36787}{6} = 0.06131 \]
+Compare this answer with the Binomial probability
+P(X = 3) = 0.06128.
+Very good approximation, with much less computation effort.
+\medskip
+%---------------------------------------------------------------------%
+\end{document}
+[fragile]
+\textbf{Implementation using \texttt{R}}
+
+
+\begin{verbatim}
+> # Poisson Mean m = 1000 * 0.001 = 1
+> dbinom(3,size=1000,prob=0.001)
+[1] 0.06128251
+>
+> dpois(3,lambda=1)
+[1] 0.06131324
+\end{verbatim}
+
+\medskip
+
+\end{document}

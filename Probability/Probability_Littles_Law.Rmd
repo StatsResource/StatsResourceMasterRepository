@@ -1,0 +1,26 @@
+
+
+\subsection*{Question 6}
+By applying \emph{Little's Law}, answer the following questions:\\[-0.2cm]
+\begin{itemize}
+\item[(a)] A section of road takes on average 5 minutes to negotiate. Cars arrive to this section at a rate of 2 per minute. On average, how many cars are on the road?   \item[(b)] Jobs are sent to a supercomputer at a rate of 4 per hour. On average we wait 30 minutes from the time of sending to the time of completion. How many jobs are in the system on average?  \item[(c)] On average 20 customers arrive to a cafe per hour. If there are 10 people in the cafe on average, how long do they spend there?
+\end{itemize}
+
+
+
+
+\subsection*{Question 7}
+Customers arrive to a shop at a rate of 40 per hour and typically stay 30 minutes. \\[-0.2cm]
+\begin{itemize}
+\item[(a)] How many customers are in the shop on average?  \item[(b)] Through advertising, the shop can increase the arrival rate to 60 per hour. How many customers are in the shop now (assuming they still spend 30 minutes)?  \item[(c)] The shop is small and is now too full. However, by streamlining the layout we can reduce the average time spent in the shop (without compromising profits). How much would the average time need to drop to in order that with 60 customers arriving per hour, there are still the same number of customers in the shop as in part (a).
+
+
+\end{itemize}
+
+
+
+
+
+
+
+\end{document} 

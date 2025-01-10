@@ -1,0 +1,98 @@
+
+
+	\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Continuous Probability Distribution} %\input{tcilatex}
+
+\begin{document}
+\section*{The Interval Rule}
+
+
+\begin{itemize}
+\item We are often interested in the probability of being inside an interval, with lower bound $L$ and upper bound $U$, where $L$ and $U$ are outcomes of some continuous random variable $X$.
+\item It is often easier to compute the probability of the complement event, being outside the interval.
+\[ P( \mbox{Inside} ) = 1 - P( \mbox{Outside} )  \]
+\item The probability of being inside this interval is the \textbf{complement} of being outside the interval. The event of being outside the interval is the union of two disjoint events, i.e. the conjunction of being too low and too high.
+\[ P( \mbox{Outside} ) = P( \mbox{Too Low} ) +  P( \mbox{Too High} ) \]
+\item Therefore we can say
+\[ P( \mbox{Inside} ) = 1- [P( \mbox{Too Low} ) +  P( \mbox{Too High} )] \]
+
+\end{itemize}
+
+\begin{itemize}
+\item[$\bullet$] The probability of $X$ being too low for the interval (i.e. less than the interval minimum L)
+\[ P( \mbox{Too Low} ) = P(X \leq L) \]
+\item[$\bullet$] The probability of $X$ being too high for the interval (i.e. greater than the interval maximum U)
+\[ P( \mbox{Too High} ) =P(X \geq U ) \]
+\end{itemize}
+
+
+
+% \noindent Suppose we have an interval for 
+% the random variable $X$ % defined by the 
+% \begin{itemize}
+% \item the lower bound L
+% \item the upper bound U
+% \end{itemize}
+% 
+% \[ L \leq X \leq U \]
+
+
+
+
+\[ P(L \leq X \leq U) = 1 - ( P(X \leq L) +  P(X \geq U ) ) \]
+
+% \begin{framed}
+% The Interval rule is defined.
+% \begin{equation*}\tag {1.5c}
+% P(L \leq Z \leq U) = P(Z \geq L) - P(Z \geq U)
+% \end{equation*}
+% 
+% \indent where $L$ and $U$  are the lower and upper bounds of the
+% interval
+% \end{framed}
+
+
+\subsection*{Example}
+
+Find the probability of a Z random variable being between -1.8 and 1.96?\\
+i.e. Compute $P(-1.8 \leq Z \leq 1.96)$
+\subsection*{Solution}
+\begin{itemize}
+%\item Consider the complement event of being in this interval: a combination of being too low or too high.
+\item
+The probability of being too low for this interval is $P(Z \leq -1.80) = 0.0359$ (check on Murdoch Barnes Tables)
+\item
+The probability of being too high for this interval is $P(Z \geq 1.96) = 0.0250$ (check on Murdoch Barnes Tables)
+\item
+Therefore the probability of being \textbf{outside} the interval is 0.0359 + 0.0250 = 0.0609.
+\item
+Therefore the probability of being \textbf{inside} the interval is $1- (0.0609) = 0.9391$.
+\[P(-1.8 \leq Z \leq 1.96) = 0.9391\]
+\end{itemize}
+
+
+
+
+
+\end{document}

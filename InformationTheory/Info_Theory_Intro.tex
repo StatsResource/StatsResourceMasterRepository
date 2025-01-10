@@ -1,0 +1,386 @@
+% http://www.scholarpedia.org/article/Mutual_information
+% http://www.scholarpedia.org/article/Entropy#Shannon_entropy
+% http://www.scholarpedia.org/article/Entropy/entropy_example_3
+%http://daniel-wilkerson.appspot.com/entropy.html
+
+
+
+
+%---------------------------------------------------------------------------------------------------------------------------------------------%
+
+\section{Quantification of Information}
+
+Simple Examples of Self Information - "Entropy" - Calculations - Page 1 reference
+
+Recall that entropy is given by the general formula:            
+ 
+Example 1:
+
+Consider a random variable uniformly distributed over 32 = (2)5  outcomes.
+
+
+
+Therefore, we need all five identifying binary digits - i.e.    - to represent the outcome message! 
+Example 2:
+
+Consider a horse race with eight horses - i.e. 8 = (2)3 - taking part. Suppose that the probabilities of each horse winning are given by
+
+               
+Therefore
+
+
+ 
+Therefore, we do not need all three identifying binary digits to represent the outcome message! 
+
+This observation opens up the opportunity for code cleverness.  Consider the following: 
+
+1	&	0	&	0	\\ \hline
+ 2	&	1	&	10	\\ \hline
+ 3	&	10	&	110	\\ \hline
+ 4	&	11	&	1110	\\ \hline
+ 5	&	100	&	111100	\\ \hline
+ 6	&	101	&	111101	\\ \hline
+ 7	&	110	&	111110	\\ \hline
+ 8	&	111	&	111111	\\ \hline
+Average number of bits used	&	3 bits	&	2 bits	\\ \hline
+
+%---------------------------------------------------------------------------------------------------------------------------------------------%  
+ 
+The entropy of a random variable is a lower bound on the number of bits required to represent the random 
+variable 
+% and on the average number of questions needed to identify the variable in a game of "twenty questions."
+
+%---------------------------------------------------------------------------------------------------------------------------------------------%
+
+\begin{frame}
+\subsection*{Mutual Information}
+
+\begin{itemize}
+\item Mutual information is one of many quantities that measures how much one random variables tells us about another. 
+\item It is a dimensionless quantity with (generally) units of bits, and can be thought of as the reduction in 
+uncertainty about one random variable given knowledge of another. 
+\item High mutual information indicates a 
+large reduction in uncertainty; 
+\item Low mutual information indicates a small reduction; \item Zero mutual information between two random variables means the variables are independent.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\subsection*{Mutual Information}
+For two discrete variables X and Y the  joint probability distribution is PXY(x,y) , 
+the mutual information between them is denoted I(X;Y) , 
+\item Paper: (Shannon and Weaver, 1949; Cover and Thomas, 1991)
+\[
+I(X;Y)=?x,yPXY(x,y)logPXY(x,y)PX(x)PY(y)=EPXYlogPXYPXPY.(1)
+\]
+Here PX(x) and PY(y) are the marginalsPX(x)=\sumyPXY(x,y) and PY(y)=\sumxPXY(x,y) and EP is the expected value over the distribution P . 
+
+\end{itemize}
+(The focus here is on discrete variables, but most results derived for discrete variables 
+extend very naturally to continuous ones – one simply replaces sums by integrals.) 
+
+\end{frame}
+%---------------------------------------------------------------------------------------------------------------------------------------------%
+
+
+
+
+%---------------------------------------------------------------------------------------------%
+\begin{frame}
+\subsection*{Symbol Sources}
+
+Information theory traditionally deals with symbol sources that have certain properties. 
+One important property is that they give out symbols that belong to a finite, predefined alphabet A. 
+An alphabet can consist of for example all upper-case characters (A = {'A','B','C',..'Z',..}), all byte values (A = {0,1,..255}) or both binary digits (A = {0,1}).
+As we are dealing with file compression, the symbol source is a file and the symbols (characters) are byte values from 0 to 255. 
+A string or a phrase is a concatenation of symbols, for example 011101, "AAACB". Quite intuitive, right?
+
+\end{frame}
+%---------------------------------------------------------------------------------------------%
+\begin{frame}
+\subsection*{Symbol Sources}
+
+When reading symbols from a symbol source, there is some probability for each of the symbols to appear. 
+For totally random sources each symbol is equally likely, but random sources are also incompressible, and we are not interested in them here. 
+Equal probabilities or not, probabilities give us a means of defining the concept of symbol self-information, i.e. the amount of information a symbol carries.
+
+Simply, the more probable an event is, the less bits of information it contains. 
+If we denote the probability of a symbol A[i] occurring as p(A[i]), the expression -log2(p(A[i])) (base-2 logarithm) gives
+ the amount of information in bits that the source symbol A[i] carries. 
+You can calculate base-2 logarithms using base-10 or natural logarithms if you remember that log2(n) = log(n)/log(2).
+\end{frame}
+%---------------------------------------------------------------------------------------------%
+\begin{frame}
+A real-world example would be a comparison between two statements:
+
+\item it is raining
+\item the moon of earth has exploded.
+The first case happens every once in a while (assuming we are not living in a desert area). 
+
+Its probability may change around the world, but may be something like 0.3 during bleak autumn days. 
+You would not be very surprised to hear that it is raining outside. 
+It is not so for the second case. The second case would be big news, as it has never before happened, as far 
+as we know. Although it seems very unlikely we could decide a very small probability for it, like 1E-30. 
+The equation gives the self-information for the first case as 1.74 bits, and 99.7 bits for the second case.
+
+\end{frame}
+%---------------------------------------------------------------------------------------------%
+\begin{frame}
+
+\subsection*{CMessage Entropy}
+
+
+So, the more probable a symbol is, the less information it carries. What about the whole message, i.e. the symbols read from the input stream? What is the information contents a specific message carries? This brings us to another concept: the entropy of a source. The measure of entropy gives us the amount of information in a message and is calculated like this: H = sum{ -p(A[i])*log2(p(A[i])) }. For completeness we note that 0*log2(0) gives the result 0 although log2(0) is not defined in itself. In essence, we multiply the information a symbol carries by the probability of the symbol and then sum all multiplication results for all symbols together.
+The entropy of a message is a convenient measure of information, because it sets the lower limit for the average codeword length for a block-variable code, for example Huffman code. You can not get better compression with a statistical compression method which only considers single-symbol probabilities. The average codeword length is calculated in an analogous way to the entropy. Average code length is L = sum{-l(i)*log2(p(A[i])) }, where l(i) is the codeword length for the ith symbol in the alphabet. The difference between L and H gives an indication about the efficiency of a code. Smaller difference means more efficient code.
+
+It is no coincidence that the entropy and average code length are calculated using very similar equations. If the symbol probabilities are not equal, we can get a shorter overall message, i.e. shorter average codeword length (i.e. compression), if we assign shorter codes for symbols that are more likely to occur. Note that entropy is only the lower limit for statistical compression systems. Other methods may perform better, although not for all files.
+\end{frame}
+%---------------------------------------------------------------------------------------------%
+\begin{frame}
+
+\subsection*{Codes}
+\begin{itemize}
+\itam A code is any mapping from an input alphabet to an output alphabet. 
+\item A code can be e.g. {a, b, c} = {0, 1, 00}, but this code is obviously not uniquely decodable. 
+\item If the decoder gets a code message of two zeros, there is no way it can know whether the original message had two a's or a c.
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------------------------------------------%
+\begin{frame}
+
+\subsection*{Codes}
+A code is instantaneous if each codeword (a code symbol as opposed to source symbol) in a message can be decoded as soon as it is received. 
+The binary code {a, b} = {0, 01} is uniquely decodable, but it isn't instantaneous. 
+You need to peek into the future to see if the next bit is 1. 
+If it is, b is decoded, if not, a is decoded. The binary code {a, b, c} = {0, 10, 11} on the other hand is an instantaneous code.
+\end{frame}
+%---------------------------------------------------------------------------------------------%
+\begin{frame}
+
+\subsection*{Codes}
+\begin{itemize}
+\item A code is a prefix code if and only if no codeword is a prefix of another codeword. 
+\item A code is instantaneous if and only if it is a prefix code, so a prefix code is always a uniquely decodable instantaneous code. 
+\item We only deal with prefix codes from now on. 
+\item It can be proven that all uniquely decodable codes can be changed into prefix codes of equal code lengths.
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------------------------------------------%
+\begin{frame}
+\subsection*{'Classic' Code Classification}
+
+Compression algorithms can be crudely divided into four groups:
+\begin{itemize}
+\item[1] Block-to-block codes
+\item[2] Block-to-variable codes
+\item[3] Variable-to-block codes
+\item[4] Variable-to-variable codes
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------------------------------------------%
+\begin{frame}
+\subsection*{Block-to-block codes}
+
+
+These codes take a specific number of bits at a time from the input and emit a specific number of bits as a result. If all of the symbols in the input alphabet (in the case of bytes, all values from 0 to 255) are used, the output alphabet must be the same size as the input alphabet, i.e. uses the same number of bits. Otherwise it could not represent all arbitrary messages.
+Obviously, this kind of code does not give any compression, but it allows a transformation to be performed on the data, which may make the data more easily compressible, or which separates the 'essential' information for lossy compression. For example the discrete cosine transform (DCT) belongs to this group. It doesn't really compress anything, as it takes in a matrix of values and produces a matrix of equal size as output, but the resulting values hold the information in a more compact form.
+
+In lossless audio compression the transform could be something along the lines of delta encoding, i.e. the difference between successive samples (there is usually high correlation between successive samples in audio data), or something more advanced like Nth order prediction. Only the prediction error is transmitted. In lossy compression the prediction error may be transmitted in reduced precision. The reproduction in the decompression won't then be exact, but the number of bits needed to transmit the prediction error may be much smaller.
+
+One block-to-block code relevant to Commodore 64, VIC 20 and their relatives is nybble packing that is performed by some C64 compression programs. As nybbles by definition only occupy 4 bits of a byte, we can fit two nybbles into each byte without throwing any data away, thus getting 50% compression from the original which used a whole byte for every nybble. Although this compression ratio may seem very good, in reality very little is gained globally. First, only very small parts of actual files contain nybble-width data. Secondly, better methods exist that also take advantage of the patterns in the data.
+\end{frame}
+%---------------------------------------------------------------------------------------------%
+\subsection*{Block-to-variable codes}
+
+
+Block-to-variable codes use a variable number of output bits for each input symbol. All statistical data compression systems, such as symbol ranking, Huffman coding, Shannon-Fano coding, and arithmetic coding belong to this group (these are explained in more detail later). The idea is to assign shorter codes for symbols that occur often, and longer codes for symbols that occur rarely. This provides a reduction in the average code length, and thus compression.
+There are three types of statistical codes: fixed, static, and adaptive. Static codes need two passes over the input message. During the first pass they gather statistics of the message so that they know the probabilities of the source symbols. During the second pass they perform the actual encoding. Adaptive codes do not need the first pass. They update the statistics while encoding the data. The same updating of statistics is done in the decoder so that they keep in sync, making the code uniquely decodable. Fixed codes are 'static' static codes. They use a preset statistical model, and the statistics of the actual message has no effect on the encoding. You just have to hope (or make certain) that the message statistics are close to the one the code assumes.
+
+However, 0-order statistical compression (and entropy) don't take advantage of inter-symbol relations. 
+They assume symbols are disconnected variables, but in reality there is considerable relation between successive symbols. If I would drop every third character from this text, you would probably be able to decipher it quite well. First order statistical compression uses the previous character to predict the next one. Second order compression uses two previous characters, and so on. The more characters are used to predict the next character the better estimate of the probability distribution for the next character. But more is not only better, there are also prices to pay.
+
+The first drawback is the amount of memory needed to store the probability tables. The frequencies for each character encountered must be accounted for. And you need one table for each 'previous character' value. If we are using an adaptive code, the second drawback is the time needed to update the tables and then update the encoding accordingly. In the case of Huffman encoding the Huffman tree needs to be recreated. And the encoding and decoding itself certainly takes time also.
+
+We can keep the memory usage and processing demands tolerable by using a 0-order static Huffman code. 
+Still, the Huffman tree takes up precious memory and decoding Huffman code on a 1-MHz 8-bit processor is slow and does not offer very good compression either. Still, statistical compression can still offer savings as a part of a hybrid compression system. For example:
+
+	'A'	1/2	0
+	'B'	1/4	10
+	'C'	1/8	110
+	'D'	1/8	111
+
+	"BACADBAABAADABCA"				total: 32 bits
+	10 0 110 0 111 10 0 0 10 0 0 111 0 10 110 0	total: 28 bits
+This is an example of a simple statistical compression. The original symbols each take two bits to represent (4 possibilities), thus the whole string takes 32 bits. The variable-length code assigns the shortest code to the most probable symbol (A) and it takes 28 bits to represent the same string. The spaces between symbols are only there for clarity. The decoder still knows where each symbol ends because the code is a prefix code. On the other hand, I am simplifying things a bit here, because I'm omitting one vital piece of information: the length of the message. The file system normally stores the information about the end of file by storing the length of the file. The decoder also needs this information. We have two basic methods: reserve one symbol to represent the end of file condition or send the length of the original file. Both have their virtues.
+The best compressors available today take into account intersymbol probabilities. Dynamic Markov Coding (DMC) starts with a zero-order Markov model and gradually extends this initial model as compression progresses. Prediction by Partial Matching (PPM), although it really is a variable-to-block code, looks for a match of the text to be compressed in an order-n context and if there is no match drops back to an order n-1 context until it reaches order 0.
+\end{frame}
+%---------------------------------------------------------------------------------------------%
+\begin{frame}
+\subsection*{Variable-to-block codes}
+
+
+The previous compression methods handled a specific number of bits at a time. A group of bits were read from the input stream and some bits were written to the output. Variable-to-block codes behave just the opposite. They use a fixed-length output code to represent a variable-length part of the input. Variable-to-block codes are also called free-parse methods, because there is no pre-defined way to divide the input message into encodable parts (i.e. strings that will be replaced by shorter codes). Substitutional compressors belong to this group.
+Substitutional compressors work by trying to replace strings in the input data with shorter codes. Lempel-Ziv methods (named after the inventors) contain two main groups: LZ77 and LZ78.
+\end{frame}
+%---------------------------------------------------------------------------------------------%
+\begin{frame}
+Lempel-Ziv 1977
+
+In 1977 Ziv and Lempel proposed a lossless compression method which replaces phrases in the data stream by a reference to a previous occurrance of the phrase. As long as it takes fewer bits to represent the reference and the phrase length than the phrase itself, we get compression. Kind-of like the way BASIC substitutes tokens for keywords.
+LZ77-type compressors use a history buffer, which contains a fixed amount of symbols output/seen so far. The compressor reads symbols from the input to a lookahead buffer and tries to find as long as possible match from the history buffer. The length of the string match and the location in the buffer (offset from the current position) is written to the output. If there is no suitable match, the next input symbol is sent as a literal symbol.
+
+Of course there must be a way to identify literal bytes and compressed data in the output. 
+There are lot of different ways to accomplish this, but a single bit to select between a literal and compressed data is the easiest.
+
+The basic scheme is a variable-to-block code. A variable-length piece of the message is represented by a constant amount of bits: the match length and the match offset. Because the data in the history buffer is known to both the compressor and decompressor, it can be used in the compression. The decompressor simply copies part of the already decompressed data or a literal byte to the current output position.
+
+Variants of LZ77 apply additional compression to the output of the compressor, which include a simple variable-length code (LZB), dynamic Huffman coding (LZH), and Shannon-Fano coding (ZIP 1.x)), all of which result in a certain degree of improvement over the basic scheme. This is because the output values from the first stage are not evenly distributed, i.e. their probabilities are not equal and statistical compression can do its part.
+
+\end{frame}
+%---------------------------------------------------------------------------------------------%
+\begin{frame}
+\subsection*{Lempel-Ziv 1978}
+
+One large problem with the LZ77 method is that it does not use the coding space efficiently, i.e. there are length and offset values that never get used. If the history buffer contains multiple copies of a string, only the latest occurrance is needed, but they all take space in the offset value space. Each duplicate string wastes one offset value.
+To get higher efficiency, we have to create a real dictionary. Strings are added to the codebook only once. There are no duplicates that waste bits just because they exist. Also, each entry in the codebook will have a specific length, thus only an index to the codebook is needed to specify a string (phrase). In LZ77 the length and offset values were handled more or less as disconnected variables although there is correlation. Because they are now handled as one entity, we can expect to do a little better in that regard also.
+
+LZ78-type compressors use this kind of a dictionary. The next part of the message (the lookahead buffer contents) is searched from the dictionary and the maximum-length match is returned. The output code is an index to the dictionary. If there is no suitable entry in the dictionary, the next input symbol is sent as a literal symbol. The dictionary is updated after each symbol is encoded, so that it is possible to build an identical dictionary in the decompression code without sending additional data.
+
+Essentially, strings that we have seen in the data are added to the dictionary. To be able to constantly adapt to the message statistics, the dictionary must be trimmed down by discarding the oldest entries. This also prevents the dictionary from becaming full, which would decrease the compression ratio. This is handled automatically in LZ77 by its use of a history buffer (a sliding window). For LZ78 it must be implemented separately. Because the decompression code updates its dictionary in sychronization with the compressor the code remains uniquely decodable.
+\end{frame}
+%---------------------------------------------------------------------------------------------%
+\begin{frame}
+\subsection*{Run-Length Encoding}
+
+Run length encoding also belongs to this group. If there are consecutive equal valued symbols in the input, the compressor outputs how many of them there are, and their value. Again, we must be able to identify literal bytes and compressed data. One of the RLE compressors I have seen outputs two equal symbols to indentify a run of symbols. The next byte(s) then tell how many more of these to output. If the value is 0, there are only two consecutive equal symbols in the original stream. Depending on how many bits are used to represent the value, this is the only case when the output is expanded.
+
+Run-length encoding has been used since day one in C64 compression programs because it is very fast and very simple. Part of this is because it deals with byte-aligned data and is essentially just copying bytes from one place to another. The drawback is that RLE can only compress identical bytes into a shorter representation. On the C64 only graphics and music data contain large runs of identical bytes. Program code rarely contains more than a couple of successive identical bytes. We need something better.
+
+That "something better" seems to be LZ77, which has been used in C64 compression programs for a long time. LZ77 can take advantage of repeating code/graphic/music data fragments and thus achieves better compression. The drawback is that practical LZ77 implementations tend to became variable-to-variable codes (more on that later) and need to handle data bit by bit, which is quite a lot slower than handling bytes.
+
+LZ78 is not practical for C64, because the decompressor needs to create and update the dictionary. A big enough dictionary would take too much memory and updating the dictionary would need its share of processor cycles.
+\end{frame}
+%---------------------------------------------------------------------------------------------%
+\begin{frame}
+\subsection*{Variable-to-variable codes}
+
+The compression algorithms in this category are mostly hybrids or concatenations of the previously described compressors. 
+For example a variable-to-block code such as LZ77 followed by a statistical compressor like Huffman encoding falls into this category and is used in Zip, LHa, Gzip and many more. They use fixed, static, and adaptive statistical compression, depending on the program and the compression level selected.
+Randomly concatenating algorithms rarely produces good results, so you have to know what you are doing and what kind of files you are compressing. 
+Whenever a novice asks the usual question: 'What compression program should I use?', they get the appropriate response: 'What kind of data are you compressing?'
+
+Borrowed from Tom Lane's article in comp.compression:
+It's hardly ever worthwhile to take the compressed output of one compression method and shove it through another compression method. 
+Especially not if the second method is a general-purpose compressor that doesn't have specific knowledge of the first compression step. Compression is effective in direct proportion to the extent that it eliminates obvious patterns in the data. So if the first compression step is any good, it will leave little traction for the second step. Combining multiple compression methods is only helpful when the methods are specifically chosen to be complementary.
+
+A small sidetrack I want to take:
+This also brings us conveniently to another truth in lossless compression. 
+There isn't a single compressor which would be able to losslessly compress all possible files (you can see the comp.compression FAQ for information about the counting proof). It is our luck that we are not interested in compressing all files. We are only interested in compressing a very small subset of all files. The more accurately we can describe the files we would encounter, the better. This is called modelling, and it is what all compression programs do and must do to be successful.
+
+Audio and graphics compression algorithm may assume a continuous signal, and a text compressor may assume that there are 
+repeated strings in the data. If the data does not match the assumptions (the model), the algorithm usually expands the data instead of compressing it.
+
+% http://people.seas.harvard.edu/~jones/cscie129/nu_lectures/lecture2/info%20theory/Info_Theory_1.html#fn1
+
+\end{frame}
+%---------------------------------------------------------------------------------------------%
+\begin{frame}
+reference 
+Some of this discussion is drawn from Communication Systems Engineering, John G. Proakis and Masoud Salehi, Prentice-Hall (1994), ISBN 0-13-158932-6.
+
+Definition of the logarithmic function:
+
+By way of an introduction to logarithms, you may or may not recall, that if we take
+
+
+this means
+ 
+Thus, logarithms have the following important property:
+
+
+\end{frame}
+%---------------------------------------------------------------------------------------------%
+\begin{frame}  
+  
+ Examples of logarithms:
+ 
+
+ 
+ 
+(or a value of 3 bels = 30dB)
+ 
+ 
+(or a value of 2.30 bels = 23.0dB)
+ 
+ 
+the "base-changing" rule
+ 
+ 
+ 
+an application of the base changing rule
+
+%---------------------------------------------------------------------------------------------%
+
+
+Self-Information - "Entropy"
+
+ 
+As the first step in finding a measure of information, consider an information source with a series of ordered outputs: reference
+
+
+where the output  is    most-likely and    is least-likely -- e.g.   might be, for example, the weather condition and air pollution level in a given city and on a certain day or, perhaps, the outcome of a particular athletic event or …… 
+  
+ 
+A measure of "information" should satisfy the following conditions
+
+ 
+The information content of an output  depends only on the probability of   occurring  -- i.e. --  and not on the value of  .  We denote this function by  and call it the self-information of the output.
+                      
+                  Note that   
+ 
+Self-information is a continuous function of 
+
+ 
+Self-information is a decreasing function of  
+
+ 
+If    , then     .
+
+ 
+Only the "logarithmic" function definition satisfies these essential properties and thus self-information may be written
+
+
+
+
+Therefore, the information revealed by a particular source output is the "weighted' average of the self-information of each of the various outputs --
+
+ 
+ 
+        
+
+which is usually called (but be careful see caution ) the entropy of the sourc
+
+
+Recall that entropy is given by the general formula:      
+
+
+Example 3:
+
+Consider a discrete memoryless information source with binary output alphabet with the
+respective probabilities p and (1 - p):
+
+
+
+Note the maximum entropy occurs when the probabilities are equal!
+  
+Example 4 : 
+
+Consider another source sampled at a rate of 8,000 samples per second (with implies that the souce has 
+a bandwidth of 4 kHz and, thus, is sampled at the Nyquist rate). The resulting sample sequence can be 
+approximated as a discrete memoryless information source with a five element output alphabet with output probabilities        .
+
+
+  
+ 
+Therefore the source produces information at a rate of 15 kbits per second. 
+

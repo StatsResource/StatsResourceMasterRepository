@@ -1,0 +1,142 @@
+
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \chead{Random Variables} \rhead{Discrete Random Variables} %\input{tcilatex}
+\begin{document}
+
+%-------------------------------------------------------------------------------------------%
+
+\large
+Consider the random variables $X$ and $Y$. $X$ takes the values 0,1 and 2. $Y$ takes the values $0$ and $1$.
+The joint probabilities for each pair are given by the following table.
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline  & $X=0$ & $X=1$ & $X=2$  \\ 
+\hline $Y=0$ & 0.1  & 0.4 & 0.1 \\ 
+\hline  $Y=1$ & 0.1 & 0.1 & 0.2 \\ 
+\hline 
+\end{tabular} 
+\end{center}
+\begin{itemize}
+\item Compute the expected values of $X$ and $Y$.
+\item Compute the $E(X|Y=1)$
+\end{itemize}
+
+
+
+%-----------------------------------------------------------------------------------%
+\medskip 
+
+\large
+
+\noindent \textbf{Compute $E(X)$ and $E(Y)$.}\\
+First compute the marginal distributions.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c||c|}
+\hline  & $X=0$ & $X=1$ & $X=2$  &\phantom{spaces}\\ 
+\hline $Y=0$ & 0.1  & 0.4 & 0.1 &\\ 
+\hline  $Y=1$ & 0.1 & 0.1 & 0.2 & \\ \hline
+\hline & & & & \\
+\hline 
+\end{tabular} 
+\end{center}
+
+
+
+%-----------------------------------------------------------------------------------%
+\medskip 
+
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|c||c|}
+\hline  & $X=0$ & $X=1$ & $X=2$  &\phantom{spaces}\\ 
+\hline $Y=0$ & 0.1  & 0.4 & 0.1 & 0.6\\ 
+\hline  $Y=1$ & 0.1 & 0.1 & 0.2 & 0.4\\ \hline
+\hline & 0.2& 0.5& 0.3& \\
+\hline 
+\end{tabular} 
+\end{center}
+\newpage 
+
+
+
+\medskip 
+
+\large
+
+\noindent \textbf{Compute $E(X)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline $x_i$ & $0$ & $1$ & $2$  \\ 
+\hline $p(x_i)$& 0.20 & 0.50 & 0.30 \\
+\hline 
+\end{tabular} 
+\end{center}
+
+\[ E(X) =  \sum  x_i \cdot p(x_i)   \]
+
+\[E(X) =(0\times 0.2) + (1 \times 0.5) + (2 \times 0.3)\;  = 1.1\]
+
+
+
+\medskip 
+
+\large
+
+\noindent \textbf{Compute $E(X)$}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline $y_i$ & $0$ & $1$  \\ 
+\hline $p(y_i)$& 0.60 & 0.40 \\
+\hline 
+\end{tabular} 
+\end{center}
+
+\[ E(Y) =  \sum  y_i \cdot p(y_i)   \]
+
+
+
+
+\medskip 
+
+\large
+
+\noindent \textbf{Compute $E(X)$}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline $y_i$ & $0$ & $1$  \\ 
+\hline $p(y_i)$& 0.60 & 0.40 \\
+\hline 
+\end{tabular} 
+\end{center}
+
+\[ E(Y) =  \sum  y_i \cdot p(y_i)   \]
+
+\[ E(Y) = (0 \times 0.6) +  (1 \times 0.4)  =0.4 \]
+
+
+
+\end{document}

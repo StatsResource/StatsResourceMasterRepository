@@ -1,0 +1,135 @@
+
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \chead{Hypothesis Testing} \rhead{Statistical Inference} %\input{tcilatex}
+\begin{document}
+
+%--------------------------------------------------------------------------------------%
+\large 
+\subsection*{Worked Example}
+Two sets of patients are given courses of treatment under two different drugs. The benefits
+derived from each drug can be stated numerically in terms of the recovery times. There are 40 patients in treatment group 1 (i.e. Drug 1), and 45 patients in treatment group 2 (i.e. Drug 2). \\
+\medskip
+The mean recovery time and standard deviations are as follows:
+\begin{itemize}
+\item Drug 1:  $n_1$ = 40 , $\bar{x}_1$ = 3.3 days and $s_1 = 1.524$
+\item Drug 2:  $n_2$ = 45 , $\bar{x}_2$ = 4.3 days and $s_2 = 1.951 $
+\end{itemize}
+\medskip
+
+%-------------------------------------------------------------------------------------------%
+
+\subsection*{Writing Hypotheses }
+\begin{itemize}
+\item The first step in hypothesis testing is to specify the null hypothesis and an alternative hypothesis.
+\item When testing differences between mean recovery times, the null hypothesis is that the two population means are equal.
+\item That is, the null hypothesis and alternative hypothesis are:\\
+$H_0: \mu_1 = \mu_2$ \qquad (\textit{The population means are equal})\\
+$H_1: \mu_1 \neq \mu_2$  \qquad (\textit{The population means are different})
+\item We can re-express these hypotheses in terms of a numeric difference\\
+$H_0: \mu_1 - \mu_2 = 0$ \qquad (\textit{The difference in population means is zero})\\
+$H_1: \mu_1  - \mu_2  \neq = 0 $  \qquad (\textit{The difference in population means is zero})
+\end{itemize}
+
+
+
+(Remark: Two Tailed Test, therefore $k = 2$, and $\alpha = 0.05$)
+\medskip
+
+%-------------------------------------------------------------------------------------------%
+
+\subsection*{Standard Error}
+The relevant formula for the standard error is
+\begin{eqnarray*}
+S.E(\bar{x}_1 - \bar{x}_2) &=& \sqrt{{s^2_1\over n_1}+{s^2_2 \over n_2}} \\
+& & \\
+&=& \sqrt{{(1.524)^2 \over 40}+{(1.951)^2 \over 45}}   \\
+& & \\
+S.E(\bar{x}_1 - \bar{x}_2)
+&=& 0.377\mbox{ days}\\
+\end{eqnarray*}
+\medskip
+%-------------------------------------------------------------------------------------------%
+\subsection*{Test Statistic}
+\begin{itemize}
+\item The observed difference in means is 1 day.
+\item The Test statistic (the TS) is therefore
+\[ TS = {\mbox{observed} - \mbox{null} \over \mbox{Std. Error}}  = {1 - 0 \over 0.377 } = 2.65 \]
+
+\end{itemize}
+
+\medskip 
+
+\subsection*{Critical}
+\begin{itemize}
+\item Two Tailed Test, therefore $k = 2$, and $\alpha = 0.05$. Also two large samples. 
+\item The Critical Value (the CV )is 1.96.
+\end{itemize}
+\medskip
+
+
+\subsection*{Decision Rule}
+
+\begin{framed}
+\[ |TS| > CV ?  \]
+\begin{itemize}
+\item If Yes: Reject the null Hypothesis
+\item If No : Fail to reject the Null Hypothesis
+\end{itemize}
+\end{framed}
+
+%-------------------------------------------------------------------------------------------%
+\medskip 
+\begin{itemize}
+
+\item Is the TS greater than the CV? Is $2.65 > 1.96$?
+
+\item \textbf{Conclusion:} we reject the null hypothesis. There is a significant different between both drugs, in terms of recovery times.
+
+\end{itemize}
+\medskip 
+
+\newpage 
+%-------------------------------------------------------------------------------------------%
+\medskip 
+\begin{itemize}
+\item We will approach the same problem, but this time using the p-value approach.
+\item The first two steps i.e. formally stating the null and alternative hypothesis, and computing the test statistic are the same, are the same as example 1.
+\item The third step is to compute the p-value:  $P(Z \geq |TS|)$.
+\item From Murdoch Barnes table 3: $P(Z \geq 2.65) = 0.00402$ (i.e. less than half a percent).
+
+\end{itemize}
+\medskip 
+
+%-------------------------------------------------------------------------------------------%
+\medskip 
+\begin{itemize}
+\item The p-value is  $0.00402$
+\item The critical region has size $\alpha/k = 0.05/2 = 0.0250$.
+\item We reject the null hypothesis because the computed p-value is less than $0.0250$.
+\item \textbf{Conclusion:} we reject the null hypothesis. There is a significant different between both drugs, in terms of recovery times.
+\end{itemize}
+\end{document}
+
+

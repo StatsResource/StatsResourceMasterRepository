@@ -1,0 +1,101 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\large
+
+
+Two IT training companies, \textit{XtraTech} and \textit{YourSkills}, offer an exam preparation course for a well-known computer industry certification. A study was carried out to compare the results from the most recent group of students from both companies.
+\begin{itemize}
+\item[$\bullet$]30 students from the \textit{XtraTech} course have completed the test. The average score for these students was 910 marks with a standard deviation of 48 marks.
+
+\item[$\bullet$]25 students from the \textit{YourSkills} course have completed the test. Their average score was 950 marks with a standard deviation of 42 marks.
+\end{itemize}
+
+Test the hypothesis that the both sets of students perform equally well on average. You may use a significance level of 5\%. You may assume that both samples are normally distributed and have equal variance.
+%\end{itemize}
+\begin{enumerate}
+\item  Formally state the null and alternative hypotheses for this procedure.
+\item  Compute the point estimate for the difference in means of the results from both courses.
+\item  Compute the appropriate value for standard error for this test. Clearly show your workings.
+\item  Compute the test statistic.
+\item  What is your conclusion for this procedure?
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent \textbf{The Test Statistic}
+\begin{itemize}
+\item The Test statistic is therefore
+\[ TS = {\mbox{observed} - \mbox{null} \over \mbox{Std. Error}}  \]
+\item Two Tailed Test, therefore $k = 2$, and $\alpha = 0.05$. Also two large samples. The CV is 1.96.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent \textbf{Decison Rule}
+\textbf{Decision Rule}
+\[ |TS| > CV ?  \]
+\begin{itemize}
+\item If Yes: Reject the null Hypothesis
+\item If No : Fail to reject the Null Hypothesis
+\end{itemize}
+
+
+\newpage 
+\subsection*{Confidence Intervals}
+{\bf One sample}
+\begin{eqnarray*} S.E.(\bar{X})&=&\frac{\sigma}{\sqrt{n}}.\\\\
+	S.E.(\hat{P})&=&\sqrt{\frac{\hat{p}\times(1-\hat{p})}{n}}.\\
+\end{eqnarray*}
+{\bf Two samples}
+\begin{eqnarray*}
+	S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}.\\\\
+	S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{\frac{\hat{p}_1\times(1-\hat{p}_1)}{n_1}+\frac{\hat{p}_2\times(100-\hat{p}_2)}{n_2}}.\\\\
+\end{eqnarray*}
+\subsection*{Hypothesis tests}
+{\bf One sample}
+\begin{eqnarray*}
+	S.E.(\bar{X})&=&\frac{\sigma}{\sqrt{n}}.\\\\
+	S.E.(p)&=&\sqrt{\frac{p \times(1-p)}{n}}
+\end{eqnarray*}
+{\bf Two large independent samples}
+\begin{eqnarray*}
+	S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}.\\\\
+	S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{\left(\bar{p}\times(1-\bar{p})\right)\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}.\\
+\end{eqnarray*}
+{\bf Two small independent samples}
+\begin{eqnarray*}
+	S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{s_p^2\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}.\\\\
+	s_p^2&=&\frac{s_1^2(n_1-1)+s_2^2(n_2-1)}{n_1+n_2-2}.\\
+\end{eqnarray*}
+{\bf Paired sample}
+\begin{eqnarray*}
+	S.E.(\bar{d})&=&\frac{s_d}{\sqrt{n}}.\\\\
+\end{eqnarray*}
+{\bf Standard Deviation of case-wise differences (computational formula)}
+\begin{eqnarray*}
+	s_d = \sqrt{ {\sum d_i^2 - n\bar{d}^2 \over n-1}}.\\\\
+\end{eqnarray*}

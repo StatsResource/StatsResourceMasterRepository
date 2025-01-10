@@ -1,0 +1,263 @@
+	\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}	\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Binomial Distribution} %\input{tcilatex}
+\begin{document}
+
+%================================================%
+\section*{Bernouilli Trial}
+\begin{itemize}
+\item Now consider an experiment with only two outcomes. Independent repeated trials of such an experiment are
+called \textbf{\textit{Bernoulli trials}}, named after the Swiss mathematician Jacob Bernoulli (1654 to 1705). \item The term \textbf{\emph{independent
+trials}} means that the outcome of any trial does not depend on the previous outcomes (such as tossing a coin).
+\item We will call one of the outcomes the ``success" and the other outcome the ``failure".
+\item
+Let $p$ denote the probability of success in a Bernoulli trial, and so $q = 1 - p$ is the probability of failure.
+
+
+\item A \textbf{\textit{Bernoulli
+Trial}} is a sampling process in which
+\begin{itemize}
+	\item[(1)] Only two mutually exclusive possible outcomes are possible in each trial, or observation. For
+	convenience these are called the success and the failure. The "success" usually refers to the outcome of interest.
+	\item[(2)] The outcomes in the series of trials, or observations, constitute independent events.
+	\item[(3)] The probability of success in each trial, denoted by p, remains constant from trial to trial. That is,
+	the process is stationary.
+	\item[(4)] The trials are independent; that is, the outcome on one trial does not affect the outcome on other trials.
+\end{itemize}
+\end{itemize}
+\section*{Binomial Random Variables}
+\begin{itemize}
+\item A binomial experiment consists of a fixed number of Bernoulli trials, which we denote as $n$. 
+
+% \item A binomial experiment with $n$ trials and
+% probability $p$ of success will be denoted by
+%\[B(n, p)\]
+
+
+\item We would denote a binomial random variable $X$ with $n$ trials and
+probability $p$ of success as follows
+\[X \sim Bin(n, p)\]
+\item The binomial distribution  is a discrete probability distribution that is applicable as a model for decision-making
+situations in which a sampling process can be assumed to conform to a Bernoulli process. 
+	\item Frequently, we are interested in the \textbf{\emph{number of successes}} in a binomial experiment, not in the order in which they occur.
+	\item Furthermore, we are interested in the probability of that number of successes.
+\end{itemize}
+
+\newpage
+
+
+\section*{The Binomial Probability Distribution}
+
+\begin{itemize}
+	\item The binomial probability distribution is a discrete probability distribution that has many applications.
+	\item It is associated with a multiple step experiment that we call the binomial experiment.
+	\item In a binomial experiment our interest is in the number of successes occurring in the n trials.
+\end{itemize}
+
+\medskip
+
+%The binomial distribution is a particular example of a probability distribution involving a discrete random variable. 
+\noindent It is important that you can identify situations which can be modelled using the binomial distribution. 
+\begin{itemize}
+	\item There are n independent trials 
+	\item There are just two possible outcomes to each trial, success and failure, with fixed probabilities of p and q respectively, where q = 1 - p. 
+\end{itemize}
+
+
+
+
+%A binomial experiment (also known as a Bernoulli trial) is a statistical experiment that has the following properties:
+%
+%The experiment consists of n repeated trials.
+
+
+
+%
+%If the outcome of interest is something like a flat tire, using the word "success" is coutner intuituive.
+%
+%
+%Each trial can result in just two possible outcomes. We call one of these outcomes a success and the other, a failure.
+%
+%
+
+
+
+
+
+
+
+
+
+
+
+
+%http://www.wbs.eu.com/SharedFiles/Maths/statistics%201%20revision/introducing%20binomial.pdf
+
+\begin{itemize}
+	\item The Binomial Distribution is characterized by the following parameters
+	
+	
+	\begin{description}
+		\item[n] - the number of trials
+		
+		\item[p] - The probability of a "success"
+	\end{description}	
+	
+	\item The expected number of `successes' from $n$ trials is $E(X) = np$
+
+
+	\end{itemize}
+%===============================================================%
+\subsection*{Examples}
+Consider the following statistical experiment. You flip a coin five times and count the number of times the coin lands on heads. This is a binomial experiment because:
+\begin{itemize}
+\item The experiment consists of repeated trials. We flip a coin five times.
+\item Each trial can result in just two possible outcomes: heads or tails. We call one of these outcomes a success and the other, a failure, depending on the question asked.
+
+\item The probability of success, denoted by $p$ is constant, e.g. 0.5 on every trial for a fair coin. The probability of success is the same on every trial.
+\item The trials are independent; that is, getting heads on one trial does not affect whether we get heads on other trials.
+\end{itemize}
+
+
+
+\end{document}
+
+%================================================%
+\section*{Bernouilli Trial}
+\begin{itemize}
+\item Now consider an experiment with only two outcomes. Independent repeated trials of such an experiment are
+called \textbf{\textit{Bernoulli trials}}, named after the Swiss mathematician Jacob Bernoulli (1654 to 1705). \item The term \textbf{\emph{independent
+trials}} means that the outcome of any trial does not depend on the previous outcomes (such as tossing a coin).
+\item We will call one of the outcomes the ``success" and the other outcome the ``failure".
+\item
+Let $p$ denote the probability of success in a Bernoulli trial, and so $q = 1 - p$ is the probability of failure.
+
+
+\item A \textbf{\textit{Bernoulli
+Trial}} is a sampling process in which
+\begin{itemize}
+	\item[(1)] Only two mutually exclusive possible outcomes are possible in each trial, or observation. For
+	convenience these are called the success and the failure. The "success" usually refers to the outcome of interest.
+	\item[(2)] The outcomes in the series of trials, or observations, constitute independent events.
+	\item[(3)] The probability of success in each trial, denoted by p, remains constant from trial to trial. That is,
+	the process is stationary.
+	\item[(4)] The trials are independent; that is, the outcome on one trial does not affect the outcome on other trials.
+\end{itemize}
+\end{itemize}
+\section*{Binomial Random Variables}
+\begin{itemize}
+\item A binomial experiment consists of a fixed number of Bernoulli trials, which we denote as $n$. 
+
+% \item A binomial experiment with $n$ trials and
+% probability $p$ of success will be denoted by
+%\[B(n, p)\]
+
+
+\item We would denote a binomial random variable $X$ with $n$ trials and
+probability $p$ of success as follows
+\[X \sim Bin(n, p)\]
+\item The binomial distribution  is a discrete probability distribution that is applicable as a model for decision-making
+situations in which a sampling process can be assumed to conform to a Bernoulli process. 
+	\item Frequently, we are interested in the \textbf{\emph{number of successes}} in a binomial experiment, not in the order in which they occur.
+	\item Furthermore, we are interested in the probability of that number of successes.
+\end{itemize}
+
+\newpage
+
+
+\section*{The Binomial Probability Distribution}
+
+\begin{itemize}
+	\item The binomial probability distribution is a discrete probability distribution that has many applications.
+	\item It is associated with a multiple step experiment that we call the binomial experiment.
+	\item In a binomial experiment our interest is in the number of successes occurring in the n trials.
+\end{itemize}
+
+\medskip
+
+%The binomial distribution is a particular example of a probability distribution involving a discrete random variable. 
+\noindent It is important that you can identify situations which can be modelled using the binomial distribution. 
+\begin{itemize}
+	\item There are n independent trials 
+	\item There are just two possible outcomes to each trial, success and failure, with fixed probabilities of p and q respectively, where q = 1 - p. 
+\end{itemize}
+
+
+
+
+%A binomial experiment (also known as a Bernoulli trial) is a statistical experiment that has the following properties:
+%
+%The experiment consists of n repeated trials.
+
+
+
+%
+%If the outcome of interest is something like a flat tire, using the word "success" is coutner intuituive.
+%
+%
+%Each trial can result in just two possible outcomes. We call one of these outcomes a success and the other, a failure.
+%
+%
+
+
+
+
+
+
+
+
+
+
+
+
+%http://www.wbs.eu.com/SharedFiles/Maths/statistics%201%20revision/introducing%20binomial.pdf
+
+\begin{itemize}
+	\item The Binomial Distribution is characterized by the following parameters
+	
+	
+	\begin{description}
+		\item[n] - the number of trials
+		
+		\item[p] - The probability of a "success"
+	\end{description}	
+	
+	\item The expected number of `successes' from $n$ trials is $E(X) = np$
+
+
+	\end{itemize}

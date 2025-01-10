@@ -1,0 +1,58 @@
+
+
+\section{KB tutorial 4}
+
+\subsection*{Question 1}
+You develop a random number generater which assigns a value to the random variable $X$ according to the following probability distribution:
+\begin{center}
+	\begin{tabular}{|c|ccccc|}
+		\hline
+		&&&&&\\[-0.4cm]
+		$x$ & 0.0 & 0.5 & 1.0 & 2.0 & 3.0 \\
+		\hline
+		&&&&&\\[-0.4cm]
+		$\Pr(X=x)$ & $0.4$ & $0.2$ & $0.15$ & $0.15$ & $?$ \\[0.1cm]
+		\hline
+		\multicolumn{6}{c}{}\\
+	\end{tabular}
+\end{center}
+
+\item  What is value the value of $\Pr(X = 3.0)$? 
+ \item  Calculate $E(X)$ and $Sd(X)$. 
+ \item  You produce a gambling game where the player wins (in euro) the value of $X$ generated, e.g., if a $2.0$ appears, \euro{2} is won. How much should you charge for a play of this game so that that \emph{you} (the programmer) make a profit of \euro{0.10} on average per game? (i.e., the player \emph{loses} \euro{0.10} on average) 
+ \item  Using your answer to part (c), determine the probability that you make a profit when somebody plays this game. 
+ {\bf(e)} If 10 people play this game, what is the probability that you make a profit 8 times?
+
+\subsection*{Question 2}
+You flip three coins. Let $X = $ ``the number of heads'' and $Y = $ ``the number of unique faces''.\\[-0.2cm]
+
+\item  What is the sample space for this experiment? 
+ \item  Construct the \emph{joint distribution} for $X$ and $Y$. 
+ \item  Based on this joint distribution, construct the \emph{marginal} distribution for $X$ and for $Y$. 
+ \item  Are $X$ and $Y$ independent? 
+ {\bf(e)} Calculate $E(Y)$ and $Sd(Y)$. 
+ {\bf(f)} Calculate $\Pr(Y=2\,|\,X=2)$ and interpret its value (compare with $\Pr(Y=2)$).
+
+
+\subsection*{Question 3}
+Let $X =$ ``the attack power of player 1'' and let $Y =$ ``the attack power of player 2''.\\[-0.3cm]
+
+Let the probability distributions for $X$ and $Y$ be:
+\begin{center}
+	\begin{tabular}{|c|ccc|c|c|ccc|}
+		\cline{1-4}\cline{6-9}
+		&&&&&&&&\\[-0.4cm]
+		$x$ & 0 & 100 & 300 & \qquad\qquad & $y$ & 0 & 80 & 200\\
+		\cline{1-4}\cline{6-9}
+		&&&&&&&&\\[-0.4cm]
+		$\Pr(X=x)$ & $0.2$ & $0.75$ & $0.05$ & & $\Pr(Y=y)$ & $0.1$ & $0.6$ & $0.3$ \\[0.1cm]
+		\cline{1-4}\cline{6-9}
+		%\multicolumn{9}{c}{}
+	\end{tabular}
+\end{center}
+{\footnotesize(e.g., p1 misses 20\% of the time, deals 100 points of damage 75\% of the time and performs a critical blow 5\% of the time.)}\\[-0.2cm]
+
+\item  What is the average attack power of each player? 
+ \item  If both players have 1000 hit-points, how many attacks does it take for player 1 to defeat player 2 and vice versa? Which player will win on average? 
+ \item  Let's now assume that player 1 uses his/her \emph{first} turn to cast a spell (and therefore does not attack in this turn). The result of the spell is that player 2 can no longer perform a critical blow, i.e., $\Pr(Y=200) = 0$, \emph{from turn two onwards}. Since setting $p(200) = 0$ leads to $\sum p(y) \ne 1$, assume that the remaining probability ($= 0.3$) is distributed evenly between $p(0)$ and $p(80)$. What is the outcome of the battle now?
+

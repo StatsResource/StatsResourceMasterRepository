@@ -1,0 +1,296 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{framed}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Continuous Random Variables} %\input{tcilatex}
+
+\begin{document}
+	
+\section*{Continuous Random variables}
+\begin{itemize}
+\item Previously we have been studying discrete random variables, such as the Binomial and the Poisson random variables.
+\item Now we turn our attention to continuous random variables.
+\item Recall that a continuous random variable is one which takes an infinite number of possible values, rather than just a countable number of distinct values.
+\item Continuous random variables are usually measurements.
+\item Examples include height, weight, the amount of sugar in an orange, the time required to run a mile.
+\end{itemize}
+
+
+	In this module, we will look at random variables from the following distributions
+	\begin{itemize}
+		\item  Continuous uniform probability distribution
+		\item  Exponential probabilty distribution
+		\item  Normal probability distribution
+	\end{itemize}
+	
+	Before this, we will look at some important concepts.
+
+%=========================================================================================== %
+
+\subsection{Exact Probability}
+
+\begin{framed}
+\noindent \textbf{Remarks:} This is for continuous distributions only.
+\begin{itemize}
+\item The probability that a continuous random variable will take an exact value is infinitely small.
+We will usually treat it as if it was zero.
+\item
+When we write probabilities for continuous random variables in mathematical notation, we often retain the equality component (i.e. the "...or equal to..").\\
+For example, we would write expressions $P(X \leq 2)$ or $P(X \geq 5)$.
+\item
+Because the probability of an exact value is almost zero, these two expression are equivalent to $P(X < 2)$
+or $P(X > 5)$. \item Also, the complement of $P(X \geq k)$ can be written as $P(X \leq k)$.
+\end{itemize}
+\end{framed}
+
+
+
+
+
+%========================================================== %
+
+
+
+\subsection*{Mathematical Preliminaries}
+%% \frametitle{Functions and Definite integrals}
+\begin{itemize}
+\item Integration is not part of the syllabus, and it is assumed that students are not familiar with how to compute definite integrals.
+\item However,  it is useful to know what the purpose of definite integrals are, because we will be using the results derived from definite integrals. \item It is assumed that students are familiar with functions.
+\end{itemize}
+%% ----------------------------------%%
+
+%\begin{figure}
+%\centering
+%\includegraphics[width=0.7\linewidth]{images/6AFunction}
+%\caption{}
+%\label{fig:6AFunction}
+%\end{figure}
+
+
+\subsection*{Definite Integral}
+\begin{itemize}
+\item Definite integrals are used to compute the ``\textbf{\textit{area under curves}}".
+\item Definite integrals are defined by a lower and upper limit.
+\item The area under the curve between $X=1$ and $X=2$ is depicted in the previous plot.
+\item By computing the definite integral, we are able to determine a value for this area.
+\item Probability can be represented as an area under a curve.
+\end{itemize}
+
+\begin{center}
+\includegraphics[scale=0.35]{images/6ADefiniteIntegral}
+\end{center}
+%\caption{Definite integral of function is area under curve between X=1 and X=2.}
+
+
+
+
+\subsection*{Probability Density Function}
+\begin{itemize}
+	\item
+	In probability theory, a \textbf{\emph{probability density function}} (PDF) (or ``density" for short ) of a continuous random variable is a function that describes the relative likelihood for this random variable to occur at a given point.
+	
+	\item The PDF for a continuous random variable $X$ is often denoted $f(x)$.
+	
+	\item The probability density function can be integrated to obtain the probability that the random variable takes a value in a given interval.
+	
+	\item The probability for the random variable to fall within a particular interval is given by the integral of this variable's density over the region.
+	
+	\item The probability density function is non-negative everywhere, and its integral over the entire space is equal to one.
+\end{itemize}
+
+\subsection*{Density Curves}
+
+
+\begin{itemize}
+	\item A plot of the PDF is referred to as a `\textbf{\emph{density curve}}'.
+	\item A density curve that is always on or above the horizontal axis and has total area underneath equal to one.
+	\item Area under the curve in a range of values indicates the proportion of values in that range.
+	\item Density curves come in a variety of shapes, but the normal distribution's bell-shaped densities are perhaps the most commonly encountered.
+	\item Remember the density is only an approximation, but it simplifies analysis and is generally accurate enough for practical use.
+\end{itemize}
+
+
+\subsection*{The Cumulative Distribution Function }
+\begin{itemize}
+	\item The \textbf{\emph{cumulative distribution function}} (CDF), (or just distribution function), describes the probability that a continuous random variable X with a given probability distribution will be found at a value less than or equal to $x$.\\
+	
+	\[ F(x) = P(X \leq x) \]
+	
+	\item Intuitively, it is the ``area so far" function of the probability distribution.
+\end{itemize}
+
+
+\begin{center}
+	\includegraphics[scale=0.35]{images/6ACDF}
+\end{center}
+Cumulative Distribution Function $P(Z \leq 1)$ \\ Here the random variable is called $Z$ (\textit{we will see why later}).
+
+
+\end{document}
+
+
+%---------------------------------------------------------------------------%
+{
+\subsection{Continuous Random Variables}
+
+\begin{itemize}
+\item Probability Density Function
+\item Cumulative Density Function
+\end{itemize}
+
+
+If X is a continuous random variable then we can say that the probability of obtaining a \textbf{precise} value $x$ is infinitely small, i.e. close to zero.
+
+\[P(X=x) \approx 0 \]
+
+Consequently, for continuous random variables (only),  $P(X \leq x)$ and $P(X < x)$ can be used interchangeably.
+
+\[P(X \leq x) \approx P(X < x) \]
+
+
+}
+
+
+
+
+
+
+
+\begin{framed}
+
+\noindent \textbf{Important Characteristics of a Continuous Probability Distribution }
+\begin{itemize}
+\item Expected value $\operatorname{E}(X)$
+\item Variance $\operatorname{Var}(X)$
+\item probability density function ($f(X)$)
+\item cumulative distribution function ($F(X)$)
+\end{itemize}
+\end{framed}
+
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\linewidth]{images/6AFunction}
+\caption{}
+\label{fig:6AFunction}
+\end{figure}
+
+
+Some function $f(x)$ evaluated at $x=1$.
+
+
+%----------------------------------------------------------------------------------------------------%
+%
+%\textbf{Definite Integral}
+%
+%%% \vspace{-0.5cm}
+%\begin{center}
+%\includegraphics[scale=0.35]{images\6ADefiniteIntegral}
+%\end{center}
+%Definite integral of function is area under curve between X=1 and X=2.
+%
+%----------------------------------------------------------------------------------------------------%
+
+
+
+%----------------------------------------------------------------------------------------------------%
+
+
+
+
+%
+%\textbf{Cumulative Distribution Function}
+%
+%%% \vspace{-0.5cm}
+%\begin{center}
+%\includegraphics[scale=0.35]{images\6ACDF}
+%
+%\end{center}
+%Cumulative Distribution Function $P(Z \leq 1)$.
+
+
+\textbf{Functions}
+
+IMAGE : 5A Functions
+
+
+%----------------------------------------------------------------------------------------------------%
+
+\textbf{Definite Integral}
+
+IMAGES : 5A Definite Integrals
+
+
+
+
+
+%----------------------------------------------------------------------------------------------------%
+
+
+\subsection{Exact Probability}
+
+\noindent\textbf{Remarks:} This is for continuous distributions only.
+\begin{itemize}
+\item The probability that a continuous random variable will take an exact value is infinitely small.
+We will usually treat it as if it was zero.
+\item
+When we write probabilities for continuous random variables in mathematical notation, we often retain the equality component (i.e. the "...or equal to..").\\
+For example, we would write expressions $P(X \leq 2)$ or $P(X \geq 5)$.
+\item
+Because the probability of an exact value is almost zero, these two expression are equivalent to $P(X < 2)$
+or $P(X > 5)$. \item The complement of $P(X \geq k)$ can be written as $P(X \leq k)$.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------%
+{
+\textbf{Probability Mass Function}
+
+\begin{itemize} \item  a probability mass function (pmf) is a function that gives the probability that a discrete random variable is exactly equal to some value. \item  The probability mass function is often the primary means of defining a discrete probability distribution \end{itemize}
+}
+
+
+
+
+\begin{center}
+\includegraphics[scale=0.35]{images/6ADefiniteIntegral}
+\end{center}
+Definite integral of function is area under curve between X=1 and X=2.
+\textbf{Functions}
+
+
+
+
+
+\begin{center}
+\includegraphics[scale=0.35]{images/6ACDF}
+\end{center}
+Cumulative Distribution Function $P(Z \leq 1)$ \\ Here the random variable is called $Z$ (we will see why later)
+
+
+
+
+
+
+
+
+
+\end{document}               

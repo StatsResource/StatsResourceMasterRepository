@@ -1,0 +1,223 @@
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx}  % Font Family
+\usepackage{helvet}   % Font Family
+\usepackage{color}
+
+\mode<presentation> {
+ \usetheme{Frankfurt} % was Frankfurt
+ \useinnertheme{rounded}
+ \useoutertheme{infolines}
+ \usefonttheme{serif}
+ %\usecolortheme{wolverine}
+% \usecolortheme{rose}
+\usefonttheme{structurebold}
+}
+
+\setbeamercovered{dynamic}
+
+\title[MA4413]{Statistics for Computing \\ {\normalsize MA4413 Lecture 4B}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize Kevin.obrien@ul.ie}}
+\date{Autumn Semester 2012}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%---------------------------------------------------------------%
+\frame{
+\frametitle{Today's Class}
+\begin{itemize}
+\item Review of Discrete Probability Distributions
+\item \texttt{R} Implementation
+\item A Few Examples
+\item Introduction to Continuous Probability Distributions
+\item The Uniform Distribution
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Discrete Probability Distributions}
+Three main distributions
+\begin{itemize}
+\item Binomial Distribution
+\item Poisson Distribution
+\item Geometric Distribution (mentioned, but not as important as the other two.)
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Binomial Probability Distribution}
+Important Points:
+\begin{itemize}
+\item The experiment is a series of $n$ independent trials.
+\item Two possible outcomes from each trial: a success and a failure.
+\item The probability of success (i.e. $p$) is constant. 
+\item A binomial random variable can be written as 
+\[ X \sim B(n,p) \]
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Poisson Probability Distribution}
+Important Points:
+\begin{itemize}
+\item This distribution is concerned with the number of occurrences per unit space.
+\item Unit space can mean a unit length, a unit area, a unit volume or a unit period of time.
+\item We will concern ourselves with unit time periods mostly.
+\item The average number of occurrence per unit period is denoted $m$ i.e. the Poisson mean. In many texts the Poisson mean is denoted $\lambda$. \item If the unit period changes, then the Poisson mean changes accordingly.
+\item A Poisson random variable can be written as
+\[ X \sim Pois(m) \]
+\item The Poisson distribution can be used to approximate the binomial distribution under certain conditions.
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Implementation in \texttt{R}}
+Important Points:
+\begin{itemize}
+\item The binomial parameters $n$ and $p$ are written as \texttt{size} and \texttt{prob}.
+\item The Poisson mean $m$ is written as \texttt{lambda}. \bigskip
+\item The probability density function (PDF) is the probability of a random variable taking a specific value i.e. $P(X = k)$
+\item The appropriate \texttt{R} functions are \texttt{dbinom} and \texttt{dpois}.\bigskip
+\item The cumulative distribution function (CDF) is the probability of a random variable not exceeding a specific value i.e. $P(X \leq k)$
+\item The appropriate \texttt{R} functions are \texttt{pbinom} and \texttt{ppois}.
+\end{itemize}
+}
+
+%---------------------------------------------------------------------------%
+\begin{frame}[fragile]
+\frametitle{Implementation in \texttt{R}}
+\begin{itemize}
+\item We can compute probabilities for a series of values, rather than just one at a time.
+\item For this, we will use sequences using the ``:" operator.
+\end{itemize}
+\begin{verbatim}
+> 2:7
+[1] 2 3 4 5 6 7
+> dpois(2:7,lambda=3)
+[1] 0.22404181 0.22404181 0.16803136 0.10081881 0.05040941
+[6] 0.02160403
+\end{verbatim}
+\begin{itemize}
+\item Poisson process with mean $m=3$
+\item $P(X=2) =0.224$, $P(X=3) = 0.224$, $P(X=4) = 0.168)$ etc
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Geometric Probability Distribution}
+Important Points:
+\begin{itemize}
+\item This distribution is closely related to the binomial distribution.
+\item This distribution described the number of failures that occur before the first success, when the probability of success is $p$.
+\item The relevant \texttt{R} functions are \texttt{dgeom} and \texttt{pgeom}.
+\end{itemize}
+}
+
+%---------------------------------------------------------------------------%
+\begin{frame}[fragile]
+\frametitle{Geometric Probability Distribution : Example}
+
+If the probability of inserting a USB correctly is $0.40$, what is the probability of successfully doing so on the second attempt.\\
+\bigskip
+In essence we have one failure, then one success, and these are independent events. So the probability the second attempt will be successful is $0.6 \times 0.4$. The probability that we are successful on the first attempt (i.e. no failures beforehand) is 0.4\\
+\bigskip
+Question: What is the probability of needing more than two attempts?
+\begin{verbatim}
+> dgeom(0,prob=0.4)
+[1] 0.4
+> dgeom(1,prob=0.4)
+[1] 0.24
+> dgeom(2,prob=0.4)
+[1] 0.144
+\end{verbatim}
+
+\end{frame}
+
+
+
+
+%---------------------------------------------------------------------------%
+\begin{frame}[fragile]
+\frametitle{Binomial Probability Distribution: Example}
+
+\begin{itemize}
+\item Consider a binomial experiment with $n = 20$ and $p = 0.50$.
+\item Use the following output to compute $P(X > 10)$
+\end{itemize}
+\begin{verbatim}
+> dbinom(9,size=20,prob=0.50)
+[1] 0.1601791
+> dbinom(10,size=20,prob=0.50)
+[1] 0.1761971
+> dbinom(11,size=20,prob=0.50)
+[1] 0.1601791
+>
+> pbinom(9,size=20,prob=0.50)
+[1] 0.4119015
+> pbinom(10,size=20,prob=0.50)
+[1] 0.5880985
+> pbinom(11,size=20,prob=0.50)
+[1] 0.7482777
+\end{verbatim}
+\end{frame}
+
+%---------------------------------------------------------------------------%
+\begin{frame}[fragile]
+\frametitle{Binomial Probability Distribution: Example}
+
+\begin{itemize}
+\item Consider the sample space for the number of successes. There can be between 0 and 20 successes.
+
+\[ S = \{0,1,2,3,\ldots,8,9,10,11,12 \ldots,19,20\}
+\]
+
+\item  $P(X > 10)$ is the probability of X being greater than 10.
+\item This is equivalent to the probability of X being X or greater: i.e. $P(X \geq 11)$.
+\item We can't determine this directly using our \texttt{R} output.
+
+\item We can determine the probability of the complementary event. i.e. $P(X \leq 10)$ using calculators.
+\end{itemize}
+\begin{verbatim}
+> pbinom(10,size=20,prob=0.50)
+[1] 0.5880985
+>
+> 1-pbinom(10,size=20,prob=0.50)
+[1] 0.4119015
+\end{verbatim}
+\end{frame}
+%---------------------------------------------------------------------------%
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Sample Space and Sample Points }
+
+\begin{itemize}
+\item Knowledge and use of sample points, and the sample space is quite helpful for these questions.
+\item What are the sample points for the event where the number of success is less than or equal to 9? (Lets call this event $A$.)
+\[ A = \{0,1,2,3,\ldots,8,9\}
+\]
+\item What are the sample points for the \textbf{\emph{complement event}}. (Lets call this event $A^c$).
+\[ A^c = \{10,11,12 \ldots,19,20\}
+\]
+
+\end{itemize}
+}
+
+
+
+\end{document}
+

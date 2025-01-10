@@ -1,0 +1,125 @@
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{framed}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx}  % Font Family
+\usepackage{helvet}   % Font Family
+\usepackage{color}
+
+\mode<presentation> {
+ \usetheme{Frankfurt} % was
+ \useinnertheme{rounded}
+ \useoutertheme{infolines}
+ \usefonttheme{serif}
+ %\usecolortheme{wolverine}
+% \usecolortheme{rose}
+\usefonttheme{structurebold}
+}
+
+\setbeamercovered{dynamic}
+
+\title[MA4603]{Science Maths 3 \\ {\normalsize MA4603 Lecture 11A}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize Kevin.obrien@ul.ie}}
+\date{Autumn Semester 2017}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{document}
+
+%------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Small samples}
+\begin{itemize} \item We indicated that use of the normal distribution in estimating a population mean is warranted
+for any large sample ($n > 30$). \item For a small sample ($n \leq 30$) only if the population is normally distributed
+\textbf{and} $\sigma$ is known, the standard normal distribution can be used compute quantiles. In practice,
+this case is unusual.
+\item Now we consider the situation in which the sample is small and the population is normally distributed,
+but $\sigma$ is not known.
+\end{itemize}
+\end{frame}
+%------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Student's $t-$distribution (1)}
+\begin{itemize}
+\item Student's $t-$distribution is a variation of the normal distribution, designed to factor in the increased uncertainty resulting from smaller samples.
+\item The distribution is really a family of distributions, with
+a somewhat different distribution associated with the degrees of freedom ($df$). For a confidence interval for the
+population mean based on a sample of size n, $df = n - 1$.
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Student's $t-$distribution (2)}
+\begin{itemize}
+\item With increasing
+sample size, the $t-$distribution approaches the form of the standard normal (`Z') distribution.
+\item In fact the standard normal distribution can be thought of as the $t-$distribution with $\infty$ degrees of freedom.
+\item For computing quantiles, we will consider the `Z' distribution in this way.
+\item For values of $n$ greater then 30, the difference between using $df = n-1$ and $df = \infty$ is negligible.
+
+\item As this will be relevant later, remember that a confidence interval is a \textbf{two-tailed} procedure, i.e. $k=2$.
+\end{itemize}
+\end{frame}
+
+%-----------------------------------------------------------%
+
+\begin{frame}[fragile]
+\frametitle{Student's $t-$distribution (3)}
+
+\begin{itemize}
+\item Student's t- values are determined using the \texttt{t} family of commands (e.g. \texttt{qt, pt, dt}).
+\item To compute quantiles, use the code below.
+\item The degrees of freedom must be additionally be specified. Degrees of freedom are computed as sample size minus one ($n-1$)
+\item As the degrees of freedom gets larger and larger, the student t distribution converges to the Z distribution.
+
+\end{itemize}
+\begin{verbatim}
+
+> qt(0.975, df=4:28)
+ [1] 2.776445 2.570582 2.446912 2.364624 2.306004
+ [6] 2.262157 2.228139 2.200985 2.178813 2.160369
+[11] 2.144787 2.131450 2.119905 2.109816 2.100922
+[16] 2.093024 2.085963 2.079614 2.073873 2.068658
+[21] 2.063899 2.059539 2.055529 2.051831 2.048407
+\end{verbatim}
+\end{frame}
+%------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Confidence Interval for a Mean (Small Sample)}
+\begin{itemize}
+\item The mean operating life for a random sample of $n = 10$ light bulbs is $\bar{x} = 4,000$ hours, with the sample
+standard deviation $s = 200$ hours. \item The operating life of bulbs in general is assumed to be approximately normally distributed.\item
+We estimate the mean operating life for the population of bulbs from which this sample was taken, using a 95 percent
+confidence interval as follows:
+
+\[4,000\pm(2.262)(63.3)  = (3857,4143)\]
+
+\item The point estimate is 4,000 hours. The sample standard deviation is 200 hours, and the sample size is 10. Hence \[S.E(\bar{x} ) = { 200 \over \sqrt{10}} = 63.3\]
+
+\item From last slide, the t quantile with $df=9$ is 2.262.
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------------------------------%
+
+
+% -- Lecture 8B
+% -- Revise the Tables
+% -- Sample Size Estimation for mean
+% -- Example SSE for mean
+% -- SSE for Proportion
+% -- Example SSE for proportion
+% -- Paired Test
+
+\end{document}
+
+
+
+

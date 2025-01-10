@@ -1,0 +1,27 @@
+Inference with R
+
+
+
+\section{Inference Procedures: Exercise 25: Confidence intervals}
+Seven meas urements of the pH of a buffer solution gave the following results:
+5.12 5.20 5.15 5.17 5.16 5.19 5.15. Calculate (i) the 95\% and (ii) the 99\% confidence limits for the true pH
+utilizing R.
+
+\begin{verbatim}
+> x<-c(5.12, 5.20, 5.15, 5.17, 5.16, 5.19, 5.15)
+> n=length(x)
+>
+> alpha5=0.05
+> alpha1=0.01
+>
+> LB95=mean(x)+qt(alpha5/2,n-1)*sd(x)/sqrt(n)
+> UB95=mean(x)+qt(1-alpha5/2,n-1)*sd(x)/sqrt(n)
+>
+> LB95
+[1] 5.137975
+> UB95
+[1] 5.187739
+\end{verbatim}
+
+Thus the 95\% confidence interval for this problem is approximately [5:14; 5:19], while
+using the same code only taking $\alpha$ =0.01 will give us [5:13; 5:20].

@@ -1,0 +1,75 @@
+
+\documentclass[a4paper12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\large 
+
+
+%%- http://webpages.iust.ac.ir/matashbar/teaching/schaum_probability.pdf
+
+%%-- PAge 287
+%%-- 9.13
+
+\noindent An air freight terminal has four loading docks on the main concourse. Any aircraft which arrive 
+when all docks are full are diverted to docks on the back concourse. The average aircraft arrival
+
+rate is 3 aircraft per hour. 
+
+The average service time per aircraft is 2 hours on the main concourse and 3 hours on the back concourse. 
+\begin{enumerate}[(a)]
+    \item Find the percentage of the arriving aircraft that are diverted to the back concourse. 
+    \item If a holding area which can accommodate up to 8 aircraft is added to the main concourse, 
+find the percentage of the arriving aircraft that are diverted to the back concourse and the 
+expected delay time awaiting service. 
+\end{enumerate}
+
+\subsection*{Solution}
+
+\begin{itemize}
+    \item The service system at the main concourse can be modeled as an \textbf{M/M/s/s} queueing system with $s = 4$, 
+1 = 3, p = 3, and 1/p = 6. 
+\item The percentage of the arriving aircraft that are diverted to the back concourse is 
+\[100 x P(al1 docks on the main concourse are full) \]
+    \item From Eq. (9.64), 
+64/4 ! P(al1 docks on the main concourse are full) = p, = 7 -- 54 P 0.47 115 C 9 n=O 
+    \item Thus, the percentage of the arriving aircraft that are diverted to the back concourse is about 47 
+percent. 
+    \item With the addition of a holding area for 8 aircraft, the service system at the main concourse can now be 
+modeled as an \textbf{M/M/s/K} queueing system with $s = 4$, $K = 12$, and p = A/(sp) = 1.5. 
+\item NOW, from Eqs. 
+(9.35) and (9.36), 
+    \item Thus, about 33.2 percent of the arriving aircraft will still be diverted to the back concourse. 
+    \item Next, from Eq. (9.37), the average number of aircraft in the queue is 
+    \item Then, from Eq. (9.40), the expected delay time waiting for service is 
+W, = Lq = 6'0565 P 3.022 hours 
+1 - ) 3(1 - 0.332) 
+    \item Note that when the 2-hour service time is added, the total expected processing time at the main 
+concourse will be 5.022 hours compared to the 3-hour service time at the back concourse. 
+\end{itemize}
+
+
+\end{document}

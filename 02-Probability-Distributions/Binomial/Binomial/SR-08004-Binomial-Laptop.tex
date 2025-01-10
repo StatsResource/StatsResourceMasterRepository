@@ -1,0 +1,56 @@
+
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \chead{Probability Distributions} \rhead{Joint Distribution} %\input{tcilatex}
+\begin{document}
+\subsection*{Worked Example}
+A company owns 400 laptops. Each laptop has a 2\% probability of not working. You randomly select 20 laptops for your salespeople.
+\begin{enumerate}[(a)]
+\item What distribution do you feel is appropriate here. Justify your answer. 
+\item What is the probability that they will all work?
+\item What is the probability that only one will be broken?
+\item What is the probability that at least two will be broken? 
+\end{enumerate}
+\newpage 
+\begin{framed}
+If the random variable X follows the binomial distribution with parameters $n \in {\displaystyle \mathbb {N} }$  and $p \in [0,1]$, we write $X \sim Bin(n, p)$. \\ \end{framed}
+
+\noindent The probability of getting exactly $k$ successes in n independent Bernoulli trials is given by the probability mass function:
+
+\[{\displaystyle f(k,n,p)=\Pr(k;n,p)=\Pr(X=k)={\binom {n}{k}}p^{k}(1-p)^{n-k}}\]
+for $k = 0, 1, 2, ..., n$, where
+
+\[{\displaystyle {\binom {n}{k}}={\frac {n!}{k!(n-k)!}}}\]
+is the binomial coefficient. 
+\end{framed}
+
+\begin{itemize}
+    \item Number of independent trials: $n=10$
+    \item Success
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+

@@ -1,0 +1,98 @@
+
+%--------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{The Exponential Distribution}
+\begin{itemize}
+\item The exponential distribution is a continuous probability distribution commonly used to model durations or ``lifetimes".
+\item A lifetime could mean
+\begin{itemize}
+\large
+\item the lifespan of a component
+\item the time it takes to complete a task
+\item the amount of time between two successive occurrences, such as withdrawals from a bank machine.
+\end{itemize}
+\item The average lifetime is denoted $E(X) = \mu$.
+\item The variance of lifetimes is computed as $V(X) = \mu^2$
+\end{itemize}
+\end{frame}
+
+%--------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Important Formulae}
+\Large
+The probability that a lifetime $X$ will be less than a period of $k$ time units is given by
+\[
+P( X \leq k) = 1- e^{{-k \over \mu}}.
+\]
+Similarly, the probability that a lifetime $X$ will be greater than a period of $k$ time units is given by
+\[
+P( X \geq k) = e^{{-k \over \mu}}.
+\]
+}
+
+
+
+
+
+%----------------------------------------------------------------------------%
+\frame{
+\frametitle{The Exponential Distribution}
+A continuous random variable having p.d.f. f(x), where:
+$f(x) = \lambda x e ^{-\lambda x} $
+is said to have an exponential distribution, with parameter $\lambda$.
+The cumulative distribution is given by:
+$F(x) = 1 - e^{\lambda x}$
+
+Expectation and Variance
+$E(X) = 1 / \lambda$\\
+$V(X) = 1 / \lambda^2$\\
+}
+
+%----------------------------------------------------------------------------%
+\frame{
+\frametitle{Example}
+Suppose that the service time for a customer at a fast-food outlet
+has an exponential distribution with mean 3 minutes. What is the probability that a
+customer waits more than 4 minutes?
+
+\[ P(X  \leq 4) = 1 -  e^{-4/3} \]
+
+\[ P(X  \leq 4) = e^{-4/3} = 0.2636 \]
+}
+
+
+%---------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Exponential Distribution Lifetimes}
+The average lifespan of a laptop is 5 years. You may assume that
+the lifespan of computers follows an exponential probability
+distribution. \begin{itemize}\item (3 marks) What is the
+probability that the lifespan of the laptop will be at least 6
+years? \item
+What is the probability that the lifespan of the laptop will not
+exceed 4 years? \item What is the probability of the
+lifespan being between 5 years and 6 years?
+\end{itemize}
+Suppose the lifetime of a PC is exponentially distributed with
+mean $\mu =5$
+We should be told the average lifetime $\mu$.
+\[
+P( X \geq x_o) = e^{{-x_o \over \mu}}
+\]
+\end{frame}
+
+\begin{frame}
+	\frametitle{Exponential Distribution Lifetimes}
+
+\begin{itemize}
+\item What is the probability that the lifespan of the laptop will be at least
+6 years?
+\item What is the probability that the lifespan of the laptop will not exceed
+4 years?
+\item What is the probability of the lifespan being between 5 years and 6
+years?
+\end{itemize}
+
+\end{frame}
+
+\end{document}

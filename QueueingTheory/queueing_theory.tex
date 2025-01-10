@@ -1,0 +1,144 @@
+Little's Law is a fundamental theorem in queueing theory, formulated by John Little. It states that the long-term average number of items (or customers) in a stationary system (L) is equal to the long-term average effective arrival rate (λ) multiplied by the average time (W) that an item spends in the system. Mathematically, it is expressed as:
+
+$$L = \lambda \cdot W$$
+
+This law is quite powerful because it applies to a wide range of systems, regardless of the arrival process distribution, service distribution, or service order¹². For example, in a retail store, if the average arrival rate of customers is 10 per hour and the average time a customer spends in the store is 0.5 hours, then the average number of customers in the store at any given time would be:
+
+$$L = 10 \, \text{customers/hour} \times 0.5 \, \text{hours} = 5 \, \text{customers}$$
+
+Little's Law helps in understanding and optimizing various systems, such as call centers, manufacturing lines, and even computer networks²³.
+
+Is there a specific application or example you're curious about?
+
+Source : conversation avec Copilot, 4/10/2024
+(1) Little's law - Wikipedia. https://en.wikipedia.org/wiki/Little%27s_law.
+(2) What is Little’s Law? Overview with formula and examples. https://blog.logrocket.com/product-management/littles-law-overview-formula-examples/.
+(3) Little's Law: Unlocking the Secrets of Queuing Theory. https://fastercapital.com/content/Little-s-Law--Unlocking-the-Secrets-of-Queuing-Theory.html.
+(4) Little’s Law: Definition, Formula and Example - MasterClass. https://www.masterclass.com/articles/littles-law.
+
+An M/M/1 queue is a basic model in queueing theory where arrivals follow a Poisson process with rate \(\lambda\) and service times are exponentially distributed with rate \(\mu\). Here are the fundamental equations for an M/M/1 queue:
+
+1. **Utilization Factor (\(\rho\))**:
+   $$\rho = \frac{\lambda}{\mu}$$
+   This represents the average proportion of time the server is busy. For the system to be stable, \(\rho\) must be less than 1.
+
+2. **Average Number of Customers in the System (L)**:
+   $$L = \frac{\rho}{1 - \rho} = \frac{\lambda}{\mu - \lambda}$$
+
+3. **Average Number of Customers in the Queue (L_q)**:
+   $$L_q = \frac{\rho^2}{1 - \rho} = \frac{\lambda^2}{\mu(\mu - \lambda)}$$
+
+4. **Average Time a Customer Spends in the System (W)**:
+   $$W = \frac{1}{\mu - \lambda}$$
+
+5. **Average Time a Customer Spends Waiting in the Queue (W_q)**:
+   $$W_q = \frac{\rho}{\mu - \lambda} = \frac{\lambda}{\mu(\mu - \lambda)}$$
+
+These equations help in analyzing the performance of the queue, such as determining the average waiting time and the average number of customers in the system²⁷.
+
+Is there a specific aspect of the M/M/1 queue you're interested in exploring further?
+
+Source : conversation avec Copilot, 4/10/2024
+(1) M/M/1 queue - Wikipedia. https://en.wikipedia.org/wiki/M/M/1_queue.
+(2) M/M/1 Queueing Model - Real Statistics Using Excel. https://real-statistics.com/probability-functions/queueing-theory/m-m-1-queueing-model/.
+(3) Queuing models - MIT. https://web.mit.edu/1.041/spring2023/lectures/L8-queuing-models-2023sp.pdf.
+(4) Queueing Theory M/M/1 and M/M/m Queues - ETH Z. https://archive-systems.ethz.ch/sites/default/files/slides-mmx-queues.pdf.
+(5) Queueing theory M/M/1 M/M/2 length and wait - John D. Cook. https://www.johndcook.com/blog/2022/01/12/mm2/.
+(6) Basic Queueing Theory M/M/* Queues - George Mason University. https://cs.gmu.edu/~huangyih/756/queueing.pdf.
+(7) undefined. https://www.informs.org/Blogs/Operations-Research-Forum/Little-s-Law-as-Viewed-on-its-50th-Anniversary.
+(8) CS 547 Lecture 12: The M/M/1 Queue - University of Wisconsin–Madison. https://pages.cs.wisc.edu/~dsmyers/cs547/lecture_12_mm1_queue.pdf.
+
+
+
+Sure! To calculate the average time a customer spends waiting in the queue (\(W_q\)) for an M/M/1 queue, you can use the following formula:
+
+$$W_q = \frac{\lambda}{\mu (\mu - \lambda)}$$
+
+Here's a step-by-step breakdown:
+
+1. **Identify the arrival rate (\(\lambda\))**: This is the average rate at which customers arrive at the queue. For example, if 10 customers arrive per hour, then \(\lambda = 10\).
+
+2. **Identify the service rate (\(\mu\))**: This is the average rate at which the server can serve customers. For instance, if the server can serve 15 customers per hour, then \(\mu = 15\).
+
+3. **Calculate the utilization factor (\(\rho\))**: This is the ratio of the arrival rate to the service rate, given by \(\rho = \frac{\lambda}{\mu}\). In our example, \(\rho = \frac{10}{15} = \frac{2}{3}\).
+
+4. **Plug the values into the formula**: Using the values from our example, we get:
+   $$W_q = \frac{10}{15 (15 - 10)} = \frac{10}{15 \times 5} = \frac{10}{75} = \frac{2}{15} \, \text{hours}$$
+
+So, the average time a customer spends waiting in the queue is \(\frac{2}{15}\) hours, or about 8 minutes³⁴.
+
+Would you like to see an example with different values or explore another aspect of queueing theory?
+
+Source : conversation avec Copilot, 4/10/2024
+(1) M/M/1 Queuing Calculations - Amazon Web Services. https://rstudio-pubs-static.s3.amazonaws.com/639831_b089dd13a1ac44e4b289bac76b36c15d.html.
+(2) Queuing Theory Tutorial - M/M/1 Queuing System - Revoledu. https://people.revoledu.com/kardi/tutorial/Queuing/MM1-Queuing-System.html.
+(3) M/M/1/K Queueing Model - Real Statistics Using Excel. https://real-statistics.com/probability-functions/queueing-theory/m-m-1-k-queueing-model/.
+(4) Queueing Theory Calculator. https://www.omnicalculator.com/math/queueing-theory.
+(5) Queueing Theory (2) Distribution of waiting time in M/1 - WPMU DEV. https://bpb-eu-w2.wpmucdn.com/sites.aub.edu.lb/dist/7/128/files/2024/04/set_4_Q_2_24-7917b00e24552063.pdf.
+
+
+
+To calculate the steady-state equilibrium of an M/M/1 queue, you need to determine the steady-state probabilities, which describe the long-term behavior of the system. Here’s a step-by-step guide:
+
+1. **Define the Parameters**:
+   - \(\lambda\): Arrival rate (average number of arrivals per time unit).
+   - \(\mu\): Service rate (average number of services completed per time unit).
+
+2. **Utilization Factor (\(\rho\))**:
+   $$\rho = \frac{\lambda}{\mu}$$
+   This must be less than 1 (\(\rho < 1\)) for the system to reach a steady state.
+
+3. **Steady-State Probabilities**:
+   The probability that there are \(n\) customers in the system (\(P_n\)) is given by:
+   $$P_n = (1 - \rho) \rho^n$$
+   where \(n = 0, 1, 2, \ldots\)
+
+4. **Average Number of Customers in the System (L)**:
+   $$L = \frac{\rho}{1 - \rho}$$
+
+5. **Average Number of Customers in the Queue (L_q)**:
+   $$L_q = \frac{\rho^2}{1 - \rho}$$
+
+6. **Average Time a Customer Spends in the System (W)**:
+   $$W = \frac{1}{\mu - \lambda}$$
+
+7. **Average Time a Customer Spends Waiting in the Queue (W_q)**:
+   $$W_q = \frac{\rho}{\mu - \lambda}$$
+
+### Example Calculation
+
+Let's say the arrival rate \(\lambda\) is 5 customers per hour, and the service rate \(\mu\) is 8 customers per hour.
+
+1. **Utilization Factor**:
+   $$\rho = \frac{5}{8} = 0.625$$
+
+2. **Steady-State Probabilities**:
+   - \(P_0 = 1 - \rho = 1 - 0.625 = 0.375\)
+   - \(P_1 = 0.375 \times 0.625 = 0.234\)
+   - \(P_2 = 0.375 \times (0.625)^2 = 0.146\)
+   - And so on...
+
+3. **Average Number of Customers in the System**:
+   $$L = \frac{0.625}{1 - 0.625} = 1.67 \, \text{customers}$$
+
+4. **Average Number of Customers in the Queue**:
+   $$L_q = \frac{(0.625)^2}{1 - 0.625} = 1.04 \, \text{customers}$$
+
+5. **Average Time in the System**:
+   $$W = \frac{1}{8 - 5} = \frac{1}{3} \, \text{hours}$$
+
+6. **Average Time Waiting in the Queue**:
+   $$W_q = \frac{0.625}{8 - 5} = \frac{0.625}{3} \approx 0.208 \, \text{hours}$$
+
+These calculations help in understanding the performance and efficiency of the queueing system⁴⁵.
+
+Would you like to dive deeper into any specific part of this process?
+
+Source : conversation avec Copilot, 4/10/2024
+(1) 7.5 Steady-State Behavior of the M/M/1 Model - Bookdown. https://bookdown.org/manuele_leonelli/SimBook/steady-state-behavior-of-the-mm1-model.html.
+(2) M/M/1 Queueing Model - Real Statistics Using Excel. https://real-statistics.com/probability-functions/queueing-theory/m-m-1-queueing-model/.
+(3) Queuing Theory Tutorial - Queues/Lines, Characteristics, Kendall Notation, M/M/1 Queues. https://www.youtube.com/watch?v=SqSUJ0UYWMQ.
+(4) M/M/1 Queuing System-Three Examples. https://www.youtube.com/watch?v=bkyNocmLUPU.
+(5) M M 1 queue. https://www.youtube.com/watch?v=_7uyA5dqeGc.
+(6) 6.263/16.37: Lectures 5 & 6 Introduction to Queueing Theory - MIT. https://web.mit.edu/modiano/www/6.263/lec5-6.pdf.
+(7) M/M/1/K Queueing Model - Real Statistics Using Excel. https://real-statistics.com/probability-functions/queueing-theory/m-m-1-k-queueing-model/.

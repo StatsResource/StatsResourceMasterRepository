@@ -1,0 +1,82 @@
+
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MathsResource} \chead{Probability Distributions} \rhead{Joint Distribution} %\input{tcilatex}
+\begin{document}
+
+%--------------------------------------------------------------------------------------%
+
+%%\subsection*{Example 1 (a)}
+\large
+\begin{itemize}
+\item The standard deviation of the life for a particular brand of ultraviolet tube is known to be $s = 500$ hr,
+\item Also it is assumed, but not known, that the operating life of the tubes is normally distributed. \item The manufacturer claims that average tube life
+is at least 9,000hr. \item Test this claim at the 5 percent level of significance against the alternative hypothesis
+that the mean life is 9,000 hr, and given that for a sample of $n = 10$ tubes the mean operating
+life was $\bar{x} = 8,800$ hr.
+\item (Intuitively this would suggest a one-tailed test that the mean is less than 9000 hours)
+\end{itemize}
+\medskip 
+
+
+%--------------------------------------------------------------------------------------%
+
+%%\subsection*{Example 1 (b) }
+\large
+\begin{itemize}
+\item $H_0 \mbox{ : } $ $\mu = 9000$ Average life span is 9000 hours.
+\item $H_1 \mbox{ : } $ $\mu \neq 9000$ Average life span is not 9000 hours.
+\end{itemize}
+\bigskip
+\begin{itemize}
+\item The observed difference is -200 hours. (i.e. 8,800 - 9,000 hours)
+\item The standard error is determined from formulae.
+\[ S.E.(\bar{x}) = {s \over \sqrt{n}} = {500 \over \sqrt{10}}  = 158.1139 \]
+\end{itemize}
+\medskip 
+%--------------------------------------------------------------------------------------%
+
+%%\subsection*{Example 1 (c) : Test Statistic }
+\large
+\begin{itemize}
+\item The test statistic is ${(8800-9000) -0 \over  158.11} = -1.265$
+\item The CV is determined from Murdoch Barnes Table 7, with $\alpha = 0.05$ and $k = 2$.
+\item The sample is small n= 10 $df = n-1 = 9$.Therefore $CV = 2.262$
+\item (Remark: If the distribution was known to be normal, we could use $df = \infty$, i.e $CV = 1.96$).
+\end{itemize}
+\medskip 
+%--------------------------------------------------------------------------------------%
+
+%%\subsection*{Example 1 (d) }
+\large
+\begin{itemize}
+
+
+\item \textbf{Decision:}Is $|TS| >CV$? Is $1.265 > 2.262$?
+\item No. We fail to reject the null hypothesis. \\
+Not enough evidence to say that the mean lifespan is not 9000 hours.
+\end{itemize}
+\medskip 
+
+\end{document}

@@ -1,0 +1,49 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+%\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+%\lhead{StatsResource} \rhead{Kevin O'Brien} \chead{Confidence Intervals} %\input{tcilatex}
+
+\begin{document}
+\section{Inference}
+
+
+\section*{Question 2 (Two Sample Means - One Tailed)}
+%good
+A pharmaceutical company wants to test, a new medication for blood pressure. Tests
+for such products often include a `\textit{treatment group}' of people who use the drug and a `\textit{control group}'of people who did not use the drug. 50 people with high blood pressure are given the new drug and 100 others, also with high blood pressure, are not given the drug. 
+
+The systolic blood pressure is measured for each subject, and the sample statistics
+are given below. Using a 0.05 level of significance, test the claim that the new drug \textbf{reduces}
+blood pressure. 
+%Would you recommend advertising that the new drug does not affect blood pressure?
+\begin{center}
+\begin{tabular}{|c||c|}
+\hline 
+Treatment & Control \\ \hline \hline
+$n_1$ = 50 & $n_2$ = 100 \\ \hline
+$x_1$ = 189.4  & $x_1$ = 203.4  \\ \hline
+$s_1$ = 39.0 & $s_1$ = 39.4 \\ \hline
+\end{tabular} 
+\end{center}
+\textbf{\textit{Standard Error Formula}}
+\[ S.E.(\bar{x}_1 - \bar{x}_2)  = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}} \]
+

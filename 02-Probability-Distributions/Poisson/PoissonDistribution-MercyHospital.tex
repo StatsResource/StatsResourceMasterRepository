@@ -1,0 +1,109 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{Kevin O'Brien} \chead{Poisson Distribution} %\input{tcilatex}
+
+\begin{document}
+
+\section*{Poisson Distribution: Mercy Hospital Example}
+Patients arrive at the ER of the Mercy Hospital at the average rate of 6 per hour on weekend evenings.
+\begin{enumerate}[(a)]
+	\item What is the probability of two arrivals in one hour on a weekday evening?
+	
+	\item What is the probability of no arrivals in one hour?
+	\item What is the probability of 4 arrivals in half an hour.
+\end{enumerate}
+
+%===============================================================%
+\subsubsection*{Solution to Part A}
+\begin{itemize}
+\item The expected number of arrivals is $\lambda$ = 6 
+
+\item We are asked to find the probability of two arrivals $P(X=2)$
+
+\[P(X=2) = \frac{6^2 \times e^{-6}}{2!}\] 
+
+Remark : $6^2= 36$ and $2! = 2$.
+
+\[P(X=0) =\frac{36 \times e^{-6}}{2!} = 18 \times e^{-6}  = 0.0446 \]
+
+\end{itemize}
+% \[f(0)= 0.00248\]
+%=================================================================%
+% Important $\lambda$ = 6
+
+
+\subsubsection*{Solution to Part B}
+
+\begin{itemize}
+\item The expected number of arrivals is $\lambda$ = 6 
+	
+\item We are asked to find the probability of no arrivals $P(X=0)$
+	
+	\[P(X=0) = \frac{6^0 \times e^{-6}}{0!}\]
+	
+\item Remember :$6^0= 1   $  and  $0! = 1$
+	
+	\[P(X=0) = \frac{6^0 \times e^{-6}}{0!} \;=\; \frac{1 \times e^{-6} }{1}\;=;\ e^{-6} \; = \; 0.00248\]
+	
+\item Probability of no arrivals in one hour is 00.25\% (i.e. one in four-hundred chance).
+	
+\end{itemize}
+%===============================================================%
+\subsubsection*{Solution to Part C}
+
+\begin{itemize}
+\item What is the probability of 4 arrivals in a \textbf{30 minute} period?
+\item If the expected rate of arrivals is 6 per hour, then the expected number of arrivals for 30 minutes is 3.
+The value for the Poisson mean becomes 3.
+\end{itemize}
+
+
+\[P=4) =\frac{3^4 \times e{-3}}{4!}\]
+
+\textbf{Workings}
+\begin{itemize}
+	\item $3^4 =81$
+	\item $4! =4\times 3 \times 2 \times 1 = 24 $
+	\item $e^{-3}= 0.0498 $
+\end{itemize}
+
+
+\[P(X=4) =\frac{81  \times 0.0498}{24}= 0.1680\]
+
+\begin{itemize}
+\item Probability of 4 arrivals in half an hour is 16.80\%
+\end{itemize}
+
+\bigskip
+
+%=================================================================%
+\subsubsection*{Additional Remarks}
+Expected Values and Variance from Poisson Distribution.
+
+\begin{itemize}
+\item $\operatorname{E(X)} = 1/\lambda$ 
+\item $\operatorname{Var(X)} = \lambda^2$
+\end{itemize}
+Again, you can use 'm' instead of '$\lambda$' 
+
+ 
+			\end{document}

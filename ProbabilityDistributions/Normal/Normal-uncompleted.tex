@@ -1,0 +1,94 @@
+	\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{framed}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Normal Distribution} %\input{tcilatex}
+
+\begin{document}
+
+	
+	
+
+
+
+\section*{Normal Distribution}
+
+Consider the normal random variable $X$ with the following parameters:
+\begin{itemize}
+	\item Normal Mean $\mu = 73$ points
+	\item Normal Standard Deviation $\sigma = 8$ points
+\end{itemize}
+Compute the following probabilities:
+\begin{enumerate}[(A)]
+	\item $P(X \leq 91)$
+	\item $P(65 \leq X \leq 89)$
+\end{enumerate}
+
+\noindent \textbf{Solutions to Part A}
+\begin{itemize}
+	\item Find the Z-score for $X = 91$.
+	
+	\[ z_0 = \frac{x_0- \mu}{ \sigma} = \frac{91 - 73}{8} =\frac{18}{8} = 2.25\]
+	\item Therefore we can say :\\ $P(X \leq 91)$ = $P(Z \leq 2.25)$ \\
+	
+	
+	\item From the tables $P(Z \leq 2.25) = 0.9877$\\
+	Therefore the probability of getting a grade lower than 91 is 0.9877 (i.e 98.77\%)
+	
+	
+	\item What is the probability of getting a score between 65 and 89.
+	Writing this mathematically:
+	\[ P(65 \leq X \leq 89) \]
+\end{itemize}
+
+	
+	
+	
+	%================================================================%
+	\begin{itemize}
+		\item How many people get a score greater than 89? ($P(X\geq 89)$)
+		\item How many people get a score less than 65? ($P(X\leq 65)$)
+	\end{itemize}
+	
+	To compute $P(X \geq 89)$ first compute the Z-score.
+	
+	\[ Z = \frac{x - \mu}{\sigma} = \frac{89 - 73}{8} =\frac{16}{8} = 2 \]
+	
+	$P(X \geq 89)$ = $P(Z \geq 2)$ = 0.0225.
+	
+	To compute $P(X \leq 65)$ first compute the Z-score.
+	
+	\[ Z = \frac{x - \mu}{\sigma} = \frac{65 - 73}{8} =\frac{-8}{8} = -1 \]
+	
+	$P(X \leq 65)$ = $P(Z \leq -1)$ 
+	
+	\begin{itemize}
+		\item We use the \textbf{symmetry rule}
+		\[ P(Z \leq -1) = P(Z \geq +1) \]
+		\item so we can say $P(X \leq 65)$ = $P(Z \geq +1)$ 
+		\item From the statistical tables $P(Z \geq +1)$ = 0.1583.
+	\end{itemize}
+
+
+	
+
+	
+\end{document}	

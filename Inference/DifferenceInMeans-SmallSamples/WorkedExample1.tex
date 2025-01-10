@@ -1,0 +1,87 @@
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{framed}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{Worked Examples} \chead{Inference Procedures} %\input{tcilatex}
+
+\begin{document}
+
+\large 
+
+\section*{Hypothesis Test for the Difference in Means}
+\begin{itemize}
+\item For a random sample of 10 light bulbs for a particular brand, the mean bulb life is 4,000 hr with a sample standard deviation of 200 hours.
+\item For another brand of bulbs, a random sample of 8 has a sample mean lifetime of 4,300 hours
+and a sample standard deviation of 250 hours. 
+\item Test the hypothesis that there is no difference between the
+mean operating life of the two brands of bulbs, using the 5 percent level of significance
+\end{itemize}
+
+
+%-------------------------------------------------------------------------------------------%
+\medskip
+
+\begin{itemize}\item $n_1 = 10$ and $n_2 = 8$.
+\item $\bar{x}_1 = 4000$, $\bar{x}_2 = 4,300 $ , therefore  $\bar{x}_1 - \bar{x}_2 = -300$ hours
+\item $s_1  = 200$, $s_2 = 250$ hours.
+\item Small sample - Degrees of freedom $n_1 + n_2 - 2 = 10 + 8 - 2 = 16$
+\end{itemize}
+%-------------------------------------------------------------------------------------------%
+
+\medskip
+
+\noindent \textbf{Pooled variance estimate}
+\[ s^2_p = {(n_1 - 1)s^2_1  + (n_2 - 1)s^2_ 2\over n_1 + n_2 - 2 } = {(9 \times 200^2 ) +( 7 \times 250^2) \over 16 }  \]
+\[ s^2_p  = 49843.75 \]
+\\
+
+%-------------------------------------------------------------------------------------------%
+
+\medskip
+
+\noindent \textbf{Computing the Standard Error}
+\[ S.E(x_1 - x_2) = \sqrt{s^2_p \left({1\over n_1}+{1\over n_2} \right)}\]
+
+\[ S.E(x_1 - x_2) = \sqrt{49843.75 \left({1\over 10}+{1\over 8} \right)}\]
+
+\[ S.E(x_1 - x_2) = \sqrt{11214.84} = 105.9\]
+
+
+
+%-------------------------------------------------------------------------------------------%
+\newpage 
+\noindent \textbf{Test Statistic and Critical Value}\\
+\begin{itemize}
+\item The Test Statistic is \[ TS  = {(-300) - 0 \over 105.9}  = -2.83 \]
+\item The Critical Value is determined with $\alpha = 0.05$, $k=2$, $df = 16 $
+\begin{itemize}
+\item Critical Value: $CV = 2.120$
+\end{itemize}
+\item We can now apply the decision rule : Is the absolute value of the Test Statistic greater than the Critical Value?
+\item Is $2.83 > 2.12$? 
+\item Yes We reject $H_0$. There is evidence of a difference in means.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+BLANKS
+
+\end{document}

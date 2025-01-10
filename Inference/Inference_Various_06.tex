@@ -1,0 +1,308 @@
+
+\item \textbf{Worked Example}
+%Question 3.1 (f) \\ 
+A claim has been made that the mean body temperature of healthy adults is equal to 98.6? Fahrenheit. A sample of 106 people has produced a mean body temperature of 98.2? Fahrenheit and a standard deviation of 0.62. 
+
+(Hint: This is a test of whether the nominal mean is too high)
+\begin{itemize}
+\item[(i)] Clearly state your null and alternative hypotheses.
+\item[(ii)] Is this a One Tail or Two Tail test?
+\end{itemize}
+
+\item \textbf{Worked Example}
+%Question 3.1 (b)\\
+A Health and Safety survey of 200 industrial accidents revealed that 53 
+were due to untidy working conditions.  
+
+A factory manager claims that the above sample is just a “one off”, and that less than 20\% of accidents are a result of untidy working conditions. 
+
+(Hint: This is a test of whether the nominal proportion is too low)
+\begin{itemize}
+\item[(i)] Clearly state your null and alternative hypotheses.
+\item[(ii)] Is this a One Tail or Two Tail test?
+\end{itemize}
+
+%%\section{Single Sample Statistical Inference}
+
+
+\item \textbf{Worked Example   - Hypothesis Testing}
+
+\begin{itemize}
+\item A sample of 50 households in one community
+shows that 10 of them are watching a TV special on the national
+economy. 
+\item In a second community, 15 of a random sample of 50
+households are watching the TV special. 
+\item We test the hypothesis
+that the overall proportion of viewers in the two communities does
+not differ, using the 1 percent level of significance, as follows:
+\end{itemize}
+
+\item \textbf{Worked Example   - Confidence Intervals}
+
+A simple random sample is conducted of 1486 college students who are near completion of a bachelors degree in statistics. 802 students are female. Let $\pi$ be the proportion of female students who are near completion of their bachelor degree in `
+statistics.
+\begin{itemize}
+\item[a.] (1 mark) Provide a point estimate of $\pi$.
+\item[b.] (5 marks) Calculate a 99\% confidence interval for $\pi$.
+\item[c.] (9 marks) Use a 0.01 significance level to test the claim that the majority of
+college students who are near completion of a bachelors degree in statistics are
+female. [Clearly state the null and alternative hypotheses and your conclusion].\end{itemize}
+
+
+\item \textbf{Worked Example  - Single Sample t-Test (Small Sample)  } \\ % 10 Marks
+\begin{itemize}
+\item A web-based software company claims that the average amount of time it takes for
+online queries to be dealt with is less than 2 hours. 
+\item Out of a sample of 15 queries, the
+sample mean $\bar{x}$ = 3.5 hours and the standard deviation is 30 minutes.
+\end{itemize}
+
+\begin{itemize}
+\item[a.](2 marks) Construct the null and alternative hypothesis statements.
+\item[b.](2 marks) Test this claim using a significance level of 0.05.
+\item[c.](2 marks) Describe the two types of errors associated with hypothesis testing and how
+they relate to this question?
+\end{itemize}
+
+\item \textbf{Worked Example} \\ ABC Software has 125 programmers divided into two groups with 75 in
+Group A and 50 in Group B. In order to compare the efficiencies of the
+two groups, the programmers are observed for one day. \begin{itemize} \item The 75
+programmers of Group A averaged 76.21 lines of code with a standard
+deviation of 10.37. \item The 50 programmers of Group B averaged 72.72
+lines of code with a standard deviation of 10.07. \end{itemize}
+\begin{itemize}
+\item[a.](10 marks) Using a significance
+level of 5\%, test the hypothesis that there is no difference between the
+two groups versus the alternative that there is a difference. Clearly state
+your null and alternative hypotheses and your conclusion.
+\end{itemize}
+
+
+
+\subsection{Example 2}
+
+Seven measurements of the pH of a buffer solution gave the
+following results:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+5.12 & 5.20 & 5.15 & 5.17 & 5.16 & 5.19 & 5.15\\
+\hline
+\end{tabular}
+\end{center}
+
+
+Task 1: Calculate the 95\% confidence limits for the true pH
+utilizing $R$.
+
+
+Solution. We are using Student t distribution with six degrees of
+freedom and the following code gives us the confidence interval
+for this problem.
+%%\begin{verbatim}
+%%>x <- c(5.12, 5.20, 5.15, 5.17, 5.16, 5.19, 5.15)
+%%>n =length(x)
+%%>alpha =0.05
+%%>stderr =sd(x)/sqrt(n)
+%%>LB=mean(x)+qt(alpha/2,6)* stderr
+%%>UB=mean(x)+qt(1-alpha/2,6)* stderr
+%%>LB
+%%#[1] 5.137975
+%%>UB
+%%#[1]5.187739
+%%\end{verbatim}
+
+\subsection{Example 3} Ten replicate analyses of the concentration
+of mercury in a sample of commercial gas condensate gave the
+following results (in ng/ml) :
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+23.3 & 22.5 & 21.9 & 21.5 & 19.9 & 21.3 & 21.7 & 23.8 & 22.6 &
+24.7\\
+\hline
+\end{tabular}
+\end{center}
+
+Compute 99\% confidence limits for the mean.
+%http://www.stats.gla.ac.uk/steps/glossary/hypothesis_testing.html
+
+
+\newpage
+\section*{Question Set 2 : Confidence Intervals}
+\begin{enumerate}
+
+\item \textbf{Worked Example}
+Calculate a 99\% confidence interval for the difference between the proportion of all Irish having access to the
+Internet and the proportion of all Spaniards having access to the internet.  (4 marks)
+
+
+
+\noindent \textbf{Standard Error for confidence interval}
+
+\[\frac{p1(1 -p1)}{n1}+ \frac{p2(1 -p2)}{n2}\]
+\[=\frac{0.750.25}{1000}+ \frac{0.700.30}{2000}     =  0.017103\]
+
+\noindent \textbf{Quantile for a 99\% confidence interval}
+\begin{itemize}
+\item significance level  =1\%
+\itemnumber of tails = 2
+\itemdegrees of freedom = 
+\itemquantile = 2.576 
+\end{itemize}
+
+
+
+99\% Confidence Interval for difference of two proportions
+
+%================================================================= %
+
+
+Useful pieces of information
+
+
+Sample size  n=100
+
+
+\item \textbf{Worked Examples} \\
+
+The strength of concrete depends, to some extent, on the method used for drying. Two different methods showed the following results for independently tested specimens.  ( You may assume that there are equal variances).
+
+
+\begin{itemize}
+\item[(i)] Does Method 1 appear to produce concrete with a greater mean strength? State your conclusions clearly.
+\item[(ii)] Construct a 95\% confidence interval for the difference between the two means. Interpret this interval.
+
+\end{itemize}
+
+\item \textbf{Independent Sample Means hypothesis Test }
+%Question 3.1 (d) \\
+
+\begin{itemize}
+\item A survey was carried out to investigate absenteeism in the building industry.
+\item Data on the number of sick days per year and type of job (unskilled or skilled)
+were collected for a random sample of employees.
+\item The mean number of sick days for 50 unskilled workers was 3.8 days with a standard deviation of 2.6 days. 
+\item The mean number of sick days for 60 skilled workers was 3 days with a standard deviation of 2.2 days. 
+\item (Hint: This is a test of whether that the means of the two groups are the same)
+
+\item Clearly state your null and alternative hypotheses.
+Is this a One Tail or Two Tail test?
+\end{itemize}
+
+\end{enumerate}
+
+
+
+
+
+
+
+%------------------------------------------------------------- %
+
+\subsection{Small Sample Test For Means - Worked Example}
+%D Hypothesis Testing - Example
+The catering manager in a hotel suspects that the weight of loaves of bread delivered
+daily by a bakery is consistently below the nominal weight of 800g. To test this,
+10 loaves chosen at random from a day’s deliveries are weighed. The mean and
+standard deviation of the ten weights are 792g and 25g, respectively.
+
+\begin{enumerate}
+\item  Carry out a formal significance test.
+\item List the steps involved in this test 
+\item Calculate a 95\% confidence interval for the average weight of loaves produced
+\item Comment on the correspondence between the interval, as calculated, and the
+result of the test.
+\end{enumerate}
+
+
+
+%\noindent \textbf{Solution 2}
+%
+%\begin{itemize}
+%\item Confidence interval width is 3, so half-width is 1.5
+%
+%\item Seek n such that $1.96 \times \frac{9}{\sqrt{n}} = 1.5$
+%
+%\item Divide both sides by $1.96 \times 9$ \\
+%\[\frac{1}{\sqrt{n}} = \frac{1.5}{1.96 \times 9} =\]
+%
+%
+%\item invert and square boths sides.
+%\end{itemize}
+
+
+
+
+\subsection{ Single Sample Proportion Test - Worked Examples}
+%% Question 2 part b
+
+A study of 1000 randomly chosen adults indicated that 450 had been to the cinema at least once in the previous year.
+
+A cinema wants to test the hypothesis that 50\% of all Irish adults have been to the cinema in the last year.
+
+Calculate the p-value for such a test and draw the appropriate conclusion.
+
+Discussion: Based on this sample, we estimate the proportion to be 0.45  (i.e. 45\%)
+
+\[ \mbox{Point Estimate} \hat{p} = 0.45\]
+
+\noindent \textbf{Step A : Formally state the null and alternative hypotheses}
+
+\begin{itemize}
+\item p : true proportion of Irish adults who have been to the cinema in the last year.
+
+\itemNull Hypothesis               Ho:p = 0.50        True proportion is 50%
+
+\item Alternative Hypothesis      Ha:p 0.50        True proportion is not 50%.
+
+
+\itemN.B. This is a two-tailed procedure.
+\end{itemize}
+
+
+
+
+\noindent \textbf{Step B : Compute the test statistic.}
+
+Remember the general structure of a test statistic
+
+TS =Observed Value-Null ValueStd. Error 
+
+
+
+From the formulae
+
+We have to compute the standard error for a proportion. 
+
+( From formulae at back of exam paper)
+
+S.E.(p) =p(1-p)n=0.450.551000= 0.0157
+
+
+
+
+\noindent \textbf{Step 3: Calculate p-value}
+
+P-value is found from Murdoch Barnes Tables 3 ( Normal distribution)
+
+Absolute value  |-3.18| =3.18
+
+
+
+
+\[ \mbox{P-Value} = P(Z \geq 3.18) = 0.00074\]
+
+
+\noindent \textbf{Step 4: Interpret the p-value to make a decision.}
+
+The significance level is 5\%.  The procedure is a two tailed test.
+
+
+[ Black Board ]
+
+
+

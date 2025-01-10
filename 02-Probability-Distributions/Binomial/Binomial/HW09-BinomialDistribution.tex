@@ -1,0 +1,148 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{graphicx}
+%\usepackage{amscd}
+
+\usepackage{subfiles}
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{amsthm, amsmath}
+\usepackage{amsbsy}
+\usepackage{framed}
+\usepackage[usenames]{color}
+\usepackage{listings}
+\lstset{% general command to set parameter(s)
+	basicstyle=\small, % print whole listing small
+	keywordstyle=\color{red}\itshape,
+	% underlined bold black keywords
+	commentstyle=\color{blue}, % white comments
+	stringstyle=\ttfamily, % typewriter type for strings
+	showstringspaces=false,
+	numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, %
+	frame=shadowbox,
+	rulesepcolor=\color{black},
+	columns=fullflexible
+} %
+%\usepackage[dvips]{graphicx}
+\usepackage{natbib}
+\bibliographystyle{chicago}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.5}
+\pagenumbering{arabic}
+%\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{ill}[theorem]{Example}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{notation}{Notation}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+\renewcommand{\thenotation}{}
+%\renewcommand{\thetable}{\thesection.\arabic{table}}
+%\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+
+\author{ } \date{ }
+
+\begin{document}
+	Binomal Distribution
+	Bernoiulli Trials
+	
+	Page 44
+	Section 4.2.1 
+	
+	\begin{itemize}
+		\item The binomial probability distribution is a discrete probability distribution that has many applications.
+		\item It is associated with a multiple step experiment that we call the binomial experiment.
+	\end{itemize}
+	
+	A binomial experiment has the following properties.
+	
+	\begin{enumerate}
+		\item The experiment consists of a sequence of n identical trials.
+		
+		\item Two outcomes are possible at each trial. We refer to one as a success and the other as a failure.
+		
+		\item The probability of a success, denoted by p, does not change from trial to trial. Similarly the probability of a failure, denoted by 1-p, also does not change from trial to trial.
+		
+		\item The trials are independent.
+	\end{enumerate}
+	
+
+	\textbf{Binomial Distribution: Expected Value and Variance}
+	
+	
+	If the random variable X has a binomial distribution with parameters n
+	and p, we write
+	\[ X \sim B(n,p) \]
+	
+	Expectation and Variance
+	If $X \sim B(n,p)$, then:
+	
+	\begin{itemize}
+		\item Expected Value of X : $E(X) = np$
+		\item Variance of X : $Var(X) = np(1-p)$
+	\end{itemize}
+	
+	Suppose n=3 and p=0.5 
+	Then $E(X) = 1.5$ and $V(X) = 0.75$.
+	
+	Remark: Referring to the expected value and variance may be used to validate
+	the assumption of a binomial distribution.
+
+
+	%=================================================%
+	
+	%% \frametitle{The Binomial Distribution}
+	
+	
+	In a binomial experiment our interest is in the number of successes occurring in the n trials.
+	Binomial Probability Function
+	
+	In general, if the random variable X follows the binomial distribution with parameters n ∈ ℕ and p ∈ [0,1], we write X ~ B(n, p). The probability of getting exactly k successes in n trials is given by the probability mass function:
+	
+\[	f(k;n,p)=\Pr(X=k)={\binom {n}{k}}p^{k}(1-p)^{n-k}\]
+	for k = 0, 1, 2, ..., n, where
+	
+\[	{\binom {n}{k}}={\frac {n!}{k!(n-k)!}}\]
+	is the binomial coefficient, hence the name of the distribution. 
+	
+	[Remark ; Provided in exam formulae. Please see pg 142]
+	
+	
+	
+	where
+	
+	= the probability of   successes in   trials
+	
+	= the number of trials
+	
+	\begin{itemize}
+		\item The formula can be understood as follows: we want exactly k successes ($p^k$) and n − k failures $(1 − p)^{n − k}$.
+		\item However, the k successes can occur anywhere among the n trials, and there are ${n \choose k}$ different ways of distributing k successes in a sequence of n trials.
+	\end{itemize}
+	
+Binomial probability
+	\[y \;=\; \frac{{n!}}{{k!\left( {n - k} \right)!}}p^k q^{n - k} \; = \; \left( {\begin{array}{*{20}c} n \\ k \\ \end{array}} \right)p^k q^{n -
+		k}\]
+	
+\subsection{Mean and variance of Binomial distribution}
+	
+	$M_{bin} = np$  and $\sigma ^2 _{bin} = np(1-p)$
+	
+	For example, if the sample size is 12 and the probability of
+	success is 0.25, the mean is $12 \times 0.25 = 3$ and the variance
+	is $\sigma ^2 _{bin} = 12 \times 0.25 \times 0.75 = 2.25$.
+	
+\end{document}	

@@ -1,0 +1,206 @@
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx}  % Font Family
+\usepackage{helvet}   % Font Family
+\usepackage{color}
+
+\mode<presentation> {
+ \usetheme{Frankfurt} % was Frankfurt
+ \useinnertheme{rounded}
+ \useoutertheme{infolines}
+ \usefonttheme{serif}
+ %\usecolortheme{wolverine}
+% \usecolortheme{rose}
+\usefonttheme{structurebold}
+}
+
+\setbeamercovered{dynamic}
+
+\title[MA4413]{MA4413 Statistics for Computing \\ {\normalsize MA4413 Lecture 6A : Continuous Distributions}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize kevin.obrien@ul.ie}}
+\date{Autumn 2011}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+
+\renewcommand{\arraystretch}{1.5}
+
+
+%------------------------------------------------------------------------%
+\begin{document}
+
+%--------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Exponential Distribution: Sample Question}
+\Large
+In a large company computer network, there is an average of 40 log-ons to the network per hour.
+\begin{enumerate}
+\item[1] What is the average amount of time between log-ons?
+\item[2] What is the probability that there will be no log-ons for at least 2.4 minutes
+\item[3] What is the probability that the next log-on within 1 minutes of the last?
+\item[4] What proportions of log-ons occur between 1 minutes and 2.4 minutes of the last log-on?
+\end{enumerate}
+}
+%--------------------------------------------------------------%
+\frame{
+\frametitle{Solution (Part 1) }
+
+\Large
+\begin{itemize} \item What is the average amount of time between log-ons?
+
+\item If there is 40 log-ons in 60 minutes, it is reasonable to think that someone logs on every 1.5 minutes.
+\item Therefore $\mu = 1.5$
+\item Therefore the poisson rate is ${1\over1.5}$ = 0.666
+\end{itemize}
+
+}
+
+
+%--------------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+\frametitle{Solution (Part 2) }
+\Large
+
+What is the probability that there will be no log-ons for at least 2.4 minutes?\\
+\bigskip
+From the formulae:
+\[
+P( X \geq k) = e^{{-k \over \mu}} .
+\]
+From the formulae:
+\[
+P( X \geq 2.4) = e^{{-2.4 \over 1.5}} = e^{-1.6} = 0.2018.
+\]
+
+\texttt{R} code (use complement rule)
+\begin{verbatim}
+> pexp(2.4,rate=(2/3))
+[1] 0.7981035
+\end{verbatim}
+\end{frame}
+
+%--------------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+\frametitle{Solution (Part 3) }
+\Large
+
+What is the probability that the next log-on within 1 minutes of the last?\\
+i.e. $P(X \leq 1)$
+\bigskip
+From the formulae:
+\[
+P( X \leq 1) = 1 - e^{{-1 \over 1.5}} = 1 -  e^{-0.6666}
+\]
+
+\[
+P( X \leq 1) = 1 -  0.5135  = 0.4865
+\]
+\texttt{R} code 
+\begin{verbatim}
+> pexp(1,rate=(2/3))
+[1] 0.4865829
+\end{verbatim}
+\end{frame}
+
+%--------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Solution (Part 4) }
+\Large
+
+What proportions of log-ons occur between 1 minutes and 2.4 minutes of the last log-on?\\
+\bigskip
+\begin{itemize}
+\item \textbf{Too Low} $P(X \leq 1) = 0.4865$\\
+\item \textbf{Too High} $P(X \geq 2.4) = 0.2018$\\
+\item Probability of being inside interval $P(1 \leq X \leq 2.4) = 0.31152$.
+\item $P(1 \leq X \leq 2.4) = 1- ( 0.4865 + 0.2018) = 0.3117$
+\end{itemize}
+}
+
+%--------------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+\Large
+\frametitle{Another Example}
+Suppose that the service time for a customer at a IT helplien
+has an exponential distribution with mean 3 minutes. What is the probability that a
+customer waits more than 4 minutes?
+
+\[ P(X  \leq 4) = 1 -  e^{-4/3} \]
+
+\[ P(X  \leq 4) = e^{-4/3} = 0.2636 \]
+
+
+\texttt{R} code (use complement rule)
+\begin{verbatim}
+> pexp(4,rate=(1/3))
+[1] 0.7364029
+\end{verbatim}
+\end{frame}
+
+
+
+
+\end{document}
+
+
+
+
+
+\item What is the probability that the lifespan of the laptop will be at least
+6 years?
+\item What is the probability that the lifespan of the laptop will not exceed
+4 years?
+\item What is the probability of the lifespan being between 5 years and 6
+years?
+
+
+%----------------------------------------------------------------------------%
+\frame{
+\frametitle{The Exponential Distribution}
+A continuous random variable having p.d.f. f(x), where:
+$f(x) = \lambda x e ^{-\lambda x} $
+is said to have an exponential distribution, with parameter $\lambda$.
+The cumulative distribution is given by:
+$F(x) = 1 - e^{\lambda x}$
+
+Expectation and Variance
+$E(X) = 1 / \lambda$\\
+$V(X) = 1 / \lambda^2$\\
+}
+
+
+
+%---------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Exponential Distribution Lifetimes}
+The average lifespan of a laptop is 5 years. You may assume that
+the lifespan of computers follows an exponential probability
+distribution. \begin{itemize}\item (3 marks) What is the
+probability that the lifespan of the laptop will be at least 6
+years? \item
+What is the probability that the lifespan of the laptop will not
+exceed 4 years? \item What is the probability of the
+lifespan being between 5 years and 6 years?
+\end{itemize}
+Suppose the lifetime of a PC is exponentially distributed with
+mean $\mu =5$
+We should be told the average lifetime $\mu$.
+\[
+P( X \geq x_o) = e^{{-x_o \over \mu}}
+\]
+\end{frame}
+
+
+\end{document}
+
+
+
+
+
+
+
+

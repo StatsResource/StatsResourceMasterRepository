@@ -1,0 +1,90 @@
+
+\begin{document}
+\Large 
+
+
+%=============================================================================== %
+
+\subsection*{Discrete Uniform Distribution}
+
+The discrete uniform distribution (not to be confused with the continuous uniform distribution) is where the probability of equally spaced possible values is equal. Mathematically this means that the probability density function is identical for a finite set of evenly spaced points. An example of would be rolling a fair 6-sided die. In this case there are six, equally like probabilities.
+
+%=============================================================================== %
+*
+\subsection{Discrete Uniform Distribution}
+One common normalization is to restrict the possible values to be integers and the spacing between possibilities to be 1. In this setup, the only two parameters of the function are the minimum value (a), the maximum value (b). 
+
+\noindent Let $n=b-a+1$ be the number of possibilities. (remark $n-1 = b-a$ and $a-b = -(n-1)$.)
+
+
+\noindent The probability density function is then
+
+%=============================================================================== %
+\[f\colon\{a,a+1,\ldots,b-1,b\} \rightarrow f\left(x\right)=\frac{1}{n}\]
+
+\begin{framed}
+\begin{itemize}
+\item Notation	${\displaystyle {\mathcal {U}}\{a,b\}}$ or ${\mathrm  {unif}}\{a,b\}$
+\item Parameters	${\displaystyle a,b}$ integers with ${\displaystyle b\geq a}$ and 
+\[{\displaystyle n=b-a+1}\]
+\item Support	\[{\displaystyle k\in \{a,a+1,\dots ,b-1,b\}}\]
+\end{itemize}
+\end{framed}
+
+\subsection*{Mean}
+Let $S=\{a,a+1,\ldots,b-1,b\}$. The mean (notated as $\operatorname{E}[X])$ can then be derived as follows:
+%=============================================================================== %
+\begin{eqnarray*}
+\operatorname{E}[X] &=& \sum_{x\in S} x f(x)\\
+& & \\
+&=&\sum^{n-1}_{i=0}\left(\frac{1}{n}(a+i)\right)\\
+& & \\
+&=& {1 \over n}\left( \sum^{n-1}_{i=0} a + \sum^{n-1}_{i=0} i\right)\\
+\end{eqnarray*}
+
+\begin{framed}
+Recall \[\sum^{m}_{i=0}i = \frac{m^2 + m}{2}\]
+\medskip
+
+For our purposes, let $m =n-1$
+\end{framed}
+%=============================================================================== %
+\begin{eqnarray*}
+\operatorname{E}[X]&=& {1 \over n}\left( na + {(n-1)^2+(n-1) \over 2} \right)\\
+& & \\&=& {2na + n^2-2n+1+n-1 \over 2n}\\
+& & \\&=& {2a + n-1 \over 2}\\
+& & \\&=& {a + b \over 2}\\
+\end{eqnarray*}
+
+%=============================================================================== %
+\newpage 
+\subsection*{Variance}
+The variance ( denoted $\operatorname{Var}(X)$) can be derived as follows:
+
+
+\begin{framed}
+\noindent \textbf{Recall:}
+\[\operatorname{Var}(X) &=& \operatorname{E}[(X-\operatorname{E}[X])^2]\]
+\end{framed}
+\begin{eqnarray*}
+\operatorname{Var}(X) &=& \operatorname{E}[(X-\operatorname{E}[X])^2] \\
+& & \\ &=& \sum_{x\in S}f(x)(x-E[X])^2 \\
+&=& \sum^{n-1}_{i=0}\left(\frac{1}{n}\left((a+i)-{a + b \over 2}\right)^2\right)\\
+& & \\ &=& {1 \over n} \sum^{n-1}_{i=0} \left({a+ 2i - b \over 2}\right)^2\\
+&=& {1 \over 4n} \sum^{n-1}_{i=0} (a^2+ 4ai-2ab+4i^2-4ib + b^2)\\
+& & \\ &=& {1 \over 4n} \left[ \sum^{n-1}_{i=0} (a^2-2ab + b^2)+ \sum^{n-1}_{i=0} (4ai-4ib)+\sum^{n-1}_{i=0}4i^2 \right]\\
+& & \\ &=& {1 \over 4n} \left[n(a^2-ab + b^2)+ 4(a-b)\sum^{n-1}_{i=0}i+4\sum^{n-1}_{i=0}i^2 \right]\\
+\end{eqnarray*}
+\begin{framed}
+Recall:\[\sum^{m}_{i=0}i^2 = \frac{m(m+1)(2m+1)}{6}\]
+\end{framed}
+%=============================================================================== %
+\begin{eqnarray*}
+\operatorname{Var}(X) &=&   {1 \over 4n} \left[n(b-a)^2\right] +\\ & & {1 \over 4n} \left[4(a-b)\left(\frac{(n-1)\;n}{2}\right) \right] +\\ & & {1 \over 4n} \left[4\left(\frac{(n-1)\;n\;(2n-1)}{6}\right)\right]\\
+& & \\ &=&  {1 \over 4n} \left[n(n-1)^2- 2(n-1)(n-1)n+ \frac{2(n-1)n(2n-1)}{3}\right]\\
+& & \\ &=&  {1 \over 4} \left[-(n-1)^2+\frac{2(n-1)(2n-1)}{3}\right]\\
+& & \\ &=&  {1 \over 12} \left[-3(n-1)^2+2(n-1)(2n-1)\right]\\
+& & \\ &=&  {1 \over 12} \left[-3(n^2-2n+1)+2(2n^2-3n+1)\right]\\
+& & \\ &=&  {n^2-1 \over 12}\\
+\end{eqnarray*}
+\end{document}

@@ -1,0 +1,95 @@
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx}  % Font Family
+\usepackage{helvet}   % Font Family
+\usepackage{color}
+
+\mode<presentation> {
+ \usetheme{Frankfurt} % was Frankfurt
+ \useinnertheme{rounded}
+ \useoutertheme{infolines}
+ \usefonttheme{serif}
+ %\usecolortheme{wolverine}
+% \usecolortheme{rose}
+\usefonttheme{structurebold}
+}
+
+\setbeamercovered{dynamic}
+
+\title[MA4413]{Statistics for Computing \\ {\normalsize MA4413 Lecture 4A}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize Kevin.obrien@ul.ie}}
+\date{Autumn Semester 2011}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{document}
+
+\frame{
+\frametitle{Random Variables}
+A pair of dice is thrown. Let X denote the minimum of the two numbers which occur.
+Find the distributions and expected value of X.
+}
+%-------------------------------------------------------------%
+\frame{
+\frametitle{Random Variables}
+A fair coin is tossed four times.
+Let X denote the longest string of heads.
+Find the distribution and expectation of X.}
+%-------------------------------------------------------------%
+\frame{\frametitle{Random Variables}
+A fair coin is tossed until a head or five tails occurs.
+Find the expected number E of tosses of the coin.}
+%-------------------------------------------------------------%
+\frame{\frametitle{Random Variables}A coin is weighted so that P(H) = 0.75 and P(T ) = 0.25
+
+The coin is tossed three times. Let X denote the number of
+heads that appear.
+\begin{itemize}
+\item (a) Find the distribution f of X.
+\item (b) Find the expectation E(X).
+\end{itemize}
+}
+
+%-------------------------------------------------------------%
+\frame{
+\begin{itemize}
+\item Now consider an experiment with only two outcomes. Independent repeated trials of such an experiment are
+called Bernoulli trials, named after the Swiss mathematician Jacob Bernoulli (16541705). \item The term \textbf{\emph{independent
+trials}} means that the outcome of any trial does not depend on the previous outcomes (such as tossing a coin).
+\item We will call one of the outcomes the ``success" and the other outcome the ``failure".
+\end{itemize}
+}
+
+%-------------------------------------------------------------%
+\frame{
+\begin{itemize}
+ \item
+Let $p$ denote the probability of success in a Bernoulli trial, and so $q = 1 - p$ is the probability of failure.
+A binomial experiment consists of a fixed number of Bernoulli trials. \item A binomial experiment with $n$ trials and
+probability $p$ of success will be denoted by
+\[B(n, p)\]
+\end{itemize}
+}
+%-------------------------------------------------------------%
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Probability Mass Function}
+\begin{itemize} \item a probability mass function (pmf) is a function that gives the probability that a discrete random variable is exactly equal to some value. \item The probability mass function is often the primary means of defining a discrete probability distribution \end{itemize}
+}
+%------------------------------------------------------------------%
+\frame{
+Thirty-eight students took the test. The X-axis shows various intervals of scores (the interval labeled 35 includes any score from 32.5 to 37.5). The Y-axis shows the number of students scoring in the interval or below the interval.
+
+\textbf{\emph{cumulative frequency distribution}}A  can show either the actual frequencies at or below each interval (as shown here) or the percentage of the scores at or below each interval. The plot can be a histogram as shown here or a polygon.
+}
+
+
+\end{document}

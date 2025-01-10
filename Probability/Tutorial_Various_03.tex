@@ -1,0 +1,141 @@
+
+
+
+
+%\subsection*{Q6. Poisson Distribution  }  % 14 Marks
+%Suppose that a telephone help-line receives 4 calls per hour during offices hours.
+%\begin{itemize}
+%\item[a.]  Compute the value of $m$ for a 30 minute period during office hours.
+%\item[b.]  Compute the probability of the help-line getting exactly one call in a 30 minute period during office hours.
+%\end{itemize}
+%\bigskip
+%\subsection*{Q7. Exponential Distribution (1 Mark)} % 15 Marks
+
+
+%\begin{itemize}
+
+%\item[a.]  Compute the value of $P(X \leq 482)$
+
+%\end{itemize}
+\newpage
+\section*{Formulae}
+\subsection*{Probability}
+\begin{itemize}
+
+\item Conditional probability:
+\begin{equation*}
+P(B|A)=\frac{P\left( A\text{ and }B\right) }{P\left( A\right) }.
+\end{equation*}
+
+
+\item Bayes' Theorem:
+\begin{equation*}
+P(B|A)=\frac{P\left(A|B\right) \times P(B) }{P\left( A\right) }.
+\end{equation*}
+
+
+\item Binomial probability distribution:
+\begin{equation*}
+P(X = k) = ^{n}C_{k} \times p^{k} \times \left( 1-p\right) ^{n-k}\qquad \left( \text{where}\qquad
+^{n}C_{k} =\frac{n!}{k!\left(n-k\right) !}. \right)
+\end{equation*}
+
+\item Poisson probability distribution:
+\begin{equation*}
+P(X = k) =\frac{m^{k}\mathrm{e}^{-m}}{k!}.
+\end{equation*}
+\end{itemize}
+
+\subsection*{Information Theory}
+
+\begin{itemize}
+\item $I(p) = - log_{2}(p) = log_{2}(1/p)$\\
+
+\item $I(pq) = I(p) + I(q)$\\
+
+\item $H = - \sum_{i=1}^{m}p_{i}\; log_{2}(p_{i})$\\
+
+\item $E(L) = \sum_{i=1}^{m} l_{i} p_{i}$\\
+
+\item $\mbox{Efficiency} = H / E(L)$\\
+
+\item $I(X;Y) = H(X) - H(X|Y)$\\
+
+\item $P(C[r]) = \sum_{j=1}^{m}P(C[r]|Y=d_{j} )P(Y=d_{j} )$
+
+\item $R = rH(X) \mbox{      (b/second)}$
+\end{itemize}
+
+\newpage
+\subsection*{Confidence Intervals}
+{\bf One sample}
+\begin{eqnarray*} S.E.(\bar{X})&=&\frac{\sigma}{\sqrt{n}}.\\\\
+S.E.(\hat{P})&=&\sqrt{\frac{\hat{p}\times(100-\hat{p})}{n}}.\\
+\end{eqnarray*}
+{\bf Two samples}
+\begin{eqnarray*}
+S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}.\\\\
+S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{\frac{\hat{p}_1\times(100-\hat{p}_1)}{n_1}+\frac{\hat{p}_2\times(100-\hat{p}_2)}{n_2}}.\\\\
+\end{eqnarray*}
+\subsection*{Hypothesis tests}
+{\bf One sample}
+\begin{eqnarray*}
+S.E.(\bar{X})&=&\frac{\sigma}{\sqrt{n}}.\\\\
+S.E.(\pi)&=&\sqrt{\frac{\pi\times(100-\pi)}{n}}
+\end{eqnarray*}
+{\bf Two large independent samples}
+\begin{eqnarray*}
+S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}.\\\\
+S.E.(\hat{P_1}-\hat{P_2})&=&\sqrt{\left(\bar{p}\times(100-\bar{p})\right)\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}.\\
+\end{eqnarray*}
+{\bf Two small independent samples}
+\begin{eqnarray*}
+S.E.(\bar{X}_1-\bar{X}_2)&=&\sqrt{s_p^2\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}.\\\\
+s_p^2&=&\frac{s_1^2(n_1-1)+s_2^2(n_2-1)}{n_1+n_2-2}.\\
+\end{eqnarray*}
+{\bf Paired sample}
+\begin{eqnarray*}
+S.E.(\bar{d})&=&\frac{s_d}{\sqrt{n}}.\\\\
+\end{eqnarray*}
+{\bf Standard deviation of case-wise differences}
+\begin{eqnarray*}
+s_d = \sqrt{ {\sum d_i^2 - n\bar{d}^2 \over n-1}}.\\\\
+\end{eqnarray*}
+{\bf Binary Classification}
+\begin{itemize}
+\item $F = 2 \times \frac{\mbox{precision} \times \mbox{recall}}{ \mbox{precision} + \mbox{recall}}$
+
+\end{itemize}
+\end{document}
+
+
+
+\textbf{Description of the Experiment}
+\begin{itemize}
+\item Suppose we have two bags, each containing 2 marbles. 
+\item One bag has 2 red marbles and
+the other has a red marble and a yellow marble. 
+You pick a bag at random and then pick
+one of the marbles in that bag at random. 
+\item When you look at the marble, it is red. 
+You
+now pick the second marble from that same bag.
+\end{itemize} 
+\textbf{Questions}
+\begin{itemize}
+\item[(a)](1 Mark)  Write down the sample space for this experiment, where the outcomes are the ordered pairs of drawn marbles.
+\item[(b)](1 Mark) What is the probability that this marble
+is also red? Select one of the options below, with a justification for your answer.
+You may justify your answer by references to sample points.
+\end{itemize}
+\textbf{Options for part b}
+\begin{center}
+\begin{multicols}{4}
+\begin{itemize}
+\item 1/4
+\item 1/3
+\item 2/3
+\item  1/2
+\end{itemize}
+\end{multicols}
+\end{center}

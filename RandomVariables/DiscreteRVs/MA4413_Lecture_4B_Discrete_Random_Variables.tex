@@ -1,0 +1,501 @@
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx}  % Font Family
+\usepackage{helvet}   % Font Family
+\usepackage{color}
+
+\mode<presentation> {
+ \usetheme{Default} % was Frankfurt
+ \useinnertheme{rounded}
+ \useoutertheme{infolines}
+ \usefonttheme{serif}
+ %\usecolortheme{wolverine}
+% \usecolortheme{rose}
+\usefonttheme{structurebold}
+}
+
+\setbeamercovered{dynamic}
+
+\title[MA4413]{Statistics for Computing \\ {\normalsize MA4413 Lecture 4B}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize Kevin.obrien@ul.ie}}
+\date{Autumn Semester 2012}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%---------------------------------------------------------------%
+\frame{
+\frametitle{Today's Class}
+\begin{itemize}
+\item Review of Discrete Probability Distributions
+\item \texttt{R} Implementation
+\item A Few Examples
+\item Introduction to Continuous Probability Distributions
+\item The Uniform Distribution
+\item The Exponential Distribution
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Discrete Probability Distributions}
+Three main distributions
+\begin{itemize}
+\item Binomial Distribution
+\item Poisson Distribution
+\item Geometric Distribution (mentioned, but not as important as the other two.)
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Binomial Probability Distribution}
+Important Points:
+\begin{itemize}
+\item The experiment is a series of $n$ independent trials.
+\item Two possible outcomes from each trial: a success and a failure.
+\item The probability of success (i.e. $p$) is constant. 
+\item A binomial random variable can be written as 
+\[ X \sim B(n,p) \]
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Poisson Probability Distribution}
+Important Points:
+\begin{itemize}
+\item This distribution is concerned with the number of occurrences per unit space.
+\item Unit space can mean a unit length, a unit area, a unit volume or a unit period of time.
+\item We will concern ourselves with unit time periods mostly.
+\item A Poisson random variable can be written as
+\[ X \sim Pois(m) \]
+\item The Poisson distribution can be used to approximate the binomial distribution under certain conditions.
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{PDFs and CDFs}
+Important Points:
+\begin{itemize}
+\item The probability density function (PDF) is the probability of a random variable taking a specific value i.e. $P(X = k)$
+\item The appropriate \texttt{R} functions are \texttt{dbinom} and \texttt{dpois}
+\item The cumulative distribution function (CDF) is the probability of a random variable not exceeding a specific value i.e. $P(X \leq k)$
+\item The appropriate \texttt{R} functions are \texttt{pbinom} and \texttt{ppois}     
+\end{itemize}
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Geometric Probability Distribution}
+Important Points:
+\begin{itemize}
+\item This distribution is closely related to the binomial distribution. 
+\item This distribution described the number of failures that occur before the first success, when the probability of success is $p$.
+\item The relevant \texttt{R} functions are \texttt{dgeom} and \texttt{pgeom}.
+\end{itemize}
+}
+
+%---------------------------------------------------------------------------%
+\begin{frame}[fragile]
+\frametitle{Geometric Probability Distribution : Example}
+
+If the probability of inserting a USB correctly is $0.40$, what is the probability of successfully doing so on the second attempt.
+\bigskip.
+In essence we have one failure, then one success, and these are independent events. So the probability the second attempt will be successful is $0.6 \times 0.4$. The probability that we are successful on the first attempt (i.e. no failures beforehand) is 0.4
+
+\begin{verbatim}
+> dgeom(0,prob=0.4)
+[1] 0.4
+> dgeom(1,prob=0.4)
+[1] 0.24
+> dgeom(2,prob=0.4)
+[1] 0.144
+\end{verbatim}
+
+\end{frame}
+
+
+
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Cumulative Binomial Probability Distribution Tables}
+
+\begin{itemize}
+\item Consider a binomial experiment with $n = 20$ and $p = 0.50$.
+
+\item First we have to find which section of the tables which tabulates the correspond binomial probabilities for $n = 20$ and $p = 0.50$
+
+\item Lets use the tables to compute $P(X \geq 10)$
+
+\item Remark $P(X \geq 10) = P(X=10) + P(X=11) + P(X=12)+ \ldots +  P(X=20)$
+
+\end{itemize}
+
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Cumulative Binomial Probability Distribution Tables}
+
+Section of tables for $n=20$ and $p = (0.10,0.15, \ldots, 0.50)$
+\begin{center}
+\begin{tabular}{|r||c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  p= & \ldots & 0.45 & \textbf{0.50} \\ \hline \hline
+  r=0 & \ldots & 1.0000 & 1.0000 \\
+  1 & \ldots & 1.0000 & 1.0000 \\
+  2 & \ldots & 0.9999 & 1.0000 \\
+  \ldots & \ldots & \ldots & \ldots \\
+  9  & \ldots & 0.5857 & 0.7483 \\
+  \textbf{10} & \ldots & 0.4086 & \alert{\textbf{0.5881}} \\
+  11 & \ldots & 0.2493 & 0.4119 \\
+  \ldots & \ldots & \ldots & \ldots \\
+  \hline
+\end{tabular}
+\end{center}
+
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Cumulative Binomial Probability Distribution Tables}
+
+\begin{itemize}
+\item Consider a binomial experiment with $n = 25$ and $p = 0.50$.
+\item Suppose we wish to compute $P(X \geq 10)$
+
+\item Is there a section of the tables which tabulates the correspond binomial probabilities for $n = 25$ and $p = 0.50$
+
+\item No! We would not be able to use the Murdoch Barnes tables to compute this.
+
+
+\item Of course, we could more detailed set of tables, but that will not part of this module. For all problems using \textbf{cumulative} probabilities will be restricted to those that can be solved using the Murdoch Barnes tables.
+
+\end{itemize}
+}
+
+
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Cumulative Binomial Probability Distribution Tables}
+
+\begin{itemize}
+\item Consider a binomial experiment with $n = 20$ and $p = 0.50$.
+\item Suppose we wish to compute the probability of 9 successes or less, i.e. $P(X \leq 9)$
+\item The tables does not tabulate probabilities in such a way. Recall that it tabulates probabilities for $r$ successes \textbf{or more}.
+\item However, we can still use the table to compute the desired probability.
+\item Consider the sample space for the number of successes. There can be between 0 and 20 successes.
+\Large
+\[ S = \{0,1,2,3,\ldots,8,9,10,11,12 \ldots,19,20\}
+\]
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Cumulative Binomial Probability Distribution Tables}
+
+\begin{itemize}
+\item What are the sample points for the event where the number of success is less than or equal to 9? (Lets call this event $A$.)
+\[ A = \{0,1,2,3,\ldots,8,9\}
+\]
+\item What are the sample points for the \textbf{\emph{complement event}}. (Lets call this event $A^c$).
+\[ A^c = \{10,11,12 \ldots,19,20\}
+\]
+\item Can we compute the probability of event $A^c$? \\ Yes, it is $P(X\geq 10)$
+\item The solution is therefore \[P(X\leq 9) = 1- P(X \geq 10) = 1 - 0.5881 = 0.4119\]
+\end{itemize}
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Cumulative Binomial Probability Distribution Tables}
+
+\begin{itemize}
+\item What is the probability that the number of successes is exactly 10 (with  $n=20$, $p=0.50$)?
+
+\item i.e. $P(X = 10) = ?$
+
+\item Again, the tables does not tabulate probabilities in such a way.
+
+\item It would also be quite cumbersome to compute $P(X=10)$ using the binomial probability formula.
+
+\item In the previous question, we found out the probability of 10 or more successes.
+\end{itemize}
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Cumulative Binomial Probability Distribution Tables}
+\normalsize
+\begin{itemize}
+
+
+\item Recall that $P(X \geq 10) = P(X=10) + P(X=11) + P(X=12)+ \ldots +  P(X=20)$.
+\bigskip
+\item Equivalently $P(X \geq 11) = P(X=11) + P(X=12)+ \ldots +  P(X=20)$.
+\bigskip
+\item Therefore $P(X \geq 10) = P(X=10) + P(X \geq 11)$.
+\bigskip
+\item Re-arranging this expression we get $P(X=10)  = P(X \geq 10) -  P(X \geq 11)$.
+
+\bigskip
+\item From the tables $P(X \geq 11) = 0.4119$.
+\bigskip
+\item Therefore $P(X=10) = 0.5881 -  0.4119)  = 0.1762$.
+\end{itemize}
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Cumulative Binomial Probability Distribution Tables}
+
+Section of tables for $n=20$ and $p = (0.10,0.15, \ldots, 0.50)$
+\begin{center}
+\begin{tabular}{|r||c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  p= & \ldots & 0.45 & \textbf{0.50} \\ \hline \hline
+  r=0 & \ldots & 1.0000 & 1.0000 \\
+  1 & \ldots & 1.0000 & 1.0000 \\
+  2 & \ldots & 0.9999 & 1.0000 \\
+  \ldots & \ldots & \ldots & \ldots \\
+
+  10 & \ldots & 0.4086 & 0.5881 \\
+  \textbf{11} & \ldots & 0.2493 & \alert{\textbf{0.4119}} \\
+   12  & \ldots & 0.1308 & 0.2517 \\
+  \ldots & \ldots & \ldots & \ldots \\
+  \hline
+\end{tabular}
+\end{center}
+
+}
+
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Cumulative Binomial Probability Distribution Tables}
+The vice-president of a computer firm has reviewed the records of the firm’s personnel and has found that 70\% of the employees read a well known industry magazine ``The IT Journal". \\ \bigskip
+If the vice-president was to choose 10 employees at random, what is the probability that the number of these employees who do not read the ``IT Journal" is the following?
+\normalsize
+\begin{itemize}
+\item [1] At least five.
+\item [2] Between four and eight, inclusive.
+\item [3] No more than seven.
+% \item [4] What are the mean and variance of this distribution?
+\end{itemize}
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Cumulative Binomial Probability Distribution Tables}
+\textbf{Solution :}
+
+\begin{itemize}
+\item
+Firstly, identify the probability distribution to be used?
+    \begin{itemize}
+    \item
+    Answer: the binomial distribution
+    \end{itemize}
+\item We are given the number of trials ( `` choose 10 employees")
+
+\item We are given a definition of a ``success", which is finding an employee that did NOT reads the journal.
+
+\item We are given the probability of such a success : 30\%  or 0.30
+
+\item So our binomial parameters are n= 10 and p = 0.30
+
+\item Let's use the Murdoch Barnes Table 1 and find the relevant columns.
+
+\end{itemize}
+}
+
+
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Cumulative Binomial Probability Distribution Tables}
+\normalsize
+Section of tables for $n=10$ and $p = (0.10,0.15,\ldots,0.30, \ldots, 0.50)$\\
+\bigskip
+Part 1:  compute $P(X \geq 5)$ \\ \textbf{Answer}: $P(X \geq 5)  = 0.1503$
+
+\begin{center}
+\begin{tabular}{|r||c|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  p= & \ldots & 0.25 & \textbf{0.30} &  \ldots\\ \hline \hline
+  r=0 & \ldots & 1.0000 & 1.0000 & \ldots\\
+  1 & \ldots & 0.9437 & 0.9718 & \ldots \\
+  2 & \ldots & 0.7560 & 0.8507 &\ldots \\
+  \ldots & \ldots & \ldots & \ldots&\ldots \\
+  \textbf{5} & \ldots & 0.0781 & \alert{\textbf{0.1503}} &\ldots \\
+ \ldots & \ldots & \ldots & \ldots&\ldots \\
+  \hline
+\end{tabular}
+\end{center}
+
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Cumulative Binomial Probability Distribution Tables}
+\normalsize
+Part 2: Compute $P(4 \leq X \leq 8)$  \\ \bigskip
+\begin{itemize}
+\item $P(4 \leq X \leq 8) = P(X = 4) + P(X = 5) + P(X = 6) + P(X = 7) + P(X=8)$
+\bigskip
+\item $P(X \geq 4) = P(X = 4) +  \ldots + P(X=8) + P(X=9) + P(X=10)$
+\bigskip
+\item $P(X \geq 9) = P(X = 9) + P(X = 10)$
+\bigskip
+\item $P(X \geq 4) = P(4 \leq X \leq 8) + P(X \geq 9)$
+\bigskip
+\item Re-arranging $P(4 \leq X \leq 8) = P(X \geq 4) - P(X \geq 9)$
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Cumulative Binomial Probability Distribution Tables}
+\normalsize
+
+Part 2:  compute $P(4 \leq X \leq 8)$ \\ \textbf{Answer}: $P(4 \leq X \leq 8)  = 0.3504-0.0001 = 0.3503$
+
+\begin{center}
+\begin{tabular}{|r||c|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  p= & \ldots & 0.25 & \textbf{0.30} &  \ldots\\ \hline \hline
+  r=0 & \ldots & 1.0000 & 1.0000 & \ldots\\
+   1 & \ldots & 0.9437 & 0.9718 & \ldots \\
+  \ldots & \ldots & \ldots & \ldots&\ldots \\
+  \textbf{4} & \ldots & 0.2241 & \alert{\textbf{0.3504}} &\ldots \\
+ \ldots & \ldots & \ldots & \ldots&\ldots \\
+   \textbf{9} & \ldots &  & \alert{\textbf{0.0001}} &\ldots \\
+ \ldots & \ldots & \ldots & \ldots&\ldots \\
+  \hline
+\end{tabular}
+\end{center}
+
+}
+
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Cumulative Binomial Probability Distribution Tables}
+\normalsize
+Part 3: Compute $P(X \leq 7)$
+\begin{itemize}
+\item From before, this is the complement of 8 or more successes \item i.e. $P(X \leq 7) = 1 - P(X \geq 8)$
+\item Determine $P(X \geq 8)$ and subtract that value from 1.
+\end{itemize}
+}
+
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Cumulative Binomial Probability Distribution Tables}
+\normalsize
+
+Part 3:  compute $P(X \leq 7)$ \\ \textbf{Answer}: $P(X \leq 7)  = 1 - 0.0016 = 0.9984$
+
+\begin{center}
+\begin{tabular}{|r||c|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  p= & \ldots & 0.25 & \textbf{0.30} &  \ldots\\ \hline \hline
+  r=0 & \ldots & 1.0000 & 1.0000 & \ldots\\
+   1 & \ldots & 0.9437 & 0.9718 & \ldots \\
+
+ \ldots & \ldots & \ldots & \ldots&\ldots \\
+    7 & \ldots & 0.0.0035 & 0.0106 & \ldots \\
+   \textbf{8} & \ldots & 0.0004 & \alert{\textbf{0.0016}} &\ldots \\
+ \ldots & \ldots & \ldots & \ldots&\ldots \\
+  \hline
+\end{tabular}
+\end{center}
+
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Cumulative Poisson Probability Distribution Tables}
+
+\begin{itemize}
+\item The Murdoch Barnes Table set 2 (``cumulative Poisson probabilities") tabulates cumulative values for Poisson probabilities.
+
+
+\item For some value $r$, these tables give the probability for $r$ or more occurrences (i.e $P(X \geq r)$) for some value $m$, the expected number of occurences per unit period.
+
+\item To use the tables, the correct column for $m$ must be found.
+\item The cumulative Poisson tables is easier to use, compared to the cumulative binomial tables.
+\item All of the problem solving approaches we learned for the cumulative binomial tables, also apply for the cumulative Poisson tables.
+\end{itemize}
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Cumulative Poisson Probability Distribution Tables}
+
+\begin{center}
+\begin{tabular}{|r||c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  m= & \ldots & 0.40 & 0.50 \\ \hline \hline
+  r=0 & \ldots & 1.0000 & 1.0000 \\
+  1 & \ldots & 0.3297 & 0.3935 \\
+  2 & \ldots & 0.0616 & 0.0902 \\
+  3 & \ldots & 0.0079 & 0.0144 \\
+  \ldots & \ldots & \ldots & \ldots \\
+  \hline
+\end{tabular}
+\end{center}
+
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Cumulative Poisson Probability Distribution Tables}
+
+\begin{itemize}
+\item Suppose that for a Poisson random variable that mean number of occurrences per minute was 0.5.
+\item Compute the probability that there will more than one occurrence in a given minute.
+\item Solution : $P(X \geq 1) = 0.3935$
+\end{itemize}
+
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Cumulative Poisson Probability Distribution Tables}
+
+$ P(X \geq 1)  = 0.3935$
+\begin{center}
+\begin{tabular}{|r||c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  m= & \ldots & 0.40 & \textbf{0.50} \\ \hline \hline
+  r=0 & \ldots & 1.0000 & 1.0000 \\
+  \textbf{1} & \ldots & 0.3297 & \textbf{\alert{0.3935}} \\
+  2 & \ldots & 0.0616 & 0.0902 \\
+  3 & \ldots & 0.0079 & 0.0144 \\
+  \ldots & \ldots & \ldots & \ldots \\
+  \hline
+\end{tabular}
+\end{center}
+
+}
+\end{document}
+

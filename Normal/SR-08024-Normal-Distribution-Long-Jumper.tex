@@ -1,0 +1,51 @@
+
+\noindent The length of the jump of an athlete has a normal distribution with mean 7m and standard deviation 0.1m. 
+
+
+
+\begin{enumerate}[(a)]
+	\item 
+	Calculate the probability that they jump  at least 7.15m
+	
+\item 
+	Calculate the probability that they jump  between 6.9 and 7.05m
+	
+\item 
+	Find the probability that if they jump  3 times all the jumps will be less than 7.15m. (Assume the lengths of the jumps are independent and use the answer to part (a)).  
+	
+\end{enumerate}
+
+\noindent \textbf{Solutions}
+
+\[ X \sim N(\mu = 7.00,  \sigma^2 = 0.1^2 )\]
+
+
+\begin{enumerate}[(a)]
+    \item Determine $P(X \geq 7.15) $               
+\[Zo=\frac{Xo-\mu}{\sigma} = \frac{7.15 - 7.00}{0.10}=\frac{0.15}{0.10}=1.50\]
+
+From tables $P(Z\geq 1.50) = 0.0668$. \\    \smallskip     
+Therefore $P(X\geq 7.15) = 0.0668$.
+
+\bigskip
+\item Determine $P(6.9\leq X \leq 7.05)$
+
+
+\[P(6.90 \leq X \leq 7.05) = 1 - P(X\leq 6.90 ) - P(X \geq 7.05 )\]
+\medskip
+\begin{itemize}
+\item $P(X\geq 7.05 ) = P(Z \lgeq 0.50 ) = 0.3085 $  
+\smallskip
+\item $P(X\leq 6.90 ) = P(Z \leq -1 )= P(Z \geq 1 ) = 0.1586$
+\end{itemize}
+\medskip
+\[P(6.90 \leq X \leq 7.05) = 1 - (0.1586 + 0.3085) = 0.5328\]      
+\noindent \textit{(Remark: Be sure to explain the rationale behind this approach.)}.
+\item             
+$P(X\leq 7.15) = 0.9332$\\        \medskip
+Probability = $(0.9332)^3= 0.8127$
+
+\end{enumerate}
+
+
+\end{document}

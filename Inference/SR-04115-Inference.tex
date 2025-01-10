@@ -1,0 +1,105 @@
+	\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Hypothesis Testing} %\input{tcilatex}
+
+\begin{document}
+%==================================================%
+\section*{Paired t-test - Worked Examples}
+
+The weights of one group of Irish students were recorded both at the beginning of year 1 of their studies and at the end of year 4.
+The results (in kg) are given below:
+
+\begin{center}
+	\begin{tabular}{|c|c|c|} \hline 
+		Student	&	Year 1	&	Year 4	\\ \hline \hline
+		1	&	72	&	74	\\ \hline
+		2	&	58	&	61	\\ \hline
+		3	&	68	&	69	\\ \hline
+		4	&	81	&	83	\\ \hline
+		5	&	65	&	69	\\ \hline
+		6	&	69	&	74	\\ \hline
+		7	&	75	&	76	\\ \hline
+		8	&	84	&	82	\\ \hline
+	\end{tabular} 
+\end{center}
+
+\noindent 
+At a significance level of 5\%, is there sufficient evidence to state that on average students gain weight over the four years of their university studies?
+
+%======================================================= %
+\section*{Solution}
+
+Before we start, we need to compute the average difference and the standard deviations of the differences. 
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|} \hline
+		Student	&	Year 1	&	Year 4	&	$d_i$ 	&	$d_i - \bar{d}$ \\ &&&\textit{(Yr4-Yr1)}&	\\ \hline
+		1	&	72	&	74	&	2	&	0	\\ \hline
+		2	&	58	&	61	&	3	&	1	\\ \hline
+		3	&	68	&	69	&	1	&	-1	\\ \hline
+		4	&	81	&	83	&	2	&	0	\\ \hline
+		5	&	65	&	69	&	4	&	2	\\ \hline
+		6	&	69	&	74	&	5	&	3	\\ \hline
+		7	&	75	&	76	&	1	&	-1	\\ \hline
+		8	&	84	&	82	&	-2	&	-4	\\ \hline
+	\end{tabular} 
+\end{center}	
+
+\section*{Computing the Average Difference}
+
+\[ \bar{d} = \frac{2+3+1+2+4+5+1+(-2)}{8} = \frac{16}{8} =2\]
+
+\section*{Computing the Standard Deviation of the Difference}
+
+Now we compute the standard deviation of the variances.From each difference value, subtract the mean, and square the resulting term.
+
+\[ s^2_{d} = \sqrt{\frac{(0)^2+(1)^2+(-1)^2+(0)^2+(2)^2+(3)^2+(-1)^2+(-4)^2}{7}}= \sqrt{\frac{32}{7}} = 4.571\]
+
+\noindent Standard deviation is the square root of the variance
+
+$s_d=\sqrt{4.571}={2.137}$
+
+%======================================%
+
+\section{Inference}
+
+\subsection{Confidence interval of a mean (small sample)}
+
+If the data have a normal probability distribution and the sample
+standard deviation $s$ is used to estimate the population
+standard deviation $\sigma$, the interval estimate is given by:
+\begin{equation}
+\bar{X} \pm t_{1-\alpha/2,n-1}\frac{s}{\sqrt{n}}
+\end{equation}
+where $t_{1-\alpha/2,n-1}$ is the value providing an area of $\alpha/2$ in the upper tail of a Student’s t distribution with n - 1 degrees of freedom.
+
+
+\subsection*{Writing the Hypotheses}
+
+\begin{description}
+\item[$H_0:$] $\mu_d \leq 0$ Students have not gained weight throughout college years.
+\item[$H_1:$] $\mu_d > 0$ Students have gained throughout college years.
+\end{description}
+
+N.B. This is a one-tailed test.
+\end{document}

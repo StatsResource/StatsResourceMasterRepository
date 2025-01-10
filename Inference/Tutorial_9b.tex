@@ -1,0 +1,125 @@
+﻿
+
+
+
+\section{Confidence Interval examples}
+
+
+
+%--------------------
+\subsection{Example}
+A random sample of 15 observations is taken from a normally distributed population
+of values. The sample mean is 94.2 and the sample variance is 24.86.
+Calculate a 99\% confidence interval for the population mean.
+
+
+\noindent \textbf{Solution}
+$t_(14,0.005) = 2.977$
+99\% CI is $94.2 \pm 2.977 \sqrt{24.86/15}$ \\i.e. $94.2 \pm 3.83$ \\i.e. $(90.37,98.03)$
+
+
+\subsection{Example 1: paired T test}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+X & 5.20 & 5.15 & 5.17 & 5.16 & 5.19 & 5.15\\ \hline 
+Y & 5.20 & 5.15 & 5.17 & 5.16 & 5.19 & 5.15\\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Example 2}
+
+Seven measurements of the pH of a buffer solution gave the
+following results:
+
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+5.12 & 5.20 & 5.15 & 5.17 & 5.16 & 5.19 & 5.15\\
+\hline
+\end{tabular}
+
+Task 1: Calculate the 95\% confidence limits for the true pH
+utilizing $R$.
+
+
+Solution. We are using Student t distribution with six degrees of
+freedom and the following code gives us the confidence interval
+for this problem.
+\begin{verbatim}
+>x <- c(5.12, 5.20, 5.15, 5.17, 5.16, 5.19, 5.15)
+>n =length(x)
+>alpha =0.05
+>stderr =sd(x)/sqrt(n)
+>LB=mean(x)+qt(alpha/2,6)* stderr
+>UB=mean(x)+qt(1-alpha/2,6)* stderr
+>LB
+#[1] 5.137975
+>UB
+#[1]5.187739
+\end{verbatim}
+
+\subsection{Example 3} Ten replicate analyses of the concentration
+of mercury in a sample of commercial gas condensate gave the
+following results (in ng/ml) :
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+23.3 & 22.5 & 21.9 & 21.5 & 19.9 & 21.3 & 21.7 & 23.8 & 22.6 &
+24.7\\
+\hline
+\end{tabular}
+
+Compute 99\% confidence limits for the mean.
+%http://www.stats.gla.ac.uk/steps/glossary/hypothesis_testing.html
+
+
+%-----------------------
+\subsection{Using Tables for the $t$-Distribution}
+
+Degress of freedmom n-1
+
+\begin{itemize}
+\item For values between 31 and 40 we can use degrees freedom = 40
+
+\item For samples sizes between 41 and 60, we can use degrees of freedom 60
+
+\item For samples sizes between 61 and 120, we can use degrees of freedom 120
+
+\item For samples larger than 120, we can use $\infty$
+\end{itemize}
+
+%------------------------------------------------------------------------------%
+
+\noindent \textbf{Confidence Interval for a Mean (Small Sample)}
+\begin{itemize}
+\item The mean operating life for a random sample of $n = 10$ light bulbs is $\bar{x} = 4,000$ hours, with the sample
+standard deviation $s = 200$ hours. \item The operating life of bulbs in general is assumed to be approximately normally distributed.\item
+We estimate the mean operating life for the population of bulbs from which this sample was taken, using a 95 percent
+confidence interval as follows:
+
+\[4,000\pm(2.262)(63.3)  = (3857,4143)\]
+
+\item The point estimate is 4,000 hours. The sample standard deviation is 200 hours, and the sample size is 10. Hence \[S.E(\bar{x} ) = { 200 \over \sqrt{10}} = 63.3\]
+
+\item From last slide, the t quantile with $df=9$ is 2.262.
+\end{itemize}
+
+
+%------------------------------------------------------------------------%
+
+
+% -- Lecture 8B
+% -- Revise the Tables
+% -- Sample Size Estimation for mean
+% -- Example SSE for mean
+% -- SSE for Proportion
+% -- Example SSE for proportion
+% -- Paired Test
+
+
+
+\item Your company produces injected mouldings for rotary arms. The company claims that less than 2% of all product produced is defective. A random sample of 100 parts revealed that 4 parts were defective. 
+
+Using a 5% level of significance is there evidence to close the line down? Justify your decision.

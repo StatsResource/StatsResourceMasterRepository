@@ -1,0 +1,59 @@
+%%- https://bookdown.org/kevin_davisross/probsim-book/linear-combinations-of-random-variables.html
+
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\large
+
+<span id="exm:unnamed-chunk-290" class="example"><strong>Example 5.33  </strong></span>
+Recall the Colab activity where you simulated pairs of SAT Math ($ {\displaystyle X} $) and Reading ($ {\displaystyle Y} $) scores from Bivariate Normal distributions with different correlations. (See also Section <a href="sec-example-sat-both.html#sec-example-sat-both">3.9</a>.) 
+
+
+You considered the distribution of the sum $ {\displaystyle T=X+Y} $ and difference $ {\displaystyle D= X - Y} $. Did changing the correction affect the <em>variance</em> of $ {\displaystyle T} $? Of $ {\displaystyle D} $?</p>
+
+\subsection*{Variance of sums and differences of random variables.}
+
+\begin{align*}
+\textrm{Var}(X + Y) &amp; = \textrm{Var}(X) + \textrm{Var}(Y) + 2\textrm{Cov}(X, Y)\\
+\textrm{Var}(X - Y) &amp; = \textrm{Var}(X) + \textrm{Var}(Y) - 2\textrm{Cov}(X, Y)
+\end{align*}
+
+\newpage
+Assume that SAT Math ($ {\displaystyle X} $) and Reading ($ {\displaystyle Y} $) follow a Bivariate Normal distribution, Math scores have mean 527 and standard deviation 107, and Reading scores have mean 533 and standard deviation 100. Compute $ {\displaystyle \textrm{Var}(X + Y)} $ and $ {\displaystyle \textrm{SD}(X+Y)} $ for each of the following correlations.</p>
+
+\begin{enumerate}[(a)]
+\item $ {\displaystyle \textrm{Corr}(X, Y) = 0.77} $
+\item $ {\displaystyle \textrm{Corr}(X, Y) = 0.40} $
+\item $ {\displaystyle \textrm{Corr}(X, Y) = 0} $
+\item $ {\displaystyle \textrm{Corr}(X, Y) = -0.77} $
+\end{enumerate}
+
+\subsection*{Solution}
+
+\[ {\displaystyle \textrm{Cov}(X, Y) = \frac{\textrm{Corr}(X, Y)}{\textrm{SD}(X)\textrm{SD}(Y)} } \]
+\begin{itemize}
+\item $ {\displaystyle \textrm{Cov}(X, Y) = 0.77} $
+\item $ {\displaystyle \textrm{Corr}(X, Y) = 0.40} $
+\item $ {\displaystyle \textrm{Corr}(X, Y) = 0} $
+\item $ {\displaystyle \textrm{Corr}(X, Y) = -0.77} $
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%5
+If $ {\displaystyle X} $ and $ {\displaystyle Y} $ have a positive correlation:</p>
+\begin{itemize}
+\item Large values of $ {\displaystyle X} $ are associated with large values of $ {\displaystyle Y} $ (so the sum is really large), and small values of $ {\displaystyle X} $ with small values of $ {\displaystyle Y} $ (so the sum is really small), so the sum exhibits more variability than it would if the values of $ {\displaystyle X} $ and $ {\displaystyle Y} $ were uncorrelated.
+\item Large values of $ {\displaystyle X} $ are associated with large values of $ {\displaystyle Y} $ (so the difference is small), and small values of $ {\displaystyle X} $ with small values of $ {\displaystyle Y} $ (so the difference is small), so the difference exhibits less variability than it would if the values of $ {\displaystyle X} $ and $ {\displaystyle Y} $ were uncorrelated.
+</ul>
+If $ {\displaystyle X} $ and $ {\displaystyle Y} $ have a negative correlation:</p>
+<ul>
+\item Large values of $ {\displaystyle X} $ are associated with small values of $ {\displaystyle Y} $ (so the sum is moderate), and small values of $ {\displaystyle X} $ with large values of $ {\displaystyle Y} $ (so the sum is moderate), so the sum exhibits less variability than it would if the values of $ {\displaystyle X} $ and $ {\displaystyle Y} $ were uncorrelated.
+\item Large values of $ {\displaystyle X} $ are associated with small values of $ {\displaystyle Y} $ (so the difference is large and positive), and small values of $ {\displaystyle X} $ with large values of $ {\displaystyle Y} $ (so the difference is large and negative), so the difference exhibits more variability than it would if the values of $ {\displaystyle X} $ and $ {\displaystyle Y} $ were uncorrelated.
+\end{itemize}
+The variance of the sum is the sum of the variances if and only if $ {\displaystyle X} $ and $ {\displaystyle Y} $ are uncorrelated.
+\begin{equation}\begin{align*}
+\textrm{Var}(X+Y)  = \textrm{Var}(X) + \textrm{Var}(Y)\qquad \text{if $X, Y$ are uncorrelated}\\
+\textrm{Var}(X-Y)  = \textrm{Var}(X) + \textrm{Var}(Y)\qquad \text{if $X, Y$ are uncorrelated}
+\end{align*}\end{equation}
+
+
+\end{document}

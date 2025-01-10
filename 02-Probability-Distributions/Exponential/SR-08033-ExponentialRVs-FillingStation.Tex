@@ -1,0 +1,98 @@
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{framed}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{Worked Examples} \chead{Exponential Distribution} %\input{tcilatex}
+
+\begin{document}
+\large 
+\section*{Exponential Distribution: Worked Example}
+
+
+\noindent Suppose that customers arrive at a filling station at the rate of 3 per hour. Given that a customer has just arrived, the time is takes for the next customer to arrive is called a \textbf{waiting time}. \\
+\medskip 
+
+\noindent Let $T$ be the symbol for the ``waiting times" variable. 
+
+\noindent Suppose that a customer has just arrived.
+\begin{enumerate}[(a)] \item What is the expected waiting time between customer arrivals? 
+%%-- \item Compute $E(T)$
+\item What is the variance of waiting times? 
+%%--- \subitem Compute $\mbox{Var}(T)$.
+	\item What is the probability that the next customer will arrive within the next fifteen minutes?
+	\item What is the probability that no customers arrive in the next half hour?
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\subsection*{Part (a)}
+
+\noindent \textbf{Expected Value and Variance}
+
+\begin{framed}
+\begin{itemize}
+    \item Expected Value (Exponential Mean): $E(X) = \mu$
+    \item Rate Parameter (Lambda): $ \lambda  = \frac{1}{\mu} $
+    \item Variance: $\operatorname{Var}(X) = \mu^2= \frac{1}{\lambda^2}$
+\end{itemize}
+\end{framed}
+
+\begin{itemize}
+    \item $\operatorname{E}(X) = 1/\lambda = 20$ minutes.
+    \item $\operatorname{Var}(X)$ = $1/(\lambda^2)$= 400 squared minutes.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part (b)}
+\noindent Compute $P(X \leq 15)$ with $\lambda = 1/20$
+
+\[ P(X \leq x) = 1 -e^{-\lambda x} \]
+
+
+\begin{itemize}
+	\item $ P(X \leq x) = 1- e^{-\lambda x} $
+	\item $ P(X \leq 15) = 1 - e^{-15/20}  $
+	\item $ P(X \leq 15) = 1- e^{-0.75} =  1- 0.4723$
+
+\end{itemize} 
+
+\[ P(X \leq 15) = 0.5276\]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Part (c)}
+\noindent Compute $P(X \geq 30)$ with $\lambda = 1/20$
+
+\[ P(X \geq x) = e^{-\lambda x} \]
+
+
+\begin{itemize}
+	\item $ P(X \geq x) =  e^{-\lambda x} $
+	\item $ P(X \geq 30) = e^{-30/20}  $
+	\item $ P(X \geq 30) =  e^{-1.5} $
+
+\end{itemize} 
+
+\[ P(X \geq 30) = 0.2231\]
+\newpage
+BLANK
+\end{document}

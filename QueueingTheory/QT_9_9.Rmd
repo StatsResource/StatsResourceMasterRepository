@@ -1,0 +1,43 @@
+To determine the required service rate for the M/M/1 queueing system, we need to ensure that the probability of having fewer than 5 customers in the system is at least 99%.
+
+Given:
+- Arrival rate, $$\lambda = 2$$ customers per minute.
+- Desired probability, $$P(n < 5) \geq 0.99$$.
+
+In an M/M/1 queue, the probability of having \( n \) customers in the system is given by:
+
+$$ P(n) = (1 - \rho) \rho^n $$
+
+where \( \rho = \frac{\lambda}{\mu} \) is the traffic intensity, and \( \mu \) is the service rate.
+
+The cumulative probability of having fewer than 5 customers is:
+
+$$ P(n < 5) = \sum_{n=0}^{4} P(n) = \sum_{n=0}^{4} (1 - \rho) \rho^n $$
+
+This can be simplified using the formula for the sum of a geometric series:
+
+$$ P(n < 5) = (1 - \rho) \sum_{n=0}^{4} \rho^n = (1 - \rho) \frac{1 - \rho^5}{1 - \rho} = 1 - \rho^5 $$
+
+We need this to be at least 0.99:
+
+$$ 1 - \rho^5 \geq 0.99 $$
+
+Solving for \( \rho \):
+
+$$ \rho^5 \leq 0.01 $$
+$$ \rho \leq 0.01^{1/5} $$
+$$ \rho \leq 0.3981 $$
+
+Since \( \rho = \frac{\lambda}{\mu} \):
+
+$$ \frac{2}{\mu} \leq 0.3981 $$
+$$ \mu \geq \frac{2}{0.3981} $$
+$$ \mu \geq 5.025 $$
+
+Therefore, the service rate should be at least **5.025 customers per minute** to ensure that fewer than 5 customers line up 99% of the time.
+
+Source : conversation avec Copilot, 5/10/2024
+(1) M/M/1 Queueing Model - Real Statistics Using Excel. https://real-statistics.com/probability-functions/queueing-theory/m-m-1-queueing-model/.
+(2) Queueing Theory Calculator. https://www.omnicalculator.com/math/queueing-theory.
+(3) Queueing theory M/M/1 M/M/2 length and wait - John D. Cook. https://www.johndcook.com/blog/2022/01/12/mm2/.
+(4) CHAPTER 11 SOLUTION TO SOLVED PROBLEMS - McGraw Hill Education. https://highered.mheducation.com/sites/dl/free/0078024064/993131/Chapter_11.pdf.

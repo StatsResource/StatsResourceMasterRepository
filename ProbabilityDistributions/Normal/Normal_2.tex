@@ -1,0 +1,110 @@
+
+%------------------------------------------------------------------%
+\frame{
+\frametitle{ Characteristics of the Normal probability distribution}
+\begin{itemize}
+\item[1]  the mean, which is also the median and mode of the distribution. \smallskip
+\item[2] \alert{[VERY IMPORTANT]}
+The normal probability curve is bell-shaped and symmetric, with the shape of the curve to the left of the mean a mirror image of the shape of the curve to the right of the mean. (This is the basis of an important rule, called the \textbf{Symmetry Rule}, that we shall meet later.) \smallskip
+\item[3] The standard deviation determines the width of the curve. Larger values of the the standard deviation result in wider flatter curves, showing more dispersion in data.
+\item[4] As with all density curves, the total area under the curve for the normal probability distribution is 1.
+\end{itemize}
+}
+
+
+%------------------------------------------------------------------%
+\frame{
+\frametitle{Exact Probability}
+\large
+\alert{Remarks:} This is for continuous distributions only.
+\begin{itemize}
+\item The probability that a continuous random variable will take an exact value is infinitely small.
+We will usually treat it as if it was zero.
+\item
+When we write probabilities for continuous random variables in mathematical notation, we often retain the equality component (i.e. the "...or equal to..").\\
+For example, we would write expressions $P(X \leq 2)$ or $P(X \geq 5)$.
+\item
+Because the probability of an exact value is almost zero, these two expression are equivalent to $P(X < 2)$
+or $P(X > 5)$. \item The complement of $P(X \geq k)$ can be written as $P(X \leq k)$.
+\end{itemize}
+}
+
+
+
+
+
+%-----------------------------------------------------%
+\begin{frame}
+\frametitle{Normal Distribution : Solving problems}
+Recap:
+\begin{itemize}
+\item We must know the normal mean $\mu$ and the normal standard deviation $\sigma$.
+\item The normal random variable is $X \sim \mbox{N} ( \mu , \sigma^2)$.\smallskip
+\item (If we don't, we usually have to determine them, given the information in the question.)\smallskip
+\item The standard normal random variable is $Z\sim \mbox{N} ( 0 , 1^2)$.\smallskip
+\item The standard normal distribution is well described in Murdoch Barnes Table 3, which tabulates $P(Z \geq z_o)$ for a range of $Z$ values.
+\end{itemize}
+\end{frame}
+%-----------------------------------------------------%
+\begin{frame}
+\frametitle{Normal Distribution : Solving problems}
+\begin{itemize}
+\item For the given value $x_o$ from the variable $X$, we compute the corresponding z-score $z_o$.
+\[ z_o = { x_o - \mu \over \sigma} \]
+\item When $z_o$ corresponds to $x_o$, the following identity applies:
+\[  P(X \geq x_o )= P(Z \geq z_o ) \]
+\item Alternatively $ P(X \leq x_o )= P(Z \leq z_o ) $
+\end{itemize}
+\end{frame}
+%-----------------------------------------------------%
+\begin{frame}
+\frametitle{Normal Distribution : Solving problems}
+\begin{itemize}
+\item \textbf{Complement Rule}: \[ P(Z \leq k) = 1-P(Z \geq k) \] for some value $k$
+\item Alternatively $ P(Z \geq k) = 1-P(Z \leq k) $
+\item \textbf{Symmetry Rule}: \[ P(Z \leq -k) = P(Z \geq k) \] for some value $k$
+\item Alternatively $ P(Z \geq -k) = P(Z \leq k) $
+\end{itemize}
+\end{frame}
+%-----------------------------------------------------%
+\begin{frame}
+\frametitle{Normal Distribution : Solving problems}
+\begin{itemize}
+
+\item \textbf{Intervals}: \[ P(L \leq Z \leq U) = 1- [ P(Z \leq L) + P(Z \geq U)] \]
+where $L$ and $U$ are the lower and upper bounds of an interval.
+\item Probability of having a value too low for the interval : $P(Z \leq L)$
+\item Probability of having a value too high for the interval : $P(Z \geq U)$
+\end{itemize}
+\end{frame}
+%-----------------------------------------------------%
+
+
+%\frame{
+%\frametitle{Using Murdoch Barnes Tables 3}
+%
+%Find $ P(Z \geq 1.64)$ and $ P(Z \geq 1.65)$.\\\bigskip Which row and column?
+%\begin{itemize}
+%\item 1.64 = \color{blue}{1.6}+\color{orange}{0.04} \color{black}\hspace{2cm}$ P(Z \geq 1.64) =0.0505$
+%\item 1.65 = \color{blue}{1.6}+\color{green}{0.05}  \color{black} \hspace{2cm}$ P(Z \geq 1.65) =0.0495$
+%\end{itemize}
+%\bigskip
+%\small
+%\begin{table}[ht]
+%%\caption{Standard Normal Distribution } % title of Table
+%\centering % used for centering table
+%\begin{tabular}{|c|| c c c c c c|} % centered columns (4 columns)
+%\hline %inserts double horizontal lines
+%& & \ldots & \color{orange}{0.04} & \color{green}{0.05} &0.06&0.07\ldots \\
+%%heading
+%\hline \hline% inserts single horizontal line
+%\ldots & \ldots &\ldots &\ldots& \ldots &\ldots&\ldots \\ %Checked
+%1.5 & \ldots & 0.0630&0.0618& 0.0606 &0.0594&\dots \\ % inserting body of the table
+%\color{blue}{1.6} & \ldots &0.0516& \alert{0.0505} & \alert{0.0495} &0.0485&\ldots\\
+%1.7 & \ldots &0.0418 &0.0409& 0.0401 &0.0392&\dots \\ % inserting body of the table
+%\ldots & \ldots &\ldots &\ldots& \ldots &\ldots&\ldots \\ %Checked
+%\hline %inserts single line
+%\end{tabular}
+%%\label{table:nonlin} % is used to refer this table in the text
+%\end{table}
+%}

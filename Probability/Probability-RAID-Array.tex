@@ -1,0 +1,28 @@
+\section{KB Tutorial 2}
+
+\subsection*{Question 4}
+Consider a RAID (redundant array of inexpensive disks) system where multiple hard disks are used simultaneously.\\[0.2cm]
+Let's assume that we have two hard disks that work \emph{independently} of each other. Define the events $H_1 =$ ``hard disk one works'' and $H_2 =$ ``hard disk two works'' and also assume that $\Pr(H_1) = \Pr(H_2) = 0.9$.\\ \smallskip
+\begin{itemize}
+\item RAID-0 is a system which increases performance but only works if \emph{both} hard disks work.
+\item RAID-1 is a system which does not increase performance but still works with only one working hard disk.
+\end{itemize}
+
+{\bf(a)} Calculate $\Pr(\text{RAID-0 works})$ and $\Pr(\text{RAID-0 fails})$. \\[0.3cm] 
+{\bf(b)} Calculate $\Pr(\text{RAID-1 works})$ and $\Pr(\text{RAID-1 fails})$. 
+{\bf(c)} Calculate $\Pr(H_1^c)$ and $\Pr(H_2^c)$. \\[0.3cm]
+
+{\bf(d)} Cheap hard disks exist with $\Pr(H) = 0.6$. Consider a RAID-1 system with 3 of these hard disks - calculate $\Pr(\text{RAID-1 fails})$ in this case. \\[0.3cm] 
+{\bf(e)} In part (a) we found that $\Pr(\text{RAID-1 fails}) = 0.01$. How many cheap disks would be required to match this level of reliability?
+
+
+
+
+\subsection*{Question 4}
+{\footnotesize({\bf Note}: this is not a queueing theory question. It is a generalisation of a question which appears on Tutorial2)}\\[0.1cm]
+There are two possible routes to a particular location. You take $R_1$ 80\% of the time and $R_2$ 20\% of the time. We assume that travel time has an exponential distribution and, furthermore, the average travel time is 0.25 hours if you take $R_1$ and 0.5 hours if you take $R_2$.\\[-0.2cm]
+
+\begin{itemize}
+\item[(a)] Calculate the probability that the journey takes more than 0.5 hours for each of the routes, i.e., $\Pr(T > 0.5\,|\,R_1)$ and $\Pr(T > 0.5\,|\,R_2)$ respectively.  \item[(b)] Calculate $\Pr(T > 0.5)$. (hint: law of total probability)  \item[(c)] Given that $T>0.5$ hours, what is the probability that you used $R_1$? (i.e., calculate $\Pr(R_1\,|\,T>0.5)$)  \item[(d)] Derive a general expression for $\Pr(R_1\,|\,T>t)$ and evaluate it at $t=0.25$, $t = 1$ and $t = 2$ respectively. Interpret the results.
+\end{itemize}
+

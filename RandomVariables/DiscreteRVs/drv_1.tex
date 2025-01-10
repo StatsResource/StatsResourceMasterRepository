@@ -1,0 +1,237 @@
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx}  % Font Family
+\usepackage{helvet}   % Font Family
+\usepackage{color}
+\mode<presentation> {
+ \usetheme{Frankfurt} % was
+ \useinnertheme{rounded}
+ \useoutertheme{infolines}
+ \usefonttheme{serif}
+ %\usecolortheme{wolverine}
+% \usecolortheme{rose}
+\usefonttheme{structurebold}
+}
+\setbeamercovered{dynamic}
+\title[MA4413]{Statistics for Computing \\ {\normalsize Lecture 1B}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize Kevin.obrien@ul.ie}}
+\date{Autumn Semester 2011}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+\renewcommand{\arraystretch}{1.5}
+\begin{document}
+
+
+
+%------------------------------------------------------------%
+%-----------------------------------------------------------------%
+\frame{
+\frametitle{Last lecture}
+In the last lecture we looked at how to compute
+\begin{itemize}
+\item the expected value
+\item the variance 
+\end{itemize}
+of a discrete random variable. In our example, we considered the experiment of throwing a fair die.
+
+}
+
+%-----------------------------------------------------------------%
+\frame{
+\frametitle{Crooked die}
+\begin{itemize}
+\item Consider the random experiment of rolling a `crooked' six-sided die, i.e. the outcomes of the throw occur with different probabilities.
+
+\item Suppose we have a die with which an outcome `5' or `6' is twice as likely to occur compared to the other numbers.
+
+\item What is the probability of each outcome?
+
+\begin{itemize}  \item Remark: The ratio of outcomes is 1:1:1:1:2:2
+\end{itemize}
+
+\item The probability distributiion can be tabulated as follows
+
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|c|c|}
+\hline
+$x_i$  & 1 & 2 & 3 & 4 & 5 & 6 \\\hline
+$p(x_i)$ & 1/8 & 1/8& 1/8 & 1/8& 2/8 & 2/8\\
+\hline
+\end{tabular}
+\end{center}
+
+\item What is expected value and variance of the outcomes?
+\end{itemize}
+}
+
+%------------------------------------------------------------------%
+\frame{
+\frametitle{Variance of the crooked die}
+
+Recall the formula for computing the variance of a discrete random variable:
+
+\[ V(x) = E(X^2) - E(X)^2 \]
+
+We must compute $E(X^2)$
+
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|c|c|}
+\hline
+$x_i$  & 1 & 2 & 3 & 4 & 5 & 6 \\\hline
+$x^2_i$  & 1 & 4 & 9 & 16 & 25 & 36 \\\hline
+$p(x_i)$ & 1/8 & 1/8& 1/8 & 1/8& 2/8 & 2/8\\
+\hline
+\end{tabular}
+\end{center}
+
+\[E(X) = (0 \times 1/8) + (1 \times 1/8) +  \ldots + (25 \times 2/8) + (36 \times 2/8) = {32 \over 8} = 4\]
+
+}
+%------------------------------------------------------------------%
+\frame{
+\frametitle{Expected value of the crooked die}
+
+What is the variance?
+
+
+}
+
+\end{document}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Today's Class}
+\begin{itemize}
+\item Discrete Probability Distributions
+\item Probability Mass Function
+\item The Binomial Distribution
+\item The Poisson Probability Distribution
+\end{itemize}
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Probability Mass Function}
+\begin{itemize} \item a probability mass function (pmf) is a function that gives the probability that a discrete random variable is exactly equal to some value. \item The probability mass function is often the primary means of defining a discrete probability distribution \end{itemize}
+}
+%---------------------------------------------------------------------------%
+
+
+\frame{
+\frametitle{The Binomial Probability Distribution}
+\begin{itemize}
+\item The number of independent trials is denoted $n$.
+\item The probability of a `success' is $p$
+\item The expected number of `successes' from $n$ trials is $E(X) = np$
+\end{itemize}
+}
+
+
+\frame{
+\frametitle{Binomial Experiment}
+A binomial experiment (also known as a Bernoulli trial) is a statistical experiment that has the following properties:
+\begin{itemize}
+\item The experiment consists of n repeated trials.
+\item Each trial can result in just two possible outcomes. We call one of these outcomes a success and the other, a failure.
+\item The probability of success, denoted by P, is the same on every trial.
+\item The trials are independent; that is, the outcome on one trial does not affect the outcome on other trials.
+\end{itemize}
+}
+%--------------------------------------------------------------------------------------%
+\frame{
+Consider the following statistical experiment. You flip a coin 2 times and count the number of times the coin lands on heads. This is a binomial experiment because:
+\begin{itemize}
+\item The experiment consists of repeated trials. We flip a coin 2 times.
+\item Each trial can result in just two possible outcomes - heads or tails.
+\item The probability of success is constant - 0.5 on every trial.
+\item The trials are independent; that is, getting heads on one trial does not affect whether we get heads on other trials.
+\end{itemize}
+}
+
+%--------------------------------------------------------------------------------------%
+\frame{
+\frametitle{ Binomial Example 1}
+
+Suppose a die is tossed 5 times. What is the probability of getting exactly 2 fours?
+
+Solution: This is a binomial experiment in which the number of trials is equal to 5, the number of successes is equal to 2, and the probability of success on a single trial is 1/6 or about 0.167. Therefore, the binomial probability is:
+
+\[P(X=2) = ^5C_2 \times (1/6)^2 \times (5/6)^3 = 0.161\]
+}
+
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Characteristics of a Poisson Experiment}
+A Poisson experiment is a statistical experiment that has the following properties:
+\begin{itemize}
+\item The experiment results in outcomes that can be classified as successes or failures.
+\item The average number of successes (m) that occurs in a specified region is known.
+\item The probability that a success will occur is proportional to the size of the region.
+\item The probability that a success will occur in an extremely small region is virtually zero.
+\end{itemize}
+Note that the specified region could take many forms. For instance, it could be a length, an area, a volume, a period of time, etc.
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Poisson Distribution}
+A Poisson random variable is the number of successes that result from a Poisson experiment.
+ 
+The probability distribution of a Poisson random variable is called a Poisson distribution.
+
+Given the mean number of successes ($m$) that occur in a specified region, we can compute the Poisson probability based on the following formula:
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{The Poisson Probability Distribution}
+\begin{itemize}
+\item The number of occurrences in a unit period (or space)
+\item The expected number of occurrences is $m$
+\end{itemize}
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Poisson Formulae}
+The probability that there will be $k$ occurences in a unit time period is denoted $P(X=k)$, and is computed as follows.
+\Large
+\[ P(X = k)=\frac{m^k e^{-m}}{k!} \]
+
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Poisson Formulae}
+Given that there is on average 2 occurences per hour, what is the probability of no occurences in the next hour? \\ i.e. Compute $P(X=0)$ given that $m=2$
+\Large
+\[ P(X = 0)=\frac{2^0 e^{-2}}{0!} \]
+\normalsize
+\begin{itemize}
+\item $2^0$ = 1
+\item $0!$ = 1
+\end{itemize}
+The equation reduces to 
+\[ P(X = 0)=e^{-2} = 0.1353\]
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Poisson Formulae}
+What is the probability of one occurences in the next hour? \\ i.e. Compute $P(X=1)$ given that $m=2$
+\Large
+\[ P(X = 1)=\frac{2^1 e^{-2}}{1!} \]
+\normalsize
+\begin{itemize}
+\item $2^1$ = 2
+\item $1!$ = 1
+\end{itemize}
+The equation reduces to
+\[ P(X = 1) = 2 \times e^{-2} = 0.2706\]
+}
+%---------------------------------------------------------------------------%
+
+\end{document} 

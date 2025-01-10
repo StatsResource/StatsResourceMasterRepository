@@ -1,0 +1,81 @@
+
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{framed}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{The Pareto Distribution} \chead{Probability Distributions} %\input{tcilatex}
+
+\begin{document}
+\subsection*{The Pareto Type I distribution}
+\large The Pareto Type I distribution is 
+a continuous distribution, parameterized with  the shape parameter $\alpha > 0$, and location parameter $x_\mathrm{m} > 0$.
+\end{itemize}
+
+
+
+
+
+
+\subsection*{Cumulative distribution function}
+
+\noindent The cumulative distribution function of a Pareto random variable with parameters $\alpha$ and $x_m$ is
+\[F_X(x) = \begin{cases}
+1-\left(\frac{x_\mathrm{m}}{x}\right)^\alpha & \mbox{for } x \ge x_\mathrm{m}, \\
+0 & \mbox{for }x < x_\mathrm{m}.
+\end{cases}
+\]
+
+
+{
+%%- \subsection{Probability density function}
+\begin{itemize}
+%When plotted on linear axes, the distribution assumes the familiar J-shaped curve which approaches each of the orthogonal axes asymptotically. All segments of the curve are self-similar (subject to appropriate scaling factors). When plotted in a log-log plot, the distribution is represented by a straight line.
+
+\item It follows (by differentiation) that the probability density function is
+\[
+f_X(x)= \begin{cases} \alpha\,\dfrac{x_\mathrm{m}^\alpha}{x^{\alpha+1}} & \mbox{for }x \ge x_\mathrm{m}, \\[12pt] 0 & \mbox{for } x < x_\mathrm{m}. \end{cases} 
+\]
+
+% Moments and characteristic function[edit]
+\item The expected value of a random variable following a Pareto distribution is
+\[
+E(X)= \begin{cases} \infty & \mbox{if }\alpha\le 1, \\ \frac{\alpha x_\mathrm{m}}{\alpha-1} & \mbox{if }\alpha>1. \end{cases}
+\]
+
+
+\item The variance of a random variable following a Pareto distribution is
+\[
+\mathrm{Var}(X)= \begin{cases} \infty & \mbox{if }\alpha\in(1,2], \\ \left(\frac{x_\mathrm{m}}{\alpha-1}\right)^2 \frac{\alpha}{\alpha-2} & \mbox{if }\alpha>2. \end{cases}
+\]
+(If $\alpha\le 1$, the variance does not exist.)
+
+
+\end{itemize}
+
+
+
+
+
+
+\end{document}
+

@@ -1,0 +1,290 @@
+
+Question 1(a)
+
+Upper Limit ;  $U = \mu + 3 \sigma$
+Lower Limit ;  $L = \mu - 3 \sigma$
+
+Standardisation
+Apply the standardisation formula $ Z = \frac{X-\mu}{\sigma}$ 	to both limits
+
+$ Z_u = \frac{(\mu + 3 \sigma)-\mu}{\sigma} = \frac{3 \sigma}{\sigma} = 3$ 
+ 
+Similary
+
+$ Z_L = \frac{(\mu - 3 \sigma)-\mu}{\sigma} = \frac{-3 \sigma}{\sigma} = -3$  
+
+Probability of point being above Upper Limit
+\[ P(Z \geq 3) = 0.00135 \]
+
+From Murdoch Barnes Tables (page 13)  
+
+Probability of point being below Lower Limit
+
+\[ P(Z \leq -3) = P(Z \geq 3) = 0.00135 \]
+
+To find   we use the “Property of Symmetry”
+
+“Property of Symmetry” -   for any value A $P(Z \leq -A) = P(Z \geq A)$ 
+							
+Therefore 
+
+Conclusion: 
+Probability of point being outside the 3 Sigma limits is
+
+P(Z \leq -3) + P(Z \geq 3) =0.00270 	(i.e. 0.27%)
+
+
+Question 1(a)
+
+Upper Limit ;  $U = \mu + 2 \sigma$
+Lower Limit ;  $L = \mu - 2 \sigma$ 
+
+Standardisation
+Apply the standardisation formula $ Z = \frac{X-\mu}{\sigma}$ 	to both limits
+
+$ Z_u = \frac{(\mu + 2 \sigma)-\mu}{\sigma} = \frac{2 \sigma}{\sigma} = 2$ 
+ 
+Similary
+
+$ Z_L = \frac{(\mu - 2 \sigma)-\mu}{\sigma} = \frac{-2 \sigma}{\sigma} = -2$  
+
+ 
+Probability of point being above Upper Limit
+\[ P(Z \geq 2) = 0.00270 \]
+
+From Murdoch Barnes Tables (page 13)  
+
+Probability of point being below Lower Limit
+
+\[ P(Z \leq -2) = P(Z \geq 2) = 0.00270 \]
+
+To find   we use the “Property of Symmetry”
+
+“Property of Symmetry” -   for any value A $P(Z \leq -A) = P(Z \geq A)$ 
+							
+Therefore 
+
+Conclusion: 
+Probability of point being outside the 2 Sigma limits is
+
+P(Z \leq -2) + P(Z \geq 2) =0.00270  =0.04550 	(i.e. 4.55%) Question 1(b)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Question 2C
+
+Upper Limit ; 80.64		Mean		 	
+Lower Limit ; 75.36		Standard Deviation	 
+
+Standardisation
+Apply the standardisation formula	 	to both limits
+
+ 
+Similary
+
+ 
+
+Probability of being above Upper Limit
+
+From Murdoch Barnes Tables (page 13)  
+
+Probability of being below Lower Limit
+
+
+To find   we use the “Property of Symmetry”
+
+“Property of Symmetry” -   for any value A
+							
+Therefore 
+
+Conclusion: 
+Probability of point being outside the specification limits 
+
+ + is equal to
+
+ + =0.2584 	(i.e. 26%)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Question 3A
+
+Upper Limit ; 90		Mean		 	
+Lower Limit ; 50		Standard Deviation	 
+
+Standardisation
+Apply the standardisation formula	 	to both limits
+
+ 
+Similary
+
+ 
+
+Probability of being above Upper Limit
+
+From Murdoch Barnes Tables (page 13)  
+
+Probability of being below Lower Limit
+
+
+To find   we use the “Property of Symmetry”
+
+“Property of Symmetry” -   for any value A
+							
+Therefore 
+
+Conclusion: 
+Probability of point being outside the specification limits is
+
+ + is equal to
+
+
+ + =0.01478  	(i.e. 1.5%)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Question 3B
+
+Upper Limit ; 90		Mean		 	
+Lower Limit ; 50		Standard Deviation	 
+
+Standardisation
+Apply the standardisation formula	 	to both limits
+
+ 
+Similary
+
+ 
+
+Probability of being above Upper Limit
+
+From Murdoch Barnes Tables (page 13)  
+
+Probability of being below Lower Limit
+
+
+To find   we use the “Property of Symmetry”
+
+“Property of Symmetry” -   for any value A
+							
+Therefore 
+
+Conclusion: 
+Probability of point being outside the specification limits is
+
+ + is equal to
+
+ + =0.01099  	(i.e. 1.1%)
+
+
+
+
+
+
+
+
+
+SPRING 2008
+
+Q1. (a) A tyre manufacturer claims that under normal driving conditions, the tread life of a certain tyre follows a normal distribution with mean 50,000 miles and standard deviation 5000 miles. 
+
+(i) If your tyres wear out at 45,000 miles, would you consider this unusual? Support your answer with an appropriate probability calculation using the normal curve. [ 10 marks ] 
+
+(ii) If the manufacturer sells 100,000 of these tyres and warrants them to last at least 40,000 miles, about how many tyres will wear out before the warranty expires? [ 10 marks ]
+
+Part (i) Solution
+
+Test Value ; 45,000km			Mean		 km	
+						Standard Deviation	 km
+
+Find  
+
+Standardisation
+Apply the standardisation formula	 	to test value
+ 
+
+i.e.  = 
+
+To find   we use the “Property of Symmetry”
+
+“Property of Symmetry” -   for any value A
+
+From Murdoch Barnes Tables (page 13)  
+
+Therefore   = 0.1587 
+
+“Complement Rule”		 =1-  for any given value A
+	
+ =1-  = 0.8413
+Conclusion
+
+15.87% of Tyres are expected to last less than 45,000km
+	
+84.13% of Tyres are expected to last longer than 45,000km
+
+
+
+
+Part (i) Solution
+
+Lower Limit ; 40,000km			Mean		 km	
+						Standard Deviation	 km
+
+Find  
+
+Standardisation
+Apply the standardisation formula	 	to limit
+ 
+
+i.e.  = 
+
+To find   we use the “Property of Symmetry”
+
+“Property of Symmetry” -   for any value A
+	 
+
+From Murdoch Barnes Tables (page 13)  
+
+Therefore   = 0.02275 
+
+Conclusion
+2.275% of Tyres are expected to last less than 40,000km
+
+Of a Batch of 100,000 tyres,  2270 tyres will wear out before the warranty expires.
+	
+

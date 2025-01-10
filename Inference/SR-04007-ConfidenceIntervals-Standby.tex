@@ -1,0 +1,83 @@
+
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MathsResource} \chead{Probability Distributions} \rhead{Joint Distribution} %\input{tcilatex}
+\begin{document}
+\section{Confidence Intervals}
+
+\begin{itemize}
+	\item A sample of 300 households in a large town revealed that 183 have home computers.
+	\item Construct a 95\% confidence interval for the proportion of households with home computers in the whole town.
+\end{itemize}
+
+
+
+\subsection*{Computing Confidence Intervals}
+Confidence limits are the lower and upper boundaries / values of a confidence interval, that is, the values which define the range of a confidence interval. The general structure of a confidence interval is as follows:
+
+\[ \mbox{Point Estimate}  \pm \left[ \mbox{Quantile} \times \mbox{Standard Error} \right] \]
+
+
+\begin{itemize}
+\item Point Estimate: estimate for population parameter of interest, i.e. sample mean, sample proportion.
+\item Quantile: a value from a probability distribution that scales the intervals according to the specified confidence level.
+\item Standard Error: measures the dispersion of the sampling distribution for a given sample size $n$.
+\end{itemize}
+
+ 
+\textbf{Sample size:}       
+\begin{itemize}
+	\item n =300 :  ( N.B. Large sample)
+\end{itemize}  
+ 
+Estimate:             Sample proportion   
+ 
+    (N.B. Percentages are easier to work with.)
+ 
+\textbf{t-value:}           
+
+\begin{itemize}
+\item 95\% confidence , therefore  = 0.05
+\item two tailed procedure, therefore k = 2
+\item therefore column to use = 0.025
+\end{itemize}
+ 
+                      Large sample:  degrees of freedom =  i.e. bottom row
+ 
+                      therefore t-value is 1.96                   
+ 
+ 
+Standard Error:  from Formulae   
+\[  \frac{p(1-p)}{n}      = \frac{61 \times 39}{300}        = 2.81\%\]
+ 
+ 
+Confidence Interval : 
+\[\mbox{estimate} \pm (\mbox{t-value} \times \mbox{std. error})\]
+ 
+\[  61\% \pm (1.96 \times 2.81\%) \]
+ 
+
+
+\newpage
+\end{document}

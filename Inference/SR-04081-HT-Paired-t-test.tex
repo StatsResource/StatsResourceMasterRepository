@@ -1,0 +1,118 @@
+
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MathsResource} \chead{Probability Distributions} \rhead{Joint Distribution} %\input{tcilatex}
+\begin{document}
+
+%--------------------------------------------------------------------------------------------------------------------------%
+{
+A paired t-test is used to compare two population means where you have two samples in
+which observations in one sample can be paired with observations in the other sample.\\
+\bigskip
+
+
+Examples of where this might occur are:
+
+\begin{itemize}
+\item  Before-and-after observations on the same subjects (e.g. students’ diagnostic test
+results before and after a particular module or course).
+\item A comparison of two different methods of measurement or two different treatments
+where the measurements/treatments are applied to the same subjects (e.g. blood
+pressure measurements using a stethoscope and a dynamap).
+\end{itemize}
+}
+
+%--------------------------------------------------------------------------------------------------------------------------%
+
+\subsection*{Paired- T  test: example}
+\begin{itemize}
+\item Does it pay to ake preparatory courses for standardised tests such as the Comptia Exams?
+\item Using the sample data in the following table, compute the case-wise differences, the mean of the case-wise differences and the standard deviation of the case wise differences for the following data set (next slide).
+\end{itemize}
+\medskip
+%------------------------------------------------------------------------------------------------------------------%
+
+\subsection*{Paired T test}
+\begin{itemize} \item A paired sample t-test is used to determine whether there is a significant difference between the average values of the same measurement made under two different conditions. \item Both measurements are made on each unit in a sample, and the test is based on the paired differences between these two values. \item The usual null hypothesis is that the difference in the mean values is zero. For example, the yield of two strains of barley is measured in successive years in twenty different plots of agricultural land (the units) to investigate whether one crop gives a significantly greater yield than the other, on average.
+\end{itemize}
+
+\medskip
+
+%--------------------------------------------------------------------------------------------------------------------------%
+
+\subsection*{Computing the case-wise differences}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Subject& A& B& C& D& E &F &G &H &I &J\\  \hline
+Before &700& 840& 830& 860& 840 &690 &830& 1180& 930& 1070\\  \hline
+After &720 &840 &820 &900 &870 &700 &800& 1200& 950& 1080\\  \hline
+Difference &  & & & & & & & & & \\
+\hline
+\end{tabular}
+\end{center}
+\medskip
+%--------------------------------------------------------------------------------------------------------------------------%
+
+\subsection*{Sample variance of the case-wise differences}
+\Large
+\[s_d^2 = {\sum ( d_i - \bar{d})^2\over n-1}\]
+We know the following:
+\begin{itemize}
+\item The sample size $n$ which is 10.
+\item each of the casewise differences $d_i$.
+\item The average of the case-wise differences.
+\end{itemize}
+\medskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Paired T test}
+The mean and standard deviation of the sample d values are
+obtained by use of the basic formulas in Chapters 3 and 4, except
+that d is substituted for X.
+
+The mean difference for a set of differences between paired
+observations is $\bar{d} = \frac{\sum d_{i}}{n}$.
+
+The deviations formula and the computational formula for the
+standard deviation of the differences between paired observations
+are, respectively,
+
+\begin{eqnarray}
+S_{d} = \sqrt{\frac{\sum (d_{i}-\bar{d})^2}{n-1}}\\
+S_{d} = \sqrt{\frac{ \sum (d^2)- n(\bar{d}^2)}{n-1}}\\
+\end{eqnarray}
+
+The standard error of the mean difference between paired
+observations is obtained for the standard error of the mean.
+\subsubsection{Hypotheses}
+\begin{eqnarray*}
+H_{0}: \mu_{d} = 0\\
+H_{1}: \mu_{d} \neq 0\\
+\end{eqnarray*}
+
+
+\end{document}

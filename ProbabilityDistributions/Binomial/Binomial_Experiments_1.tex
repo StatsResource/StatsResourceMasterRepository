@@ -1,0 +1,250 @@
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx}  % Font Family
+\usepackage{helvet}   % Font Family
+\usepackage{color}
+\mode<presentation> {
+ \usetheme{Default} % was
+ \useinnertheme{rounded}
+ \useoutertheme{infolines}
+ \usefonttheme{serif}
+ %\usecolortheme{wolverine}
+% \usecolortheme{rose}
+\usefonttheme{structurebold}
+}
+\setbeamercovered{dynamic}
+
+\title[MA4704]{Technological Mathematics 4 \\ {\normalsize MA4704 Lecture 3B}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize Kevin.obrien@ul.ie}}
+\date{Spring Semester 2013}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{document}
+
+
+\titlepage
+
+
+%---------------------------------------------------------------------------%
+{
+\textbf{Probability Mass Function}
+(Formally defining something mentioned previously)
+\begin{itemize} \item a probability mass function (pmf) is a \textbf{\emph{function}}
+that gives the probability that a discrete random variable is exactly equal to some
+value.
+\[P(X=k)\]
+\item The probability mass function is often the primary means of defining a discrete
+probability distribution
+\item It is conventional to present the probability mass function in the form of a table.
+\end{itemize}
+}
+%--------------------------------------------------------------------------------------%
+{
+\textbf{ Binomial Example }
+(Revision from Last Class)\\
+Suppose a die is tossed 5 times. What is the probability of getting exactly 2 fours?
+
+Solution: This is a binomial experiment in which the number of trials is equal to 5, the number of successes is equal to 2, and the probability of success on a single trial is 1/6 or about 0.167. 
+
+Therefore, the binomial probability is:
+
+\[P(X=2) = ^5C_2 \times (1/6)^2 \times (5/6)^3 = 0.161\]
+}
+%--------------------------------------------------------------------------------------%
+{
+\textbf{Probability Tables}
+In the \textbf{sulis} workspace there are two important tables used for this part of the course.
+This class will feature a demonstration on how to read those tables.
+\begin{itemize}
+\item The Cumulative Binomial Tables (Murdoch Barnes Tables 1)
+\item The Cumulative Poisson Tables (Murdoch Barnes Tables 2)
+\end{itemize}
+Please get a copy of each as soon as possible.
+
+}
+
+%---------------------------------------------------------------------------%
+{
+\textbf{Probability Tables}
+\begin{itemize}
+\item For some value $r$ the tables record the probability of $P(X \geq r)$.
+\item The Student is required to locate the appropriate column based on the parameter values for the distribution in question.
+\item A copy of the Murdoch Barnes Tables will be furnished to the student in the End of Year Exam. The Tables are not required for the first mid-term exam.
+\item Knowledge of the sample space, partitioning of the sample points, and the complement rule are advised.
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+
+
+{
+\textbf{Binomial Distribution : Using Tables}
+It is estimated by a particular bank that 25\% of credit card customers pay only the minimum amount due on their monthly credit card bill and do not pay the total amount due. 50 credit card customers are randomly selected.
+\begin{enumerate}
+\item (3 marks)	What is the probability that 9 or more of the selected customers pay only the minimum amount due?
+\item (3 marks) What is the probability that less than 6 of the selected customers pay only the minimum amount due?
+\item (3 marks)	What is the probability that more than 5 but less than 10 of the selected customers pay only the minimum amount due?
+\end{enumerate}
+
+}
+
+{
+\textbf{Binomial Distribution : Using Tables}
+Demonstration on Blackboard re: how to use tables in class.
+\begin{enumerate}
+\item $P(X \geq 9) = 0.9084$
+\item $P(X < 6) = 1- P(X \geq 6) =1 - 0.9930 = 0.0070$
+\item $P(6 \leq X \leq 9) = P(X \geq 6) - P(X \geq 10) = 0.9930 - 0.8363 = 0.1567$
+\end{enumerate}
+
+}
+
+
+%------------------------------------------------------------------%
+{
+\textbf{Binomial Expected Value and Variance}
+
+
+If the random variable X has a binomial distribution with parameters n
+and p, we write
+\[ X \sim B(n,p) \]
+
+Expectation and Variance
+If $X \sim B(n,p)$, then:
+
+\begin{itemize}
+\item Expected Value of X : E(X) = np
+\item Variance of X : Var(X) = np(1-p)
+\end{itemize}
+
+Suppose n=3 and p=0.5 ( like our coin flipping example for tutorial 1)
+Then E(X) = 1.5 and V(X) = 0.75.
+
+Remark: Referring to the expected value and variance may be used to validate
+the assumption of a binomial distribution.
+
+}
+%---------------------------------------------------------------------------%
+{
+\textbf{The Geometric Distribution}
+\begin{itemize}
+\item The Geometric distribution is related to the Binomial distribution in that
+both are based on independent trials in which the probability of success
+is constant and equal to p.
+\item However, a Geometric random variable is the number of trials until the
+first failure, whereas a Binomial random variable is the number of
+successes in n trials.
+\item The Geometric distributions is often used in IT security applications.
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+{
+\textbf{The Geometric Distribution}
+
+Suppose that a random experiment has two possible outcomes, success
+with probability p and failure with probability 1-p .
+
+
+The experiment is repeated until a success happens. The number of
+trials before the success is a random variable X computed as follows
+
+\[P(X = k) = (1-p)^{(k-1)}\times p \]
+
+
+(i.e. The probability that first success is on the k-th trial)
+}
+
+
+%---------------------------------------------------------------------------%
+{
+\textbf{The Geometric Distribution: Notation}
+
+If X has a geometric distribution with parameter p, we write
+\[X \sim Geo(p) \]
+Expectation and Variance
+If $X \sim Geo(p)$, then:
+
+\begin{itemize}
+\item Expected Value of X : E(X) = 1/p
+\item Variance of X : Var(X) = $(1-p)/p^2$.
+\end{itemize}
+}
+
+%---------------------------------------------------------------------------%
+{
+\textbf{Poisson Experiment}
+A Poisson experiment is a statistical experiment that has the following properties:
+\begin{itemize}
+\item The experiment results in outcomes that can be classified as successes or failures.
+\item The average number of successes (m) that occurs in a specified region is known.
+\item The probability that a success will occur is proportional to the size of the region.
+\item The probability that a success will occur in an extremely small region is virtually zero.
+\end{itemize}
+Note that the specified region could take many forms. For instance, it could be a length, an area, a volume, a period of time, etc.
+}
+
+%---------------------------------------------------------------------------%
+{
+\textbf{Poisson Distribution}
+A Poisson random variable is the number of successes that result from a Poisson experiment.
+
+The probability distribution of a Poisson random variable is called a Poisson distribution.
+
+
+}
+
+%---------------------------------------------------------------------------%
+{
+\textbf{The Poisson Probability Distribution}
+\begin{itemize}
+\item The number of occurrences in a unit period (or space)
+\item The expected number of occurrences is $m$
+\item Given the mean number of successes ($m$) that occur in a specified region, we can compute the Poisson probability based on the following formula (next slide).
+\end{itemize}
+}
+
+%---------------------------------------------------------------------------%
+{
+\textbf{Poisson Formulae}
+The probability that there will be $k$ occurrences in a unit time period is denoted $P(X=k)$, and is computed as follows.
+\Large
+\[ P(X = k)=\frac{m^k e^{-m}}{k!} \]
+
+}
+%---------------------------------------------------------------------------%
+{
+\textbf{Poisson Formulae}
+Given that there is on average 2 occurrences per hour, what is the probability of no occurrences in the next hour? \\ i.e. Compute $P(X=0)$ given that $m=2$
+\Large
+\[ P(X = 0)=\frac{2^0 e^{-2}}{0!} \]
+\normalsize
+\begin{itemize}
+\item $2^0$ = 1
+\item $0!$ = 1
+\end{itemize}
+The equation reduces to
+\[ P(X = 0)=e^{-2} = 0.1353\]
+}
+%---------------------------------------------------------------------------%
+{
+\textbf{Poisson Formulae}
+What is the probability of one occurrences in the next hour? \\ i.e. Compute $P(X=1)$ given that $m=2$
+\Large
+\[ P(X = 1)=\frac{2^1 e^{-2}}{1!} \]
+\normalsize
+\begin{itemize}
+\item $2^1$ = 2
+\item $1!$ = 1
+\end{itemize}
+The equation reduces to
+\[ P(X = 1) = 2 \times e^{-2} = 0.2706\]
+}
+%---------------------------------------------------------------------------%
+\end{document}

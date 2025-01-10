@@ -1,0 +1,128 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+%---------------------------------------------------------------------%
+
+\chapter{6. Discrete Probability Distributions}
+
+{
+\begin{itemize}
+\item  Now consider an experiment with only two outcomes. Independent repeated trials of such an experiment are
+called Bernoulli trials, named after the Swiss mathematician Jacob Bernoulli (16541705). \item  The term \textbf{\emph{independent
+trials}} means that the outcome of any trial does not depend on the previous outcomes (such as tossing a coin).
+\item  We will call one of the outcomes the ``success" and the other outcome the ``failure".
+\item 
+Let $p$ denote the probability of success in a Bernoulli trial, and so $q = 1 - p$ is the probability of failure.
+A binomial experiment consists of a fixed number of Bernoulli trials. \item  A binomial experiment with $n$ trials and
+probability $p$ of success will be denoted by
+\[B(n, p)\]
+\end{itemize}
+}
+%-------------------------------------------------------------%
+
+
+\section{Discrete Probability Distributions}
+%--------------------------------------------------------------------------------------%
+\begin{itemize}
+
+\item In \texttt{R}, calculations are performed using the \texttt{binom} family of functions and \texttt{pois} family of functions respectively.
+
+\item Over the next set of lectures, we are now going to look at two important discrete probability distributions
+
+\item The first is the \textbf{\emph{binomial}} probability distribution.
+
+\item The second is the Poisson probability distribution.
+
+\item In \texttt{R}, calculations are performed using the \texttt{binom} family of functions and \texttt{pois} family of functions respectively.
+\begin{itemize}
+\item Poisson
+\item Binomial
+\item Geometric
+\item Hypergeometric 
+\end{itemize}
+\end{itemize}
+
+\subsection{Discrete Random Variable}
+\begin{itemize}
+\item A discrete random variable is one which may take on only a countable number of distinct values such as $\{0, 1, 2, 3, 4, ... \}$.\item Discrete random variables are usually (but not necessarily) counts. \item If a random variable can take only a finite number of distinct values, then it must be discrete. 
+\item Examples of discrete random variables include the number of children in a family, the Friday night attendance at a cinema, the number of patients in a doctor's surgery, the number of defective light bulbs in a box of ten.
+\end{itemize}
+
+\textbf{Discrete Random Variables}
+\begin{itemize}
+\item For a discrete random variable observed values can occur only at isolated points along a scale of values. In other words, observed values must be integers.
+\item Consider a six sided die: the only possible observed values are 1, 2, 3, 4, 5 and 6. 
+\item It is not possible to observe values that are real numbers, such as 2.091.
+
+\item \textit{(Remark: it is possible for the average of a discrete random variable to be a real number.)}
+\item Therefore, it is possible that all numerical values for the variable can be listed in a table with accompanying
+probabilities. 
+\item
+There are several standard probability distributions that can serve as models for a wide variety of discrete random variables involved in business applications. 
+\end{itemize}
+
+\newpage
+
+%---------------------------------------------------%
+
+
+
+
+{
+%%- \frametitle{Random Variables}
+Hence, the random variable $X$ should be thought of as the
+unknown numerical result of an experiment to be carried out ($X$ is
+described by a distribution).
+
+A realisation, denoted by a small letter, is a known result of an
+experiment already carried out.
+
+
+\begin{description}
+\item[X] : random variable name (e.g Height)
+\item[x] : realisation (e.g. 1.82 metres) 
+\end{description}
+
+\subsection{Random Experiments}
+
+\begin{itemize}
+
+\item Typical examples of a random experiment are
+
+\begin{itemize}
+\item { a role of a die,}
+
+\item { a toss of a coin,}
+
+\item { drawing a card from a deck.}
+\end{itemize}If the experiment is yet to be performed we refer to possible outcomes
+or possibilities for short. \vspace{0.2cm}
+\item If the experiment has been performed, we
+refer to realized outcomes or \textbf{realizations}
+\end{itemize}
+
+
+%---------------------------% \frametitle{Continuous Random Variable}
+\begin{itemize} \item
+A continuous random variable is one which takes an infinite number of possible values. \item Continuous random variables are usually measurements. \item Examples include height, weight, the amount of sugar in an orange, the time required to run a computer simulation. \end{itemize}
+
+
+
+\end{document}
