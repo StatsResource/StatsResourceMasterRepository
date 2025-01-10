@@ -1,0 +1,46 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\large
+
+The amount of time required for routine automobile transmission service is normally distributed with the mean 45 minutes and the standard deviation 8.0 minutes. 
+	
+	The service manager plans to have work begin on the transmission of a customer’s car 10 min after the car is dropped off, and the customer is told that the car will be ready within 1 hour total time (i.e. after  the car is dropped off). 
+	
+	What is the probability that the service manager will be wrong?
+
+\section*{Solution}
+\[X \sim N(\mu,\sigma^2) \]
+\begin{framed}
+\noindent \textbf{Compute the Z-Score}
+\[ z_{o} = \frac{ x_{o} - \mu}{\sigma} \]
+\end{framed}
+\begin{itemize}
+    \item $P(X\leq x_{o}) = P(Z \leq z_{o})$
+    \item $P(Z \leq -z_{o} = P(Z \geq z_{o})$
+\end{itemize}
+\end{document}

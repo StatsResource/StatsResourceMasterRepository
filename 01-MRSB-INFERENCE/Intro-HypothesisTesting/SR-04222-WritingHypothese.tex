@@ -1,0 +1,90 @@
+	\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Hypothesis Testing} %\input{tcilatex}
+
+\begin{document}
+\section*{Writing the Null Hypothesis}
+
+
+In statistics, a hypothesis is a claim or statement made around a property of a population.
+A hypothesis test (also called a test of significance)  is a standard procedure for testing a claim about that property.
+\begin{itemize}
+	\item The null hypothesis is a statement about the value of a population parameter.
+	\item The null hypothesis is denoted $H_0$.
+	\item It must contain a condition of equality. (i.e. ` = ' , `$ \leq$' or `$\geq$')
+\end{itemize}
+
+
+
+\begin{itemize}
+\item The null hypothesis is denoted $H_0$.
+\item It will often express it's argument in the form of a mathematical relation, with a written description of the hypothesis (we will do it this way).
+\item $H_0$ will always refer to the population parameter ( i.e. never the observed value) and must contain a condition of equality. (i.e. ` = ' , `$ \leq$' or `$\geq$')
+\end{itemize}
+
+
+Simple examples of null hypothesis ( disregard context for the time being ):
+\begin{itemize}
+	\item $H_0$:  $\mu = 350$. Population mean is 350.
+	\item $H_0$:  $\pi = 70\%$. Population proportion is $70\%$.
+	\item $H_0$:  $\mu \leq 100$. Population mean is less than or equal to $100$.
+	\item $H_0$:  $\pi \geq 60\%$. Population proportion is greater than or equal to $60\%$.
+	
+\end{itemize}
+
+
+
+\begin{itemize}
+	\item Recall our experiment of throwing a dice 100 times and computing the result, performed using a fair die and a crooked die.
+	\item Suppose we perform this experiment again. We do not know whether the die we are using is fair or crooked. As we have no reason to believe otherwise, we will assume the dice is fair.
+	\item We expect a result close to 350. This can be our null hypothesis.
+	\item We will write this as $H_0$:  $\mu = 350$. The die is fair.
+\end{itemize}
+
+
+
+
+\subsection*{Writing the Alternative Hypothesis}
+%In statistics, a hypothesis is a claim or statement made around a property of a population.
+%A hypothesis test (also called a test of significance) is a standard procedure for testing a claim about that %property.
+\begin{itemize}
+	\item The alternative hypothesis is denoted $H_1$ ( or $H_a$)
+	\item It will express the precise opposite argument of the null hypothesis, again mathematically with a written description of the hypothesis.
+	\item $H_1$ use the following relational operators; ` $\neq$ ' , `$<$' or `$>$', depending on the null hypothesis.
+	\item $H_1$ will never contain a condition of equality.
+\end{itemize}
+
+
+Simple examples of Alternative hypothesis ( based on previous example ):
+\begin{itemize}
+	\item $H_0$:  $\mu = 350$.  Therefore  $H_1$:  $\mu \neq 350$. (Die Throws Example)
+	\item $H_0$:  $\pi = 70\%$. Therefore  $H_1$:  $\pi \neq 70\%$.
+	\item $H_0$:  $\mu \leq 100$. Therefore  $H_1$:  $\mu > 100$.
+	\item $H_0$:  $\pi \geq 60\%$. Therefore  $H_1$:  $\pi < 60\%$.
+\end{itemize}
+Remember to provide a brief written description for both hypotheses.
+
+
+
+
+\end{document}

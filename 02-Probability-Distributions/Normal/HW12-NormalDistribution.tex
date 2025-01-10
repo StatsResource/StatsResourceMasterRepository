@@ -1,0 +1,144 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{graphicx}
+%\usepackage{amscd}
+
+\usepackage{subfiles}
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{amsthm, amsmath}
+\usepackage{amsbsy}
+\usepackage{framed}
+\usepackage[usenames]{color}
+\usepackage{listings}
+\lstset{% general command to set parameter(s)
+	basicstyle=\small, % print whole listing small
+	keywordstyle=\color{red}\itshape,
+	% underlined bold black keywords
+	commentstyle=\color{blue}, % white comments
+	stringstyle=\ttfamily, % typewriter type for strings
+	showstringspaces=false,
+	numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, %
+	frame=shadowbox,
+	rulesepcolor=\color{black},
+	columns=fullflexible
+} %
+%\usepackage[dvips]{graphicx}
+\usepackage{natbib}
+\bibliographystyle{chicago}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.5}
+\pagenumbering{arabic}
+%\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{ill}[theorem]{Example}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{notation}{Notation}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+\renewcommand{\thenotation}{}
+%\renewcommand{\thetable}{\thesection.\arabic{table}}
+%\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+
+\author{ } \date{ }
+
+\begin{document}
+
+Normal Distribution 
+Calculating Z scores
+Three Rules 
+
+
+%---------------------------------------------------------%
+%- Section 4.3.1  
+\section{The normal probability distribution}
+The form, or shape, of the normal distribution is the bell shaped curve we met in section 2.
+The probability density function that defines the bell-shaped curve if the normal distribution is given by
+
+ 
+where 
+\[ Formula\]
+\begin{itemize}
+\item $\mu$  = expected value, or mean, of the random variable x.
+\item $\sigma$  = standard deviation of the random variable x.
+\end{itemize}
+
+[Remark - We will never be using this formula]
+
+%---------------------------------------------------------%
+ 
+\subsection{Characteristics of the Normal Probability Distribution}
+
+\begin{enumerate}
+\item The highest point on the normal curve is at the mean, which is also the median and mode of the distribution.
+
+
+\item  [VERY IMPORTANT]
+The normal probability curve is bell-shaped and symmetric, with the shape of the curve to the left of the mean a mirror image of the shape of the curve to the right of the mean.
+
+\item  The standard deviation determines the width of the curve. Larger values of the the standard deviation result in wider flatter curves, showing more dispersion in data.
+
+
+\item  The total area under the curve for the normal probability distribution is 1.
+
+\item Useful Rules of Thumb
+
+\begin{itemize}
+\item	The mean  $pm$ 1 standard deviation includes 68% of the observations ,leaving 16\% (approx) in each tail.
+
+\item	The mean  $pm$ 1.96 standard deviation includes 95% of the observations ,leaving 2.5\% (approx) in each tail.
+   
+\item	The mean  $pm$ 2.58 standard deviation includes 99% of the observations ,leaving 0.5\% (approx) in each tail.
+\end{itemize}
+\end{enumerate}
+%---------------------------------------------------------%
+Problem 1
+Molly earned a score of 940 on a national achievement test. 
+The mean test score was 850 with a standard deviation of 100. 
+What proportion of students had a higher score than Molly? (Assume that test scores are normally distributed.)
+(A) 0.10 
+(B) 0.18 
+(C) 0.50 
+(D) 0.82 
+(E) 0.90
+Solution
+The correct answer is B. As part of the solution to this problem, we assume that test scores are normally distributed. In this way, we use the normal distribution as a model for measurement. Given an assumption of normality, the solution involves three steps.
+First, we transform Molly's test score into a z-score, using the z-score transformation equation. 
+
+z = (X - μ) / σ = (940 - 850) / 100 = 0.90
+Then, using an online calculator (e.g., Stat Trek's free normal distribution calculator), a handheld graphing calculator, or the standard normal distribution table, we find the cumulative probability associated with the z-score. In this case, we find P(Z < 0.90) = 0.8159.
+Therefore, the P(Z > 0.90) = 1 - P(Z < 0.90) = 1 - 0.8159 = 0.1841.
+Thus, we estimate that 18.41 percent of the students tested had a higher score than Molly.
+
+
+
+Normal Distribution Example 2
+Suppose scores on an IQ test are normally distributed. If the test has a mean of 100 and a standard deviation of 10, what is the probability that a person who takes the test will score between 90 and 110?
+
+Solution: Here, we want to know the probability that the test score falls between 90 and 110. The "trick" to solving this problem is to realize the following:
+P( 90 < X < 110 ) = P( X < 110 ) - P( X < 90 )
+We use the Normal Distribution Calculator to compute both probabilities on the right side of the above equation.
+To compute P( X < 110 ), we enter the following inputs into the calculator: The value of the normal random variable is 110, the mean is 100, and the standard deviation is 10. We find that P( X < 110 ) is 0.84.
+To compute P( X < 90 ), we enter the following inputs into the calculator: The value of the normal random variable is 90, the mean is 100, and the standard deviation is 10. We find that P( X < 90 ) is 0.16.
+
+We use these findings to compute our final answer as follows:
+P( 90 < X < 110 ) = P( X < 110 ) - P( X < 90 )
+P( 90 < X < 110 ) = 0.84 - 0.16
+P( 90 < X < 110 ) = 0.68
+Thus, about 68% of the test scores will fall between 90 and 110.
+
+ 
+\end{document}

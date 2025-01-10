@@ -1,0 +1,172 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+%\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+%\lhead{StatsResource} \rhead{Kevin O'Brien} \chead{Confidence Intervals} %\input{tcilatex}
+
+\begin{document}
+
+
+%--------------------------------------------------------------------------------------%
+\large 
+\subsection*{The Exponential Distribution}
+\begin{itemize}
+\item The exponential distribution is a continuous probability distribution commonly used to model durations or ``lifetimes".
+\item A lifetime could mean
+\begin{itemize}
+\large
+\item the lifespan of a component
+\item the time it takes to complete a task
+\item the amount of time between two successive occurrences, such as withdrawals from a bank machine.
+\end{itemize}
+\item The average lifetime is denoted $E(X) = \mu$.
+\item The variance of lifetimes is computed as $V(X) = \mu^2$
+\end{itemize}
+
+
+%--------------------------------------------------------------------------------------%
+\begin{framed}
+\noindent \textbf{Important Formulas}\\
+\large
+The probability that a lifetime $X$ will be less than a period of $k$ time units is given by
+\[
+P( X \leq k) = 1- e^{{-k \over \mu}}.
+\]
+Similarly, the probability that a lifetime $X$ will be greater than a period of $k$ time units is given by
+\[
+P( X \geq k) = e^{{-k \over \mu}}.
+\]
+\end{framed}
+%--------------------------------------------------------------------------------------%
+\newpage 
+\subsection*{Sample Question}
+\large
+In a large company computer network, there is an average of 40 log-ons to the network per hour.
+\begin{enumerate}[(a)]
+\item What is the average amount of time between log-ons?
+\item What is the probability that there will be no log-ons for at least 2.4 minutes
+\item What is the probability that the next log-on within 1 minutes of the last?
+\item What proportions of log-ons occur between 1 minutes and 2.4 minutes of the last log-on?
+\end{enumerate}
+
+\subsection*{Solution (Part a) }
+
+\large
+\begin{itemize} \item What is the average amount of time between log-ons?
+
+\item If there is 40 log-ons in 60 minutes, it is reasonable to think that someone logs on every 1.5 minutes.
+\item Therefore $\mu = 1.5$
+\end{itemize}
+
+
+\subsection*{Solution (Part b) }
+\large
+
+What is the probability that there will be no log-ons for at least 2.4 minutes?\\
+\bigskip
+From the formulae:
+\[
+P( X \geq k) = e^{{-k \over \mu}} .
+\]
+\medskip
+\[
+P( X \geq 2.4) = e^{{-2.4 \over 1.5}} = e^{-1.6} = 0.2018.
+\]
+
+\medskip 
+\subsection*{Solution (Part c) }
+\large
+
+What is the probability that the next log-on within 1 minutes of the last?\\
+i.e. $P(X \leq 1)$
+\bigskip
+
+\[
+P( X \leq 1) = 1 - e^{{-1 \over 1.5}} = 1 -  e^{-0.6666}
+\]
+
+\[
+P( X \leq 1) = 1 -  0.5135  = 0.4865
+\]
+\medskip 
+\subsection*{Solution (Part d) }
+\large
+
+What proportions of log-ons occur between 1 minutes and 2.4 minutes of the last log-on?\\
+\bigskip
+\begin{itemize}
+\item \textbf{Too Low} $P(X \leq 1) = 0.4865$\\
+\item \textbf{Too High} $P(X \geq 2.4) = 0.2018$\\
+\item Probability of being inside interval %$P(1 \leq X \leq 2.4) = 0.31152$.
+\[P(1 \leq X \leq 2.4) = 1- ( 0.4865 + 0.2018) = 0.3117\]
+\end{itemize}
+
+\end{document}
+
+
+
+
+
+\item What is the probability that the lifespan of the laptop will be at least
+6 years?
+\item What is the probability that the lifespan of the laptop will not exceed
+4 years?
+\item What is the probability of the lifespan being between 5 years and 6
+years?
+
+
+%----------------------------------------------------------------------------%
+{
+\subsection*{The Exponential Distribution}
+A continuous random variable having p.d.f. f(x), where:
+$f(x) = \lambda x e ^{-\lambda x} $
+is said to have an exponential distribution, with parameter $\lambda$.
+The cumulative distribution is given by:
+$F(x) = 1 - e^{\lambda x}$
+
+Expectation and Variance
+$E(X) = 1 / \lambda$\\
+$\operatorname{Var}(X = 1 / \lambda^2$\\
+
+
+\subsection*{Example}
+Suppose that the service time for a customer at a fast-food outlet
+has an exponential distribution with mean 3 minutes. What is the probability that a
+customer waits more than 4 minutes?
+
+\[ P(X  \leq 4) = 1 -  e^{-4/3} \]
+
+\[ P(X  \leq 4) = e^{-4/3} = 0.2636 \]
+}
+
+
+
+Suppose the lifetime of a PC is exponentially distributed with
+mean $\mu =5$
+We should be told the average lifetime $\mu$.
+\[
+P( X \geq x_o) = e^{{-x_o \over \mu}}
+\]
+
+
+
+\end{document}
+

@@ -1,0 +1,44 @@
+newpage
+begin{itemize}
+%---------------------------------- %
+
+item[(d)] textbf{textit{ Inference Procedures with texttt{R} (4 Marks)}}
+Consider the following inference procedure performed on data set $X$.
+begin{center}
+begin{framed}
+begin{verbatim}
+ shapiro.test(X)
+        Shapiro-Wilk normality test
+data  X
+W = 0.9619, p-value = 0.6671
+end{verbatim}
+end{framed}
+end{center}
+
+begin{itemize}
+
+item  Describe what is the purpose of this statistical procedure.
+
+item  What are the null and alternative hypotheses
+
+item  Write the conclusion that follows from the code output, displayed above.
+end{itemize}
+end{itemize}
+
+%---------------------------------- %
+begin{itemize}
+
+item[(e)] textbf{textit{Graphical Procedures ()}}
+begin{itemize}
+
+item  The graph below depicts a normal probability plot. Describe what this plot is used for and how to interpret one.
+
+item[(ii)] What is your conclusion for the data used to construct the normal probability plot below
+end{itemize}
+begin{center}
+includegraphics[scale=0.38]{10AQQplot}
+end{center}
+end{itemize}
+%end{document}
+
+%end{itemize}

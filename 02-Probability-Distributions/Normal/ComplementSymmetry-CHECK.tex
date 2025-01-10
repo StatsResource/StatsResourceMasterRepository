@@ -1,0 +1,63 @@
+
+%------------------------------------------------------------------%
+\frame{
+\frametitle{Complement and Symmetry Rules}
+
+Any normal distribution problem can be solved with some combination of the following rules.
+\begin{itemize} \item \textbf{Complement rule} \item Common to all continuous random variables
+\[P(Z \geq k) = 1 - P(Z \leq k) \]
+Similarly
+\[P(X \geq k) = 1 - P(X \leq k) \]
+\end{itemize}
+
+\[P(Z \leq 1.28) = 1 - P(Z \geq 1.28)  = 1-0.1003 = 0.8997\]
+}
+
+%------------------------------------------------------------------%
+\frame{
+\frametitle{Complement and Symmetry Rules}
+\begin{itemize}
+\item \textbf{Symmetry rule}
+\item
+This rule is based on the property of symmetry mentioned previously.
+\item
+Only the probabilities corresponding to values between 0 and 4 are tabulated in Murdoch Barnes.
+\item
+If we have a negative value of k, we can use the symmetry rule.
+\end{itemize}
+\[P(Z \leq -k) = P(Z \geq k) \]
+by extension, we can say
+\[P(Z \geq -k) = P(Z \leq k) \]
+}
+%------------------------------------------------------------------%
+\frame{
+\frametitle{Z Scores: Example 1 }
+Find $P(Z \geq -1.28)$\\
+\textbf{Solution}\\
+\begin{itemize}
+\item Using the symmetry rule
+\[P(Z \geq -1.28) = P(Z \leq 1.28) \]
+\item Using the complement rule
+\[P(Z \geq -1.28) = 1 - P(Z \geq 1.28) \]
+\[P(Z \geq -1.28) = 1 - 0.1003 = 0.8997 \]
+\end{itemize}
+}
+%------------------------------------------------------------------%
+\frame{
+\frametitle{Z Scores: Example 2 }
+Find the probability of a Z random variable being between -1.8 and 1.96?
+i.e. Compute $P(-1.8 \leq Z \leq 1.96)$\\
+Solution
+\begin{itemize}
+\item Consider the complement event of being in this interval: a combination of being too low or too high.
+\item
+The probability of being too low for this interval is $P(Z \leq -1.80) = 0.0359$ (check)
+\item
+The probability of being too high for this interval is $P(Z \geq 1.96) = 0.0250$ (check)
+\item
+Therefore the probability of being \textbf{outside} the interval is 0.0359 + 0.0250 = 0.0609.
+\item
+Therefore the probability of being \textbf{inside} the interval is 1- 0.0609 = 0.9391
+\[P(-1.8 \leq Z \leq 1.96) = 0.9391\]
+\end{itemize}
+}

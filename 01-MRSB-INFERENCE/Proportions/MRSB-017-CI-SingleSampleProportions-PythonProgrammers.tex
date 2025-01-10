@@ -1,0 +1,138 @@
+	\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Confidence Intervals} %\input{tcilatex}
+
+\begin{document}
+
+
+
+% \section*le proportion test}
+% \[ H_0: \pi = 60\%\]
+% \[ H_1: \pi \neq 60\%\]
+
+
+\section*{Point Estimates for proportions }
+
+\begin{itemize}
+\item Of a sample of 160 computer programmers, 56 reported than Python was their primary programming language.
+\item Let $\pi$ be the proportion of all programmers who regard Python as their programming language. 
+\item What is the point estimate for $\pi$?
+\end{itemize}
+
+
+% \noindent \textbf{Confidence Intervals for Sample Proportion}
+
+
+
+\subsection*{Quantile}
+\begin{itemize}
+\item In the cases of large samples ($ n > 30$) , the standard normal ( `Z' ) distribution is used.
+
+\end{itemize}
+
+
+\textbf{ Sample Proportion : Example}
+\[ \mbox{S.E.}(\hat{p}) =  \sqrt{\frac{0.35 \times 0.65}{160}} = \sqrt{\frac{0.2275}{160}}\]
+
+\[ \mbox{S.E.}(\hat{p}) = \sqrt{0.001421875} = 0.03770\]
+
+\textbf{95\% Confidence Interval}
+\[0.35 \pm (1.96 \times 0.0377) = (0.2761, 0.4239)\]
+
+%-----------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+
+\section{Confidence Intervals}
+
+
+
+
+
+\begin{itemize}
+
+\item It is often easier to work in terms of percentages, rather than proportions.
+If you are working in terms of percentages, remember to use the appropriate \textbf{\textit{complement value}} in the standard error formula (i.e. $100 - \hat{p}$)
+
+\item The standard error, in the case of sample proportions, is
+\[ \mbox{S.E.}(\hat{p}) = \sqrt{\frac{\hat{p}\times (100-\hat{p})}{n}}\]
+\end{itemize}
+
+
+%--------------------------------------------------%
+
+\subsection*{Confidence Intervals for Sample Proportion}
+Unlike confidence intervals for sample means, there is only one type of confidence interval when dealing with sample proportions.
+
+\textbf{Optional}
+\begin{itemize}
+
+\item  It is often easier to work in terms of percentages, rather than proportions.
+\item  If you are working in terms of percentages, remember to use the appropriate \textbf{\textit{complement value}} in the standard error formula (i.e. $100 - \hat{p}$)
+\end{itemize}
+
+
+\subsection*{Confidence Intervals for Sample Proportion}
+\begin{itemize}
+\item  The standard error, in the case of sample proportions, is
+\[ \mbox{S.E.}(\hat{p}) = \sqrt{\frac{\hat{p}\times (100-\hat{p})}{n}}\] \smallskip
+
+
+\end{itemize}
+
+
+
+\begin{description}
+\item[Point Estimate] The sample proportion is computed as follows
+\[ \hat{p} = \frac{x}{n} = \frac{56}{160} = 0.35 9i.e. 35\%\]
+\item[Quantile] We are asked for a 95\% confidence interval. The quantile is therefore
+\[ z_{\alpha/2} =1.96\]
+\item[Standard Error] The standard error, with sample size n=120 is computed as follows
+\[ \mbox{S.E.}(\hat{p}) = \sqrt{\frac{\hat{p} \times (1-\hat{p})}{n}} =  \sqrt{\frac{0.35 \times 0.65}{160}}\]
+\item (Full solution to follow on whiteboard)
+\end{description}
+%===================================================================================%
+\subsection*{Confidence Interval for a proportion}
+
+Refer back to our earlier example of the proportion of Python programmers. Compute a $95\%$ confidence interval.\\
+
+\begin{itemize}
+    \item \textbf{Determining the Quantile}
+The confidence level is $95\%$. The sample size is greater than 30. Therefore the appropriate quantile is 1.96.\\
+\item 
+\textbf{Computing the Standard Error}
+
+\[
+S.E. (\hat{p}) \;=\; \sqrt{ {35 \times 65 \over 160 }} =  3.77\%
+\] \bigskip
+
+\item \textbf{Confidence Interval for proportion}
+
+\[
+35 \pm (1.96 \times 3.77) \%  = (35 \pm7.4) \% = (27.6\%,42.4\%)
+\]
+\end{itemize}
+
+
+
+\end{document}

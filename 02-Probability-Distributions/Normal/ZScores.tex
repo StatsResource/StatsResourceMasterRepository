@@ -1,0 +1,105 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Normal Distribution} %\input{tcilatex}
+
+\begin{document}
+
+\section*{The Standard Normal ($Z$) Distribution}
+
+\begin{itemize}
+\item Since every different combination of $\mu$ and $\sigma$ would generate a different normal
+probability distribution, tables of normal probabilities are based on one
+particular distribution: the standard normal distribution.  
+	\item The standard normal distribution is a special case of the normal distribution with a mean $\mu= 0$ and a standard deviation $\sigma =1$.
+	\item We denote the standard normal random variable as $Z$ rather than $X$. We denote it mathematically
+	\[ Z \sim N(\mu=0,\sigma^2 = 1)\]
+	
+	\item The distribution is well described in statistical tables (i.e. Murdoch Barnes Table 3).
+	\item Rather than computing probabilities from first principles, which is very difficult, probabilities from distributions other than the Z distribution, e.g. X $\sim N(\mu=100, \sigma^2 =15^2$), can be computed using the Z distribution, a much easier approach. (We shall demonstrate how shortly.)
+\end{itemize}
+
+
+
+%===================================================================================%
+\subsection*{Standardization Formula}
+\begin{itemize}
+\item All normally distributed random variables have corresponding $Z$ values, called \textbf{\emph{Z-scores}}.
+\item 
+For normally distributed random variables, the Z-score can be found using the \textbf{\emph{standardization formula}};
+\[
+z_{0} = {x_0 - \mu \over \sigma}
+\]
+where $x_o$ is a score from the underlying normal (``X") distribution, $\mu$ is the mean of the original normal distribution, and $\sigma$ is the standard deviation of original normal distribution.
+\item 
+Therefore $z_o$ is the z-score that corresponds to $x_o$.
+% \item 
+% Any value X from a normally distributed population % can be converted into the equivalent standard 
+% normal value Z (i.e. a `Z value') by the formula
+% \[ Z = \frac{X - \mu}{\sigma}\]
+\end{itemize}
+%==================================================================================%
+\subsection*{An Important Identity}
+\begin{itemize}
+\item If two values $z_o$ and $x_o$ are related in the following way, for some values $\mu$ and $\sigma$,
+\[
+z_{0} = {x_0 - \mu \over \sigma}
+\]
+\item Then we can can say
+
+\[ P(X \geq x_o) = P(Z \geq z_o) \]
+
+or alternatively
+
+\[ P(X \leq x_o) = P(Z \leq z_o) \]
+
+\item This is fundamental to solving problems involving normal distributions.
+\end{itemize}
+
+
+\noindent \textbf{Remarks}
+\begin{itemize}
+\item For extra clarity : Terms with subscripts mean particular values, and are not variable names. Variable names are denoted with capital letters.
+\item A computed Z-score is a normally distributed random variable only if the underlying distribution (X) is normally distributed. If the underlying distribution is not normal, then using Z-scores is not a valid approach.
+\end{itemize}
+%=========================================================================================== %
+\subsubsection*{Example 1}
+\begin{itemize}
+\item Suppose that mean $\mu = 105 $ and that standard deviation $\sigma = 8$.
+\item What is the Z-score for $x_o = 117$?
+\[
+z_{117} = {x_o - \mu \over \sigma} = {117 - 105 \over 8} = {12 \over 8} = 1.5
+\]
+\item Therefore $z_{117} = 1.50$
+\item Remark: $P(X \geq 117) = P(Z \geq 1.50)$.
+\end{itemize}
+
+\subsubsection*{Example 2}
+
+\begin{itemize}
+\item Suppose that mean $\mu = 80 $ and that standard deviation $\sigma = 8$.
+\item What is the Z-score for $x_o = 100$?
+\[
+z_{100} = {x_0 - \mu \over \sigma} = {100 - 80 \over 8} = {20 \over 8} = 2.50
+\]
+\item Therefore the Z score is : $z_{100} = 2.50$
+\end{itemize}
+\end{document}

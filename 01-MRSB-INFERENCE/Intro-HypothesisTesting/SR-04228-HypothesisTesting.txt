@@ -1,0 +1,145 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{framed}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MA4603} \rhead{Kevin O'Brien} \chead{Midterm
+Assessment Paper - Version E } %\input{tcilatex}
+
+\begin{document}
+
+Consider the following data set of seven numbers:
+
+\begin{center}
+	\textbf{\texttt{29 14 17 30 19 25 13}}
+\end{center}
+% 4 Marks
+
+\noindent For this sample, compute the following descriptive statistics:
+\begin{itemize}
+	%\item[a.] (1 Mark) The median,
+	\item[a.] (1 Mark) The mean,
+	\item[b.] (1 Mark) The variance,
+	\item[c.] (1 Mark) The standard deviation.
+\end{itemize}
+
+\subsection*{Q1. Descriptive Statistics B (2 Marks)} % 7 Marks
+The heights for a group of forty rowing club members are tabulated as follows:
+
+\begin{table}[ht]
+	\begin{center}
+		\begin{tabular}{|rrrrrrrrrr|}
+			
+			\hline
+			127& 136& 136& 143& 146& 146& 146& 147& 150& 156\\
+			156& 160& 161& 161& 163& 164& 166& 166& 167& 168\\
+			169& 171& 171& 172& 172& 172& 172& 174& 175& 176\\
+			176& 176& 180& 180& 182& 183& 184& 186& 186& 188\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+\vspace{-0.5cm}
+\begin{itemize}
+	%\item[a.] (1 Mark) The median,
+	\item[a.] (1 Mark) The median,
+	\item[b.] (1 Mark) The inter-quartile range.
+\end{itemize}
+
+The exam results for a class of 40 students are tabulated below.
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{|rrrrrrrrrr|}
+\hline
+ 20 & 36 & 37 & 37 & 41 & 43 & 44 & 44 & 44 & 45 \\
+ 49 & 50 & 51 & 52 & 52 & 52 & 52 & 53 & 53 & 53 \\
+ 54 & 55 & 55 & 57 & 57 & 59 & 59 & 59 & 62 & 62 \\
+ 65 & 66 & 67 & 70 & 71 & 74 & 86 & 87 & 89 & 98 \\
+
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\newpage
+
+\subsection*{Q2. Dixon Q Test For Outliers (4 Marks)}
+
+
+
+The typing speeds for one group of 14 Engineering students were recorded both at the beginning of year 1 of their studies. The results (in words per minute) are given below:
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		% Subject& A& B& C& D& E &F &G &H \\ \hline
+		146 &149  & 146 & 112 & 142 & 168& 153\\ \hline
+		173 & 137 & 161 & 156& 165&  170&  159
+		\\ \hline
+	\end{tabular}
+\end{center}
+Use the Dixon Q-test to determine if the lowest value (112) is an outlier. You may assume a significance level of 5\%.
+\begin{itemize}
+	\item[(i.)](1 Mark)	State the null and alternative Hypothesis for this test.
+	\item[(ii.)](2 Marks) Compute the test statistic
+	\item[(iii.)](1 Mark) State the appropriate critical value.
+	\item[(iv.)](1 Mark) What is your conclusion to this procedure.
+\end{itemize}
+\newpage
+
+
+
+\subsection*{Q3. Normal Distribution (3 Marks)} % Normal %6 MARKS
+Assume that the diameter of a critical component is normally distributed with a Mean of 200mm and a Standard Deviation of 4mm. You are required  to estimate the approximate probability of the following measurements occurring on an individual component.
+\begin{itemize}
+	\item[i.](1 Mark)	Greater than 203.9mm
+	\item[ii.](2 Marks) Less than 195.2 mm
+	%	\item [iii.](2 Marks)[$\ast$] Between 94.2 and 103 mm
+\end{itemize}
+\bigskip
+\noindent Use the normal tables to determine the probabilities for the above exercises. You are required to show all of your workings.
+\newpage
+(Write Your Answers Here)
+\newpage
+\vspace{0.25cm}
+
+\subsection*{Critical Values for Dixon Q Test}
+{
+	\Large
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline  N  & $\alpha=0.10$  & $\alpha=0.05$  & $\alpha=0.01$  \\ \hline
+			3  & 0.941 & 0.970 & 0.994 \\ \hline
+			4  & 0.765 & 0.829 & 0.926 \\ \hline
+			5  & 0.642 & 0.710  & 0.821 \\ \hline
+			6  & 0.560 & 0.625 & 0.740 \\ \hline
+			7  & 0.507 & 0.568 & 0.680  \\ \hline
+			8  & 0.468 & 0.526 & 0.634 \\ \hline
+			9  & 0.437 & 0.493 & 0.598 \\ \hline
+			10 & 0.412 & 0.466 & 0.568 \\ \hline
+			11 & 0.392 & 0.444 & 0.542 \\ \hline
+			12 & 0.376 & 0.426 & 0.522 \\ \hline
+			13 & 0.361 & 0.410 & 0.503 \\ \hline
+			14 & 0.349 & 0.396 & 0.488 \\ \hline
+			15 & 0.338 & 0.384 & 0.475 \\ \hline
+			16 & 0.329 & 0.374 & 0.463 \\ \hline
+		\end{tabular} 
+	\end{center}
+}
+
+\end{document}

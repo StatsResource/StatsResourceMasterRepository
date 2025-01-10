@@ -1,0 +1,80 @@
+
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{framed}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{Two Sample Procedures} \chead{Inference Procedures } %\input{tcilatex}
+\begin{document} \textbf{\textit{Inference Procedures (10 Marks)}}\\
+Two IT training companies, \textit{XtraTech} and \textit{YourSkills}, offer an exam preparation course for a well-known computer industry certification. A study was carried out to compare the results from the most recent group of students from both companies.
+\begin{itemize}
+\item[$\bullet$]30 students from the \textit{XtraTech} course have completed the test. The average score for these students was 910 marks with a standard deviation of 48 marks.
+
+\item[$\bullet$]25 students from the \textit{YourSkills} course have completed the test. Their average score was 950 marks with a standard deviation of 42 marks.
+\end{itemize}
+
+Test the hypothesis that the both sets of students perform equally well on average. You may use a significance level of 5\%. You may assume that both samples are normally distributed and have equal variance.
+%\end{itemize}
+\begin{itemize}
+\item[(i)]  Formally state the null and alternative hypotheses for this procedure.
+\item[(ii)]  Compute the point estimate for the difference in means of the results from both courses.
+\item[(iii)]  Compute the appropriate value for standard error for this test. Clearly show your workings.
+\item[(iv)]  Compute the test statistic.
+\item[(v)]  What is your conclusion for this procedure?
+\end{itemize}
+{
+\normalsize
+\textit{\textbf{Please turn over for the remaining sections of Question 4.}}
+}
+\newpage
+\item[(c)] \textbf{\textit{Inference Procedures (9 Marks)}}\\A study finds that $42\%$ of IT users out of a random sample of 450 in a large
+community preferred one web browser to all others. In another large community, $34\%$ of IT users out of a random sample of 350 prefer the same web browser.
+
+\begin{itemize}
+\item[(i)]  Compute the point estimate for the difference in proportions of IT users who prefer this particular web browser.
+\item[(ii)] (4 Marks) Compute a 95\% confidence interval for this difference in proportions.
+\item[(iii)] Based on this confidence interval, test the hypothesis that the proportion of IT users using this web browser is the same for both communities. State your null and alternative hypotheses clearly.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+
+\subsection*{Two sample mean}
+\begin{itemize}
+\item Hypotheses (brief written description required)
+\[ H_0 :  \mu_1 = \mu_2\]
+\[ H_1 :  \mu_1 \neq \mu_2\]
+\item 
+\item point estimate:  diffference in means (950-910=) 40 marks
+\item Standard Error (from formulae)
+\[\sqrt{\frac{s^2_1}{n_1} + \frac{s^2_2}{n_2} }\]
+\item Critical Value = 1.96 (Large Sample.)
+\end{itemize}
+
+\subsection*{Two Sample proportion}
+\begin{itemize}
+\item Hypotheses (brief written description required)
+\[ H_0 :  \pi_1 = \pi_2\]
+\[ H_1 :  \pi_1 \neq \pi_2\]
+\item point estimate:  diffference in proportions
+\item Critical Value = 1.96 (Large Sample.)
+\end{itemize}
+\end{document}

@@ -1,0 +1,60 @@
+\documentclass[]{article}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{multicol}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+% latex table generated in R 3.4.2 by xtable 1.8-2 package
+% Thu Nov 02 12:45:46 2017
+\Large
+\noindent Compute the mean and the standard deviation of the case-wise differences between X and Y (\textit{Using $\mbox{Diff} = Y-X$}).\\
+\[ X = \{129, 111, 110, 113, 109, 129, 125, 125, 130, 123  \}\]
+\[ Y = \{146, 124, 128, 120, 120, 132, 138, 137, 129, 130  \}\]
+
+\centering
+\begin{tabular}{|c||c|c||c|c|}
+\hline
+Case &     X  & Y     & Diff     &  (Diff)$^2$     	\\
+\phantom{space}      &   \phantom{space}     &   \phantom{space}     & (Y-X)    &  \phantom{space} \\ \hline
+1 & 129 & 146 & 17 & 289	\\
+\hline
+2& 111 & 124 & 13 & 169	\\
+\hline
+3& 110 & 128 & 18 & 324	\\
+\hline
+4& 113 & 120 & 7  & 49 	\\
+\hline
+5& 109 & 120 & 11 & 121	\\
+\hline
+6& 129 & 132 & 3  & 9  	\\
+\hline
+7& 125 & 138 & 13 & 169	\\
+\hline
+8& 125 & 137 & 12 & 144	\\
+\hline
+9& 130 & 129 & -1 & 1  	\\
+\hline
+10& 123 & 130 & 7  & 49 	\\ \hline
+&&&&\\
+&&Sum&100& 1324 \\ \hline
+
+\end{tabular}
+
+
+\end{document}

@@ -1,0 +1,153 @@
+
+
+%------------------------------------------------------------------------%
+\section{The Continuous Uniform Distribution}
+%------------------------------------------------------------------------%
+\frame{
+\frametitle{Parameters}
+\Large
+
+The continuous uniform distribution is characterised by the following parameters
+
+\begin{itemize}
+\item The lower limit $a$
+\item The upper limit $b$
+\end{itemize}
+
+It is not possible to have an outcome that is lower than $a$ or larger than $b$.
+
+\[ P(X < a) = P(X > b) = 0\]
+}
+
+%------------------------------------------------------------------------%
+\frame{
+\Large
+\begin{itemize}
+\item The only possible outcomes are between $a$ and $b$. Suppose $a = 3$ and $b = 6$.\bigskip
+\item The following values are possible outcomes: $3.14, \;3.78,\; 4.66,\; 5.8,\;5.9999.$ \bigskip
+\item The probability of being exactly equal to $3$ or $6$ can be assumed to be zero. \bigskip
+\item The following outcomes are not possible, either because they are too high or too low.
+$1.67,\;2,\;67,\;7.14,\; 8.78.$
+\end{itemize}
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+	\frametitle{Continuous Uniform Distribution}
+	A random variable X is called a continuous uniform random variable over the interval $(a,b)$ if it's probability density function is given by
+	
+	\[ f_{X}(x)  =  { 1 \over b-a}   \hspace{2cm}  \mbox{ when } a \leq x \leq b\]
+	
+	The corresponding cumulative density function is
+	
+	\[ F_x(x) = { x-a \over b-a}   \hspace{2cm}  \mbox{ when } a \leq x \leq b\]
+	
+}
+
+%-----------------------------------------------------------------------------%
+
+\frame{
+	
+	The mean of the continuous uniform distribution is
+	
+	\[ E(X) = {a+b \over 2}\]
+	
+	\[ V(X) = {(b-a)^2\over12}\]
+}
+
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Continuous Random Variables}
+\begin{itemize}
+\item Probability Density Function
+\item Cumulative Density Function
+\end{itemize}
+If X is a continuous random variable then we can say that the probability of obtaining a \textbf{precise} value $x$ is infinitely small, i.e. close to zero.
+\[P(X=x) \approx 0 \]
+Consequently, for continuous random variables (only), $P(X \leq x)$ and $P(X < x)$ can be used interchangeably.
+\[P(X \leq x) \approx P(X < x) \]
+}
+%---------------------------------------------------------------------------------------------------------%
+\section{Continuous Uniform distribution}
+\frame{
+\begin{itemize}
+\item $L$ :lower bound of an interval \item $U$: upper bound of an
+interval
+\end{itemize}
+Probability of an outcome being between lower bound L and upper
+bound U \[P( L \leq X \leq U) = { U - L \over b - a }\]
+\textbf{Reminder}
+"$\leq$" is less than or equal to.\\
+"$\geq$" is greater than or equal to.\\
+$L \leq X \leq U$ xan be verbalized as X between L and U. simply
+states that X is between L and U inclusively.
+("inclusively" mean that X could be exactly L or U also, although
+the probability of this is extremely low)\\
+}
+
+
+%------------------------------------------------%
+\frame{
+\frametitle{Continuous Uniform Distribution} 
+\begin{itemize}
+\item 
+The Uniform distributions model (some) continuous random variables and (some) discrete random variables. 
+\item
+The values of a uniform random variable are uniformly distributed over an interval. 
+\item
+For example, if buses arrive at a given bus stop every 15 minutes, and you arrive at the bus stop at a random time, the time you wait for the 
+next bus to arrive could be described by a uniform distribution over the interval from 0 to 15.
+\end{itemize}
+ 
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Continuous Uniform Distribution}
+A random variable X is called a continuous uniform random variable over the interval $(a,b)$ if it's probability density function is given by
+\[ f_{X}(x) = { 1 \over b-a} \hspace{2cm} \mbox{ when } a \leq x \leq b\]
+The corresponding cumulative density function is
+\[ F_x(x) = { x-a \over b-a} \hspace{2cm} \mbox{ when } a \leq x \leq b\]
+}
+%-----------------------------------------------------------------------------%
+\frame{
+\frametitle{Continuous Uniform Distribution}
+The mean of the continuous uniform distribution is
+\[ E(X) = {a+b \over 2}\]
+\[ V(X) = {(b-a)^2\over12}\]
+}
+%------------------------------------------------------------------------%
+\frame{\frametitle{Uniform Distribution: Variance}
+\Large
+The variance  of the continuous uniform distribution, denoted $\textrm{Var}[X]$,  is  computed using the following formula
+\vspace{0.1cm}
+\[
+\textrm{Var}[X] = {(b - a)^2 \over 12}
+\]
+\vspace{0.1cm}
+For our previous example this is
+\[
+\textrm{Var}[X] = \alert{{(3 - 0)^2 \over 12} =  {3^2 \over 12} = {9 \over 12} = 0.75}
+\]
+}
+\begin{frame}[fragile]
+	\frametitle{The Uniform Distribution}
+	In the last class, we had a look at the continuous uniform distribution. It is very useful in constructing simulations. Briefly we will look at some relevant \texttt{R} function.
+	The distribution has two parameters: i.e \texttt{min} and \texttt{max}. (Here chosen as 5 and 10 respectively)
+	\begin{verbatim}
+	># Generate Four Random Number
+	> runif(4, min=5,max=10)
+	[1] 9.709372 7.884805 5.571331 5.017549
+	>
+	># Compute Density
+	> dunif(4:11,min=5,max=10)
+	[1] 0.0 0.2 0.2 0.2 0.2 0.2 0.2 0.0
+	>
+	> #Compute distribution of
+	> punif(4:11,min=5,max=10)
+	[1] 0.0 0.0 0.2 0.4 0.6 0.8 1.0 1.0
+	\end{verbatim}
+	
+\end{frame}
+
+\end{document}

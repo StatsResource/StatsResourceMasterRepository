@@ -1,0 +1,117 @@
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 2011 13:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{Statistics for Computing}
+\chead{Information Theory}
+%\input{tcilatex}
+
+\begin{document}
+
+
+%--------------------------------------------------------------------------%
+
+
+\subsection*{Two Small Samples Case}
+\begin{itemize}
+\item Previously we have looked at large samples, now we will consider small samples.
+\item (For the sake of clarity, I will not use small samples that have a combined sample size of greater than 30.
+\item Additionally we require the assumption that both samples have equal variance. This assumption \textbf{must} be tested with another formal hypothesis test. We will revisit this later, and in the mean time, assume that the assumption of equal variance holds.
+\end{itemize}
+\medskip
+
+
+\subsection*{Two Small Samples Case}
+\begin{itemize}
+\item The key differences between the large sample case and the small sample cases arise in the following steps.
+    \begin{itemize}
+    \item The standard error is computed in a different way (see next slide).
+    \item The degrees of freedom used to compute the critical value is $(n_X-1) + (n_Y - 1)$) or equivalently ($n_X + n_Y - 2$).
+    \item Also - a formal test of equality of variances is required beforehand (End of Year Exam)
+    \end{itemize}
+\end{itemize}
+\medskip
+
+\subsection*{Two Small Samples Case: Standard Error}
+Computing the standard error requires a two step calculation. From the formulae, we have the two equations below. The first term $s_p^2$ is called the \textbf{\textit{pooled variance}} of the combined samples.
+\begin{eqnarray*}
+s_p^2&=&\frac{s_X^2(n_X-1)+s_Y^2(n_Y-1)}{n_X+n_Y-2}.\\
+S.E.(\bar{X}-\bar{Y})&=&\sqrt{s_p^2\left(\frac{1}{n_X}+\frac{1}{n_Y}\right)}.\\
+\end{eqnarray*}
+\medskip
+
+
+%-------------------------------------------------------------------------------------------%
+
+\subsection*{Example 2: Difference in Means (a) }
+\begin{itemize}
+\item For a random sample of 10 light bulbs for a particular brand, the mean bulb life is 4,000 hr with a sample standard deviation of 200 hours.
+\item For another brand of bulbs, a random sample of 8 has a sample mean lifetime of 4,300 hours
+and a sample standard deviation of 250 hours. \item Test the hypothesis that there is no difference between the
+mean operating life of the two brands of bulbs, using the 5 percent level of significance
+\end{itemize}
+\medskip
+
+%-------------------------------------------------------------------------------------------%
+
+
+\subsection*{Example 2: Difference in Means (b) }
+\begin{itemize}\item $n_1 = 10$ and $n_2 = 8$.
+\item $\bar{x}_1 = 4000$, $\bar{x}_2 = 4,300 $ , therefore  $\bar{x}_1 - \bar{x}_2 = -300$ hours
+\item $s_1  = 200$, $s_2 = 250$ hours.
+\item Small sample - Degrees of freedom $n_1 + n_2 - 2 = 10 + 8 - 2 = 16$
+\end{itemize}\medskip
+%-------------------------------------------------------------------------------------------%
+
+\subsection*{Example 2: Difference in Means (c) }
+\textbf{Pooled variance estimate}
+\[ s^2_p = {(n_1 - 1)s^2_1  + (n_2 - 1)s^2_ 2\over n_1 + n_2 - 2 } = {(9 \times 200^2 ) +( 7 \times 250^2) \over 16 }  \]
+\[ s^2_p  = 49843.75 \]
+\medskip
+
+%-------------------------------------------------------------------------------------------%
+
+\subsection*{Example 2: Difference in Means (d) }
+\textbf{Computing the Standard Error}
+\[ S.E(x_1 - x_2) = \sqrt{s^2_p \left({1\over n_1}+{1\over n_2} \right)}\]
+
+\[ S.E(x_1 - x_2) = \sqrt{49843.75 \left({1\over 10}+{1\over 8} \right)}\]
+
+\[ S.E(x_1 - x_2) = \sqrt{11214.84} = 105.9\]
+
+\medskip
+
+%-------------------------------------------------------------------------------------------%
+
+\subsection*{Example 2: Difference in Means (e) }
+\textbf{Test Statistic and Critical Value}\\
+\begin{itemize}
+\item The Test Statistic is \[ TS  = {(-300) - 0 \over 105.9}  = -2.83 \]
+\item The Critical Value is determined with $\alpha = 0.05$, $k=2$, $df = 16 $
+\item $CV = 2.120$
+\item We can now apply the decision rule : Is the absolute value of the Test Statistic greater than the Critical Value?
+\item Is $2.83 > 2.12$? Yes We reject $H_0$. There is evidence of a difference in means.
+\end{itemize}
+\medskip
+
+\end{document}

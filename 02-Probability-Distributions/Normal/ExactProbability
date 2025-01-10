@@ -1,0 +1,17 @@
+
+%------------------------------------------------------------------%
+\frame{
+\frametitle{Exact Probability}
+\large
+\alert{Remarks:} This is for continuous distributions only.
+\begin{itemize}
+\item The probability that a continuous random variable will take an exact value is infinitely small.
+We will usually treat it as if it was zero.
+\item
+When we write probabilities for continuous random variables in mathematical notation, we often retain the equality component (i.e. the "...or equal to..").\\
+For example, we would write expressions $P(X \leq 2)$ or $P(X \geq 5)$.
+\item
+Because the probability of an exact value is almost zero, these two expression are equivalent to $P(X < 2)$
+or $P(X > 5)$. \item The complement of $P(X \geq k)$ can be written as $P(X \leq k)$.
+\end{itemize}
+}

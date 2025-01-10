@@ -1,0 +1,84 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+\section{Confidence Interval examples}
+
+
+%--------------------
+\subsection{Example}
+In an election campaign, a campaign manager requests that a sample of votes be polled to determine public support for a candidate. In a sample of 150 votes 72 expressed plans to support the candidate.
+
+
+
+\begin{itemize}
+	\item What is the point estimate of the proportion of the voters who will support the candidate in the election?
+	\item Contruct and interpret a 95\% confidence interval for the proportion of votes in the population that support the candidate.
+	
+	\item Given the confidence interval, is the campaign manager justified in feeling confident that the candidate has at least 50\% support
+	
+	\[S.E. (\hat{P}) = \sqrt{{\hat{p}(1-\hat{p} \over n}}\]
+\end{itemize}
+
+
+\begin{framed}
+The general structure of a confidence interval is as follows:
+
+\[ \mbox{Point Estimate}  \pm \left[ \mbox{Quantile} \times \mbox{Standard Error} \right] \]
+
+
+\begin{itemize}
+\item Point Estimate: estimate for population parameter of interest, i.e. sample mean, sample proportion.
+\item Quantile: a value from a probability distribution that scales the intervals according to the specified confidence level.
+\item Standard Error: measures the dispersion of the sampling distribution for a given sample size $n$.
+\end{itemize}
+\end{framed}
+
+\textbf{Computing the point estimate}
+
+Sample percentage
+
+\[
+\hat{p} = \frac{x}{n} \times 100%
+\]
+
+\begin{itemize}
+\item $\hat{p}$ - sample proportion.
+\item $x$  - number of ``successes".
+\item $n$  - the sample size.
+\end{itemize}
+
+
+\subsection*{Point Estimates for proportions }
+
+Sample percentage
+
+\[
+\hat{p} = \frac{x}{n} \times 100\%
+\]
+
+\begin{itemize}
+\item $\hat{p}$ - sample proportion.
+\item $x$  - number of ``successes".
+\item $n$  - the sample size.
+\end{itemize}
+
+
+
+\end{document}

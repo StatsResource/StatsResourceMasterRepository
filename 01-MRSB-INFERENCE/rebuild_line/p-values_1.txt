@@ -1,0 +1,119 @@
+
+%--------------------------%
+
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Performing a Hypothesis test}
+To summarize: a hypothesis test can be considered as a four step process
+\begin{itemize}
+\item Formally writing out the null and alternative hypothesis.
+\item Computing the test statistic.
+\item Determining the critical value.
+\item Using the decision rule.
+\end{itemize}
+\end{frame}
+
+
+%--------------------------%
+
+
+%--------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{p-values}
+\begin{itemize}
+\item He or she would have no more basis to doubt the validity of the null hypothesis than if p-value had been 0.482. The conclusion would be that the null hypothesis could not be rejected at the 0.05 level. \item In short, this approach is to specify the significance level in advance and use p-value only to determine whether or not the null hypothesis can be rejected at the stated significance level.
+\item
+Many statisticians and researchers find this approach to hypothesis testing not only too rigid, but basically illogical. It is very reasonable to  have more confidence that the null hypothesis is false with a p-value of 0.0001 then with a p-value of 0.042?
+\end{itemize}
+\end{frame}
+
+
+%--------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{p-values}
+\begin{itemize}
+\item The less likely the obtained results (or more extreme results) under the null hypothesis, the more confident one should be that the null hypothesis is false.The null hypothesis should not be rejected once and for all. The possibility that it was falsely rejected is always present, and, all else being equal, the lower the p-value, the lower this possibility.
+\item According to this view, research reports should not contain the p-value, only whether or not the values were significant (at or below the significance level).
+\item
+However it is much more reasonable to just report the p-values. That way each reader can make up his or her mind about just how convinced they are that the null hypothesis is false.
+\end{itemize}
+\end{frame}
+
+
+
+
+
+\frame{
+\frametitle{p value}
+The P-value (or p-value or probability value is the probability of getting a value of the test statistic that is at least as extreme as the one representing the sample data, assuming the null hypothesis is true.
+The null hypothesis is rejected if the P-value is very small, such as less than 0.05.
+
+}
+
+
+%--------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{p-values}
+\begin{itemize}
+\item He or she would have no more basis to doubt the validity of the null hypothesis than if p-value had been 0.482. The conclusion would be that the null hypothesis could not be rejected at the 0.05 level. \item In short, this approach is to specify the significance level in advance and use p-value only to determine whether or not the null hypothesis can be rejected at the stated significance level.
+\item
+Many statisticians and researchers find this approach to hypothesis testing not only too rigid, but basically illogical. It is very reasonable to  have more confidence that the null hypothesis is false with a p-value of 0.0001 then with a p-value of 0.042?
+\end{itemize}
+\end{frame}
+
+
+%--------------------------%
+\frame{
+\frametitle{p value}
+The P-value (or p-value or probability value is the probability of getting a value of the test statistic that is at least as extreme as the one representing the sample data, assuming the null hypothesis is true.
+The null hypothesis is rejected if the P-value is very small, such as less than 0.05.
+
+}
+
+
+
+%--------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{p-values}
+\begin{itemize}
+\item The less likely the obtained results (or more extreme results) under the null hypothesis, the more confident one should be that the null hypothesis is false.The null hypothesis should not be rejected once and for all. The possibility that it was falsely rejected is always present, and, all else being equal, the lower the p-value, the lower this possibility.
+\item According to this view, research reports should not contain the p-value, only whether or not the values were significant (at or below the significance level).
+\item
+However it is much more reasonable to just report the p-values. That way each reader can make up his or her mind about just how convinced they are that the null hypothesis is false.
+\end{itemize}
+\end{frame}
+
+%--------------------------------------------------------------------------------------------------------------------------%
+
+\frame{
+\frametitle{p-value}
+\begin{itemize}
+\item The p-value (or p-value or probability value is the probability of getting a value of the test statistic that is at least as extreme as the one representing the sample data, assuming the null hypothesis is true.
+\item The null hypothesis is rejected if the P-value is very small, such as less than 0.05.
+\end{itemize}
+}
+
+
+
+
+
+
+
+%--------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{p-values}
+\large
+\begin{itemize}
+\item The null hypothesis either is or is not rejected at the previously stated significance level. Thus, if an experimenter originally stated that he or she was using the $\alpha = 0.05$ significance level and p-value was subsequently calculated to be $0.042$, then the person would reject the null hypothesis at the 0.05 level. \item If p-value had been 0.0001 instead of 0.042 then the null hypothesis would still be rejected at the 0.05 significance level.  \item
+The experimenter would not have any basis to be more confident that the null hypothesis was false with a p-value of 0.0001 than with a p-value of 0.041. \item Similarly, if the p had been 0.051 then the experimenter would fail to reject the null hypothesis
+\end{itemize}
+
+\end{frame}
+
+\end{document}

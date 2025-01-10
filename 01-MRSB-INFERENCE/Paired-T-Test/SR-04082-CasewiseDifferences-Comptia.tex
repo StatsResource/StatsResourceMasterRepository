@@ -1,0 +1,115 @@
+
+
+	\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Confidence Intervals} %\input{tcilatex}
+
+\begin{document}
+
+\section{Computing the Case Wise Differences}
+\begin{center}
+\small
+\begin{tabular}{|c||c|c|c|c|} \hline
+Student & Before & After & Difference $(d_i)$ & $ (d_i -\bar{d})^2$ \\\hline
+1 &90& 95& 5& 16 \\\hline
+2 &85& 89& 4& 9 \\\hline
+3 &76 &73 &-3 &4 \\\hline
+4 &90& 92& 2& 1 \\\hline
+5 &91 &92 &1 &0 \\\hline
+6 &53 &53& 0& 1 \\\hline
+7 &67 &68 &1 &4 \\\hline
+8 &88 &90 &2 &9 \\\hline
+9 &75 &78 &3 &16\\\hline
+10 &85& 89 &4& 25 \\\hline
+\end{tabular}
+\end{center}
+
+
+
+
+
+\smallskip
+\noindent Remark:Diffference is consistently ``\textbf{\textit{After-Before}}". \\
+\textbf{\textit{Before-After}} is also fine, but be consistent and just use one or the other.
+
+
+Compute the mean difference
+
+\[ \bar{d}  = {\sum{d_i} \over n } = { 3+6 \over 8} \]
+
+Compute the variance of the differences.
+
+\[ s^2_{d}  ={\sum(d_i -\bar{d})^2 \over n-1 } =  { 3+6 \over 9} \]
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Paired t-test}
+\begin{framed}
+\begin{itemize}
+\item Compute the case-wise differences $d_i$
+\item Compute the mean of the case-wise differences $\bar{d}$
+\item Compute the standard deviation of the case-wise differences
+\end{itemize}
+\end{framed}
+%-----------------------------------------------------------%
+
+
+
+
+
+\textbf{Paired- T  test: example}
+\begin{itemize}
+\item Does it pay to take preparatory courses for standardised tests such as the Comptia Exams?
+\item Using the sample data in the following table, compute the case-wise differences, the mean of the case-wise differences and the standard deviation of the case wise differences for the following data set (next slide).
+\end{itemize}
+
+
+
+\textbf{Computing the case-wise differences}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Subject& A& B& C& D& E &F &G &H &I &J\\  \hline
+Before &700& 840& 830& 860& 840 &690 &830& 1180& 930& 1070\\  \hline
+After &720 &840 &820 &900 &870 &700 &800& 1200& 950& 1080\\  \hline
+Difference &  & & & & & & & & & \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}
+
+%--------------------------------------------------------------------------------------------------------------------------%
+
+
+
+
+

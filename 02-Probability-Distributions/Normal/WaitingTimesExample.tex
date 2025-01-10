@@ -1,0 +1,94 @@
+
+
+
+%--------------------------------------------------------------
+\begin{frame}
+\frametitle{Application : Example }
+The mean time spent waiting by customers before their queries are dealt with at an information centre is 10 minutes.\\ \smallskip
+The waiting time is normally distributed with a standard deviation of 3 minutes.
+\begin{itemize}
+\item [i)] What percentage of customers will be waiting longer than 15 minutes
+
+\item [ii)] $90\%$ of customers will be dealt with in at most 12 minutes. Is this statement true or false?
+Justify your answer.
+
+\item [iii)] What percentage of customers will wait between 7 and 13 minutes before their query is dealt with?
+\end{itemize}
+\end{frame}
+%---------------------------------------------%
+\begin{frame}
+\frametitle{Solutions}
+
+Let x be the normal random variable describing waiting times\\
+$P(X \geq 15) =?$ \\
+\bigskip
+     First , we find the z-value that corresponds to x = 15  (remember $\mu=10$ and $\sigma=3$  )\\
+\[ z_o = { x_o - \mu \over \sigma }  = { 15 - 10 \over 3 } = 1.666 \]
+\begin{itemize}
+\item We will use $z_o =1.67$
+\item Therefore we can say $P(X \geq 15 ) = P(Z \geq 1.67)$
+\item The Murdoch Barnes tables are tabulated to give $P(Z \geq z_o)$ for some value $ z_o$ .
+\item We can evaluate $P(Z \geq 1.67)$  as 0.0475.
+\item Necessarily $P(X \geq 15) = 0.0475$.
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------%
+\begin{frame}
+\frametitle{Solutions}
+\begin{itemize}
+\item "$90\%$ of customers will be dealt with in at most 12 minutes."
+\item To answer this question, we need to know  $P(X\leq 12)$
+\item First , we find the z-value that corresponds to x = 12  (remember $\mu=10$ and $\sigma=3$ )
+\end{itemize}
+\[ z_o = { x_o - \mu \over \sigma }  = { 12 - 10 \over 3 } = 0.666 \]
+
+\end{frame}
+
+%---------------------------------------------%
+\begin{frame}
+\frametitle{Solutions}
+\begin{itemize}
+\item We will use $z_o =0.67$ (although 0.66 would be fine too) 
+\item Therefore we can say $P(X \geq 12 ) = P(Z \geq 0.67)  = 0.2514$
+\item Necessarily  $P(X \leq 12 ) = P(Z \leq 0.67) = 0.7486$
+\item $74.86\%$ of customers will be dealt with in at most 12 minutes.
+\item The statement that $90\%$ will be dealt with in at most 12 minutes is false.
+\end{itemize}
+\end{frame}
+%---------------------------------------------%
+\begin{frame}
+\frametitle{Solutions}
+What percentage will wait between 7 and 13 minutes ?\\
+
+\[P(7 \leq X \leq 13)   = ?\]
+
+\textbf{Solution:}
+\begin{itemize}
+	\item Compute the probability of being too low, and the probability of being too high for the interval.\item The probability of being inside the interval is the complement of the combination of these events.
+\end{itemize}
+
+\end{frame}
+%---------------------------------------------%
+\begin{frame}
+\frametitle{Solutions}
+\textbf{Too high:}\\
+$P(X \geq 13) = ?$
+\[ z_o  = {13 - 10  \over 3} = 1\]
+\smallskip
+From tables, $P(Z \geq 1) = 0.1587$. Therefore $P(X \geq 13) = 0.1587$\\ \bigskip
+\textbf{Too low:}\\
+$P(X \leq 7) = ?$
+\[ z_o  = {7 - 10  \over 3} = -1\]
+By symmetry, and using tables, $P(X \leq 7) = P(Z \leq -1)= 0.1587$\\ \bigskip
+\end{frame}
+%---------------------------------------------%
+\begin{frame}
+\frametitle{Solutions}
+
+\[P(7 \leq X \leq 13)  = 1 - [ P(X \leq 7)  + P(X \geq 13) ] \]
+
+\[P(7 \leq X \leq 13)  =  1 - [0.1587+0.1587] = 0.6826\]
+
+\end{frame}
+

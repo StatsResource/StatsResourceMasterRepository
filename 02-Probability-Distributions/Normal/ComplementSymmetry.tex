@@ -1,0 +1,101 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{framed}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Normal Distribution} %\input{tcilatex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\section*{Complement and Symmetry Rules}
+
+Any normal distribution problem can be solved with some combination of the following rules.
+\begin{enumerate}
+\item The Complement Rule
+\item The Symmetry Rule
+\item The Interval Rule
+\end{enumerate}
+We will look at the first two rules in this section, and revert to the Interval Rule later on.
+	
+	\section*{The Complement Rule}
+	
+	\begin{itemize}
+		\item The \textbf{\textit{Complement Rule}} is a very simple rule for working with probability distributions.
+		\item In this presentation, we will look at the Complement Rule for continuous probability distributions only.
+		
+		
+		\item To compute the probability of the complementary event, simple subtract the probability of the event from 1.
+		
+		\[P(X \leq k) = 1- P(X \geq k) \]
+		\[P(X \geq k) = 1- P(X \leq k) \]
+		 \item Common to all continuous random variables
+
+
+\[P(Z \leq 1.28) = 1 - P(Z \geq 1.28)  = 1-0.1003 = 0.8997\]
+	\end{itemize}	
+	
+
+	
+	
+	\begin{framed}
+	\noindent \textbf{Important}
+	\begin{itemize}
+		
+	
+		\item The probability of being greater than or equal to a value is simply the sum of the probability of being greater than the value and the probability of being equal to the value
+		\[  P(X \geq k)  = P( X > k) + P(X = k) \]
+			\item Remember, for continuous probability distributions, the probability of an \textbf{exact} value is extremely small, such that it is almost zero.
+				\[P(X = k) \approx 0\]
+		\item Therefore we neglect the equality components in expressions such as
+		$P(X \leq k)$ and $P(X \geq k)$.
+		\item In fact we can treat this two expressions as \textbf{\textit{complementary events}}.
+	\end{itemize}
+	\end{framed}
+	
+	\newpage
+\section*{Symmetry rule}
+\begin{itemize}
+\item
+This rule is based on the property of symmetry for the normal distribution. 
+\item (\textbf{Important}) It applies only to the Standard Normal Distribution.
+\item
+Only the probabilities corresponding to values between 0 and 4 are tabulated in Murdoch Barnes. We use the symmetry rule for cases where the Z-score is negative.
+\item
+If we have a negative value of k, we can use the symmetry rule.
+\[P(Z \leq -k) = P(Z \geq k) \]
+\item By extension, we can say
+\[P(Z \geq -k) = P(Z \leq k) \]
+\end{itemize}
+
+\subsection*{Example}
+Find $P(Z \geq -1.28)$
+\subsection*{Solution}\
+\begin{itemize}
+\item Using the symmetry rule
+\[P(Z \geq -1.28) = P(Z \leq 1.28) \]
+\item Using the complement rule
+\[P(Z \geq -1.28) = 1 - P(Z \geq 1.28) \]
+\[P(Z \geq -1.28) = 1 - 0.1003 = 0.8997 \]
+\end{itemize}
+
+
+
+%---------------------------------------------%
+
+\end{document}

@@ -1,0 +1,29 @@
+library(magrittr)
+
+  thisText = c(
+    "The Species are: \n \u2022The Eurasian otter (Lutra lutra)",
+    "The Species are: \n \u2022The yellow-winged darter (Sympetrum flaveolum) \n \u2022 The common bottlenose dolphin (Tursiops truncatus) \n\n Additional Text Here"
+  )
+
+
+thisDF <- data.frame(
+  thisGroup = c(1,2) ,
+  thisText 
+)
+
+Scientific_Name <- c("Lutra lutra","Sympetrum flaveolum","Tursiops truncatus","Anser Anser")
+
+thisDF_Flex <- thisDF %>%
+  dplyr::mutate(dplyr::across(
+    where(is.character),
+    stringr::str_replace_all,
+    setNames(paste0('*', Scientific_Name, '*'), Scientific_Name)
+  )) %>%
+  flextable::flextable() %>%
+  width(width=c(1.5,9)) %>%
+  align( align = "left", part = "all" ) %>%
+  font(fontname = "Calibri",part="all") %>%
+  fontsize(size = 12, part = "body")
+
+thisDF_Flex %>%
+  ftExtra::colformat_md()

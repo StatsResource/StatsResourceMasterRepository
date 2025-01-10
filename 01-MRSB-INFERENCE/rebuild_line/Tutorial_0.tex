@@ -1,0 +1,97 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+\chapter{Normal Distribution - Worked Examples}
+\section{Calculations}
+
+\begin{framed}
+	\begin{itemize}
+		\item The Complement Rule
+		\begin{equation}
+		P(Z \leq z) = 1 - P(Z \geq z)
+		\end{equation}
+		\item The Symmetry Rule
+		\begin{equation}
+		P(Z \leq -A) = P(Z \geq A)
+		\end{equation}
+		\item The Interval Rule.
+		Where $L$ and $U$ are the lower and upper bounds of an interval.
+		\begin{equation}
+		P(L \leq Z \leq U) = P(Z \geq L) -  P(Z \geq U)
+		\end{equation}
+		
+	\end{itemize}
+\end{framed}
+
+\section{Summary of Normal Distribution}
+
+\begin{enumerate}
+	\item Working with Tables
+	
+	\[P(Z \geq Zo)\]
+	
+	\item The Standardisation Formula
+	
+	\[P(X \leq Xo) = P(Z \leq Zo)	  \]  
+	
+	when   \[Zo=\frac{Xo- \mu}{\sigma}\]
+	
+	\item Complement Rule
+	
+	\[P(Z\geq Z_0) = 1 - P(Z \leq Z_0)\]
+	
+	\item  Symmetry Rule
+	
+	
+	\[P(Z \leq -Z_0) = P(Z \geq Z_0)\]
+	
+\end{enumerate}
+
+
+%-------------------------------------------------%
+
+
+
+\section{Normal - example}
+
+In an examination the scores of students who attend schools of type A are
+normally distributed about a mean of 55 with a standard deviation of 6. The
+scores of students who attend type B schools are normally distributed about a
+mean of 60 with a standard deviation of 5.
+
+Which type of school would have a higher proportion of students with marks above 70?
+
+\begin{itemize}
+	\item $\mu_A$ = 55
+	\item $\sigma_A$ = 8
+	\item $\mu_B$ = 60
+	\item $\sigma_B$ = 5
+\end{itemize}
+
+We have to fins $P(X_A \geq 70)$
+and $P(X_B \geq 70)$.
+
+
+using the standardisation formula
+$Z_A = \frac{70 - 55}{6} = \frac{15}{6} = 2.5 $
+
+$Z_B = \frac{70 - 60}{5} = \frac{10}{5} = 2 $
+
+
+

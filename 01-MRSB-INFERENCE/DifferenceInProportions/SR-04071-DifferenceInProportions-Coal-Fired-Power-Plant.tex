@@ -1,0 +1,199 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+
+
+\begin{enumerate}
+
+
+
+\subsection{Difference between two population proportions}
+When we wish to test the hypothesis that the proportions in two
+populations are not different, the two sample proportions are
+pooled as a basis for determining the standard error of the
+difference between proportions. Note that this differs from the
+procedure used in Section 9.5 on statistical estimation, in which
+the assumption of no difference was not made.
+
+Further, the present procedure is conceptually similar to that
+presented in Section 11.1, in which the two sample variances are
+pooled as the basis for computing the standard error of the
+difference between means. The pooled estimate of the population
+proportion, based on the proportions obtained in two independent
+samples
+
+\newpage
+\section{Question Set 5 : Two Sample Proportion Tests}
+\begin{enumerate}
+\item \textbf{Difference in Proportions} 
+\begin{itemize}
+\item A coal-fired power plant is considering two different systems for pollution abatement. 
+\item The first system has reduced the emission of pollutants to acceptable levels 68\% of the time, as determined from 200 air samples.
+\item  The second, more expensive system has reduced the emission of
+pollutants to acceptable levels 70\% of the time, as determined from 250 air samples. 
+\item lf the expensive system is significantly more effective than the inexpensive system in reducing the pollutants to acceptable levels, then the management of the power plant will install the expensive system.
+\end{itemize}
+
+
+
+\subsection{Independent Sample Proportions hypothesis Test }
+A survey of 1000 Irish indicates that 750 have access to the Internet. A survey of 2000 Spaniards
+indicates that 1400 have access to the Internet.
+\begin{itemize}
+\item[a.] (8 marks) By calculating the appropriate p-value, test the hypothesis that the proportion of all Irish
+having access to the Internet is equal to the proportion of all Spaniards having access to the
+internet at a significance level of 5\%.
+
+\item[b.] (4 marks) Calculate a 99\% confidence interval for the difference between the proportion of all Irish
+having access to the Internet and the proportion of all Spaniards having access to the
+internet.
+\end{itemize}
+
+A survey of 1000 Irish indicates that 750 have access to the Internet. A survey of 2000 Spaniards indicates that 1400 have access to the Internet.
+
+\noindent By calculating the appropriate p-value, test the hypothesis that the proportion of all Irish having access to the Internet
+is equal to the proportion of all Spaniards having access to the internet at a significance level of 5\%. % (8 marks)
+
+
+%================================================================= %
+\begin{description}
+\item[Step 1] : Formally state the null and alternative hypotheses
+\item[Step 2] : Determine the test statistic
+\item[Step 3a] : Determine the p.value
+\item[Step 4a] : Decision Rule for p-values.
+\end{description}
+
+%================================================================= %
+
+\noindent \textbf{Step 1 : Formally state the null and alternative hypotheses}\\ 
+Proportion of people having internet access is the same in both Ireland and Spain
+Proportion of people having internet access differs in Ireland and Spain
+
+
+Alternatively we write the hypotheses as follows (the null value is more evident).
+%================================================================= %
+\noindent \textbf{Step 2 Compute the Test Statistic}\\
+
+\[p_{Irl}= \frac{750}{1000}= 0.75\] 
+\[p_{Esp}= \frac{1400}{2000}= 0.70\]
+
+Observed Difference = 0.75 - 0.70 = 0.05  
+
+Now lets compute the standard error (from Formulae)
+
+
+
+
+\item 
+The government are investigating the difference in proportions of people in rural and urban areas in support of a new policy. Researchers collected data on 154 individuals; of these, 38 lived in rural areas and 116 lived in urban areas. It was found that 52.63\% of those in rural areas and 60.34\% of those in urban areas support the policy.\\[-0.2cm]
+\begin{enumerate}
+\item What is the true difference in proportions?  \item Calculate a 90\% confidence for this difference and comment on this interval.  \item In the sample of 154 individuals, how many of them support the policy? (i.e., 52.63\% of 38 plus 60.34\% of 116)  \item Based on the answer to part (c), estimate the overall proportion of individuals in support of the policy and construct a 90\% confidence interval for the true proportion.
+\end{enumerate}
+
+%=================%
+
+\item
+\textbf{Difference of two proportions example}
+\begin{itemize}
+\item Two time-sharing systems are compared according to their response time to an editing command. The mean response time of 100 requests submitted to system 1 was measured to be 600 milliseconds with a
+known standard deviation of 20 milliseconds. 
+\item The mean response time
+of 100 requests on system 2 was 592 milliseconds with a known standard deviation of 23 milliseconds. 
+\item Using a significance level of $5\%$,test the hypothesis that system 2 provides a faster response time than
+system 1. 
+\item Clearly state your null and alternative hypotheses and your conclusion.
+\end{itemize}
+
+%-------------------------------------------------------%
+\item A researcher was investigating computer usage among students at a particular university. Three hundred undergraduates and one hundred postgraduates were chosen at random and asked if they owned a laptop. It was found that 150 of
+the undergraduates and 80 of the postgraduates owned a laptop.
+
+Find a 95\% confidence interval for the difference in the proportion of undergraduates and postgraduates who own a laptop. On the basis of this interval, do you believe that postgraduates and undergraduates are
+equally likely to own a laptop?
+
+\item 
+A market researcher wishes to know the market share for Android devices. From a sample of 500 individuals, it was found that 359 use an Android device.\\[-0.2cm]
+\begin{enumerate}[(a)]
+\item What type of data has been collected here?  
+\item What is the parameter and its value?  
+\item What is the statistic and its value?  
+\item Calculate a 95\% confidence interval and interpret this interval.  
+\item How large a sample is required to reduce the \emph{margin of error} in the previous confidence interval to $\pm 0.02$?
+\end{enumerate}
+%============================%
+\end{enumerate}
+
+	
+	\normalsize
+	%----------------------- %
+	\section*{Question 9 - Two Sample Proportions}
+	In a recent British election 40.12\% of the voters voted for the Labour party. A survey of 98 people indicated that 49 of them wish to vote for the Labour party. 
+	\begin{itemize}
+		\item[(i)] Does this figure indicate that support for the Labour party has changed at a significance level of 5\% (calculate the realisation of the appropriate test statistic)? 
+		\item[(ii)] Calculate a 95\% confidence interval for the present support of the Labour party. Comment on your result taking your conclusion from part i) into account. 
+	\end{itemize}
+	
+	\section*{Question 5 (Two Sample proportions, one tailed)}
+	
+	A simple random sample of front-seat occupants involved in car crashes were taken. 
+	The first sample was on cars with airbags available and it was found that there were 29 occupant fatalities out of a total of 1110 occupants. The second sample was on cars with no airbags available and
+	there were 62 fatalities out of a total 1553 occupants.
+	\begin{itemize}
+		\item[(i)] Using a 5\% significance level, determine whether or not there is a difference in the proportion of fatality rates of occupants in cars with airbags and cars without airbags.
+		\item[(ii)] Calculate a 95\% confidence interval for the difference between the two proportions of fatality rates.
+	\end{itemize}
+	
+	\noindent \textbf{\textit{Standard Error Formula }}\\
+	Confidence Intervals
+	\[ S.E.(\hat{p}_1 - \hat{p}_2)  = \sqrt{\frac{\hat{p}_1 \times (100 - \hat{p}_1)}{n_1} + \frac{\hat{p}_2 \times (100 - \hat{p}_2)}{n_2}} \]
+	Hypothesis testing
+	\[ S.E.(\pi_1 - \pi_2)  = \sqrt{\bar{p} \times (100 - \bar{p}) \times \left( \frac{1}{n_1} + \frac{1}{n_2}\right)} \]
+	Aggregate Sample Proportion
+	\[  \bar{p} = \frac{x_1+x_2}{n_1+n_2} \]
+	
+	
+	\noindent \textbf{\textit{Confidence Intervals (in terms of percentages) }}\\
+	95\% confidence interval
+	\[ (\hat{p}_1 - \hat{p}_2 ) \times (1.96 \times S.E.(\hat{p}_1 - \hat{p}_2))\]
+	\[ 1.4 \times (1.96 \times 0.683) =  (1.27,1.53)\]
+	%----------------------------------------------------------------------- %
+	\normalsize
+	\section*{Question 6 (Two Sample proportions, one tailed)}
+	\begin{itemize}
+		\item The government wishes to increase the proportion of people taking government training courses who obtain a job in the following 3 months. \item Before they introduced the new schemes this figure was 58\%, according to sample of 400 people, with 232 successes. \item A survey of 300 people who took the new courses indicated that 188 of them gained a job. A government official stated that this indicates that the new courses have been more successful. \item Is this statement reasonable at a significance level of 5\%?
+	\end{itemize}
+	
+	\bigskip
+	\noindent{\textbf{Some Calculations}}
+	{
+		\large
+		\begin{itemize}
+			\item Aggregate proportion
+			\[ \bar{p} = \frac{232 + 188}{400+300} = \frac{420}{700} =60\%\]
+			\item Standard Error for Hypothesis Test
+			\[S.E\]\[ S.E.(\pi_1 - \pi_2)  = \sqrt{60 \times 40) \times \left( \frac{1}{400} + \frac{1}{300}\right)}  = 3.74\]
+			
+		\end{itemize}
+	}
+	
+	\normalsize
+
+
+\end{document}

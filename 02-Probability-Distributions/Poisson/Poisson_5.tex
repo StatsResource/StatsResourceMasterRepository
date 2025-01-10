@@ -1,0 +1,201 @@
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx}  % Font Family
+\usepackage{helvet}   % Font Family
+\usepackage{color}
+
+
+\setbeamercovered{dynamic}
+
+\title[MA4704]{Technology Mathematics 4 (Statistics) \\ {\normalsize MA4704 Lecture 3C}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize Kevin.obrien@ul.ie}}
+\date{Spring Semester 2013}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Characteristics of a Poisson Experiment}
+A Poisson experiment is a statistical experiment that has the following properties:
+\begin{itemize}
+\item The experiment results in outcomes that can be classified as successes or failures.
+\item The average number of successes (m) that occurs in a specified region is known.
+\item The probability that a success will occur is proportional to the size of the \textbf{\emph{region}}.
+\item The probability that a success will occur in an extremely small region is virtually zero.
+\item The \texttt{pois} family of functions are used to compute probabilities and quantiles.
+\end{itemize}
+Note that the specified region could take many forms. For instance, it could be a length, an area, a volume, a period of time, etc.
+}
+
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{The Poisson Probability Distribution}
+\begin{itemize}
+\item A Poisson random variable is the number of successes that result from a Poisson experiment.
+\item The probability distribution of a Poisson random variable is called a Poisson distribution.
+\item This distribution describes the number of occurrences in a unit period (or space)
+\item The expected number of occurrences is $m$.
+\item \text{R} refers to the mean number of occurrences as \texttt{lambda} rather than \texttt{m}. 
+\end{itemize}
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Poisson Formulae}
+The probability that there will be $k$ occurrences in a unit time period is denoted $P(X=k)$, and is computed as below. Remark: This is known as the probability density function. The corresponding \texttt{R} command is \texttt{dpois()}.
+\Large
+\[ P(X = k)=\frac{m^k e^{-m}}{k!} \]
+
+
+}
+%---------------------------------------------------------------------------%
+\frame{
+	\frametitle{The Poisson Probability Distribution}
+	\begin{itemize}
+		\item The number of occurrences in a unit period (or space)
+		\item The expected number of occurrences is $m$
+		\item Given the mean number of successes ($m$) that occur in a specified region, we can compute the Poisson probability based on the following formula.
+	\end{itemize}
+}
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Poisson Formulae}
+Given that there is on average 2 occurrences per hour, what is the probability of no occurrences in the next hour? \\ i.e. Compute $P(X=0)$ given that $m=2$
+\Large
+\[ P(X = 0)=\frac{2^0 e^{-2}}{0!} \]
+\normalsize
+\begin{itemize}
+\item $2^0$ = 1
+\item $0!$ = 1
+\end{itemize}
+The equation reduces to
+\[ P(X = 0)=e^{-2} = 0.1353\]
+}
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Poisson Formulae}
+What is the probability of one occurrences in the next hour? \\ i.e. Compute $P(X=1)$ given that $m=2$
+\Large
+\[ P(X = 1)=\frac{2^1 e^{-2}}{1!} \]
+\normalsize
+\begin{itemize}
+\item $2^1$ = 2
+\item $1!$ = 1
+\end{itemize}
+The equation reduces to
+\[ P(X = 1) = 2 \times e^{-2} = 0.2706\]
+}
+%---------------------------------------------------------------%
+\frame{
+\frametitle{Poisson Distribution (Example)}
+\begin{itemize}
+
+\item Suppose that electricity power failures occur according to a Poisson distribution
+with an average of 2 outages every twenty weeks. \item Calculate the probability that there will
+not be more than one power outage during a particular week.
+\end{itemize}
+
+\textbf{Solution:}
+
+\begin{itemize}
+\item The average number of failures per week is: $m = 2/20 = 0.10$
+
+\item ``Not more than one  power outage" means we need to compute and add the probabilities for ``0 outages" plus ``1 outage".
+\end{itemize}
+
+}
+
+%---------------------------------------------------------------%
+\frame{
+\frametitle{Poisson Distribution (Example)}
+
+Recall: \[P(X = k) = e^{-m}\frac{m^k}{k!}\]
+
+
+\begin{itemize}
+
+\item $P(X = 0)$
+
+\[P(X = 0) = e^{-0.10}\frac{0.10^0}{0!} = e^{-0.10} = 0.9048\]
+
+
+\item $P(X = 1)$
+
+\[P(X = 1) = e^{-0.10}\frac{0.10^1}{1!} = e^{-0.10}\times 0.1 = 0.0905\]
+
+\item $P(X \leq 1)$
+
+\[P(X \leq 1) = P(X = 0) + P(X = 1) = 0.9048 + 0.0905 = 0.995\]
+
+\end{itemize}
+}
+
+\frame{
+\frametitle{Implementation using \texttt{R}}
+
+\begin{itemize}
+\item Probability Density Function $P(X = k)$
+\begin{itemize}
+\item For a given poisson mean $m$, which in \texttt{R} is specified as \texttt{lambda} 
+\item \texttt{dpois(k,lambda = ...)} 
+\end{itemize}
+\item Cumulative Density Function $P(X \leq k)$
+\begin{itemize}
+\item \texttt{ppois(k,lambda = ...)}
+\end{itemize}
+\end{itemize}
+
+}
+
+
+\begin{frame}[fragile]
+\frametitle{Implementation using \texttt{R}}
+From before: $P(X = 0)$ given than the mean number of occurrences is 2.
+
+\begin{verbatim}
+> dpois(0,lambda=2)
+[1] 0.1353353
+> dpois(1,lambda=2)
+[1] 0.2706706
+> dpois(2,lambda=2)
+[1] 0.2706706
+\end{verbatim}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Implementation using \texttt{R}}
+Compute the cumulative distribution functions for the values $k=\{0,1,2\}$, given that the mean number of occurrences is 2
+
+\begin{verbatim}
+> ppois(0,lambda=2)
+[1] 0.1353353
+> ppois(1,lambda=2)
+[1] 0.4060058
+> ppois(2,lambda=2)
+[1] 0.6766764
+\end{verbatim}
+
+\end{frame}
+
+
+\end{document}
+
+
+\end{document}

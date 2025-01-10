@@ -1,0 +1,128 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{graphicx}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{subfiles}
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{amsthm, amsmath}
+\usepackage{amsbsy}
+\usepackage{framed}
+\usepackage[usenames]{color}
+\usepackage{listings}
+\lstset{% general command to set parameter(s)
+	basicstyle=\small, % print whole listing small
+	keywordstyle=\color{red}\itshape,
+	% underlined bold black keywords
+	commentstyle=\color{blue}, % white comments
+	stringstyle=\ttfamily, % typewriter type for strings
+	showstringspaces=false,
+	numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, %
+	frame=shadowbox,
+	rulesepcolor=\color{black},
+	,columns=fullflexible
+} %
+%\usepackage[dvips]{graphicx}
+\usepackage{natbib}
+\usepackage{epstopdf}
+\bibliographystyle{chicago}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.5}
+\pagenumbering{arabic}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{ill}[theorem]{Example}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{notation}{Notation}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+\renewcommand{\thenotation}{}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+%\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\title{Research notes: linear mixed effects models}
+\author{ } \date{ }
+
+
+\begin{document}
+%----------------------------------------------------------------------- %
+\section*{Question 1}
+% (Two Sample proportions, one tailed)}
+\begin{itemize}
+\item The government wishes to increase the proportion of people taking government training courses who obtain a job in the following 3 months. \item Before they introduced the new schemes this figure was 58\%, according to sample of 400 people, with 232 successes. \item A survey of 300 people who took the new courses indicated that 188 of them gained a job. A government official stated that this indicates that the new courses have been more successful. \item Is this statement reasonable at a significance level of 5\%?
+\end{itemize}
+
+\noindent{\textbf{Some Calculations}}
+
+\begin{itemize}
+\item Aggregate proportion
+\[ \bar{p} = \frac{232 + 188}{400+300} = \frac{420}{700} =60\%\]
+\item Standard Error for Hypothesis Test
+\[S.E\]\[ S.E.(\pi_1 - \pi_2)  = \sqrt{60 \times 40) \times \left( \frac{1}{400} + \frac{1}{300}\right)}  = 3.74\]
+
+\end{itemize}
+%-------------------------------------%
+\section*{Question 7 - Two Sample Means (Small Samples)}
+A new process has been developed to reduce the level of corrosion of car bodies.
+\begin{itemize}
+\item Experiments were carried out on 11 cars using the new process and 11 cars using the old process. \item The average level of corrosion using the new process was 3.4 with a standard deviation of 0.5. \item The average level of corrosion using the old process was 4.2 with a standard deviation of 0.8. 
+\end{itemize} 
+
+\begin{itemize}
+\item[(i)] Test the hypothesis that the variance of the level of corrosion does not depend on the process used.
+\item[(ii)] Is there any evidence that the new process is better at a significance level of 5\%?
+\item[(iii)] Calculate a 95\% confidence interval for the difference between the mean levels of corrosion under the two processes. Can it be stated that the mean level of corrosion is reduced by 1.5 at a significance level of 5\%? 
+%\item[(iv)] What assumptions were used in ii) and iii)? 
+\end{itemize}
+
+%-------------------------------------%
+\section*{Question 8 - Two Sample Means}
+Deltatech software has 350 programmers divided into two groups with 200 in Group A
+and 150 in Group B. In order to compare the efficiencies of the two groups, the
+programmers are observed for 1 day.
+%------------------%
+\begin{itemize}
+\item The 200 programmers in Group A averaged 45.2 lines of code with a standard
+deviation of 8.4.
+\item The 150 programmers in Group B averaged 42.7 lines of code with a standard
+deviation of 5.2.
+\end{itemize}
+%------------------%
+Let $\bar{x}_A$ denote the average number of lines of code per day produced by programmers in
+Group A and
+let $\bar{x}_A$ be the corresponding statistic for Group B.
+Provide an estimate of $\mu_A —\mu_B$ and calculate an approximate 95\% confidence interval for
+%------------------%
+
+Test the claim that Group A are more efficient than Group B by
+\begin{itemize}
+\item[(i)] Interpreting the 95\% confidence interval.
+\item[(ii)] Computing the appropriate test statistic.
+%\item[(iii)] Computing the appropriate p-value.
+\end{itemize}
+%----------------------- %
+\section*{Question 9 - Two Sample Proportions}
+In a recent British election 40.12\% of the voters voted for the Labour party. A survey of 98 people indicated that 49 of them wish to vote for the Labour party. 
+\begin{itemize}
+\item[(i)] Does this figure indicate that support for the Labour party has changed at a significance level of 5\% (calculate the realisation of the appropriate test statistic)? 
+\item[(ii)] Calculate a 95\% confidence interval for the present support of the Labour party. Comment on your result taking your conclusion from part i) into account. 
+\end{itemize}
+
+
+\end{document}

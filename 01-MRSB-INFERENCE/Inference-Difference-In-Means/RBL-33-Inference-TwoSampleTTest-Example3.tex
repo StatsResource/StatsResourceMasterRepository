@@ -1,0 +1,166 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{framed}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{Inference Procedures} \chead{Dixon Q-Test for Outliers} %\input{tcilatex}
+
+\begin{document}
+ 
+The quality control manager at the Telektronic Company considers the production of telephone answering machines to be out of control when the overall rate of defects exceeds 4\%.
+ Testing of a random sample of 150 machines revealed that 9 are defective. 
+
+The production manager claims that production is not out of control and no corrective action is necessary. Use a 0.05 significance level to test the production managersclaim.
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{framed}
+\noindent \textbf{Hypothesis Testing : Steps when using Critical Value approach}
+
+\begin{itemize}
+\item[1] Formally State the Null and Alternative Hypothesis \smallskip
+{
+\begin{itemize}
+\item[$\ast$] \textbf{ALWAYS} include a short written description of both hypotheses.
+\item[$\ast$] State hypotheses in mathematical notation where possible.
+
+\end{itemize}
+}
+\item[2] Calculate Test Statistic (TS) using relevant formulas.\smallskip
+\item[3] Determine the Critical Value (CV) from tables. \smallskip
+\item[4] By comparing the values of the Test Statistic and Critical Value, decide whether to reject the Null Hypothesis.
+\end{itemize}
+\end{framed}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Statement of Hypotheses}
+\noindent The first step in hypothesis testing is to specify the null hypothesis and an alternative hypothesis.
+\begin{itemize}
+    \item The Null Hypothesis ($H_0$) proposes that there is no difference in terms of battery lifetimes between the two types of battery.
+    \item The Alternative Hypothesis ($H_1$) proposes that there is a difference in terms of battery lifetimes between the two types of battery.
+\end{itemize}
+\begin{description}
+\item[$H_0$:] $\mu_1 = \mu_2$ ( The population means are equal)
+\item[$H_1$:] $\mu_1 \neq \mu_2$ (The population means are different)
+\end{description}
+
+\noindent Equivalently, we can write the hypotheses in terms of difference between groups.
+\begin{description}
+\item[$H_0$:] $\mu_1 - \mu_2 = 0 $ 
+\item[$H_1$:] $\mu_1 - \mu_2\neq  0$ 
+\end{description}
+
+
+
+\noindent (Remark: Two Tailed Test, therefore $k = 2$, and $\alpha = 0.05$)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\subsection*{Computing the Test Statistic}
+
+\noindent \textbf{Standard Errors}
+\begin{itemize}
+    \item The Standard Error Formula are typically provided in the exam paper, or an accompanying document.
+    \item Each type of test has a different Standard Error Formula.
+\end{itemize}
+\begin{framed}
+ The relevant formula for the standard error is
+\[ S.E(\bar{x}_1 - \bar{x}_2) = \sqrt{{s^2_1\over n_1}+{s^2_2 \over n_2}} \]
+\end{framed}
+\bigskip
+\begin{itemize}
+\item $s^2_1$ and $s^2_2$ is the variance of samples $1$ and $2$ respectively.
+\item $n_1$ and $n_2$ is the sample size of both samples.\bigskip
+
+\end{itemize}
+\begin{eqnarray*}
+ S.E(\bar{x}_1 - \bar{x}_2) &=& \sqrt{ \frac{4^2}{100} + \frac{3^2}{100} } \\
+& & \\
+&=& \sqrt{ 0.25  }\\
+& & \\
+&=& 0.50
+\end{eqnarray*}
+\newpage 
+
+\noindent \textbf{General Structure of the Test Statistic}\\
+\noindent The Test Statistic $TS$ is a Normally  Distributed random variable with $TS \sim Z(0,1^2)$.
+\begin{framed}
+\[ TS = {\mbox{Point Estimate} - \mbox{Expected Parameter Value under $H_{0}$} \over \mbox{Std. Error}}\]
+\end{framed}
+
+
+\begin{eqnarray*}
+TS &=& \frac{ 2\;-\; 0}{0.50} \\
+& & \\
+&=& 4\\
+\end{eqnarray*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+\subsection*{Determine the Critical Value}
+
+\begin{itemize}
+\item The critical value is determined from Statistical Tables.
+\item Determination depends on the significance level $\alpha$, the sample size $n$ and the number of tails in the test (i.e. is it a one-tailed or two tailed test.
+\end{itemize}
+
+\noindent \textbf{Significance Level}
+
+\begin{itemize}
+\item In hypothesis testing, the significance level $\alpha$ is the criterion used for rejecting the null hypothesis. 
+%\item The significance level of a statistical hypothesis test is a fixed probability of wrongly rejecting the null hypothesis $H_0$, if it is in fact true.
+%\item Equivalently, the significance level (denoted by $\alpha$) is the probability that the test statistics will fall into the \textbf{\emph{critical region}}, when the null hypothesis is actually true. 
+
+\item In University courses, common choices for $\alpha$ are $0.05$ and $0.01$. We will use $\alpha =0.05$ (i.e. 5\%).
+\item We have a large aggregate sample size ($n_1 + n_2 > 30)$.
+\item The hypothesis test is 2-tailed procedure.
+\item The Critical Value is 1.96.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+\subsection*{Decision}
+
+
+
+\begin{framed}
+\noindent \textbf{What are the conclusions}
+\begin{itemize} 
+
+\item[Yes:] We \textbf{reject the Null} Hypothesis. \\ \textit{We have sufficient evidence against Null Hypothesis.}
+
+\item[No:] We \textbf{fail to reject} Null hypothesis. \\ \textit{We do not have sufficient evident against Null Hypothesis.}
+\end{itemize}
+{\normalsize
+N.B. Note the terminology that we are using. Also note exactly what our conclusion is: We are talking about strength of evidence, rather than what is true or false.}
+
+\end{framed}
+\smallskip
+\begin{framed}
+\begin{itemize}
+\item If $TS > CV$ , where $CV$ is a critical value corresponding to the sample size and confidence level, then reject the null hypothesis. 
+\item  If $TS \leq CV$ , we fail to reject the null hypothesis. i.e. Not enough evidence of a significant difference. 
+\end{itemize}
+\end{framed}
+
+\noindent Here $TS >CV$ , i.e. ($4 > 1.96$), we will reject the null hypothesis. i.e. sufficient evidence of a difference in meanlifetimes of battery life. 
+
+
+\end{document}

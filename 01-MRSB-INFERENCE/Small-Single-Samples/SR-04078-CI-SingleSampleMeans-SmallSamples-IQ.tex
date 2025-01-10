@@ -1,0 +1,63 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \chead{Confidence Intervals} \rhead{Statistical Inference} %\input{tcilatex}
+\begin{document}
+
+\subsection{Confidence interval of a mean (small sample)}
+
+If the data have a normal probability distribution and the sample
+standard deviation $s$ is used to estimate the population
+standard deviation $\sigma$, the interval estimate is given by:
+\begin{equation}
+\bar{X} \pm t_{1-\alpha/2,n-1}\frac{s}{\sqrt{n}}
+\end{equation}
+where $t_{1-\alpha/2,n-1}$ is the value providing an area of $\alpha/2$ in the upper tail of a Student’s t distribution with n - 1 degrees of freedom.
+
+
+The intelligence quotient (IQ) of 36 randomly chosen students was measured.
+Their average IQ was 109.9 with a variance of 324.
+The average IQ of the population as a whole is 100.
+\begin{enumerate}[(a)]
+\item Calculate the p-value for the test of the hypothesis that on average
+students are as intelligent as the population as a whole against the alternative that on average students are more intelligent.
+\item Can we conclude at a significance level of $1\%$ that students are on average more intelligent than the population as a whole?
+\item Calculate a $95\%$ confidence interval for the mean IQ of all students.
+\end{enumerate}
+
+\subsection*{Solution}
+
+\[Z_{Test} = \frac{X- \mu}{\frac{\sigma}{\sqrt{n}}} = \frac{109.9 - 100}{\frac{18}{\sqrt{36}}} = \frac{9.9}{3} = 3.3\]
+\[p.value = P(Z \geq Z_{Test}) = P(Z \geq 3.3) = 0.00048\]
+
+%--------------------------------------------------------------%
+
+\begin{itemize}
+\item $\bar{X} \pm t_{1-\alpha/2,\nu}S.E.(\bar{X})$
+\item $\nu = 1.96$
+\item $t_{1-\alpha/2,\nu} = 1.96$
+\item $109.9 \pm (1.96 \times 3) = [104.02, 115.79]$
+\end{itemize}
+
+%--------------------------------------------------------------%
+
+\end{document}

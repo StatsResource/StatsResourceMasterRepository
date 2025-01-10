@@ -1,0 +1,154 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{framed}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Computing Confidence Intervals For Means} %\input{tcilatex}
+
+\begin{document}
+
+
+
+
+\section*{Computing Confidence Intervals For Means}
+Confidence limits are the lower and upper boundaries / values of a confidence interval, that is, the values which define the range of a confidence interval. The general structure of a confidence interval is as follows:
+
+\[ \mbox{Point Estimate}  \pm \left[ \mbox{Quantile} \times \mbox{Standard Error} \right] \]
+
+
+\begin{itemize}
+\item Point Estimate: estimate for population parameter of interest, i.e. sample mean, sample proportion.
+\item Quantile: a value from a probability distribution that scales the intervals according to the specified confidence level.
+\item Standard Error: measures the dispersion of the sampling distribution for a given sample size $n$.
+\end{itemize}
+
+
+
+
+%-----------------------------------------------------------%
+
+
+\subsection*{Quantiles}
+
+\begin{itemize}
+\item The quantile is a value from a probability distribution that scales the intervals according to the specified confidence level.
+\item For practical purposes, the quantile can be taken from the standard normal distribution, if the sample is larger than 30, further to the central limit theorem.
+\item For a specified confidence level $1-\alpha $, the corresponding quantile is the value $a$ that satisfies the following identity (when $n > 30$):
+
+\[ p( -a \leq Z \leq a) = 1- \alpha \]
+
+\end{itemize}
+
+
+
+
+\begin{itemize} \item When the sample size $n$ is greater than 30, we can compute the quantile using Murdoch Barnes table 3.
+Remark
+
+\item $95\%$ of Z random variables are between -1.96 ( quantile for $2.5\%$)and 1.96 ( quantile for $97.5\%$)
+\end{itemize}
+
+\begin{framed}
+\begin{itemize}
+\item If the confidence level is $95\%$, then the quantile is 1.96. Recall
+\[ \Pr( -1.96 \leq Z \leq 1.96) = 0.95 \]
+
+\item If the confidence level is $90\%$, then the quantile is 1.645.
+\[ \Pr( -1.645 \leq Z \leq 1.645) = 0.90 \]
+
+\item If the confidence level is $99\%$, then the quantile is 2.576.
+\[ \Pr( -2.576 \leq Z \leq 2.576) = 0.99 \]
+
+\end{itemize}
+
+\end{framed}
+
+
+
+
+%-----------------------------------------------------------%
+
+
+\subsection*{Standard Error}
+
+\begin{itemize}
+\item The standard error measures the dispersion of the sampling distribution.
+\item For each type of point estimate, there is a corresponding standard error.
+\item A full list of standard error formulae will be attached in your examination paper.
+\item The standard error for a  mean is
+\[ S.E( \bar{x} )  = \frac{\sigma}{ \sqrt{n}} \]
+\item However, we often do not know the value for $\sigma$. For practical purposes, we use the sample standard deviation $s$ as an estimate for $\sigma$ instead.
+\[ S.E( \bar{x} )  = {s \over \sqrt{n}} \]
+\end{itemize}
+
+
+
+
+
+%------------------------------------------------------------------------------%
+
+\subsection*{Example 1: Confidence Interval for a mean}
+
+\begin{itemize}
+\item For a given week, a random sample of 100 hourly employees selected from a very large number of
+employees in a manufacturing firm has a sample mean wage of $\bar{x} = 280$ dollars, with a sample standard deviation of
+$s = 40$ dollars.
+\item Estimate the mean wage for all hourly employees in the firm with an interval estimate such that we can be 95
+percent confident that the interval includes the value of the population mean.
+\end{itemize}
+
+
+
+
+\begin{itemize}
+\item The point estimate in this case is the sample mean $\bar{x} = 280$ dollars.
+\item We have a large sample (n=100) and the confidence level is $95\%$. Therefore the quantile  is 1.96.
+\item The standard error is computed as follows:
+
+\[ S.E( \bar{x} )  = {s \over \sqrt{n}}  =  {40 \over \sqrt{100}} = 4  \]
+\item \textbf{Confidence Interval for mean}
+
+\[
+280 \pm (1.96 \times 4)  = (280 \pm 7.84) = (\;272.16\;,\;287.84\;)
+\]
+
+\end{itemize}
+
+
+
+\subsection*{Example 2: Confidence Interval for a Mean (Small Sample)}
+\begin{itemize}
+\item The mean operating life for a random sample of $n = 10$ light bulbs is $\bar{x} = 4,000$ hours, with the sample
+standard deviation $s = 200$ hours. \item The operating life of bulbs in general is assumed to be approximately normally distributed.
+
+\item This is a small-sample estimation. We use the student $t-$ distribution for computing the quantile. We will assume a confidence level of $95\%$ (hence $\alpha = 0.05$).
+\item The point estimate is 4,000 hours. 
+\item The sample standard deviation is 200 hours, and the sample size is 10. Hence \[S.E(\bar{x} ) = { 200 \over \sqrt{10}} = 63.3\]
+
+\item From Murdoch Barnes Table 7, the t-quantile with $df=9$ is 2.262.
+\item
+We estimate the mean operating life for the population of bulbs from which this sample was taken, using a 95 percent
+confidence interval as follows:
+
+\[4,000\pm(2.262)(63.3)  = (3857,4143)\]
+\end{itemize}
+
+
+\end{document}

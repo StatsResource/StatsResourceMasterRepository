@@ -1,0 +1,117 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+%\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+%\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Confidence Intervals} %\input{tcilatex}
+
+\begin{document}
+\section{Inference}
+
+
+\subsection{Independent one-sample $t$-test}
+In testing the null hypothesis that the population mean is equal to a specified value $\mu_{0}$, one uses the statistic
+
+\begin{equation}t = \frac{\overline{x} - \mu_0}{s / \sqrt{n}}\end{equation}
+
+where $s$ is the sample standard deviation and $n$ is the sample size. The degrees of freedom used in this test is $n - 1$.
+
+
+
+\subsection{Hypothesis testing}
+The standard deviation of the life for a particular brand of
+ultraviolet tube is known to be $S = 500 hr$, and the operating
+life of the tubes is normally distributed. The manufacturer claims
+that average tube life is at least 9,000hr. Test this claim at the
+5 percent level of significance against the alternative hypothesis
+that the mean life is less than 9,000 hr, and given that for a
+sample of $n = 18$ tubes the mean operating life was $\bar{X}=
+8,800 hr.$
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%--------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 1 (a)}
+\large
+\begin{itemize}
+\item The standard deviation of the life for a particular brand of ultraviolet tube is known to be $s = 500$ hr,
+\item Also it is assumed, but not known, that the operating life of the tubes is normally distributed. \item The manufacturer claims that average tube life
+is at least 9,000hr. \item Test this claim at the 5 percent level of significance against the alternative hypothesis
+that the mean life is 9,000 hr, and given that for a sample of $n = 10$ tubes the mean operating
+life was $\bar{x} = 8,800$ hr.
+\item (Intuitively this would suggest a one-tailed test that the mean is less than 9000 hours)
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large
+\begin{itemize}
+\item $H_0 \mbox{ : } $ $\mu = 9000$ Average life span is 9000 hours.
+\item $H_1 \mbox{ : } $ $\mu \neq 9000$ Average life span is not 9000 hours.
+\end{itemize}
+\bigskip
+\begin{itemize}
+\item The observed difference is -200 hours. (i.e. 8,800 - 9,000 hours)
+\item The standard error is determined from formulae.
+\[ S.E.(\bar{x}) = {s \over \sqrt{n}} = {500 \over \sqrt{10}}  = 158.1139 \]
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frametitle{Example 1 (c) : Test Statistic }
+\large
+\begin{itemize}
+\item The test statistic is ${(8800-9000) -0 \over  158.11} = -1.265$
+\item The CV is determined from Murdoch Barnes Table 7, with $\alpha = 0.05$ and $k = 2$.
+\item The sample is small n= 10 $df = n-1 = 9$.Therefore $CV = 2.262$
+\item (Remark: If the distribution was known to be normal, we could use $df = \infty$, i.e $CV = 1.96$).
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frametitle{Example 1 (d) }
+\large
+\begin{itemize}
+
+
+\item \textbf{Decision:}Is $|TS| >CV$? Is $1.265 > 2.262$?
+\item No. We fail to reject the null hypothesis. Not enough evidence to say that the mean lifespan is not 9000 hours.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+\item We will approach the same problem in example 1, but this time using the p-value approach.
+\item The first two steps i.e. formally stating the null and alternative hypothesis, and computing the test statistic are the same, are the same as example 1.
+\item The third step is to compute the p-value:  $P(Z \geq |TS|)$.
+\item From Murdoch Barnes table 3: $P(Z \geq 2.65) = 0.00402$ (i.e. less than half a percent).
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frametitle{Example 3: Difference in Means (b) }
+\begin{itemize}
+\item The p-value is  $0.00402$
+\item The critical region has size $\alpha/k = 0.05/2 = 0.0250$.
+\item We reject the null hypothesis because the computed p-value is less than $0.0250$.
+\item \textbf{Conclusion:} we reject the null hypothesis. There is a significant different between both drugs, in terms of recovery times.
+\end{itemize}
+\end{document}
+

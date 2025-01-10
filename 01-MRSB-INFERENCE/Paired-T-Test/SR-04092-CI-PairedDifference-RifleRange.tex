@@ -1,0 +1,91 @@
+
+
+	\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+%\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+%\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Confidence Intervals} %\input{tcilatex}
+
+\begin{document}
+
+\subsection*{Confidence Intervals for Paired Differences  }
+(Revision)
+\begin{itemize}
+\item The $95\%$ confidence interval is a range of values which contain the true population parameter (i.e. mean, proportion etc) with a probability of $95\%$.
+\item We can expect that a $95\%$ confidence interval will not include the true parameter values $5\%$ of the time.
+\item A confidence level of $95\%$ is commonly used for computing confidence interval, but we could also have confidence levels of $90\%$,$99\%$ and $99.9\%$.
+
+\item A confidence level for an interval is denoted to $1-\alpha$ (in percentages: $100(1-\alpha)\%$) for some value $\alpha$.
+\item A confidence level of $95\%$ corresponds to $\alpha = 0.05$.
+\item $100(1-\alpha)\%$ = $100(1-0.05)\%$  = $100(0.95)\%$ = $95\%$
+\item For a confidence level of $99\%$, $\alpha = 0.01$.
+\item Knowing the correct value for $\alpha$ is important when determining quantiles.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Recall: General Structure of Confidence Intervals:
+\smallskip
+\[ ( \bar{d} ) \pm \left[ \mbox{Quantile } \times S.E(\bar{d}) \right] \]
+\[ ( \bar{d} ) \pm \left[ \mbox{Quantile } \times \frac{s_d}{\sqrt{n}} \right] \]
+\begin{itemize}
+\item If the combined sample size of X and Y is greater than 30, even if the individual sample sizes are less than 30, then we consider it to be a large sample.\\ \textit{(we would never do a large sample by pen-and-paper calculations)}
+\item The quantile is calculated according to the procedure we met in the previous class.\\ \textit{(Murdoch Barnes Table 7 - recall \textit{df=n-1})}
+\end{itemize}
+
+%---------------------------------------------------------%
+
+%---------------------------------------------------------------------------------------------------------------%
+\newpage 
+\subsection*{Example}
+Ten soldiers visit the rifle range on two different weeks. The first
+week their scores are:
+\[67, 24, 57, 55, 63, 54, 56, 68, 33, 43\]
+The second week they scores were as follows (in same order of soldier)
+\[70, 38, 58, 58, 56, 67, 68, 77, 42, 38\]
+Give a 95\% confidence interval for the improvement in scores from week one to
+week two.
+
+
+\subsection*{Answer}
+
+\begin{itemize}
+\item This is a case of paired samples, for the scores are repeated observations for each
+soldier, and there is good reason to think that the soldiers will differ from each other
+in their shooting skill. 
+\item So we work with the individual differences between the scores.
+\item We shall have to assume that the pairwise differences are a random sample from a
+normal distribution.
+\item 
+The differences are (using an \textbf{\textit{after-before}} basis):
+
+\[3, 14, 1, 3, -7, 13, 12, 9, 9, -5\]
+\end{itemize}
+\smallskip
+
+\begin{itemize}
+\item Effectively we now have a single sample of size 10, and want a 95\% confidence
+interval for the mean of the population from which these differences are drawn. For
+this we use a Student's $t$ interval.
+\item  The sample mean of the differences is 5.2, and
+$s^2$ = 54.84. 
+\item So $s = 7.41$, and the 95\% $t$ interval for the difference in the means is
+\begin{eqnarray*}5.2 \pm 2.26(7.41)/\sqrt{10} &=&  5.2 \pm 2.26(7.41)/\sqrt{10} \\&=& (0.1, 10.5)\end{eqnarray*}
+\end{itemize}
+\end{document}

@@ -1,0 +1,83 @@
+ \documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{framed}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 2011 13:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+%\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+%\lhead{MA4413 2013} \rhead{Mr. Kevin O'Brien}
+%\chead{Midterm Assessment 1 }
+%\input{tcilatex}
+
+\begin{document}
+
+
+
+
+
+%---------------------------------------------------------------- %
+\newpage
+\noindent {\Large \textbf{MA4413 Weeks 10 and 11 Tutorials}}
+\section*{Question 1 (Paired t-test)}
+The weight of 10 students was observed before commencement of their studies and after graduation (in kgs). By calculating the realisation of the appropriate test statistic, test the hypothesis that the mean weight of students increases during their studies at a significance level of  5\%. 
+%--------------------------------%
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Student	&	1	&	2	&	3	&	4	&	5	&	6	&	7	&	8	&	9	&	10	\\ \hline
+Weight before	&	68	&	74	&	59	&	65	&	82	&	67	&	57	&	90	&	74	&	77	\\ \hline
+Weight after	&	71	&	73	&	61	&	67	&	85	&	66	&	61	&	89	&	77	&	83	\\ \hline
+\end{tabular} 
+\end{center}
+
+%-------------------------------------------%
+\noindent \textbf{[Recall Descriptive Statistics]}\\
+\noindent You may be required to carry out these calculations in the exam.
+\begin{itemize}
+\item Case-wise differences are 
+\[ d = \{3, -1,  2,  2,  3, -1,  4, -1,  3,  6  \}\]
+\item The sum of case-wises differences and squared case-wise differences are $\sum d_i = 20$ and $\sum d_i^2 = 90$ respectively.
+\item Mean of case-wise differences $\bar{d}=2.00$.
+\[ \bar{d} = \frac{3 + (-1) + 2 + \ldots + 6}{10} = \frac{20}{10} \]
+\item Standard deviation of casewise differences $s_d= 2.36 $\\
+(Modified version of standard deviation formula)
+
+
+\[ s_d = \sqrt{\frac{ \sum(d^2_i) - \frac{(\sum d_i)^2}{n}}{n-1}}\]
+\[ s_d = \sqrt{\frac{ 90 - \frac{(20)^2}{10}}{9}} = \sqrt{\frac{50}{9}} = 2.36 \]
+
+\item Standard Error
+\[ S.E.(d) = \frac{s_d}{\sqrt{n}} =\frac{2.36}{\sqrt{10}} = 0.745\]
+\item From Murdoch Barnes, the CV is 1.812 (small sample,df = 9,one-tailed procedure)
+\end{itemize}
+
+
+\noindent \textbf{Writing the Hypotheses}
+\begin{description}
+\item[$H_0$] $\mu_d \leq 0$ \\mean of case-wise differences not a positive number. (i.e. no increase in weight)
+\item[$H_1$] $\mu_d > 0$ \\mean of case-wise differences is a positive number. (i.e. increase in weight)
+\end{description}
+%-------------------------------------------%
+
+
+%--------------------------------%
+\subsection*{Question 1 Part B}
+Calculate a 95\% confidence interval for the amount of weight that students put on during their studies. Using this confidence interval, test the hypotheses that on average students put on \textbf{3 kilos} during their studies
+%ii) students lose 3 kilos during their studies.
+
+%(What assumption was made in order to both carry out the test and calculate the confidence interval?)

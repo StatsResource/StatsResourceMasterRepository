@@ -1,0 +1,56 @@
+
+
+	\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+%\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+%\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Confidence Intervals} %\input{tcilatex}
+
+\begin{document}
+%----------------------------------------------------------------------- %
+\section*{Question 6 (Two Sample proportions, one tailed)}
+\begin{itemize}
+\item The government wishes to increase the proportion of people taking government training courses who obtain a job in the following 3 months. \item Before they introduced the new schemes this figure was 58\%, according to sample of 400 people, with 232 successes. \item A survey of 300 people who took the new courses indicated that 188 of them gained a job. A government official stated that this indicates that the new courses have been more successful. \item Is this statement reasonable at a significance level of 5\%?
+\end{itemize}
+
+\noindent{\textbf{Some Calculations}}
+
+\begin{itemize}
+\item Aggregate proportion
+\[ \bar{p} = \frac{232 + 188}{400+300} = \frac{420}{700} =60\%\]
+\item Standard Error for Hypothesis Test
+\[S.E\]\[ S.E.(\pi_1 - \pi_2)  = \sqrt{60 \times 40) \times \left( \frac{1}{400} + \frac{1}{300}\right)}  = 3.74\]
+
+\end{itemize}
+\newpage
+%-------------------------------------%
+\section*{Question 7 - Two Sample Means (Small Samples)}
+A new process has been developed to reduce the level of corrosion of car bodies.
+\begin{itemize}
+\item Experiments were carried out on 11 cars using the new process and 11 cars using the old process. \item The average level of corrosion using the new process was 3.4 with a standard deviation of 0.5. \item The average level of corrosion using the old process was 4.2 with a standard deviation of 0.8. 
+\end{itemize} 
+
+\begin{itemize}
+\item  Test the hypothesis that the variance of the level of corrosion does not depend on the process used.
+\item  Is there any evidence that the new process is better at a significance level of 5\%?
+\item  Calculate a 95\% confidence interval for the difference between the mean levels of corrosion under the two processes. Can it be stated that the mean level of corrosion is reduced by 1.5 at a significance level of 5\%? 
+%\item  What assumptions were used in ii) and iii)? 
+\end{itemize}

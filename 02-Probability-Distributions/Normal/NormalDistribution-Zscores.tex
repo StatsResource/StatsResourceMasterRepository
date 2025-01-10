@@ -1,0 +1,104 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{framed}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Normal Distribution} %\input{tcilatex}
+
+\begin{document}
+
+
+	\section*{Normal Distribution : Simple Example}
+	
+	
+	Consider the normally distributed random variable $X$
+	
+	\[ X \sim \mathcal{N}(\mu=1000,\sigma^2 = 2500) \]
+	
+\noindent \textbf{Parameters:}
+	\begin{itemize}
+		\item Normal Mean $\mu =1000$
+		\item Normal Standard Deviation $\sigma =50$
+	\end{itemize}
+\subsection*{Questions}
+	
+	\begin{enumerate}[(A)]
+\item $P(X \geq 1025$
+\item $P(X \geq 1075$
+\item $P(X \leq 975)$
+\item $P(X \leq 925)$
+	\end{enumerate}
+	%---------------------------------------------------%
+	
+\subsection*{Solution to Part A}
+	
+\noindent \textbf{Z-Score}	
+\[ Z_{1025} = \frac{1025-1000}{50} = 0.50\]
+Therefore we can say
+\[ P(X \geq 1025)  = P(Z \geq 0.50) \]
+	
+\noindent From Murdoch Barnes Tables 3
+	\[  P(Z \geq 0.5) = 0.3085
+	\]
+	
+\noindent 	Therefore we can say 
+	\[ P(X \geq 1025)  =  0.3085 \]
+		%---------------------------------------------------%
+	
+\subsection*{Solution to Part B}
+\noindent \textbf{Z-Score}	
+\[ Z_{1075} = \frac{1075-1000}{50} = 1.50\]
+Therefore we can say
+\[ P(X \geq 1075)  = P(Z \geq 1.50) \]
+	
+\noindent From Murdoch Barnes Tables 3
+	\[  P(Z \geq 1.5) =  0.0668
+	\]
+	
+\noindent Therefore we can say 
+	\[ P(X \geq 1075) = 0.0668 \]
+	%---------------------------------------------------%
+	
+\subsection*{Solution to Part C }
+\noindent \textbf{Z-Score}	
+\[ Z_{975} = \frac{975-1000}{50} = -0.50\]	
+Therefore we can say
+	\[ P(X \leq 975)  = P(Z \leq -0.5) \]
+	
+\noindent Applying the Symmetry Rule
+	\[ P(Z \leq -0.5) = P(Z \geq 0.5) = 0.3085\]
+	
+\noindent Therefore we can say 
+	\[ P(X \leq 975) = 0.3085 \]
+	
+	%---------------------------------------------------%
+\subsection*{Solution to Part D}
+\[ Z_{925} = \frac{925-1000}{50} = -1.50\]
+Therefore we can say
+\[ P(X \leq 925)  = P(Z \leq -1.50) \]
+	
+\noindent Applying the Symmetry Rule
+	\[ P(Z \leq -1.5) = P(Z \geq 1.5) = 0.0668\]
+	
+\noindent Therefore we can say 
+	\[ P(X \leq 925) = 0.0668 \]
+	
+	%---------------------------------------------------%
+\end{document}	

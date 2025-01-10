@@ -1,0 +1,132 @@
+
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+Question 4
+An insurance company wants to estimate the percentage of drivers who talk on their mobile phones while driving. 
+A random sample of 850 drivers results in 544 who talk on their mobile phones while driving.
+(a) Find the point estimate of the percentage of all drivers who talk on their cell phones while driving.
+(b) Find a 95\% interval estimate of the percentage of all drivers who talk on their cell phones while driving. 
+
+
+
+Q8. Of a sample of 500 data scientists, 344 cited R as their primary programming language. 
+Let $\pi$ be the proportion of all computer programmers who regard R as their primary programming 
+language. Estimate $\pi$ and provide a 95\% confidence interval for $\pi$.
+
+
+
+\subsection*{Question 6}
+Assume that a particular brand dominates the market. More specifically, it is well-known that at least 60\% of people use this brand (i.e., $p \ge 0.6$). However, in response to recent media claims that this brand is weakening, the company wish to test the hypothesis that $p \ge 0.6$. \\[-0.2cm]
+
+{\bf(a)} State the null and alternative hypotheses. \quad {\bf(b)} From a sample of 1000 people, it is found that 629 use this brand; calculate the test statistic and, hence, the p-value. \quad {\bf(c)} Based on the evidence, state your conclusion.
+
+
+%---------------------------------------------------------------------------------------------%
+\section{Inference on Proportions}
+
+Out of 800 randomly selected drivers, 376 admitted that, on occation, they have driven through red lights.
+
+The claim that the majority 0f drivers have drivien through red lights.
+\begin{enumerate}[(a)]
+\item What is the point estimate? 
+\item Compute the 95\% confidence interval. 
+\item Based on the confidence interval, state your conclusions about the claim.
+\end{enumerate}
+
+\subsection*{Point Estimate}
+\begin{itemize}
+\item $\hat{p}$ is the sample proportion (or sample percentage).
+\item $x$ is the number of successes
+\item $n$ is the sample size 
+\end{itemize}
+\[ \hat{p} = { x \over n} \]
+$\hat{p}$ = 376/800 = 0.47  (i.e. $47\%$)
+
+\subsection*{Standard Error}
+The relevant formulae for standard errors are generally included at the back of exam papers.
+The standard error is computed according to the following formula.
+
+
+\vspace{0.1cm}
+\[
+S.E. (\hat{p}) = \sqrt{ { \hat{p} \times ( 1 - \hat{p}) \over n}}
+\]
+However, it is easier to perform such calculation when working in terms of percentages.
+
+\vspace{0.1cm}
+\[
+S.E. (\hat{p}) = \sqrt{ { p \times (100-p) \over n}}  \;[\%]
+\]
+\vspace{0.1cm}
+
+\begin{itemize}
+\item $n$ is the sample size. For our example $n = 800$.
+
+
+\item $\hat{p}$ is the sample proportion.
+(Recall $\hat{p} = 0.47$ i.e (47\%))
+
+
+\item $1 - \hat{p}$ is the complement of the sample proportion \begin{itemize}
+\item For our example $1- \hat{p} = 1 - 0.47 =  0.53$. (i.e. 53\%)
+\end{itemize}
+\end{itemize}
+
+
+
+Using these values, we can calculate the standard error with this expression. For the sake of simplicity, we will work in terms of percentages.
+
+\vspace{0.1cm}
+\[
+S.E. (\hat{p}) = \sqrt{ { 47 \times 53 \over 800}} = \frac{\sqrt{2491}}{800} = \sqrt{3.11} = 1.76
+\]
+
+\vspace{0.1cm}
+
+\subsection*{Quantile}
+For a large sample, as is the case here, the quantile for the 95\% confidence interval can simply be stated as 1.96, without any requirement to justify it.
+
+\subsection*{The 95\% Confidence Interval}
+
+\[ \mbox{Point Estimate} \pm \left( \mbox{Quantile} \mbox{Std. Error} \right) \]
+
+\[\mbox{95\% Confidence Interval} = (47 - (1.96 \times 1.76), 47 + (1.96 \times 1.76) ) = (43.55,50.45) \]
+
+\subsection*{Conclusion}
+
+\newpage
+
+
+\subsection*{Question 8}
+A soft drinks company is working on a new recipe for its best-selling drink. The company intends to carry out a study where participants will taste both flavours (current and new) and then answer the question:
+\begin{quotation}
+	``Do you prefer the new flavour?''
+\end{quotation}
+It is assumed that the \emph{current} recipe is superior, i.e., that \emph{less than or equal to} 50\% of people prefer the new drink ($p \le 0.5$).\\[0.4cm]
+We wish to test the hypothesis that $p \le 0.5$.\\[-0.2cm]
+
+\begin{enumerate}[(a)]
+\item State the null and alternative hypotheses. 
+\item From a sample of 65 people, we find that 43 people prefer the new recipe. Calculate the test statistic and, hence, the p-value. 
+\item Based on the evidence, state your conclusion.
+\end{enumerate}
+
+\end{document}

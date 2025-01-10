@@ -1,0 +1,387 @@
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx}  % Font Family
+\usepackage{helvet}   % Font Family
+\usepackage{color}
+
+\mode<presentation> {
+ \usetheme{Default} % was Frankfurt
+ \useinnertheme{rounded}
+ \useoutertheme{infolines}
+ \usefonttheme{serif}
+ %\usecolortheme{wolverine}
+% \usecolortheme{rose}
+\usefonttheme{structurebold}
+}
+
+\setbeamercovered{dynamic}
+
+\title[MA4413]{Statistics for Computing (MA4413) } % \\ {\normalsize {Lecture 1A}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize Kevin.obrien@ul.ie}}
+\date{Autumn Semester 2011 : Lecture 1A}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+\section{Lecture 1A : About this module}
+
+\frame{
+\frametitle{MA4413 : Statistics For Computing}
+\textbf{Lectures : }
+\begin{itemize}
+\item Monday 12-13 in Room $C063$
+\item Tuesday 13-14 in Room $S206$
+\item No classes on Bank Holiday Monday and during the open days.
+\item Tutorials
+\end{itemize}
+
+
+}
+
+%-----------------------------------------------------------%
+\frame{
+\frametitle{Today's Lecture}
+\begin{itemize}
+\item Description of module syllabus
+\item Details on the assessment
+\item Teaching materials
+\begin{itemize}
+\item Lecture notes : available on SULIS system
+\item Murdoch Barnes statistical tables
+\end{itemize}
+\item \texttt{R} code, a statistical programming language, will also be included.
+\end{itemize}
+
+}
+%----------------------------------------------------------%
+
+\frame{
+\frametitle{Syllabus}
+The syllabus is made up of the following subject areas :
+\begin{itemize}
+\item Probability theory,
+\item Descriptive statistics and graphical methods,
+\item Probability distributions,
+\item Information theory and data compression,
+\item Confidence intervals and hypothesis testing.
+\end{itemize}
+
+}
+%----------------------------------------------------------%
+\frame{
+\frametitle{Learning Outcomes}
+On successful completion of this module, students should be able to:
+\begin{enumerate}
+\item Apply probability theory to problem solving.
+
+\item Employ the concepts of random variables and probability distributions to problem solving.
+
+\item Apply information theory to solve problems in data compression and transmission.
+
+\item Analyse rates and proportions.
+
+\item Perform hypothesis tests for a variety of statistical problems.
+\end{enumerate}
+}
+
+%---------------------------------------------------------%
+\frame{
+\frametitle{Module Assessment}
+\begin{itemize}
+\item End of semester examination (85\%).
+\item Mid term examination (15\%).
+\begin{itemize}
+\item Provisionally scheduled for Tuesday (Week 8).
+\item I will re-arrange the date if needs be.
+\end{itemize}
+\item Past papers will be made available through the SULIS system.
+\end{itemize}
+
+}
+
+
+
+
+%----------------------------------------------%
+\frame{
+\frametitle{Definitions}
+%--http://www.stats.gla.ac.uk/steps/glossary/probability.html#probability
+\begin{enumerate}
+\item Probability
+\item Random Experiment %Yes
+\item Outcome %Yes
+\item Sample Space %Yes
+\item Event %Yes
+\item Conditional Probability %Yes
+\item Independent Events %Yes
+\item Mutually Exclusive Events %Yes
+\item Addition Rule %Yes
+%\item Multiplication Rule
+%\item Law of Total Probability
+%\item Bayes' Theorem
+\end{enumerate}
+}
+
+
+
+%------------------------------------------------------------------%
+\frame{
+\frametitle{Probability}
+\begin{itemize}
+\item Probability theory is the mathematical study of randomness. A probability model of a random experiment is
+defined by assigning probabilities to all the different outcomes. \item Probability is a numerical measure of the likelihood that an event will occur. Thus, probabilities can be used as measures of degree of uncertainty associated with outcomes of an experiment.
+
+\item Probability values are always assigned on a scale from $0$ to $1$.
+
+\item A probability of $0$ means that the event is impossible, while a probability near $0$
+means that it is highly unlikely to occur. \item Similarly an event with probability $1$ is certain to occur, whereas an event with a probability near to $1$ is very likely to occur.
+\end{itemize}
+}
+\frame{
+\section{Definitions}
+%------------------------------------------------------------------%
+\frametitle{Experiments and Outcomes}
+\begin{itemize}
+\item In the study of probability any process of observation is referred to as an \textbf{\emph{experiment}}.
+\item The results of an experiment (or other situation involving uncertainty) are called the \textbf{\emph{outcomes }}of the experiment.
+\item An experiment is called a \textbf{\emph{random experiment}} if the outcome can not be predicted.
+\item Typical examples of a random experiment are \begin{itemize} \item a role of a die, \item a toss of a coin, \item drawing a card from a deck.
+        \end{itemize}
+ \item If the experiment is yet to be performed we refer to `possible outcomes' or `possibilities' for short. If the experiment has been performed, we refer to `realized outcomes' or `realizations'.
+\end{itemize}
+}
+
+%--------------------------------------------------------%
+\frame{
+\frametitle{Sample Spaces and Events}
+\begin{itemize}
+\item The set of all possible outcomes of a probability experiment is called a \textbf{\emph{sample space}}, which is usually denoted by $\boldsymbol{S}$.
+\item The sample space is an exhaustive list of all the possible outcomes of an experiment. We call individual elements of this list \textbf{\emph{sample points}}.
+\item Each possible outcome is represented by one and only one sample point in the sample space.
+\end{itemize}
+}
+%--------------------------------------------------------%
+\frame{
+\frametitle{Example} 
+For each of the following experiments, write out the sample space.
+\begin{itemize}
+\item Experiment: Rolling a die once
+\begin{itemize}
+\item Sample space $\boldsymbol{S} = \{1,2,3,4,5,6 \}$ \end{itemize}
+\item Experiment:  Tossing a coin
+\begin{itemize}
+\item Sample space $\boldsymbol{S} = \{\mbox{ Heads },\mbox{ Tails} \}$ \end{itemize}
+\item Experiment:  Measuring a randomly selected person's height (cms)
+\begin{itemize} \item Sample space $\boldsymbol{S} = \mbox{ The set of all possible real numbers }$
+\end{itemize}\end{itemize}
+}
+
+%--------------------------------------------%
+\frame{
+\frametitle{Events}
+\begin{itemize}
+\item
+An \textbf{\emph{event}} is a specific outcome, or any collection of outcomes of an experiment.
+\item Formally, any subset of the sample space is an event.
+\item Any event which consists of a single outcome in the sample space is called an \textbf{\emph{elementary}}  or \textbf{\emph{simple event}}.
+\item Events which consist of more than one outcome are called \textbf{\emph{compound events}}.
+\item For example, an elementary event associated with the die example could be the ``die shows $3$".
+\item An compound event associated with the die example could be the ``die shows an even number".
+\end{itemize}
+}
+%--------------------------------------------%
+\frame{
+\frametitle{The Complement Event}
+\begin{itemize}
+\item The complement of an event $A$ is the set of all outcomes in the sample space that are not included in the outcomes of event $A$.  
+    \item We call the complement event of $A$ as $A^c$.
+\item    
+The complement event of a die throw resulting in an even number is the die throwing an odd number.
+\end{itemize}
+}
+
+
+%--------------------------------------------%
+
+\frame{
+
+\frametitle{Set Theory : Union and Intersection}
+Set theory is used to represent relationships among events.\\ \bigskip
+\textbf{Union of two events: }\\
+The union of events $A$ and $B$ is the event containing all the sample points belonging to A or B or both.
+This is denoted $A \cup B$, (pronounce as ``A union B").\\ \bigskip
+
+\textbf{Intersection of two events:  }\\
+The intersection of events $A$ and $B$ is the event containing all the sample points common to both $A$ and $B$. This is denoted
+$A \cap B$, (pronounce as ``A intersection B").
+
+
+}
+
+
+%-----------------------------------------------------------%
+\frame{
+\frametitle{More Set Theory}
+ In general, if $A$ and $B$ are two events in the sample space $\boldsymbol{S}$, then
+\begin{itemize}
+\item $A \subseteq B$(A is a subset of B) = 'if $A$ occurs, so does $B$'.\\
+\item $\boldsymbol{\oslash}$ (the empty set) = an impossible event.\\
+\item $S$ (the sample space) = an event that is certain to occur.\\
+\end{itemize}
+}
+%--------------------------------------------%
+
+\frame{
+\frametitle{Examples of Events}
+Consider the experiment of rolling a die once. From before, the sample space is given as $S = \{1,2,3,4,5,6\}$. The following are examples of possible events.
+
+\begin{itemize}
+\item $A$ = score $< 4$ = $\{1,2,3\}$.
+\item $B$ = `score is even' $= \{2,4,6\}$
+\item $C$ = `score is 7' = $\boldsymbol{\oslash}$\\
+\item $A \cup B$ = `the score is $< 4$ or even or both' = $\{1,2,3,4,6\}$\\
+\item $A \cap B$ = `the score is $< 4$ and even' = $\{2\}$\\
+\item $A^C$  = 'event $A$ does not occur' = $\{4,5,6\}$
+\end{itemize}
+}
+%--------------------------------------------%
+\frame{
+\frametitle{Probability}
+If there are n possible outcomes to an experiment, and $m$ ways in which event $A$ can happen, then the probability of event $A$ ( which we write as $P(A)$) is
+\[P(A) = \frac{m}{n}.\]
+
+The probability of the event $A$ may be interpreted as the proportion of times that event $A$ will occur if we repeat the random experiment an infinite number of times.\\ \bigskip
+
+\textbf{Rules}
+\begin{enumerate}
+\item $0 \leq P(A) \leq 1$ ; the probability of any event lies between 0 and 1 inclusive.
+\item P(S) = 1 ; the probability of the sample space is always equal to 1.
+\item $P(A^c) = 1- P(A)$; how to compute the probability of the complement.
+\end{enumerate}
+}
+%---------------------------------------------------------------%
+\section{Conditional Probability}
+%--------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Conditional Probability}
+%The conditional probability of an event A given event B, denoted P(A|B) is defiend as
+%P(A|B)  = \frac{P(A \mbox{ and } B)}{P(B)}  where $ P(B) > 0$
+% Two events A and B are said to be statistically independent if and only if  P(A and B) = P(A) \times P(B)
+
+
+Suppose $B$ is an event in a sample space $S$ with $P(B) > 0$. \\\bigskip The probability that an event $A$ occurs once $B$ has occurred or, specifically, the conditional probability of $A$ given $B$, written $P(A|B)$, is defined as follows:
+\[P(A|B) = { P(A \cap B) \over P(B) }\]
+This can be expressed as a multiplication theorem
+\[P(A \cap B) = P(A|B)\times P(B) \]
+\begin{itemize}
+\item The symbol $|$ is a vertical line and does not imply division. 
+\item Also $P(A|B)$ is not the same as $P(B|A)$.
+\end{itemize}
+}
+
+%---------------------------------------------------------------%
+\section{Independent and Mutually Exclusive Events}
+\frame{
+\frametitle{Independent Events}
+
+Events $A$ and $B$ in a probability space $\boldsymbol{S}$ are said to be \textbf{\emph{independent}} if the occurrence of one of them does not influence the occurrence of the other.\\ \bigskip
+More specifically, $B$ is independent of $A$ if $P(B)$ is the same as $P(B|A)$.
+Now substituting $P(B)$ for $P(B|A)$ in the multiplication theorem from the previous slide yields
+\[P(A \cap B) = P(A)\times P(B).\]
+
+We formally use the above equation as our definition of independence.
+}
+%--------------------------------------------------------------%
+\frame{
+\frametitle{Mutually Exclusive Events}
+\begin{itemize}
+\item Two events are mutually exclusive (or disjoint) if it is impossible for them to occur together.
+\item Formally, two events $A$ and $B$ are mutually exclusive if and only if
+\[A \cap B = \oslash
+\]
+\end{itemize}
+
+Consider our die example
+\begin{itemize}
+\item Event $A$ = 'observe an odd number' = $\{1,3,5\}$
+\item Event $B$ = 'observe an even number' = $\{2,4,6\}$
+\end{itemize}
+$A \cap B = \oslash $ = the empty set, so A and B are mutually exclusive.\\
+
+}
+%----------------------------------------------------------------------%
+\section{Important Rules for Probability}
+\frame{
+\frametitle{Addition Rule}
+The addition rule is a result used to determine the probability that event $A$ or event $B$ occurs or both occur. The result is often written as follows, using set notation:
+\[ P(A \cup B) = P(A) + P(B) - P(A \cap B) \]
+
+\begin{itemize}
+\item $P(A)$ = probability that event $A$ occurs.
+\item $P(B)$ = probability that event $B$ occurs.
+\item $P(A \cup B)$ = probability that either event $A$ or event $B$ occurs, or both occur.
+\item $P(A \cap B)$ = probability that event $A$ and event $B$ both occur.
+\end{itemize}
+
+\textbf{Remark: }$P(A \cap B)$ is subtracted to prevent the relevant outcomes being counted twice.
+}
+\frame{
+\frametitle{Addition Rule (Continued)}
+For mutually exclusive events, that is events which cannot occur together:
+$P(A \cap B) = 0$. The addition rule therefore reduces to
+\[ P(A \cup B) = P(A) + P(B) \]
+
+}
+%---------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Addition Rule: Worked Example}
+Suppose we wish to find the probability of drawing either a Queen or a Heart in a single draw from a pack of 52 playing cards.
+We define the events $Q$ = `draw a queen' and $H$ = `draw a heart'
+\begin{itemize}
+\item $P(Q)$ probability that a random selected card is a Queen
+\item $P(H)$ probability that a randomly selected card is a Heart.
+\item $P(Q \cap H)$ probability that a randomly selected card is the Queen of Hearts.
+\item $P(Q \cup H)$ probability that a randomly selected card is a Queen or a Heart.
+\end{itemize}
+}
+%---------------------------------------------------------------%
+\frame{
+\frametitle{Solution}
+\begin{itemize}
+\item Since there are 4 Queens in the pack and 13 Hearts, so the $P(Q) = 4/52$ and $P(H) = 13/52$ respectively.
+\item
+The probability of selecting the Queen of Hearts is $P(Q \cap H) = 1/52$.
+\item We use the addition rule to find $P(Q \cup H)$:
+\[P(Q \cup H) = 4/52 + 13/52 - 1/52 = 16/52 \]
+
+So, the probability of drawing either a queen or a heart is $16/52 (= 4/13)$.
+\end{itemize}
+
+}
+\frame{
+\frametitle{Tommorow's Class}
+\begin{itemize}
+\item Continue with probability theory
+\item Look at some more worked examples  
+\item Introduce the concept random variables
+\end{itemize}
+
+}
+
+%----------------------------------------------------------------------------%
+\end{document}
+

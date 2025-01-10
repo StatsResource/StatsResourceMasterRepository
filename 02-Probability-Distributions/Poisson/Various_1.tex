@@ -1,0 +1,175 @@
+
+
+\frame{
+\frametitle{The Binomial Probability Distribution}
+\begin{itemize}
+\item The number of independent trials is denoted $n$.
+\item The probability of a `success' is $p$
+\item The expected number of `successes' from $n$ trials is $E(X) = np$
+\end{itemize}
+}
+
+
+%---------------------------------------------------------------------------%
+\frame{
+\frametitle{Continuous Random Variables}
+
+\begin{itemize}
+\item Probability Density Function
+\item Cumulative Density Function
+\end{itemize}
+
+
+If X is a continuous random variable then we can say that the probability of obtaining a \textbf{precise} value $x$ is infinitely small, i.e. close to zero.
+
+\[P(X=x) \approx 0 \]
+
+Consequently, for continuous random variables (only),  $P(X \leq x)$ and $P(X < x)$ can be used interchangeably.
+
+\[P(X \leq x) \approx P(X < x) \]
+
+
+}
+
+
+
+%--------------------------------------------------------%
+%---------------------------------------------------------------------------%
+\frame{
+	\frametitle{Continuous Random Variables}
+	
+	\begin{itemize}
+		\item Probability Density Function
+		\item Cumulative Density Function
+	\end{itemize}
+	
+	
+	If X is a continuous random variable then we can say that the probability of obtaining a \textbf{precise} value $x$ is infinitely small, i.e. close to zero.
+	
+	\[P(X=x) \approx 0 \]
+	
+	Consequently, for continuous random variables (only),  $P(X \leq x)$ and $P(X < x)$ can be used interchangeably.
+	
+	\[P(X \leq x) \approx P(X < x) \]
+	
+	
+}
+
+
+
+
+%--------------------------------------------------------%
+
+\frame{
+	\frametitle{Random Variables}
+	A pair of dice is thrown. Let X denote the minimum of the two numbers which occur.
+	Find the distributions and expected value of X.
+}
+%-------------------------------------------------------------%
+\frame{
+	\frametitle{Random Variables}
+	A fair coin is tossed four times.
+	Let X denote the longest string of heads.
+	Find the distribution and expectation of X.}
+%-------------------------------------------------------------%
+\frame{\frametitle{Random Variables}
+	A fair coin is tossed until a head or five tails occurs.
+	Find the expected number E of tosses of the coin.}
+%-------------------------------------------------------------%
+\frame{\frametitle{Random Variables}A coin is weighted so that P(H) = 0.75 and P(T ) = 0.25
+	
+	The coin is tossed three times. Let X denote the number of
+	heads that appear.
+	\begin{itemize}
+		\item (a) Find the distribution f of X.
+		\item (b) Find the expectation E(X).
+	\end{itemize}
+}
+
+%-------------------------------------------------------------%
+\frame{
+	\begin{itemize}
+		\item Now consider an experiment with only two outcomes. Independent repeated trials of such an experiment are
+		called Bernoulli trials, named after the Swiss mathematician Jacob Bernoulli (1654-1705). 
+		\item The term \textbf{\emph{independent
+				trials}} means that the outcome of any trial does not depend on the previous outcomes (such as tossing a coin).
+		\item We will call one of the outcomes the ``success" and the other outcome the ``failure".
+	\end{itemize}
+}
+
+%-------------------------------------------------------------%
+\frame{
+	\begin{itemize}
+		\item
+		Let $p$ denote the probability of success in a Bernoulli trial, and so $q = 1 - p$ is the probability of failure.
+		A binomial experiment consists of a fixed number of Bernoulli trials. \item A binomial experiment with $n$ trials and
+		probability $p$ of success will be denoted by
+		\[B(n, p)\]
+	\end{itemize}
+}
+%-------------------------------------------------------------%
+
+%---------------------------------------------------------------------------%
+\frame{
+	\frametitle{Probability Mass Function}
+	\begin{itemize} \item a probability mass function (pmf) is a function that gives the probability that a discrete random variable is exactly equal to some value. \item The probability mass function is often the primary means of defining a discrete probability distribution \end{itemize}
+}
+%------------------------------------------------------------------%
+\frame{
+	Thirty-eight students took the test. The X-axis shows various intervals of scores (the interval labeled 35 includes any score from 32.5 to 37.5). The Y-axis shows the number of students scoring in the interval or below the interval.
+	
+	\textbf{\emph{cumulative frequency distribution}}A  can show either the actual frequencies at or below each interval (as shown here) or the percentage of the scores at or below each interval. The plot can be a histogram as shown here or a polygon.
+}
+
+
+
+
+
+
+%---------------------------------------------------------------------------------------------------------------%
+%----R Code ----
+%---------------------------------------------------------------------------------------------------------------%
+n=60000
+Y=numeric(n)
+for ( i in 1:n){
+
+X=floor(runif(100,1,7))
+Y[i]=sum(X)
+}
+
+Y
+hist(Y,breaks=seq(300,400,by=10),main=c("Totals of 100 Die Throws"),cex.lab=1.4,font.lab=2,xlab=c("Total Score"))
+
+hist(Y,breaks=seq(300,400,by=20),main=c("Totals of 100 Die Throws"),cex.lab=1.4,font.lab=2,xlab=c("Total Score"))
+
+
+
+Z=seq(1:n)
+Y/Z
+
+plot(Y/Z,type="l",col="red",main=c("Die Rolls: Running Average"),font.lab=2,ylab="Average Value", xlab=
+" Number of Throws")
+abline(h=3.5,col="green")
+
+
+#####################################################
+
+plot(Z,Z.y,pch=16,col="red",ylim=c(2.5,5.5),main=c("Variance"),font.lab=2,ylab=" ", xlab="X: Green  Y: Blue  Z: Red" )
+
+points(Y,Y.y,pch=16,col="blue" )
+points(X,X.y,pch=16,col="green" )
+points(c(1000,1000,1000),c(3,4,5),pch=18,cex=1.2)
+lines(c(1000,1000),c(2.75,5.25),lty=3)
+
+
+
+n=100000
+Y=numeric(n)
+for ( i in 1:n){
+
+X=floor(runif(100,1,7))
+Y[i]=sum(X)
+}
+
+Y
+hist(Y,breaks=seq(270,430,by=2),main=c("Totals of 100 Die Throws (n= 100,000)"),cex.lab=1.4,font.lab=2,xlab=c("Total Score")) 

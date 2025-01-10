@@ -1,123 +1,69 @@
-\documentclass[a4paper,12pt]{article}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{eurosym}
-\usepackage{vmargin}
-\usepackage{amsmath}
-\usepackage{graphics}
-\usepackage{epsfig}
-\usepackage{subfigure}
-\usepackage{framed}
-\usepackage{enumerate}
-\usepackage{fancyhdr}
+# Continuous Uniform Distribution: Subway Example
+Suppose there is a platform in a subway station in a large large city.  
+Subway trains arrive **every three minutes** at this platform.
 
-\setcounter{MaxMatrixCols}{10}
-%TCIDATA{OutputFilter=LATEX.DLL}
-%TCIDATA{Version=5.00.0.2570}
-%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
-%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
-%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
-%TCIDATA{Language=American English}
+1. What is the shortest possible time a passenger would have to wait for a train?
+2. What is the longest possible time a passenger will have to wait?
+3. What is the probability that they will have to wait longer than 2 minutes?
+4. What is the probability that they will have to wait less than 45 seconds (i.e. 0.75 minutes)?
+5. Compute the expected value and variance of the waiting time $X$.
 
-\pagestyle{fancy}
-\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
-\lhead{StatsResource} \rhead{Probability Distributions} \chead{ Uniform Distribution} %\input{tcilatex}
+## Solution to Part A
 
-\begin{document}
+- **What is the shortest possible time a passenger would have to wait for a train?**
+    - If the passenger arrives just before the doors close, then the waiting time is zero.
+    \[ a = 0 \text{ minutes } \]
 
+## Solution to Part B
+- **What is the longest possible time a passenger will have to wait?**
+    - If the passenger arrives just after the doors close, and misses the train, then they will have to wait the full three minutes for the next one.
+    \[ b = 3 \text{ minutes }  = 180 \text{ seconds}  \]
 
-\section*{Continuous Uniform Distribution: Subway Example}
-Suppose there is a platform in a subway station in a large large city.  \\ Subway trains arrive \textbf{every three minutes} at this platform.
-\begin{enumerate}[(a)]
-\item   What is the shortest possible time a passenger would have to wait for a train?
-\item What is the longest possible time a passenger will have to wait?
-\item What is the probability that they will have to wait longer than 2 minutes?
-\item What is the probability that they will have to wait less than than 45 seconds (i.e. 0.75 minutes)?
-\item Compute the expected value and variance of the waiting time $X$.
-\end{enumerate}
+## Solution to Part C
+- **What is the probability that they will have to wait longer than 2 minutes?**
+    \[ P(X \geq 2)  = \frac{3-2}{3-0} = \frac{1}{3} = 0.3333 \]
 
+```{r, echo=FALSE}
+knitr::include_graphics("images/6AUniform4.png")
+```
 
-%------------------------------------------------------------------------%
-{
-\subsection*{Solution to Part A}
+## Solution to Part D
+- **What is the probability that they will have to wait less than 45 seconds (i.e. 0.75 minutes)?**
+    \[ P(X \leq 0.75)  = \frac{0.75 - 0}{3-0} = \frac{0.75}{3} = 0.250 \]
 
-\begin{itemize}
-\item What is the shortest possible time a passenger would have to wait for a train?
-%\begin{itemize}
-\item If the passenger arrives just before the doors close, then the waiting time is zero.
-\[ a = 0 \mbox{ minutes } \]
-\end{itemize}
-\subsection*{Solution to Part B}
-\begin{itemize}
-\item What is the longest possible time a passenger will have to wait?
-%\begin{itemize}
-\item If the passenger arrives just after the doors close, and missing the train, then they will have to wait the full three minutes for the next one.
-\[ b = 3 \mbox{ minutes }  = 180 \mbox{ seconds}  \]
-\end{itemize}
-%\end{itemize}
-\subsection*{Solution to Part C}
+```{r, echo=FALSE}
+knitr::include_graphics("images/6AUniform3.png")
+```
 
+## Solution to Part E
+We are told that, for waiting times, the lower limit $a$ is 0, and the upper limit $b$ is 3 minutes. 
 
+**The expected waiting time** $\textrm{E}[X]$ is computed as follows:
+    \[
+    \textrm{E}[X] = \frac{b + a}{2} = \frac{3 + 0}{2} = 1.5 \text{ minutes }
+    \]
 
-\begin{itemize}
-\item What is the probability that they will have to wait longer than 2 minutes?
-\[ P(X \geq 2)  = {3-2 \over 3-0} = {1/3} = 0.3333   \]
-\end{itemize}
-%\end{itemize}
+**The variance of the continuous uniform distribution**, denoted $\textrm{Var}(X)$, is computed using the following formula:
+    \[
+    \textrm{Var}(X) = \frac{(b - a)^2}{12} = \frac{(3 - 0)^2}{12} = \frac{3^2}{12} = \frac{9}{12} = 0.75
+    \]
+```
 
+# Define the parameters
+a <- 0
+b <- 3
 
-%% \vspace{-0.5cm}
+# Create a sequence of values from a to b
+x <- seq(a, b, length.out = 1000)
 
-\begin{center}
-\includegraphics[scale=0.35]{images/6AUniform4}
+# Define the density function for the uniform distribution
+density <- dunif(x, min = a, max = b)
 
-\end{center}
+# Plot the density function
+plot(x, density, type = "l", main = "Density Function of Uniform Distribution (a = 0, b = 3)",
+     xlab = "x", ylab = "Density", col = "blue", lwd = 2)
 
-\subsection*{Solution to Part D}
+# Add shading for the segment between 0 and 2
+polygon(c(0, seq(0, 2, length.out = 100), 2), c(0, dunif(seq(0, 2, length.out = 100), min = a, max = b), 0), 
+        col = rgb(0, 0, 1, 0.5))
 
-\begin{itemize}
-\item What is the probability that they will have to wait less than than 45 seconds (i.e. 0.75 minutes)?
-\[ P(X \leq 0.75)  = {0.75 - 0 \over 3-0} = {0.75/3} = 0.250  \]
-\end{itemize}
-%\end{itemize}
-
-}
-
-
-
-
-%% \vspace{-0.5cm}
-
-\begin{center}
-\includegraphics[scale=0.35]{images/6AUniform3}
-
-\end{center}
-
-
-
-\subsection*{Solution to Part E}
-
-We are told that, for waiting times,  the lower limit $a$ is 0, and the upper limit $b$ is 3 minutes. \\ \bigskip The expected waiting time $\textrm{E}[X]$ is computed as follows
-%% \vspace{0.1cm}
-\[
-\textrm{E}[X] = {b + a \over 2} =  {3 + 0  \over 2}  = 1.5 \mbox{ minutes }
-\]
-
-
-\noindent The variance of the continuous uniform distribution, denoted $\textrm{Var}(X)$,  is  computed using the following formula
-%% \vspace{0.1cm}
-\[
-\textrm{Var}(X) = {(b - a)^2 \over 12} = {(3 - 0)^2 \over 12} =  {3^2 \over 12} = {9 \over 12} = 0.75
-\]
-
-
-
-
-
-
-
-
-
-
-
-
-\end{document}

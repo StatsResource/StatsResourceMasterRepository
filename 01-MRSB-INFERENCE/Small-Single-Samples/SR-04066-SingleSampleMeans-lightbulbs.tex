@@ -1,0 +1,56 @@
+
+
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 4: Difference in Means (a) }
+\begin{itemize}
+\item For a random sample of 10 light bulbs, the mean bulb life is 4,000 hr with a standard deviation of 200 hours.
+\item For another brand of bulbs whose useful life is also assumed to be normally distributed, a random sample of 8 has a sample mean of 4,300 hours
+and a sample standard deviation of 250 hours. \item Test the hypothesis that there is no difference between the
+mean operating life of the two brands of bulbs, using the 5 percent level of significance
+\end{itemize}
+\end{frame}
+%-------------------------------------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Example 4: Difference in Means (b) }
+\begin{itemize}\item $n_1 = 10$ and $n_2 = 8$.
+\item $\bar{x}_1 = 4000$, $\bar{x}_2 = 4,300 $ , therefore  $\bar{x}_2 - \bar{x}_1 = 300$ hours
+\item $s_1  = 200$, $s_2 = 250$ hours.
+\item Degrees of freedom $n_1 + n_2 - 2 = 10 + 8 - 2 = 16$
+\end{itemize}\end{frame}
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 4: Difference in Means (c) }
+\textbf{Pooled variance estimate}
+\[ s^2_p = {(n_1 - 1)s^2_1  + (n_2 - 1)s^2_ 2\over n_1 + n_2 - 2 } = {(9 \times 200^2 ) +( 7 \times 250^2) \over 16 } = 49843.75 \]
+
+\end{frame}
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 4: Difference in Means (d) }
+\textbf{Computing the Standard Error}
+\[ S.E(\bar{x}_1 - \bar{x}_2) = \sqrt{s^2_p \left({1\over n_1}+{1\over n_2} \right)}\]
+
+\[ S.E(\bar{x}_1 - \bar{x}_2) = \sqrt{49843.75 \left({1\over 10}+{1\over 9} \right)}\]
+
+\[ S.E(\bar{x}_1 - \bar{x}_2) = \sqrt{11214.84} = 105.9\]
+
+\end{frame}
+
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 4: Difference in Means (e) }
+\textbf{Test Statistic and Critical Value}\\
+\begin{itemize}
+\item The Test Statistic is \[ TS  = {(4000-4300) - 0 \over 105.9}  = -2.83 \]
+\item The Critical Value is determined from Murdoch Barnes table 7 with $\alpha = 0.05$, $k=2$, $df = 16 $
+\item $CV = 2.120$
+\item We can now apply the decision rule : Is the absolute value of the Test Statistic greater than the Critical Value?
+\item Is $2.83 > 2.12$? Yes We reject $H_0$. There is evidence of a difference in means.
+\end{itemize}
+\end{frame}
+
+
+
+%-------------------------------------------------------------------------------------------%

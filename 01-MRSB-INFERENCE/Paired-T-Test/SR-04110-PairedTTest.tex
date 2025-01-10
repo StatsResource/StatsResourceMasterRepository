@@ -1,0 +1,72 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Paired Measurements} %\input{tcilatex}
+
+\begin{document}
+
+\subsection{Paired T test}
+The mean and standard deviation of the sample d values are
+obtained by use of the basic formulas in Chapters 3 and 4, except
+that d is substituted for X.
+
+The mean difference for a set of differences between paired
+observations is $\bar{d} = \frac{\sum d_{i}}{n}$.
+
+The deviations formula and the computational formula for the
+standard deviation of the differences between paired observations
+are, respectively,
+
+\begin{eqnarray}
+S_{d} = \sqrt{\frac{\sum (d_{i}-\bar{d})^2}{n-1}}\\
+S_{d} = \sqrt{\frac{ \sum (d^2)- n(\bar{d}^2)}{n-1}}\\
+\end{eqnarray}
+
+The standard error of the mean difference between paired
+observations is obtained for the standard error of the mean.
+\subsubsection{Hypotheses}
+\begin{eqnarray*}
+H_{0}: \mu_{d} = 0\\
+H_{1}: \mu_{d} \neq 0\\
+\end{eqnarray*}
+
+
+\subsection*{Question 3}
+	Seven athletes were asked to run 100m without warming up prior to running. On another day they warmed up first and then ran. On both occasions they were timed and the results (in seconds) are as follows:\\[-0.3cm]
+	\begin{center}
+		\begin{tabular}{|c|ccccccc|}
+			\hline
+			&&&&&&&\\[-0.3cm]
+			Individual & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\[0.1cm]
+			\hline
+			&&&&&&&\\[-0.3cm]
+			No Warm Up    & 13.6 & 12.8 & 12.3 & 11.7 & 12.0 & 13.3 & 10.5 \\[0.1cm]
+			\hline
+			&&&&&&&\\[-0.3cm]
+			Warm Up       & 13.9 & 12.4 & 12.2 & 11.6 & 11.9 & 12.7 & 10.4 \\[0.1cm]
+			\hline
+		\end{tabular}
+	\end{center}
+	
+	{\bf(a)} Calculate a 95\% confidence interval for the \emph{average difference} in times and hence comment on the usefulness of warming up (hint: the data is paired).
+	
+	\end{document}
+	

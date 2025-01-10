@@ -1,0 +1,39 @@
+
+Two sets of patients are given courses of treatment under two different drugs. The benefits
+derived from each drug can be stated numerically in terms of the recovery times; the readings are given below.
+
+\begin{itemize}
+\item Drug 1:  $n_1$ = 40 , $\bar{x}_1$ = 3.3 days and $s_1 = 1.524$
+\item Drug 2:  $n_2$ = 45 , $\bar{x}_2$ = 4.3 days and $s_2 = 1.951 $
+\end{itemize}
+
+
+\frametitle{Example 2: Difference in Means (b) }
+\begin{itemize}
+\item
+The first step in hypothesis testing is to specify the null hypothesis and an alternative hypothesis.
+\item When testing differences between mean recovery times, the null hypothesis is that the two population means are equal.
+\item That is, the null hypothesis is:\\
+$H_0: \mu_1 = \mu_2$\\
+$H_1: \mu_1 \neq \mu_2$\\
+\end{itemize}
+(Remark: Two Tailed Test k = 2, and $\alpha = 0.05$)
+
+\frametitle{Example 2: Difference in Means (c) }
+\begin{itemize}
+\item The observed difference in means is 1 day.
+\item The relevant formula for the standard error is \[ S.E.(x_1 - x_2) = \sqrt{{s^2_1\over n_1}+{s^2_2 \over n_2}} \]
+\item  \[ S.E(x_1 - x_2) = \sqrt{{(1.524)^2 \over 40}+{(1.951)^2 \over 45}}  = 0.377\mbox{ days} \]
+\end{itemize}
+
+\begin{itemize}
+\item The Test Statistic is therefore
+\[ TS = {\mbox{observed} - \mbox{null} \over \mbox{Std. Error}}  = {1 - 0 \over 0.377 } = 2.65 \]
+\item The critical value $CV = 1.96$.
+\item Is the TS greater than the CV? Is $2.65 > 1.96$?
+
+\item \textbf{Conclusion:} we reject the null hypothesis. There is a significant different between both drugs, in terms of recovery times.
+
+\end{itemize}
+
+\end{document}
