@@ -1,0 +1,66 @@
+**Exam Question:**
+
+**Question:**
+
+**a)** Find the Laplace transform of the following function:
+
+$$$
+f(t) = t^2 * e^(-3t) * sin(2t)
+$$$
+
+**b)** Solve the following differential equation using the Laplace transform method:
+
+$$$
+y'' + 4y' + 3y = e^(-2t)
+$$$
+
+**Initial conditions:**
+* y(0) = 0
+* y'(0) = 1
+
+**Solution:**
+
+**a) Laplace Transform of f(t)**
+
+We can use the following Laplace transform properties:
+
+* **Time-shifting property:** L{e^(-at)f(t)} = F(s+a)
+* **Differentiation in s-domain:** L{t^nf(t)} = (-1)^n * F^(n)(s)
+* **Laplace transform of sin(ωt):** L{sin(ωt)} = ω / (s^2 + ω^2)
+
+Applying these properties, we get:
+$$$
+L{t^2 * e^(-3t) * sin(2t)} = (-1)^2 * d^2/ds^2 [2 / ((s+3)^2 + 4)]
+$$$
+Now, differentiate and simplify to obtain the final Laplace transform.
+
+**b) Solving the Differential Equation**
+
+1. **Take the Laplace Transform of both sides:**
+
+$$$
+s^2Y(s) - s*y(0) - y'(0) + 4[sY(s) - y(0)] + 3Y(s) = 1 / (s+2)
+$$$
+
+2. **Substitute initial conditions and simplify:**
+$$$
+(s^2 + 4s + 3)Y(s) = 1 / (s+2) + 1
+$$$
+
+3. **Solve for Y(s):**
+$$$
+Y(s) = (s+3) / [(s+1)(s+2)(s+3)]
+$$$
+
+4. **Partial Fraction Decomposition:**
+$$$
+Y(s) = A/(s+1) + B/(s+2)
+$$$
+Solve for A and B.
+
+5. **Inverse Laplace Transform:**
+Use the inverse Laplace transform table to find the solution y(t).
+$$$
+y(t) = A*e^(-t) + B*e^(-2t)
+$$$
+Substitute the values of A and B to get the final solution.

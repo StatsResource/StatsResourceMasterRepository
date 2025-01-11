@@ -1,0 +1,48 @@
+**Exam Question:**
+
+**Question:**
+
+**a)** Find the Laplace transform of the following integral equation:
+$$$
+y(t) = 1 + ∫[0, t] y(τ) dτ
+$$$
+
+**b)** Solve the integral equation using the Laplace transform method.
+
+**Solution:**
+
+**a) Laplace Transform of the Integral Equation**
+
+Taking the Laplace transform of both sides of the equation, we get:
+
+$$$
+Y(s) = 1/s + 1/s * Y(s)
+$$$
+
+**b) Solving the Integral Equation**
+
+Rearranging the equation to solve for Y(s):
+
+$$$
+Y(s) - (1/s)Y(s) = 1/s
+$$$
+
+Factor out Y(s):
+$$$
+Y(s)(1 - 1/s) = 1/s
+$$$
+
+Solve for Y(s):
+$$$
+Y(s) = 1 / (s - 1)
+$$$
+
+Taking the inverse Laplace transform of Y(s):
+$$$
+y(t) = e^t
+$$$
+
+Therefore, the solution to the integral equation is:
+$$$
+y(t) = e^t
+$$$
