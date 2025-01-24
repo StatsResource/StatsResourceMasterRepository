@@ -1,0 +1,72 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Let $X$ be the random variable representing the age of death of an individual.
+The survival distribution function for an individual is determined to be:
+
+
+$$S(x) =
+\begin{cases}
+1,& x < 0\\
+\frac{75 - x}{75},& 0 \leq  x \leq 75\\
+0,& x > 75\\
+\end{cases}
+$$
+
+
+
+1. Find the probability that the person dies before reaching the age of 18.
+2. Find the probability that the person lives more than 55 years.
+3. Find the probability that the person dies between the ages of 25 and 70.
+
+### Solution
+
+### Exercise(a)
+
+We have:
+
+
+$$\text{Pr}(X < 18) = \text{Pr}(X \leq  18)$$
+
+
+
+
+$$\text{Pr}(X \leq  18) = F(18)$$
+
+
+
+
+$$F(18) = 1 - S(18)$$
+
+
+
+
+$$1 - S(18) = 0.24$$
+
+
+---
+
+### Exercise B.
+
+We have:
+
+
+$$\text{Pr}(X > 55) = S(55) = 0.267$$
+
+---
+
+### Exercise C.
+
+We have:
+
+
+$$\text{Pr}(25 < X < 70) = F(70) - F(25)$$
+
+$$F(70) - F(25) = S(25) - S(70)$$
+
+
+
+
+$$S(25) - S(70) = 0.60$$
+
+---
+
+---

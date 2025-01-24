@@ -1,0 +1,24 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%  - https://www.pstat.ucsb.edu/sites/secure.lsit.ucsb.edu.stat.d7/files/sitefiles/Resources/Actuary/Pbook.pdf
+
+% - Example 26.1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Let $X$ be a continuous random variable with survival distribution defined by
+$$S(x) = e^{- 0.34x}$$
+for $x \geq 0$ and 1 otherwise. Compute $\Pr(5 < X \leq  10)$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Solution}
+
+We have
+\begin{eqnarray*}
+Pr(5 < X \leq  10) &=& 
+F(10)- F(5) \\
+&=& S(5)- S(10) \\
+&=& e^{- 0.34\times 5}- e^{- 0.34\times 10} \\
+&=& 0.149\\
+\end{eqnarray*}
+
+
